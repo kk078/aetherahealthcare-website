@@ -1,3 +1,7 @@
-name = "aetherahealthcare"
-compatibility_date = "2026-05-14"
-pages_build_output_dir = "out"
+[build]
+command = "npm run build"
+publish = "out"
+
+[env.production]
+name = "aetherahealthcare-website"
+account_id = "2c268625d9e6e4c084ff296fcdf5f3bd"
