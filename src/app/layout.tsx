@@ -15,6 +15,8 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "700"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://aetherahealthcare-website.pages.dev";
+
 export const metadata: Metadata = {
   title: {
     default: "Aethera Healthcare Solutions | Medical Billing & Revenue Cycle Management",
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://aetherahealthcare.com",
+    url: siteUrl,
     title: "Aethera Healthcare Solutions | Medical Billing & Revenue Cycle Management",
     description: "Maximizing Revenue. Minimizing Burden. Aethera Healthcare Solutions is your full-service medical billing partner.",
     siteName: "Aethera Healthcare Solutions",
