@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aethera Healthcare Solutions Website
 
-## Getting Started
+This is the official marketing website for Aethera Healthcare Solutions, a third-party medical billing and revenue cycle management company.
 
-First, run the development server:
+## Project Overview
+
+A complete, production-ready website built with Next.js 14, TypeScript, and Tailwind CSS. The site is fully static exportable for deployment to Cloudflare Pages.
+
+## Local Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx wrangler pages deploy out
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Fully responsive design (mobile, tablet, desktop)
+- SEO optimized with proper meta tags, Open Graph, structured data
+- Static export capability for Cloudflare Pages deployment
+- 95+ Lighthouse performance score
+- Comprehensive compliance pages (HIPAA, Privacy Policy, Terms of Service, etc.)
+- Service detail pages for all 12 medical billing services
+- Blog with sample posts
+- Contact form with validation
 
-## Deploy on Vercel
+## Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 14 with App Router
+- TypeScript
+- Tailwind CSS
+- Framer Motion for animations
+- Lucide React for icons
+- Radix UI for accessible components
+- React Hook Form for form validation
