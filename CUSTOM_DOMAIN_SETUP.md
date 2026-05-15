@@ -16,6 +16,17 @@
 3. Enter: aetherahealthcare.com
 4. Repeat for: www.aetherahealthcare.com
 
+If you don't see an option to add custom domains, you can manually add DNS records:
+1. Go to your domain's DNS settings in Cloudflare
+2. Add a CNAME record:
+   - Name: `@` (root domain)
+   - Target: `3bcf8910.aetherahealthcare-website-cj4.pages.dev`
+   - Proxy status: Proxied (orange cloud enabled)
+3. Add another CNAME record:
+   - Name: `www`
+   - Target: `3bcf8910.aetherahealthcare-website-cj4.pages.dev`
+   - Proxy status: Proxied (orange cloud enabled)
+
 ## Step 4: Verify DNS Records (if needed)
 If prompted to add DNS records, Cloudflare will provide the specific records needed.
 This typically involves adding:
