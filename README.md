@@ -22,9 +22,26 @@ npm run build
 
 ## Deploy
 
+### Manual Deployment
 ```bash
 npx wrangler pages deploy out
 ```
+
+### Automatic Deployment (GitHub Actions)
+This repository is configured with GitHub Actions for automatic deployment to Cloudflare Pages on every push to the main branch.
+
+To set up automatic deployment:
+1. Add the following secrets to your GitHub repository:
+   - `CLOUDFLARE_ACCOUNT_ID`: 2c268625d9e6e4c084ff296fcdf5f3bd
+   - `CLOUDFLARE_API_TOKEN`: [Your Cloudflare API token]
+
+2. Push to the main branch to trigger automatic deployment
+
+### Custom Domain Setup
+To set up the custom domain aetherahealthcare.com:
+1. Follow the instructions in CUSTOM_DOMAIN_SETUP.md
+2. Add the domain through the Cloudflare Dashboard
+3. Wait for SSL certificate provisioning (usually a few minutes)
 
 ## Features
 
