@@ -263,7 +263,7 @@ export default function Home() {
       </section>
 
       {/* KPI Stats Bar */}
-      <section className="py-8 bg-white border-b border-gray/10">
+      <section className="py-8 bg-white border-b border-gray/10 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {kpiStats.map((stat, index) => (
