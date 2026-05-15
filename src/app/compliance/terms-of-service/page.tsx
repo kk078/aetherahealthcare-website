@@ -40,7 +40,7 @@ const terms = [
 
 export default function TermsOfService() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
       <Navbar />
 
       {/* Hero Section */}
@@ -269,7 +269,7 @@ export default function TermsOfService() {
               <p className="text-gray mb-6">
                 Any dispute, claim, or controversy arising out of or relating to these Terms or the breach, termination,
                 enforcement, interpretation, or validity thereof, including the determination of the scope or applicability
-                of this agreement to arbitrate, shall be determined by arbitration in Baltimore, Maryland.
+                of this agreement to arbitrate, shall be determined by arbitration in the State of Florida.
               </p>
               <div className="bg-white rounded-xl p-6 mb-6">
                 <h3 className="text-xl font-bold text-navy mb-4">Arbitration Process:</h3>
@@ -312,9 +312,9 @@ export default function TermsOfService() {
                   14. Governing Law
                 </h2>
                 <p className="text-gray">
-                  These Terms shall be governed by and construed in accordance with the laws of the State of Maryland,
+                  These Terms shall be governed by and construed in accordance with the laws of the State of Florida,
                   without regard to its conflict of law provisions. Any legal action or proceeding arising under these
-                  Terms shall be brought exclusively in the federal or state courts located in Baltimore, Maryland.
+                  Terms shall be brought exclusively in the federal or state courts located in the State of Florida.
                 </p>
               </div>
             </FadeIn>

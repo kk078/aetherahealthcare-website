@@ -1,5 +1,4 @@
-'use client';
-
+import Head from 'next/head';
 import Link from 'next/link';
 import { Calendar, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -81,7 +80,36 @@ const relatedServices = [
 
 export default function PriorAuthorization() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Prior Authorization Services",
+              "provider": {
+                "@type": "Organization",
+                "name": "Aethera Healthcare Solutions",
+                "url": "https://aetherahealthcare-website.pages.dev",
+                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+              },
+              "description": "Streamlined prior authorization management that eliminates treatment delays. Expert handling of complex requests and appeals for healthcare providers.",
+              "areaServed": "United States",
+              "category": "Healthcare Services",
+              "offers": {
+                "@type": "Offer",
+                "category": "Professional Service",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "description": "Contact for pricing details"
+                }
+              }
+            })
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}
@@ -275,17 +303,25 @@ export default function PriorAuthorization() {
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-16 px-8 text-center">
             <FadeIn>
               <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-6">
-                Get Started with Prior Authorization Services
+                Ready to Eliminate Treatment Delays?
               </h2>
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">
-                Let our experts handle your prior authorizations for uninterrupted patient care.
+                Schedule a free consultation to see how Aethera can streamline your prior authorization process.
               </p>
-              <Link
-                href="/contact"
-                className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
-              >
-                Contact Us Today
-              </Link>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
+                >
+                  Schedule Free Consultation
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
+                >
+                  View Pricing Options
+                </Link>
+              </div>
             </FadeIn>
           </div>
         </div>

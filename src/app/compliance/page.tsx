@@ -1,11 +1,15 @@
-'use client';
-
+import Head from 'next/head';
 import Link from 'next/link';
 import { Shield, CheckCircle, FileText, Lock, Users } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+
+export const metadata = {
+  title: "Compliance | HIPAA, Security & Privacy | Aethera Healthcare",
+  description: "Learn about Aethera Healthcare Solutions' comprehensive compliance program including HIPAA, security practices, and privacy protection for healthcare providers.",
+};
 
 const standards = [
   {
@@ -69,7 +73,27 @@ const commitments = [
 
 export default function Compliance() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Compliance | HIPAA, Security & Privacy | Aethera Healthcare",
+              "description": "Learn about Aethera Healthcare Solutions' comprehensive compliance program including HIPAA, security practices, and privacy protection for healthcare providers.",
+              "url": "https://aetherahealthcare-website.pages.dev/compliance",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Aethera Healthcare Solutions",
+                "url": "https://aetherahealthcare-website.pages.dev",
+                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+              }
+            })
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}

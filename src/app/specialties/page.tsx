@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -134,7 +135,27 @@ const specialties = [
 
 export default function Specialties() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Medical Specialties We Serve | Aethera Healthcare Solutions",
+              "description": "Expert billing and revenue cycle management for over 25 medical specialties with deep specialty-specific knowledge.",
+              "url": "https://aetherahealthcare-website.pages.dev/specialties",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Aethera Healthcare Solutions",
+                "url": "https://aetherahealthcare-website.pages.dev",
+                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+              }
+            })
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}

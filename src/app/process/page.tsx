@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle, FileText, Settings, Upload, Users, Zap } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -102,7 +103,27 @@ const benefits = [
 
 export default function Process() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Our Onboarding Process | Aethera Healthcare Solutions",
+              "description": "A seamless 6-week process designed to minimize disruption and maximize your revenue from day one.",
+              "url": "https://aetherahealthcare-website.pages.dev/process",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Aethera Healthcare Solutions",
+                "url": "https://aetherahealthcare-website.pages.dev",
+                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+              }
+            })
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}

@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import { useState } from 'react';
 import {
   ChevronDown,
@@ -170,7 +171,60 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is Revenue Cycle Management (RCM)?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Revenue Cycle Management (RCM) is the financial process that healthcare facilities use to track patient care episodes from registration and appointment scheduling to the final payment of a balance. It encompasses all administrative and clinical functions that contribute to the capture, management, and collection of patient service revenues."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Why should I outsource my medical billing?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Outsourcing medical billing provides access to specialized expertise, advanced technology, and proven processes that are difficult to replicate in-house. Benefits include higher clean claim rates, faster payment posting, reduced administrative costs, and improved compliance. Our clients typically see 15-25% improvement in collections within the first year."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do you work with my existing EHR system?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We integrate seamlessly with all major EHR systems through secure data interfaces. Our team works with your IT department to establish secure connections that allow us to access necessary data while maintaining compliance with all security requirements. Most implementations are completed within 30-45 days."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What makes Aethera different from other billing companies?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We combine expert human billing professionals with advanced technology to deliver superior results. Our dedicated account teams understand the nuances of each specialty and work proactively to maximize your revenue. We also maintain comprehensive compliance programs and offer transparent reporting with real-time access to your financial data."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What coding certifications do your coders hold?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our coding team holds current certifications including Certified Professional Coder (CPC), Certified Coding Specialist (CCS), and specialty-specific credentials. All coders participate in ongoing education to stay current with annual guideline updates and maintain an average accuracy rate of 98%+."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}

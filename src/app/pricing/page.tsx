@@ -1,5 +1,4 @@
-'use client';
-
+import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -7,6 +6,11 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import PricingCard from '@/components/ui/PricingCard';
+
+export const metadata = {
+  title: "Pricing | Transparent Medical Billing Rates | Aethera Healthcare",
+  description: "Transparent pricing for medical billing services. Choose from percentage-based or per-claim pricing models with no hidden fees. Get a free consultation today.",
+};
 
 const pricingPlans = [
   {
@@ -170,7 +174,27 @@ const faqs = [
 
 export default function Pricing() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "OfferCatalog",
+              "name": "Aethera Healthcare Solutions Pricing",
+              "description": "Transparent pricing for medical billing services. Choose from percentage-based or per-claim pricing models with no hidden fees. Get a free consultation today.",
+              "url": "https://aetherahealthcare-website.pages.dev/pricing",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Aethera Healthcare Solutions",
+                "url": "https://aetherahealthcare-website.pages.dev",
+                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+              }
+            })
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}

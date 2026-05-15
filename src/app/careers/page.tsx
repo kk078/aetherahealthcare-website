@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import Link from 'next/link';
 import {
   Users,
@@ -82,7 +83,27 @@ const positions = [
 
 export default function Careers() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Careers at Aethera Healthcare Solutions",
+              "description": "Join our mission-driven team and help transform revenue cycle management for healthcare providers.",
+              "url": "https://aetherahealthcare-website.pages.dev/careers",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Aethera Healthcare Solutions",
+                "url": "https://aetherahealthcare-website.pages.dev",
+                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+              }
+            })
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}

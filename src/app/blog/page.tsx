@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import Link from 'next/link';
 import { Calendar, Clock, Tag, User } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -37,12 +38,134 @@ const blogPosts = [
     readTime: '6 min read',
     category: 'Practice Management',
     image: 'https://images.unsplash.com/photo-1586495786027-6d0f4b6d2a3c?w=800&h=400&fit=crop'
+  },
+  {
+    slug: 'telehealth-billing',
+    title: 'Mastering Telehealth Billing: A Guide for Modern Medical Practices',
+    excerpt: 'Navigate the complexities of telehealth billing with our comprehensive guide to reimbursement best practices.',
+    date: '2026-04-20',
+    author: 'David Chen',
+    readTime: '10 min read',
+    category: 'Telehealth',
+    image: 'https://images.unsplash.com/photo-1581091226033-d54615f8d3d4?w=800&h=400&fit=crop'
+  },
+  {
+    slug: 'patient-collections',
+    title: 'Effective Patient Collections Strategies That Actually Work',
+    excerpt: 'Transform your patient collections approach with proven techniques that improve cash flow without damaging relationships.',
+    date: '2026-04-15',
+    author: 'Amanda Rodriguez',
+    readTime: '9 min read',
+    category: 'Collections',
+    image: 'https://images.unsplash.com/photo-1551836022-d5d88e03f184?w=800&h=400&fit=crop'
+  },
+  {
+    slug: 'credentialing-best-practices',
+    title: 'Provider Credentialing Best Practices: Avoiding Common Pitfalls',
+    excerpt: 'Streamline your credentialing process and avoid costly delays with these essential best practices.',
+    date: '2026-04-10',
+    author: 'Robert Johnson',
+    readTime: '7 min read',
+    category: 'Credentialing',
+    image: 'https://images.unsplash.com/photo-1517242039478-88104f383fb5?w=800&h=400&fit=crop'
+  },
+  {
+    slug: 'hipaa-compliance',
+    title: 'HIPAA Compliance in 2026: What Healthcare Practices Need to Know',
+    excerpt: 'Stay compliant with the latest HIPAA requirements and protect your practice from costly violations.',
+    date: '2026-04-05',
+    author: 'Lisa Thompson',
+    readTime: '11 min read',
+    category: 'Compliance',
+    image: 'https://images.unsplash.com/photo-1584432411024-d8a9d317d9c4?w=800&h=400&fit=crop'
+  },
+  {
+    slug: 'coding-audits',
+    title: 'How to Conduct Effective Medical Coding Audits for Your Practice',
+    excerpt: 'Implement a comprehensive coding audit process to ensure accuracy and compliance while maximizing reimbursements.',
+    date: '2026-03-28',
+    author: 'Mark Wilson',
+    readTime: '13 min read',
+    category: 'Coding',
+    image: 'https://images.unsplash.com/photo-1586495786027-6d0f4b6d2a3c?w=800&h=400&fit=crop'
+  },
+  {
+    slug: 'prior-authorization',
+    title: 'Streamlining Prior Authorization: A Guide to Faster Approvals',
+    excerpt: 'Learn how to optimize your prior authorization process and reduce delays in patient care and reimbursement.',
+    date: '2026-03-20',
+    author: 'Jennifer Walsh',
+    readTime: '10 min read',
+    category: 'Prior Authorization',
+    image: 'https://images.unsplash.com/photo-1516549698021-6e073c7f0bad?w=800&h=400&fit=crop'
+  },
+  {
+    slug: 'denial-management',
+    title: 'Advanced Denial Management Strategies for 2026',
+    excerpt: 'Proven techniques to prevent, identify, and successfully appeal insurance claim denials.',
+    date: '2026-03-15',
+    author: 'Michael Torres',
+    readTime: '12 min read',
+    category: 'Denials & Collections',
+    image: 'https://images.unsplash.com/photo-1551836022-d5d88e03f184?w=800&h=400&fit=crop'
+  },
+  {
+    slug: 'patient-communications',
+    title: 'Effective Patient Communication Strategies for Better Collections',
+    excerpt: 'Improve patient satisfaction and collections with these proven communication techniques.',
+    date: '2026-03-10',
+    author: 'Sarah Kim',
+    readTime: '8 min read',
+    category: 'Patient Relations',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=400&fit=crop'
+  },
+  {
+    slug: 'revenue-analytics',
+    title: 'Using Revenue Analytics to Optimize Your Practice Performance',
+    excerpt: 'Leverage data analytics to identify trends, improve collections, and maximize revenue.',
+    date: '2026-03-05',
+    author: 'David Chen',
+    readTime: '11 min read',
+    category: 'Analytics',
+    image: 'https://images.unsplash.com/photo-1551836022-d5d88e03f184?w=800&h=400&fit=crop'
+  },
+  {
+    slug: 'insurance-contracts',
+    title: 'Negotiating Better Insurance Contracts: A Provider\'s Guide',
+    excerpt: 'Maximize reimbursement rates and minimize administrative burden with strategic contract negotiation.',
+    date: '2026-02-28',
+    author: 'Amanda Rodriguez',
+    readTime: '14 min read',
+    category: 'Contract Management',
+    image: 'https://images.unsplash.com/photo-1586495786027-6d0f4b6d2a3c?w=800&h=400&fit=crop'
   }
 ];
 
 export default function Blog() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Blog",
+              "name": "Aethera Healthcare Solutions Blog",
+              "url": "https://aetherahealthcare-website.pages.dev/blog",
+              "description": "Insights, tips, and industry news to help optimize your medical practice's revenue cycle.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Aethera Healthcare Solutions",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://aetherahealthcare-website.pages.dev/logo.png"
+                }
+              }
+            })
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}

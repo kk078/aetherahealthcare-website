@@ -1,11 +1,15 @@
-'use client';
-
+import Head from 'next/head';
 import Link from 'next/link';
 import { Shield, CheckCircle, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+
+export const metadata = {
+  title: "Denial Management & Appeals | Aethera Healthcare Solutions",
+  description: "Expert denial management and appeal services for healthcare providers. Reduce denial rates, maximize recovery, and protect your revenue with our proactive approach.",
+};
 
 const includedItems = [
   'Denial identification and categorization',
@@ -81,7 +85,36 @@ const relatedServices = [
 
 export default function DenialManagement() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Denial Management Services",
+              "provider": {
+                "@type": "Organization",
+                "name": "Aethera Healthcare Solutions",
+                "url": "https://aetherahealthcare-website.pages.dev",
+                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+              },
+              "description": "Expert denial management and appeal services for healthcare providers. Reduce denial rates, maximize recovery, and protect your revenue with our proactive approach.",
+              "areaServed": "United States",
+              "category": "Healthcare Services",
+              "offers": {
+                "@type": "Offer",
+                "category": "Professional Service",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "description": "Contact for pricing details"
+                }
+              }
+            })
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}
@@ -275,17 +308,25 @@ export default function DenialManagement() {
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-16 px-8 text-center">
             <FadeIn>
               <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-6">
-                Get Started with Denial Management Services
+                Ready to Reduce Your Denial Rate?
               </h2>
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">
-                Let our experts recover your denied claims and prevent future denials.
+                Schedule a free consultation to see how Aethera can recover your denied claims and prevent future denials.
               </p>
-              <Link
-                href="/contact"
-                className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
-              >
-                Contact Us Today
-              </Link>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
+                >
+                  Schedule Free Consultation
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
+                >
+                  View Pricing Options
+                </Link>
+              </div>
             </FadeIn>
           </div>
         </div>

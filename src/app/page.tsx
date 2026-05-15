@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import Link from 'next/link';
 import {
   CheckCircle,
@@ -20,8 +21,8 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import KPICard from '@/components/ui/KPICard';
 import ServiceCard from '@/components/ui/ServiceCard';
-import TestimonialCard from '@/components/ui/TestimonialCard';
 import CTABanner from '@/components/ui/CTABanner';
+import SocialProofBar from '@/components/ui/SocialProofBar';
 
 const kpiStats = [
   { value: '95%+', label: 'Clean Claim Rate' },
@@ -177,8 +178,56 @@ const faqs = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Aethera Healthcare Solutions",
+              "url": "https://aetherahealthcare-website.pages.dev",
+              "logo": "https://aetherahealthcare-website.pages.dev/logo.png",
+              "description": "Aethera Healthcare Solutions is your full-service medical billing partner handling coding, claims, payments, denials, and collections so you can focus on patients.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Lakeland",
+                "addressRegion": "FL",
+                "postalCode": "33801",
+                "streetAddress": "PO Box 1234"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-863-694-0325",
+                "contactType": "customer service",
+                "email": "info@aetherahealthcare.com"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/aethera-healthcare-solutions"
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Aethera Healthcare Solutions",
+              "url": "https://aetherahealthcare-website.pages.dev",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://aetherahealthcare-website.pages.dev/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+      </Head>
       <Navbar />
+      <SocialProofBar />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal relative overflow-hidden">
@@ -427,26 +476,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Why Practices Choose Us */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            label="TESTIMONIALS"
-            title="What Our Clients Say"
-            description="Hear from healthcare providers who have transformed their revenue cycle with Aethera."
+            label="WHY PRACTICES CHOOSE US"
+            title="What Sets Us Apart"
+            description="Three key reasons practices partner with Aethera for their revenue cycle management."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <FadeIn key={index} delay={index * 0.2}>
-                <TestimonialCard
-                  quote={testimonial.quote}
-                  author={testimonial.author}
-                  role={testimonial.role}
-                  specialty={testimonial.specialty}
-                />
-              </FadeIn>
-            ))}
+            <FadeIn>
+              <div className="bg-white rounded-xl shadow-md p-6 border border-gray/10 h-full">
+                <h3 className="text-xl font-bold text-navy mb-4">Personal, Not Corporate</h3>
+                <p className="text-gray">
+                  We intentionally work with a select number of practices. Your account manager knows your specialty, your payers, and your team by name.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <div className="bg-white rounded-xl shadow-md p-6 border border-gray/10 h-full">
+                <h3 className="text-xl font-bold text-navy mb-4">Results You Can Measure</h3>
+                <p className="text-gray">
+                  Clean claim rates above 95%, denial rates below 5%, and average AR under 30 days. We put performance targets in writing.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.4}>
+              <div className="bg-white rounded-xl shadow-md p-6 border border-gray/10 h-full">
+                <h3 className="text-xl font-bold text-navy mb-4">Zero Risk to Start</h3>
+                <p className="text-gray">
+                  No setup fees. No long-term contracts. 90 days' notice to cancel. We earn your business every month.
+                </p>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>

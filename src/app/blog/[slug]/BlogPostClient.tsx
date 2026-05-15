@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import Link from 'next/link';
 import { Calendar, Clock, Tag, User, ArrowLeft } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -7,8 +8,77 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 
 export default function BlogPostClient({ post }: { post: any }) {
+  // Generate breadcrumb structured data
+  const breadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aetherahealthcare-website.pages.dev/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://aetherahealthcare-website.pages.dev/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.title,
+        "item": `https://aetherahealthcare-website.pages.dev/blog/${post.slug}`
+      }
+    ]
+  };
+
+  // Generate blog post structured data
+  const blogPostSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://aetherahealthcare-website.pages.dev/blog/${post.slug}`
+    },
+    "headline": post.title,
+    "description": post.excerpt || post.title,
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "author": {
+      "@type": "Person",
+      "name": post.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aethera Healthcare Solutions",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aetherahealthcare-website.pages.dev/logo.png"
+      }
+    },
+    "image": post.image,
+    "articleBody": post.content.replace(/<[^>]*>/g, ''), // Strip HTML tags for clean text
+    "keywords": post.category
+  };
+
   return (
     <>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbs)
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(blogPostSchema)
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}

@@ -36,7 +36,7 @@ const sections = [
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
       <Navbar />
 
       {/* Hero Section */}

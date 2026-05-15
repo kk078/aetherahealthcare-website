@@ -1,9 +1,13 @@
-'use client';
-
+import Head from 'next/head';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+
+export const metadata = {
+  title: "About Aethera Healthcare Solutions | Our Story & Mission",
+  description: "Learn about Aethera Healthcare Solutions, a startup focused on providing personalized revenue cycle management for independent healthcare providers. Discover our mission, values, and commitment to your success.",
+};
 
 const values = [
   {
@@ -24,43 +28,34 @@ const values = [
   },
 ];
 
-const team = [
+const teamRoles = [
   {
-    name: 'Jennifer Walsh',
-    role: 'Chief Executive Officer',
-    bio: '20+ years in healthcare revenue cycle management. Former VP at major RCM company.',
+    title: 'Certified Medical Coders',
+    description: 'Expert coders with CPC and CCS certifications ensuring accurate claim submission and maximum reimbursement.',
   },
   {
-    name: 'Michael Torres',
-    role: 'VP of Operations',
-    bio: 'Expert in process optimization and team leadership. 15+ years in healthcare administration.',
+    title: 'Billing Specialists',
+    description: 'Experienced professionals handling claim submission, payment posting, and denial management.',
   },
   {
-    name: 'Sarah Kim',
-    role: 'Director of Coding',
-    bio: 'Certified Professional Coder with specialties in cardiology and gastroenterology billing.',
+    title: 'Denial Management Experts',
+    description: 'Specialists focused on preventing denials and successfully appealing rejected claims.',
   },
   {
-    name: 'David Chen',
-    role: 'Director of Billing',
-    bio: 'Revenue cycle expert with focus on denial management and collections optimization.',
-  },
-  {
-    name: 'Lisa Rodriguez',
-    role: 'Compliance Officer',
-    bio: 'HIPAA compliance specialist with extensive experience in healthcare privacy regulations.',
+    title: 'Dedicated Account Managers',
+    description: 'Your single point of contact who understands your practice, specialty, and unique needs.',
   },
 ];
 
 const stats = [
-  { value: '15+', label: 'Years in Business' },
-  { value: '500+', label: 'Providers Served' },
-  { value: '50M+', label: 'Claims Processed' },
-  { value: '25+', label: 'Specialties Covered' },
+  { value: '2025', label: 'Year Founded' },
+  { value: '12+', label: 'Services Offered' },
+  { value: '26+', label: 'Specialties Supported' },
+  { value: '100%', label: 'Committed to Your Success' },
 ];
 
 const reasons = [
-  'Specialized expertise in your medical specialty',
+  'Personalized attention — we partner with a select number of practices so every client gets the focus they deserve',
   'Proven track record of improving collections',
   'Dedicated account managers who understand your practice',
   'Advanced technology with real-time reporting',
@@ -70,7 +65,60 @@ const reasons = [
 
 export default function About() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              "name": "About Aethera Healthcare Solutions",
+              "description": "Learn about Aethera Healthcare Solutions, a startup focused on providing personalized revenue cycle management for independent healthcare providers. Discover our mission, values, and commitment to your success.",
+              "url": "https://aetherahealthcare-website.pages.dev/about",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Aethera Healthcare Solutions",
+                "url": "https://aetherahealthcare-website.pages.dev",
+                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Aethera Healthcare Solutions",
+              "alternateName": "Aethera",
+              "description": "Personalized revenue cycle management for independent healthcare providers",
+              "foundingDate": "2025",
+              "founder": {
+                "@type": "Person",
+                "name": "Aethera Healthcare Solutions Team"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Lakeland",
+                "addressRegion": "FL",
+                "postalCode": "33801",
+                "streetAddress": "PO Box 1234"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-863-694-0325",
+                "contactType": "customer service",
+                "email": "info@aetherahealthcare.com"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/aethera-healthcare-solutions"
+              ]
+            })
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}
@@ -101,13 +149,13 @@ export default function About() {
                   Our Story
                 </h2>
                 <p className="text-gray mb-6">
-                  Founded in 2008, Aethera Healthcare Solutions emerged from a simple realization: healthcare providers were spending too much time on billing and not enough time on patient care.
+                  Aethera Healthcare Solutions was founded in 2025 with a clear mission: to give independent healthcare providers the same quality of revenue cycle management that large hospital systems enjoy, but at a price point and service level designed for growing practices.
                 </p>
                 <p className="text-gray mb-6">
-                  Our founders, all former healthcare administrators, saw firsthand how inefficient billing processes were draining practices of revenue and energy. They envisioned a company that would handle the complexities of medical billing so providers could focus on what they do best—caring for patients.
+                  Our founding team brings years of experience in medical billing, coding, and healthcare operations. We saw firsthand how small and mid-sized practices were being underserved by large billing companies that treated them as afterthoughts — slow response times, generic support, and a revolving door of account managers who didn't understand their specialty.
                 </p>
                 <p className="text-gray">
-                  Today, we serve over 500 healthcare providers across 25+ specialties, processing more than 2 million claims annually. But we haven't forgotten our core mission: to be the trusted partner that maximizes revenue while minimizing the burden on healthcare providers.
+                  We built Aethera to be different. We partner with a select number of providers, giving each one a dedicated team that knows their specialty, their payers, and their practice inside and out. We're small enough to give you personal attention, but experienced enough to deliver enterprise-level results.
                 </p>
               </FadeIn>
             </div>
@@ -116,12 +164,12 @@ export default function About() {
                 <div className="bg-cream rounded-2xl p-8 h-full">
                   <h3 className="text-2xl font-bold text-navy mb-6">Our Mission</h3>
                   <p className="text-gray mb-6">
-                    To empower healthcare providers with expert revenue cycle management that maximizes collections, ensures compliance, and allows them to focus on delivering exceptional patient care.
+                    To empower independent healthcare providers with expert, personalized revenue cycle management that maximizes collections and lets them focus on patient care.
                   </p>
                   <div className="border-t border-gray/10 pt-6">
                     <h3 className="text-2xl font-bold text-navy mb-6">Our Vision</h3>
                     <p className="text-gray">
-                      To be the gold standard in medical billing services, recognized by providers and payers alike for our integrity, expertise, and results-driven approach.
+                      To be the most trusted billing partner for independent medical practices in the United States.
                     </p>
                   </div>
                 </div>
@@ -174,25 +222,16 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             label="OUR TEAM"
-            title="Leadership"
-            description="Meet the experienced professionals who lead Aethera Healthcare Solutions."
+            title="Expert Professionals"
+            description="Our team of certified medical billing professionals, coders (CPC, CCS), and denial specialists brings extensive healthcare revenue cycle experience to every practice we serve."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-            {team.map((member, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+            {teamRoles.map((role, index) => (
               <FadeIn key={index} delay={index * 0.1}>
-                <div className="bg-white rounded-xl shadow-md p-6 border border-gray/10 text-center">
-                  <div className="bg-gray/20 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-3xl font-bold text-navy">
-                      {member.name
-                        .split(' ')
-                        .map((n) => n[0])
-                        .join('')}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-navy mb-2">{member.name}</h3>
-                  <p className="text-teal font-medium mb-4">{member.role}</p>
-                  <p className="text-gray">{member.bio}</p>
+                <div className="bg-white rounded-xl shadow-md p-6 border border-gray/10 h-full">
+                  <h3 className="text-xl font-bold text-navy mb-4">{role.title}</h3>
+                  <p className="text-gray">{role.description}</p>
                 </div>
               </FadeIn>
             ))}

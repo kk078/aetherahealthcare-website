@@ -43,6 +43,10 @@ export const metadata: Metadata = {
   },
 };
 
+import CookieConsent from '@/components/ui/CookieConsent';
+import BackToTop from '@/components/ui/BackToTop';
+import CallbackButton from '@/components/ui/CallbackButton';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,7 +57,12 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-cream text-dark">{children}</body>
+      <body className="min-h-full flex flex-col bg-cream text-dark">
+        {children}
+        <CookieConsent />
+        <BackToTop />
+        <CallbackButton />
+      </body>
     </html>
   );
 }

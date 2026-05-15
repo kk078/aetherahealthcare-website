@@ -1,5 +1,4 @@
-'use client';
-
+import Head from 'next/head';
 import Link from 'next/link';
 import {
   FileText,
@@ -19,6 +18,11 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import ServiceCard from '@/components/ui/ServiceCard';
+
+export const metadata = {
+  title: "RCM Services | Medical Billing, Coding, Denial Management",
+  description: "Discover Aethera Healthcare Solutions' comprehensive revenue cycle management services including medical coding, claims processing, payment posting, denial management, and more for healthcare providers.",
+};
 
 const services = [
   {
@@ -97,7 +101,28 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Revenue Cycle Management Services",
+              "provider": {
+                "@type": "Organization",
+                "name": "Aethera Healthcare Solutions",
+                "url": "https://aetherahealthcare-website.pages.dev",
+                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+              },
+              "description": "Comprehensive revenue cycle management services including medical coding, claims processing, payment posting, denial management, and more for healthcare providers.",
+              "areaServed": "United States",
+              "category": "Healthcare Services"
+            })
+          }}
+        />
+      </Head>
       <Navbar />
 
       {/* Hero Section */}
