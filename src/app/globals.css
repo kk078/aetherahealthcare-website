@@ -28,6 +28,31 @@ body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+/* Fix for overlapping header issue - Add padding to body to account for fixed header */
+body {
+  padding-top: 4rem !important;
+}
+
+/* Alternative fix for overlapping header issue */
+header.fixed.w-full.z-50 + div,
+header.fixed.w-full.z-50 + * + div {
+  margin-top: 4rem !important;
+}
+
+/* More specific fix for the stats bar */
+div[class*="bg-white"][class*="border-b"][class*="py-4"] {
+  margin-top: 4rem !important;
+}
+
+.dark div[class*="dark:bg-navy"][class*="border-b"][class*="py-4"] {
+  margin-top: 4rem !important;
+}
+
+/* Additional padding fix for the main content */
+.min-h-screen.flex.flex-col {
+  padding-top: 4rem !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;

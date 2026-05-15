@@ -292,14 +292,12 @@ export default function Pricing() {
               </thead>
               <tbody>
                 {comparison.map((row, index) => (
-                  <FadeIn key={index} delay={index * 0.1}>
-                    <tr className={index % 2 === 0 ? 'bg-cream' : 'bg-white'}>
-                      <td className="py-4 px-6 font-bold text-navy">{row.feature}</td>
-                      <td className="py-4 px-6 text-gray">{row.aethera}</td>
-                      <td className="py-4 px-6 text-gray">{row.inHouse}</td>
-                      <td className="py-4 px-6 text-gray">{row.other}</td>
-                    </tr>
-                  </FadeIn>
+                  <tr key={index} className={index % 2 === 0 ? 'bg-cream' : 'bg-white'}>
+                    <td className="py-4 px-6 font-bold text-navy">{row.feature}</td>
+                    <td className="py-4 px-6 text-gray">{row.aethera}</td>
+                    <td className="py-4 px-6 text-gray">{row.inHouse}</td>
+                    <td className="py-4 px-6 text-gray">{row.other}</td>
+                  </tr>
                 ))}
               </tbody>
             </table>
