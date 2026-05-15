@@ -22,7 +22,6 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import KPICard from '@/components/ui/KPICard';
 import ServiceCard from '@/components/ui/ServiceCard';
 import CTABanner from '@/components/ui/CTABanner';
-import SocialProofBar from '@/components/ui/SocialProofBar';
 
 const kpiStats = [
   { value: '95%+', label: 'Clean Claim Rate' },
@@ -227,7 +226,6 @@ export default function Home() {
         />
       </Head>
       <Navbar />
-      <SocialProofBar />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal relative overflow-hidden">
