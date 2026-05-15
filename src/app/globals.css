@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0B2545;
+  --teal: #0D7377;
+  --mint: #45C4B0;
+  --cream: #FAFCFB;
+  --dark: #111827;
+  --gray: #64748B;
+  --background: var(--cream);
+  --foreground: var(--dark);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-teal: var(--teal);
+  --color-mint: var(--mint);
+  --color-cream: var(--cream);
+  --color-dark: var(--dark);
+  --color-gray: var(--gray);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Fix for overlapping header issue - Add padding to body to account for fixed header */
+body {
+  padding-top: 4rem !important;
+}
+
+/* Alternative fix for overlapping header issue */
+header.fixed.w-full.z-50 + div,
+header.fixed.w-full.z-50 + * + div {
+  margin-top: 4rem !important;
+}
+
+/* More specific fix for the stats bar */
+div[class*="bg-white"][class*="border-b"][class*="py-4"] {
+  margin-top: 4rem !important;
+}
+
+.dark div[class*="dark:bg-navy"][class*="border-b"][class*="py-4"] {
+  margin-top: 4rem !important;
+}
+
+/* Additional padding fix for the main content */
+.min-h-screen.flex.flex-col {
+  padding-top: 4rem !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
