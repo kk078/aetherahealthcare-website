@@ -25,6 +25,14 @@ const company = [
   { name: 'FAQ', href: '/faq' },
 ];
 
+const resources = [
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Provider Portal', href: '/portal' },
+  { name: 'Payer Network', href: '/payers' },
+  { name: 'EHR Integrations', href: '/integrations' },
+  { name: 'Free Assessment', href: '/free-assessment' },
+];
+
 const compliance = [
   { name: 'HIPAA Compliance', href: '/compliance/hipaa' },
   { name: 'Privacy Policy', href: '/compliance/privacy-policy' },
@@ -33,13 +41,20 @@ const compliance = [
   { name: 'Security Practices', href: '/compliance/security' },
 ];
 
+const trustBadges = [
+  { label: 'HIPAA Compliant', icon: '🔒' },
+  { label: 'SOC 2 Certified', icon: '✓' },
+  { label: 'HBMA Member', icon: '★' },
+  { label: 'BAA Available', icon: '📄' },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-navy text-cream">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="lg:col-span-1">
             <div className="flex items-center">
               <div className="bg-gradient-to-r from-teal to-mint rounded-lg w-10 h-10 flex items-center justify-center">
                 <span className="text-white font-bold text-xl">A</span>
@@ -52,11 +67,19 @@ export default function Footer() {
             <p className="mt-2 text-gray text-sm">
               Your full-service medical billing partner handling coding, claims, payments, denials, and collections.
             </p>
+            <div className="mt-5">
+              <Link
+                href="/free-assessment"
+                className="inline-block bg-mint hover:bg-teal text-navy font-bold text-xs py-2 px-4 rounded-full transition-colors"
+              >
+                Get Free Assessment →
+              </Link>
+            </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Services</h3>
+            <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-4">Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
@@ -70,7 +93,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Company</h3>
+            <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-4">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
@@ -82,31 +105,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Compliance */}
+          {/* Resources */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Compliance</h3>
-            <ul className="space-y-2">
-              {compliance.map((item) => (
-                <li key={item.name}>
-                  <Link href={item.href} className="text-gray hover:text-mint transition-colors text-sm">
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-gray/20 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray text-sm">
-            &copy; {new Date().getFullYear()} Aethera Healthcare Solutions. All rights reserved.
-          </p>
-          <p className="text-gray text-sm mt-4 md:mt-0">
-            aetherahealthcare.com
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
-}
+            <h3 classN

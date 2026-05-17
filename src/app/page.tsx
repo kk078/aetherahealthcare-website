@@ -22,6 +22,7 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import KPICard from '@/components/ui/KPICard';
 import ServiceCard from '@/components/ui/ServiceCard';
 import CTABanner from '@/components/ui/CTABanner';
+import ROICalculator from '@/components/ui/ROICalculator';
 
 const kpiStats = [
   { value: '95%+', label: 'Clean Claim Rate' },
@@ -514,6 +515,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ROI Calculator */}
+      <section className="py-16 md:py-24 bg-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Revenue Calculator</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-4">Calculate Your Revenue Potential</h2>
+            <p className="text-cream/80 max-w-2xl mx-auto">See how much additional revenue Aethera could recover for your practice. Adjust the inputs below to match your current situation.</p>
+          </div>
+          <ROICalculator />
+        </div>
+      </section>
+
       {/* CTA Banner */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -532,31 +545,4 @@ export default function Home() {
             label="FAQ"
             title="Frequently Asked Questions"
             description="Get answers to common questions about our services and process."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            {faqs.map((faq, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <div className="bg-cream rounded-xl p-6">
-                  <h3 className="text-lg font-bold text-navy mb-2">{faq.question}</h3>
-                  <p className="text-gray">{faq.answer}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/faq"
-              className="text-teal font-medium hover:text-mint transition-colors"
-            >
-              View all frequently asked questions →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-}
+          />

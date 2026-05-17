@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import PricingCard from '@/components/ui/PricingCard';
+import ROICalculator from '@/components/ui/ROICalculator';
 
 export const metadata = {
   title: "Pricing | Transparent Medical Billing Rates | Aethera Healthcare",
@@ -271,6 +272,18 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* ROI Calculator */}
+      <section className="py-16 md:py-24 bg-navy">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Revenue Calculator</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-4">See What Your Practice Could Earn</h2>
+            <p className="text-cream/80 max-w-2xl mx-auto">Before choosing a pricing model, calculate the potential revenue impact. Most practices see collections improve 15–25% in the first year.</p>
+          </div>
+          <ROICalculator />
+        </div>
+      </section>
+
       {/* Comparison Table */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -330,26 +343,4 @@ export default function Pricing() {
       {/* CTA */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-16 px-8 text-center">
-            <FadeIn>
-              <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-6">
-                Ready to Optimize Your Revenue?
-              </h2>
-              <p className="text-cream text-xl max-w-2xl mx-auto mb-8">
-                Schedule a free consultation to see how Aethera can improve your collections.
-              </p>
-              <Link
-                href="/contact"
-                className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
-              >
-                Schedule Free Consultation
-              </Link>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-}
+          <div cla
