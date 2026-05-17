@@ -37,4 +37,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: aetherahealthcare-website
-          di
+          directory: out
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
