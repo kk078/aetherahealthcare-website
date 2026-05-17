@@ -39,3 +39,4 @@ jobs:
           projectName: aetherahealthcare-website
           directory: out
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
