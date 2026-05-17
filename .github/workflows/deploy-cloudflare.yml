@@ -37,15 +37,81 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
-      - name: Configure custom domain
+      - name: Fix custom domain routing
         run: |
-          RESULT=$(curl -s -o /tmp/domain_result.json -w "%{http_code}" \
-            -X POST "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/aetherahealthcare-website/domains" \
-            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
-            -H "Content-Type: application/json" \
-            -d '{"name":"aetherahealthcare.com"}')
-          echo "HTTP status: $RESULT"
-          echo "Response: $(cat /tmp/domain_result.json)"
+          python3 << 'PYEOF'
+          import urllib.request, urllib.error, json, os, sys
+
+          TOKEN = os.environ['CLOUDFLARE_API_TOKEN']
+          ACCOUNT_ID = os.environ['CLOUDFLARE_ACCOUNT_ID']
+          TARGET_PROJECT = 'aetherahealthcare-website'
+          DOMAIN = 'aetherahealthcare.com'
+          BASE = f'https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/pages/projects'
+
+          def cf(method, path, body=None):
+              url = BASE + path
+              data = json.dumps(body).encode() if body else None
+              req = urllib.request.Request(url, data=data, method=method,
+                  headers={'Authorization': f'Bearer {TOKEN}', 'Content-Type': 'application/json'})
+              try:
+                  with urllib.request.urlopen(req) as r:
+                      return json.loads(r.read()), r.status
+              except urllib.error.HTTPError as e:
+                  return json.loads(e.read()), e.code
+
+          # Step 1: List all projects and find which ones have the domain
+          print(f'\n=== Listing all Pages projects ===')
+          result, status = cf('GET', '?per_page=50')
+          projects = result.get('result', [])
+          print(f'Found {len(projects)} projects')
+          for p in projects:
+              name = p['name']
+              domains = p.get('domains', [])
+              print(f'  {name}: domains={domains}')
+
+          # Step 2: Remove domain from any project that isn't our target
+          for p in projects:
+              name = p['name']
+              if name == TARGET_PROJECT:
+                  continue
+              if DOMAIN in p.get('domains', []):
+                  print(f'\nRemoving {DOMAIN} from project {name}...')
+                  r, s = cf('DELETE', f'/{name}/domains/{DOMAIN}')
+                  print(f'  Status: {s}, Result: {r}')
+
+          # Step 3: Check domain list on target project
+          print(f'\n=== Domain status on {TARGET_PROJECT} ===')
+          r, s = cf('GET', f'/{TARGET_PROJECT}/domains')
+          domains_on_target = r.get('result', [])
+          domain_names = [d['name'] for d in domains_on_target]
+          print(f'Current domains: {domain_names}')
+
+          existing = next((d for d in domains_on_target if d['name'] == DOMAIN), None)
+          if existing:
+              print(f'Domain status: {existing.get("status")}')
+              vdata = existing.get('verification_data', {})
+              valdata = existing.get('validation_data', {})
+              print(f'Verification: {vdata}')
+              print(f'Validation: {valdata}')
+              # If stuck initializing, delete and re-add
+              if existing.get('status') in ('initializing', 'blocked', 'error'):
+                  print(f'\nStatus is {existing["status"]} — deleting and re-adding...')
+                  r2, s2 = cf('DELETE', f'/{TARGET_PROJECT}/domains/{DOMAIN}')
+                  print(f'Delete result: {s2} {r2}')
+                  import time; time.sleep(3)
+                  r3, s3 = cf('POST', f'/{TARGET_PROJECT}/domains', {'name': DOMAIN})
+                  print(f'Re-add result: {s3} {r3}')
+          else:
+              print(f'\nDomain not present — adding {DOMAIN}...')
+              r2, s2 = cf('POST', f'/{TARGET_PROJECT}/domains', {'name': DOMAIN})
+              print(f'Add result: {s2}')
+              print(json.dumps(r2, indent=2))
+
+          # Step 4: Final status check
+          print(f'\n=== Final domain status ===')
+          r, s = cf('GET', f'/{TARGET_PROJECT}/domains/{DOMAIN}')
+          print(json.dumps(r, indent=2))
+          PYEOF
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
