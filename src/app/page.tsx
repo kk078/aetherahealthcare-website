@@ -527,6 +527,40 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Explore Resources */}
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <span className="text-teal text-sm font-bold uppercase tracking-widest">EXPLORE AETHERA</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-navy font-playfair mt-2">Everything You Need to Decide</h2>
+              <p className="text-gray mt-3 max-w-2xl mx-auto">Real case studies. A live billing dashboard. Your payers. Your EHR. And a free assessment to start.</p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { href: '/case-studies', label: 'Case Studies', title: 'Real Results from Real Practices', desc: '6 detailed case studies showing how much revenue Aethera recovered by specialty, challenge, and outcome.', cta: 'Read Case Studies', accent: 'text-teal', border: 'border-teal' },
+              { href: '/free-assessment', label: 'Free Assessment', title: 'See What Your Practice Is Missing', desc: 'A no-obligation revenue cycle audit identifying denial leakage, AR gaps, and undercoding. Delivered in 5 business days.', cta: 'Get Free Assessment', accent: 'text-mint', border: 'border-mint' },
+              { href: '/portal', label: 'Provider Portal', title: '24/7 Real-Time Billing Visibility', desc: 'Live claims dashboard, denial queue, AR aging, and KPI benchmarks accessible from any device at any time.', cta: 'See the Portal', accent: 'text-teal', border: 'border-navy' },
+              { href: '/integrations', label: 'EHR Integrations', title: 'Works With Your Current System', desc: 'Epic, Cerner, athenahealth, eClinicalWorks, Kareo, and 45+ more. Setup in 1-4 weeks, zero workflow disruption.', cta: 'View Integrations', accent: 'text-teal', border: 'border-teal' },
+              { href: '/payers', label: 'Payer Network', title: '900+ Insurers We Work With', desc: 'From Medicare and Medicaid to regional Blues plans and workers comp carriers. We know your payers rules cold.', cta: 'See Payer Network', accent: 'text-teal', border: 'border-navy' },
+              { href: '/specialties', label: 'Specialties', title: 'Billing Built for Your Specialty', desc: 'Cardiology, orthopedics, dermatology, psychiatry, family medicine and more. Specialty-specific coding expertise.', cta: 'Find Your Specialty', accent: 'text-mint', border: 'border-mint' },
+            ].map((card, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <Link href={card.href} className={`group block bg-white rounded-2xl p-6 border-2 ${card.border} hover:shadow-lg transition-all duration-200 h-full`}>
+                  <span className={`text-xs font-bold uppercase tracking-widest ${card.accent}`}>{card.label}</span>
+                  <h3 className="text-lg font-bold text-navy font-playfair mt-2 mb-2 group-hover:text-teal transition-colors">{card.title}</h3>
+                  <p className="text-gray text-sm leading-relaxed mb-4">{card.desc}</p>
+                  <span className={`text-sm font-semibold ${card.accent} group-hover:underline`}>{card.cta} &rarr;</span>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* CTA Banner */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">

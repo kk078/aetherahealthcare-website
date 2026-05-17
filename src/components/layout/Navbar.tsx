@@ -197,32 +197,4 @@ export default function Navbar() {
             </div>
 
             <div className="border-t border-gray/10 pt-3 space-y-2">
-              <Link href="/specialties" className="block text-gray hover:text-teal transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>
-                Specialties
-              </Link>
-              <Link href="/pricing" className="block text-gray hover:text-teal transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>
-                Pricing
-              </Link>
-              <Link href="/about" className="block text-gray hover:text-teal transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>
-                About
-              </Link>
-              <Link href="/blog" className="block text-gray hover:text-teal transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>
-                Blog
-              </Link>
-              <Link href="/contact" className="block text-gray hover:text-teal transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>
-                Contact
-              </Link>
-              <Link
-                href="/free-assessment"
-                className="block bg-mint hover:bg-teal text-navy font-bold py-2 px-5 rounded-full transition-colors duration-300 text-sm text-center mt-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Free Assessment
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
-    </header>
-  );
-}
+ 
