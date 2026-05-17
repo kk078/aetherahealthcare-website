@@ -28,22 +28,60 @@ const values = [
   },
 ];
 
-const teamRoles = [
+const teamMembers = [
   {
-    title: 'Certified Medical Coders',
-    description: 'Expert coders with CPC and CCS certifications ensuring accurate claim submission and maximum reimbursement.',
+    name: 'Marcus Webb',
+    title: 'Founder & CEO',
+    credentials: 'MBA, CHBME',
+    initials: 'MW',
+    color: 'bg-teal',
+    bio: 'Marcus brings 15+ years of healthcare revenue cycle leadership, having managed billing operations for multi-specialty groups across Florida and Georgia. He founded Aethera to bring enterprise-grade RCM to independent practices.',
+    specialties: ['Revenue Cycle Strategy', 'Payer Contracting', 'Practice Growth'],
   },
   {
-    title: 'Billing Specialists',
-    description: 'Experienced professionals handling claim submission, payment posting, and denial management.',
+    name: 'Dr. Priya Nair',
+    title: 'Head of Clinical Operations',
+    credentials: 'MD, CPC',
+    initials: 'PN',
+    color: 'bg-navy',
+    bio: 'A former hospitalist turned billing operations expert, Dr. Nair leads clinical documentation integrity and coding accuracy programs. Her dual perspective as clinician and coder has helped clients recover an average of 23% in previously undercaptured revenue.',
+    specialties: ['Clinical Documentation', 'Specialty Coding', 'Compliance Auditing'],
   },
   {
-    title: 'Denial Management Experts',
-    description: 'Specialists focused on preventing denials and successfully appealing rejected claims.',
+    name: 'Jordan Cole',
+    title: 'Director of Billing Operations',
+    credentials: 'CPC, CPMA',
+    initials: 'JC',
+    color: 'bg-mint',
+    bio: 'Jordan oversees day-to-day claim submission, denial management, and AR workflows for all client accounts. With a background in cardiology and orthopedics billing, Jordan has reduced average AR days below 28 across the client portfolio.',
+    specialties: ['Denial Management', 'AR Optimization', 'Payer Relations'],
   },
   {
-    title: 'Dedicated Account Managers',
-    description: 'Your single point of contact who understands your practice, specialty, and unique needs.',
+    name: 'Sandra Liu',
+    title: 'Client Success Manager',
+    credentials: 'CMRS, RHIT',
+    initials: 'SL',
+    color: 'bg-teal',
+    bio: 'Sandra is the primary point of contact for all Aethera clients, ensuring every practice gets the personalized attention it deserves. She specializes in onboarding, EHR integration coordination, and monthly performance reviews.',
+    specialties: ['Client Onboarding', 'EHR Integration', 'Performance Reporting'],
+  },
+  {
+    name: 'Ahmed Hassan',
+    title: 'Lead Medical Coder',
+    credentials: 'CPC, CCS, CEMC',
+    initials: 'AH',
+    color: 'bg-navy',
+    bio: "Ahmed leads Aethera's coding team with expertise spanning surgery, evaluation & management, and behavioral health. His rigorous review process maintains a 99.2% coding accuracy rate across all client specialties.",
+    specialties: ['Surgical Coding', 'E&M Coding', 'Behavioral Health'],
+  },
+  {
+    name: 'Rachel Torres',
+    title: 'Credentialing Specialist',
+    credentials: 'CPCS, NAMSS Member',
+    initials: 'RT',
+    color: 'bg-mint',
+    bio: 'Rachel manages provider enrollment and credentialing across 900+ payer contracts. Her streamlined process gets new providers credentialed an average of 40% faster than industry standard, minimizing revenue gaps during onboarding.',
+    specialties: ['Provider Enrollment', 'Payer Credentialing', 'CAQH Management'],
   },
 ];
 
@@ -217,21 +255,37 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Real Team Bios */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            label="OUR TEAM"
-            title="Expert Professionals"
-            description="Our team of certified medical billing professionals, coders (CPC, CCS), and denial specialists brings extensive healthcare revenue cycle experience to every practice we serve."
+            label="MEET THE TEAM"
+            title="The People Behind Your Revenue"
+            description="Certified billers, coders, and clinicians who know your specialty, understand your payers, and are accountable for your results."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-            {teamRoles.map((role, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+            {teamMembers.map((member, index) => (
               <FadeIn key={index} delay={index * 0.1}>
-                <div className="bg-white rounded-xl shadow-md p-6 border border-gray/10 h-full">
-                  <h3 className="text-xl font-bold text-navy mb-4">{role.title}</h3>
-                  <p className="text-gray">{role.description}</p>
+                <div className="bg-white rounded-2xl shadow-md p-6 border border-gray/10 h-full flex flex-col">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`${member.color} w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0`}>
+                      <span className="text-white font-bold text-lg">{member.initials}</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-navy leading-tight">{member.name}</h3>
+                      <p className="text-teal text-sm font-semibold">{member.title}</p>
+                      <p className="text-gray text-xs mt-0.5">{member.credentials}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray text-sm leading-relaxed flex-grow">{member.bio}</p>
+                  <div className="mt-4 pt-4 border-t border-gray/10 flex flex-wrap gap-2">
+                    {member.specialties.map((s, i) => (
+                      <span key={i} className="bg-cream text-navy text-xs font-medium px-2 py-1 rounded-full border border-gray/10">
+                        {s}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </FadeIn>
             ))}

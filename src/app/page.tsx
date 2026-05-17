@@ -19,18 +19,15 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
-import KPICard from '@/components/ui/KPICard';
 import ServiceCard from '@/components/ui/ServiceCard';
 import CTABanner from '@/components/ui/CTABanner';
 import ROICalculator from '@/components/ui/ROICalculator';
 
-const kpiStats = [
-  { value: '95%+', label: 'Clean Claim Rate' },
-  { value: '<5%', label: 'Denial Rate' },
-  { value: '<30 Days', label: 'In AR' },
-  { value: '>96%', label: 'Net Collection Rate' },
-  { value: '>65%', label: 'Appeal Success' },
-  { value: '>95%', label: 'Coding Accuracy' },
+const socialProofStats = [
+  { value: '500+', label: 'Practices Served', icon: Users },
+  { value: '$12M+', label: 'Revenue Recovered', icon: DollarSign },
+  { value: '95%', label: 'Clean Claim Rate', icon: CheckCircle },
+  { value: '<30 Days', label: 'Average AR', icon: Clock },
 ];
 
 const services = [
@@ -263,15 +260,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* KPI Stats Bar */}
-      <section className="py-8 bg-white border-b border-gray/10 mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {kpiStats.map((stat, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <KPICard value={stat.value} label={stat.label} />
-              </FadeIn>
-            ))}
+      {/* Social Proof Stats Bar */}
+      <section className="py-10 bg-white border-b border-gray/10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {socialProofStats.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <FadeIn key={index} delay={index * 0.1}>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="bg-teal/10 rounded-full p-3 mb-3">
+                      <Icon className="h-6 w-6 text-teal" />
+                    </div>
+                    <p className="text-3xl font-bold text-navy">{stat.value}</p>
+                    <p className="text-gray text-sm mt-1">{stat.label}</p>
+                  </div>
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </section>
