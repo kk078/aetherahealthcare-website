@@ -35,7 +35,7 @@ jobs:
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          accountId: 2c268625d9e6e4c084ff296fcdf5f3bd
           projectName: aetherahealthcare-website
           directory: out
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
