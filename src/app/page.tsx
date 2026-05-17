@@ -545,4 +545,28 @@ export default function Home() {
             label="FAQ"
             title="Frequently Asked Questions"
             description="Get answers to common questions about our services and process."
-          />
+          />
+
+          <div className="grid grid-cols-1 gap-8 mt-16">
+            {faqs.map((faq, index) => (
+              <FadeIn key={index} delay={index * 0.1}>
+                <div className="bg-cream rounded-xl p-6 border border-gray/10">
+                  <h3 className="text-lg font-bold text-navy mb-2">{faq.question}</h3>
+                  <p className="text-gray">{faq.answer}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/faq" className="text-teal font-medium hover:text-mint transition-colors">
+              View all FAQs &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
