@@ -351,7 +351,7 @@ export default function Process() {
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">
                 Begin your journey to optimized revenue cycle management today.
               </p>
-              <Link
+              <Link prefetch={false}
                 href="/contact"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >

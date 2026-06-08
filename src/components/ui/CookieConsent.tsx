@@ -28,7 +28,7 @@ export default function CookieConsent() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray dark:text-cream text-sm">
             We use cookies to improve your experience. By continuing to use this site, you agree to our{' '}
-            <Link href="/compliance/privacy-policy" className="text-teal hover:text-mint dark:text-mint dark:hover:text-teal underline">
+            <Link prefetch={false} href="/compliance/privacy-policy" className="text-teal hover:text-mint dark:text-mint dark:hover:text-teal underline">
               Privacy Policy
             </Link>
             .

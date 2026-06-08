@@ -63,8 +63,8 @@ export default function PsychiatryBilling() {
               <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6 leading-tight">Behavioral Health Billing That Understands the Complexity</h1>
               <p className="text-xl text-cream mb-10">E&M + psychotherapy add-ons, mental health parity, telehealth rules, prior auth for medications, patient collections — our behavioral health billing team resolves the issues that cost psychiatric practices the most.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Psychiatry Assessment</Link>
-                <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
+                <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Psychiatry Assessment</Link>
+                <Link prefetch={false} href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
               </div>
             </FadeIn>
           </div>
@@ -130,7 +130,7 @@ export default function PsychiatryBilling() {
               ))}
             </div>
             <blockquote className="border-l-4 border-mint pl-5"><p className="text-cream italic">"We weren't collecting from patients at all. Aethera built a system that collects professionally without damaging the therapeutic relationship."</p></blockquote>
-            <div className="mt-6"><Link href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
+            <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
           </FadeIn>
         </div>
       </section>
@@ -147,7 +147,7 @@ export default function PsychiatryBilling() {
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
-            <FadeIn><h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to Maximize Your Behavioral Health Revenue?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free psychiatry billing assessment. We'll audit your E&M + therapy bundling, prior auth denials, and patient collection patterns.</p><Link href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Psychiatry Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
+            <FadeIn><h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to Maximize Your Behavioral Health Revenue?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free psychiatry billing assessment. We'll audit your E&M + therapy bundling, prior auth denials, and patient collection patterns.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Psychiatry Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
           </div>
         </div>
       </section>

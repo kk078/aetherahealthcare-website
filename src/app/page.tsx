@@ -242,13 +242,13 @@ export default function Home() {
             </FadeIn>
             <FadeIn delay={0.4}>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link
+                <Link prefetch={false}
                   href="/contact"
                   className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 text-center"
                 >
                   Schedule Free Consultation
                 </Link>
-                <Link
+                <Link prefetch={false}
                   href="/services"
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300 text-center"
                 >
@@ -471,7 +471,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link
+            <Link prefetch={false}
               href="/specialties"
               className="text-teal font-medium hover:text-mint transition-colors"
             >
@@ -554,7 +554,7 @@ export default function Home() {
               { href: '/specialties', label: 'Specialties', title: 'Billing Built for Your Specialty', desc: 'Cardiology, orthopedics, dermatology, psychiatry, family medicine and more. Specialty-specific coding expertise.', cta: 'Find Your Specialty', accent: 'text-mint', border: 'border-mint' },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <Link href={card.href} className={`group block bg-white rounded-2xl p-6 border-2 ${card.border} hover:shadow-lg transition-all duration-200 h-full`}>
+                <Link prefetch={false} href={card.href} className={`group block bg-white rounded-2xl p-6 border-2 ${card.border} hover:shadow-lg transition-all duration-200 h-full`}>
                   <span className={`text-xs font-bold uppercase tracking-widest ${card.accent}`}>{card.label}</span>
                   <h3 className="text-lg font-bold text-navy font-playfair mt-2 mb-2 group-hover:text-teal transition-colors">{card.title}</h3>
                   <p className="text-gray text-sm leading-relaxed mb-4">{card.desc}</p>
@@ -599,7 +599,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/faq" className="text-teal font-medium hover:text-mint transition-colors">
+            <Link prefetch={false} href="/faq" className="text-teal font-medium hover:text-mint transition-colors">
               View all FAQs &rarr;
             </Link>
           </div>

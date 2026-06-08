@@ -309,13 +309,13 @@ export default function ARFollowUp() {
                 Schedule a free consultation to see how Aethera can accelerate your collections.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link
+                <Link prefetch={false}
                   href="/contact"
                   className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >
                   Schedule Free Consultation
                 </Link>
-                <Link
+                <Link prefetch={false}
                   href="/pricing"
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >
@@ -342,7 +342,7 @@ export default function ARFollowUp() {
                 <div className="bg-white rounded-xl shadow-md p-6 border border-gray/10">
                   <BarChart3 className="h-10 w-10 text-teal mb-4" />
                   <h3 className="text-xl font-bold text-navy mb-2">{service.name}</h3>
-                  <Link
+                  <Link prefetch={false}
                     href={service.href}
                     className="text-teal font-medium hover:text-mint transition-colors"
                   >

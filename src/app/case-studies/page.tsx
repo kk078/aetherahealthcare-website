@@ -6,7 +6,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: 'Client Case Studies | Real Results | Aethera Healthcare Solutions',
+  title: { absolute: 'Client Case Studies | Real Results | Aethera Healthcare Solutions' },
   description: 'Real results from healthcare practices that partnered with Aethera. Case studies by specialty showing measurable improvements in collections, denial rates, and AR days.',
 };
 
@@ -204,10 +204,10 @@ export default function CaseStudies() {
               Start with a free revenue cycle assessment. We'll show you exactly what your practice could be collecting.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
+              <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
                 Get Free Assessment <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
-              <Link href="/contact" className="inline-flex items-center bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors">
+              <Link prefetch={false} href="/contact" className="inline-flex items-center bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors">
                 Talk to Our Team
               </Link>
             </div>

@@ -42,3 +42,25 @@ next-env.d.ts
 
 # Claude settings
 .claude/
+
+# Cloudflare deploy token (never commit)
+.cf-deploy-token
+
+# --- AETHERA-PROTECT: never publish these to the public repo ---
+# Sensitive business data / internal docs that ended up in the website folder
+Aethera_*.pdf
+Aethera_*.docx
+Aethera_*.xlsx
+Aethera_*.html
+AETHERA_FLEET.md
+CONTAINER_RUNTIME.md
+SAFE_FAIL.md
+.buildexclude
+deploy-now.bat
+rebuild-website.bat
+# Unrelated sub-projects that shouldn't live in the website repo
+/aethera-admin/
+/aethera-worker/
+# Cross-project CI that would fire on push from the wrong repo
+/.github/workflows/deploy-production.yml
+/.github/workflows/deploy-staging.yml

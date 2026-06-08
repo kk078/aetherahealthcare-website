@@ -441,13 +441,13 @@ export default function HipaaCompliance() {
                 Contact our Privacy Officer or Security Officer for any questions about our HIPAA compliance program.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link
+                <Link prefetch={false}
                   href="mailto:privacy@aetherahealthcare.com"
                   className="bg-teal hover:bg-navy text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >
                   Email Privacy Officer
                 </Link>
-                <Link
+                <Link prefetch={false}
                   href="mailto:security@aetherahealthcare.com"
                   className="bg-transparent border-2 border-teal text-teal hover:bg-teal/10 font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >

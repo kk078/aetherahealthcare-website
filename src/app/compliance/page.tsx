@@ -196,7 +196,7 @@ export default function Compliance() {
                   </div>
                   <h3 className="text-xl font-bold text-navy mb-2">{standard.title}</h3>
                   <p className="text-gray mb-4 flex-grow">{standard.description}</p>
-                  <Link
+                  <Link prefetch={false}
                     href={standard.href}
                     className="text-teal font-medium hover:text-mint transition-colors flex items-center"
                   >
@@ -251,13 +251,13 @@ export default function Compliance() {
                 Contact our Compliance Officer for any questions about our policies and procedures.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link
+                <Link prefetch={false}
                   href="mailto:compliance@aetherahealthcare.com"
                   className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >
                   Email Compliance Officer
                 </Link>
-                <Link
+                <Link prefetch={false}
                   href="/contact"
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >

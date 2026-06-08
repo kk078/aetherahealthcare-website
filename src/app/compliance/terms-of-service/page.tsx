@@ -373,7 +373,7 @@ export default function TermsOfService() {
               <p className="text-gray max-w-2xl mx-auto mb-8">
                 Contact our legal team for any questions about these Terms of Service.
               </p>
-              <Link
+              <Link prefetch={false}
                 href="mailto:legal@aetherahealthcare.com"
                 className="bg-teal hover:bg-navy text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >

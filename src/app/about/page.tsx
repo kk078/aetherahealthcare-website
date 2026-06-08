@@ -5,7 +5,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: "About Aethera Healthcare Solutions | Our Story & Mission",
+  title: { absolute: "About Aethera Healthcare Solutions | Our Story & Mission" },
   description: "Learn about Aethera Healthcare Solutions, a startup focused on providing personalized revenue cycle management for independent healthcare providers. Discover our mission, values, and commitment to your success.",
 };
 

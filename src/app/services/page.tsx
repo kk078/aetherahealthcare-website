@@ -97,7 +97,24 @@ const services = [
     description: 'Comprehensive financial and operational reporting.',
     href: '/services/reporting-analytics',
   },
-];
+  {
+    icon: <FileText className="h-8 w-8" />,
+    title: 'Pharmacy Billing',
+    description: 'NCPDP claims, PBM rejects, DIR reconciliation, 340B, and specialty PAs.',
+    href: '/services/pharmacy-billing',
+  },
+  {
+    icon: <FileText className="h-8 w-8" />,
+    title: 'Dental Billing',
+    description: 'CDT coding, medical-dental cross-coding, predeterminations, and ortho.',
+    href: '/services/dental-billing',
+  },
+  {
+    icon: <Shield className="h-8 w-8" />,
+    title: "Workers' Comp Billing",
+    description: 'State fee schedules, eBilling, narratives, liens, and bill-review appeals.',
+    href: '/services/workers-compensation-billing',
+  },];
 
 export default function Services() {
   return (
@@ -178,7 +195,7 @@ export default function Services() {
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">
                 Schedule a free consultation to see how Aethera can improve your collections and reduce administrative burden.
               </p>
-              <Link
+              <Link prefetch={false}
                 href="/contact"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >

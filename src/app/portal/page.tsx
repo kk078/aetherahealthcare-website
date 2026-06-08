@@ -77,10 +77,10 @@ export default function Portal() {
           </FadeIn>
           <FadeIn delay={0.4}>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300">
+              <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300">
                 Request Portal Demo
               </Link>
-              <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300">
+              <Link prefetch={false} href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300">
                 Schedule Consultation
               </Link>
             </div>
@@ -251,7 +251,7 @@ export default function Portal() {
                 <Users className="h-12 w-12 text-mint mx-auto mb-4" />
                 <h3 className="text-2xl font-bold font-playfair mb-3">Ready to See It Live?</h3>
                 <p className="text-cream mb-6">We'll walk you through a live demo of the portal using sample data from your specialty.</p>
-                <Link href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300">
+                <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300">
                   Request Your Demo
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>

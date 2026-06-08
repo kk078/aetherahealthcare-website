@@ -130,6 +130,29 @@ const specialties = [
         challenges: 'Time-based billing, modifier usage, and pain management procedure coding.'
       }
     ]
+  },
+  {
+    category: 'Pharmacy, Dental & Specialty Lines',
+    items: [
+      {
+        name: 'Pharmacy Services',
+        description: 'Revenue cycle for retail, specialty, compounding, and long-term care pharmacies — adjudication, PBM rejects, DIR, and 340B.',
+        cptCodes: 'NDC, NCPDP D.0, DAW 0-9, J-codes (Part B)',
+        challenges: 'PBM claim rejects, DIR fee clawbacks, specialty drug prior authorizations, and 340B program integrity.'
+      },
+      {
+        name: 'Dental',
+        description: 'CDT and medical-dental cross-coding for general, specialty, and DSO practices, including oral surgery and sleep appliances.',
+        cptCodes: 'D0100-D9999 (CDT) + medical CPT/ICD-10 cross-codes',
+        challenges: 'Medical cross-coding, predeterminations, PPO downgrades, and aging insurance A/R.'
+      },
+      {
+        name: "Workers' Compensation",
+        description: 'Multi-state workers\' comp billing with jurisdiction fee schedules, eBilling, narratives, and lien recovery.',
+        cptCodes: 'CMS-1500, state fee schedules, 99455/99456, DWC forms',
+        challenges: 'State-specific fee schedules, utilization review, bill-review reductions, and lien deadlines.'
+      }
+    ]
   }
 ];
 
@@ -247,7 +270,7 @@ export default function Specialties() {
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">
                 Let our experts handle your specialty-specific billing and coding needs.
               </p>
-              <Link
+              <Link prefetch={false}
                 href="/contact"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >

@@ -6,7 +6,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: 'Insurance Payer Network | 900+ Payers | Aethera Healthcare Solutions',
+  title: { absolute: 'Insurance Payer Network | 900+ Payers | Aethera Healthcare Solutions' },
   description: 'Aethera Healthcare Solutions works with 900+ insurance payers including Medicare, Medicaid, and all major commercial insurers. Real-time eligibility verification included.',
 };
 
@@ -230,7 +230,7 @@ export default function Payers() {
           <FadeIn>
             <h3 className="text-xl font-bold text-navy font-playfair mb-3">Don't See Your Payer?</h3>
             <p className="text-gray mb-6">We likely work with them. With 900+ payers in our network, if you don't see a specific plan listed, contact us for a payer-specific confirmation.</p>
-            <Link href="/contact" className="inline-flex items-center bg-teal hover:bg-navy text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
+            <Link prefetch={false} href="/contact" className="inline-flex items-center bg-teal hover:bg-navy text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
               Ask About Your Payer <ArrowRight className="h-4 w-4 ml-2" />
             </Link>
           </FadeIn>
@@ -248,7 +248,7 @@ export default function Payers() {
               <p className="text-cream text-lg max-w-xl mx-auto mb-8">
                 Our payer expertise means fewer denials, faster payments, and more money in your practice.
               </p>
-              <Link href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
+              <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
                 Get Your Free Assessment <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </FadeIn>

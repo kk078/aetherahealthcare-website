@@ -38,7 +38,7 @@ export default function PricingCard({
         ))}
       </ul>
 
-      <Link
+      <Link prefetch={false}
         href={href}
         className={`w-full py-3 px-6 rounded-full font-medium text-center transition-colors ${
           isPopular

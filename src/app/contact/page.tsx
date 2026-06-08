@@ -7,7 +7,7 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import ContactTabs from '@/components/ui/ContactTabs';
 
 export const metadata = {
-  title: "Contact Us | Free Consultation | Aethera Healthcare Solutions",
+  title: { absolute: "Contact Us | Free Consultation | Aethera Healthcare Solutions" },
   description: "Get in touch with Aethera Healthcare Solutions for a free consultation. Contact us by phone at +1 (863) 694-0325 or email at info@aetherahealthcare.com.",
 };
 

@@ -339,7 +339,7 @@ export default function Careers() {
             <p className="text-gray mb-6">
               Don't see a position that matches your skills? We're always interested in hearing from talented professionals.
             </p>
-            <Link
+            <Link prefetch={false}
               href="mailto:careers@aetherahealthcare.com"
               className="text-teal font-medium hover:text-mint transition-colors"
             >
@@ -360,7 +360,7 @@ export default function Careers() {
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">
                 Join our team and help healthcare providers focus on what matters most—patient care.
               </p>
-              <Link
+              <Link prefetch={false}
                 href="mailto:careers@aetherahealthcare.com"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >

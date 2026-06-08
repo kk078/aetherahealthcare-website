@@ -18,7 +18,7 @@ export default function CTABanner({
       <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-6">
         {title}
       </h2>
-      <Link
+      <Link prefetch={false}
         href={href}
         className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
       >

@@ -316,13 +316,13 @@ export default function BusinessAssociateAgreement() {
                 Contact our compliance team to request a BAA for your practice.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link
+                <Link prefetch={false}
                   href="/contact"
                   className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >
                   Request BAA
                 </Link>
-                <Link
+                <Link prefetch={false}
                   href="mailto:compliance@aetherahealthcare.com"
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >

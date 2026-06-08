@@ -18,7 +18,13 @@ const specialtyDefaults: Record<string, { avgClaim: number; volume: number; deni
 };
 
 function fmt(n: number) {
-  return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  const rounded = Math.round(n);
+  const str = rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return '$' + str;
+}
+
+function fmtNum(n: number) {
+  return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 export default function ROICalculator() {
@@ -61,6 +67,7 @@ export default function ROICalculator() {
           <div>
             <label className="block text-sm font-semibold text-navy mb-2">Medical Specialty</label>
             <select
+              aria-label="Medical Specialty"
               value={specialty}
               onChange={e => handleSpecialtyChange(e.target.value)}
               className="w-full border border-gray/30 rounded-lg px-4 py-3 text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
@@ -73,10 +80,10 @@ export default function ROICalculator() {
 
           <div>
             <label className="block text-sm font-semibold text-navy mb-2">
-              Monthly Claim Volume: <span className="text-teal">{volume.toLocaleString()} claims</span>
+              Monthly Claim Volume: <span className="text-teal">{fmtNum(volume)} claims</span>
             </label>
             <input
-              type="range" min={50} max={2000} step={10} value={volume}
+              type="range" min={50} max={2000} step={10} aria-label="Monthly Claim Volume" value={volume}
               onChange={e => setVolume(Number(e.target.value))}
               className="w-full accent-teal"
             />
@@ -88,7 +95,7 @@ export default function ROICalculator() {
               Average Claim Value: <span className="text-teal">${avgClaim}</span>
             </label>
             <input
-              type="range" min={50} max={2000} step={5} value={avgClaim}
+              type="range" min={50} max={2000} step={5} aria-label="Average Claim Value" value={avgClaim}
               onChange={e => setAvgClaim(Number(e.target.value))}
               className="w-full accent-teal"
             />
@@ -100,7 +107,7 @@ export default function ROICalculator() {
               Current Denial Rate: <span className="text-red-500">{denialRate}%</span>
             </label>
             <input
-              type="range" min={0} max={30} step={1} value={denialRate}
+              type="range" min={0} max={30} step={1} aria-label="Current Denial Rate" value={denialRate}
               onChange={e => setDenialRate(Number(e.target.value))}
               className="w-full accent-teal"
             />
@@ -112,7 +119,7 @@ export default function ROICalculator() {
               Current Clean Claim Rate: <span className="text-teal">{cleanRate}%</span>
             </label>
             <input
-              type="range" min={50} max={100} step={1} value={cleanRate}
+              type="range" min={50} max={100} step={1} aria-label="Current Clean Claim Rate" value={cleanRate}
               onChange={e => setCleanRate(Number(e.target.value))}
               className="w-full accent-teal"
             />
@@ -166,7 +173,7 @@ export default function ROICalculator() {
           </p>
 
           {results.netAnnualGain > 0 && (
-            <Link
+            <Link prefetch={false}
               href="/free-assessment"
               className="flex items-center justify-center w-full bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors duration-300 mt-2"
             >

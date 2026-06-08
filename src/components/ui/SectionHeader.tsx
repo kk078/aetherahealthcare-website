@@ -14,14 +14,14 @@ export default function SectionHeader({
   className = '',
 }: SectionHeaderProps) {
   return (
-    <div className={`text-center max-w-3xl mx-auto mb-16 ${className}`}>
-      <p className="text-teal font-medium uppercase tracking-wider text-sm mb-2">
+    <div className={`text-center max-w-3xl mx-auto mb-14 ${className}`}>
+      <p className="text-[#003087] text-xs font-bold uppercase tracking-[0.12em] mb-3">
         {label}
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold text-navy font-playfair mb-4">
+      <h2 className="text-3xl md:text-[44px] font-bold text-[#1d1d1f] font-playfair mb-4 leading-[1.1]">
         {title}
       </h2>
-      <p className="text-gray text-lg">
+      <p className="text-[#6e6e73] text-lg leading-relaxed">
         {description}
       </p>
     </div>

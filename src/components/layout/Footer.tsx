@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const services = [
+  { name: 'Hospitalist Billing', href: '/services/hospitalist-billing' },
   { name: 'Medical Coding', href: '/services/medical-coding' },
   { name: 'Claims & Billing', href: '/services/claims-billing' },
   { name: 'Payment Posting', href: '/services/payment-posting' },
@@ -56,10 +58,13 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center">
-              <div className="bg-gradient-to-r from-teal to-mint rounded-lg w-10 h-10 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
-              </div>
-              <span className="ml-3 text-xl font-bold text-white font-playfair">Aethera</span>
+              <Image
+                src="/brand/logo-white.svg"
+                alt="Aethera Healthcare"
+                width={160}
+                height={48}
+                className="h-9 w-auto"
+              />
             </div>
             <p className="mt-4 text-gray text-sm">
               Maximizing Revenue. Minimizing Burden.
@@ -68,7 +73,7 @@ export default function Footer() {
               Your full-service medical billing partner handling coding, claims, payments, denials, and collections.
             </p>
             <div className="mt-5">
-              <Link
+              <Link prefetch={false}
                 href="/free-assessment"
                 className="inline-block bg-mint hover:bg-teal text-navy font-bold text-xs py-2 px-4 rounded-full transition-colors"
               >
@@ -83,7 +88,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link href={service.href} className="text-gray hover:text-mint transition-colors text-sm">
+                  <Link prefetch={false} href={service.href} className="text-gray hover:text-mint transition-colors text-sm">
                     {service.name}
                   </Link>
                 </li>
@@ -97,7 +102,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-gray hover:text-mint transition-colors text-sm">
+                  <Link prefetch={false} href={item.href} className="text-gray hover:text-mint transition-colors text-sm">
                     {item.name}
                   </Link>
                 </li>
@@ -107,4 +112,56 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 classN
+            <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {resources.map((item) => (
+                <li key={item.name}>
+                  <Link prefetch={false} href={item.href} className="text-gray hover:text-mint transition-colors text-sm">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Compliance */}
+          <div>
+            <h3 className="text-white font-bold text-sm uppercase tracking-widest mb-4">Compliance</h3>
+            <ul className="space-y-2">
+              {compliance.map((item) => (
+                <li key={item.name}>
+                  <Link prefetch={false} href={item.href} className="text-gray hover:text-mint transition-colors text-sm">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Trust Badges */}
+        <div className="mt-10 pt-6 border-t border-gray/20">
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
+            {trustBadges.map((badge) => (
+              <span
+                key={badge.label}
+                className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-cream text-xs font-semibold px-3 py-1.5 rounded-full"
+              >
+                <span className="text-mint">{badge.icon}</span>
+                {badge.label}
+              </span>
+            ))}
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray text-sm">
+              &copy; {new Date().getFullYear()} Aethera Healthcare Solutions Private Limited. All rights reserved.
+            </p>
+            <p className="text-gray text-sm mt-3 md:mt-0">
+              Lakeland, FL &middot; aetherahealthcare.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

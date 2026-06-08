@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 const services = [
@@ -25,6 +26,9 @@ const specialtyServices = [
   { name: 'Dermatology Billing', href: '/services/dermatology-billing' },
   { name: 'Psychiatry Billing', href: '/services/psychiatry-billing' },
   { name: 'Family Medicine Billing', href: '/services/family-medicine-billing' },
+  { name: 'Pharmacy Billing', href: '/services/pharmacy-billing' },
+  { name: 'Dental Billing', href: '/services/dental-billing' },
+  { name: "Workers' Comp Billing", href: '/services/workers-compensation-billing' },
 ];
 
 const whyAethera = [
@@ -32,14 +36,6 @@ const whyAethera = [
   { name: 'Provider Portal', href: '/portal', desc: '24/7 real-time billing dashboard' },
   { name: 'Payer Network', href: '/payers', desc: '900+ insurers we work with' },
   { name: 'EHR Integrations', href: '/integrations', desc: '50+ systems, zero disruption' },
-];
-
-const complianceItems = [
-  { name: 'HIPAA Compliance', href: '/compliance/hipaa' },
-  { name: 'Privacy Policy', href: '/compliance/privacy-policy' },
-  { name: 'Terms of Service', href: '/compliance/terms-of-service' },
-  { name: 'Business Associate Agreement', href: '/compliance/baa' },
-  { name: 'Security Practices', href: '/compliance/security' },
 ];
 
 export default function Navbar() {
@@ -55,16 +51,27 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+    <header
+      className={`fixed top-8 w-full z-40 transition-all duration-300 ${
+        isScrolled
+          ? 'glass-nav border-b border-[rgba(0,0,0,0.1)] shadow-[0_1px_0_rgba(0,0,0,0.08)]'
+          : 'bg-white/95 border-b border-[rgba(0,0,0,0.06)]'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center">
-              <div className="bg-gradient-to-r from-teal to-mint rounded-lg w-10 h-10 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
-              </div>
-              <span className="ml-3 text-xl font-bold text-navy font-playfair">Aethera</span>
+            <Link prefetch={false} href="/" className="flex items-center">
+              <Image
+                src="/brand/logo-full.svg"
+                alt="Aethera Healthcare"
+                width={160}
+                height={48}
+                className="h-9 w-auto"
+                priority
+              />
             </Link>
           </div>
 
@@ -74,24 +81,24 @@ export default function Navbar() {
 
               {/* Services Dropdown */}
               <div className="relative group">
-                <button className="text-gray hover:text-teal transition-colors text-sm font-medium">
+                <button className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                   Services ▾
                 </button>
-                <div className="absolute left-0 mt-2 w-[520px] bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray/10">
+                <div className="absolute left-0 mt-2 w-[520px] bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-[#003087]/10">
                   <div className="p-5">
-                    <p className="text-xs font-bold text-gray uppercase tracking-widest mb-3">All RCM Services</p>
+                    <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest mb-3">All RCM Services</p>
                     <div className="grid grid-cols-2 gap-x-6 gap-y-2 mb-4">
                       {services.map((service) => (
-                        <Link key={service.name} href={service.href} className="text-gray hover:text-teal transition-colors text-sm py-0.5">
+                        <Link prefetch={false} key={service.name} href={service.href} className="text-[#334155] hover:text-[#003087] transition-colors text-sm py-0.5">
                           {service.name}
                         </Link>
                       ))}
                     </div>
-                    <div className="border-t border-gray/10 pt-3 mt-2">
-                      <p className="text-xs font-bold text-gray uppercase tracking-widest mb-2">By Specialty</p>
+                    <div className="border-t border-[#003087]/10 pt-3 mt-2">
+                      <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest mb-2">By Specialty</p>
                       <div className="grid grid-cols-2 gap-x-6 gap-y-1">
                         {specialtyServices.map((s) => (
-                          <Link key={s.name} href={s.href} className="text-teal hover:text-navy transition-colors text-sm py-0.5 font-medium">
+                          <Link prefetch={false} key={s.name} href={s.href} className="text-[#003087] hover:text-[#001A52] transition-colors text-sm py-0.5 font-medium">
                             {s.name}
                           </Link>
                         ))}
@@ -103,48 +110,55 @@ export default function Navbar() {
 
               {/* Why Aethera Dropdown */}
               <div className="relative group">
-                <button className="text-gray hover:text-teal transition-colors text-sm font-medium">
+                <button className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                   Why Aethera ▾
                 </button>
-                <div className="absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray/10">
+                <div className="absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-[#003087]/10">
                   <div className="p-4 space-y-1">
                     {whyAethera.map((item) => (
-                      <Link key={item.name} href={item.href} className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-cream transition-colors">
-                        <span className="text-sm font-semibold text-navy">{item.name}</span>
-                        <span className="text-xs text-gray mt-0.5">{item.desc}</span>
+                      <Link prefetch={false} key={item.name} href={item.href} className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-[#F0F4FB] transition-colors">
+                        <span className="text-sm font-semibold text-[#001A52]">{item.name}</span>
+                        <span className="text-xs text-[#64748B] mt-0.5">{item.desc}</span>
                       </Link>
                     ))}
                   </div>
                 </div>
               </div>
 
-              <Link href="/specialties" className="text-gray hover:text-teal transition-colors text-sm font-medium">
+              <Link prefetch={false} href="/specialties" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                 Specialties
               </Link>
-
-              <Link href="/pricing" className="text-gray hover:text-teal transition-colors text-sm font-medium">
+              <Link prefetch={false} href="/payer-services" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+                Payer Services
+              </Link>
+              <Link prefetch={false} href="/pricing" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                 Pricing
               </Link>
-
-              <Link href="/about" className="text-gray hover:text-teal transition-colors text-sm font-medium">
+              <Link prefetch={false} href="/about" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                 About
               </Link>
-
-              <Link href="/blog" className="text-gray hover:text-teal transition-colors text-sm font-medium">
+              <Link prefetch={false} href="/blog" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                 Blog
               </Link>
-
-              <Link href="/contact" className="text-gray hover:text-teal transition-colors text-sm font-medium">
+              <Link prefetch={false} href="/contact" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                 Contact
               </Link>
             </div>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-2">
+            <a
+              href="https://rcm.aetherahealthcare.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#1d1d1f] hover:text-[#003087] font-medium py-2 px-4 rounded-full text-sm transition-colors duration-200"
+            >
+              Client Login
+            </a>
+            <Link prefetch={false}
               href="/free-assessment"
-              className="bg-mint hover:bg-teal text-navy font-bold py-2 px-5 rounded-full transition-colors duration-300 text-sm"
+              className="bg-[#003087] hover:bg-[#001A52] text-white font-semibold py-2 px-5 rounded-full transition-all duration-200 text-sm shadow-sm hover:shadow-md"
             >
               Free Assessment
             </Link>
@@ -154,7 +168,7 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray hover:text-teal focus:outline-none"
+              className="text-[#334155] hover:text-[#003087] focus:outline-none"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -164,37 +178,61 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white shadow-lg max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden bg-white shadow-lg max-h-[80vh] overflow-y-auto border-t border-[#003087]/10">
           <div className="px-4 pt-3 pb-5 space-y-1">
-
-            <p className="text-xs font-bold text-gray uppercase tracking-widest py-2">Services</p>
+            <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest py-2">Services</p>
             <div className="pl-2 grid grid-cols-2 gap-1 mb-2">
               {services.map((service) => (
-                <Link key={service.name} href={service.href} className="text-gray hover:text-teal transition-colors text-sm py-1" onClick={() => setIsMenuOpen(false)}>
+                <Link prefetch={false} key={service.name} href={service.href} className="text-[#334155] hover:text-[#003087] transition-colors text-sm py-1" onClick={() => setIsMenuOpen(false)}>
                   {service.name}
                 </Link>
               ))}
             </div>
-
-            <p className="text-xs font-bold text-teal uppercase tracking-widest pt-2 pb-1">By Specialty</p>
+            <p className="text-xs font-bold text-[#003087] uppercase tracking-widest pt-2 pb-1">By Specialty</p>
             <div className="pl-2 space-y-1 mb-2">
               {specialtyServices.map((s) => (
-                <Link key={s.name} href={s.href} className="block text-teal hover:text-navy transition-colors text-sm py-1 font-medium" onClick={() => setIsMenuOpen(false)}>
+                <Link prefetch={false} key={s.name} href={s.href} className="block text-[#003087] hover:text-[#001A52] transition-colors text-sm py-1 font-medium" onClick={() => setIsMenuOpen(false)}>
                   {s.name}
                 </Link>
               ))}
             </div>
-
-            <div className="border-t border-gray/10 pt-2">
-              <p className="text-xs font-bold text-gray uppercase tracking-widest py-2">Why Aethera</p>
+            <div className="border-t border-[#003087]/10 pt-2">
+              <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest py-2">Why Aethera</p>
               <div className="pl-2 space-y-1">
                 {whyAethera.map((item) => (
-                  <Link key={item.name} href={item.href} className="block text-gray hover:text-teal transition-colors text-sm py-1" onClick={() => setIsMenuOpen(false)}>
+                  <Link prefetch={false} key={item.name} href={item.href} className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-1" onClick={() => setIsMenuOpen(false)}>
                     {item.name}
                   </Link>
                 ))}
               </div>
             </div>
-
-            <div className="border-t border-gray/10 pt-3 space-y-2">
- 
+            <div className="border-t border-[#003087]/10 pt-3 space-y-2">
+              <Link prefetch={false} href="/specialties" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Specialties</Link>
+              <Link prefetch={false} href="/payer-services" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Payer Services</Link>
+              <Link prefetch={false} href="/pricing" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
+              <Link prefetch={false} href="/about" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>About</Link>
+              <Link prefetch={false} href="/blog" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+              <Link prefetch={false} href="/contact" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+              <a
+                href="https://rcm.aetherahealthcare.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block border-2 border-[#003087] text-[#003087] font-semibold py-2.5 px-5 rounded-md transition-colors duration-300 text-sm text-center mt-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Client Login
+              </a>
+              <Link prefetch={false}
+                href="/free-assessment"
+                className="block bg-[#003087] hover:bg-[#001A52] text-white font-bold py-2.5 px-5 rounded-md transition-colors duration-300 text-sm text-center mt-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Free Assessment
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}

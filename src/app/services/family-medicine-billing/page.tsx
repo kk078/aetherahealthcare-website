@@ -63,8 +63,8 @@ export default function FamilyMedicineBilling() {
               <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6 leading-tight">Family Medicine Billing That Captures Every Visit</h1>
               <p className="text-xl text-cream mb-10">Preventive visit splits, CCM code eligibility, annual wellness visit rules, E&M level accuracy — our family medicine billing team finds the revenue that generalist billers miss in every high-volume primary care practice.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Family Medicine Assessment</Link>
-                <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
+                <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Family Medicine Assessment</Link>
+                <Link prefetch={false} href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
               </div>
             </FadeIn>
           </div>
@@ -130,7 +130,7 @@ export default function FamilyMedicineBilling() {
               ))}
             </div>
             <blockquote className="border-l-4 border-mint pl-5"><p className="text-cream italic">"I was essentially giving away $200,000 a year because my front desk was coding every visit at the same level. I had no idea until Aethera showed me the data."</p></blockquote>
-            <div className="mt-6"><Link href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
+            <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
           </FadeIn>
         </div>
       </section>
@@ -147,7 +147,7 @@ export default function FamilyMedicineBilling() {
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
-            <FadeIn><h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to See What Your Practice Is Actually Worth?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free family medicine billing assessment. We'll run an E&M distribution analysis and show you what's being left on the table.</p><Link href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Family Medicine Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
+            <FadeIn><h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to See What Your Practice Is Actually Worth?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free family medicine billing assessment. We'll run an E&M distribution analysis and show you what's being left on the table.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Family Medicine Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
           </div>
         </div>
       </section>

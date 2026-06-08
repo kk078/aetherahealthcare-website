@@ -250,7 +250,7 @@ export default function PrivacyPolicy() {
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">
                 Contact our Privacy Officer for any questions about this Privacy Policy or our privacy practices.
               </p>
-              <Link
+              <Link prefetch={false}
                 href="mailto:privacy@aetherahealthcare.com"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >

@@ -1,0 +1,72 @@
+name: Auto-Blog (The Aethera Pulse)
+
+# Generates a fresh RCM article twice a week and deploys it automatically.
+on:
+  schedule:
+    - cron: '0 13 * * 2,5'   # Tuesdays & Fridays, 13:00 UTC (~8-9am ET)
+  workflow_dispatch: {}        # allows manual "Run workflow" for testing
+
+permissions:
+  contents: write              # needed to commit the generated post back to the repo
+
+concurrency:
+  group: auto-blog
+  cancel-in-progress: false
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Generate a fresh article
+        id: gen
+        env:
+          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+          OLLAMA_MODEL: ${{ vars.OLLAMA_MODEL }}
+          OLLAMA_BASE_URL: ${{ vars.OLLAMA_BASE_URL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+        run: |
+          node scripts/auto-blog.mjs | tee /tmp/auto-blog.log
+          SLUG=$(grep -oP 'AUTO_BLOG_NEW_SLUG=\K.*' /tmp/auto-blog.log || true)
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+
+      - name: Commit the new post
+        if: steps.gen.outputs.slug != ''
+        run: |
+          git config user.name "aethera-bot"
+          git config user.email "bot@aetherahealthcare.com"
+          git add src/lib/blogPosts.ts
+          git commit -m "blog: auto-publish ${{ steps.gen.outputs.slug }} [skip ci]"
+          git push
+
+      - name: Build
+        if: steps.gen.outputs.slug != ''
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.gen.outputs.slug != ''
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler pages deploy out --project-name=aetherahealthcare-website --branch=main --commit-dirty=true
+
+      - name: Summary
+        if: always()
+        run: |
+          if [ -n "${{ steps.gen.outputs.slug }}" ]; then
+            echo "Published new post: ${{ steps.gen.outputs.slug }}" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No post generated this run (check OLLAMA_API_KEY secret)." >> "$GITHUB_STEP_SUMMARY"
+          fi

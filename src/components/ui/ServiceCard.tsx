@@ -21,7 +21,7 @@ export default function ServiceCard({
       </div>
       <h3 className="text-xl font-bold text-navy mb-2">{title}</h3>
       <p className="text-gray mb-4">{description}</p>
-      <Link
+      <Link prefetch={false}
         href={href}
         className="text-teal font-medium flex items-center hover:text-mint transition-colors"
       >
