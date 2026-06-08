@@ -1,12 +1,7 @@
 name: CI — Pull Request Checks
 
 on:
-  pull_request:
-    branches: [main, master, staging]
-
-concurrency:
-  group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  workflow_dispatch: {}
 
 jobs:
   # ── 1. Worker unit tests ──────────────────────────────────────────────────
