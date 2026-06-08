@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Technology &amp; AI">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2a43"/><stop offset="0.65" stop-color="#0e6e72"/><stop offset="1" stop-color="#0ea5a4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#g)"/>
+  <circle cx="1050" cy="120" r="260" fill="#7ee3c7" opacity="0.10"/>
+  <circle cx="150" cy="640" r="200" fill="#4f46e5" opacity="0.16"/>
+  <polyline points="0,440 210,440 270,372 332,500 396,300 452,440 1200,440" fill="none" stroke="#7ee3c7" stroke-width="5" opacity="0.32" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="80" y="250" width="54" height="4" rx="2" fill="#7ee3c7"/>
+  <text x="150" y="262" font-family="Inter,Arial,sans-serif" font-size="22" letter-spacing="3" fill="#7ee3c7" font-weight="700">THE AETHERA PULSE</text>
+  <text x="80" y="372" font-family="Georgia,'Times New Roman',serif" font-size="60" fill="#ffffff" font-weight="700">Technology &amp; AI</text>
+  <text x="80" y="624" font-family="Inter,Arial,sans-serif" font-size="24" fill="#cbeee4">Aethera Healthcare Solutions</text>
+</svg>

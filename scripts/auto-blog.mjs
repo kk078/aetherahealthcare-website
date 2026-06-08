@@ -45,7 +45,7 @@ const IMG = {
   'Specialty Billing': '1576091160550-2173dba999ef',
 };
 const AUTHORS = ['Jennifer Walsh', 'Michael Torres', 'Sarah Kim', 'David Chen', 'Amanda Rodriguez', 'Robert Johnson', 'Lisa Thompson', 'Mark Wilson'];
-const imgUrl = (cat) => `https://images.unsplash.com/photo-${IMG[cat] || IMG['Revenue Cycle']}?w=1200&h=700&fit=crop`;
+const imgUrl = (cat) => `/images/blog/${slugify(cat)}.svg`;
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 70);
 const wordCount = (post) => post.sections.reduce((n, s) => n + (s.h ? 3 : 0) + (s.sub ? 3 : 0) + (s.p || []).join(' ').split(/\s+/).length + (s.ul || []).join(' ').split(/\s+/).length, 0);
 

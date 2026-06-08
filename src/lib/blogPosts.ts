@@ -17,7 +17,7 @@ export const POSTS: BlogPost[] = [
     "author": "Jennifer Walsh",
     "date": "2026-05-12",
     "readTime": "8 min read",
-    "image": "https://images.unsplash.com/photo-1519494026892-80bb41fb7d0a?w=1200&h=700&fit=crop",
+    "image": "/images/blog/denials-appeals.svg",
     "excerpt": "Roughly one in ten U.S. claims is denied on first submission — and a large share are never reworked. Most denials are preventable. Here are five front-loaded plays that protect revenue before a claim ever leaves your practice.",
     "sections": [
       {
@@ -75,7 +75,7 @@ export const POSTS: BlogPost[] = [
     "author": "Michael Torres",
     "date": "2026-05-10",
     "readTime": "12 min read",
-    "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=1200&h=700&fit=crop",
+    "image": "/images/blog/revenue-cycle.svg",
     "excerpt": "From scheduling to zero balance, the revenue cycle is the engine of practice finance. This guide breaks down every stage — and where U.S. practices quietly leak money.",
     "sections": [
       {
@@ -126,7 +126,7 @@ export const POSTS: BlogPost[] = [
     "author": "Sarah Kim",
     "date": "2026-05-06",
     "readTime": "7 min read",
-    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=700&fit=crop",
+    "image": "/images/blog/practice-management.svg",
     "excerpt": "In-house billing eventually hits a ceiling — staff turnover, coding complexity, and payer churn. Here is when a specialized RCM partner pays for itself.",
     "sections": [
       {
@@ -175,7 +175,7 @@ export const POSTS: BlogPost[] = [
     "author": "David Chen",
     "date": "2026-05-02",
     "readTime": "10 min read",
-    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=700&fit=crop",
+    "image": "/images/blog/telehealth.svg",
     "excerpt": "Telehealth is permanent — but its billing rules are a moving target. POS codes, modifiers, audio-only nuances, and payer parity, decoded.",
     "sections": [
       {
@@ -219,7 +219,7 @@ export const POSTS: BlogPost[] = [
     "author": "Amanda Rodriguez",
     "date": "2026-04-27",
     "readTime": "9 min read",
-    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=700&fit=crop",
+    "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Patients are now one of your largest \"payers.\" Compassionate, well-timed collections lift cash flow without bruising relationships.",
     "sections": [
       {
@@ -266,7 +266,7 @@ export const POSTS: BlogPost[] = [
     "author": "Robert Johnson",
     "date": "2026-04-22",
     "readTime": "8 min read",
-    "image": "https://images.unsplash.com/photo-1517242039478-88104f383fb5?w=1200&h=700&fit=crop",
+    "image": "/images/blog/credentialing-enrollment.svg",
     "excerpt": "Every day a provider is uncredentialed is a day of unbillable care. Build a credentialing engine that prevents costly enrollment gaps.",
     "sections": [
       {
@@ -307,7 +307,7 @@ export const POSTS: BlogPost[] = [
     "author": "Lisa Thompson",
     "date": "2026-04-18",
     "readTime": "11 min read",
-    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=700&fit=crop",
+    "image": "/images/blog/compliance-privacy.svg",
     "excerpt": "The privacy and security bar keeps rising. A practical refresh on safeguards, breach exposure, and the habits that keep your practice audit-ready.",
     "sections": [
       {
@@ -350,7 +350,7 @@ export const POSTS: BlogPost[] = [
     "author": "Mark Wilson",
     "date": "2026-04-14",
     "readTime": "13 min read",
-    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=700&fit=crop",
+    "image": "/images/blog/medical-coding.svg",
     "excerpt": "Under-coding leaves revenue on the table; over-coding invites takebacks. A repeatable audit process that protects both accuracy and reimbursement.",
     "sections": [
       {
@@ -396,7 +396,7 @@ export const POSTS: BlogPost[] = [
     "author": "Jennifer Walsh",
     "date": "2026-04-09",
     "readTime": "10 min read",
-    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=700&fit=crop",
+    "image": "/images/blog/prior-authorization.svg",
     "excerpt": "Prior authorization is the #1 administrative burden in U.S. care. Workflows and automation that cut turnaround and stop revenue from stalling.",
     "sections": [
       {
@@ -434,7 +434,7 @@ export const POSTS: BlogPost[] = [
     "author": "Michael Torres",
     "date": "2026-04-05",
     "readTime": "12 min read",
-    "image": "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=1200&h=700&fit=crop",
+    "image": "/images/blog/denials-appeals.svg",
     "excerpt": "Move from reactive appeals to denial prevention: root-cause analytics, payer scorecards, and the SLAs that win money back.",
     "sections": [
       {
@@ -478,7 +478,7 @@ export const POSTS: BlogPost[] = [
     "author": "Sarah Kim",
     "date": "2026-04-01",
     "readTime": "8 min read",
-    "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&h=700&fit=crop",
+    "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Clear statements, the right channel, the right tone — turn billing anxiety into on-time payment and a better patient experience.",
     "sections": [
       {
@@ -519,7 +519,7 @@ export const POSTS: BlogPost[] = [
     "author": "David Chen",
     "date": "2026-03-27",
     "readTime": "11 min read",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=700&fit=crop",
+    "image": "/images/blog/data-analytics.svg",
     "excerpt": "Your PM system is sitting on gold. The dashboards and KPIs that reveal where cash is trapped and which fixes move the needle.",
     "sections": [
       {
@@ -558,7 +558,7 @@ export const POSTS: BlogPost[] = [
     "author": "Amanda Rodriguez",
     "date": "2026-03-23",
     "readTime": "14 min read",
-    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=700&fit=crop",
+    "image": "/images/blog/payer-contracting.svg",
     "excerpt": "Most payer contracts auto-renew at yesterday’s rates. How to benchmark, build leverage, and negotiate reimbursement that reflects your value.",
     "sections": [
       {
@@ -596,7 +596,7 @@ export const POSTS: BlogPost[] = [
     "author": "Lisa Thompson",
     "date": "2026-03-19",
     "readTime": "10 min read",
-    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=700&fit=crop",
+    "image": "/images/blog/regulatory-policy.svg",
     "excerpt": "Balance billing for many out-of-network situations is off the table. What the No Surprises Act requires — Good Faith Estimates, the IDR process, and notice-and-consent.",
     "sections": [
       {
@@ -633,7 +633,7 @@ export const POSTS: BlogPost[] = [
     "author": "Robert Johnson",
     "date": "2026-03-15",
     "readTime": "9 min read",
-    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=700&fit=crop",
+    "image": "/images/blog/regulatory-policy.svg",
     "excerpt": "Transparency rules are now enforced with real penalties. What hospitals and practices must publish — and how to turn estimates into a patient-experience win.",
     "sections": [
       {
@@ -670,7 +670,7 @@ export const POSTS: BlogPost[] = [
     "author": "Mark Wilson",
     "date": "2026-03-11",
     "readTime": "9 min read",
-    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=700&fit=crop",
+    "image": "/images/blog/medicare-medicaid.svg",
     "excerpt": "Every year the Medicare Physician Fee Schedule resets what you are paid. RVUs, the conversion factor, and how to protect your practice from cuts.",
     "sections": [
       {
@@ -707,7 +707,7 @@ export const POSTS: BlogPost[] = [
     "author": "Michael Torres",
     "date": "2026-03-07",
     "readTime": "12 min read",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=700&fit=crop",
+    "image": "/images/blog/value-based-care.svg",
     "excerpt": "Fee-for-service is giving ground to value. ACOs, shared savings, and capitation change how — and when — you get paid.",
     "sections": [
       {
@@ -745,7 +745,7 @@ export const POSTS: BlogPost[] = [
     "author": "Lisa Thompson",
     "date": "2026-03-03",
     "readTime": "11 min read",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=700&fit=crop",
+    "image": "/images/blog/value-based-care.svg",
     "excerpt": "Your Medicare payments now hinge on quality scores. How MIPS categories, thresholds, and reporting translate into payment adjustments.",
     "sections": [
       {
@@ -783,7 +783,7 @@ export const POSTS: BlogPost[] = [
     "author": "Mark Wilson",
     "date": "2026-02-27",
     "readTime": "12 min read",
-    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=700&fit=crop",
+    "image": "/images/blog/medical-coding.svg",
     "excerpt": "In risk-based contracts, documentation IS revenue. How Hierarchical Condition Categories and RAF scores drive accurate payment.",
     "sections": [
       {
@@ -821,7 +821,7 @@ export const POSTS: BlogPost[] = [
     "author": "Jennifer Walsh",
     "date": "2026-02-23",
     "readTime": "10 min read",
-    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=700&fit=crop",
+    "image": "/images/blog/clinical-documentation.svg",
     "excerpt": "Codes can only be as good as the note behind them. CDI bridges the gap between great care and accurate, compliant reimbursement.",
     "sections": [
       {
@@ -859,7 +859,7 @@ export const POSTS: BlogPost[] = [
     "author": "Robert Johnson",
     "date": "2026-02-19",
     "readTime": "8 min read",
-    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=700&fit=crop",
+    "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Most denials are born at the front desk. Real-time eligibility and benefits verification is the cheapest revenue you will ever protect.",
     "sections": [
       {
@@ -897,7 +897,7 @@ export const POSTS: BlogPost[] = [
     "author": "David Chen",
     "date": "2026-02-15",
     "readTime": "9 min read",
-    "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=1200&h=700&fit=crop",
+    "image": "/images/blog/revenue-cycle.svg",
     "excerpt": "Services rendered but never billed are pure lost revenue. A disciplined charge-capture process closes the gap between the visit and the claim.",
     "sections": [
       {
@@ -935,7 +935,7 @@ export const POSTS: BlogPost[] = [
     "author": "Amanda Rodriguez",
     "date": "2026-02-11",
     "readTime": "9 min read",
-    "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=1200&h=700&fit=crop",
+    "image": "/images/blog/revenue-cycle.svg",
     "excerpt": "Payment posting is more than data entry — it is where underpayments and missed denials are caught. ERA/EFT done right keeps your A/R honest.",
     "sections": [
       {
@@ -973,7 +973,7 @@ export const POSTS: BlogPost[] = [
     "author": "Michael Torres",
     "date": "2026-02-07",
     "readTime": "10 min read",
-    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=700&fit=crop",
+    "image": "/images/blog/payer-contracting.svg",
     "excerpt": "Payers don’t always pay what they agreed to. Contract-variance analysis recovers the silent dollars between your rate sheet and your remittances.",
     "sections": [
       {
@@ -1005,7 +1005,7 @@ export const POSTS: BlogPost[] = [
     "author": "David Chen",
     "date": "2026-02-03",
     "readTime": "11 min read",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=700&fit=crop",
+    "image": "/images/blog/technology-ai.svg",
     "excerpt": "From claim scrubbing to denial prediction, AI is reshaping RCM. Where automation genuinely pays off — and where human expertise still wins.",
     "sections": [
       {
@@ -1044,7 +1044,7 @@ export const POSTS: BlogPost[] = [
     "author": "Lisa Thompson",
     "date": "2026-01-30",
     "readTime": "10 min read",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=700&fit=crop",
+    "image": "/images/blog/technology-ai.svg",
     "excerpt": "Interoperability rules are reshaping how data — and authorizations — move. FHIR APIs, TEFCA, and information-blocking rules, in plain English.",
     "sections": [
       {
@@ -1076,7 +1076,7 @@ export const POSTS: BlogPost[] = [
     "author": "Robert Johnson",
     "date": "2026-01-26",
     "readTime": "11 min read",
-    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=700&fit=crop",
+    "image": "/images/blog/compliance-privacy.svg",
     "excerpt": "A single ransomware event can halt claims for weeks. After industry-shaking outages, resilience planning is now a revenue-cycle necessity.",
     "sections": [
       {
@@ -1114,7 +1114,7 @@ export const POSTS: BlogPost[] = [
     "author": "Jennifer Walsh",
     "date": "2026-01-22",
     "readTime": "9 min read",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=700&fit=crop",
+    "image": "/images/blog/data-analytics.svg",
     "excerpt": "A plain-English glossary of the revenue-cycle metrics that actually predict cash — and the benchmarks to aim for.",
     "sections": [
       {
@@ -1156,7 +1156,7 @@ export const POSTS: BlogPost[] = [
     "author": "Amanda Rodriguez",
     "date": "2026-01-18",
     "readTime": "10 min read",
-    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=700&fit=crop",
+    "image": "/images/blog/specialty-billing.svg",
     "excerpt": "Behavioral health billing has its own rules — time-based codes, telehealth nuance, and parity protections. Get reimbursed for the care you provide.",
     "sections": [
       {
@@ -1188,7 +1188,7 @@ export const POSTS: BlogPost[] = [
     "author": "Mark Wilson",
     "date": "2026-01-14",
     "readTime": "10 min read",
-    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=700&fit=crop",
+    "image": "/images/blog/specialty-billing.svg",
     "excerpt": "State fee schedules, paper-heavy documentation, and long A/R make workers’ comp uniquely tricky — and uniquely worth getting right.",
     "sections": [
       {
@@ -1220,7 +1220,7 @@ export const POSTS: BlogPost[] = [
     "author": "Lisa Thompson",
     "date": "2026-01-10",
     "readTime": "9 min read",
-    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=700&fit=crop",
+    "image": "/images/blog/specialty-billing.svg",
     "excerpt": "Durable medical equipment billing lives and dies on documentation — medical necessity, prior auth, and HCPCS precision.",
     "sections": [
       {
@@ -1252,7 +1252,7 @@ export const POSTS: BlogPost[] = [
     "author": "David Chen",
     "date": "2026-01-06",
     "readTime": "10 min read",
-    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=700&fit=crop",
+    "image": "/images/blog/specialty-billing.svg",
     "excerpt": "ASC billing rewards precision — implant carve-outs, bundling edits, and multiple-procedure discounting all decide whether a case is profitable.",
     "sections": [
       {
@@ -1284,7 +1284,7 @@ export const POSTS: BlogPost[] = [
     "author": "Sarah Kim",
     "date": "2026-01-02",
     "readTime": "9 min read",
-    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=700&fit=crop",
+    "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Patients judge your practice by their bill as much as their visit. A modern financial experience drives both loyalty and collections.",
     "sections": [
       {
@@ -1316,7 +1316,7 @@ export const POSTS: BlogPost[] = [
     "author": "Robert Johnson",
     "date": "2025-12-29",
     "readTime": "9 min read",
-    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=700&fit=crop",
+    "image": "/images/blog/medicare-medicaid.svg",
     "excerpt": "As Medicaid eligibility is re-checked, millions cycle on and off coverage. Practices that verify aggressively avoid a wave of preventable denials.",
     "sections": [
       {
@@ -1348,7 +1348,7 @@ export const POSTS: BlogPost[] = [
     "author": "Amanda Rodriguez",
     "date": "2025-12-24",
     "readTime": "10 min read",
-    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=700&fit=crop",
+    "image": "/images/blog/practice-management.svg",
     "excerpt": "The real question is not cost alone — it is capability, resilience, and focus. A practical framework for the in-house vs. outsource decision.",
     "sections": [
       {
@@ -1386,7 +1386,7 @@ export const POSTS: BlogPost[] = [
     "author": "Mark Wilson",
     "date": "2025-12-20",
     "readTime": "11 min read",
-    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=700&fit=crop",
+    "image": "/images/blog/compliance-privacy.svg",
     "excerpt": "Billing compliance is more than privacy. Stark, the Anti-Kickback Statute, and the False Claims Act carry serious penalties for getting it wrong.",
     "sections": [
       {

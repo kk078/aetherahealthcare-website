@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: { absolute: `${post.title} | Aethera Healthcare Solutions` },
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: { title: post.title, description: post.excerpt, images: [post.image], type: 'article' },
+    openGraph: { title: post.title, description: post.excerpt, images: [`https://aetherahealthcare.com${post.image}`], type: 'article' },
   };
 }
 
