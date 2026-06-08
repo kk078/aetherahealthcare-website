@@ -11,6 +11,88 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "integrate-financial-counseling-into-patient-intake",
+    "title": "Integrating Financial Counseling into Patient Intake: A Practical Guide for U.S. Practices",
+    "category": "Patient Access & Collections",
+    "author": "David Chen",
+    "date": "2026-06-08",
+    "readTime": "5 min read",
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=700&fit=crop",
+    "excerpt": "Learn how embedding financial counseling at the front end of the visit can improve collections, reduce surprise bills, and enhance patient satisfaction.",
+    "sections": [
+      {
+        "p": [
+          "Patients often encounter unexpected medical bills after care, leading to dissatisfaction and delayed payments. By embedding a brief financial counseling conversation into the intake process, practices can set clear expectations, identify payment options early, and ultimately improve revenue collection without compromising care."
+        ]
+      },
+      {
+        "h": "Why Financial Counseling Belongs at Intake",
+        "p": [
+          "When cost conversations happen before services are rendered, patients are better equipped to make informed decisions and to arrange payment methods."
+        ],
+        "ul": [
+          "Reduces surprise billing complaints",
+          "Increases likelihood of upfront payments or payment plans",
+          "Improves patient satisfaction and loyalty",
+          "Provides early identification of coverage gaps"
+        ]
+      },
+      {
+        "h": "Designing the Intake Workflow",
+        "p": [
+          "Map the patient journey from appointment scheduling to the point of care and insert a dedicated financial touchpoint."
+        ],
+        "ul": [
+          "Schedule a pre‑visit call or electronic questionnaire to capture insurance details and estimated cost",
+          "During check‑in, a trained staff member reviews the estimate and available payment options",
+          "Document the counseling outcome in the EHR for provider visibility"
+        ]
+      },
+      {
+        "h": "Training Staff and Leveraging Technology",
+        "p": [
+          "Effective counseling requires both knowledgeable staff and tools that streamline the process."
+        ],
+        "ul": [
+          "Provide scripts that comply with transparency regulations",
+          "Use eligibility‑verification APIs to pull real‑time benefit information",
+          "Integrate payment‑plan calculators into the patient portal",
+          "Offer regular role‑play sessions to build confidence"
+        ]
+      },
+      {
+        "h": "Communicating Costs Transparently",
+        "p": [
+          "Clear, jargon‑free language helps patients understand what they owe and why."
+        ],
+        "ul": [
+          "Present a simple itemized estimate rather than a dense claim form",
+          "Explain patient responsibility versus insurance coverage",
+          "Offer multiple payment options (online, mobile, in‑person)",
+          "Confirm understanding with a brief teach‑back"
+        ]
+      },
+      {
+        "h": "Measuring Success and Adjusting",
+        "p": [
+          "Track key metrics to determine whether the new workflow is delivering results."
+        ],
+        "ul": [
+          "Percentage of patients who receive counseling before service",
+          "Days sales outstanding (DSO) trend",
+          "Patient satisfaction scores related to billing",
+          "Rate of payment plan enrollment"
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions can partner with your practice to embed financial counseling into your intake workflow through customized training, seamless integration of eligibility‑verification tools, and ongoing analytics that keep your revenue cycle moving efficiently."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "reduce-claim-denials",
     "title": "5 Ways to Reduce Claim Denials in Your Medical Practice",
     "category": "Denials & Appeals",
