@@ -17,7 +17,7 @@ export const POSTS: BlogPost[] = [
     "author": "David Chen",
     "date": "2026-06-08",
     "readTime": "5 min read",
-    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=700&fit=crop",
+    "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Learn how embedding financial counseling at the front end of the visit can improve collections, reduce surprise bills, and enhance patient satisfaction.",
     "sections": [
       {
