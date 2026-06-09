@@ -11,6 +11,90 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "design-patient-payment-plans",
+    "title": "Designing Effective Patient Payment Plans to Boost Collections and Satisfaction",
+    "category": "Patient Access & Collections",
+    "author": "David Chen",
+    "date": "2026-06-09",
+    "readTime": "5 min read",
+    "image": "/images/blog/patient-access-collections.svg",
+    "excerpt": "Learn practical steps to create, implement, and manage patient payment plans that improve cash flow while enhancing the patient experience.",
+    "sections": [
+      {
+        "p": [
+          "Collecting patient balances is a growing challenge for many practices, especially as high‑deductible health plans shift more cost to patients. Implementing structured payment plans can help bridge the gap between care delivery and revenue, reducing bad debt and improving satisfaction."
+        ]
+      },
+      {
+        "h": "Why Structured Payment Plans Matter",
+        "p": [
+          "A clear, transparent payment plan demonstrates financial empathy and can turn a potential loss into a predictable revenue stream. Practices that offer flexible options see lower delinquency rates and higher patient loyalty."
+        ],
+        "ul": [
+          "Improves cash flow predictability",
+          "Reduces accounts receivable aging",
+          "Enhances patient trust and retention",
+          "Aligns with value‑based care incentives"
+        ]
+      },
+      {
+        "h": "Core Components of a Viable Payment Plan",
+        "p": [
+          "Designing a plan that works for both the practice and the patient requires several key elements."
+        ],
+        "ul": [
+          "Simple eligibility criteria (e.g., outstanding balance thresholds)",
+          "Reasonable term lengths (usually 3‑12 months)",
+          "Clear interest or fee policies, if any",
+          "Automated reminders and easy payment methods (online portal, ACH, credit card)",
+          "Transparent documentation and patient acknowledgment"
+        ]
+      },
+      {
+        "h": "Integrating Plans into Front‑End Workflow",
+        "p": [
+          "Embedding payment plan offers into the eligibility verification and estimate process ensures patients hear about options before they leave the office."
+        ],
+        "ul": [
+          "Add a payment‑plan checkbox to the intake form",
+          "Train front‑desk staff to discuss plans during registration",
+          "Use your practice management system to generate a customized payment schedule",
+          "Provide printed or digital estimates that include the plan option"
+        ]
+      },
+      {
+        "h": "Effective Communication Strategies",
+        "p": [
+          "Patients need to understand the terms, benefits, and responsibilities of a payment plan. Clear communication reduces confusion and late payments."
+        ],
+        "ul": [
+          "Use plain‑language summaries on the estimate sheet",
+          "Offer a brief scripted explanation for staff",
+          "Provide a FAQ handout or online portal link",
+          "Confirm agreement with a signed acknowledgment"
+        ]
+      },
+      {
+        "h": "Monitoring, Adjusting, and Staying Compliant",
+        "p": [
+          "Ongoing oversight is essential to keep plans effective and to avoid regulatory pitfalls such as usury laws or unfair debt collection practices."
+        ],
+        "ul": [
+          "Track payment adherence through your billing software’s reporting tools",
+          "Set triggers for early outreach when a payment is missed",
+          "Periodically review plan terms for compliance with state usury caps",
+          "Adjust terms based on payer mix and patient feedback"
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions provides end‑to‑end support for building and managing patient payment plans, from workflow design to technology integration and compliance monitoring, so you can focus on delivering care while we keep the revenue flowing."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "integrate-financial-counseling-into-patient-intake",
     "title": "Integrating Financial Counseling into Patient Intake: A Practical Guide for U.S. Practices",
     "category": "Patient Access & Collections",
