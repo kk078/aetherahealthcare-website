@@ -11,6 +11,76 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "continuous-revenue-cycle-training",
+    "title": "Continuous Revenue Cycle Training: A Blueprint for Practice Staff Development",
+    "category": "Practice Management",
+    "author": "Lisa Thompson",
+    "date": "2026-06-12",
+    "readTime": "5 min read",
+    "image": "/images/blog/practice-management.svg",
+    "excerpt": "Learn how to build a sustainable training program that keeps your front‑office, billing, and clinical teams aligned with evolving revenue‑cycle best practices, reducing errors and boosting cash flow.",
+    "sections": [
+      {
+        "p": [
+          "A well‑trained staff is the backbone of a resilient revenue cycle. As regulations shift and payer rules evolve, a one‑time onboarding session quickly becomes outdated. Implementing a continuous training framework ensures every team member—from schedulers to coders—remains current, proactive, and capable of protecting your practice’s bottom line."
+        ]
+      },
+      {
+        "h": "Assess Training Gaps and Priorities",
+        "p": [
+          "Start by mapping the end‑to‑end revenue cycle and pinpointing where errors most often occur. Use denial reports, claim edit logs, and patient billing inquiries to identify knowledge gaps."
+        ],
+        "ul": [
+          "Front‑desk: eligibility verification and insurance collection basics",
+          "Clinical staff: proper documentation for coding and prior authorizations",
+          "Billing team: claim submission rules, edits, and payer-specific nuances",
+          "Finance: payment posting, reconciliation, and patient balance communication"
+        ]
+      },
+      {
+        "h": "Design a Modular Curriculum",
+        "p": [
+          "Break the training into bite‑sized modules that align with each functional area. Structure content so it can be delivered independently or as part of a larger series."
+        ],
+        "ul": [
+          "Core modules – fundamentals of insurance types, patient financial responsibility, and basic coding concepts",
+          "Advanced modules – payer‑specific policies, high‑impact denial prevention, and value‑based payment calculations",
+          "Refresh modules – quarterly updates on regulatory changes, new CPT/HCPCS codes, and emerging payer rules"
+        ]
+      },
+      {
+        "h": "Select Delivery Methods That Fit Your Practice",
+        "p": [
+          "Mix synchronous and asynchronous formats to accommodate varying schedules and learning styles."
+        ],
+        "ul": [
+          "Live workshops for interactive case studies and Q&A",
+          "Short video micro‑learning clips (3‑5 minutes) for on‑the‑fly reinforcement",
+          "Interactive e‑learning courses with knowledge checks and scenario‑based assessments",
+          "Monthly newsletters summarizing key updates and best‑practice tips"
+        ]
+      },
+      {
+        "h": "Measure Competency and Provide Ongoing Feedback",
+        "p": [
+          "Training is only effective when you can verify knowledge retention and apply it to daily work."
+        ],
+        "ul": [
+          "Pre‑ and post‑module quizzes to track improvement",
+          "Random spot audits of eligibility checks, charge capture, and claim edits",
+          "Performance dashboards that tie individual metrics (e.g., denial rate, days in A/R) to training completion",
+          "Regular coaching sessions for staff members who fall below defined thresholds"
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions partners with practices to design custom training roadmaps, deliver on‑demand e‑learning content, and integrate performance analytics into your existing RCM platform—so you can keep staff expertise current without sacrificing daily productivity."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "design-patient-payment-plans",
     "title": "Designing Effective Patient Payment Plans to Boost Collections and Satisfaction",
     "category": "Patient Access & Collections",
