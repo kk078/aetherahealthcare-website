@@ -56,8 +56,10 @@ async function loadPosts() {
   const i0 = content.indexOf(START);
   if (i0 < 0) throw new Error('POSTS marker not found');
   const i1 = i0 + START.length;
-  const i2 = content.indexOf(FOOTER_MARK, i1);
-  if (i2 < 0) throw new Error('footer marker not found');
+  // CRLF-tolerant: match the array terminator ';' just before `export const CATEGORIES`
+  const fm = content.slice(i1).match(/;\s*export const CATEGORIES/);
+  if (fm == null) throw new Error('footer marker not found');
+  const i2 = i1 + fm.index;
   const posts = JSON.parse(content.slice(i1, i2));
   return { header: content.slice(0, i1), footer: content.slice(i2), posts };
 }
@@ -193,7 +195,8 @@ async function main() {
     post = normalize(await generateViaLLM(posts, headlines), posts);
   }
   posts.unshift(post);
-  await writeFile(POSTS_FILE, header + JSON.stringify(posts, null, 2) + footer, 'utf8');
+  const outContent = (header + JSON.stringify(posts, null, 2) + footer).replace(/\r\n/g, '\n');
+  await writeFile(POSTS_FILE, outContent, 'utf8');
   console.log(`AUTO_BLOG_NEW_SLUG=${post.slug}`);
   console.log(`Added: "${post.title}" (${post.category}) — total ${posts.length} posts.`);
 }
