@@ -149,7 +149,7 @@ export default function Navbar() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-2">
             <a
-              href="https://rcm.aetherahealthcare.com"
+              href="https://rcm.aetherahealthcare.com/portal/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#1d1d1f] hover:text-[#003087] font-medium py-2 px-4 rounded-full text-sm transition-colors duration-200"
