@@ -11,6 +11,83 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "streamlining-eligibility-verification-preauthorization",
+    "title": "Streamlining Eligibility Verification and Pre‑Authorization: A Front‑End Blueprint for Revenue Assurance",
+    "category": "Patient Access & Collections",
+    "author": "David Chen",
+    "date": "2026-06-16",
+    "readTime": "5 min read",
+    "image": "/images/blog/patient-access-collections.svg",
+    "excerpt": "Learn practical steps to tighten eligibility checks and pre‑authorization workflows, reduce claim rejections, and protect your practice’s bottom line.",
+    "sections": [
+      {
+        "p": [
+          "In today’s increasingly complex payer landscape, the front‑end of the revenue cycle has become a decisive battleground for revenue assurance. A single missed eligibility check or delayed pre‑authorization can cascade into denials, delayed payments, and patient frustration. This guide walks you through a systematic, low‑cost approach to fortify eligibility verification and pre‑authorization processes, so you capture revenue the first time around."
+        ]
+      },
+      {
+        "h": "Why the Front‑End Impacts Your Bottom Line",
+        "p": [
+          "A strong front‑end minimizes downstream work and protects cash flow. Consider these core effects:"
+        ],
+        "ul": [
+          "Reduced claim denials and re‑work costs",
+          "Improved patient satisfaction through transparent cost expectations",
+          "Better cash cycle by accelerating claim submission",
+          "Lower administrative overhead by eliminating duplicate checks"
+        ]
+      },
+      {
+        "h": "Standardize Eligibility Verification Across the Practice",
+        "p": [
+          "Consistency is key. Create a repeatable verification protocol that every staff member follows, regardless of location or payer."
+        ],
+        "ul": [
+          "Develop a single “Eligibility Checklist” that includes patient ID, policy number, coverage dates, and benefit limits",
+          "Assign a dedicated staff role (e.g., Front‑Desk Eligibility Coordinator) to own the checklist",
+          "Document verification outcomes in the EHR’s “Eligibility” field for auditability",
+          "Set a verification turnaround target (e.g., 24‑hour window) and monitor compliance"
+        ]
+      },
+      {
+        "h": "Leverage Real‑Time Eligibility Tools",
+        "p": [
+          "Technology can automate what used to be manual phone calls. Integrating real‑time eligibility APIs into your practice management system yields immediate, accurate data."
+        ],
+        "ul": [
+          "Partner with a reputable clearinghouse that offers real‑time eligibility (RTE) services",
+          "Map payer‑specific benefit fields to a standardized internal template",
+          "Configure alerts for high‑risk scenarios (e.g., out‑of‑network, prior‑year limits)",
+          "Track tool usage metrics to justify ROI and adjust vendor contracts as needed"
+        ]
+      },
+      {
+        "h": "Build a Pre‑Authorization Playbook",
+        "p": [
+          "A documented playbook reduces variability and speeds approvals, especially for high‑volume or high‑risk services."
+        ],
+        "ul": [
+          "Identify services that routinely require authorization and group them by payer rules",
+          "Create step‑by‑step request templates that include required clinical documentation, CPT codes, and supporting images",
+          "Train staff on escalation pathways for urgent cases (e.g., phone follow‑up, fax priority)",
+          "Implement a tracking log that flags pending authorizations approaching expiration"
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions partners with practices to embed these front‑end best practices without disrupting daily operations."
+        ],
+        "ul": [
+          "Custom workflow design that aligns eligibility and authorization steps with your existing EHR",
+          "Integration of real‑time eligibility APIs and automated pre‑auth request generators",
+          "Ongoing staff training and performance dashboards to keep metrics on target",
+          "Dedicated support team to troubleshoot payer rule changes and ensure continuous compliance"
+        ]
+      }
+    ]
+  },
+  {
     "slug": "continuous-revenue-cycle-training",
     "title": "Continuous Revenue Cycle Training: A Blueprint for Practice Staff Development",
     "category": "Practice Management",
