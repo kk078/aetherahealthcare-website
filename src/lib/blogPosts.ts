@@ -11,6 +11,82 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "out-of-network-claims-management",
+    "title": "Out-of-Network Claims Management: Turning a Challenge into Revenue",
+    "category": "Revenue Cycle",
+    "author": "Amanda Rodriguez",
+    "date": "2026-06-19",
+    "readTime": "5 min read",
+    "image": "/images/blog/revenue-cycle.svg",
+    "excerpt": "Learn a step‑by‑step approach to capture revenue from out‑of‑network claims while keeping patients informed and satisfied.",
+    "sections": [
+      {
+        "p": [
+          "Out-of-network (OON) claims represent a significant source of revenue leakage for many U.S. practices, yet they also offer untapped upside when handled strategically. This article outlines a practical framework for identifying, tracking, and converting OON encounters into reimbursed dollars while preserving patient satisfaction."
+        ]
+      },
+      {
+        "h": "Why Out-of-Network Matters",
+        "p": [
+          "When a patient’s insurance does not cover the services rendered, the practice must navigate a separate billing pathway that often lacks the automatic edits and prompt payment of in‑network claims. Ignoring OON claims can lead to higher accounts‑receivable aging, lower cash flow, and missed opportunities for cost‑sharing with patients."
+        ],
+        "ul": [
+          "Higher average reimbursement rates for certain specialties",
+          "Potential to negotiate patient responsibility up front",
+          "Ability to capture ancillary services that insurers may not cover"
+        ]
+      },
+      {
+        "h": "Spotting High-Value OON Opportunities",
+        "p": [
+          "Not every OON encounter is worth the effort. Focus on cases where the expected reimbursement exceeds the cost of additional work."
+        ],
+        "ul": [
+          "Procedures with customary charges above the usual and customary fee (UCF)",
+          "Services that fall under out‑of‑network benefits for high‑deductible health plans",
+          "Ancillary services (labs, imaging) that insurers treat as separate line items"
+        ]
+      },
+      {
+        "h": "A Structured Follow‑Up Workflow",
+        "p": [
+          "Implement a repeatable process so no OON claim falls through the cracks."
+        ],
+        "ul": [
+          "1. Flag OON encounters at point of service and capture complete patient cost‑share estimate",
+          "2. Submit the claim with all required modifiers and documentation",
+          "3. Set a tracking timer (usually 30‑45 days) to monitor status",
+          "4. If denied or pending, initiate a targeted appeal with supporting cost‑analysis",
+          "5. Close the loop with the patient, offering payment options or financial counseling"
+        ]
+      },
+      {
+        "h": "Technology Tools to Streamline OON Management",
+        "p": [
+          "Automation reduces manual effort and improves visibility."
+        ],
+        "ul": [
+          "Integrated eligibility engines that flag OON status before the visit",
+          "Claim‑status dashboards that highlight aging OON claims",
+          "Rule‑based alerts that trigger appeals when a denial meets predefined criteria",
+          "Patient portals that display real‑time balance and payment plans for OON responsibility"
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera’s revenue‑cycle platform combines OON flagging, automated claim‑tracking, and a dedicated appeals team to turn missed OON revenue into a predictable cash stream. Our practice consultants also train staff on patient communication best practices, ensuring transparency and higher collection rates."
+        ],
+        "ul": [
+          "End‑to‑end OON claim submission and monitoring",
+          "Custom appeal templates aligned with payer guidelines",
+          "Patient‑friendly billing statements and payment plan options",
+          "Analytics reporting to measure OON revenue impact"
+        ]
+      }
+    ]
+  },
+  {
     "slug": "streamlining-eligibility-verification-preauthorization",
     "title": "Streamlining Eligibility Verification and Pre‑Authorization: A Front‑End Blueprint for Revenue Assurance",
     "category": "Patient Access & Collections",
