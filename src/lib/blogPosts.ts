@@ -11,6 +11,76 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "real-time-revenue-cycle-dashboard",
+    "title": "Building a Real-Time Revenue Cycle Dashboard: A Practical Guide for Practice Leaders",
+    "category": "Data & Analytics",
+    "author": "Amanda Rodriguez",
+    "date": "2026-06-23",
+    "readTime": "5 min read",
+    "image": "/images/blog/data-analytics.svg",
+    "excerpt": "Learn how to design and implement a live revenue‑cycle dashboard that gives practice owners actionable insights to improve cash flow and reduce denials.",
+    "sections": [
+      {
+        "p": [
+          "In today’s fast‑moving healthcare environment, practice leaders need instant visibility into the revenue cycle to make informed decisions. A real‑time dashboard consolidates key data points, highlights trends as they emerge, and empowers teams to act before small issues become revenue leaks."
+        ]
+      },
+      {
+        "h": "Why Real‑Time Dashboards Matter",
+        "p": [
+          "Traditional reporting cycles often leave a lag of days or weeks, meaning you’re reacting to past performance rather than steering current operations. A live dashboard shifts the focus from retrospective analysis to proactive management, helping you catch payment delays, denial spikes, and eligibility gaps the moment they occur."
+        ],
+        "ul": [
+          "Improves responsiveness to payer changes",
+          "Enables early identification of bottlenecks",
+          "Supports data‑driven staffing and resource allocation"
+        ]
+      },
+      {
+        "h": "Core Metrics to Include",
+        "p": [
+          "Select metrics that directly reflect cash flow health and operational efficiency. Including the right mix ensures the dashboard tells a complete story without overwhelming users."
+        ],
+        "ul": [
+          "Charge Capture Rate – percentage of services billed versus services provided",
+          "Days in Accounts Receivable (A/R) – average time from claim submission to payment",
+          "Denial Rate – proportion of submitted claims denied",
+          "Net Collection Rate – payments received versus total billable charges",
+          "Eligibility Verification Completion – % of appointments with verified coverage before service"
+        ]
+      },
+      {
+        "h": "Data Sources and Integration Tips",
+        "p": [
+          "Pulling accurate data requires connecting multiple systems—EHR, practice management, clearinghouse, and payer portals. Seamless integration reduces manual entry errors and keeps the dashboard current."
+        ],
+        "ul": [
+          "Use HL7 or FHIR APIs where available to pull claim status updates",
+          "Leverage the practice management system’s reporting engine for charge and posting data",
+          "Set up automated nightly extracts from the clearinghouse for denial details",
+          "Validate data mapping regularly to ensure fields align across sources"
+        ]
+      },
+      {
+        "h": "Turning Insights into Action",
+        "p": [
+          "A dashboard is only as valuable as the steps you take based on its signals. Establish clear workflows that translate metric changes into concrete tasks."
+        ],
+        "ul": [
+          "If denial rate climbs, trigger a rapid‑review meeting with coding staff",
+          "When A/R days exceed target, assign a collections specialist to high‑risk accounts",
+          "Low eligibility completion prompts outreach to front‑desk to verify insurance before appointments"
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions builds customized, HIPAA‑compliant dashboards that integrate your EHR, clearinghouse, and payer data in real time. Our team configures the most relevant metrics for your specialty, trains staff on interpreting the visuals, and provides ongoing analytics support so you can continuously refine your revenue‑cycle strategy."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "out-of-network-claims-management",
     "title": "Out-of-Network Claims Management: Turning a Challenge into Revenue",
     "category": "Revenue Cycle",
