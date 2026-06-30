@@ -11,6 +11,73 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "post-visit-revenue-optimization",
+    "title": "Post-Visit Revenue Optimization: Turning Checkout into Cash",
+    "category": "Practice Management",
+    "author": "Michael Torres",
+    "date": "2026-06-30",
+    "readTime": "5 min read",
+    "image": "/images/blog/practice-management.svg",
+    "excerpt": "A practical guide for practice leaders to capture missed revenue by tightening the post-visit workflow.",
+    "sections": [
+      {
+        "p": [
+          "Even after a successful appointment, many practices leave money on the table because the post‑visit process is fragmented. From incomplete charge capture to delayed patient billing, gaps at checkout can erode your bottom line. This article walks you through a step‑by‑step framework to audit, standardize, and automate the post‑visit workflow so every service rendered translates into reimbursed revenue."
+        ]
+      },
+      {
+        "h": "Identify Revenue Gaps in the Post‑Visit Process",
+        "p": [
+          "Before you can fix what’s broken, you need to know where the leaks are. Conduct a quick audit of the last 30 days of closed encounters and compare the services documented versus the charges posted. Look for patterns such as missing ancillary codes, unbilled labs, or services that never made it past the front desk."
+        ],
+        "ul": [
+          "Run a simple report that flags encounters with a zero dollar charge after documentation is complete",
+          "Track the time between visit completion and first patient statement to spot delays",
+          "Flag any payer that consistently returns a partial payment for the same service type"
+        ]
+      },
+      {
+        "h": "Standardize Charge Capture at Discharge",
+        "p": [
+          "A disciplined charge‑capture routine at the moment of discharge prevents downstream rework. Train nurses, medical assistants, and front‑desk staff to verify that every billable element—procedure, modifier, and diagnosis—has been entered into the EHR before the patient leaves."
+        ],
+        "ul": [
+          "Create a checklist embedded in the EHR discharge screen",
+          "Require a mandatory ‘charge‑capture complete’ sign‑off before the checkout button is enabled",
+          "Run daily exception reports to catch any discharge without a completed charge set"
+        ]
+      },
+      {
+        "h": "Integrate Real‑Time Eligibility Checks into Checkout",
+        "p": [
+          "Eligibility verification should not stop at scheduling. Running a real‑time eligibility check at checkout confirms that the patient’s coverage is still active and that the selected CPT codes are covered under their current benefit design."
+        ],
+        "ul": [
+          "Use an API‑enabled clearinghouse that can query payer databases in seconds",
+          "Display payer‑specific co‑pay, deductible, and prior‑auth status to the front desk staff",
+          "Document the eligibility response in the claim to reduce denials later"
+        ]
+      },
+      {
+        "h": "Implement Automated Patient Financial Counseling",
+        "p": [
+          "Patients who understand their financial responsibility are more likely to pay promptly. Leverage automated messaging tools to deliver personalized cost estimates and payment options immediately after the visit."
+        ],
+        "ul": [
+          "Send an email or SMS with a clear, itemized statement and a link to an online payment portal",
+          "Offer split‑payment plans or credit‑card on‑file options for high‑balance accounts",
+          "Trigger a reminder workflow for balances older than 30 days, escalating to a live counselor if needed"
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions partners with you to embed these best‑practice workflows into your existing EHR and billing platform. Our team provides a customized post‑visit audit, staff training modules, and a managed automation layer that ties eligibility checks, charge‑capture checklists, and patient‑facing payment portals together—so you capture every dollar earned without adding administrative overhead."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "optimizing-claim-submission-workflow",
     "title": "Optimizing Your Claim Submission Workflow: Practical Steps for Faster Payments",
     "category": "Revenue Cycle",
