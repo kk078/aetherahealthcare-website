@@ -5,10 +5,12 @@ import Link from 'next/link';
 import { Calendar, CheckCircle2, Loader2, Phone } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
 
-// Client's live-calendar booking URL (Calendly or Cal.com). Inlined at build
-// time. When set, the page renders the live calendar; when empty, it shows a
+// Live-calendar booking URL (Cal.com / Calendly). Defaults to Aethera's public
+// Cal.com page; NEXT_PUBLIC_BOOKING_URL can override it without a code change.
+// When set, the page renders the live calendar; when blank, it shows a
 // meeting-request form that still captures the lead and notifies the team.
-const BOOKING_URL = process.env.NEXT_PUBLIC_BOOKING_URL || '';
+const BOOKING_URL =
+  process.env.NEXT_PUBLIC_BOOKING_URL || 'https://cal.com/aethera-healthcare-solutions-ribxep';
 
 export default function BookingEmbed() {
   if (BOOKING_URL) {
