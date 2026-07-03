@@ -80,6 +80,189 @@ export const POSTS: BlogPost[] = [
     "date": "2026-07-03",
     "image": "/images/blog/practice-management.svg",
     "readTime": "5 min read",
+    "slug": "questions-to-ask-medical-billing-company",
+    "title": "Questions to Ask Before Hiring a Medical Billing Company",
+    "category": "Practice Management",
+    "excerpt": "The questions that separate a great medical billing company from an expensive mistake — on transparency, performance, pricing, and what happens if you leave.",
+    "sections": [
+      {
+        "p": [
+          "Choosing a medical billing company is one of the highest-stakes vendor decisions a practice makes, because the wrong partner quietly costs you revenue for months before you notice. The right questions surface the difference before you sign. This is a practical checklist of what to ask — and what good answers sound like. For a broader framework, pair it with our guide on <a href=\"/compare/how-to-choose-a-medical-billing-company\">how to choose a medical billing company</a>."
+        ]
+      },
+      {
+        "h": "Questions About Performance",
+        "p": [
+          "A serious partner commits to outcomes in writing, not vague promises. Ask:"
+        ],
+        "ul": [
+          "What clean-claim rate, denial rate, and days-in-A/R do you commit to — and will you put it in the contract?",
+          "How quickly do you work a denial once it posts?",
+          "How and how often will I see reporting on these numbers?",
+          "Can you share results for practices in my specialty?"
+        ]
+      },
+      {
+        "h": "Questions About Pricing & Contract",
+        "p": [
+          "Rate alone is misleading; what matters is what’s included and whether you’re locked in. Understand the full cost before comparing — see our breakdown of <a href=\"/blog/cost-to-outsource-medical-billing\">what it costs to outsource medical billing</a>."
+        ],
+        "ul": [
+          "Is this percentage-of-collections, per-claim, or hybrid?",
+          "Are setup fees, statement costs, or clearinghouse fees extra?",
+          "Is there a long-term contract or minimum, and what’s the exit process?",
+          "Who owns my data and patient records if I leave?"
+        ]
+      },
+      {
+        "h": "Questions About Scope & Service",
+        "p": [
+          "“Billing” means very different things to different vendors. Confirm exactly what they handle end to end."
+        ],
+        "ul": [
+          "Do you handle coding review, denials, appeals, patient collections, and credentialing — or only claim submission?",
+          "Who is my day-to-day contact, and what’s your response time?",
+          "How do you handle eligibility and prior authorization?",
+          "What happens during staff turnover on your side?"
+        ]
+      },
+      {
+        "h": "Red Flags to Watch For",
+        "p": [
+          "Be cautious of any partner who won’t commit to metrics in writing, is vague about what’s included, requires a long lock-in with no performance guarantee, or can’t explain how you’d offboard. These are the signs that the relationship is built to benefit the vendor, not your practice."
+        ]
+      },
+      {
+        "h": "How Aethera Answers These",
+        "p": [
+          "Aethera commits to performance targets in writing, prices on a percentage of collections with no setup fees or long-term contract, and handles the full cycle — coding, claims, denials, collections, and credentialing. The simplest way to judge us is to test the math: a <a href=\"/free-assessment\">free revenue assessment</a> shows you what we’d recover before you commit to anything."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "Jennifer Walsh",
+    "date": "2026-07-03",
+    "image": "/images/blog/revenue-cycle.svg",
+    "readTime": "5 min read",
+    "slug": "signs-medical-billing-losing-revenue",
+    "title": "Signs Your Medical Billing Is Quietly Losing Revenue",
+    "category": "Revenue Cycle",
+    "excerpt": "Revenue leaks rarely announce themselves. Here are the warning signs that your medical billing is costing you money — and how to confirm it.",
+    "sections": [
+      {
+        "p": [
+          "The most dangerous revenue leaks are the quiet ones — the claims that age out, the denials no one reworks, the balances that never get followed up. Your practice can look busy and still be leaving significant money uncollected. These are the warning signs that your medical billing is quietly losing revenue, and the fastest ways to confirm it. If several of these sound familiar, our <a href=\"/services/denial-management\">denial management services</a> and a quick assessment can pinpoint the leak."
+        ]
+      },
+      {
+        "h": "Warning Signs in Your Numbers",
+        "p": [
+          "A few metrics tell the story quickly if you track them:"
+        ],
+        "ul": [
+          "Days in A/R creeping upward month over month",
+          "A denial rate you can’t actually state — because no one measures it",
+          "A growing pile of claims approaching timely-filing deadlines",
+          "Patient balances aging past 90 days without follow-up"
+        ]
+      },
+      {
+        "h": "Warning Signs in Your Workflow",
+        "p": [
+          "Process gaps are often the root cause behind the numbers."
+        ],
+        "ul": [
+          "Denials that sit because no one has time to rework them",
+          "Eligibility checked inconsistently, or only at scheduling",
+          "One person holding all billing knowledge, with no backup",
+          "Reporting you never see, or can’t understand when you do"
+        ]
+      },
+      {
+        "h": "How to Confirm the Leak",
+        "p": [
+          "Suspicion isn’t proof — quantify it. Pull your last 60–90 days of denials and unworked claims and put a dollar figure on them; the number is usually larger than practices expect. Our <a href=\"/tools/denial-cost-calculator\">denial cost calculator</a> gives you a fast estimate of what denials alone are costing you each month, which is often the biggest single leak."
+        ]
+      },
+      {
+        "h": "What Fixing It Looks Like",
+        "p": [
+          "Plugging the leak is rarely about working harder — it’s about tightening the front end (eligibility and authorization), enforcing a rule that every denial gets worked within a set window, and following up on patient balances consistently. For most practices, a dedicated billing team recovers far more than it costs, because these tasks finally get done every day instead of when someone has time."
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera finds and closes these leaks as a full-service partner — preventing avoidable denials, working the ones that happen, and following up on every balance. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll show you exactly where your revenue is going and what it’s worth to recover it."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "Sarah Kim",
+    "date": "2026-07-03",
+    "image": "/images/blog/specialty-billing.svg",
+    "readTime": "5 min read",
+    "slug": "cardiology-medical-billing-guide",
+    "title": "Cardiology Medical Billing: Codes, Denials & Best Practices",
+    "category": "Specialty Billing",
+    "excerpt": "Cardiology billing is uniquely complex — from bundled diagnostic studies to device and procedure coding. Here’s what drives cardiology denials and how to prevent them.",
+    "sections": [
+      {
+        "p": [
+          "Cardiology medical billing is among the most complex specialties to get right, because it combines high-value procedures, bundled diagnostic studies, device coding, and payer rules that change often. Small coding or documentation gaps translate into outsized revenue loss. This guide covers what makes cardiology billing hard, the denials that hit hardest, and how to prevent them. For a practice that wants it handled end to end, see our <a href=\"/medical-billing/cardiology\">cardiology medical billing</a> and <a href=\"/services/cardiology-billing\">cardiology billing services</a>."
+        ]
+      },
+      {
+        "h": "Why Cardiology Billing Is Complex",
+        "p": [
+          "Cardiology spans office visits, diagnostic testing (echo, stress, nuclear, Holter), interventional procedures, and device management — each with its own coding conventions, bundling rules, and documentation requirements. The mix of professional and technical components, global periods, and frequent payer policy updates makes cardiology far more error-prone than primary care billing."
+        ]
+      },
+      {
+        "h": "Common Cardiology Denial Drivers",
+        "p": [
+          "Most cardiology denials trace back to a handful of recurring issues:"
+        ],
+        "ul": [
+          "Missing or incorrect modifiers on professional vs technical components",
+          "Medical-necessity documentation that doesn’t support the study ordered",
+          "Bundling and global-period edits applied incorrectly",
+          "Prior authorization not secured for advanced imaging or procedures"
+        ]
+      },
+      {
+        "h": "Best Practices That Prevent Denials",
+        "p": [
+          "The highest-return fixes are front-end and documentation discipline:"
+        ],
+        "ul": [
+          "Verify eligibility and secure prior authorization before advanced testing",
+          "Tie every study to clear medical-necessity documentation",
+          "Keep modifier and bundling logic current with payer policy",
+          "Audit high-value procedure claims before submission"
+        ]
+      },
+      {
+        "h": "The Denial Workflow That Protects Cardiology Revenue",
+        "p": [
+          "Because cardiology claims are high-value, a single unworked denial can represent meaningful revenue. Triage denials by dollar value, appeal with payer-specific documentation, and track every one to resolution. Our broader <a href=\"/blog/medical-claim-denial-management-guide\">denial management guide</a> covers the prevention-and-appeals framework that applies here."
+        ]
+      },
+      {
+        "h": "How Aethera Helps Cardiology Practices",
+        "p": [
+          "Aethera provides specialty-trained cardiology billing — coding, claims, denials, and appeals handled by people who know the bundling and documentation rules, nationwide. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll review a sample of your cardiology claims and show you where revenue is being lost."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "Michael Torres",
+    "date": "2026-07-03",
+    "image": "/images/blog/practice-management.svg",
+    "readTime": "5 min read",
     "slug": "cost-to-outsource-medical-billing",
     "title": "How Much Does It Cost to Outsource Medical Billing?",
     "category": "Practice Management",
