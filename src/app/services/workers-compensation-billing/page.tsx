@@ -161,7 +161,7 @@ export default function WorkersCompBilling() {
           <div className="max-w-3xl">
             <FadeIn>
               <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Workers' Comp Billing Specialists</span>
-              <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6 leading-tight">Workers' Comp Billing Without the Write-Offs</h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">Workers' Comp Billing Without the Write-Offs</h1>
               <p className="text-xl text-cream mb-10">State fee schedules, jurisdiction rules, utilization review, narrative requirements, and lien deadlines — our workers' compensation RCM team navigates all of it so you actually get paid for the care you deliver.</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Workers' Comp Assessment</Link>
@@ -190,7 +190,7 @@ export default function WorkersCompBilling() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-5">How Aethera Handles Workers' Comp Billing</h2>
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">How Aethera Handles Workers' Comp Billing</h2>
               <p className="text-gray mb-5">Workers' compensation isn't one payer — it's fifty different rule sets, plus carriers, third-party administrators, and bill-review firms whose business model is paying you less. Most practices treat WC like commercial insurance, and the result is a mountain of write-offs and A/R that ages for months.</p>
               <p className="text-gray">Aethera runs WC as its own discipline: jurisdiction-specific fee schedules, authorization and UR tracking, structured narrative capture, compliant IAIABC eBilling, and an appeals-and-lien workflow that pursues every recoverable dollar — so your WC line stops being a loss leader.</p>
             </FadeIn>
@@ -231,7 +231,7 @@ export default function WorkersCompBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Orthopedic & Occupational Medicine Clinic</h2>
+            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Orthopedic & Occupational Medicine Clinic</h2>
             <p className="text-cream/80 mb-8">This clinic billed workers' comp like commercial insurance across three states. The result: 38% of WC charges written off, narratives missing on half of high-level visits, and bill-review reductions never appealed.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">{caseMetrics.map((m, i) => (<div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>))}</div>
             <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
@@ -248,7 +248,7 @@ export default function WorkersCompBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to Stop Writing Off Workers' Comp?</h2>
+              <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Stop Writing Off Workers' Comp?</h2>
               <p className="text-cream max-w-xl mx-auto mb-8">Start with a free workers' comp billing assessment. We'll audit your write-offs, reductions, and lien opportunities and show you exactly where recoverable revenue is being lost.</p>
               <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Workers' Comp Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link>
             </FadeIn>

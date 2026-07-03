@@ -121,7 +121,7 @@ export default function PayerServices() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-5">Who We Serve</h2>
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">Who We Serve</h2>
               <p className="text-gray mb-6">
                 Our payer services are built for organizations that bear claims, regulatory, and network responsibility — and need an operating partner that treats accuracy and compliance as non-negotiable.
               </p>
@@ -135,7 +135,7 @@ export default function PayerServices() {
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-5">Why Aethera for Payer Services</h2>
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">Why Aethera for Payer Services</h2>
               <div className="space-y-5">
                 {differentiators.map((d, i) => (
                   <div key={i} className="bg-cream rounded-xl p-6 border border-gray/10">
@@ -157,7 +157,7 @@ export default function PayerServices() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <BarChart3 className="h-10 w-10 text-mint mx-auto mb-5" />
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Built for Regulatory Reality</h2>
+            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Built for Regulatory Reality</h2>
             <p className="text-cream/80 max-w-3xl mx-auto mb-8">
               Every payer engagement runs on HIPAA-compliant, SOC 2-aligned infrastructure with NCQA-aligned credentialing, CMS and state timeliness tracking, and audit-ready documentation — so your compliance team sleeps at night and your regulators stay satisfied.
             </p>
@@ -177,7 +177,7 @@ export default function PayerServices() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-white font-playfair mb-4">Let's Talk About Your Plan Operations</h2>
+              <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Let's Talk About Your Plan Operations</h2>
               <p className="text-cream max-w-xl mx-auto mb-8">
                 Whether you need one function or a full back-office partner, we'll scope a payer-services engagement around your accuracy, recovery, and compliance goals.
               </p>

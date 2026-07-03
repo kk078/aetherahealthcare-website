@@ -240,7 +240,7 @@ export default function FaqClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 We're Here to Help
               </h2>
               <p className="text-gray text-lg mb-8">
@@ -344,7 +344,7 @@ export default function FaqClient() {
               <div className="flex justify-center mb-6">
                 <HelpCircle className="h-12 w-12 text-white" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-6">
                 Still Have Questions?
               </h2>
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">

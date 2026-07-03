@@ -60,7 +60,7 @@ export default function PsychiatryBilling() {
           <div className="max-w-3xl">
             <FadeIn>
               <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Psychiatry & Behavioral Health Specialists</span>
-              <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6 leading-tight">Behavioral Health Billing That Understands the Complexity</h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">Behavioral Health Billing That Understands the Complexity</h1>
               <p className="text-xl text-cream mb-10">E&M + psychotherapy add-ons, mental health parity, telehealth rules, prior auth for medications, patient collections — our behavioral health billing team resolves the issues that cost psychiatric practices the most.</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Psychiatry Assessment</Link>
@@ -92,7 +92,7 @@ export default function PsychiatryBilling() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-5">How Aethera Handles Behavioral Health Billing</h2>
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">How Aethera Handles Behavioral Health Billing</h2>
               <p className="text-gray mb-5">Behavioral health billing occupies a unique intersection of psychiatric coding complexity, parity law compliance, and patient sensitivity. Our team is trained to handle all three dimensions simultaneously — submitting claims correctly while protecting the therapeutic environment your practice depends on.</p>
               <p className="text-gray">We work with psychiatric practices of all sizes and compositions, from solo psychiatrists to multi-provider behavioral health groups including prescribers, therapists, and social workers all billing under the same TIN.</p>
             </FadeIn>
@@ -122,7 +122,7 @@ export default function PsychiatryBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Behavioral Health Group</h2>
+            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Behavioral Health Group</h2>
             <p className="text-cream/80 mb-8">Bundling edits on E&M + therapy claims, 34% prior auth denial rate on new medications, and essentially zero patient collections — balances were being written off entirely.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[{ label: 'Bundling Denials', before: 'Frequent', after: 'Eliminated' }, { label: 'Prior Auth Approvals', before: '66%', after: '89%' }, { label: 'Patient Collections', before: 'Baseline', after: '+340%' }, { label: 'Net Revenue', before: 'Baseline', after: '+$31K/mo' }].map((m, i) => (
@@ -146,7 +146,7 @@ export default function PsychiatryBilling() {
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
-            <FadeIn><h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to Maximize Your Behavioral Health Revenue?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free psychiatry billing assessment. We'll audit your E&M + therapy bundling, prior auth denials, and patient collection patterns.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Psychiatry Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
+            <FadeIn><h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Maximize Your Behavioral Health Revenue?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free psychiatry billing assessment. We'll audit your E&M + therapy bundling, prior auth denials, and patient collection patterns.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Psychiatry Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
           </div>
         </div>
       </section>

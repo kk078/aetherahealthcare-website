@@ -22,7 +22,7 @@ export default function PayerDirectoryIndex() {
       <section className="pt-24 pb-14 md:pt-28 md:pb-16 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
-            <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-5">Payer Directory</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-5">Payer Directory</h1>
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-xl text-cream max-w-3xl mx-auto">

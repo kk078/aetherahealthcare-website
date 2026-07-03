@@ -176,7 +176,7 @@ export default function CaseStudies() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <TrendingUp className="h-12 w-12 text-mint mx-auto mb-5" />
-            <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-4">
               Ready to Be Our Next Success Story?
             </h2>
             <p className="text-cream text-lg max-w-2xl mx-auto mb-8">

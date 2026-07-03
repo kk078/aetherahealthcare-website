@@ -161,7 +161,7 @@ export default function DentalBilling() {
           <div className="max-w-3xl">
             <FadeIn>
               <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Dental Billing Specialists</span>
-              <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6 leading-tight">Dental Billing That Captures Every Dollar You Earn</h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">Dental Billing That Captures Every Dollar You Earn</h1>
               <p className="text-xl text-cream mb-10">From CDT coding and predeterminations to medical-dental cross-coding for oral surgery and sleep appliances — our dental RCM team turns clinical work into clean, fully-paid claims.</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Dental Assessment</Link>
@@ -190,7 +190,7 @@ export default function DentalBilling() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-5">How Aethera Handles Dental Billing</h2>
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">How Aethera Handles Dental Billing</h2>
               <p className="text-gray mb-5">Dental billing sits at the intersection of two coding systems — CDT and medical CPT/ICD-10 — and most practices only bill one of them. The result is uncollected cross-codable revenue, write-offs from missed predeterminations, and insurance A/R that ages past collectability.</p>
               <p className="text-gray">Aethera assigns a dental-dedicated team that codes from your clinical notes, cross-codes to medical where it pays more, submits predeterminations and attachments proactively, and works your insurance aging every week — driving a 97.5% clean claim rate and a measurably lower write-off rate.</p>
             </FadeIn>
@@ -231,7 +231,7 @@ export default function DentalBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Group Dental Practice</h2>
+            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Group Dental Practice</h2>
             <p className="text-cream/80 mb-8">This group was billing CDT only — never cross-coding oral surgery, implants, or sleep appliances to medical — and carried $190,000 in insurance A/R over 90 days from missing attachments and predeterminations.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">{caseMetrics.map((m, i) => (<div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>))}</div>
             <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
@@ -248,7 +248,7 @@ export default function DentalBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to Collect Everything You Produce?</h2>
+              <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Collect Everything You Produce?</h2>
               <p className="text-cream max-w-xl mx-auto mb-8">Start with a free dental billing assessment. We'll audit your cross-coding opportunities and aging A/R and show you exactly where revenue is being left behind.</p>
               <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Dental Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link>
             </FadeIn>

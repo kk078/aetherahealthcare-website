@@ -15,7 +15,7 @@ export default function CTABanner({
 }: CTABannerProps) {
   return (
     <div className={`bg-gradient-to-r from-navy to-teal rounded-2xl py-16 px-8 text-center ${className}`}>
-      <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-6">
+      <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-6">
         {title}
       </h2>
       <Link prefetch={false}

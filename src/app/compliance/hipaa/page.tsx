@@ -160,7 +160,7 @@ export default function HipaaCompliance() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-6">
                 HIPAA Compliance
               </h1>
             </FadeIn>
@@ -179,7 +179,7 @@ export default function HipaaCompliance() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   Comprehensive HIPAA Compliance Program
                 </h2>
                 <p className="text-gray mb-6">
@@ -368,7 +368,7 @@ export default function HipaaCompliance() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-16 px-8 text-white">
             <FadeIn>
-              <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold font-jakarta mb-6">
                 Our HIPAA Compliance Program
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -434,7 +434,7 @@ export default function HipaaCompliance() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 Questions About Our HIPAA Compliance?
               </h2>
               <p className="text-gray max-w-2xl mx-auto mb-8">

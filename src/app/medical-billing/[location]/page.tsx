@@ -47,7 +47,7 @@ export default async function LocationPage({ params }: { params: Params }) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="flex items-center text-cream/80 text-sm mb-3"><MapPin className="h-4 w-4 mr-1.5" /> {l.region}, Florida</p>
           <FadeIn>
-            <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-4">Medical Billing Services in {l.city}, FL</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-4">Medical Billing Services in {l.city}, FL</h1>
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-xl text-cream max-w-3xl">

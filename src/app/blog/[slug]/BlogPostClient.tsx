@@ -53,7 +53,7 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
                 <Tag className="h-5 w-5 text-teal mr-2" />
                 <span className="text-teal font-semibold">{post.category}</span>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-navy font-playfair mb-6 leading-tight">{post.title}</h1>
+              <h1 className="text-3xl md:text-4xl font-bold text-navy font-jakarta mb-6 leading-tight">{post.title}</h1>
               <div className="flex flex-wrap items-center justify-center gap-5 text-gray text-sm">
                 <span className="flex items-center"><User className="h-4 w-4 mr-1.5" />{post.author}</span>
                 <span className="flex items-center"><Calendar className="h-4 w-4 mr-1.5" /><time dateTime={post.date}>{new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time></span>
@@ -71,7 +71,7 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
 
             {/* inline CTA */}
             <div className="mt-12 bg-gradient-to-br from-navy to-teal rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-white font-playfair mb-2">See what your revenue cycle is leaking</h3>
+              <h3 className="text-2xl font-bold text-white font-jakarta mb-2">See what your revenue cycle is leaking</h3>
               <p className="text-cream/85 mb-5 max-w-xl mx-auto">Upload your A/R aging report and get a free, instant analysis — KPIs, denials, payer bottlenecks and a recovery plan.</p>
               <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-7 rounded-full transition-colors">
                 Run my free A/R analysis <ArrowRight className="h-5 w-5 ml-2" />
@@ -84,7 +84,7 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
       <section className="py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-navy font-playfair mb-10 text-center">Related Articles</h2>
+            <h2 className="text-3xl font-bold text-navy font-jakarta mb-10 text-center">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
               {post.relatedPosts.map((rp) => (
                 <Link prefetch={false} key={rp.slug} href={`/blog/${rp.slug}`} className="group bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all overflow-hidden border border-gray/10">

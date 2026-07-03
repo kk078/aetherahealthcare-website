@@ -60,7 +60,7 @@ export default function FamilyMedicineBilling() {
           <div className="max-w-3xl">
             <FadeIn>
               <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Family Medicine Billing Specialists</span>
-              <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6 leading-tight">Family Medicine Billing That Captures Every Visit</h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">Family Medicine Billing That Captures Every Visit</h1>
               <p className="text-xl text-cream mb-10">Preventive visit splits, CCM code eligibility, annual wellness visit rules, E&M level accuracy — our family medicine billing team finds the revenue that generalist billers miss in every high-volume primary care practice.</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Family Medicine Assessment</Link>
@@ -92,7 +92,7 @@ export default function FamilyMedicineBilling() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-5">How Aethera Handles Family Medicine Billing</h2>
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">How Aethera Handles Family Medicine Billing</h2>
               <p className="text-gray mb-5">Family medicine is high-volume, high-complexity billing. You see hundreds of patients a week across preventive care, chronic disease management, acute visits, and care coordination — each with its own coding rules. Generalist billing teams handle the volume but miss the nuance. We don't.</p>
               <p className="text-gray">Our family medicine billing specialists run continuous E&M distribution analysis, track CCM eligibility across your panel, and maintain Medicare preventive coding accuracy for your entire Medicare population. On average, family medicine practices see an 18% revenue increase in year one.</p>
             </FadeIn>
@@ -122,7 +122,7 @@ export default function FamilyMedicineBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Family Medicine Practice</h2>
+            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Family Medicine Practice</h2>
             <p className="text-cream/80 mb-8">Front desk staff handling billing with a 78% clean claim rate, consistent E&M undercoding, and no denial follow-up. Collections were $200,000/year below potential.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[{ label: 'Clean Claim Rate', before: '78%', after: '96.4%' }, { label: 'Denial Rate', before: '16%', after: '4.1%' }, { label: 'Monthly Collections', before: 'Baseline', after: '+$18,200' }, { label: 'Admin Burden', before: 'High', after: 'Minimal' }].map((m, i) => (
@@ -146,7 +146,7 @@ export default function FamilyMedicineBilling() {
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
-            <FadeIn><h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to See What Your Practice Is Actually Worth?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free family medicine billing assessment. We'll run an E&M distribution analysis and show you what's being left on the table.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Family Medicine Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
+            <FadeIn><h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to See What Your Practice Is Actually Worth?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free family medicine billing assessment. We'll run an E&M distribution analysis and show you what's being left on the table.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Family Medicine Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
           </div>
         </div>
       </section>

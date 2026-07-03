@@ -120,7 +120,7 @@ export default function Portal() {
                     <div className="bg-gradient-to-r from-teal to-mint rounded w-7 h-7 flex items-center justify-center">
                       <span className="text-white font-bold text-xs">A</span>
                     </div>
-                    <span className="ml-2 text-white font-bold text-sm font-playfair">Aethera</span>
+                    <span className="ml-2 text-white font-bold text-sm font-jakarta">Aethera</span>
                   </div>
                   {['Dashboard','Claims','Payments','Denials','AR Report','Analytics','Settings'].map((item, i) => (
                     <div key={i} className={`flex items-center px-3 py-2.5 rounded-lg mb-1 text-sm ${i === 0 ? 'bg-teal text-white font-semibold' : 'text-gray hover:bg-white/5 cursor-pointer'}`}>
@@ -134,7 +134,7 @@ export default function Portal() {
                 <div className="flex-grow bg-cream p-6 overflow-auto">
                   <div className="flex items-center justify-between mb-6">
                     <div>
-                      <h2 className="text-lg font-bold text-navy font-playfair">Dashboard</h2>
+                      <h2 className="text-lg font-bold text-navy font-jakarta">Dashboard</h2>
                       <p className="text-xs text-gray">May 2026 · All Providers</p>
                     </div>
                     <span className="text-xs bg-teal/10 text-teal border border-teal/20 px-3 py-1 rounded-full font-medium">Live Data</span>
@@ -218,7 +218,7 @@ export default function Portal() {
             <FadeIn>
               <div className="flex items-center mb-4">
                 <Smartphone className="h-7 w-7 text-teal mr-3" />
-                <h2 className="text-3xl font-bold text-navy font-playfair">Fully Mobile</h2>
+                <h2 className="text-3xl font-bold text-navy font-jakarta">Fully Mobile</h2>
               </div>
               <p className="text-gray mb-6">The Aethera Portal is fully responsive — every feature available on your phone or tablet, no app download required.</p>
               <div className="space-y-3">
@@ -233,7 +233,7 @@ export default function Portal() {
             <FadeIn delay={0.2}>
               <div className="bg-gradient-to-br from-navy to-teal rounded-2xl p-8 text-white text-center">
                 <Users className="h-12 w-12 text-mint mx-auto mb-4" />
-                <h3 className="text-2xl font-bold font-playfair mb-3">Ready to See It Live?</h3>
+                <h3 className="text-2xl font-bold font-jakarta mb-3">Ready to See It Live?</h3>
                 <p className="text-cream mb-6">We'll walk you through a live demo of the portal using sample data from your specialty.</p>
                 <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300">
                   Request Your Demo

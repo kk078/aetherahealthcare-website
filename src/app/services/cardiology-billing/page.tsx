@@ -87,7 +87,7 @@ export default function CardiologyBilling() {
               <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">
                 Cardiology Billing Specialists
               </span>
-              <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">
                 Cardiology Billing That Understands Your World
               </h1>
               <p className="text-xl text-cream mb-10">
@@ -147,7 +147,7 @@ export default function CardiologyBilling() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-5">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">
                 How Aethera Handles Cardiology Billing
               </h2>
               <p className="text-gray mb-5">
@@ -217,7 +217,7 @@ export default function CardiologyBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Cardiology Group</h2>
+            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Cardiology Group</h2>
             <p className="text-cream/80 mb-8">This group came to Aethera with a 14.2% denial rate — almost entirely from cardiac cath modifier errors and stress test bundling issues. AR had reached 47 days and $40,000/month was being written off without appeal.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[
@@ -264,7 +264,7 @@ export default function CardiologyBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to Maximize Your Cardiology Revenue?</h2>
+              <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Maximize Your Cardiology Revenue?</h2>
               <p className="text-cream max-w-xl mx-auto mb-8">Start with a free cardiology billing assessment. We'll audit your denial patterns and show you exactly where revenue is being lost.</p>
               <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
                 Get Free Cardiology Assessment <ArrowRight className="h-4 w-4 ml-2" />

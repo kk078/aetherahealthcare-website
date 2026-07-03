@@ -47,7 +47,7 @@ export default function PrivacyPolicy() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-6">
                 Privacy Policy
               </h1>
             </FadeIn>
@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 Introduction and Scope
               </h2>
               <p className="text-gray mb-6">
@@ -89,7 +89,7 @@ export default function PrivacyPolicy() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 Definitions
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -134,7 +134,7 @@ export default function PrivacyPolicy() {
             {sections.map((section, index) => (
               <FadeIn key={index} delay={index * 0.1}>
                 <div className="mb-12 last:mb-0">
-                  <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                  <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                     {section.title}
                   </h2>
                   <p className="text-gray">
@@ -152,7 +152,7 @@ export default function PrivacyPolicy() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 Cookies and Tracking Technologies
               </h2>
               <p className="text-gray mb-4">
@@ -190,7 +190,7 @@ export default function PrivacyPolicy() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 Children's Privacy
               </h2>
               <p className="text-gray">
@@ -208,7 +208,7 @@ export default function PrivacyPolicy() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 Changes to This Privacy Policy
               </h2>
               <p className="text-gray mb-6">
@@ -247,7 +247,7 @@ export default function PrivacyPolicy() {
               <div className="flex justify-center mb-6">
                 <Users className="h-12 w-12 text-white" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold font-playfair mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold font-jakarta mb-6">
                 Privacy Questions or Concerns?
               </h2>
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">

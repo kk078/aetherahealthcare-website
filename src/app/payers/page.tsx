@@ -162,7 +162,7 @@ export default function Payers() {
             <FadeIn>
               <div className="flex items-center mb-4">
                 <Zap className="h-7 w-7 text-teal mr-3" />
-                <h2 className="text-3xl font-bold text-navy font-playfair">Real-Time Eligibility Verification</h2>
+                <h2 className="text-3xl font-bold text-navy font-jakarta">Real-Time Eligibility Verification</h2>
               </div>
               <p className="text-gray mb-6">
                 We verify patient insurance eligibility in real time before every appointment — eliminating eligibility-related denials at the source. Our system checks coverage, co-pays, deductibles, and benefit limits automatically.
@@ -185,7 +185,7 @@ export default function Payers() {
             <FadeIn delay={0.2}>
               <div className="bg-navy rounded-2xl p-8 text-white">
                 <Shield className="h-10 w-10 text-mint mb-4" />
-                <h3 className="text-xl font-bold font-playfair mb-4">Payer Contract Expertise</h3>
+                <h3 className="text-xl font-bold font-jakarta mb-4">Payer Contract Expertise</h3>
                 <p className="text-cream/80 mb-5 text-sm">
                   We don't just submit to your payers — we know them. Our team maintains active knowledge of each payer's specific rules, fee schedules, timely filing deadlines, and prior auth requirements.
                 </p>
@@ -213,7 +213,7 @@ export default function Payers() {
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
-            <h3 className="text-xl font-bold text-navy font-playfair mb-3">Don't See Your Payer?</h3>
+            <h3 className="text-xl font-bold text-navy font-jakarta mb-3">Don't See Your Payer?</h3>
             <p className="text-gray mb-6">We likely work with them. With 900+ payers in our network, if you don't see a specific plan listed, contact us for a payer-specific confirmation.</p>
             <Link prefetch={false} href="/contact" className="inline-flex items-center bg-teal hover:bg-navy text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
               Ask About Your Payer <ArrowRight className="h-4 w-4 ml-2" />
@@ -227,7 +227,7 @@ export default function Payers() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-16 px-8 text-center">
             <FadeIn>
-              <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-4">
                 Maximize Reimbursement Across All Your Payers
               </h2>
               <p className="text-cream text-lg max-w-xl mx-auto mb-8">

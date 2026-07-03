@@ -51,7 +51,7 @@ export default function TermsOfService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-6">
                 Terms of Service
               </h1>
             </FadeIn>
@@ -69,7 +69,7 @@ export default function TermsOfService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 Agreement to Terms
               </h2>
               <p className="text-gray mb-6">
@@ -99,7 +99,7 @@ export default function TermsOfService() {
             {terms.map((term, index) => (
               <FadeIn key={index} delay={index * 0.1}>
                 <div className="mb-12 last:mb-0">
-                  <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                  <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                     {index + 1}. {term.title}
                   </h2>
                   <p className="text-gray">
@@ -117,7 +117,7 @@ export default function TermsOfService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 8. Intellectual Property
               </h2>
               <p className="text-gray mb-6">
@@ -140,7 +140,7 @@ export default function TermsOfService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 9. Confidentiality Obligations
               </h2>
               <p className="text-gray mb-6">
@@ -181,7 +181,7 @@ export default function TermsOfService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 10. Limitation of Liability
               </h2>
               <p className="text-gray mb-6">
@@ -204,7 +204,7 @@ export default function TermsOfService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 11. Indemnification
               </h2>
               <p className="text-gray">
@@ -224,7 +224,7 @@ export default function TermsOfService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 12. Term and Termination
               </h2>
               <p className="text-gray mb-6">
@@ -266,7 +266,7 @@ export default function TermsOfService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 13. Dispute Resolution
               </h2>
               <p className="text-gray mb-6">
@@ -311,7 +311,7 @@ export default function TermsOfService() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <FadeIn>
               <div>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   14. Governing Law
                 </h2>
                 <p className="text-gray">
@@ -324,7 +324,7 @@ export default function TermsOfService() {
 
             <FadeIn delay={0.1}>
               <div>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   15. Force Majeure
                 </h2>
                 <p className="text-gray">
@@ -338,7 +338,7 @@ export default function TermsOfService() {
 
             <FadeIn delay={0.2}>
               <div>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   16. Entire Agreement
                 </h2>
                 <p className="text-gray">
@@ -351,7 +351,7 @@ export default function TermsOfService() {
 
             <FadeIn delay={0.3}>
               <div>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   17. Severability
                 </h2>
                 <p className="text-gray">
@@ -370,7 +370,7 @@ export default function TermsOfService() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                 Questions About These Terms?
               </h2>
               <p className="text-gray max-w-2xl mx-auto mb-8">

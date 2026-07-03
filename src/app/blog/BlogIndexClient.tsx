@@ -76,7 +76,7 @@ export default function BlogIndexClient() {
               <Sparkles className="h-4 w-4 text-mint mr-2" />
               <span className="text-mint text-sm font-semibold tracking-wide">THE AETHERA PULSE · U.S. HEALTHCARE RCM</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-5 leading-tight max-w-4xl">
+            <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-5 leading-tight max-w-4xl">
               The business of getting paid in American healthcare.
             </h1>
             <p className="text-xl text-cream/90 max-w-2xl mb-10">
@@ -128,7 +128,7 @@ export default function BlogIndexClient() {
                 </div>
                 <div className="p-8 lg:p-10 flex flex-col justify-center">
                   <span className="text-xs font-bold uppercase tracking-wide mb-3" style={{ color: catColor(featured.category) }}>{featured.category}</span>
-                  <h2 className="text-2xl md:text-3xl font-bold text-navy font-playfair mb-3 leading-tight group-hover:text-teal transition-colors">{featured.title}</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-navy font-jakarta mb-3 leading-tight group-hover:text-teal transition-colors">{featured.title}</h2>
                   <p className="text-gray mb-5">{featured.excerpt}</p>
                   <div className="flex items-center gap-4 text-xs text-gray mb-6">
                     <span className="flex items-center"><Calendar className="h-3.5 w-3.5 mr-1" />{fmtDate(featured.date)}</span>
@@ -146,7 +146,7 @@ export default function BlogIndexClient() {
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between mb-8">
-            <h2 className="text-2xl font-bold text-navy font-playfair">{active === 'All' && !query.trim() ? 'Latest articles' : `${gridPosts.length} ${gridPosts.length === 1 ? 'article' : 'articles'}`}</h2>
+            <h2 className="text-2xl font-bold text-navy font-jakarta">{active === 'All' && !query.trim() ? 'Latest articles' : `${gridPosts.length} ${gridPosts.length === 1 ? 'article' : 'articles'}`}</h2>
             {(active !== 'All' || query.trim()) && (
               <button type="button" onClick={() => { setActive('All'); setQuery(''); }} className="text-sm font-semibold text-teal hover:text-navy">Clear filters</button>
             )}
@@ -192,13 +192,13 @@ export default function BlogIndexClient() {
           {subscribed ? (
             <FadeIn>
               <CheckCircle className="h-12 w-12 text-mint mx-auto mb-4" />
-              <h2 className="text-2xl md:text-3xl font-bold text-white font-playfair mb-2">You&apos;re on the list.</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-white font-jakarta mb-2">You&apos;re on the list.</h2>
               <p className="text-cream/80">Watch <strong className="text-white">{email}</strong> for The Aethera Pulse — practical RCM insights, no fluff.</p>
             </FadeIn>
           ) : (
             <FadeIn>
               <Mail className="h-10 w-10 text-mint mx-auto mb-4" />
-              <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-3">Get The Aethera Pulse</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-3">Get The Aethera Pulse</h2>
               <p className="text-cream/85 mb-8 max-w-xl mx-auto">Revenue cycle strategies, payer intel, policy updates and benchmarks for U.S. practices — to your inbox. No spam, unsubscribe anytime.</p>
               <form onSubmit={subscribe} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
                 <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@yourpractice.com" aria-label="Email address"

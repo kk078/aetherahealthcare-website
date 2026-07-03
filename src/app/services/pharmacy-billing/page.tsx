@@ -161,7 +161,7 @@ export default function PharmacyBilling() {
           <div className="max-w-3xl">
             <FadeIn>
               <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Pharmacy Billing Specialists</span>
-              <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6 leading-tight">Pharmacy Billing Built for Every Dispensing Model</h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">Pharmacy Billing Built for Every Dispensing Model</h1>
               <p className="text-xl text-cream mb-10">From NCPDP claim adjudication and PBM rejects to DIR fee reconciliation, 340B, and specialty prior authorizations — our pharmacy RCM team protects margin on every script.</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Pharmacy Assessment</Link>
@@ -190,7 +190,7 @@ export default function PharmacyBilling() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-5">How Aethera Handles Pharmacy Billing</h2>
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">How Aethera Handles Pharmacy Billing</h2>
               <p className="text-gray mb-5">Pharmacy reimbursement is a real-time, high-volume, low-margin business — and a single mis-adjudicated claim or unreconciled DIR fee can erase the profit on dozens of scripts. Our pharmacy RCM specialists understand NCPDP claim formats, PBM contract logic, and the downstream fees that determine your true net.</p>
               <p className="text-gray">When you partner with Aethera, you get a pharmacy-dedicated team that works your rejection queue, reconciles every remittance against expected reimbursement and DIR, manages specialty PAs end to end, and gives you script-level net-margin visibility — driving a 98.2% clean claim rate.</p>
             </FadeIn>
@@ -231,7 +231,7 @@ export default function PharmacyBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Independent Specialty Pharmacy</h2>
+            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Independent Specialty Pharmacy</h2>
             <p className="text-cream/80 mb-8">This specialty pharmacy was losing roughly $28,000/month to abandoned scripts from unresolved PA rejects and had never reconciled DIR fees against expected reimbursement. Net margin was invisible.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">{caseMetrics.map((m, i) => (<div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>))}</div>
             <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
@@ -248,7 +248,7 @@ export default function PharmacyBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to Protect Your Pharmacy Margin?</h2>
+              <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Protect Your Pharmacy Margin?</h2>
               <p className="text-cream max-w-xl mx-auto mb-8">Start with a free pharmacy billing assessment. We'll audit your reject patterns and DIR exposure and show you exactly where margin is leaking.</p>
               <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Pharmacy Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link>
             </FadeIn>

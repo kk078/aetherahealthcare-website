@@ -240,7 +240,7 @@ export default function FreeAssessmentClient() {
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">
               Free Live A/R Gap Analysis · Upload &amp; Analyze
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-5 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-5 leading-tight">
               Build Your A/R Analysis Report — Free
             </h1>
             <p className="text-xl text-cream max-w-3xl mx-auto">
@@ -425,7 +425,7 @@ export default function FreeAssessmentClient() {
 
               {/* live preview */}
               <div className="bg-navy rounded-2xl p-7 text-white shadow-sm">
-                <h3 className="text-lg font-bold font-playfair mb-4">Live Preview</h3>
+                <h3 className="text-lg font-bold font-jakarta mb-4">Live Preview</h3>
                 <div className="grid grid-cols-2 gap-3 mb-5">
                   <div className="bg-white/10 rounded-xl p-3.5"><p className="text-[11px] text-cream/70 mb-0.5">Total Outstanding A/R</p><p className="text-xl font-bold text-white">{fmt(r.total)}</p></div>
                   <div className="bg-white/10 rounded-xl p-3.5"><p className="text-[11px] text-cream/70 mb-0.5">At-Risk Revenue</p><p className="text-xl font-bold text-red-300">{fmt(r.risk)}</p></div>
@@ -486,7 +486,7 @@ export default function FreeAssessmentClient() {
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <p className="text-mint text-xs font-semibold tracking-wide uppercase mb-1">Aethera Healthcare Solutions</p>
-                    <h2 className="text-2xl md:text-3xl font-bold font-playfair leading-tight">A/R Gap Analysis Report</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold font-jakarta leading-tight">A/R Gap Analysis Report</h2>
                   </div>
                   <FileText className="h-9 w-9 text-mint flex-shrink-0" />
                 </div>

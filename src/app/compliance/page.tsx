@@ -112,7 +112,7 @@ export default function Compliance() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   Unwavering Commitment to Compliance
                 </h2>
                 <p className="text-gray mb-6">
@@ -236,7 +236,7 @@ export default function Compliance() {
               <div className="flex justify-center mb-6">
                 <Users className="h-12 w-12 text-white" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-6">
                 Questions About Our Compliance?
               </h2>
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">

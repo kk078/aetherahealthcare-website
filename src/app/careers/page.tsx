@@ -123,7 +123,7 @@ export default function Careers() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   Our Mission-Driven Culture
                 </h2>
                 <p className="text-gray mb-6">
@@ -214,7 +214,7 @@ export default function Careers() {
             <div>
               <FadeIn>
                 <div className="bg-cream rounded-2xl p-8 h-full">
-                  <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                  <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                     Our Culture
                   </h2>
                   <div className="space-y-6">
@@ -245,7 +245,7 @@ export default function Careers() {
             </div>
             <div>
               <FadeIn delay={0.2}>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   Professional Development
                 </h2>
                 <p className="text-gray mb-6">
@@ -347,7 +347,7 @@ export default function Careers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-16 px-8 text-center">
             <FadeIn>
-              <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-6">
                 Ready to Make a Difference?
               </h2>
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">

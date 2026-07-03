@@ -60,7 +60,7 @@ export default function DermatologyBilling() {
           <div className="max-w-3xl">
             <FadeIn>
               <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Dermatology Billing Specialists</span>
-              <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6 leading-tight">Dermatology Billing That Gets Mohs Right</h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">Dermatology Billing That Gets Mohs Right</h1>
               <p className="text-xl text-cream mb-10">Mohs staging codes, destruction specificity, biopsy bundling rules, cosmetic vs. reconstructive documentation — our dermatology billing team handles the nuance that drives a 31% average revenue increase on Mohs alone.</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Derm Assessment</Link>
@@ -92,7 +92,7 @@ export default function DermatologyBilling() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-5">How Aethera Handles Dermatology Billing</h2>
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">How Aethera Handles Dermatology Billing</h2>
               <p className="text-gray mb-5">Dermatology has a level of coding specificity that trips up generalist billing teams constantly. Mohs staging add-ons, lesion-type destruction codes, excision size thresholds — every element matters, and errors compound across hundreds of claims per month.</p>
               <p className="text-gray">Our dermatology billing team includes Mohs-specialist coders who review tissue maps, operative reports, and pathology documentation before each claim is submitted. Every dermatology client gets a payer-specific rules library maintained quarterly.</p>
             </FadeIn>
@@ -122,7 +122,7 @@ export default function DermatologyBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Dermatology Practice</h2>
+            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Dermatology Practice</h2>
             <p className="text-cream/80 mb-8">High Mohs volume with years of miscoding. Reconstructive cases written off for insufficient documentation. Denial rate at 18%.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[{ label: 'Denial Rate', before: '18%', after: '4.3%' }, { label: 'Mohs Revenue', before: 'Baseline', after: '+31%' }, { label: 'Reconstructive Claims', before: 'Written off', after: '+$9,800/mo' }, { label: 'AR Days', before: '39', after: '19' }].map((m, i) => (
@@ -146,7 +146,7 @@ export default function DermatologyBilling() {
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
-            <FadeIn><h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to Get Your Mohs Billing Right?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free dermatology billing assessment. We'll audit your Mohs coding, destruction specificity, and denial patterns.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Derm Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
+            <FadeIn><h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Get Your Mohs Billing Right?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free dermatology billing assessment. We'll audit your Mohs coding, destruction specificity, and denial patterns.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Derm Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
           </div>
         </div>
       </section>

@@ -53,7 +53,7 @@ export default function SecurityPractices() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-6">
                 Security Practices
               </h1>
             </FadeIn>
@@ -72,7 +72,7 @@ export default function SecurityPractices() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   Our Security Philosophy
                 </h2>
                 <p className="text-gray mb-6">
@@ -158,7 +158,7 @@ export default function SecurityPractices() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   Data Encryption
                 </h2>
                 <p className="text-gray mb-6">
@@ -241,7 +241,7 @@ export default function SecurityPractices() {
             <div>
               <FadeIn>
                 <div className="bg-white rounded-2xl p-8 h-full border border-gray/10">
-                  <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                  <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                     Access Controls
                   </h2>
                   <p className="text-gray mb-6">
@@ -330,7 +330,7 @@ export default function SecurityPractices() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   Network Security
                 </h2>
                 <p className="text-gray mb-6">
@@ -413,7 +413,7 @@ export default function SecurityPractices() {
             <div>
               <FadeIn>
                 <div className="bg-white rounded-2xl p-8 h-full border border-gray/10">
-                  <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                  <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                     Physical Security
                   </h2>
                   <p className="text-gray mb-6">
@@ -501,7 +501,7 @@ export default function SecurityPractices() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   Employee Security
                 </h2>
                 <p className="text-gray mb-6">
@@ -584,7 +584,7 @@ export default function SecurityPractices() {
             <div>
               <FadeIn>
                 <div className="bg-white rounded-2xl p-8 h-full border border-gray/10">
-                  <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                  <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                     Incident Response
                   </h2>
                   <p className="text-gray mb-6">
@@ -672,7 +672,7 @@ export default function SecurityPractices() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   Business Continuity
                 </h2>
                 <p className="text-gray mb-6">
@@ -785,7 +785,7 @@ export default function SecurityPractices() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   Vendor Management
                 </h2>
                 <p className="text-gray mb-6">
@@ -875,7 +875,7 @@ export default function SecurityPractices() {
               <div className="flex justify-center mb-6">
                 <Users className="h-12 w-12 text-white" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-6">
                 Responsible Disclosure
               </h2>
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">

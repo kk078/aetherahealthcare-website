@@ -53,7 +53,7 @@ export default function OutsourcedVsInHouse() {
       <section className="pt-24 pb-12 md:pt-28 md:pb-14 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-4">Outsourced vs. In-House Medical Billing</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-4">Outsourced vs. In-House Medical Billing</h1>
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-xl text-cream max-w-3xl">

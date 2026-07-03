@@ -122,7 +122,7 @@ export default function ClaimsBilling() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-6">
                 Claims & Billing Services
               </h1>
             </FadeIn>
@@ -141,7 +141,7 @@ export default function ClaimsBilling() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
+                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
                   Streamlined Claims Processing for Faster Payments
                 </h2>
                 <p className="text-gray mb-6">
@@ -307,7 +307,7 @@ export default function ClaimsBilling() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-16 px-8 text-center">
             <FadeIn>
-              <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-6">
                 Ready to Accelerate Your Claims Process?
               </h2>
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">

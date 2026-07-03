@@ -122,7 +122,7 @@ export default function Integrations() {
               <FadeIn key={i} delay={i * 0.15}>
                 <div className="bg-white rounded-xl p-6 border border-gray/10 h-full">
                   <div className="text-teal mb-3">{s.icon}</div>
-                  <div className="text-3xl font-bold text-teal/20 font-playfair mb-2">{s.step}</div>
+                  <div className="text-3xl font-bold text-teal/20 font-jakarta mb-2">{s.step}</div>
                   <h3 className="font-bold text-navy mb-2">{s.title}</h3>
                   <p className="text-gray text-sm">{s.desc}</p>
                 </div>
@@ -139,7 +139,7 @@ export default function Integrations() {
             <FadeIn>
               <div className="flex items-center mb-4">
                 <Shield className="h-7 w-7 text-teal mr-3" />
-                <h2 className="text-3xl font-bold text-navy font-playfair">Data Security Throughout</h2>
+                <h2 className="text-3xl font-bold text-navy font-jakarta">Data Security Throughout</h2>
               </div>
               <p className="text-gray mb-6">Every data transfer between your EHR and Aethera's systems is fully HIPAA-compliant, encrypted end-to-end, and logged for audit purposes.</p>
               <div className="space-y-3">
@@ -160,7 +160,7 @@ export default function Integrations() {
             </FadeIn>
             <FadeIn delay={0.2}>
               <div className="bg-cream rounded-2xl p-8 border border-gray/10">
-                <h3 className="text-xl font-bold text-navy font-playfair mb-4">Don't See Your System?</h3>
+                <h3 className="text-xl font-bold text-navy font-jakarta mb-4">Don't See Your System?</h3>
                 <p className="text-gray mb-5 text-sm">
                   We support custom integrations via HL7 2.x, HL7 FHIR, CCD, CSV upload, and secure file transfer. If you use it, we can almost certainly connect to it. Contact us for a custom integration assessment.
                 </p>
@@ -178,7 +178,7 @@ export default function Integrations() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-16 px-8 text-center">
             <FadeIn>
-              <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-4">
                 Start Your Integration Assessment Today
               </h2>
               <p className="text-cream text-lg max-w-xl mx-auto mb-8">

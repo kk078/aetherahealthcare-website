@@ -40,7 +40,7 @@ export default function DenialCodeLookupPage() {
             <ArrowLeft className="h-4 w-4 mr-1.5" /> All tools
           </Link>
           <FadeIn>
-            <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-4">Denial Code Lookup</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-4">Denial Code Lookup</h1>
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-xl text-cream max-w-3xl">

@@ -83,7 +83,7 @@ export default async function SpecialtyLocationPage({ params }: { params: Params
             <MapPin className="h-4 w-4 mr-1.5" /> {l.city}, FL · {l.region}
           </p>
           <FadeIn>
-            <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-4">{title}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-4">{title}</h1>
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-xl text-cream max-w-3xl">{s.blurb}</p>

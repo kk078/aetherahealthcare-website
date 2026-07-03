@@ -60,7 +60,7 @@ export default function OrthopedicBilling() {
           <div className="max-w-3xl">
             <FadeIn>
               <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Orthopedic Billing Specialists</span>
-              <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">
                 Orthopedic Billing That Captures Every Dollar
               </h1>
               <p className="text-xl text-cream mb-10">
@@ -98,7 +98,7 @@ export default function OrthopedicBilling() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-navy font-playfair mb-5">How Aethera Handles Orthopedic Billing</h2>
+              <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">How Aethera Handles Orthopedic Billing</h2>
               <p className="text-gray mb-5">Orthopedic billing has more revenue leakage points than almost any other surgical specialty — missed implant charges, global period violations, and multiple procedure reduction errors compound quickly across a high-volume practice. Our orthopedic billing team is built to close every one of those gaps.</p>
               <p className="text-gray">Every orthopedic client receives a dedicated account team with deep surgical coding experience, a global period tracking system integrated with their PM, and an implant reconciliation process that runs before every claim submission.</p>
             </FadeIn>
@@ -130,7 +130,7 @@ export default function OrthopedicBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Orthopedic Practice</h2>
+            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Orthopedic Practice</h2>
             <p className="text-cream/80 mb-8">High implant volume with inconsistent cost capture and global period violations causing payer audits. AR had reached 52 days and two audit letters arrived in 18 months.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[{ label: 'Implant Revenue', before: 'Missed', after: '+$124K/yr' }, { label: 'AR Days', before: '52', after: '28' }, { label: 'Payer Audits', before: '2/yr', after: '0' }, { label: 'Global Violations', before: 'Frequent', after: 'Eliminated' }].map((m, i) => (
@@ -154,7 +154,7 @@ export default function OrthopedicBilling() {
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
-            <FadeIn><h2 className="text-3xl font-bold text-white font-playfair mb-4">Ready to Capture Every Orthopedic Dollar?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free orthopedic billing assessment. We'll identify your implant gaps, global period risks, and denial patterns.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Orthopedic Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
+            <FadeIn><h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Capture Every Orthopedic Dollar?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free orthopedic billing assessment. We'll identify your implant gaps, global period risks, and denial patterns.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Orthopedic Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
           </div>
         </div>
       </section>

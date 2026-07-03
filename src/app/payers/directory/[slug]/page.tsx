@@ -59,7 +59,7 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
           <Link href="/payers/directory" className="inline-flex items-center text-cream/80 hover:text-white text-sm mb-4">
             <ArrowLeft className="h-4 w-4 mr-1" /> Back to Payer Directory
           </Link>
-          <h1 className="text-3xl md:text-4xl font-bold text-white font-playfair">{p.name}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-white font-jakarta">{p.name}</h1>
           <span className="inline-block mt-3 text-xs font-semibold uppercase tracking-wide text-navy bg-mint rounded px-2.5 py-1">{p.type}</span>
           {p.aka && p.aka.length > 0 && (
             <p className="text-cream/90 text-sm mt-3">Also covers: {p.aka.join(', ')}</p>
