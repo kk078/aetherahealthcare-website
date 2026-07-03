@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   title: 'Provider Portal | Real-Time Billing Dashboard | Aethera Healthcare',
@@ -62,31 +63,14 @@ export default function Portal() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeIn>
-            <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6">
-              Your Revenue, In Real Time
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <p className="text-xl text-cream max-w-3xl mx-auto mb-10">
-              The Aethera Provider Portal gives you 24/7 visibility into every claim, payment, and performance metric — from any device, at any time.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.4}>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300">
-                Request Portal Demo
-              </Link>
-              <Link prefetch={false} href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300">
-                Schedule Consultation
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="Provider Portal"
+        title="Your revenue, in real time"
+        subtitle="The Aethera Provider Portal gives you 24/7 visibility into every claim, payment, and performance metric — from any device, at any time."
+        primary={{ href: '/free-assessment', label: 'Request Portal Demo' }}
+        secondary={{ href: '/contact', label: 'Schedule Consultation' }}
+        chips={['Live claims', 'Denial queue', 'A/R aging']}
+      />
 
       {/* Features */}
       <section className="py-16 md:py-24 bg-cream">

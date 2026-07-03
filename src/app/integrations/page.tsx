@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import EhrLogo from '@/components/ui/EhrLogo';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   title: { absolute: 'EHR & Practice Management Integrations | Aethera Healthcare Solutions' },
@@ -53,28 +54,14 @@ export default function Integrations() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeIn>
-            <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6">
-              We Work With Your EHR
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <p className="text-xl text-cream max-w-3xl mx-auto mb-10">
-              No rip-and-replace. No workflow disruption. Aethera integrates directly with your existing EHR and practice management system so your staff keeps working exactly as they do today.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.4}>
-            <div className="flex flex-wrap justify-center gap-4">
-              {['50+ EHR Systems', 'Setup in 1–4 Weeks', 'Zero Workflow Disruption', 'HIPAA-Compliant Transfer'].map((b, i) => (
-                <span key={i} className="bg-white/15 border border-white/30 text-white px-5 py-2 rounded-full text-sm font-medium">✓ {b}</span>
-              ))}
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="EHR Integrations"
+        title="We work with your EHR"
+        subtitle="No rip-and-replace. No workflow disruption. Aethera integrates directly with your existing EHR and practice management system so your staff keeps working exactly as they do today."
+        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        secondary={{ href: '/contact', label: 'Talk to an Expert' }}
+        chips={['50+ EHR systems', 'Setup in 1–4 weeks', 'Zero disruption']}
+      />
 
       {/* Featured EHRs */}
       <section className="py-16 md:py-24 bg-cream">

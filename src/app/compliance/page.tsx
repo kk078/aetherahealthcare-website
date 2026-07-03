@@ -5,6 +5,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   title: "Compliance | HIPAA, Security & Privacy | Aethera Healthcare",
@@ -97,22 +98,13 @@ export default function Compliance() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
-                Our Commitment to Compliance
-              </h1>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p className="text-xl text-cream max-w-3xl mx-auto">
-                Comprehensive compliance program ensuring the highest standards of data protection and regulatory adherence.
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="Compliance & Security"
+        title="Our commitment to compliance"
+        subtitle="A comprehensive compliance program ensuring the highest standards of data protection and regulatory adherence."
+        primary={{ href: '/contact', label: 'Talk to Us' }}
+        chips={['HIPAA-compliant', 'BAAs available', 'Regular audits']}
+      />
 
       {/* Introduction */}
       <section className="py-16 md:py-24 bg-white">

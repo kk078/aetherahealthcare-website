@@ -18,6 +18,7 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import ServiceCard from '@/components/ui/ServiceCard';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   title: "RCM Services | Medical Billing, Coding, Denial Management",
@@ -142,23 +143,14 @@ export default function Services() {
       </Head>
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
-                Our Medical Billing Services
-              </h1>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p className="text-xl text-cream max-w-3xl mx-auto">
-                Comprehensive revenue cycle management tailored to your specialty and practice needs.
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="RCM Services"
+        title="Comprehensive medical billing services"
+        subtitle="Revenue cycle management tailored to your specialty and practice — coding, claims, denials, and collections, engineered for financial precision."
+        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        secondary={{ href: '/contact', label: 'Talk to an Expert' }}
+        chips={['12 RCM services', '26+ specialties', '900+ payers']}
+      />
 
       {/* Services Overview */}
       <section className="py-16 md:py-24 bg-cream">

@@ -22,15 +22,20 @@ const company = [
   { name: 'Pricing', href: '/pricing' },
   { name: 'Process', href: '/process' },
   { name: 'Specialties', href: '/specialties' },
+  { name: 'Billing by Location', href: '/medical-billing' },
+  { name: 'Compare Options', href: '/compare' },
   { name: 'Careers', href: '/careers' },
   { name: 'Blog', href: '/blog' },
   { name: 'FAQ', href: '/faq' },
 ];
 
 const resources = [
+  { name: 'Free AR Tools', href: '/tools' },
+  { name: 'Denial Code Lookup', href: '/tools/denial-code-lookup' },
+  { name: 'State of Denials Report', href: '/state-of-denials' },
+  { name: 'Payer Directory', href: '/payers/directory' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Provider Portal', href: '/portal' },
-  { name: 'Payer Network', href: '/payers' },
   { name: 'EHR Integrations', href: '/integrations' },
   { name: 'Free Assessment', href: '/free-assessment' },
 ];

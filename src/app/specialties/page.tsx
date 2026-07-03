@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import SpecialtyBadge from '@/components/ui/SpecialtyBadge';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 const specialties = [
   {
@@ -181,23 +182,14 @@ export default function Specialties() {
       </Head>
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
-                Specialties We Serve
-              </h1>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p className="text-xl text-cream max-w-3xl mx-auto">
-                Expert billing and revenue cycle management for over 25 medical specialties with deep specialty-specific knowledge.
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="Specialties"
+        title="Billing built for your specialty"
+        subtitle="Expert billing and revenue cycle management across 26+ medical specialties — with coding depth and payer knowledge specific to your field."
+        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        secondary={{ href: '/services', label: 'View Services' }}
+        chips={['26+ specialties', 'Specialty-specific coding', '900+ payers']}
+      />
 
       {/* Introduction */}
       <section className="py-16 md:py-24 bg-white">

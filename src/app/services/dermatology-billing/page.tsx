@@ -122,14 +122,13 @@ export default function DermatologyBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">2-Provider Dermatology Practice, Florida</h2>
+            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Dermatology Practice</h2>
             <p className="text-cream/80 mb-8">High Mohs volume with years of miscoding. Reconstructive cases written off for insufficient documentation. Denial rate at 18%.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[{ label: 'Denial Rate', before: '18%', after: '4.3%' }, { label: 'Mohs Revenue', before: 'Baseline', after: '+31%' }, { label: 'Reconstructive Claims', before: 'Written off', after: '+$9,800/mo' }, { label: 'AR Days', before: '39', after: '19' }].map((m, i) => (
                 <div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>
               ))}
             </div>
-            <blockquote className="border-l-4 border-mint pl-5"><p className="text-cream italic">"We'd been coding Mohs the same way for seven years and nobody told us it was wrong. Aethera fixed it in 30 days and we haven't had a Mohs denial since."</p></blockquote>
             <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
           </FadeIn>
         </div>

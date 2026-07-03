@@ -7,6 +7,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import PricingCard from '@/components/ui/PricingCard';
 import ROICalculator from '@/components/ui/ROICalculator';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   title: "Pricing | Transparent Medical Billing Rates | Aethera Healthcare",
@@ -198,23 +199,14 @@ export default function Pricing() {
       </Head>
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
-                Simple, Transparent Pricing
-              </h1>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p className="text-xl text-cream max-w-3xl mx-auto">
-                No hidden fees. No setup charges. No long-term contracts. Choose the pricing model that works best for your practice.
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="Pricing"
+        title="Simple, transparent pricing"
+        subtitle="No hidden fees. No setup charges. No long-term contracts. Choose the pricing model that works best for your practice."
+        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        secondary={{ href: '/contact', label: 'Talk to an Expert' }}
+        chips={['No setup fees', 'No long-term contracts', 'Performance in writing']}
+      />
 
       {/* Pricing Cards */}
       <section className="py-16 md:py-24 bg-cream">

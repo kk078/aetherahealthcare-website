@@ -3,6 +3,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   title: { absolute: "About Aethera Healthcare Solutions | Our Story & Mission" },
@@ -28,63 +29,6 @@ const values = [
   },
 ];
 
-const teamMembers = [
-  {
-    name: 'Marcus Webb',
-    title: 'Founder & CEO',
-    credentials: 'MBA, CHBME',
-    initials: 'MW',
-    color: 'bg-teal',
-    bio: 'Marcus brings 15+ years of healthcare revenue cycle leadership, having managed billing operations for multi-specialty groups across Florida and Georgia. He founded Aethera to bring enterprise-grade RCM to independent practices.',
-    specialties: ['Revenue Cycle Strategy', 'Payer Contracting', 'Practice Growth'],
-  },
-  {
-    name: 'Dr. Priya Nair',
-    title: 'Head of Clinical Operations',
-    credentials: 'MD, CPC',
-    initials: 'PN',
-    color: 'bg-navy',
-    bio: 'A former hospitalist turned billing operations expert, Dr. Nair leads clinical documentation integrity and coding accuracy programs. Her dual perspective as clinician and coder has helped clients recover an average of 23% in previously undercaptured revenue.',
-    specialties: ['Clinical Documentation', 'Specialty Coding', 'Compliance Auditing'],
-  },
-  {
-    name: 'Jordan Cole',
-    title: 'Director of Billing Operations',
-    credentials: 'CPC, CPMA',
-    initials: 'JC',
-    color: 'bg-mint',
-    bio: 'Jordan oversees day-to-day claim submission, denial management, and AR workflows for all client accounts. With a background in cardiology and orthopedics billing, Jordan has reduced average AR days below 28 across the client portfolio.',
-    specialties: ['Denial Management', 'AR Optimization', 'Payer Relations'],
-  },
-  {
-    name: 'Sandra Liu',
-    title: 'Client Success Manager',
-    credentials: 'CMRS, RHIT',
-    initials: 'SL',
-    color: 'bg-teal',
-    bio: 'Sandra is the primary point of contact for all Aethera clients, ensuring every practice gets the personalized attention it deserves. She specializes in onboarding, EHR integration coordination, and monthly performance reviews.',
-    specialties: ['Client Onboarding', 'EHR Integration', 'Performance Reporting'],
-  },
-  {
-    name: 'Ahmed Hassan',
-    title: 'Lead Medical Coder',
-    credentials: 'CPC, CCS, CEMC',
-    initials: 'AH',
-    color: 'bg-navy',
-    bio: "Ahmed leads Aethera's coding team with expertise spanning surgery, evaluation & management, and behavioral health. His rigorous review process maintains a 99.2% coding accuracy rate across all client specialties.",
-    specialties: ['Surgical Coding', 'E&M Coding', 'Behavioral Health'],
-  },
-  {
-    name: 'Rachel Torres',
-    title: 'Credentialing Specialist',
-    credentials: 'CPCS, NAMSS Member',
-    initials: 'RT',
-    color: 'bg-mint',
-    bio: 'Rachel manages provider enrollment and credentialing across 900+ payer contracts. Her streamlined process gets new providers credentialed an average of 40% faster than industry standard, minimizing revenue gaps during onboarding.',
-    specialties: ['Provider Enrollment', 'Payer Credentialing', 'CAQH Management'],
-  },
-];
-
 const stats = [
   { value: '2025', label: 'Year Founded' },
   { value: '12+', label: 'Services Offered' },
@@ -94,8 +38,8 @@ const stats = [
 
 const reasons = [
   'Personalized attention — we partner with a select number of practices so every client gets the focus they deserve',
-  'Proven track record of improving collections',
-  'Dedicated account managers who understand your practice',
+  'Specialty-specific billing expertise across 26+ specialties',
+  'A dedicated point of contact who understands your practice',
   'Advanced technology with real-time reporting',
   'Comprehensive compliance and security program',
   'Transparent pricing with no hidden fees',
@@ -159,23 +103,14 @@ export default function About() {
       </Head>
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
-                About Aethera Healthcare Solutions
-              </h1>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p className="text-xl text-cream max-w-3xl mx-auto">
-                We're on a mission to help healthcare providers focus on patient care while we handle the complexities of medical billing.
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="About Aethera"
+        title="Focused on your revenue, so you can focus on patients"
+        subtitle="We help healthcare providers concentrate on patient care while we handle the complexities of medical billing — with accuracy, transparency, and accountability."
+        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        secondary={{ href: '/contact', label: 'Contact Us' }}
+        chips={['Accuracy', 'Transparency', 'Partnership']}
+      />
 
       {/* Company Story */}
       <section className="py-16 md:py-24 bg-white">
@@ -193,7 +128,7 @@ export default function About() {
                   Our founding team brings years of experience in medical billing, coding, and healthcare operations. We saw firsthand how small and mid-sized practices were being underserved by large billing companies that treated them as afterthoughts — slow response times, generic support, and a revolving door of account managers who didn't understand their specialty.
                 </p>
                 <p className="text-gray">
-                  We built Aethera to be different. We partner with a select number of providers, giving each one a dedicated team that knows their specialty, their payers, and their practice inside and out. We're small enough to give you personal attention, but experienced enough to deliver enterprise-level results.
+                  We built Aethera to be different. We&apos;re built to partner with a select number of providers, giving each one focused attention from people who take the time to learn their specialty, their payers, and their practice. We&apos;re small by design — close enough to give you genuine personal attention, with the rigor to deliver results.
                 </p>
               </FadeIn>
             </div>
@@ -248,44 +183,6 @@ export default function About() {
                 <div className="text-center">
                   <p className="text-4xl font-bold text-teal mb-2">{stat.value}</p>
                   <p className="text-gray">{stat.label}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Real Team Bios */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="MEET THE TEAM"
-            title="The People Behind Your Revenue"
-            description="Certified billers, coders, and clinicians who know your specialty, understand your payers, and are accountable for your results."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-            {teamMembers.map((member, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <div className="bg-white rounded-2xl shadow-md p-6 border border-gray/10 h-full flex flex-col">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className={`${member.color} w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0`}>
-                      <span className="text-white font-bold text-lg">{member.initials}</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-navy leading-tight">{member.name}</h3>
-                      <p className="text-teal text-sm font-semibold">{member.title}</p>
-                      <p className="text-gray text-xs mt-0.5">{member.credentials}</p>
-                    </div>
-                  </div>
-                  <p className="text-gray text-sm leading-relaxed flex-grow">{member.bio}</p>
-                  <div className="mt-4 pt-4 border-t border-gray/10 flex flex-wrap gap-2">
-                    {member.specialties.map((s, i) => (
-                      <span key={i} className="bg-cream text-navy text-xs font-medium px-2 py-1 rounded-full border border-gray/10">
-                        {s}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </FadeIn>
             ))}

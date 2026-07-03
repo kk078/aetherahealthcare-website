@@ -7,6 +7,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 const steps = [
   {
@@ -127,22 +128,13 @@ export default function Process() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
-                Our Onboarding Process
-              </h1>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p className="text-xl text-cream max-w-3xl mx-auto">
-                A seamless 6-week process designed to minimize disruption and maximize your revenue from day one.
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="Onboarding"
+        title="Our onboarding process"
+        subtitle="A seamless process designed to minimize disruption and maximize your revenue from day one — most practices are live in 30–45 days."
+        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        chips={['30–45 day go-live', 'Zero disruption', 'Dedicated team']}
+      />
 
       {/* Introduction */}
       <section className="py-16 md:py-24 bg-white">

@@ -231,10 +231,9 @@ export default function DentalBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">3-Location Group Dental Practice, Florida</h2>
+            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Group Dental Practice</h2>
             <p className="text-cream/80 mb-8">This group was billing CDT only — never cross-coding oral surgery, implants, or sleep appliances to medical — and carried $190,000 in insurance A/R over 90 days from missing attachments and predeterminations.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">{caseMetrics.map((m, i) => (<div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>))}</div>
-            <blockquote className="border-l-4 border-mint pl-5"><p className="text-cream italic">“We were leaving medical reimbursement on the table for years. Aethera's cross-coding alone paid for the engagement in the first quarter.”</p></blockquote>
             <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
           </FadeIn>
         </div>

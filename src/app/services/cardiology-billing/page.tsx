@@ -217,7 +217,7 @@ export default function CardiologyBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">4-Provider Cardiology Group, Central Florida</h2>
+            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Cardiology Group</h2>
             <p className="text-cream/80 mb-8">This group came to Aethera with a 14.2% denial rate — almost entirely from cardiac cath modifier errors and stress test bundling issues. AR had reached 47 days and $40,000/month was being written off without appeal.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[
@@ -233,9 +233,6 @@ export default function CardiologyBilling() {
                 </div>
               ))}
             </div>
-            <blockquote className="border-l-4 border-mint pl-5">
-              <p className="text-cream italic">"We were writing off $40,000 a month in denials we assumed were uncollectable. Aethera recovered most of it in the first 60 days."</p>
-            </blockquote>
             <div className="mt-6">
               <Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">
                 Read all case studies <ArrowRight className="h-4 w-4 ml-1" />

@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, type FormEvent } from 'react';
 import Link from 'next/link';
-import { TrendingUp, DollarSign, Calculator, ArrowRight } from 'lucide-react';
+import { TrendingUp, DollarSign, Calculator, ArrowRight, Mail, CheckCircle2 } from 'lucide-react';
+import { submitToWorker } from '@/lib/worker';
 
 const specialtyDefaults: Record<string, { avgClaim: number; volume: number; denialRate: number; cleanRate: number }> = {
   'Family Medicine': { avgClaim: 165, volume: 420, denialRate: 11, cleanRate: 84 },
@@ -33,6 +34,8 @@ export default function ROICalculator() {
   const [avgClaim, setAvgClaim] = useState(165);
   const [denialRate, setDenialRate] = useState(11);
   const [cleanRate, setCleanRate] = useState(84);
+  const [email, setEmail] = useState('');
+  const [leadStatus, setLeadStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
 
   function handleSpecialtyChange(s: string) {
     setSpecialty(s);
@@ -53,6 +56,22 @@ export default function ROICalculator() {
     const roi = aetheraFee > 0 ? ((netAnnualGain / (aetheraFee * 12)) * 100) : 0;
     return { currentMonthly, projectedMonthly, monthlyGain, annualGain, aetheraFee, netAnnualGain, roi };
   }, [volume, avgClaim, denialRate, cleanRate]);
+
+  async function handleLeadCapture(e: FormEvent) {
+    e.preventDefault();
+    if (!email || leadStatus === 'sending') return;
+    setLeadStatus('sending');
+    await submitToWorker('calculator_lead', {
+      email,
+      specialty,
+      claimVolume: String(volume),
+      message:
+        `Revenue calculator lead — ${specialty}, ${fmtNum(volume)} claims/mo at ${fmt(avgClaim)} avg, ` +
+        `denial ${denialRate}%, clean ${cleanRate}%. Est. net annual gain ${fmt(results.netAnnualGain)} ` +
+        `(ROI ${Math.round(results.roi)}%). Requested full projection + denial-leakage breakdown.`,
+    });
+    setLeadStatus('sent');
+  }
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -169,8 +188,39 @@ export default function ROICalculator() {
           </div>
 
           <p className="text-xs text-gray/60 leading-relaxed">
-            Projections based on Aethera's target benchmarks: 96% net collection rate, 97.5% clean claim rate. Actual results vary by practice.
+            Projections based on Aethera&apos;s target benchmarks: 96% net collection rate, 97.5% clean claim rate. Actual results vary by practice.
           </p>
+
+          {/* Lead capture — turn the projection into a captured lead */}
+          {results.netAnnualGain > 0 && (
+            leadStatus === 'sent' ? (
+              <div className="bg-mint/20 border border-mint/40 rounded-xl p-4 flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-mint shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-mint font-semibold text-sm">On its way.</p>
+                  <p className="text-xs text-gray">We&apos;ll email your full projection and a free denial-leakage breakdown within 1 business day.</p>
+                </div>
+              </div>
+            ) : (
+              <form onSubmit={handleLeadCapture} className="bg-white/5 border border-white/10 rounded-xl p-4 space-y-2">
+                <p className="text-sm text-white font-semibold flex items-center"><Mail className="h-4 w-4 mr-2 text-mint" />Get this in writing</p>
+                <p className="text-xs text-gray">Your full projection + a free denial-leakage breakdown for your practice.</p>
+                <div className="flex flex-col sm:flex-row gap-2 pt-1">
+                  <input
+                    type="email" required value={email} onChange={e => setEmail(e.target.value)}
+                    placeholder="you@practice.com" aria-label="Work email"
+                    className="flex-1 rounded-lg px-4 py-2.5 text-navy bg-white text-sm focus:outline-none focus:ring-2 focus:ring-mint"
+                  />
+                  <button
+                    type="submit" disabled={leadStatus === 'sending'}
+                    className="bg-mint hover:bg-white text-navy font-bold px-5 py-2.5 rounded-lg text-sm transition-colors disabled:opacity-60 whitespace-nowrap"
+                  >
+                    {leadStatus === 'sending' ? 'Sending…' : 'Email my projection'}
+                  </button>
+                </div>
+              </form>
+            )
+          )}
 
           {results.netAnnualGain > 0 && (
             <Link prefetch={false}

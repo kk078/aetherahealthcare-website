@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans } from "next/font/google";
+import { Playfair_Display, DM_Sans, Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -15,7 +15,21 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "700"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://aetherahealthcare-website.pages.dev";
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://aetherahealthcare.com";
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +60,8 @@ export const metadata: Metadata = {
 import CookieConsent from '@/components/ui/CookieConsent';
 import BackToTop from '@/components/ui/BackToTop';
 import CallbackButton from '@/components/ui/CallbackButton';
+import ExitIntentCTA from '@/components/ui/ExitIntentCTA';
+import AIAssistant from '@/components/ui/AIAssistant';
 
 export default function RootLayout({
   children,
@@ -55,13 +71,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${playfair.variable} ${dmSans.variable} ${jakarta.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-dark">
         {children}
         <CookieConsent />
         <BackToTop />
         <CallbackButton />
+        <ExitIntentCTA />
+        <AIAssistant />
       </body>
     </html>
   );

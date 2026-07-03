@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   title: 'Payer Services | Health Plan Operations & Payment Integrity | Aethera Healthcare',
@@ -70,33 +71,14 @@ export default function PayerServices() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-mint/10 to-transparent"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <FadeIn>
-              <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">
-                New Line of Business
-              </span>
-              <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6 leading-tight">
-                Payer Services for Modern Health Plans
-              </h1>
-              <p className="text-xl text-cream mb-10">
-                Aethera now serves the other side of the claim. We help health plans, TPAs, and risk-bearing entities run accurate, compliant, member-friendly operations — from claims adjudication and payment integrity to credentialing, provider data, prior authorization, and appeals.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link prefetch={false} href="/contact" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">
-                  Talk to Our Payer Team
-                </Link>
-                <Link prefetch={false} href="/free-assessment" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">
-                  Request a Capabilities Briefing
-                </Link>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="New Line of Business"
+        title="Payer services for modern health plans"
+        subtitle="Aethera serves the other side of the claim — helping health plans, TPAs, and risk-bearing entities run accurate, compliant operations across claims adjudication, payment integrity, credentialing, provider data, prior authorization, and appeals."
+        primary={{ href: '/contact', label: 'Talk to Our Payer Team' }}
+        secondary={{ href: '/free-assessment', label: 'Request a Briefing' }}
+        chips={['Claims adjudication', 'Payment integrity', 'Credentialing / CVO']}
+      />
 
       {/* Stats */}
       <section className="py-10 bg-white border-b border-gray/10">

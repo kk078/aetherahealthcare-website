@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import {
   CheckCircle,
   DollarSign,
@@ -12,551 +13,351 @@ import {
   Users,
   Calendar,
   BarChart3,
-  Headphones,
-  Zap
+  Zap,
+  ShieldCheck,
+  Activity,
+  Network,
+  ArrowRight,
+  AlertTriangle,
 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
-import SectionHeader from '@/components/ui/SectionHeader';
 import ServiceCard from '@/components/ui/ServiceCard';
 import CTABanner from '@/components/ui/CTABanner';
 import ROICalculator from '@/components/ui/ROICalculator';
 
-const socialProofStats = [
-  { value: '500+', label: 'Practices Served', icon: Users },
-  { value: '$12M+', label: 'Revenue Recovered', icon: DollarSign },
-  { value: '95%', label: 'Clean Claim Rate', icon: CheckCircle },
-  { value: '<30 Days', label: 'Average AR', icon: Clock },
-];
+// Client-only animated illustration of the medical-billing revenue cycle
+// (coding → scrub → submit → denial → appeal → paid). Lightweight SVG/CSS,
+// kept off SSR so the static export stays clean.
+const RCMBillingFlow = dynamic(() => import('@/components/ui/RCMBillingFlow'), {
+  ssr: false,
+  loading: () => null,
+});
 
 const services = [
-  {
-    icon: <FileText className="h-8 w-8" />,
-    title: 'Medical Coding',
-    description: 'Accurate ICD-10, CPT, and HCPCS coding for maximum reimbursement.',
-    href: '/services/medical-coding',
-  },
-  {
-    icon: <DollarSign className="h-8 w-8" />,
-    title: 'Claims & Billing',
-    description: 'End-to-end claim submission and billing management.',
-    href: '/services/claims-billing',
-  },
-  {
-    icon: <CreditCard className="h-8 w-8" />,
-    title: 'Payment Posting',
-    description: 'Efficient payment application and reconciliation.',
-    href: '/services/payment-posting',
-  },
-  {
-    icon: <Shield className="h-8 w-8" />,
-    title: 'Denial Management',
-    description: 'Proactive denial prevention and appeal services.',
-    href: '/services/denial-management',
-  },
-  {
-    icon: <Users className="h-8 w-8" />,
-    title: 'Provider Credentialing',
-    description: 'Complete credentialing and enrollment services.',
-    href: '/services/credentialing',
-  },
-  {
-    icon: <CheckCircle className="h-8 w-8" />,
-    title: 'Eligibility Verification',
-    description: 'Real-time insurance verification and benefits.',
-    href: '/services/eligibility-verification',
-  },
-  {
-    icon: <Calendar className="h-8 w-8" />,
-    title: 'Prior Authorization',
-    description: 'Streamlined prior auth submission and tracking.',
-    href: '/services/prior-authorization',
-  },
-  {
-    icon: <CreditCard className="h-8 w-8" />,
-    title: 'Patient Collections',
-    description: 'Professional patient statement management.',
-    href: '/services/patient-collections',
-  },
-  {
-    icon: <Shield className="h-8 w-8" />,
-    title: 'Compliance & Auditing',
-    description: 'HIPAA compliance and revenue cycle audits.',
-    href: '/services/compliance-auditing',
-  },
-  {
-    icon: <Zap className="h-8 w-8" />,
-    title: 'Telehealth Billing',
-    description: 'Specialized billing for telehealth services.',
-    href: '/services/telehealth-billing',
-  },
-  {
-    icon: <Clock className="h-8 w-8" />,
-    title: 'AR Follow-Up',
-    description: 'Dedicated accounts receivable management.',
-    href: '/services/ar-followup',
-  },
-  {
-    icon: <BarChart3 className="h-8 w-8" />,
-    title: 'Reporting & Analytics',
-    description: 'Comprehensive financial and operational reporting.',
-    href: '/services/reporting-analytics',
-  },
+  { icon: <FileText className="h-8 w-8" />, title: 'Medical Coding', description: 'Accurate ICD-10, CPT, and HCPCS coding for maximum reimbursement.', href: '/services/medical-coding' },
+  { icon: <DollarSign className="h-8 w-8" />, title: 'Claims & Billing', description: 'End-to-end claim submission and billing management.', href: '/services/claims-billing' },
+  { icon: <CreditCard className="h-8 w-8" />, title: 'Payment Posting', description: 'Efficient payment application and reconciliation.', href: '/services/payment-posting' },
+  { icon: <Shield className="h-8 w-8" />, title: 'Denial Management', description: 'Proactive denial prevention and appeal services.', href: '/services/denial-management' },
+  { icon: <Users className="h-8 w-8" />, title: 'Provider Credentialing', description: 'Complete credentialing and enrollment services.', href: '/services/credentialing' },
+  { icon: <CheckCircle className="h-8 w-8" />, title: 'Eligibility Verification', description: 'Real-time insurance verification and benefits.', href: '/services/eligibility-verification' },
+  { icon: <Calendar className="h-8 w-8" />, title: 'Prior Authorization', description: 'Streamlined prior auth submission and tracking.', href: '/services/prior-authorization' },
+  { icon: <CreditCard className="h-8 w-8" />, title: 'Patient Collections', description: 'Professional patient statement management.', href: '/services/patient-collections' },
+  { icon: <Shield className="h-8 w-8" />, title: 'Compliance & Auditing', description: 'HIPAA compliance and revenue cycle audits.', href: '/services/compliance-auditing' },
+  { icon: <Zap className="h-8 w-8" />, title: 'Telehealth Billing', description: 'Specialized billing for telehealth services.', href: '/services/telehealth-billing' },
+  { icon: <Clock className="h-8 w-8" />, title: 'AR Follow-Up', description: 'Dedicated accounts receivable management.', href: '/services/ar-followup' },
+  { icon: <BarChart3 className="h-8 w-8" />, title: 'Reporting & Analytics', description: 'Comprehensive financial and operational reporting.', href: '/services/reporting-analytics' },
 ];
 
 const specialties = [
-  'Primary Care',
-  'Cardiology',
-  'Dermatology',
-  'Endocrinology',
-  'Gastroenterology',
-  'Neurology',
-  'Orthopedics',
-  'Pediatrics',
-  'Psychiatry',
-  'Surgery',
-  'Urology',
-  'Other',
+  'Primary Care', 'Cardiology', 'Dermatology', 'Endocrinology', 'Gastroenterology', 'Neurology',
+  'Orthopedics', 'Pediatrics', 'Psychiatry', 'Surgery', 'Urology', 'Other',
 ];
 
-const testimonials = [
+const targets = [
   {
-    quote: 'Aethera increased our collections by 18% in the first quarter. Their team is responsive, knowledgeable, and truly partners with us to optimize our revenue cycle.',
-    author: 'Dr. Sarah Johnson',
-    role: 'Practice Owner',
-    specialty: 'Family Medicine',
+    value: '95%+', label: 'Clean Claim Rate', delta: 'First-pass',
+    deltaClass: 'text-emerald', barClass: 'bg-emerald', barWidth: '95%',
+    icon: <CheckCircle className="h-5 w-5" />, iconWrap: 'bg-emerald/10 text-emerald',
+    note: 'Precision in initial coding eliminates secondary processing bottlenecks.',
   },
   {
-    quote: 'The denial rate dropped from 12% to 3% after switching to Aethera. Their proactive approach and attention to detail have been game-changers for our practice.',
-    author: 'Dr. Michael Chen',
-    role: 'Medical Director',
-    specialty: 'Cardiology',
+    value: '<5%', label: 'Denial Rate', delta: 'Actively worked',
+    deltaClass: 'text-royal', barClass: 'bg-royal', barWidth: '20%',
+    icon: <AlertTriangle className="h-5 w-5" />, iconWrap: 'bg-royal/10 text-royal',
+    note: 'Active mitigation strategies capture revenue that others simply write off.',
   },
   {
-    quote: 'We\'ve saved over 20 hours per week in administrative tasks since partnering with Aethera. Their real-time portal gives us complete visibility into our financial performance.',
-    author: 'Dr. Emily Rodriguez',
-    role: 'Office Manager',
-    specialty: 'Dermatology',
+    value: '<30', label: 'Days in A/R', delta: 'Accelerated',
+    deltaClass: 'text-navy', barClass: 'bg-navy', barWidth: '40%',
+    icon: <Clock className="h-5 w-5" />, iconWrap: 'bg-navy/10 text-navy',
+    note: 'Optimized payer cycles keep liquidity from being trapped in administrative limbo.',
   },
 ];
 
-const steps = [
-  'Discovery',
-  'Agreement',
-  'Setup',
-  'Portal',
-  'Migration',
-  'Go Live',
+const architecture = [
+  { icon: <Activity className="h-6 w-6" />, title: 'Advanced Coding Analytics', desc: 'Clinical-grade logic reviews every ICD-10 and CPT code so claims are optimized for accurate reimbursement and compliance before they ever reach a payer.' },
+  { icon: <ShieldCheck className="h-6 w-6" />, title: 'Institutional Compliance', desc: 'Rigorous HIPAA-compliant data handling and payer-contract management protect your practice’s legal and financial standing at every step.' },
+  { icon: <Network className="h-6 w-6" />, title: 'Unified Payer Visibility', desc: 'A single source of truth across 900+ payers gives you real-time visibility into claims, denials, and collections wherever your revenue lives.' },
 ];
 
 const faqs = [
-  {
-    question: 'How quickly can you start managing our billing?',
-    answer: 'Most practices are fully operational with Aethera within 30-45 days. Our onboarding process is designed to be seamless with minimal disruption to your workflow.'
-  },
-  {
-    question: 'What makes Aethera different from other billing companies?',
-    answer: 'We combine expert human billing professionals with advanced technology to deliver superior results. Our dedicated account teams understand the nuances of each specialty and work proactively to maximize your revenue.'
-  },
-  {
-    question: 'How do you ensure HIPAA compliance?',
-    answer: 'We maintain comprehensive HIPAA compliance with annual training, business associate agreements, encrypted data transmission, and secure facilities. We undergo regular third-party security audits.'
-  },
-  {
-    question: 'What reporting do you provide?',
-    answer: 'We provide real-time access to our provider portal with detailed analytics on collections, denials, AR days, and more. Monthly executive summaries and quarterly business reviews are included.'
-  },
-  {
-    question: 'Do you work with all insurance types?',
-    answer: 'Yes, we handle Medicare, Medicaid, commercial insurance, and workers\' compensation claims. Our team stays current with payer-specific requirements and updates.'
-  }
+  { question: 'How quickly can you start managing our billing?', answer: 'Most practices are fully operational with Aethera within 30-45 days. Our onboarding process is designed to be seamless with minimal disruption to your workflow.' },
+  { question: 'What makes Aethera different from other billing companies?', answer: 'We combine expert human billing professionals with advanced technology to deliver superior results. Our dedicated account teams understand the nuances of each specialty and work proactively to maximize your revenue.' },
+  { question: 'How do you ensure HIPAA compliance?', answer: 'We maintain comprehensive HIPAA compliance with annual training, business associate agreements, encrypted data transmission, and secure facilities. We undergo regular third-party security audits.' },
+  { question: 'What reporting do you provide?', answer: 'We provide real-time access to our provider portal with detailed analytics on collections, denials, AR days, and more. Monthly executive summaries and quarterly business reviews are included.' },
+  { question: 'Do you work with all insurance types?', answer: 'Yes, we handle Medicare, Medicaid, commercial insurance, and workers’ compensation claims. Our team stays current with payer-specific requirements and updates.' },
 ];
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col pt-16 font-inter">
       <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Aethera Healthcare Solutions",
-              "url": "https://aetherahealthcare-website.pages.dev",
-              "logo": "https://aetherahealthcare-website.pages.dev/logo.png",
-              "description": "Aethera Healthcare Solutions is your full-service medical billing partner handling coding, claims, payments, denials, and collections so you can focus on patients.",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Lakeland",
-                "addressRegion": "FL",
-                "postalCode": "33801",
-                "streetAddress": "PO Box 1234"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-863-694-0325",
-                "contactType": "customer service",
-                "email": "info@aetherahealthcare.com"
-              },
-              "sameAs": [
-                "https://www.linkedin.com/company/aethera-healthcare-solutions"
-              ]
-            })
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Aethera Healthcare Solutions",
-              "url": "https://aetherahealthcare-website.pages.dev",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://aetherahealthcare-website.pages.dev/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            })
-          }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org", "@type": "Organization",
+          "name": "Aethera Healthcare Solutions",
+          "url": "https://aetherahealthcare.com",
+          "logo": "https://aetherahealthcare.com/logo.png",
+          "description": "Aethera Healthcare Solutions is your full-service medical billing partner handling coding, claims, payments, denials, and collections so you can focus on patients.",
+          "address": { "@type": "PostalAddress", "addressLocality": "Lakeland", "addressRegion": "FL", "postalCode": "33801", "streetAddress": "PO Box 1234" },
+          "contactPoint": { "@type": "ContactPoint", "telephone": "+1-863-694-0325", "contactType": "customer service", "email": "info@aetherahealthcare.com" },
+          "sameAs": ["https://www.linkedin.com/company/aethera-healthcare-solutions"],
+        }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org", "@type": "WebSite", "name": "Aethera Healthcare Solutions",
+          "url": "https://aetherahealthcare.com",
+          "potentialAction": { "@type": "SearchAction", "target": "https://aetherahealthcare.com/search?q={search_term_string}", "query-input": "required name=search_term_string" },
+        }) }} />
       </Head>
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-teal/20 to-navy/80"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <FadeIn>
-              <h1 className="text-4xl md:text-6xl font-bold text-white font-playfair mb-6">
-                Your Practice Deserves Every Dollar Earned
-              </h1>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p className="text-xl text-cream max-w-3xl mx-auto mb-10">
-                Aethera Healthcare Solutions is your full-service medical billing partner. We handle coding, claims, payments, denials, and collections — so you can focus on patients.
-              </p>
-            </FadeIn>
-            <FadeIn delay={0.4}>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link prefetch={false}
-                  href="/contact"
-                  className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 text-center"
-                >
-                  Schedule Free Consultation
-                </Link>
-                <Link prefetch={false}
-                  href="/services"
-                  className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300 text-center"
-                >
-                  Explore Services →
-                </Link>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      {/* ===================== HERO ===================== */}
+      <section className="relative overflow-hidden bg-ink">
+        {/* layered background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-ink via-navy to-[#06304f]" />
+        <div className="absolute inset-0 opacity-[0.35] pointer-events-none"
+          style={{ backgroundImage: 'radial-gradient(rgba(120,160,200,0.35) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+        <div className="absolute -top-1/3 -right-1/4 w-[70%] h-[140%] rounded-full pointer-events-none"
+          style={{ background: 'radial-gradient(closest-side, rgba(69,196,176,0.16), transparent)' }} />
 
-      {/* Social Proof Stats Bar */}
-      <section className="py-10 bg-white border-b border-gray/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {socialProofStats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <FadeIn key={index} delay={index * 0.1}>
-                  <div className="flex flex-col items-center text-center">
-                    <div className="bg-teal/10 rounded-full p-3 mb-3">
-                      <Icon className="h-6 w-6 text-teal" />
-                    </div>
-                    <p className="text-3xl font-bold text-navy">{stat.value}</p>
-                    <p className="text-gray text-sm mt-1">{stat.label}</p>
-                  </div>
-                </FadeIn>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Core Services */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="OUR SERVICES"
-            title="Comprehensive Revenue Cycle Management"
-            description="We handle every aspect of medical billing so you can focus on what matters most - patient care."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <ServiceCard
-                  icon={service.icon}
-                  title={service.title}
-                  description={service.description}
-                  href={service.href}
-                />
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Aethera */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-12">
-            <div className="lg:w-1/2">
-              <SectionHeader
-                label="WHY CHOOSE US"
-                title="Your Partner in Revenue Optimization"
-                description="We combine expert human knowledge with advanced technology to deliver superior results."
-                className="text-left mb-8"
-              />
-
-              <div className="space-y-8">
-                <div className="flex">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="bg-teal w-8 h-8 rounded-full flex items-center justify-center">
-                      <CheckCircle className="h-5 w-5 text-white" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-bold text-navy mb-2">Dedicated Account Team</h3>
-                    <p className="text-gray">
-                      Each practice is assigned a specialized team with deep knowledge of your specialty and payer mix.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="bg-teal w-8 h-8 rounded-full flex items-center justify-center">
-                      <Zap className="h-5 w-5 text-white" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-bold text-navy mb-2">Real-Time Provider Portal</h3>
-                    <p className="text-gray">
-                      24/7 access to your financial data with real-time dashboards, claim status, and performance metrics.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="bg-teal w-8 h-8 rounded-full flex items-center justify-center">
-                      <BarChart3 className="h-5 w-5 text-white" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-bold text-navy mb-2">Transparent Reporting</h3>
-                    <p className="text-gray">
-                      Comprehensive monthly reports and quarterly business reviews with actionable insights.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="bg-teal w-8 h-8 rounded-full flex items-center justify-center">
-                      <Shield className="h-5 w-5 text-white" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-xl font-bold text-navy mb-2">HIPAA Compliant</h3>
-                    <p className="text-gray">
-                      Comprehensive security program with encrypted data transmission and secure facilities.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:w-1/2">
-              <div className="bg-navy rounded-2xl p-8 text-white h-full">
-                <h3 className="text-2xl font-bold mb-6">Performance Targets</h3>
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <p className="text-3xl font-bold text-mint">95%+</p>
-                    <p className="mt-2">Clean Claim Rate</p>
-                  </div>
-                  <div>
-                    <p className="text-3xl font-bold text-mint">&lt;5%</p>
-                    <p className="mt-2">Denial Rate</p>
-                  </div>
-                  <div>
-                    <p className="text-3xl font-bold text-mint">&lt;30</p>
-                    <p className="mt-2">Days in AR</p>
-                  </div>
-                  <div>
-                    <p className="text-3xl font-bold text-mint">96%+</p>
-                    <p className="mt-2">Net Collection Rate</p>
-                  </div>
-                  <div>
-                    <p className="text-3xl font-bold text-mint">65%+</p>
-                    <p className="mt-2">Appeal Success Rate</p>
-                  </div>
-                  <div>
-                    <p className="text-3xl font-bold text-mint">24h</p>
-                    <p className="mt-2">Payment Posting SLA</p>
-                  </div>
-                  <div>
-                    <p className="text-3xl font-bold text-mint">48h</p>
-                    <p className="mt-2">Claim Submission SLA</p>
-                  </div>
-                  <div>
-                    <p className="text-3xl font-bold text-mint">95%+</p>
-                    <p className="mt-2">Coding Accuracy</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="OUR PROCESS"
-            title="Simple, Seamless Onboarding"
-            description="Getting started with Aethera is straightforward and designed to minimize disruption to your practice."
-          />
-
-          <div className="flex flex-col md:flex-row justify-between mt-16 relative">
-            {/* Connecting line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-teal transform md:-translate-x-1/2 hidden md:block"></div>
-
-            {steps.map((step, index) => (
-              <FadeIn key={index} delay={index * 0.2} className="flex mb-12 md:mb-0">
-                <div className="flex flex-col items-center md:items-start w-full md:w-auto">
-                  <div className="flex items-center">
-                    <div className="bg-teal text-white rounded-full w-8 h-8 flex items-center justify-center font-bold z-10">
-                      {index + 1}
-                    </div>
-                    <div className="ml-4 md:ml-6">
-                      <h3 className="text-xl font-bold text-navy">{step}</h3>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Specialties */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="SPECIALTIES"
-            title="We Serve All Medical Specialties"
-            description="Our specialized teams understand the unique billing requirements of each medical field."
-          />
-
-          <div className="flex flex-wrap justify-center gap-3 mt-12">
-            {specialties.map((specialty, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <span className="bg-cream text-teal px-4 py-2 rounded-full text-sm">
-                  {specialty}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 md:pt-24 md:pb-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center">
+            {/* Left */}
+            <div>
+              <FadeIn>
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/15 px-3.5 py-1.5 text-xs font-semibold tracking-[0.14em] text-cream uppercase">
+                  <ShieldCheck className="h-4 w-4 text-mint" /> Institutional accuracy
                 </span>
               </FadeIn>
+              <FadeIn delay={0.1}>
+                <h1 className="font-jakarta font-extrabold text-white text-4xl md:text-6xl leading-[1.05] tracking-tight mt-6 mb-5">
+                  Your Practice Deserves<br className="hidden md:block" /> Every Dollar Earned
+                </h1>
+              </FadeIn>
+              <FadeIn delay={0.2}>
+                <p className="text-lg md:text-xl text-cream/85 max-w-xl leading-relaxed mb-8">
+                  Full-service medical billing, coding, and denial management engineered for financial
+                  precision. We turn revenue cycle friction into collected revenue — so your team can
+                  focus on patients.
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.3}>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link prefetch={false} href="/free-assessment"
+                    className="inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-7 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20">
+                    Get a Free Revenue Assessment <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link prefetch={false} href="/services"
+                    className="inline-flex items-center justify-center border border-white/35 text-white hover:bg-white/10 font-semibold py-3.5 px-7 rounded-xl transition-colors duration-200">
+                    Explore Services
+                  </Link>
+                </div>
+              </FadeIn>
+              <FadeIn delay={0.4}>
+                <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-3 text-cream/70 text-sm">
+                  <span className="flex items-center gap-2"><Network className="h-4 w-4 text-mint" /> 900+ payers</span>
+                  <span className="flex items-center gap-2"><Zap className="h-4 w-4 text-mint" /> 50+ EHR integrations</span>
+                  <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-mint" /> HIPAA-compliant</span>
+                  <span className="flex items-center gap-2"><BarChart3 className="h-4 w-4 text-mint" /> 12 RCM services</span>
+                </div>
+              </FadeIn>
+            </div>
+
+            {/* Right — animated medical-billing revenue cycle */}
+            <div className="relative h-[360px] sm:h-[460px] lg:h-[560px] w-full lg:w-[112%] lg:-mr-[12%]">
+              <RCMBillingFlow />
+            </div>
+          </div>
+        </div>
+        {/* bottom fade into next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-cream" />
+      </section>
+
+      {/* ===================== PERFORMANCE TARGETS ===================== */}
+      <section className="py-16 md:py-20 bg-cream border-b border-gray/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-10">
+            <div>
+              <h2 className="font-jakarta font-bold text-navy text-3xl md:text-4xl tracking-tight">Performance targets</h2>
+              <p className="text-gray mt-2 max-w-xl">Industry benchmarks we commit to — and put in writing — for every practice we partner with.</p>
+            </div>
+            <div className="text-left md:text-right">
+              <span className="text-xs font-bold tracking-[0.14em] text-teal uppercase">Targets in writing</span>
+              <div className="flex items-center md:justify-end gap-2 text-emerald font-semibold mt-1">
+                <span className="w-2 h-2 rounded-full bg-emerald animate-pulse" />
+                <span className="text-sm">Committed contractually</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {targets.map((t, i) => (
+              <FadeIn key={t.label} delay={i * 0.1}>
+                <div className="bg-white rounded-2xl p-7 border border-gray/15 shadow-sm hover:shadow-xl transition-shadow h-full">
+                  <div className="flex items-start justify-between mb-6">
+                    <span className={`inline-flex items-center justify-center h-11 w-11 rounded-xl ${t.iconWrap}`}>{t.icon}</span>
+                    <span className={`text-sm font-bold ${t.deltaClass}`}>{t.delta}</span>
+                  </div>
+                  <div className="font-jakarta font-extrabold text-navy text-5xl tracking-tight mb-1">{t.value}</div>
+                  <div className="text-xs font-bold tracking-[0.12em] text-gray uppercase mb-4">{t.label}</div>
+                  <div className="w-full bg-gray/10 h-1.5 rounded-full overflow-hidden">
+                    <div className={`h-full rounded-full ${t.barClass}`} style={{ width: t.barWidth }} />
+                  </div>
+                  <p className="mt-5 text-sm text-gray italic leading-relaxed">&ldquo;{t.note}&rdquo;</p>
+                </div>
+              </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="text-center mt-12">
-            <Link prefetch={false}
-              href="/specialties"
-              className="text-teal font-medium hover:text-mint transition-colors"
-            >
-              View all specialties we serve →
-            </Link>
+      {/* ===================== INTEGRATED ECOSYSTEM ===================== */}
+      <section className="py-16 md:py-24 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Visual panel (self-contained, no external assets) */}
+            <FadeIn>
+              <div className="relative">
+                <div className="rounded-2xl bg-gradient-to-br from-navy to-[#06304f] p-7 md:p-9 shadow-2xl">
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="text-cream/70 text-xs font-bold tracking-[0.14em] uppercase">Revenue Cycle · Live view</span>
+                    <span className="flex items-center gap-1.5 text-emerald text-xs font-semibold"><span className="w-1.5 h-1.5 rounded-full bg-emerald animate-pulse" /> Nominal</span>
+                  </div>
+                  <div className="space-y-5">
+                    {[
+                      { k: 'Clean claims', v: '95%+', w: '95%', c: 'bg-emerald' },
+                      { k: 'Collected of billed', v: '96%+', w: '96%', c: 'bg-mint' },
+                      { k: 'Denials worked', v: '<5%', w: '22%', c: 'bg-royal' },
+                      { k: 'Days in A/R', v: '<30', w: '40%', c: 'bg-cream' },
+                    ].map((r) => (
+                      <div key={r.k}>
+                        <div className="flex justify-between text-sm text-cream/85 mb-1.5"><span>{r.k}</span><span className="font-semibold text-white">{r.v}</span></div>
+                        <div className="w-full bg-white/10 h-2 rounded-full overflow-hidden"><div className={`h-full rounded-full ${r.c}`} style={{ width: r.w }} /></div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/* floating factual card (no fabricated numbers) */}
+                <div className="absolute -bottom-6 -right-3 sm:-right-6 bg-white/90 backdrop-blur rounded-xl shadow-xl border border-gray/15 p-5 max-w-[15rem]">
+                  <div className="flex items-center gap-2 mb-1">
+                    <ShieldCheck className="h-5 w-5 text-emerald" />
+                    <span className="text-xs font-bold tracking-[0.12em] text-navy uppercase">Performance in writing</span>
+                  </div>
+                  <p className="text-xs text-gray leading-relaxed">Clean-claim, denial, and A/R targets committed in your agreement — no setup fees, no long-term lock-in.</p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Copy */}
+            <div>
+              <FadeIn>
+                <p className="text-xs font-bold tracking-[0.16em] text-teal uppercase mb-3">Aethera Architecture</p>
+                <h2 className="font-jakarta font-bold text-navy text-3xl md:text-4xl tracking-tight mb-8 leading-tight">
+                  An integrated ecosystem for practice health
+                </h2>
+              </FadeIn>
+              <div className="space-y-7">
+                {architecture.map((a, i) => (
+                  <FadeIn key={a.title} delay={i * 0.1}>
+                    <div className="flex gap-5 group">
+                      <span className="flex-shrink-0 h-12 w-12 rounded-full border border-gray/25 flex items-center justify-center text-navy group-hover:bg-navy group-hover:text-white transition-colors">{a.icon}</span>
+                      <div>
+                        <h3 className="font-jakarta font-bold text-navy text-lg mb-1.5">{a.title}</h3>
+                        <p className="text-gray leading-relaxed">{a.desc}</p>
+                      </div>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+              <FadeIn delay={0.3}>
+                <div className="mt-9 pt-7 border-t border-gray/15">
+                  <Link prefetch={false} href="/about" className="inline-flex items-center gap-2 text-teal font-semibold hover:text-navy transition-colors">
+                    How we work <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </FadeIn>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Why Practices Choose Us */}
+      {/* ===================== SERVICES ===================== */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="WHY PRACTICES CHOOSE US"
-            title="What Sets Us Apart"
-            description="Three key reasons practices partner with Aethera for their revenue cycle management."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FadeIn>
-              <div className="bg-white rounded-xl shadow-md p-6 border border-gray/10 h-full">
-                <h3 className="text-xl font-bold text-navy mb-4">Personal, Not Corporate</h3>
-                <p className="text-gray">
-                  We intentionally work with a select number of practices. Your account manager knows your specialty, your payers, and your team by name.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.2}>
-              <div className="bg-white rounded-xl shadow-md p-6 border border-gray/10 h-full">
-                <h3 className="text-xl font-bold text-navy mb-4">Results You Can Measure</h3>
-                <p className="text-gray">
-                  Clean claim rates above 95%, denial rates below 5%, and average AR under 30 days. We put performance targets in writing.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.4}>
-              <div className="bg-white rounded-xl shadow-md p-6 border border-gray/10 h-full">
-                <h3 className="text-xl font-bold text-navy mb-4">Zero Risk to Start</h3>
-                <p className="text-gray">
-                  No setup fees. No long-term contracts. 90 days' notice to cancel. We earn your business every month.
-                </p>
-              </div>
-            </FadeIn>
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-xs font-bold tracking-[0.16em] text-teal uppercase mb-3">Our services</p>
+            <h2 className="font-jakarta font-bold text-navy text-3xl md:text-4xl tracking-tight mb-3">Comprehensive revenue cycle management</h2>
+            <p className="text-gray">We handle every step of medical billing so you can focus on what matters most — patient care.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <FadeIn key={index} delay={index * 0.05}>
+                <ServiceCard icon={service.icon} title={service.title} description={service.description} href={service.href} />
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ROI Calculator */}
-      <section className="py-16 md:py-24 bg-navy">
+      {/* ===================== SPECIALTIES ===================== */}
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <p className="text-xs font-bold tracking-[0.16em] text-teal uppercase mb-3">Specialties</p>
+            <h2 className="font-jakarta font-bold text-navy text-3xl md:text-4xl tracking-tight mb-3">Billing built for your specialty</h2>
+            <p className="text-gray">Specialized teams that understand the unique billing requirements of each medical field.</p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-2.5">
+            {specialties.map((specialty, index) => (
+              <FadeIn key={index} delay={index * 0.04}>
+                <span className="bg-cream text-teal border border-teal/15 px-4 py-2 rounded-full text-sm font-medium">{specialty}</span>
+              </FadeIn>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link prefetch={false} href="/specialties" className="text-teal font-semibold hover:text-navy transition-colors">View all specialties we serve &rarr;</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== ROI CALCULATOR ===================== */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-ink via-navy to-[#06304f] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.25] pointer-events-none"
+          style={{ backgroundImage: 'radial-gradient(rgba(120,160,200,0.4) 1px, transparent 1px)', backgroundSize: '34px 34px' }} />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Revenue Calculator</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-4">Calculate Your Revenue Potential</h2>
+            <span className="inline-block bg-mint/15 border border-mint/40 text-mint text-xs font-bold tracking-[0.14em] uppercase px-4 py-1.5 rounded-full mb-4">Revenue calculator</span>
+            <h2 className="font-jakarta font-bold text-white text-3xl md:text-4xl tracking-tight mb-3">Calculate your recovery potential</h2>
             <p className="text-cream/80 max-w-2xl mx-auto">See how much additional revenue Aethera could recover for your practice. Adjust the inputs below to match your current situation.</p>
           </div>
           <ROICalculator />
         </div>
       </section>
 
-
-      {/* Explore Resources */}
+      {/* ===================== EXPLORE RESOURCES ===================== */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-12">
-              <span className="text-teal text-sm font-bold uppercase tracking-widest">EXPLORE AETHERA</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-navy font-playfair mt-2">Everything You Need to Decide</h2>
-              <p className="text-gray mt-3 max-w-2xl mx-auto">Real case studies. A live billing dashboard. Your payers. Your EHR. And a free assessment to start.</p>
+              <p className="text-xs font-bold tracking-[0.16em] text-teal uppercase mb-3">Explore Aethera</p>
+              <h2 className="font-jakarta font-bold text-navy text-3xl md:text-4xl tracking-tight">Everything you need to decide</h2>
+              <p className="text-gray mt-3 max-w-2xl mx-auto">Case studies. A live billing dashboard. Your payers. Your EHR. And a free assessment to start.</p>
             </div>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { href: '/case-studies', label: 'Case Studies', title: 'Real Results from Real Practices', desc: '6 detailed case studies showing how much revenue Aethera recovered by specialty, challenge, and outcome.', cta: 'Read Case Studies', accent: 'text-teal', border: 'border-teal' },
-              { href: '/free-assessment', label: 'Free Assessment', title: 'See What Your Practice Is Missing', desc: 'A no-obligation revenue cycle audit identifying denial leakage, AR gaps, and undercoding. Delivered in 5 business days.', cta: 'Get Free Assessment', accent: 'text-mint', border: 'border-mint' },
+              { href: '/case-studies', label: 'Case Studies', title: 'Case Studies by Specialty', desc: 'Illustrative examples of how our process tackles common billing challenges — by specialty, challenge, and outcome.', cta: 'Read Case Studies', accent: 'text-teal', border: 'border-teal' },
+              { href: '/free-assessment', label: 'Free Assessment', title: 'See What Your Practice Is Missing', desc: 'A no-obligation revenue cycle audit identifying denial leakage, AR gaps, and undercoding. Delivered in 5 business days.', cta: 'Get Free Assessment', accent: 'text-emerald', border: 'border-emerald' },
               { href: '/portal', label: 'Provider Portal', title: '24/7 Real-Time Billing Visibility', desc: 'Live claims dashboard, denial queue, AR aging, and KPI benchmarks accessible from any device at any time.', cta: 'See the Portal', accent: 'text-teal', border: 'border-navy' },
               { href: '/integrations', label: 'EHR Integrations', title: 'Works With Your Current System', desc: 'Epic, Cerner, athenahealth, eClinicalWorks, Kareo, and 45+ more. Setup in 1-4 weeks, zero workflow disruption.', cta: 'View Integrations', accent: 'text-teal', border: 'border-teal' },
-              { href: '/payers', label: 'Payer Network', title: '900+ Insurers We Work With', desc: 'From Medicare and Medicaid to regional Blues plans and workers comp carriers. We know your payers rules cold.', cta: 'See Payer Network', accent: 'text-teal', border: 'border-navy' },
-              { href: '/specialties', label: 'Specialties', title: 'Billing Built for Your Specialty', desc: 'Cardiology, orthopedics, dermatology, psychiatry, family medicine and more. Specialty-specific coding expertise.', cta: 'Find Your Specialty', accent: 'text-mint', border: 'border-mint' },
+              { href: '/payers', label: 'Payer Network', title: '900+ Insurers We Work With', desc: 'From Medicare and Medicaid to regional Blues plans and workers comp carriers. We know your payers’ rules cold.', cta: 'See Payer Network', accent: 'text-teal', border: 'border-navy' },
+              { href: '/tools', label: 'Free Tools', title: 'Denial Lookup & AR Calculators', desc: 'A searchable CARC/RARC denial-code library, clean-claim scorecard, and AR cost calculator — free for any billing team.', cta: 'Open Free Tools', accent: 'text-emerald', border: 'border-emerald' },
             ].map((card, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
+              <FadeIn key={i} delay={i * 0.08}>
                 <Link prefetch={false} href={card.href} className={`group block bg-white rounded-2xl p-6 border-2 ${card.border} hover:shadow-lg transition-all duration-200 h-full`}>
-                  <span className={`text-xs font-bold uppercase tracking-widest ${card.accent}`}>{card.label}</span>
-                  <h3 className="text-lg font-bold text-navy font-playfair mt-2 mb-2 group-hover:text-teal transition-colors">{card.title}</h3>
+                  <span className={`text-xs font-bold uppercase tracking-[0.12em] ${card.accent}`}>{card.label}</span>
+                  <h3 className="font-jakarta text-lg font-bold text-navy mt-2 mb-2 group-hover:text-teal transition-colors">{card.title}</h3>
                   <p className="text-gray text-sm leading-relaxed mb-4">{card.desc}</p>
                   <span className={`text-sm font-semibold ${card.accent} group-hover:underline`}>{card.cta} &rarr;</span>
                 </Link>
@@ -566,42 +367,32 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* CTA Banner */}
+      {/* ===================== CTA ===================== */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <CTABanner
-            title="Ready to Maximize Your Revenue?"
-            buttonText="Schedule Free Consultation"
-            href="/contact"
-          />
+          <CTABanner title="Ready to Maximize Your Revenue?" buttonText="Schedule Free Consultation" href="/contact" />
         </div>
       </section>
 
-      {/* FAQ Preview */}
+      {/* ===================== FAQ ===================== */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="FAQ"
-            title="Frequently Asked Questions"
-            description="Get answers to common questions about our services and process."
-          />
-
-          <div className="grid grid-cols-1 gap-8 mt-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-xs font-bold tracking-[0.16em] text-teal uppercase mb-3">FAQ</p>
+            <h2 className="font-jakarta font-bold text-navy text-3xl md:text-4xl tracking-tight">Frequently asked questions</h2>
+          </div>
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <div className="bg-cream rounded-xl p-6 border border-gray/10">
-                  <h3 className="text-lg font-bold text-navy mb-2">{faq.question}</h3>
-                  <p className="text-gray">{faq.answer}</p>
+              <FadeIn key={index} delay={index * 0.06}>
+                <div className="bg-cream rounded-xl p-6 border border-gray/12">
+                  <h3 className="font-jakarta text-lg font-bold text-navy mb-2">{faq.question}</h3>
+                  <p className="text-gray leading-relaxed">{faq.answer}</p>
                 </div>
               </FadeIn>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <Link prefetch={false} href="/faq" className="text-teal font-medium hover:text-mint transition-colors">
-              View all FAQs &rarr;
-            </Link>
+          <div className="text-center mt-10">
+            <Link prefetch={false} href="/faq" className="text-teal font-semibold hover:text-navy transition-colors">View all FAQs &rarr;</Link>
           </div>
         </div>
       </section>

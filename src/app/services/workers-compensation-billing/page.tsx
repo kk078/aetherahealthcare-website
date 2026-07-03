@@ -231,10 +231,9 @@ export default function WorkersCompBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Orthopedic & Occupational Medicine Clinic, Multi-State</h2>
+            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Orthopedic & Occupational Medicine Clinic</h2>
             <p className="text-cream/80 mb-8">This clinic billed workers' comp like commercial insurance across three states. The result: 38% of WC charges written off, narratives missing on half of high-level visits, and bill-review reductions never appealed.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">{caseMetrics.map((m, i) => (<div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>))}</div>
-            <blockquote className="border-l-4 border-mint pl-5"><p className="text-cream italic">“Workers' comp went from our worst payer to a profitable line. Aethera appeals every reduction and files liens we never even knew we were entitled to.”</p></blockquote>
             <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
           </FadeIn>
         </div>

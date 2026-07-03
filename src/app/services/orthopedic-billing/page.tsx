@@ -130,14 +130,13 @@ export default function OrthopedicBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">3-Surgeon Orthopedic Practice, Central Florida</h2>
+            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Orthopedic Practice</h2>
             <p className="text-cream/80 mb-8">High implant volume with inconsistent cost capture and global period violations causing payer audits. AR had reached 52 days and two audit letters arrived in 18 months.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[{ label: 'Implant Revenue', before: 'Missed', after: '+$124K/yr' }, { label: 'AR Days', before: '52', after: '28' }, { label: 'Payer Audits', before: '2/yr', after: '0' }, { label: 'Global Violations', before: 'Frequent', after: 'Eliminated' }].map((m, i) => (
                 <div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>
               ))}
             </div>
-            <blockquote className="border-l-4 border-mint pl-5"><p className="text-cream italic">"The implant billing alone paid for Aethera's fees ten times over in the first year. And the audit letters stopped completely."</p></blockquote>
             <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
           </FadeIn>
         </div>

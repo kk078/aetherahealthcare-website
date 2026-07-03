@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import ContactTabs from '@/components/ui/ContactTabs';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   title: { absolute: "Contact Us | Free Consultation | Aethera Healthcare Solutions" },
@@ -70,23 +71,13 @@ export default function Contact() {
       </Head>
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
-                Contact Us
-              </h1>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p className="text-xl text-cream max-w-3xl mx-auto">
-                Ready to maximize your revenue and minimize your burden? Get in touch with our team today.
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="Contact"
+        title="Let's maximize your revenue"
+        subtitle="Ready to maximize your revenue and minimize your burden? Get in touch with our team today — by phone at +1 (863) 694-0325 or email info@aetherahealthcare.com."
+        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        chips={['Free consultation', '5-day turnaround', 'No obligation']}
+      />
 
       {/* Contact Information */}
       <section className="py-16 md:py-24 bg-white">

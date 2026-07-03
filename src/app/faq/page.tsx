@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import { useState } from 'react';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import {
   ChevronDown,
   HelpCircle,
@@ -228,22 +229,12 @@ export default function FAQ() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
-                Frequently Asked Questions
-              </h1>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p className="text-xl text-cream max-w-3xl mx-auto">
-                Find answers to common questions about our services, pricing, onboarding, and compliance.
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="FAQ"
+        title="Frequently asked questions"
+        subtitle="Answers to common questions about our services, pricing, onboarding, and compliance."
+        primary={{ href: '/contact', label: 'Ask a Question' }}
+      />
 
       {/* Introduction */}
       <section className="py-16 md:py-24 bg-white">

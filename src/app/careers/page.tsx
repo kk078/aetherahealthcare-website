@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
+import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import {
   Users,
   Heart,
@@ -107,22 +108,12 @@ export default function Careers() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
-                Join Our Team
-              </h1>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <p className="text-xl text-cream max-w-3xl mx-auto">
-                Help healthcare providers focus on patient care while we handle the complexities of medical billing.
-              </p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      <RcmHeroBand
+        eyebrow="Careers"
+        title="Join our team"
+        subtitle="Help healthcare providers focus on patient care while we handle the complexities of medical billing."
+        primary={{ href: '/contact', label: 'Get in Touch' }}
+      />
 
       {/* Introduction */}
       <section className="py-16 md:py-24 bg-white">

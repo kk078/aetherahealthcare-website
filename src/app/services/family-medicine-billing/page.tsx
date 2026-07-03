@@ -122,14 +122,13 @@ export default function FamilyMedicineBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Solo Family Medicine Physician, Tampa, FL</h2>
+            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Family Medicine Practice</h2>
             <p className="text-cream/80 mb-8">Front desk staff handling billing with a 78% clean claim rate, consistent E&M undercoding, and no denial follow-up. Collections were $200,000/year below potential.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[{ label: 'Clean Claim Rate', before: '78%', after: '96.4%' }, { label: 'Denial Rate', before: '16%', after: '4.1%' }, { label: 'Monthly Collections', before: 'Baseline', after: '+$18,200' }, { label: 'Admin Burden', before: 'High', after: 'Minimal' }].map((m, i) => (
                 <div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>
               ))}
             </div>
-            <blockquote className="border-l-4 border-mint pl-5"><p className="text-cream italic">"I was essentially giving away $200,000 a year because my front desk was coding every visit at the same level. I had no idea until Aethera showed me the data."</p></blockquote>
             <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
           </FadeIn>
         </div>

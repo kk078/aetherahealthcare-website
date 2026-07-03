@@ -32,10 +32,14 @@ const specialtyServices = [
 ];
 
 const whyAethera = [
-  { name: 'Case Studies', href: '/case-studies', desc: 'Real results from real practices' },
+  { name: 'Guides', href: '/decks', desc: 'Specialty one-pagers & playbooks' },
+  { name: 'Case Studies', href: '/case-studies', desc: 'Results our process is built to deliver' },
   { name: 'Provider Portal', href: '/portal', desc: '24/7 real-time billing dashboard' },
   { name: 'Payer Network', href: '/payers', desc: '900+ insurers we work with' },
   { name: 'EHR Integrations', href: '/integrations', desc: '50+ systems, zero disruption' },
+  { name: 'Compare Options', href: '/compare', desc: 'Outsourced vs. in-house, and how to choose' },
+  { name: 'Billing by Location', href: '/medical-billing', desc: 'Specialty billing across Central Florida' },
+  { name: 'State of Denials', href: '/state-of-denials', desc: 'Free benchmark report by specialty' },
 ];
 
 export default function Navbar() {
@@ -108,6 +112,19 @@ export default function Navbar() {
                 </div>
               </div>
 
+              <Link prefetch={false} href="/specialties" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+                Specialties
+              </Link>
+              <Link prefetch={false} href="/payer-services" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+                Payer Services
+              </Link>
+              <Link prefetch={false} href="/tools" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+                Free Tools
+              </Link>
+              <Link prefetch={false} href="/pricing" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+                Pricing
+              </Link>
+
               {/* Why Aethera Dropdown */}
               <div className="relative group">
                 <button className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
@@ -125,15 +142,6 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link prefetch={false} href="/specialties" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                Specialties
-              </Link>
-              <Link prefetch={false} href="/payer-services" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                Payer Services
-              </Link>
-              <Link prefetch={false} href="/pricing" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                Pricing
-              </Link>
               <Link prefetch={false} href="/about" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                 About
               </Link>
@@ -209,6 +217,7 @@ export default function Navbar() {
             <div className="border-t border-[#003087]/10 pt-3 space-y-2">
               <Link prefetch={false} href="/specialties" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Specialties</Link>
               <Link prefetch={false} href="/payer-services" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Payer Services</Link>
+              <Link prefetch={false} href="/tools" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Free Tools</Link>
               <Link prefetch={false} href="/pricing" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
               <Link prefetch={false} href="/about" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>About</Link>
               <Link prefetch={false} href="/blog" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Blog</Link>

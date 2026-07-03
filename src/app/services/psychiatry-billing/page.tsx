@@ -122,14 +122,13 @@ export default function PsychiatryBilling() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-playfair mb-4">8-Provider Behavioral Health Group, Florida</h2>
+            <h2 className="text-3xl font-bold text-white font-playfair mb-4">Behavioral Health Group</h2>
             <p className="text-cream/80 mb-8">Bundling edits on E&M + therapy claims, 34% prior auth denial rate on new medications, and essentially zero patient collections — balances were being written off entirely.</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[{ label: 'Bundling Denials', before: 'Frequent', after: 'Eliminated' }, { label: 'Prior Auth Approvals', before: '66%', after: '89%' }, { label: 'Patient Collections', before: 'Baseline', after: '+340%' }, { label: 'Net Revenue', before: 'Baseline', after: '+$31K/mo' }].map((m, i) => (
                 <div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>
               ))}
             </div>
-            <blockquote className="border-l-4 border-mint pl-5"><p className="text-cream italic">"We weren't collecting from patients at all. Aethera built a system that collects professionally without damaging the therapeutic relationship."</p></blockquote>
             <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
           </FadeIn>
         </div>
