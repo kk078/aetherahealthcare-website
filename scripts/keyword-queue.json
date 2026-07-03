@@ -1,0 +1,102 @@
+{
+  "_comment": "Prioritized keyword queue for the auto-blog. Each run pops pending[0], writes an article targeting that keyword, forces the internal links below, then moves the item to done[]. When pending is empty the generator falls back to free-choice topics. Add new targets to the END of pending[]. Categories MUST match one of the allowed CATEGORIES in blogPosts.ts.",
+  "pending": [
+    {
+      "keyword": "what is a good clean claim rate benchmark",
+      "category": "Data & Analytics",
+      "links": [
+        { "href": "/tools/clean-claim-scorecard", "text": "clean claim scorecard" },
+        { "href": "/services", "text": "revenue cycle management services" }
+      ]
+    },
+    {
+      "keyword": "the true cost of a denied claim",
+      "category": "Denials & Appeals",
+      "links": [
+        { "href": "/tools/denial-cost-calculator", "text": "denial cost calculator" },
+        { "href": "/services/denial-management", "text": "denial management services" }
+      ]
+    },
+    {
+      "keyword": "top claim denial reasons by payer",
+      "category": "Denials & Appeals",
+      "links": [
+        { "href": "/blog/medical-claim-denial-management-guide", "text": "complete denial management guide" },
+        { "href": "/services/denial-management", "text": "denial management services" }
+      ]
+    },
+    {
+      "keyword": "CO-97 denial code meaning and how to fix it",
+      "category": "Denials & Appeals",
+      "links": [
+        { "href": "/tools/denial-code-lookup", "text": "denial code lookup tool" },
+        { "href": "/services/denial-management", "text": "denial management services" }
+      ]
+    },
+    {
+      "keyword": "CO-16 denial code meaning and how to fix it",
+      "category": "Denials & Appeals",
+      "links": [
+        { "href": "/tools/denial-code-lookup", "text": "denial code lookup tool" },
+        { "href": "/services/denial-management", "text": "denial management services" }
+      ]
+    },
+    {
+      "keyword": "timely filing limits by payer 2026",
+      "category": "Denials & Appeals",
+      "links": [
+        { "href": "/tools/timely-filing-calculator", "text": "timely filing calculator" },
+        { "href": "/services/claims-billing", "text": "claims submission services" }
+      ]
+    },
+    {
+      "keyword": "provider credentialing timeline and CAQH",
+      "category": "Credentialing & Enrollment",
+      "links": [
+        { "href": "/services/credentialing", "text": "provider credentialing services" },
+        { "href": "/free-assessment", "text": "free assessment" }
+      ]
+    },
+    {
+      "keyword": "prior authorization process guide for practices",
+      "category": "Prior Authorization",
+      "links": [
+        { "href": "/services/prior-authorization", "text": "prior authorization services" },
+        { "href": "/services/eligibility-verification", "text": "eligibility verification services" }
+      ]
+    },
+    {
+      "keyword": "how to design patient payment plans that get paid",
+      "category": "Patient Access & Collections",
+      "links": [
+        { "href": "/services/patient-collections", "text": "patient collections services" },
+        { "href": "/free-assessment", "text": "free assessment" }
+      ]
+    },
+    {
+      "keyword": "no surprises act compliance for practices",
+      "category": "Regulatory & Policy",
+      "links": [
+        { "href": "/services/compliance-auditing", "text": "compliance & auditing services" },
+        { "href": "/services", "text": "revenue cycle management services" }
+      ]
+    },
+    {
+      "keyword": "how to reduce accounts receivable days in a medical practice",
+      "category": "Revenue Cycle",
+      "links": [
+        { "href": "/services/ar-followup", "text": "A/R follow-up services" },
+        { "href": "/tools/ar-cost-calculator", "text": "A/R cost calculator" }
+      ]
+    },
+    {
+      "keyword": "medical coding audit best practices",
+      "category": "Medical Coding",
+      "links": [
+        { "href": "/services/medical-coding", "text": "medical coding services" },
+        { "href": "/services/compliance-auditing", "text": "coding audit services" }
+      ]
+    }
+  ],
+  "done": []
+}

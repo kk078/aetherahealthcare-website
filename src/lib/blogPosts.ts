@@ -11,6 +11,176 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "author": "Michael Torres",
+    "date": "2026-07-03",
+    "image": "/images/blog/practice-management.svg",
+    "readTime": "5 min read",
+    "slug": "cost-to-outsource-medical-billing",
+    "title": "How Much Does It Cost to Outsource Medical Billing?",
+    "category": "Practice Management",
+    "excerpt": "A clear breakdown of medical billing outsourcing costs — pricing models, what’s included, and how to compare a billing partner against the true cost of billing in-house.",
+    "sections": [
+      {
+        "p": [
+          "If you’re weighing whether to outsource medical billing, the first question is almost always about cost. The honest answer is that outsourced medical billing is usually priced as a percentage of what you actually collect — so the real question isn’t just “what’s the rate,” it’s “what does that rate include, and how does it compare to what in-house billing truly costs you.” This guide breaks down the pricing models, the hidden costs on both sides, and how to compare offers apples-to-apples. When you’re ready to see numbers for your own practice, our <a href=\"/pricing\">pricing page</a> and a <a href=\"/free-assessment\">free revenue assessment</a> will give you specifics."
+        ]
+      },
+      {
+        "h": "The Three Common Pricing Models",
+        "p": [
+          "Most U.S. billing companies price one of three ways. Understanding which model you’re being quoted matters more than the headline number."
+        ],
+        "ul": [
+          "Percentage of collections — the most common model. You pay an agreed percentage of the revenue the biller actually collects. It aligns incentives: the biller only earns when you get paid.",
+          "Flat fee per claim — a fixed dollar amount per claim submitted. Predictable, but it doesn’t reward the biller for chasing denials or getting the claim paid.",
+          "Hybrid or monthly retainer — a base fee plus a smaller percentage, sometimes used for very small or very large practices."
+        ]
+      },
+      {
+        "h": "What a Percentage-of-Collections Rate Actually Buys",
+        "p": [
+          "A percentage rate can look higher than a per-claim fee until you see what’s bundled in. A full-service arrangement typically covers charge entry, coding review, claim submission, payment posting, denial management, appeals, patient statements, and reporting — not just “sending claims.” Ask any prospective partner to list exactly which of these are included versus billed separately. Our <a href=\"/services\">medical billing & RCM services</a> page shows what full-service should mean end to end."
+        ]
+      },
+      {
+        "h": "The Hidden Cost of Billing In-House",
+        "p": [
+          "To compare fairly, add up what in-house billing really costs — it’s rarely just a salary."
+        ],
+        "ul": [
+          "Biller/coder salaries, benefits, payroll taxes, and paid time off",
+          "Billing software, clearinghouse fees, and ongoing updates",
+          "Training, certification, and coverage when staff are out or turn over",
+          "The revenue you lose to denials that never get worked and claims that miss timely-filing deadlines"
+        ]
+      },
+      {
+        "h": "How to Compare Offers the Right Way",
+        "p": [
+          "Rate alone is misleading. A 4% biller who collects 96% of what’s owed beats a 3% biller who collects 88% and lets denials age out. When you evaluate partners, normalize on outcomes, not just price:"
+        ],
+        "ul": [
+          "What clean-claim rate, denial rate, and days-in-A/R do they commit to — in writing?",
+          "Are setup fees, statement costs, or clearinghouse fees extra?",
+          "Is there a long-term contract, or can you leave if results lag?",
+          "Who owns your data if you switch?"
+        ]
+      },
+      {
+        "h": "How Aethera Prices It",
+        "p": [
+          "Aethera is a full-service, percentage-of-collections partner with no setup fees and no long-term contract — so our incentive is simply to collect more of what you’ve already earned. The fastest way to see what it would cost, and what you’d likely recover, is a <a href=\"/free-assessment\">free revenue assessment</a>: we review a sample of your claims and denials and show you the math before you commit. You can also compare the two approaches side by side in our <a href=\"/compare/outsourced-vs-in-house-medical-billing\">outsourced vs in-house guide</a>."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "Jennifer Walsh",
+    "date": "2026-07-03",
+    "image": "/images/blog/revenue-cycle.svg",
+    "readTime": "5 min read",
+    "slug": "medical-billing-for-small-practices",
+    "title": "Medical Billing for Small & Independent Practices",
+    "category": "Revenue Cycle",
+    "excerpt": "Small and independent practices face billing challenges bigger groups don’t. Here’s how lean practices protect revenue without a full billing department.",
+    "sections": [
+      {
+        "p": [
+          "Medical billing for small and independent practices is a different problem than billing for a large group. When one or two people handle the front desk, scheduling, and the revenue cycle, a single staff absence or a wave of denials can stall your cash flow for weeks. This guide covers the specific risks small practices face and the practical ways to protect revenue without hiring a full billing department. If you’d rather hand the whole cycle off, our <a href=\"/services\">medical billing & RCM services</a> are built for exactly this."
+        ]
+      },
+      {
+        "h": "Why Small Practices Are More Exposed",
+        "p": [
+          "Lean teams have no redundancy. The same person often verifies eligibility, posts payments, and works denials — so when they’re out, nothing gets worked. Denials pile up, claims drift toward timely-filing deadlines, and revenue you’ve already earned quietly slips away. Larger groups absorb this with specialized staff; independent practices usually can’t."
+        ]
+      },
+      {
+        "h": "The Revenue Leaks That Hurt Small Practices Most",
+        "p": [
+          "A few predictable gaps cause most of the lost revenue in small practices:"
+        ],
+        "ul": [
+          "Eligibility not verified before the visit, leading to avoidable denials",
+          "Denials that never get reworked because no one has time",
+          "Patient balances that aren’t followed up on consistently",
+          "Credentialing gaps that delay or block payment for a new provider"
+        ]
+      },
+      {
+        "h": "What You Can Do Without a Billing Department",
+        "p": [
+          "You don’t need a large team to tighten the basics. Verify insurance before every visit, submit claims daily rather than in batches, and set a simple rule that every denial gets worked within a set number of days. Track three numbers monthly — clean-claim rate, denial rate, and days in A/R — so problems surface early. Even part-time discipline on these fundamentals recovers real money."
+        ]
+      },
+      {
+        "h": "When Outsourcing Makes Sense",
+        "p": [
+          "For many independent practices, outsourcing is cheaper than it looks once you account for the true cost of doing it in-house — see our breakdown of <a href=\"/blog/cost-to-outsource-medical-billing\">what it costs to outsource medical billing</a>. A percentage-of-collections partner gives you a full billing team, denial specialists, and credentialing support for a fraction of a single hire, and the cost scales with your revenue instead of being a fixed overhead. It also removes the single-point-of-failure risk of one biller."
+        ]
+      },
+      {
+        "h": "How Aethera Helps Independent Practices",
+        "p": [
+          "Aethera works nationwide with small and independent practices as a full-service billing partner — coding, claims, denials, patient collections, and <a href=\"/services/credentialing\">provider credentialing</a> under one roof, with no setup fees or long-term contract. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll show you exactly where your practice is leaking revenue and what it’s worth to fix it."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "Sarah Kim",
+    "date": "2026-07-03",
+    "image": "/images/blog/denials-appeals.svg",
+    "readTime": "5 min read",
+    "slug": "medical-claim-denial-management-guide",
+    "title": "Medical Claim Denial Management: The Complete Guide",
+    "category": "Denials & Appeals",
+    "excerpt": "A complete guide to medical claim denial management — why claims get denied, how to prevent denials, and how to build an appeals process that recovers revenue you’ve already earned.",
+    "sections": [
+      {
+        "p": [
+          "Medical claim denial management is one of the highest-leverage things a practice can fix, because every denied claim is revenue you’ve already earned but haven’t been paid for. This complete guide covers why claims get denied, how to prevent the avoidable ones, and how to build an appeals process that actually recovers money. It’s the hub for our denial content — the sections below link out to deeper, practical playbooks and to the tools that help you quantify the problem. If you’d rather have it handled end to end, see our <a href=\"/services/denial-management\">denial management services</a>."
+        ]
+      },
+      {
+        "h": "Why Claims Get Denied",
+        "p": [
+          "Most denials fall into a handful of repeatable categories: eligibility and coverage issues, missing or invalid information, coding and modifier errors, prior-authorization failures, and timely-filing misses. The important insight is that the majority are preventable at the front end. Understanding your own denial mix — which codes, which payers — is the first step, and our <a href=\"/tools/denial-code-lookup\">denial code lookup tool</a> helps you decode what each denial actually means."
+        ]
+      },
+      {
+        "h": "Prevention Beats Appeals",
+        "p": [
+          "Working a denial after the fact costs staff time and delays payment; preventing it costs almost nothing. The highest-return prevention steps are front-end and coding discipline."
+        ],
+        "ul": [
+          "Verify eligibility and benefits before every visit",
+          "Confirm prior authorization is on file where required",
+          "Tighten coding and modifier accuracy with periodic audits",
+          "Submit clean claims daily and watch timely-filing deadlines"
+        ]
+      },
+      {
+        "h": "What Denials Are Costing You",
+        "p": [
+          "You can’t prioritize what you don’t measure. Denials carry two costs: the revenue at risk on the claim itself, and the staff time to rework it. Quantifying this makes the business case for fixing it obvious — use our <a href=\"/tools/denial-cost-calculator\">denial cost calculator</a> to estimate what denials are costing your practice each month. For the tactics that reduce the denial rate itself, see our guide on <a href=\"/blog/reduce-claim-denials\">ways to reduce claim denials</a>."
+        ]
+      },
+      {
+        "h": "Building an Appeals Process That Recovers Revenue",
+        "p": [
+          "For the denials that do happen, a disciplined appeals workflow is what turns them back into cash. The essentials: triage denials by dollar value and root cause, work the highest-value ones first, use payer-specific appeal templates, and track every appeal to resolution so nothing ages out. For advanced tactics, our <a href=\"/blog/denial-management\">denial management strategies</a> article goes deeper on prioritization and payer-specific plays."
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera’s denial specialists prevent avoidable denials at the front end and aggressively work and appeal the ones that occur, so you recover revenue you’ve already earned. Explore our <a href=\"/services/denial-management\">denial management services</a>, or start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll show you your denial mix and what it’s worth to fix."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "post-visit-revenue-optimization",
     "title": "Post-Visit Revenue Optimization: Turning Checkout into Cash",
     "category": "Practice Management",
@@ -669,6 +839,12 @@ export const POSTS: BlogPost[] = [
         "p": [
           "Aethera’s denial-prevention workflow combines eligibility automation, front-end scrubbing, and root-cause analytics — and our specialists appeal the recoverable denials you already have. Run a free A/R analysis to see exactly where your denials are concentrated."
         ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a>, or explore Aethera’s <a href=\"/services/denial-management\">denial management services</a>."
+        ]
       }
     ]
   },
@@ -1071,6 +1247,12 @@ export const POSTS: BlogPost[] = [
         "h": "How Aethera helps",
         "p": [
           "We run denial analytics, appeal the recoverable balances, and fix upstream causes — and our free A/R analysis shows your denial concentration by payer and reason."
+        ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a>, or explore Aethera’s <a href=\"/services/denial-management\">denial management services</a>."
         ]
       }
     ]

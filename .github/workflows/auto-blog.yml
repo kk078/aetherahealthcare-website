@@ -47,7 +47,7 @@ jobs:
         run: |
           git config user.name "aethera-bot"
           git config user.email "bot@aetherahealthcare.com"
-          git add src/lib/blogPosts.ts
+          git add src/lib/blogPosts.ts scripts/keyword-queue.json
           git commit -m "blog: auto-publish ${{ steps.gen.outputs.slug }} [skip ci]"
           git push
 
