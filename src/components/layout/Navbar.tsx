@@ -38,7 +38,7 @@ const whyAethera = [
   { name: 'Payer Network', href: '/payers', desc: '900+ insurers we work with' },
   { name: 'EHR Integrations', href: '/integrations', desc: '50+ systems, zero disruption' },
   { name: 'Compare Options', href: '/compare', desc: 'Outsourced vs. in-house, and how to choose' },
-  { name: 'Billing by Location', href: '/medical-billing', desc: 'Specialty billing across Central Florida' },
+  { name: 'Billing by Specialty', href: '/medical-billing', desc: 'Specialty billing for practices nationwide' },
   { name: 'State of Denials', href: '/state-of-denials', desc: 'Free benchmark report by specialty' },
 ];
 
@@ -151,6 +151,9 @@ export default function Navbar() {
               <Link prefetch={false} href="/contact" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                 Contact
               </Link>
+              <Link prefetch={false} href="/schedule" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+                Schedule
+              </Link>
             </div>
           </nav>
 
@@ -222,6 +225,7 @@ export default function Navbar() {
               <Link prefetch={false} href="/about" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>About</Link>
               <Link prefetch={false} href="/blog" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Blog</Link>
               <Link prefetch={false} href="/contact" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+              <Link prefetch={false} href="/schedule" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Schedule</Link>
               <a
                 href="https://rcm.aetherahealthcare.com"
                 target="_blank"

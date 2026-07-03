@@ -3,37 +3,35 @@ import { notFound } from 'next/navigation';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
-import { getSpecialty, getLocation, allBillingParams, SEO_SPECIALTIES } from '@/lib/seo.data';
-import { AlertTriangle, CheckCircle2, ArrowRight, MapPin, Wrench } from 'lucide-react';
+import { getSpecialty, SEO_SPECIALTIES } from '@/lib/seo.data';
+import { AlertTriangle, CheckCircle2, ArrowRight, Wrench } from 'lucide-react';
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return allBillingParams();
+  return SEO_SPECIALTIES.map((s) => ({ specialty: s.slug }));
 }
 
-type Params = Promise<{ location: string; specialty: string }>;
+type Params = Promise<{ specialty: string }>;
 
 export async function generateMetadata({ params }: { params: Params }) {
-  const { location, specialty } = await params;
+  const { specialty } = await params;
   const s = getSpecialty(specialty);
-  const l = getLocation(location);
-  if (!s || !l) return {};
+  if (!s) return {};
   return {
-    title: { absolute: `${s.name} Medical Billing in ${l.city}, FL | Aethera Healthcare Solutions` },
-    description: `Specialty ${s.name.toLowerCase()} medical billing and revenue cycle management for ${l.city}, FL practices. ${s.blurb} Free assessment — no long-term contract.`,
-    alternates: { canonical: `https://aetherahealthcare.com/medical-billing/${l.slug}/${s.slug}` },
+    title: { absolute: `${s.name} Medical Billing Services | Aethera Healthcare Solutions` },
+    description: `Nationwide ${s.name.toLowerCase()} medical billing and revenue cycle management for U.S. practices. ${s.blurb} Free assessment — no long-term contract.`,
+    alternates: { canonical: `https://aetherahealthcare.com/medical-billing/${s.slug}` },
   };
 }
 
-export default async function SpecialtyLocationPage({ params }: { params: Params }) {
-  const { location, specialty } = await params;
+export default async function SpecialtyPage({ params }: { params: Params }) {
+  const { specialty } = await params;
   const s = getSpecialty(specialty);
-  const l = getLocation(location);
-  if (!s || !l) notFound();
+  if (!s) notFound();
 
-  const title = `${s.name} Medical Billing in ${l.city}, FL`;
-  const url = `https://aetherahealthcare.com/medical-billing/${l.slug}/${s.slug}`;
+  const title = `${s.name} Medical Billing Services`;
+  const url = `https://aetherahealthcare.com/medical-billing/${s.slug}`;
 
   const ld = [
     {
@@ -41,7 +39,7 @@ export default async function SpecialtyLocationPage({ params }: { params: Params
       '@type': 'Service',
       name: title,
       serviceType: `${s.name} medical billing and revenue cycle management`,
-      areaServed: { '@type': 'City', name: `${l.city}, FL` },
+      areaServed: { '@type': 'Country', name: 'United States' },
       provider: {
         '@type': 'Organization',
         name: 'Aethera Healthcare Solutions',
@@ -55,14 +53,13 @@ export default async function SpecialtyLocationPage({ params }: { params: Params
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Medical Billing', item: 'https://aetherahealthcare.com/medical-billing' },
-        { '@type': 'ListItem', position: 2, name: l.city, item: `https://aetherahealthcare.com/medical-billing/${l.slug}` },
-        { '@type': 'ListItem', position: 3, name: s.name, item: url },
+        { '@type': 'ListItem', position: 2, name: s.name, item: url },
       ],
     },
     {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      mainEntity: s.faqs.map(f => ({
+      mainEntity: s.faqs.map((f) => ({
         '@type': 'Question',
         name: f.q,
         acceptedAnswer: { '@type': 'Answer', text: f.a },
@@ -70,8 +67,8 @@ export default async function SpecialtyLocationPage({ params }: { params: Params
     },
   ];
 
-  // sibling specialties in the same city for internal linking
-  const others = SEO_SPECIALTIES.filter(x => x.slug !== s.slug).slice(0, 6);
+  // sibling specialties for internal linking
+  const others = SEO_SPECIALTIES.filter((x) => x.slug !== s.slug).slice(0, 6);
 
   return (
     <div className="min-h-screen flex flex-col pt-16">
@@ -79,9 +76,7 @@ export default async function SpecialtyLocationPage({ params }: { params: Params
 
       <section className="pt-24 pb-12 md:pt-28 md:pb-14 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="flex items-center text-cream/80 text-sm mb-3">
-            <MapPin className="h-4 w-4 mr-1.5" /> {l.city}, FL · {l.region}
-          </p>
+          <p className="text-cream/80 text-sm mb-3">Medical Billing · Nationwide</p>
           <FadeIn>
             <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-4">{title}</h1>
           </FadeIn>
@@ -109,9 +104,9 @@ export default async function SpecialtyLocationPage({ params }: { params: Params
               <div className="prose-aethera">
                 <p className="text-lg text-slate-700 leading-relaxed">
                   Aethera Healthcare Solutions provides full-service medical billing and revenue cycle management to{' '}
-                  {s.noun} in {l.city} and across {l.blurb}. From {l.city}, FL we handle coding, claims, payment posting,
-                  denial management, and A/R follow-up end to end — so your team can stay focused on patient care while
-                  your revenue cycle runs cleanly.
+                  {s.noun} across the United States. We handle coding, claims, payment posting, denial management, and
+                  A/R follow-up end to end — so your team can stay focused on patient care while your revenue cycle runs
+                  cleanly.
                 </p>
                 <p className="text-slate-600 leading-relaxed mt-4">
                   Typical {s.name.toLowerCase()} CPT range we work: <strong className="text-navy">{s.cpt}</strong>.
@@ -158,7 +153,7 @@ export default async function SpecialtyLocationPage({ params }: { params: Params
 
               {/* Free tools cross-link */}
               <div className="bg-white rounded-2xl border border-gray/15 p-6">
-                <h2 className="text-lg font-bold text-navy mb-2 flex items-center"><Wrench className="h-5 w-5 mr-2 text-teal" />Free tools for your {l.city} billing team</h2>
+                <h2 className="text-lg font-bold text-navy mb-2 flex items-center"><Wrench className="h-5 w-5 mr-2 text-teal" />Free tools for your billing team</h2>
                 <p className="text-sm text-gray mb-3">Use these any time — no login required.</p>
                 <div className="flex flex-wrap gap-2">
                   <Link prefetch={false} href="/tools/denial-code-lookup" className="text-sm bg-cream border border-teal/30 text-teal rounded-full px-3 py-1.5 hover:bg-teal hover:text-white transition-colors">Denial Code Lookup</Link>
@@ -185,7 +180,7 @@ export default async function SpecialtyLocationPage({ params }: { params: Params
             {/* Sidebar */}
             <aside className="lg:sticky lg:top-28 self-start space-y-6">
               <div className="bg-navy rounded-2xl p-6 text-white">
-                <h2 className="text-lg font-bold mb-2">Serving {l.city} practices</h2>
+                <h2 className="text-lg font-bold mb-2">Serving practices nationwide</h2>
                 <p className="text-sm text-gray mb-4">Month-to-month. No setup fees. 30–45 day onboarding with parallel processing — zero disruption.</p>
                 <Link prefetch={false} href="/free-assessment" className="block text-center bg-mint hover:bg-white text-navy font-bold py-2.5 px-5 rounded-full transition-colors text-sm">
                   Free Revenue Assessment
@@ -193,11 +188,11 @@ export default async function SpecialtyLocationPage({ params }: { params: Params
               </div>
 
               <div className="bg-white rounded-2xl border border-gray/15 p-6">
-                <p className="text-xs font-bold text-gray uppercase tracking-widest mb-3">Other specialties in {l.city}</p>
+                <p className="text-xs font-bold text-gray uppercase tracking-widest mb-3">Other specialties we bill</p>
                 <ul className="space-y-1.5">
-                  {others.map(o => (
+                  {others.map((o) => (
                     <li key={o.slug}>
-                      <Link prefetch={false} href={`/medical-billing/${l.slug}/${o.slug}`} className="text-sm text-teal hover:text-navy">
+                      <Link prefetch={false} href={`/medical-billing/${o.slug}`} className="text-sm text-teal hover:text-navy">
                         {o.name} billing
                       </Link>
                     </li>

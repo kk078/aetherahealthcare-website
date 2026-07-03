@@ -1,10 +1,10 @@
 /**
- * Data for programmatic SEO pages: specialty × location medical-billing landing
- * pages, plus shared specialty/location metadata. Kept deliberately curated (not
+ * Data for programmatic SEO pages: nationwide specialty medical-billing landing
+ * pages, plus shared specialty metadata. Kept deliberately curated (not
  * machine-spun) so each page carries genuine, specialty-specific substance.
  *
- * Aethera serves the Central Florida / Tampa Bay / Orlando corridor, so the
- * location set covers the cities in that region where local intent is strongest.
+ * Aethera serves practices nationwide, so pages focus on specialty depth rather
+ * than geography.
  */
 
 export interface SeoSpecialty {
@@ -16,13 +16,6 @@ export interface SeoSpecialty {
   blurb: string;         // 1-2 sentence overview
   painPoints: string[];  // specialty-specific billing challenges
   faqs: { q: string; a: string }[];
-}
-
-export interface SeoLocation {
-  slug: string;
-  city: string;          // "Tampa"
-  region: string;        // "Hillsborough County"
-  blurb: string;         // local context
 }
 
 export const SEO_SPECIALTIES: SeoSpecialty[] = [
@@ -177,26 +170,11 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
   },
 ];
 
-export const SEO_LOCATIONS: SeoLocation[] = [
-  { slug: 'tampa', city: 'Tampa', region: 'Hillsborough County', blurb: 'the Tampa Bay metro' },
-  { slug: 'orlando', city: 'Orlando', region: 'Orange County', blurb: 'the Greater Orlando area' },
-  { slug: 'st-petersburg', city: 'St. Petersburg', region: 'Pinellas County', blurb: 'the Pinellas County coast' },
-  { slug: 'brandon', city: 'Brandon', region: 'Hillsborough County', blurb: 'the eastern Tampa suburbs' },
-  { slug: 'winter-haven', city: 'Winter Haven', region: 'Polk County', blurb: 'the Winter Haven and Central Florida area' },
-  { slug: 'sarasota', city: 'Sarasota', region: 'Sarasota County', blurb: 'the Sarasota–Bradenton region' },
-  { slug: 'clearwater', city: 'Clearwater', region: 'Pinellas County', blurb: 'the Clearwater and north Pinellas area' },
-];
-
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
   return SEO_SPECIALTIES.find(s => s.slug === slug);
 }
-export function getLocation(slug: string): SeoLocation | undefined {
-  return SEO_LOCATIONS.find(l => l.slug === slug);
-}
 
-/** All location/specialty slug pairs — for generateStaticParams. */
-export function allBillingParams(): { location: string; specialty: string }[] {
-  const out: { location: string; specialty: string }[] = [];
-  for (const l of SEO_LOCATIONS) for (const s of SEO_SPECIALTIES) out.push({ location: l.slug, specialty: s.slug });
-  return out;
+/** All specialty slugs — for generateStaticParams on /medical-billing/[specialty]. */
+export function allSpecialtyParams(): { specialty: string }[] {
+  return SEO_SPECIALTIES.map(s => ({ specialty: s.slug }));
 }

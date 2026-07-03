@@ -1,5 +1,5 @@
 import { getAllPayers } from '@/lib/payers';
-import { SEO_LOCATIONS, allBillingParams } from '@/lib/seo.data';
+import { SEO_SPECIALTIES } from '@/lib/seo.data';
 import { POSTS } from '@/lib/blogPosts';
 
 // Make this route static for export
@@ -10,7 +10,7 @@ export function GET() {
 
   const staticRoutes = [
     '/', '/about', '/services', '/specialties', '/pricing', '/process', '/contact',
-    '/free-assessment', '/gap-analysis',
+    '/free-assessment', '/gap-analysis', '/schedule',
     '/compliance', '/compliance/hipaa', '/compliance/privacy-policy', '/compliance/terms-of-service',
     '/compliance/baa', '/compliance/security', '/blog', '/faq', '/careers',
     '/payers', '/payer-services', '/integrations', '/portal', '/case-studies', '/decks',
@@ -55,8 +55,7 @@ export function GET() {
   // Programmatic specialty × location pages
   const billingRoutes = [
     '/medical-billing',
-    ...SEO_LOCATIONS.map(l => `/medical-billing/${l.slug}`),
-    ...allBillingParams().map(p => `/medical-billing/${p.location}/${p.specialty}`),
+    ...SEO_SPECIALTIES.map(s => `/medical-billing/${s.slug}`),
   ];
 
   const allRoutes = [

@@ -368,7 +368,7 @@ export default function Home() {
       {/* ===================== CTA ===================== */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <CTABanner title="Ready to Maximize Your Revenue?" buttonText="Schedule Free Consultation" href="/contact" />
+          <CTABanner title="Ready to Maximize Your Revenue?" buttonText="Schedule a Meeting" href="/schedule" />
         </div>
       </section>
 

@@ -15,7 +15,7 @@ const caseStudies = [
   {
     specialty: 'Cardiology',
     practice: 'Cardiology Group',
-    location: 'Central Florida',
+    location: 'United States',
     tag: 'Cardiology',
     challenge: 'A cardiology group came to Aethera with a 14.2% denial rate — driven almost entirely by cardiac catheterization modifier errors and bundling issues on stress testing codes. Their AR had ballooned to 47 days, and a recent billing staff departure left a three-month gap in denial follow-up. An estimated $40,000/month was being written off without appeal.',
     solution: 'Aethera assigned a dedicated cardiology coding team that rebuilt their modifier matrix for the entire 93000-series. We implemented real-time eligibility checks pre-appointment and created a payer-specific rules library covering their top 8 payers. The backlog of unappealed denials was worked through systematically over 60 days.',
@@ -31,7 +31,7 @@ const caseStudies = [
   {
     specialty: 'Family Medicine',
     practice: 'Family Medicine Practice',
-    location: 'Tampa, FL',
+    location: 'United States',
     tag: 'Primary Care',
     challenge: 'A family medicine practice had been relying on front desk staff to handle billing alongside scheduling and patient intake. Their clean claim rate was 78% — 17 points below industry standard — and there was no systematic denial follow-up. A coding audit revealed consistent undercoding on complex office visits: 99214s being submitted as 99213s, 99215s as 99214s.',
     solution: 'Aethera took over the complete billing function and ran a 90-day coding audit that identified the undercoding pattern across 8 months of historical claims. We rebuilt the physician\'s E&M documentation templates, educated the provider on MDM-based coding, and implemented a denial tracking dashboard in the provider portal.',
@@ -47,7 +47,7 @@ const caseStudies = [
   {
     specialty: 'Orthopedic Surgery',
     practice: 'Orthopedic Practice',
-    location: 'Central Florida',
+    location: 'United States',
     tag: 'Orthopedics',
     challenge: 'An orthopedic practice with high implant volume was experiencing significant revenue leakage from two sources: inconsistent implant cost capture (missing invoice-level documentation for implants billed under C-codes and L-codes) and repeated global period violations triggering payer audits. Their AR stood at 52 days, and they had received two payer audit letters in 18 months.',
     solution: 'Aethera built a procedure-specific charge capture checklist that required implant invoice reconciliation before claim submission. A global period tracking module was implemented in their PM system, flagging any claims that risked modifier conflicts. The audit response team handled both pending audit letters, resulting in no recoupment.',
@@ -63,7 +63,7 @@ const caseStudies = [
   {
     specialty: 'Dermatology',
     practice: 'Dermatology Practice',
-    location: 'Florida',
+    location: 'United States',
     tag: 'Dermatology',
     challenge: 'A dermatology practice with high Mohs surgery volume had been miscoding Mohs staging procedures for years — submitting single-stage codes without the required block and specimen-count add-ons. Additionally, reconstructive cases were being written off because documentation didn\'t meet medical necessity standards for their top two payers. Their denial rate was 18%.',
     solution: 'Aethera assigned a Mohs-specialist coder who rebuilt the practice\'s procedure coding from the ground up. We created documentation templates specifically designed to satisfy reconstructive necessity criteria for each of their top payers. A payer-specific Mohs rule library was maintained and updated quarterly.',
@@ -79,7 +79,7 @@ const caseStudies = [
   {
     specialty: 'Psychiatry',
     practice: 'Behavioral Health Group',
-    location: 'Florida',
+    location: 'United States',
     tag: 'Behavioral Health',
     challenge: 'A behavioral health group was struggling on three fronts: E&M and psychotherapy claims were triggering bundling edits on major payers, prior authorization denials for newer psychiatric medications were running at 34%, and patient collections were functionally nonexistent — balances were either written off or sent to collections with no intermediate step.',
     solution: 'Aethera restructured the group\'s claim submission logic to properly unbundle therapy and medication management per payer policy. A prior auth workflow was built specifically for the psychiatry formulary, with escalation paths for denials. A four-step patient statement series with a soft-touch phone follow-up protocol was implemented for all patient balances over $50.',
@@ -95,7 +95,7 @@ const caseStudies = [
   {
     specialty: 'Internal Medicine',
     practice: 'Internal Medicine Group',
-    location: 'Florida',
+    location: 'United States',
     tag: 'Group Practice',
     challenge: 'An internal medicine group was transitioning from hospital-employed billing to independent billing following an ownership change. They had no existing billing infrastructure, providers who needed credentialing with their new TIN, and a hard go-live date 45 days out. Cash flow continuity was the primary concern.',
     solution: 'Aethera executed a full build-out of the billing infrastructure: credentialing for all providers simultaneously, eClinicalWorks integration configuration, fee schedule loading, and payer enrollment. Claims began processing on day 38 — two days ahead of the hard deadline. A dedicated project manager coordinated across all workstreams.',
