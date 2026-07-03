@@ -6,7 +6,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: "Workers' Compensation Billing & RCM | State Fee Schedules, Liens, eBill | Aethera Healthcare",
+  title: "Workers' Compensation Billing & RCM | State Fee Schedules, Liens, eBill",
   description: "Workers' compensation revenue cycle management. We handle state fee schedules, jurisdiction rules, utilization review, narrative reports, IAIABC eBilling, lien filing, and bill-review appeals. Faster WC payment, fewer write-offs.",
 };
 

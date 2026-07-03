@@ -78,6 +78,11 @@ const relatedServices = [
   { name: 'Privacy Policy', href: '/compliance/privacy-policy' },
 ];
 
+export const metadata = {
+  title: "Compliance & Revenue Cycle Auditing",
+  description: "HIPAA compliance reviews and revenue cycle audits that surface coding, documentation, and billing risk before payers or regulators do. Protect your practice with Aethera.",
+};
+
 export default function ComplianceAuditing() {
   return (
     <div className="min-h-screen flex flex-col pt-16">

@@ -78,6 +78,11 @@ const relatedServices = [
   { name: 'Denial Management', href: '/services/denial-management' },
 ];
 
+export const metadata = {
+  title: "Prior Authorization Services & Tracking",
+  description: "Streamlined prior authorization submission, tracking, and follow-up that prevents auth-related denials and speeds care. Prior auth management from Aethera.",
+};
+
 export default function PriorAuthorization() {
   return (
     <div className="min-h-screen flex flex-col pt-16">

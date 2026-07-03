@@ -7,7 +7,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: "HIPAA Compliance Program | Aethera Healthcare Solutions",
+  title: "HIPAA Compliance Program",
   description: "Comprehensive HIPAA compliance program for healthcare providers. Learn about our administrative, physical, and technical safeguards for protecting patient health information.",
 };
 

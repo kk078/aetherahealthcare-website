@@ -78,6 +78,11 @@ const relatedServices = [
   { name: 'Claims & Billing', href: '/services/claims-billing' },
 ];
 
+export const metadata = {
+  title: "Insurance Eligibility & Benefits Verification",
+  description: "Real-time insurance eligibility and benefits verification that stops front-end denials before claims go out. Accurate coverage checks from Aethera.",
+};
+
 export default function EligibilityVerification() {
   return (
     <div className="min-h-screen flex flex-col pt-16">

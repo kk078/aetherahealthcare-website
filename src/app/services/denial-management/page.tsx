@@ -7,7 +7,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: "Denial Management & Appeals | Aethera Healthcare Solutions",
+  title: "Denial Management & Appeals",
   description: "Expert denial management and appeal services for healthcare providers. Reduce denial rates, maximize recovery, and protect your revenue with our proactive approach.",
 };
 

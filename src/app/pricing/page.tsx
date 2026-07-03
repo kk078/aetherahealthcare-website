@@ -10,7 +10,7 @@ import ROICalculator from '@/components/ui/ROICalculator';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
-  title: "Pricing | Transparent Medical Billing Rates | Aethera Healthcare",
+  title: "Pricing | Transparent Medical Billing Rates",
   description: "Transparent pricing for medical billing services. Choose from percentage-based or per-claim pricing models with no hidden fees. Get a free consultation today.",
 };
 

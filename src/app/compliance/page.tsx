@@ -8,7 +8,7 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
-  title: "Compliance | HIPAA, Security & Privacy | Aethera Healthcare",
+  title: "Compliance | HIPAA, Security & Privacy",
   description: "Learn about Aethera Healthcare Solutions' comprehensive compliance program including HIPAA, security practices, and privacy protection for healthcare providers.",
 };
 

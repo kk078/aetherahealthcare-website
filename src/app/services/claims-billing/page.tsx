@@ -7,7 +7,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: "Claims & Billing Services | Clean Claim Submission | Aethera Healthcare",
+  title: "Claims & Billing Services | Clean Claim Submission",
   description: "Professional claims and billing services for healthcare providers. Clean claim submission, denial management, and payment posting to accelerate your revenue cycle.",
 };
 

@@ -78,6 +78,11 @@ const relatedServices = [
   { name: 'Denial Management', href: '/services/denial-management' },
 ];
 
+export const metadata = {
+  title: "Telehealth Billing & Virtual Care RCM",
+  description: "Specialized telehealth billing and coding — correct modifiers, POS codes, and payer rules for virtual care so every visit gets paid. Telehealth RCM from Aethera.",
+};
+
 export default function TelehealthBilling() {
   return (
     <div className="min-h-screen flex flex-col pt-16">

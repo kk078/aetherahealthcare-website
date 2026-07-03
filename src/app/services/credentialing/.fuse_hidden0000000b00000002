@@ -78,11 +78,6 @@ const relatedServices = [
   { name: 'Prior Authorization', href: '/services/prior-authorization' },
 ];
 
-export const metadata = {
-  title: "Provider Credentialing & Payer Enrollment",
-  description: "End-to-end provider credentialing and payer enrollment — CAQH, revalidations, and re-credentialing handled so your providers get in-network and stay paid. Aethera credentialing.",
-};
-
 export default function Credentialing() {
   return (
     <div className="min-h-screen flex flex-col pt-16">

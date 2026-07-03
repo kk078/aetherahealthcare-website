@@ -78,6 +78,11 @@ const relatedServices = [
   { name: 'Claims & Billing', href: '/services/claims-billing' },
 ];
 
+export const metadata = {
+  title: "Revenue Cycle Reporting & Analytics",
+  description: "Clear, real-time revenue cycle reporting and analytics covering collections, denials, A/R days, and KPI benchmarks so you always know your practice's financial health. Aethera reporting.",
+};
+
 export default function ReportingAnalytics() {
   return (
     <div className="min-h-screen flex flex-col pt-16">

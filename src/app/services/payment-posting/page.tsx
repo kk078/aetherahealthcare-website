@@ -7,7 +7,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: "Payment Posting Services | ERA Processing | Aethera Healthcare",
+  title: "Payment Posting Services | ERA Processing",
   description: "Professional payment posting services including ERA processing, EOB posting, and patient payment application. Optimize your cash flow with accurate payment processing.",
 };
 

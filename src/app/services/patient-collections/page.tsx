@@ -78,6 +78,11 @@ const relatedServices = [
   { name: 'AR Follow-Up', href: '/services/ar-followup' },
 ];
 
+export const metadata = {
+  title: "Patient Collections & Statement Management",
+  description: "Professional, compassionate patient collections and statement management that lifts patient payments without hurting satisfaction. Patient A/R handled by Aethera.",
+};
+
 export default function PatientCollections() {
   return (
     <div className="min-h-screen flex flex-col pt-16">

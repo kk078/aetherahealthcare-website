@@ -1,5 +1,6 @@
 import { getAllPayers } from '@/lib/payers';
 import { SEO_LOCATIONS, allBillingParams } from '@/lib/seo.data';
+import { POSTS } from '@/lib/blogPosts';
 
 // Make this route static for export
 export const dynamic = 'force-static';
@@ -9,6 +10,7 @@ export function GET() {
 
   const staticRoutes = [
     '/', '/about', '/services', '/specialties', '/pricing', '/process', '/contact',
+    '/free-assessment', '/gap-analysis',
     '/compliance', '/compliance/hipaa', '/compliance/privacy-policy', '/compliance/terms-of-service',
     '/compliance/baa', '/compliance/security', '/blog', '/faq', '/careers',
     '/payers', '/payer-services', '/integrations', '/portal', '/case-studies', '/decks',
@@ -22,13 +24,19 @@ export function GET() {
     // specialty service pages
     '/services/cardiology-billing', '/services/orthopedic-billing', '/services/dermatology-billing',
     '/services/psychiatry-billing', '/services/family-medicine-billing', '/services/pharmacy-billing',
-    '/services/dental-billing', '/services/workers-compensation-billing', '/services/hospitalist-billing',
+    '/services/dental-billing', '/services/workers-compensation-billing',
   ];
 
-  // Free tools
+  // Free tools (all live tool pages)
   const toolRoutes = [
-    '/tools', '/tools/denial-code-lookup', '/tools/clean-claim-scorecard', '/tools/ar-cost-calculator',
+    '/tools',
+    '/tools/denial-code-lookup', '/tools/clean-claim-scorecard', '/tools/ar-cost-calculator',
+    '/tools/denial-cost-calculator', '/tools/rvu-calculator', '/tools/timely-filing-calculator',
+    '/tools/eligibility-checklist', '/tools/payer-provider-manuals',
   ];
+
+  // Blog articles
+  const blogRoutes = POSTS.map((p) => `/blog/${p.slug}`);
 
   // Payer directory
   const payerRoutes = [
@@ -53,14 +61,16 @@ export function GET() {
 
   const allRoutes = [
     ...staticRoutes, ...serviceRoutes, ...toolRoutes,
-    ...payerRoutes, ...compareRoutes, ...billingRoutes,
+    ...payerRoutes, ...compareRoutes, ...billingRoutes, ...blogRoutes,
   ];
 
   const lastmod = new Date().toISOString();
   const priority = (route: string) => {
     if (route === '/') return '1.0';
+    if (route === '/free-assessment' || route === '/gap-analysis') return '0.9';
     if (route.startsWith('/services/') || route.startsWith('/medical-billing/')) return '0.8';
     if (route.startsWith('/tools') || route.startsWith('/compare') || route.startsWith('/payers/directory')) return '0.7';
+    if (route.startsWith('/blog/')) return '0.6';
     return '0.6';
   };
 

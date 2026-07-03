@@ -1,89 +1,84 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Users, CheckCircle, Shield, BarChart3 } from 'lucide-react';
+import { Shield, CheckCircle, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 const includedItems = [
-  'Initial provider enrollment',
-  'Re-enrollment and revalidation',
-  'Payer panel applications',
-  'Hospital privileges applications',
-  'CAQH profile maintenance',
-  'License verification and renewal tracking',
-  'DEA registration and renewal',
-  'Board certification verification',
-  'Malpractice insurance verification',
-  'Sanctions and exclusions screening',
-  'Ongoing monitoring and compliance',
-  'Credentialing file management',
+  'Annual HIPAA risk assessments',
+  'Compliance policy development and updates',
+  'Staff training program administration',
+  'Business Associate Agreement management',
+  'Incident response and breach management',
+  'Documentation and record retention',
+  'Periodic compliance audits',
+  'Regulatory update monitoring',
+  'Sanctions policy enforcement',
+  'Security awareness training',
+  'Vendor compliance oversight',
+  'Compliance reporting and analytics',
 ];
 
 const processSteps = [
-  'File review and gap analysis',
-  'Document collection and verification',
-  'Application preparation',
-  'Submission to payers/hospitals',
-  'Status monitoring and follow-up',
-  'Approval tracking',
-  'Panel activation',
-  'Ongoing compliance monitoring',
+  'Compliance gap assessment',
+  'Policy review and update',
+  'Staff training implementation',
+  'Risk assessment execution',
+  'Incident response testing',
+  'Audit planning and execution',
+  'Remediation planning',
+  'Ongoing monitoring',
 ];
 
 const kpis = [
-  { metric: 'Credentialing Accuracy', value: '100%' },
-  { metric: 'Average Turnaround Time', value: '<60 days' },
-  { metric: 'Recredentialing Compliance', value: '100%' },
-  { metric: 'Payer Panel Activation', value: '>95%' },
+  { metric: 'Audit Compliance Rate', value: '100%' },
+  { metric: 'Staff Training Completion', value: '100%' },
+  { metric: 'Incident Response Time', value: '<2 hours' },
+  { metric: 'Policy Update Frequency', value: 'Annual' },
 ];
 
 const challenges = [
-  'Lengthy credentialing processes',
-  'Complex documentation requirements',
-  'Multiple payer-specific applications',
-  'Ongoing recredentialing deadlines',
-  'Sanctions and exclusions monitoring',
-  'Provider panel management',
-  'Compliance with changing regulations',
+  'Evolving regulatory requirements',
+  'Staff training and compliance',
+  'Business associate management',
+  'Incident response preparedness',
+  'Documentation and record keeping',
+  'Vendor compliance oversight',
+  'Audit preparation and execution',
 ];
 
 const faqs = [
   {
-    question: 'How long does the credentialing process take?',
-    answer: 'Initial credentialing typically takes 60-90 days, depending on payer requirements. We provide weekly status updates and work expeditiously to activate panels as quickly as possible.'
+    question: 'How often do you conduct compliance audits?',
+    answer: 'We perform comprehensive compliance audits annually, with targeted reviews of specific areas quarterly. We also conduct audits following any security incidents or regulatory changes.'
   },
   {
-    question: 'Do you handle hospital privileges as well?',
-    answer: "Yes, we manage the complete credentialing process including hospital privileges applications, medical staff appointments, and ongoing compliance requirements for hospital affiliations."
+    question: 'Do you handle Business Associate Agreements?',
+    answer: "Yes, we manage the complete BAA lifecycle including creation, execution, tracking, and renewal. We ensure all vendors and subcontractors have executed BAAs before accessing PHI."
   },
   {
-    question: 'How do you ensure compliance with recredentialing deadlines?',
-    answer: 'We maintain a comprehensive tracking system that monitors all recredentialing deadlines and initiates the process 120 days in advance to ensure no lapses in panel participation.'
+    question: 'How do you stay current with regulatory changes?',
+    answer: 'Our compliance team monitors federal and state regulatory updates daily, participates in industry groups, and maintains certifications with compliance organizations to ensure current knowledge.'
   },
   {
-    question: 'What is CAQH and do you manage it?',
-    answer: 'CAQH (Council for Affordable Quality Healthcare) is a standardized credentialing database used by most commercial payers. We maintain complete and accurate CAQH profiles for all providers.'
+    question: 'What happens during a compliance incident?',
+    answer: 'We follow our documented incident response procedures with immediate containment, investigation, stakeholder notification, and remediation. All incidents are thoroughly documented and reviewed for prevention.'
   },
   {
-    question: 'How do you handle sanctions and exclusions monitoring?',
-    answer: 'We conduct monthly screenings of all providers against the OIG Exclusion List, SAM.gov, and state Medicaid exclusion databases. Any issues are immediately reported and resolved.'
+    question: 'How do you ensure staff compliance training?',
+    answer: 'We provide comprehensive annual training for all staff with role-specific modules. Training completion is tracked and verified, with refresher training for any policy updates.'
   }
 ];
 
 const relatedServices = [
-  { name: 'Compliance & Auditing', href: '/services/compliance-auditing' },
-  { name: 'Eligibility Verification', href: '/services/eligibility-verification' },
-  { name: 'Prior Authorization', href: '/services/prior-authorization' },
+  { name: 'Security Practices', href: '/compliance/security' },
+  { name: 'HIPAA Compliance', href: '/compliance/hipaa' },
+  { name: 'Privacy Policy', href: '/compliance/privacy-policy' },
 ];
 
-export const metadata = {
-  title: "Provider Credentialing & Payer Enrollment",
-  description: "End-to-end provider credentialing and payer enrollment — CAQH, revalidations, and re-credentialing handled so your providers get in-network and stay paid. Aethera credentialing.",
-};
-
-export default function Credentialing() {
+export default function ComplianceAuditing() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
       <Head>
@@ -93,14 +88,14 @@ export default function Credentialing() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Service",
-              "serviceType": "Provider Credentialing Services",
+              "serviceType": "Compliance & Auditing Services",
               "provider": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
                 "url": "https://aetherahealthcare-website.pages.dev",
                 "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
               },
-              "description": "Complete credentialing and enrollment services for healthcare providers. Streamline provider panel enrollment and maintain compliance with payer requirements.",
+              "description": "Comprehensive compliance management that protects your practice and patients. Expert HIPAA compliance, risk assessments, and audit preparation.",
               "areaServed": "United States",
               "category": "Healthcare Services",
               "offers": {
@@ -123,12 +118,12 @@ export default function Credentialing() {
           <div className="text-center">
             <FadeIn>
               <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-6">
-                Provider Credentialing Services
+                Compliance & Auditing Services
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="text-xl text-cream max-w-3xl mx-auto">
-                Complete credentialing management that gets your providers on panels faster.
+                Comprehensive compliance management that protects your practice and patients.
               </p>
             </FadeIn>
           </div>
@@ -142,16 +137,16 @@ export default function Credentialing() {
             <div>
               <FadeIn>
                 <h2 className="text-3xl font-bold text-navy font-playfair mb-6">
-                  Expert Credentialing for Seamless Provider Enrollment
+                  Expert Compliance Management for Healthcare Practices
                 </h2>
                 <p className="text-gray mb-6">
-                  Our comprehensive credentialing services ensure your providers are enrolled with all necessary payers and facilities quickly and accurately, with ongoing compliance management.
+                  Our comprehensive compliance services ensure your practice meets all federal and state regulatory requirements while maintaining the highest standards of patient privacy and data security.
                 </p>
                 <p className="text-gray mb-6">
-                  We handle initial credentialing, recredentialing, hospital privileges, CAQH maintenance, and ongoing monitoring to keep your panels active and compliant.
+                  We handle HIPAA compliance, annual risk assessments, staff training, incident response, policy development, and audit preparation with expert knowledge and meticulous attention to detail.
                 </p>
                 <p className="text-gray">
-                  With our expert credentialing team, you can eliminate credentialing delays, reduce administrative burden, and ensure continuous revenue flow from all panels.
+                  With our proactive compliance management, you can eliminate regulatory risks, avoid penalties, and maintain patient trust through demonstrated commitment to privacy and security.
                 </p>
               </FadeIn>
             </div>
@@ -159,16 +154,16 @@ export default function Credentialing() {
               <FadeIn delay={0.2}>
                 <div className="bg-cream rounded-2xl p-8 h-full">
                   <div className="flex items-center mb-6">
-                    <Users className="h-10 w-10 text-teal mr-4" />
+                    <Shield className="h-10 w-10 text-teal mr-4" />
                     <h3 className="text-2xl font-bold text-navy">Our Approach</h3>
                   </div>
                   <p className="text-gray mb-6">
-                    We combine detailed process management with expert knowledge of payer requirements to ensure complete and compliant credentialing.
+                    We combine regulatory expertise with practical implementation to ensure comprehensive compliance without disrupting your practice operations.
                   </p>
                   <div className="border-t border-gray/10 pt-6">
                     <h4 className="font-bold text-navy mb-4">Quality Assurance</h4>
                     <p className="text-gray">
-                      Every credentialing file undergoes comprehensive review and every application is verified for accuracy before submission.
+                      Every compliance activity undergoes expert review and documentation to ensure complete adherence to all applicable regulations.
                     </p>
                   </div>
                 </div>
@@ -183,8 +178,8 @@ export default function Credentialing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             label="WHAT'S INCLUDED"
-            title="Complete Credentialing Management"
-            description="Every aspect of provider credentialing covered for maximum efficiency and compliance."
+            title="Complete Compliance Management"
+            description="Every aspect of healthcare compliance covered for maximum protection and regulatory adherence."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
@@ -205,8 +200,8 @@ export default function Credentialing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             label="OUR PROCESS"
-            title="Credentialing Workflow"
-            description="Eight-step process ensuring complete and compliant provider enrollment."
+            title="Compliance Workflow"
+            description="Eight-step process ensuring comprehensive compliance management and audit readiness."
           />
 
           <div className="mt-16">
@@ -238,8 +233,8 @@ export default function Credentialing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             label="PERFORMANCE METRICS"
-            title="Credentialing Excellence"
-            description="Measurable results that drive your revenue cycle success."
+            title="Compliance Excellence"
+            description="Measurable results that demonstrate your commitment to regulatory adherence."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
@@ -260,7 +255,7 @@ export default function Credentialing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             label="CHALLENGES WE SOLVE"
-            title="Credentialing Complexity Made Simple"
+            title="Compliance Complexity Made Simple"
             description="We handle the complexities so you don't have to."
           />
 
@@ -286,7 +281,7 @@ export default function Credentialing() {
           <SectionHeader
             label="FAQ"
             title="Frequently Asked Questions"
-            description="Answers to common questions about our credentialing services."
+            description="Answers to common questions about our compliance and auditing services."
           />
 
           <div className="grid grid-cols-1 gap-8 mt-16">
@@ -308,10 +303,10 @@ export default function Credentialing() {
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-16 px-8 text-center">
             <FadeIn>
               <h2 className="text-3xl md:text-4xl font-bold text-white font-playfair mb-6">
-                Ready to Streamline Your Credentialing Process?
+                Ready to Ensure Complete Compliance?
               </h2>
               <p className="text-cream text-xl max-w-2xl mx-auto mb-8">
-                Schedule a free consultation to see how Aethera can accelerate your provider panel enrollment.
+                Schedule a free consultation to see how Aethera can protect your practice from regulatory risks.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link prefetch={false}
@@ -338,7 +333,7 @@ export default function Credentialing() {
           <SectionHeader
             label="RELATED SERVICES"
             title="Complete Revenue Cycle Management"
-            description="Additional services that complement our credentialing expertise."
+            description="Additional services that complement our compliance expertise."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">

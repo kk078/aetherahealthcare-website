@@ -78,6 +78,11 @@ const relatedServices = [
   { name: 'Reporting & Analytics', href: '/services/reporting-analytics' },
 ];
 
+export const metadata = {
+  title: "A/R Follow-Up & Accounts Receivable Recovery",
+  description: "Dedicated accounts receivable follow-up that works aging claims, cuts days in A/R, and recovers revenue other billers write off. Systematic payer follow-up from Aethera.",
+};
+
 export default function ARFollowUp() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
