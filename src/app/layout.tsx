@@ -57,6 +57,8 @@ export const metadata: Metadata = {
   },
 };
 
+import TopContactBar from '@/components/ui/TopContactBar';
+import CloudflareAnalytics from '@/components/ui/CloudflareAnalytics';
 import CookieConsent from '@/components/ui/CookieConsent';
 import BackToTop from '@/components/ui/BackToTop';
 import CallbackButton from '@/components/ui/CallbackButton';
@@ -74,12 +76,14 @@ export default function RootLayout({
       className={`${playfair.variable} ${dmSans.variable} ${jakarta.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-dark">
+        <TopContactBar />
         {children}
         <CookieConsent />
         <BackToTop />
         <CallbackButton />
         <ExitIntentCTA />
         <AIAssistant />
+        <CloudflareAnalytics />
       </body>
     </html>
   );
