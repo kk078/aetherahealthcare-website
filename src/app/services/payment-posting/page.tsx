@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { CreditCard, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -86,7 +85,7 @@ const relatedServices = [
 export default function PaymentPosting() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -97,8 +96,8 @@ export default function PaymentPosting() {
               "provider": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               },
               "description": "Professional payment posting services including ERA processing, EOB posting, and patient payment application. Optimize your cash flow with accurate payment processing.",
               "areaServed": "United States",
@@ -114,7 +113,7 @@ export default function PaymentPosting() {
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       {/* Hero Section */}

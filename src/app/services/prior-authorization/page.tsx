@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { Calendar, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -86,7 +85,7 @@ export const metadata = {
 export default function PriorAuthorization() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -97,8 +96,8 @@ export default function PriorAuthorization() {
               "provider": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               },
               "description": "Streamlined prior authorization management that eliminates treatment delays. Expert handling of complex requests and appeals for healthcare providers.",
               "areaServed": "United States",
@@ -114,7 +113,7 @@ export default function PriorAuthorization() {
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       {/* Hero Section */}

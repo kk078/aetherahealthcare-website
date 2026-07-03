@@ -1,6 +1,5 @@
 'use client';
 
-import Head from 'next/head';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import {
@@ -93,7 +92,7 @@ const faqs = [
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col pt-16 font-inter">
-      <Head>
+      <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org", "@type": "Organization",
           "name": "Aethera Healthcare Solutions",
@@ -109,7 +108,7 @@ export default function Home() {
           "url": "https://aetherahealthcare.com",
           "potentialAction": { "@type": "SearchAction", "target": "https://aetherahealthcare.com/search?q={search_term_string}", "query-input": "required name=search_term_string" },
         }) }} />
-      </Head>
+      </>
       <Navbar />
 
       {/* ===================== HERO ===================== */}

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { Shield, CheckCircle, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -86,7 +85,7 @@ export const metadata = {
 export default function ComplianceAuditing() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -97,8 +96,8 @@ export default function ComplianceAuditing() {
               "provider": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               },
               "description": "Comprehensive compliance management that protects your practice and patients. Expert HIPAA compliance, risk assessments, and audit preparation.",
               "areaServed": "United States",
@@ -114,7 +113,7 @@ export default function ComplianceAuditing() {
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       {/* Hero Section */}

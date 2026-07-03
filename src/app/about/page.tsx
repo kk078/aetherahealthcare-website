@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
@@ -48,7 +47,7 @@ const reasons = [
 export default function About() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -57,12 +56,12 @@ export default function About() {
               "@type": "AboutPage",
               "name": "About Aethera Healthcare Solutions",
               "description": "Learn about Aethera Healthcare Solutions, a startup focused on providing personalized revenue cycle management for independent healthcare providers. Discover our mission, values, and commitment to your success.",
-              "url": "https://aetherahealthcare-website.pages.dev/about",
+              "url": "https://aetherahealthcare.com/about",
               "publisher": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               }
             })
           }}
@@ -100,7 +99,7 @@ export default function About() {
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       <RcmHeroBand

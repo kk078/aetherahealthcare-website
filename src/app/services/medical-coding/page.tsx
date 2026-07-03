@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { FileText, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -83,7 +82,7 @@ const relatedServices = [
 export default function MedicalCoding() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -94,8 +93,8 @@ export default function MedicalCoding() {
               "provider": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               },
               "description": "Expert medical coding services including ICD-10, CPT, and HCPCS coding for healthcare providers. Maximize reimbursement with accurate, compliant coding from certified professionals.",
               "areaServed": "United States",
@@ -111,7 +110,7 @@ export default function MedicalCoding() {
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       {/* Hero Section */}

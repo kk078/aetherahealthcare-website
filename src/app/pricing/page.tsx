@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -177,7 +176,7 @@ const faqs = [
 export default function Pricing() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -186,17 +185,17 @@ export default function Pricing() {
               "@type": "OfferCatalog",
               "name": "Aethera Healthcare Solutions Pricing",
               "description": "Transparent pricing for medical billing services. Choose from percentage-based or per-claim pricing models with no hidden fees. Get a free consultation today.",
-              "url": "https://aetherahealthcare-website.pages.dev/pricing",
+              "url": "https://aetherahealthcare.com/pricing",
               "publisher": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               }
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       <RcmHeroBand

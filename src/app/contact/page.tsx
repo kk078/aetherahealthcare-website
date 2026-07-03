@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { Phone, Mail, Clock } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -16,7 +15,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -25,12 +24,12 @@ export default function Contact() {
               "@type": "ContactPage",
               "name": "Contact Aethera Healthcare Solutions",
               "description": "Get in touch with Aethera Healthcare Solutions for a free consultation. Contact us by phone at +1 (863) 694-0325 or email at info@aetherahealthcare.com.",
-              "url": "https://aetherahealthcare-website.pages.dev/contact",
+              "url": "https://aetherahealthcare.com/contact",
               "publisher": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               }
             })
           }}
@@ -42,8 +41,8 @@ export default function Contact() {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Aethera Healthcare Solutions",
-              "url": "https://aetherahealthcare-website.pages.dev",
-              "logo": "https://aetherahealthcare-website.pages.dev/logo.png",
+              "url": "https://aetherahealthcare.com",
+              "logo": "https://aetherahealthcare.com/logo.png",
               "contactPoint": [{
                 "@type": "ContactPoint",
                 "telephone": "+1-863-694-0325",
@@ -68,7 +67,7 @@ export default function Contact() {
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       <RcmHeroBand

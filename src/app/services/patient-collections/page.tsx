@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { CreditCard, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -86,7 +85,7 @@ export const metadata = {
 export default function PatientCollections() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -97,8 +96,8 @@ export default function PatientCollections() {
               "provider": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               },
               "description": "Professional patient collections that maximize revenue while preserving relationships. Expert handling of statement generation, payment plans, and collection agency coordination.",
               "areaServed": "United States",
@@ -114,7 +113,7 @@ export default function PatientCollections() {
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       {/* Hero Section */}

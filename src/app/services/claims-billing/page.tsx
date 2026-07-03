@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { DollarSign, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -86,7 +85,7 @@ const relatedServices = [
 export default function ClaimsBilling() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -97,8 +96,8 @@ export default function ClaimsBilling() {
               "provider": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               },
               "description": "Professional claims and billing services for healthcare providers. Clean claim submission, denial management, and payment posting to accelerate your revenue cycle.",
               "areaServed": "United States",
@@ -114,7 +113,7 @@ export default function ClaimsBilling() {
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       {/* Hero Section */}

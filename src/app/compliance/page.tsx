@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { Shield, CheckCircle, FileText, Lock, Users } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -75,7 +74,7 @@ const commitments = [
 export default function Compliance() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -84,17 +83,17 @@ export default function Compliance() {
               "@type": "WebPage",
               "name": "Compliance | HIPAA, Security & Privacy | Aethera Healthcare",
               "description": "Learn about Aethera Healthcare Solutions' comprehensive compliance program including HIPAA, security practices, and privacy protection for healthcare providers.",
-              "url": "https://aetherahealthcare-website.pages.dev/compliance",
+              "url": "https://aetherahealthcare.com/compliance",
               "publisher": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               }
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       {/* Hero Section */}

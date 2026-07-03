@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import {
   FileText,
@@ -120,7 +119,7 @@ const services = [
 export default function Services() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -131,8 +130,8 @@ export default function Services() {
               "provider": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               },
               "description": "Comprehensive revenue cycle management services including medical coding, claims processing, payment posting, denial management, and more for healthcare providers.",
               "areaServed": "United States",
@@ -140,7 +139,7 @@ export default function Services() {
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       <RcmHeroBand
