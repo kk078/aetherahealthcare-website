@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { FileText, CheckCircle, Users } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -37,6 +35,11 @@ const terms = [
     content: 'We guarantee a 95%+ clean claim rate, charge submission within 48 hours, payment posting within 24 hours, denial follow-up within 5 business days, and monthly reporting by the 10th of the following month.'
   }
 ];
+
+export const metadata = {
+  title: "Terms of Service",
+  description: "The terms governing your use of the Aethera Healthcare Solutions website and medical billing services.",
+};
 
 export default function TermsOfService() {
   return (

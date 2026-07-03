@@ -1,6 +1,3 @@
-'use client';
-
-import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -157,10 +154,15 @@ const specialties = [
   }
 ];
 
+export const metadata = {
+  title: "Medical Billing Specialties We Serve",
+  description: "Expert billing and revenue cycle management across 25+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+};
+
 export default function Specialties() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -169,17 +171,17 @@ export default function Specialties() {
               "@type": "WebPage",
               "name": "Medical Specialties We Serve | Aethera Healthcare Solutions",
               "description": "Expert billing and revenue cycle management for over 25 medical specialties with deep specialty-specific knowledge.",
-              "url": "https://aetherahealthcare-website.pages.dev/specialties",
+              "url": "https://aetherahealthcare.com/specialties",
               "publisher": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               }
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       <RcmHeroBand

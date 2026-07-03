@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { Lock, Shield, CheckCircle, Users, Zap } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -39,6 +37,11 @@ const securityAreas = [
     icon: <Shield className="h-8 w-8" />
   }
 ];
+
+export const metadata = {
+  title: "Security & Data Protection",
+  description: "Aethera's security program — encryption, access controls, audit logging, and HIPAA safeguards that protect your practice and patient data.",
+};
 
 export default function SecurityPractices() {
   return (

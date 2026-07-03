@@ -1,6 +1,3 @@
-'use client';
-
-import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle, FileText, Settings, Upload, Users, Zap } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -102,10 +99,15 @@ const benefits = [
   'Seamless transition with no claim delays'
 ];
 
+export const metadata = {
+  title: "Our Onboarding & Billing Process",
+  description: "How Aethera onboards your practice — a structured, low-disruption process that gets your revenue cycle optimized and cash flowing from day one.",
+};
+
 export default function Process() {
   return (
     <div className="min-h-screen flex flex-col pt-16">
-      <Head>
+      <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -114,17 +116,17 @@ export default function Process() {
               "@type": "WebPage",
               "name": "Our Onboarding Process | Aethera Healthcare Solutions",
               "description": "A seamless 6-week process designed to minimize disruption and maximize your revenue from day one.",
-              "url": "https://aetherahealthcare-website.pages.dev/process",
+              "url": "https://aetherahealthcare.com/process",
               "publisher": {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare-website.pages.dev",
-                "logo": "https://aetherahealthcare-website.pages.dev/logo.png"
+                "url": "https://aetherahealthcare.com",
+                "logo": "https://aetherahealthcare.com/logo.png"
               }
             })
           }}
         />
-      </Head>
+      </>
       <Navbar />
 
       {/* Hero Section */}

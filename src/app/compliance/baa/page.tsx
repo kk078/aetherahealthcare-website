@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { FileText, Shield, CheckCircle, Users } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -42,6 +40,11 @@ const keyProvisions = [
   'Prompt return or destruction of PHI upon termination',
   'Full cooperation with compliance audits'
 ];
+
+export const metadata = {
+  title: "Business Associate Agreement (BAA)",
+  description: "Aethera's HIPAA Business Associate Agreement — how we safeguard protected health information (PHI) as your medical billing partner.",
+};
 
 export default function BusinessAssociateAgreement() {
   return (

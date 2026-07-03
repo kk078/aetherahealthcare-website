@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { Shield, FileText, Users, Lock } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -33,6 +31,11 @@ const sections = [
     content: 'You have rights to access your information, correct inaccurate information, accounting of disclosures, restriction requests, confidential communication preferences, and filing complaints.'
   }
 ];
+
+export const metadata = {
+  title: "Privacy Policy",
+  description: "How Aethera Healthcare Solutions collects, uses, and protects your information, with HIPAA-compliant data handling and clear privacy practices.",
+};
 
 export default function PrivacyPolicy() {
   return (
