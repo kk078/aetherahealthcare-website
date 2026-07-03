@@ -11,6 +11,183 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "author": "Amanda Rodriguez",
+    "date": "2026-07-03",
+    "image": "/images/blog/specialty-billing.svg",
+    "readTime": "5 min read",
+    "slug": "behavioral-health-billing-guide",
+    "title": "Behavioral Health Billing: The Rules That Trip Up Practices",
+    "category": "Specialty Billing",
+    "excerpt": "Behavioral health billing has rules other specialties never see — time-based codes, telehealth nuances, and payer limits that quietly cause denials. Here’s how to bill it cleanly.",
+    "sections": [
+      {
+        "p": [
+          "Behavioral health billing is deceptively hard: the visits look simple, but the coding, time thresholds, telehealth rules, and payer-specific limits create denials that primary care never encounters. For therapists, psychiatrists, and group practices, small documentation gaps turn into recurring lost revenue. This guide covers the rules that trip practices up and how to bill behavioral health cleanly. If you’d rather hand it off, see our <a href=\"/medical-billing/behavioral-health\">behavioral health medical billing</a> and <a href=\"/services/psychiatry-billing\">psychiatry billing services</a>."
+        ]
+      },
+      {
+        "h": "Why Behavioral Health Billing Is Different",
+        "p": [
+          "Much of behavioral health is billed with time-based codes, where the documented session length determines the code. Add frequent telehealth delivery, add-on codes, and payers that cap sessions or require authorization after a threshold, and the result is a specialty where documentation precision matters more than almost anywhere else."
+        ]
+      },
+      {
+        "h": "Common Denial Drivers",
+        "p": [
+          "Behavioral health denials cluster around a few predictable issues:"
+        ],
+        "ul": [
+          "Session time not documented to support the time-based code billed",
+          "Telehealth place-of-service or modifier errors",
+          "Missing authorization once a payer’s session limit is reached",
+          "Incorrect use of add-on codes or bundling with the primary service"
+        ]
+      },
+      {
+        "h": "Best Practices for Clean Behavioral Health Claims",
+        "p": [
+          "The fixes are mostly front-end and documentation discipline:"
+        ],
+        "ul": [
+          "Document exact session start/stop times to support each code",
+          "Verify benefits and session limits before care, and track authorizations",
+          "Keep telehealth modifiers and place-of-service current with each payer",
+          "Reconcile add-on codes against the primary service before submission"
+        ]
+      },
+      {
+        "h": "Protecting Behavioral Health Revenue From Denials",
+        "p": [
+          "Because sessions are recurring, a single systemic coding error repeats across dozens of claims before anyone notices. Track your denial mix by reason and payer, and work every denial promptly — our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> lays out the prevention-and-appeals framework that applies directly to behavioral health."
+        ]
+      },
+      {
+        "h": "How Aethera Helps Behavioral Health Practices",
+        "p": [
+          "Aethera provides specialty-trained behavioral health billing — time-based coding, telehealth rules, authorization tracking, and denial work handled by people who know the nuances, nationwide. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll review a sample of your claims and show you where revenue is slipping."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "Robert Johnson",
+    "date": "2026-07-03",
+    "image": "/images/blog/specialty-billing.svg",
+    "readTime": "5 min read",
+    "slug": "orthopedic-medical-billing-guide",
+    "title": "Orthopedic Billing: Global Periods, Modifiers & Denials",
+    "category": "Specialty Billing",
+    "excerpt": "Orthopedic billing lives and dies by global periods, modifiers, and surgical coding. Here’s what drives orthopedic denials and how to prevent them.",
+    "sections": [
+      {
+        "p": [
+          "Orthopedic medical billing is one of the most modifier-dependent specialties there is. Global surgical periods, staged procedures, and the mix of office visits, injections, imaging, and surgery mean a single misapplied modifier can cost a practice a high-value claim. This guide covers what makes orthopedic billing hard, the denials that hurt most, and how to prevent them. For full-service help, see our <a href=\"/medical-billing/orthopedics\">orthopedic medical billing</a> and <a href=\"/services/orthopedic-billing\">orthopedic billing services</a>."
+        ]
+      },
+      {
+        "h": "Why Orthopedic Billing Is Complex",
+        "p": [
+          "Orthopedics combines evaluation and management visits, procedures with global periods, injections, durable medical equipment, and imaging — each governed by bundling and modifier rules. Surgeries carry post-operative global periods during which related visits aren’t separately billable, and distinguishing separately reportable services requires precise modifier use and documentation."
+        ]
+      },
+      {
+        "h": "Common Orthopedic Denial Drivers",
+        "p": [
+          "Most orthopedic denials come back to a handful of issues:"
+        ],
+        "ul": [
+          "Modifier errors on staged, bilateral, or separately identifiable procedures",
+          "Billing E/M visits inside a global period without proper justification",
+          "Prior authorization missing for advanced imaging, surgery, or DME",
+          "Documentation that doesn’t support medical necessity for the procedure"
+        ]
+      },
+      {
+        "h": "Best Practices That Prevent Denials",
+        "p": [
+          "The highest-return habits are modifier discipline and front-end verification:"
+        ],
+        "ul": [
+          "Track global periods and apply post-op modifiers correctly",
+          "Confirm authorization before imaging, surgery, and DME",
+          "Audit high-value surgical claims for modifier and bundling accuracy before submission",
+          "Tie every procedure to clear medical-necessity documentation"
+        ]
+      },
+      {
+        "h": "Protecting High-Value Orthopedic Claims",
+        "p": [
+          "Because orthopedic claims are high-dollar, a single unworked denial is significant revenue. Prioritize denials by value, appeal with procedure-specific documentation, and track each to resolution. Our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> details the framework, and the <a href=\"/services/denial-management\">denial management services</a> team can run it for you."
+        ]
+      },
+      {
+        "h": "How Aethera Helps Orthopedic Practices",
+        "p": [
+          "Aethera provides specialty-trained orthopedic billing — global-period tracking, modifier accuracy, surgical coding, and denial work, nationwide. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll review a sample of your orthopedic claims and show you where revenue is being lost."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "David Chen",
+    "date": "2026-07-03",
+    "image": "/images/blog/specialty-billing.svg",
+    "readTime": "5 min read",
+    "slug": "gastroenterology-medical-billing-guide",
+    "title": "Gastroenterology Billing: Screening vs Diagnostic Coding",
+    "category": "Specialty Billing",
+    "excerpt": "The screening-vs-diagnostic distinction is the single biggest source of gastroenterology billing errors. Here’s how to code GI procedures cleanly and prevent denials.",
+    "sections": [
+      {
+        "p": [
+          "Gastroenterology medical billing hinges on a distinction that sounds simple but causes constant errors: whether a procedure is screening or diagnostic. A colonoscopy that begins as a screening but becomes diagnostic mid-procedure changes the coding, the modifiers, and the patient’s cost-share — and getting it wrong drives both denials and patient complaints. This guide covers the screening-vs-diagnostic rules and the other GI billing pitfalls. For full-service help, see our <a href=\"/medical-billing/gastroenterology\">gastroenterology medical billing</a>."
+        ]
+      },
+      {
+        "h": "The Screening vs Diagnostic Problem",
+        "p": [
+          "When a screening colonoscopy results in a biopsy or polyp removal, it converts to a diagnostic/therapeutic procedure, which requires different codes and modifiers and changes how the claim is processed. Coding it as one when it’s the other produces denials, incorrect patient balances, and compliance risk. This single distinction is where most GI billing errors originate."
+        ]
+      },
+      {
+        "h": "Common Gastroenterology Denial Drivers",
+        "p": [
+          "Beyond screening-vs-diagnostic, GI denials cluster around:"
+        ],
+        "ul": [
+          "Modifier errors distinguishing screening that became diagnostic",
+          "Anesthesia and facility coordination on the same encounter",
+          "Medical-necessity documentation gaps for the procedure performed",
+          "Prior authorization missing for certain procedures or imaging"
+        ]
+      },
+      {
+        "h": "Best Practices for Clean GI Claims",
+        "p": [
+          "Precision at the point of coding prevents most GI denials:"
+        ],
+        "ul": [
+          "Establish a clear workflow for screening-to-diagnostic conversions",
+          "Apply the correct modifiers and confirm patient cost-share implications",
+          "Verify benefits and authorization before scheduled procedures",
+          "Audit procedure claims for accurate, well-documented coding"
+        ]
+      },
+      {
+        "h": "Protecting Gastroenterology Revenue",
+        "p": [
+          "GI procedures are high-value, so coding errors and unworked denials add up quickly. Strong coding discipline plus a disciplined denial workflow protects the revenue — our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> and our <a href=\"/services/medical-coding\">medical coding services</a> both address the root causes directly."
+        ]
+      },
+      {
+        "h": "How Aethera Helps Gastroenterology Practices",
+        "p": [
+          "Aethera provides specialty-trained GI billing — screening-vs-diagnostic coding, procedure accuracy, and denial work handled by people who know the rules, nationwide. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll review a sample of your GI claims and show you where revenue is slipping."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "good-clean-claim-rate-benchmark",
     "title": "What Is a Good Clean Claim Benchmark? A Practical Guide for U.S. Practices",
     "category": "Data & Analytics",
