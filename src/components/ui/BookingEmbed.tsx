@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 import Link from 'next/link';
 import { Calendar, CheckCircle2, Loader2, Phone } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
@@ -12,8 +12,17 @@ import { submitToWorker } from '@/lib/worker';
 const BOOKING_URL =
   process.env.NEXT_PUBLIC_BOOKING_URL || 'https://cal.com/aethera-healthcare-solutions-ribxep';
 
+function isCalcom(url: string) {
+  try { return new URL(url).hostname.endsWith('cal.com'); } catch { return false; }
+}
+function calLinkFrom(url: string) {
+  try { return new URL(url).pathname.replace(/^\//, ''); } catch { return ''; }
+}
+
 export default function BookingEmbed() {
+  if (BOOKING_URL && isCalcom(BOOKING_URL)) return <CalInline url={BOOKING_URL} />;
   if (BOOKING_URL) {
+    // Non–Cal.com tool (e.g. Calendly) — plain responsive iframe.
     return (
       <div className="w-full overflow-hidden rounded-2xl border border-gray/15 bg-white shadow-sm">
         <iframe
@@ -27,6 +36,44 @@ export default function BookingEmbed() {
     );
   }
   return <MeetingRequestForm />;
+}
+
+/** Cal.com official inline embed (works cross-domain; plain iframes are blocked). */
+function CalInline({ url }: { url: string }) {
+  useEffect(() => {
+    const calLink = calLinkFrom(url);
+    if (!calLink) return;
+    /* eslint-disable */
+    (function (C: any, A: string, L: string) {
+      const p = function (a: any, ar: any) { a.q.push(ar); };
+      const d = C.document;
+      C.Cal = C.Cal || function () {
+        const cal = C.Cal; const ar = arguments;
+        if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement('script')).src = A; cal.loaded = true; }
+        if (ar[0] === L) {
+          const api: any = function () { p(api, arguments); };
+          const namespace = ar[1]; api.q = api.q || [];
+          if (typeof namespace === 'string') { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ['initNamespace', namespace]); }
+          else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, 'https://app.cal.com/embed/embed.js', 'init');
+    const Cal = (window as any).Cal;
+    Cal('init', { origin: 'https://cal.com' });
+    Cal('inline', { elementOrSelector: '#cal-inline', calLink, layout: 'month_view' });
+    Cal('ui', { hideEventTypeDetails: false, layout: 'month_view' });
+    /* eslint-enable */
+  }, [url]);
+
+  return (
+    <div
+      id="cal-inline"
+      className="rounded-2xl border border-gray/15 bg-white shadow-sm overflow-auto"
+      style={{ width: '100%', minHeight: 'min(80vh, 900px)' }}
+    />
+  );
 }
 
 function MeetingRequestForm() {
