@@ -64,3 +64,6 @@ rebuild-website.bat
 # Cross-project CI that would fire on push from the wrong repo
 /.github/workflows/deploy-production.yml
 /.github/workflows/deploy-staging.yml
+
+# build/deploy logs (transient)
+*.log
