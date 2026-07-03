@@ -15,7 +15,7 @@ const caseStudies = [
   {
     specialty: 'Cardiology',
     practice: 'Cardiology Group',
-    location: 'Lakeland, FL',
+    location: 'Central Florida',
     tag: 'Cardiology',
     challenge: 'A cardiology group came to Aethera with a 14.2% denial rate — driven almost entirely by cardiac catheterization modifier errors and bundling issues on stress testing codes. Their AR had ballooned to 47 days, and a recent billing staff departure left a three-month gap in denial follow-up. An estimated $40,000/month was being written off without appeal.',
     solution: 'Aethera assigned a dedicated cardiology coding team that rebuilt their modifier matrix for the entire 93000-series. We implemented real-time eligibility checks pre-appointment and created a payer-specific rules library covering their top 8 payers. The backlog of unappealed denials was worked through systematically over 60 days.',

@@ -9,7 +9,7 @@ import { MapPin, Stethoscope, ArrowRight } from 'lucide-react';
 export const metadata = {
   title: { absolute: 'Medical Billing Services by Specialty & Location | Aethera Healthcare Solutions' },
   description:
-    'Specialty medical billing and revenue cycle management across Central Florida and Tampa Bay — Lakeland, Tampa, Orlando, St. Petersburg and more. Find billing built for your specialty and city.',
+    'Specialty medical billing and revenue cycle management across Central Florida and Tampa Bay — Tampa, Orlando, St. Petersburg and more. Find billing built for your specialty and city.',
   alternates: { canonical: 'https://aetherahealthcare.com/medical-billing' },
 };
 
@@ -49,14 +49,14 @@ export default function MedicalBillingHub() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {SEO_SPECIALTIES.map((s, i) => (
                 <FadeIn key={s.slug} delay={i * 0.04}>
-                  <Link prefetch={false} href={`/medical-billing/lakeland/${s.slug}`} className="group block bg-white rounded-xl border border-gray/15 p-4 hover:shadow-lg transition-all">
+                  <Link prefetch={false} href={`/medical-billing/tampa/${s.slug}`} className="group block bg-white rounded-xl border border-gray/15 p-4 hover:shadow-lg transition-all">
                     <span className="block text-navy font-semibold text-sm">{s.name}</span>
                     <span className="block text-xs text-gray mt-1 leading-snug">{s.cpt}</span>
                   </Link>
                 </FadeIn>
               ))}
             </div>
-            <p className="text-xs text-gray mt-3">Specialty links open the Lakeland page — every specialty is available in all of the cities above.</p>
+            <p className="text-xs text-gray mt-3">Specialty links open the Tampa page — every specialty is available in all of the cities above.</p>
           </div>
 
           <div className="text-center pt-2">

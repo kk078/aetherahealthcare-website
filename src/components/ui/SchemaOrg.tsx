@@ -20,8 +20,6 @@ export default function SchemaOrg() {
         email: 'support@aetherahealthcare.com',
         address: {
           '@type': 'PostalAddress',
-          addressLocality: 'Lakeland',
-          addressRegion: 'FL',
           addressCountry: 'US',
         },
         areaServed: {

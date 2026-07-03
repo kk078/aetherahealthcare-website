@@ -55,13 +55,6 @@ export default function Contact() {
                 "email": "support@aetherahealthcare.com",
                 "contactType": "technical support"
               }],
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Lakeland",
-                "addressRegion": "FL",
-                "postalCode": "33801",
-                "streetAddress": "PO Box 1234"
-              },
               "email": "info@aetherahealthcare.com",
               "telephone": "+1-813-519-4640"
             })

@@ -80,13 +80,6 @@ export default function About() {
                 "@type": "Person",
                 "name": "Aethera Healthcare Solutions Team"
               },
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Lakeland",
-                "addressRegion": "FL",
-                "postalCode": "33801",
-                "streetAddress": "PO Box 1234"
-              },
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-813-519-4640",

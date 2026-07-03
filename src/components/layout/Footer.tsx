@@ -162,7 +162,7 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Aethera Healthcare Solutions Private Limited. All rights reserved.
             </p>
             <p className="text-gray text-sm mt-3 md:mt-0">
-              Lakeland, FL &middot; aetherahealthcare.com
+              Serving practices nationwide &middot; aetherahealthcare.com
             </p>
           </div>
         </div>

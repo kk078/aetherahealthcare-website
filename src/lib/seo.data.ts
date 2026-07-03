@@ -3,8 +3,8 @@
  * pages, plus shared specialty/location metadata. Kept deliberately curated (not
  * machine-spun) so each page carries genuine, specialty-specific substance.
  *
- * Aethera is headquartered in Lakeland, FL, so the location set is the Central
- * Florida / Tampa Bay / Orlando corridor where local intent is strongest.
+ * Aethera serves the Central Florida / Tampa Bay / Orlando corridor, so the
+ * location set covers the cities in that region where local intent is strongest.
  */
 
 export interface SeoSpecialty {
@@ -178,7 +178,6 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
 ];
 
 export const SEO_LOCATIONS: SeoLocation[] = [
-  { slug: 'lakeland', city: 'Lakeland', region: 'Polk County', blurb: 'our home market in the heart of Polk County' },
   { slug: 'tampa', city: 'Tampa', region: 'Hillsborough County', blurb: 'the Tampa Bay metro' },
   { slug: 'orlando', city: 'Orlando', region: 'Orange County', blurb: 'the Greater Orlando area' },
   { slug: 'st-petersburg', city: 'St. Petersburg', region: 'Pinellas County', blurb: 'the Pinellas County coast' },
