@@ -12,6 +12,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import AgingReport from '@/components/ui/AgingReport';
 import { submitToWorker } from '@/lib/worker';
+import { trackConversion } from '@/lib/gtag';
 import {
   decodeBuffer, parseDelimited, rowsToAggregates, computeMetrics,
   type ParsedAggregates, type ManualOverrides,
@@ -209,6 +210,7 @@ export default function FreeAssessmentClient() {
           metrics, // full de-identified analysis (no PHI)
         },
       });
+      trackConversion('assessment');
       setStatus('success');
       setTimeout(() => reportRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
     } catch {

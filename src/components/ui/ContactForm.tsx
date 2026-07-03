@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { CheckCircle, AlertCircle, Loader2, Calendar, MessageSquare } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
+import { trackConversion } from '@/lib/gtag';
 
 const WEB3FORMS_KEY = 'b1e9389e-b14d-4e6a-84eb-e4708fcb39f4';
 
@@ -57,6 +58,7 @@ export default function ContactForm() {
     try {
       await submitToWeb3Forms(data, `New Contact Inquiry – ${data.name} (${data.specialty})`);
       submitToWorker('contact_message', data);
+      trackConversion('contact');
       setStatus('success');
       messageForm.reset();
     } catch (e: any) {
@@ -73,6 +75,7 @@ export default function ContactForm() {
     try {
       await submitToWeb3Forms(data, `Consultation Request – ${data.practiceContact} (${data.practiceSpecialty})`);
       submitToWorker('consultation_request', data);
+      trackConversion('contact');
       setStatus('success');
       scheduleForm.reset();
     } catch (e: any) {

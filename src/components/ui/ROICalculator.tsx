@@ -4,6 +4,7 @@ import { useState, useMemo, type FormEvent } from 'react';
 import Link from 'next/link';
 import { TrendingUp, DollarSign, Calculator, ArrowRight, Mail, CheckCircle2 } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
+import { trackConversion } from '@/lib/gtag';
 
 const specialtyDefaults: Record<string, { avgClaim: number; volume: number; denialRate: number; cleanRate: number }> = {
   'Family Medicine': { avgClaim: 165, volume: 420, denialRate: 11, cleanRate: 84 },
@@ -70,6 +71,7 @@ export default function ROICalculator() {
         `denial ${denialRate}%, clean ${cleanRate}%. Est. net annual gain ${fmt(results.netAnnualGain)} ` +
         `(ROI ${Math.round(results.roi)}%). Requested full projection + denial-leakage breakdown.`,
     });
+    trackConversion('calculator');
     setLeadStatus('sent');
   }
 

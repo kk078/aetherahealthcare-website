@@ -4,6 +4,7 @@ import { useState, type FormEvent } from 'react';
 import Link from 'next/link';
 import { Calendar, CalendarClock, CheckCircle2, Loader2, Phone, Video, ArrowUpRight } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
+import { trackConversion } from '@/lib/gtag';
 
 // Live-calendar booking URL (Cal.com / Calendly). Defaults to Aethera's public
 // Cal.com page; NEXT_PUBLIC_BOOKING_URL can override it without a code change.
@@ -39,6 +40,7 @@ function BookCard({ url }: { url: string }) {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackConversion('booking')}
         className="inline-flex items-center justify-center gap-2 bg-teal hover:bg-navy text-white font-bold py-3.5 px-8 rounded-full transition-colors text-sm"
       >
         Book a time <ArrowUpRight className="h-4 w-4" />
@@ -82,6 +84,7 @@ function MeetingRequestForm({ compact = false }: { compact?: boolean }) {
           `Meeting request from the website. Preferred time: ${form.preferredTime || 'flexible'}. ` +
           (form.message ? `Notes: ${form.message}` : ''),
       });
+      trackConversion('meeting');
       setStatus('sent');
     } catch {
       setStatus('error');

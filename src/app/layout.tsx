@@ -46,6 +46,7 @@ export const metadata: Metadata = {
 
 import TopContactBar from '@/components/ui/TopContactBar';
 import CloudflareAnalytics from '@/components/ui/CloudflareAnalytics';
+import GoogleAds from '@/components/ui/GoogleAds';
 import CookieConsent from '@/components/ui/CookieConsent';
 import BackToTop from '@/components/ui/BackToTop';
 import CallbackButton from '@/components/ui/CallbackButton';
@@ -71,6 +72,7 @@ export default function RootLayout({
         <ExitIntentCTA />
         <AIAssistant />
         <CloudflareAnalytics />
+        <GoogleAds />
       </body>
     </html>
   );
