@@ -6,11 +6,11 @@ export default function TopContactBar() {
     <div className="fixed top-0 w-full z-50 h-8 bg-[#003087] text-white text-xs flex items-center justify-center gap-4 md:gap-8 px-4">
       <span className="hidden md:inline text-white/60">Serving physicians, hospitalists &amp; group practices nationwide</span>
       <a
-        href="tel:+18636940325"
+        href="tel:+18135194640"
         className="flex items-center gap-1.5 hover:text-[#60A5FA] transition-colors font-semibold tracking-wide"
       >
         <Phone className="h-3 w-3 flex-shrink-0" />
-        (863) 694-0325
+        (813) 519-4640
       </a>
       <a
         href="mailto:support@aetherahealthcare.com"

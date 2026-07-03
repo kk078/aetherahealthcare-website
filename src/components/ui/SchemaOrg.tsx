@@ -16,7 +16,7 @@ export default function SchemaOrg() {
         },
         description:
           'Full-service medical billing and revenue cycle management company specializing in hospitalist billing, physician group billing, coding, claims, denial management, and credentialing for US healthcare providers.',
-        telephone: '+1-863-694-0325',
+        telephone: '+1-813-519-4640',
         email: 'support@aetherahealthcare.com',
         address: {
           '@type': 'PostalAddress',

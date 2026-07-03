@@ -100,7 +100,7 @@ export default function Home() {
           "logo": "https://aetherahealthcare.com/logo.png",
           "description": "Aethera Healthcare Solutions is your full-service medical billing partner handling coding, claims, payments, denials, and collections so you can focus on patients.",
           "address": { "@type": "PostalAddress", "addressLocality": "Lakeland", "addressRegion": "FL", "postalCode": "33801", "streetAddress": "PO Box 1234" },
-          "contactPoint": { "@type": "ContactPoint", "telephone": "+1-863-694-0325", "contactType": "customer service", "email": "info@aetherahealthcare.com" },
+          "contactPoint": { "@type": "ContactPoint", "telephone": "+1-813-519-4640", "contactType": "customer service", "email": "info@aetherahealthcare.com" },
           "sameAs": ["https://www.linkedin.com/company/aethera-healthcare-solutions"],
         }) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({

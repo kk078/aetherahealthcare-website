@@ -46,7 +46,7 @@ export default async function SpecialtyLocationPage({ params }: { params: Params
         '@type': 'Organization',
         name: 'Aethera Healthcare Solutions',
         url: 'https://aetherahealthcare.com',
-        telephone: '+1-863-694-0325',
+        telephone: '+1-813-519-4640',
       },
       url,
     },
@@ -93,8 +93,8 @@ export default async function SpecialtyLocationPage({ params }: { params: Params
               <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">
                 Get a Free Assessment
               </Link>
-              <a href="tel:+18636940325" className="border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-full transition-colors text-sm">
-                Call (863) 694-0325
+              <a href="tel:+18135194640" className="border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-full transition-colors text-sm">
+                Call (813) 519-4640
               </a>
             </div>
           </FadeIn>

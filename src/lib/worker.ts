@@ -48,15 +48,55 @@ function mapToCrm(formType: string, data: AnyData): { path: string; payload: Any
   return { path: '/contact', payload: { name, practice, email, phone, specialty, message } };
 }
 
-export async function submitToWorker(formType: string, data: AnyData): Promise<void> {
+// Email backup so a CRM outage can never silently lose a lead. Uses the same
+// Web3Forms channel the contact form already relies on; the access key is a
+// public, client-side key by design.
+const WEB3FORMS_KEY = 'b1e9389e-b14d-4e6a-84eb-e4708fcb39f4';
+
+async function emailFallback(formType: string, data: AnyData): Promise<void> {
   try {
-    const { path, payload } = mapToCrm(formType, data);
-    await fetch(CRM_INGEST_BASE + path, {
+    const details = Object.entries(data)
+      .filter(([, v]) => v != null && typeof v !== 'object')
+      .map(([k, v]) => `${k}: ${String(v)}`)
+      .join('\n');
+    const email = String(data.email || data.scheduleEmail || '') || 'no-reply@aetherahealthcare.com';
+    const name = String(data.firstName || data.name || data.practiceContact || 'Website Visitor');
+    await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        subject: `[LEAD BACKUP] ${formType} — CRM did not confirm receipt`,
+        from_name: name,
+        email,
+        message:
+          `A website lead came in via "${formType}" but the CRM did not confirm receipt, ` +
+          `so this email backup was sent to make sure the prospect is not lost.\n\n${details}`,
+        botcheck: '',
+      }),
+    });
+  } catch {
+    // last resort — nothing further we can do
+  }
+}
+
+/**
+ * Post a lead to the CRM. If the CRM does not confirm receipt (non-2xx, network,
+ * or CORS failure), automatically send an email backup so no prospect is ever
+ * lost. Never throws.
+ */
+export async function submitToWorker(formType: string, data: AnyData): Promise<void> {
+  const { path, payload } = mapToCrm(formType, data);
+  try {
+    const res = await fetch(CRM_INGEST_BASE + path, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     });
+    if (res.ok) return; // CRM accepted the lead — done.
   } catch {
-    // best-effort
+    // network / CORS failure — fall through to the email backup.
   }
+  // CRM did not accept the lead → email backup so no prospect is ever lost.
+  await emailFallback(formType, data);
 }

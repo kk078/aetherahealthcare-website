@@ -8,7 +8,7 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   title: { absolute: "Contact Us | Free Consultation | Aethera Healthcare Solutions" },
-  description: "Get in touch with Aethera Healthcare Solutions for a free consultation. Contact us by phone at +1 (863) 694-0325 or email at info@aetherahealthcare.com.",
+  description: "Get in touch with Aethera Healthcare Solutions for a free consultation. Contact us by phone at +1 (813) 519-4640 or email at info@aetherahealthcare.com.",
 };
 
 export default function Contact() {
@@ -23,7 +23,7 @@ export default function Contact() {
               "@context": "https://schema.org",
               "@type": "ContactPage",
               "name": "Contact Aethera Healthcare Solutions",
-              "description": "Get in touch with Aethera Healthcare Solutions for a free consultation. Contact us by phone at +1 (863) 694-0325 or email at info@aetherahealthcare.com.",
+              "description": "Get in touch with Aethera Healthcare Solutions for a free consultation. Contact us by phone at +1 (813) 519-4640 or email at info@aetherahealthcare.com.",
               "url": "https://aetherahealthcare.com/contact",
               "publisher": {
                 "@type": "Organization",
@@ -45,7 +45,7 @@ export default function Contact() {
               "logo": "https://aetherahealthcare.com/logo.png",
               "contactPoint": [{
                 "@type": "ContactPoint",
-                "telephone": "+1-863-694-0325",
+                "telephone": "+1-813-519-4640",
                 "contactType": "customer service",
                 "email": "info@aetherahealthcare.com",
                 "availableLanguage": "English",
@@ -63,7 +63,7 @@ export default function Contact() {
                 "streetAddress": "PO Box 1234"
               },
               "email": "info@aetherahealthcare.com",
-              "telephone": "+1-863-694-0325"
+              "telephone": "+1-813-519-4640"
             })
           }}
         />
@@ -73,7 +73,7 @@ export default function Contact() {
       <RcmHeroBand
         eyebrow="Contact"
         title="Let's maximize your revenue"
-        subtitle="Ready to maximize your revenue and minimize your burden? Get in touch with our team today — by phone at +1 (863) 694-0325 or email info@aetherahealthcare.com."
+        subtitle="Ready to maximize your revenue and minimize your burden? Get in touch with our team today — by phone at +1 (813) 519-4640 or email info@aetherahealthcare.com."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         chips={['Free consultation', '5-day turnaround', 'No obligation']}
       />
@@ -99,7 +99,7 @@ export default function Contact() {
                     </div>
                     <div className="ml-4">
                       <h4 className="font-bold text-navy">Phone</h4>
-                      <p className="text-gray">+1 (863) 694-0325</p>
+                      <p className="text-gray">+1 (813) 519-4640</p>
                       <p className="text-gray text-sm">Monday-Friday, 9:00 AM - 6:00 PM EST</p>
                     </div>
                   </div>
@@ -171,7 +171,7 @@ export default function Contact() {
             <FadeIn delay={0.3}>
               <div className="bg-cream rounded-xl p-6">
                 <h3 className="text-lg font-bold text-navy mb-2">What's the best way to reach you?</h3>
-                <p className="text-gray">Call us at +1 (863) 694-0325 during business hours, or email info@aetherahealthcare.com anytime. We'll get back to you within one business day.</p>
+                <p className="text-gray">Call us at +1 (813) 519-4640 during business hours, or email info@aetherahealthcare.com anytime. We'll get back to you within one business day.</p>
               </div>
             </FadeIn>
           </div>

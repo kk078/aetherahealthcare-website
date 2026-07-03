@@ -54,7 +54,7 @@ export default function CallbackButton() {
               {/* Quick contact */}
               <div className="flex gap-2 mb-4">
                 <a
-                  href="tel:+18636940325"
+                  href="tel:+18135194640"
                   className="flex-1 flex items-center justify-center gap-2 bg-teal hover:bg-navy text-white font-semibold py-2.5 px-3 rounded-xl transition-colors text-sm"
                 >
                   <Phone className="h-4 w-4" />
@@ -68,7 +68,7 @@ export default function CallbackButton() {
                   Email Us
                 </a>
               </div>
-              <p className="text-center text-xs text-slate-400 mb-1">(863) 694-0325 · support@aetherahealthcare.com</p>
+              <p className="text-center text-xs text-slate-400 mb-1">(813) 519-4640 · support@aetherahealthcare.com</p>
               <div className="flex items-center gap-2 my-3">
                 <div className="flex-1 h-px bg-slate-200"></div>
                 <span className="text-xs text-slate-400">or request a callback</span>
@@ -120,7 +120,7 @@ export default function CallbackButton() {
                   <option>Evening (5PM – 8PM ET)</option>
                 </select>
                 {status === 'error' && (
-                  <p className="text-red-500 text-xs">Something went wrong — please call us directly at (863) 694-0325.</p>
+                  <p className="text-red-500 text-xs">Something went wrong — please call us directly at (813) 519-4640.</p>
                 )}
                 <button
                   onClick={handleRequestCallback}

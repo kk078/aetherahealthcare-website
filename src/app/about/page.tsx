@@ -89,7 +89,7 @@ export default function About() {
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-863-694-0325",
+                "telephone": "+1-813-519-4640",
                 "contactType": "customer service",
                 "email": "info@aetherahealthcare.com"
               },

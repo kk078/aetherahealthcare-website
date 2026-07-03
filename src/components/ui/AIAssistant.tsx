@@ -17,10 +17,10 @@ const SUGGESTIONS = [
 
 /** Turn internal paths, phone, and email in an answer into clickable links. */
 function render(text: string) {
-  const parts = text.split(/(\/[a-z][a-z0-9-]*(?:\/[a-z0-9-]+)*|\(863\) 694-0325|support@aetherahealthcare\.com)/g);
+  const parts = text.split(/(\/[a-z][a-z0-9-]*(?:\/[a-z0-9-]+)*|\(813\) 519-4640|support@aetherahealthcare\.com)/g);
   return parts.map((p, i) => {
     if (/^\/[a-z]/.test(p)) return <a key={i} href={p} className="text-teal underline hover:text-navy">{p}</a>;
-    if (p === '(863) 694-0325') return <a key={i} href="tel:+18636940325" className="text-teal underline">{p}</a>;
+    if (p === '(813) 519-4640') return <a key={i} href="tel:+18135194640" className="text-teal underline">{p}</a>;
     if (p === 'support@aetherahealthcare.com') return <a key={i} href="mailto:support@aetherahealthcare.com" className="text-teal underline">{p}</a>;
     return <span key={i}>{p}</span>;
   });
@@ -51,9 +51,9 @@ export default function AIAssistant() {
         body: JSON.stringify({ message: q, history }),
       });
       const data = await r.json().catch(() => ({}));
-      setMsgs(m => [...m, { role: 'assistant', content: data.answer || "Sorry — I couldn't reach the assistant. Call (863) 694-0325 or try /free-assessment." }]);
+      setMsgs(m => [...m, { role: 'assistant', content: data.answer || "Sorry — I couldn't reach the assistant. Call (813) 519-4640 or try /free-assessment." }]);
     } catch {
-      setMsgs(m => [...m, { role: 'assistant', content: "I'm having trouble connecting. Call (863) 694-0325 or get a free assessment at /free-assessment." }]);
+      setMsgs(m => [...m, { role: 'assistant', content: "I'm having trouble connecting. Call (813) 519-4640 or get a free assessment at /free-assessment." }]);
     } finally {
       setBusy(false);
     }
