@@ -85,8 +85,8 @@ export default function Navbar() {
 
               {/* Services Dropdown */}
               <div className="relative group">
-                <button className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                  Services ▾
+                <button className="inline-flex items-center gap-1 whitespace-nowrap text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+                  Services <span aria-hidden>▾</span>
                 </button>
                 <div className="absolute left-0 mt-2 w-[520px] bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-[#003087]/10">
                   <div className="p-5">
@@ -127,8 +127,8 @@ export default function Navbar() {
 
               {/* Why Aethera Dropdown */}
               <div className="relative group">
-                <button className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                  Why Aethera ▾
+                <button className="inline-flex items-center gap-1 whitespace-nowrap text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+                  Why Aethera <span aria-hidden>▾</span>
                 </button>
                 <div className="absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-[#003087]/10">
                   <div className="p-4 space-y-1">

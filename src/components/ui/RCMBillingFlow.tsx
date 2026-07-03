@@ -93,8 +93,6 @@ export default function RCMBillingFlow({ compact = false }: { compact?: boolean 
   const [now, setNow] = useState(0);
   const [reduce, setReduce] = useState(false);
   const startRef = useRef<number | null>(null);
-  const baseRef = useRef(486350);   // lifetime $ recovered baseline
-  const lastPRef = useRef(0);
 
   useEffect(() => {
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -113,12 +111,6 @@ export default function RCMBillingFlow({ compact = false }: { compact?: boolean 
 
   // progress
   const p = reduce ? 0.90 : (now % DURATION) / DURATION;
-  // credit $ once per loop when it wraps
-  if (!reduce) {
-    if (p < lastPRef.current) baseRef.current += 420;
-    lastPRef.current = p;
-  }
-  const recovered = baseRef.current + (p > 0.88 ? smooth(0.88, 0.94, p) * 420 : 0);
 
   const claim = interp(CLAIM, p);
   const status = statusFor(p);
@@ -157,13 +149,14 @@ export default function RCMBillingFlow({ compact = false }: { compact?: boolean 
         {!compact && (
         <g fontFamily={FONT}>
           <rect x={432} y={18} width={234} height={118} rx={14} fill="#ffffff" opacity={0.07} stroke="#ffffff" strokeOpacity={0.14} />
-          <text x={450} y={44} fill="#9fc3e0" fontSize={11} fontWeight={700} letterSpacing="1.5">LIFETIME $ RECOVERED</text>
-          <text x={450} y={82} fill="#ffffff" fontSize={34} fontWeight={800} letterSpacing="-0.5">{fmt(recovered)}</text>
-          <g fontSize={11} fontWeight={700}>
-            <circle cx={455} cy={108} r={3.5} fill={EMERALD} />
-            <text x={465} y={112} fill="#cfe0ee">Clean claim 95%+</text>
-            <circle cx={455} cy={126} r={3.5} fill={MINT} />
-            <text x={465} y={130} fill="#cfe0ee">Denials worked &lt;5%</text>
+          <text x={450} y={46} fill="#9fc3e0" fontSize={12} fontWeight={700} letterSpacing="1.5">PERFORMANCE TARGETS</text>
+          <g fontSize={13} fontWeight={700}>
+            <circle cx={456} cy={72} r={3.5} fill={EMERALD} />
+            <text x={468} y={76} fill="#cfe0ee">Clean claim 95%+</text>
+            <circle cx={456} cy={97} r={3.5} fill={MINT} />
+            <text x={468} y={101} fill="#cfe0ee">Denials worked &lt;5%</text>
+            <circle cx={456} cy={122} r={3.5} fill="#9fc3e0" />
+            <text x={468} y={126} fill="#cfe0ee">Days in A/R &lt;30</text>
           </g>
         </g>
         )}
