@@ -11,6 +11,300 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "author": "Michael Torres",
+    "date": "2026-07-03",
+    "image": "/images/blog/specialty-billing.svg",
+    "readTime": "5 min read",
+    "slug": "family-medicine-billing-guide",
+    "title": "Family Medicine Billing: E/M Coding, Volume & Denials",
+    "category": "Specialty Billing",
+    "excerpt": "Family medicine billing is high-volume and E/M-heavy, where small coding habits compound. Here’s how to protect primary-care revenue and prevent denials.",
+    "sections": [
+      {
+        "p": [
+          "Family medicine billing rarely involves exotic procedures, but its sheer volume and reliance on evaluation-and-management (E/M) coding mean small habits compound into big revenue swings. Under-coding a level, missing a preventive-vs-problem distinction, or skipping eligibility checks costs primary-care practices more than they realize. This guide covers the essentials. For full-service help, see our <a href=\"/medical-billing/family-medicine\">family medicine medical billing</a> and <a href=\"/services/family-medicine-billing\">family medicine billing services</a>."
+        ]
+      },
+      {
+        "h": "Why Family Medicine Billing Is Deceptively Hard",
+        "p": [
+          "Primary care runs on E/M coding, preventive visits, chronic-care management, and immunizations — high volume with thin margins per visit. Because each encounter is modest in value, practices often under-invest in coding accuracy, yet across thousands of visits, consistent under-coding or denials add up to substantial lost revenue."
+        ]
+      },
+      {
+        "h": "Common Family Medicine Denial Drivers",
+        "p": [
+          "Most primary-care denials come from a few recurring issues:"
+        ],
+        "ul": [
+          "E/M level not supported by (or under-supported by) documentation",
+          "Preventive and problem-oriented visits billed incorrectly together",
+          "Eligibility not verified, causing coverage denials",
+          "Missing or incorrect coding for chronic-care and care-management services"
+        ]
+      },
+      {
+        "h": "Best Practices That Protect Primary-Care Revenue",
+        "p": [
+          "Consistency is everything at volume — document to support the E/M level actually provided, handle preventive-plus-problem visits correctly, verify eligibility before every visit, and capture chronic-care management where appropriate. Periodic E/M audits catch systematic under-coding that’s silently costing you."
+        ]
+      },
+      {
+        "h": "How Aethera Helps Family Medicine Practices",
+        "p": [
+          "Aethera provides specialty-trained family medicine billing — accurate E/M coding, clean high-volume claim submission, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment\">free revenue assessment</a> will show you where primary-care revenue is being lost."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "Amanda Rodriguez",
+    "date": "2026-07-03",
+    "image": "/images/blog/specialty-billing.svg",
+    "readTime": "5 min read",
+    "slug": "pediatric-medical-billing-guide",
+    "title": "Pediatric Billing: Vaccines, Well-Child Visits & Denials",
+    "category": "Specialty Billing",
+    "excerpt": "Pediatric billing has its own rules — VFC vaccines, well-child schedules, and family coverage quirks. Here’s how to bill pediatrics cleanly and prevent denials.",
+    "sections": [
+      {
+        "p": [
+          "Pediatric medical billing looks routine but carries specialty-specific traps: vaccine administration and VFC program rules, age-based well-child schedules, and coverage that shifts with family plans and Medicaid. Miss one and you get denials plus frustrated parents. This guide covers pediatric billing essentials and how to keep claims clean. For full-service help, see our <a href=\"/medical-billing/pediatrics\">pediatric medical billing</a>."
+        ]
+      },
+      {
+        "h": "Why Pediatric Billing Is Its Own Specialty",
+        "p": [
+          "Pediatrics combines high-frequency preventive care with vaccines, developmental screenings, and payer rules that differ for commercial and Medicaid coverage. Vaccine administration coding, the Vaccines for Children (VFC) program, and age-specific well-child requirements create billing nuances that adult primary care never encounters."
+        ]
+      },
+      {
+        "h": "Common Pediatric Denial Drivers",
+        "p": [
+          "Most pediatric denials trace back to a few areas:"
+        ],
+        "ul": [
+          "Vaccine administration and product coding errors",
+          "Well-child visit coding that doesn’t match age or frequency rules",
+          "Developmental and screening services billed incorrectly",
+          "Eligibility gaps as family or Medicaid coverage changes"
+        ]
+      },
+      {
+        "h": "Best Practices That Prevent Denials",
+        "p": [
+          "The fixes are front-end and coding discipline — verify each child’s current coverage before the visit, code vaccine administration and products correctly, follow age-based well-child and screening rules, and reconcile preventive-plus-problem encounters. Regular audits catch the systematic errors that repeat across a busy pediatric schedule."
+        ]
+      },
+      {
+        "h": "How Aethera Helps Pediatric Practices",
+        "p": [
+          "Aethera provides specialty-trained pediatric billing — vaccine and well-child coding, coverage verification, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment\">free revenue assessment</a> will show you where pediatric revenue is slipping."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "David Chen",
+    "date": "2026-07-03",
+    "image": "/images/blog/specialty-billing.svg",
+    "readTime": "5 min read",
+    "slug": "internal-medicine-billing-guide",
+    "title": "Internal Medicine Billing: Chronic Care, E/M & Denials",
+    "category": "Specialty Billing",
+    "excerpt": "Internal medicine billing is E/M- and chronic-care-heavy, with revenue often left uncaptured. Here’s how to bill internal medicine cleanly and recover missed services.",
+    "sections": [
+      {
+        "p": [
+          "Internal medicine billing is dominated by evaluation-and-management coding and the management of complex, chronic patients — which means a lot of billable work goes uncaptured when documentation and coding aren’t tight. Chronic-care management, transitional care, and correct E/M leveling are where internal medicine practices most often leave money on the table. This guide covers the essentials. For full-service help, see our <a href=\"/medical-billing/internal-medicine\">internal medicine medical billing</a>."
+        ]
+      },
+      {
+        "h": "Why Internal Medicine Billing Is Complex",
+        "p": [
+          "Internal medicine patients tend to have multiple chronic conditions, which supports higher-complexity E/M and care-management services — but only when documentation supports it. The gap between the care actually delivered and the care that gets coded and billed is often significant, making accurate coding a direct revenue lever."
+        ]
+      },
+      {
+        "h": "Common Internal Medicine Denial and Leakage Drivers",
+        "p": [
+          "Revenue is lost to both denials and under-capture:"
+        ],
+        "ul": [
+          "E/M levels under-coded relative to documented complexity",
+          "Chronic-care and transitional-care management not captured",
+          "Medical-necessity documentation gaps for testing",
+          "Eligibility and coordination-of-benefits issues on complex patients"
+        ]
+      },
+      {
+        "h": "Best Practices That Protect Internal Medicine Revenue",
+        "p": [
+          "Document to reflect true complexity, capture chronic-care and transitional-care management where appropriate, verify eligibility and benefits coordination, and audit E/M leveling regularly. For internal medicine, the biggest wins often come from capturing services already being delivered but never billed."
+        ]
+      },
+      {
+        "h": "How Aethera Helps Internal Medicine Practices",
+        "p": [
+          "Aethera provides specialty-trained internal medicine billing — accurate E/M and chronic-care coding, clean claims, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment\">free revenue assessment</a> will show you where internal medicine revenue is being lost."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "Lisa Thompson",
+    "date": "2026-07-03",
+    "image": "/images/blog/compliance-privacy.svg",
+    "readTime": "5 min read",
+    "slug": "medical-billing-compliance-guide",
+    "title": "Medical Billing Compliance in 2026: The Complete Guide",
+    "category": "Compliance & Privacy",
+    "excerpt": "A practical guide to medical billing compliance — HIPAA, the No Surprises Act, price transparency, and coding integrity — and how to keep your practice audit-ready.",
+    "sections": [
+      {
+        "p": [
+          "Medical billing compliance is where revenue and risk meet: the same documentation and coding discipline that gets you paid also keeps you out of trouble with payers and regulators. This guide is the hub for our compliance content — it covers the areas that matter most to U.S. practices and links out to deeper playbooks. If you want a second set of eyes, our <a href=\"/services/compliance-auditing\">compliance & auditing services</a> keep your billing audit-ready."
+        ]
+      },
+      {
+        "h": "The Core Compliance Areas",
+        "p": [
+          "For most practices, billing compliance comes down to a handful of domains, each with its own rules and its own failure modes."
+        ],
+        "ul": [
+          "HIPAA — protecting patient data across your billing workflow",
+          "The No Surprises Act — balance-billing limits and good-faith estimates",
+          "Price transparency — machine-readable files and patient estimates",
+          "Coding integrity — accurate, well-documented codes that survive audit"
+        ]
+      },
+      {
+        "h": "HIPAA and Data Protection",
+        "p": [
+          "Every step of billing touches protected health information, so access controls, secure transmission, and vendor agreements matter. Our guide on <a href=\"/blog/hipaa-compliance\">HIPAA compliance</a> covers what practices most often miss."
+        ]
+      },
+      {
+        "h": "Balance Billing and Transparency Rules",
+        "p": [
+          "Regulations around surprise billing and price transparency have changed what practices must disclose and how they must bill. Start with our overview of the <a href=\"/blog/no-surprises-act\">No Surprises Act</a> to understand where compliance and billing intersect."
+        ]
+      },
+      {
+        "h": "Coding Integrity Keeps You Audit-Ready",
+        "p": [
+          "Most compliance risk in billing traces back to coding — upcoding, unbundling, or documentation that doesn’t support the code. Periodic coding audits catch problems before a payer does, and they usually recover revenue too by surfacing under-coding."
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera builds compliance into the billing workflow — HIPAA-aware processes, correct coding, and regular audits — so you stay audit-ready without slowing down. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll flag compliance and coding risks alongside revenue opportunities."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "Jennifer Walsh",
+    "date": "2026-07-03",
+    "image": "/images/blog/patient-access-collections.svg",
+    "readTime": "5 min read",
+    "slug": "patient-collections-guide",
+    "title": "Patient Collections That Don’t Hurt Retention: A Complete Guide",
+    "category": "Patient Access & Collections",
+    "excerpt": "As patients cover more of the bill, collections make or break the bottom line. Here’s how to collect more without damaging the patient relationship.",
+    "sections": [
+      {
+        "p": [
+          "Patient collections have become one of the largest and hardest parts of the revenue cycle, because patients now shoulder a growing share of the cost of care. Collect too passively and revenue leaks; collect too aggressively and you lose the patient. This guide is the hub for collecting more while protecting retention, and links out to the specific tactics. For full support, see our <a href=\"/services/patient-collections\">patient collections services</a>."
+        ]
+      },
+      {
+        "h": "Why Patient Collections Are So Hard Now",
+        "p": [
+          "Higher deductibles mean more of each claim is the patient’s responsibility, and patients are far less predictable payers than insurers. Balances that aren’t addressed early quietly age into bad debt, and heavy-handed follow-up drives patients away. The goal is a system that is consistent, clear, and humane."
+        ]
+      },
+      {
+        "h": "Collect Earlier and More Clearly",
+        "p": [
+          "The highest-return moves happen before and at the visit — not months later."
+        ],
+        "ul": [
+          "Verify benefits and estimate patient responsibility up front",
+          "Collect copays and known balances at the time of service",
+          "Send clear, itemized statements patients can actually understand",
+          "Offer simple digital payment options"
+        ]
+      },
+      {
+        "h": "Payment Plans and Financial Counseling",
+        "p": [
+          "For larger balances, structured payment plans keep revenue flowing while respecting the patient’s situation. Our guide on <a href=\"/blog/design-patient-payment-plans\">designing patient payment plans</a> covers how to build plans that actually get paid without souring the relationship."
+        ]
+      },
+      {
+        "h": "Consistent, Respectful Follow-Up",
+        "p": [
+          "Retention-safe collections come from consistency, not pressure — a predictable cadence of reminders, clear options, and a respectful tone. Our existing playbook on <a href=\"/blog/patient-collections\">patient collections strategies</a> goes deeper on the day-to-day workflow."
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera runs patient collections that protect your revenue and your reputation — clear statements, easy payment options, and respectful follow-up. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll show you how much patient balance is recoverable."
+        ]
+      }
+    ]
+  },
+  {
+    "author": "Sarah Kim",
+    "date": "2026-07-03",
+    "image": "/images/blog/specialty-billing.svg",
+    "readTime": "5 min read",
+    "slug": "dermatology-medical-billing-guide",
+    "title": "Dermatology Billing: Procedures, Modifiers & Denials",
+    "category": "Specialty Billing",
+    "excerpt": "Dermatology billing mixes high procedure volume with tricky modifier and medical-necessity rules. Here’s what drives dermatology denials and how to prevent them.",
+    "sections": [
+      {
+        "p": [
+          "Dermatology medical billing combines high procedure volume with cosmetic-vs-medical distinctions, lesion coding, and modifier rules that make clean claims surprisingly hard. Small errors repeat across a busy schedule, so the revenue impact adds up fast. This guide covers what drives dermatology denials and how to prevent them. For full-service help, see our <a href=\"/medical-billing/dermatology\">dermatology medical billing</a> and <a href=\"/services/dermatology-billing\">dermatology billing services</a>."
+        ]
+      },
+      {
+        "h": "Why Dermatology Billing Is Tricky",
+        "p": [
+          "Dermatology spans office visits, biopsies, excisions, destructions, and cosmetic procedures — each with specific coding by lesion count, size, and site, plus the constant need to distinguish medically necessary care from cosmetic services that aren’t covered. High patient volume multiplies the effect of any systematic coding error."
+        ]
+      },
+      {
+        "h": "Common Dermatology Denial Drivers",
+        "p": [
+          "Most dermatology denials come back to a few issues:"
+        ],
+        "ul": [
+          "Lesion coding errors (count, size, or site not documented correctly)",
+          "Modifier mistakes on multiple or staged procedures",
+          "Cosmetic services billed as medical without support",
+          "Medical-necessity documentation gaps for procedures"
+        ]
+      },
+      {
+        "h": "Best Practices That Prevent Denials",
+        "p": [
+          "Documentation precision at the point of care prevents most dermatology denials — record lesion specifics accurately, apply modifiers correctly on multiple procedures, and clearly separate cosmetic from medical services. Auditing a sample of procedure claims regularly catches systematic errors before they repeat."
+        ]
+      },
+      {
+        "h": "How Aethera Helps Dermatology Practices",
+        "p": [
+          "Aethera provides specialty-trained dermatology billing — lesion and procedure coding, modifier accuracy, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment\">free revenue assessment</a> will show you where dermatology revenue is being lost."
+        ]
+      }
+    ]
+  },
+  {
     "author": "Amanda Rodriguez",
     "date": "2026-07-03",
     "image": "/images/blog/specialty-billing.svg",
@@ -970,6 +1264,12 @@ export const POSTS: BlogPost[] = [
           "Ongoing staff training and performance dashboards to keep metrics on target",
           "Dedicated support team to troubleshoot payer rule changes and ensure continuous compliance"
         ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+        ]
       }
     ]
   },
@@ -1124,6 +1424,12 @@ export const POSTS: BlogPost[] = [
         "p": [
           "Aethera Healthcare Solutions provides end‑to‑end support for building and managing patient payment plans, from workflow design to technology integration and compliance monitoring, so you can focus on delivering care while we keep the revenue flowing."
         ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+        ]
       }
     ]
   },
@@ -1205,6 +1511,12 @@ export const POSTS: BlogPost[] = [
         "h": "How Aethera Helps",
         "p": [
           "Aethera Healthcare Solutions can partner with your practice to embed financial counseling into your intake workflow through customized training, seamless integration of eligibility‑verification tools, and ongoing analytics that keep your revenue cycle moving efficiently."
+        ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
         ]
       }
     ]
@@ -1461,6 +1773,12 @@ export const POSTS: BlogPost[] = [
         "p": [
           "Aethera runs the patient-financial experience end to end — estimates, statements, digital payments, and empathetic follow-up — so you collect more and keep patients happy."
         ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+        ]
       }
     ]
   },
@@ -1544,6 +1862,12 @@ export const POSTS: BlogPost[] = [
         "h": "How Aethera helps",
         "p": [
           "Aethera operates under strict BAAs, encrypts PHI end to end, and brings audit-ready processes to every engagement — so your data and your reputation stay protected."
+        ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing\">compliance & auditing services</a>."
         ]
       }
     ]
@@ -1720,6 +2044,12 @@ export const POSTS: BlogPost[] = [
         "p": [
           "Aethera handles patient communications in your voice — multichannel, compliant, and kind — so balances get paid without burning goodwill."
         ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+        ]
       }
     ]
   },
@@ -1834,6 +2164,12 @@ export const POSTS: BlogPost[] = [
         "p": [
           "Aethera keeps your billing NSA-compliant — GFEs, eligible notice-and-consent, and IDR support — so you stay protected and paid."
         ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing\">compliance & auditing services</a>."
+        ]
       }
     ]
   },
@@ -1870,6 +2206,12 @@ export const POSTS: BlogPost[] = [
         "h": "How Aethera helps",
         "p": [
           "Aethera generates accurate, benefits-driven patient estimates and helps you meet transparency obligations without adding front-desk burden."
+        ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing\">compliance & auditing services</a>."
         ]
       }
     ]
@@ -2098,6 +2440,12 @@ export const POSTS: BlogPost[] = [
         "p": [
           "Aethera automates eligibility and benefits verification so coverage problems get caught while you can still fix them."
         ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+        ]
       }
     ]
   },
@@ -2315,6 +2663,12 @@ export const POSTS: BlogPost[] = [
         "p": [
           "Aethera operates with hardened security and contingency routing, so your billing keeps running even when part of the ecosystem is disrupted."
         ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing\">compliance & auditing services</a>."
+        ]
       }
     ]
   },
@@ -2517,6 +2871,12 @@ export const POSTS: BlogPost[] = [
         "p": [
           "Aethera modernizes the patient financial experience end to end — estimates, statements, and digital payments — lifting both satisfaction and collections."
         ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+        ]
       }
     ]
   },
@@ -2623,6 +2983,12 @@ export const POSTS: BlogPost[] = [
         "h": "How Aethera helps",
         "p": [
           "Aethera bills to a documented compliance standard and audits for fraud, waste, and abuse risk, so accurate claims protect your revenue and your license."
+        ]
+      },
+      {
+        "h": "Related resources",
+        "p": [
+          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing\">compliance & auditing services</a>."
         ]
       }
     ]
