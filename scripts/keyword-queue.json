@@ -2,20 +2,6 @@
   "_comment": "Prioritized keyword queue for the auto-blog. Each run pops pending[0], writes an article targeting that keyword, forces the internal links below, then moves the item to done[]. When pending is empty the generator falls back to free-choice topics. Add new targets to the END of pending[]. Categories MUST match one of the allowed CATEGORIES in blogPosts.ts.",
   "pending": [
     {
-      "keyword": "the true cost of a denied claim",
-      "category": "Denials & Appeals",
-      "links": [
-        {
-          "href": "/tools/denial-cost-calculator",
-          "text": "denial cost calculator"
-        },
-        {
-          "href": "/services/denial-management",
-          "text": "denial management services"
-        }
-      ]
-    },
-    {
       "keyword": "top claim denial reasons by payer",
       "category": "Denials & Appeals",
       "links": [
@@ -172,6 +158,22 @@
       ],
       "slug": "good-clean-claim-rate-benchmark",
       "publishedAt": "2026-07-03"
+    },
+    {
+      "keyword": "the true cost of a denied claim",
+      "category": "Denials & Appeals",
+      "links": [
+        {
+          "href": "/tools/denial-cost-calculator",
+          "text": "denial cost calculator"
+        },
+        {
+          "href": "/services/denial-management",
+          "text": "denial management services"
+        }
+      ],
+      "slug": "true-cost-of-denied-claim",
+      "publishedAt": "2026-07-07"
     }
   ]
 }
