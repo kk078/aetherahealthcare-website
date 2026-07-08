@@ -50,7 +50,7 @@ const compliance = [
 
 const trustBadges = [
   { label: 'HIPAA Compliant', icon: '🔒' },
-  { label: 'SOC 2 Certified', icon: '✓' },
+  { label: 'SOC 2-Aligned', icon: '✓' },
   { label: 'HBMA Member', icon: '★' },
   { label: 'BAA Available', icon: '📄' },
 ];

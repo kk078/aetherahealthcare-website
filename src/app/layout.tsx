@@ -52,6 +52,7 @@ import BackToTop from '@/components/ui/BackToTop';
 import CallbackButton from '@/components/ui/CallbackButton';
 import ExitIntentCTA from '@/components/ui/ExitIntentCTA';
 import AIAssistant from '@/components/ui/AIAssistant';
+import RetargetingPixels from '@/components/ui/RetargetingPixels';
 
 export default function RootLayout({
   children,
@@ -73,6 +74,7 @@ export default function RootLayout({
         <AIAssistant />
         <CloudflareAnalytics />
         <GoogleAds />
+        <RetargetingPixels />
       </body>
     </html>
   );
