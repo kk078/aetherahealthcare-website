@@ -30,6 +30,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          NEXT_PUBLIC_GOOGLE_ADS_ID: AW-18295729018
 
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy out --project-name=aetherahealthcare-website --branch=main --commit-dirty=true
