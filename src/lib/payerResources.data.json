@@ -1,7 +1,7 @@
 {
   "_meta": {
     "note": "Official provider-facing resource links (provider manual, medical/reimbursement policies, credentialing/enrollment, eligibility verification) for major U.S. payers. Links point to each payer's own website. Researched and verified by Aethera; payers change URLs — confirm before relying. Not affiliated with or copied from any third party.",
-    "updated": "2026-07-01"
+    "updated": "2026-07-08"
   },
   "payers": [
     {
@@ -2631,6 +2631,174 @@
       "eligibility": "https://www.myzinghealth.com/providers",
       "confidence": "high",
       "notes": "Eligibility via Availity."
+    },
+    {
+      "slug": "medicaid-texas-tmhp",
+      "name": "Texas Medicaid (TMHP)",
+      "type": "Medicaid",
+      "providerHome": "https://www.tmhp.com/",
+      "providerManual": "https://www.tmhp.com/resources/provider-manuals/tmppm",
+      "policies": "https://public.tmhp.com/FeeSchedules/",
+      "credentialing": "https://www.tmhp.com/topics/provider-enrollment",
+      "eligibility": "https://www.tmhp.com/resources/texmedconnect",
+      "confidence": "high",
+      "notes": "TMHP is the fiscal agent for Texas Medicaid FFS; manual = Texas Medicaid Provider Procedures Manual (TMPPM). Eligibility via TexMedConnect; enrollment via PEMS."
+    },
+    {
+      "slug": "medicaid-california-medi-cal",
+      "name": "California Medi-Cal (DHCS)",
+      "type": "Medicaid",
+      "providerHome": "https://mcweb.apps.prd.cammis.medi-cal.ca.gov/",
+      "providerManual": "https://www.dhcs.ca.gov/formsandpubs/publications/Pages/Medi-CalProviderManuals.aspx",
+      "policies": "https://www.dhcs.ca.gov/services/medi-cal-resources/rates",
+      "credentialing": "https://www.dhcs.ca.gov/providers-partners/provider-application-and-validation-for-enrollment",
+      "eligibility": null,
+      "confidence": "high",
+      "notes": "Medi-Cal fee-for-service; DHCS provider manuals and rates. Enrollment via PAVE. Eligibility (AEVS) is inside the Medi-Cal providers portal."
+    },
+    {
+      "slug": "medicaid-new-york-emedny",
+      "name": "New York Medicaid (eMedNY)",
+      "type": "Medicaid",
+      "providerHome": "https://www.emedny.org/",
+      "providerManual": "https://www.emedny.org/ProviderManuals/",
+      "policies": "https://www.health.ny.gov/health_care/medicaid/program/update/main.htm",
+      "credentialing": "https://www.emedny.org/info/ProviderEnrollment/enrollguide.aspx",
+      "eligibility": "https://www.emedny.org/ProviderManuals/AllProviders/supplemental.aspx",
+      "confidence": "high",
+      "notes": "eMedNY is the NY Medicaid MMIS portal; policy bulletins via the monthly NYS DOH Medicaid Update. Eligibility via MEVS/DVS."
+    },
+    {
+      "slug": "medicaid-florida-ahca",
+      "name": "Florida Medicaid (AHCA)",
+      "type": "Medicaid",
+      "providerHome": "https://ahca.myflorida.com/provider/index.html",
+      "providerManual": "https://ahca.myflorida.com/provider/policy.html",
+      "policies": "https://ahca.myflorida.com/medicaid/rules.html",
+      "credentialing": "https://ahca.myflorida.com/medicaid/medicaid-finance-and-analytics/medicaid-fiscal-agent-operations/provider-enrollment.html",
+      "eligibility": "https://portal.flmmis.com/flpublic/",
+      "confidence": "high",
+      "notes": "AHCA Provider & Facility Center; coverage policies (handbooks) and Rule 59G fee schedules. Transactions via the Florida Medicaid Web Portal (flmmis)."
+    },
+    {
+      "slug": "medicaid-ohio",
+      "name": "Ohio Medicaid",
+      "type": "Medicaid",
+      "providerHome": "https://medicaid.ohio.gov/resources-for-providers/nextgeneration-pnm",
+      "providerManual": "https://medicaid.ohio.gov/resources-for-providers/policies-guidelines",
+      "policies": "https://medicaid.ohio.gov/resources-for-providers/policies-guidelines/medicaid-advisory-letters/medicaid-advisory-letters",
+      "credentialing": "https://medicaid.ohio.gov/resources-for-providers/enrollment-and-support/provider-enrollment",
+      "eligibility": "https://medicaid.ohio.gov/resources-for-providers/managed-care/coverage-verification",
+      "confidence": "medium",
+      "notes": "Ohio Dept of Medicaid; provider portal is Next Generation PNM. Policies via Medicaid Advisory Letters (MALs)."
+    },
+    {
+      "slug": "medicaid-pennsylvania",
+      "name": "Pennsylvania Medicaid",
+      "type": "Medicaid",
+      "providerHome": "https://www.pa.gov/agencies/dhs/resources/for-providers/ma-for-providers",
+      "providerManual": "https://www.pa.gov/agencies/dhs/resources/for-providers/ma-for-providers/regulations-handbooks-guides-manuals",
+      "policies": "https://www.pa.gov/agencies/dhs/resources/for-providers/ma-for-providers/ma-fee-schedule",
+      "credentialing": "https://www.pa.gov/agencies/dhs/resources/for-providers/promise/promise-provider-enrollment",
+      "eligibility": "https://www.pa.gov/agencies/dhs/resources/for-providers/promise/evi",
+      "confidence": "high",
+      "notes": "PA DHS Office of Medical Assistance Programs (OMAP) / PROMISe; MA fee schedule and provider handbooks. Eligibility via EVS (EVI)."
+    },
+    {
+      "slug": "medicaid-illinois",
+      "name": "Illinois Medicaid",
+      "type": "Medicaid",
+      "providerHome": "https://hfs.illinois.gov/medicalproviders.html",
+      "providerManual": "https://hfs.illinois.gov/medicalproviders/handbooks.html",
+      "policies": "https://hfs.illinois.gov/medicalproviders/medicaidreimbursement.html",
+      "credentialing": "https://hfs.illinois.gov/impact.html",
+      "eligibility": "https://hfs.illinois.gov/medicalproviders/edi/medi.html",
+      "confidence": "high",
+      "notes": "Illinois HFS; provider handbooks (Chapters 100/200/300). Enrollment via IMPACT; eligibility via the MEDI portal."
+    },
+    {
+      "slug": "medicaid-georgia",
+      "name": "Georgia Medicaid",
+      "type": "Medicaid",
+      "providerHome": "https://www.mmis.georgia.gov/portal/PubAccess.Provider%20Information/tabId/15/Default.aspx",
+      "providerManual": "https://www.mmis.georgia.gov/portal/PubAccess.Provider%20Information/Provider%20Manuals/tabId/17/Default.aspx",
+      "policies": "https://www.mmis.georgia.gov/portal/PubAccess.Provider%20Information/Fee%20Schedules/tabId/19/Default.aspx",
+      "credentialing": "https://www.mmis.georgia.gov/portal/PubAccess.Enrollment/tabId/26/Default.aspx",
+      "eligibility": "https://www.mmis.georgia.gov/portal/",
+      "confidence": "high",
+      "notes": "GA Dept of Community Health GAMMIS; 150+ policy manuals and fee schedules. Eligibility via the secure GAMMIS portal."
+    },
+    {
+      "slug": "medicaid-north-carolina",
+      "name": "North Carolina Medicaid",
+      "type": "Medicaid",
+      "providerHome": "https://www.nctracks.nc.gov/content/public/providers.html",
+      "providerManual": "https://www.nctracks.nc.gov/content/public/providers/provider-manuals.html",
+      "policies": "https://medicaid.ncdhhs.gov/providers/program-specific-clinical-coverage-policies",
+      "credentialing": "https://www.nctracks.nc.gov/content/public/providers/provider-enrollment.html",
+      "eligibility": "https://www.nctracks.nc.gov/content/public/NCTracks-Provider-Portal?flow=PP",
+      "confidence": "high",
+      "notes": "NC DHHS NCTracks MMIS; program-specific clinical coverage policies on medicaid.ncdhhs.gov. Eligibility via the NCTracks secure portal."
+    },
+    {
+      "slug": "medicaid-michigan",
+      "name": "Michigan Medicaid",
+      "type": "Medicaid",
+      "providerHome": "https://www.michigan.gov/mdhhs/assistance-programs/medicaid/portalhome/medicaid-providers",
+      "providerManual": "https://www.michigan.gov/mdhhs/doing-business/providers/providers/medicaid/policyforms/medicaid-provider-manual",
+      "policies": "https://www.michigan.gov/mdhhs/assistance-programs/medicaid/portalhome/medicaid-providers/policyforms",
+      "credentialing": "https://www.michigan.gov/mdhhs/doing-business/providers/providers/medicaid/provider-enrollment",
+      "eligibility": "https://www.michigan.gov/mdhhs/assistance-programs/medicaid/portalhome/medicaid-providers/champs-a",
+      "confidence": "high",
+      "notes": "MDHHS Medicaid; electronic Medicaid Provider Manual (updated quarterly). Enrollment and eligibility via CHAMPS."
+    },
+    {
+      "slug": "medicaid-new-jersey",
+      "name": "New Jersey Medicaid",
+      "type": "Medicaid",
+      "providerHome": "https://www.njmmis.com/",
+      "providerManual": "https://www.njmmis.com/documentDownload.aspx?fileType=19C807B2-D8D9-4711-BBEE-2C28B6E81BDF",
+      "policies": "https://www.njmmis.com/RateInformation.aspx",
+      "credentialing": "https://www.njmmis.com/providerEnrollment.aspx",
+      "eligibility": null,
+      "confidence": "high",
+      "notes": "NJMMIS (NJ Medicaid fiscal agent); billing supplements and rate/code fee schedules. REVS eligibility is behind the secure login."
+    },
+    {
+      "slug": "medicaid-virginia",
+      "name": "Virginia Medicaid (DMAS)",
+      "type": "Medicaid",
+      "providerHome": "https://vamedicaid.dmas.virginia.gov/provider",
+      "providerManual": "https://vamedicaid.dmas.virginia.gov/manuals/provider-manuals-library",
+      "policies": "https://vamedicaid.dmas.virginia.gov/provider/library",
+      "credentialing": "https://www.dmas.virginia.gov/for-providers/provider-enrollment-revalidation/",
+      "eligibility": "https://www.dmas.virginia.gov/for-providers/claims-and-billing/",
+      "confidence": "high",
+      "notes": "DMAS Medicaid Enterprise System (MES); provider manuals library and Medicaid memos/bulletins. Enrollment via PRSS."
+    },
+    {
+      "slug": "medicaid-tennessee",
+      "name": "Tennessee Medicaid (TennCare)",
+      "type": "Medicaid",
+      "providerHome": "https://www.tn.gov/tenncare/providers.html",
+      "providerManual": null,
+      "policies": "https://www.tn.gov/tenncare/policy-guidelines/policies.html",
+      "credentialing": "https://www.tn.gov/tenncare/providers/provider-registration.html",
+      "eligibility": "https://www.tn.gov/tenncare/providers/verify-eligibility.html",
+      "confidence": "high",
+      "notes": "TennCare (managed-care Medicaid); state policies + provider registration. No single FFS billing manual — MCOs maintain their own."
+    },
+    {
+      "slug": "medicaid-wisconsin",
+      "name": "Wisconsin Medicaid (ForwardHealth)",
+      "type": "Medicaid",
+      "providerHome": "https://www.forwardhealth.wi.gov/WIPortal/",
+      "providerManual": "https://www.forwardhealth.wi.gov/WIPortal/Subsystem/kw/onlinehandbooks.aspx",
+      "policies": "https://www.forwardhealth.wi.gov/WIPortal/Subsystem/Publications/ForwardHealthCommunications.aspx?panel=Updates",
+      "credentialing": "https://www.forwardhealth.wi.gov/WIPortal/Subsystem/Certification/EnrollmentCriteria.aspx",
+      "eligibility": "https://www.forwardhealth.wi.gov/WIPortal/Subsystem/Provider/ProviderLogin.aspx",
+      "confidence": "high",
+      "notes": "ForwardHealth Portal (WI Medicaid/BadgerCare Plus); Online Handbooks and ForwardHealth Updates. Eligibility via the secure Provider Portal."
     }
   ]
 }
