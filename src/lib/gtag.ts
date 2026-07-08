@@ -9,8 +9,10 @@
 export const GADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || '';
 
 // Conversion action labels (the part after the "/" in a gtag send_to).
+// `assessment` defaults to the live "Free Assessment Submission" action's label
+// (public — it appears in the page's gtag event anyway); env var overrides it.
 export const GADS_LABELS: Record<string, string> = {
-  assessment: process.env.NEXT_PUBLIC_GADS_LABEL_ASSESSMENT || '',
+  assessment: process.env.NEXT_PUBLIC_GADS_LABEL_ASSESSMENT || '8gkvCJus38wcEPrWipRE',
   contact: process.env.NEXT_PUBLIC_GADS_LABEL_CONTACT || '',
   meeting: process.env.NEXT_PUBLIC_GADS_LABEL_MEETING || '',
   booking: process.env.NEXT_PUBLIC_GADS_LABEL_BOOKING || '',
