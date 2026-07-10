@@ -2,20 +2,6 @@
   "_comment": "Prioritized keyword queue for the auto-blog. Each run pops pending[0], writes an article targeting that keyword, forces the internal links below, then moves the item to done[]. When pending is empty the generator falls back to free-choice topics. Add new targets to the END of pending[]. Categories MUST match one of the allowed CATEGORIES in blogPosts.ts.",
   "pending": [
     {
-      "keyword": "top claim denial reasons by payer",
-      "category": "Denials & Appeals",
-      "links": [
-        {
-          "href": "/blog/medical-claim-denial-management-guide",
-          "text": "complete denial management guide"
-        },
-        {
-          "href": "/services/denial-management",
-          "text": "denial management services"
-        }
-      ]
-    },
-    {
       "keyword": "CO-97 denial code meaning and how to fix it",
       "category": "Denials & Appeals",
       "links": [
@@ -174,6 +160,22 @@
       ],
       "slug": "true-cost-of-denied-claim",
       "publishedAt": "2026-07-07"
+    },
+    {
+      "keyword": "top claim denial reasons by payer",
+      "category": "Denials & Appeals",
+      "links": [
+        {
+          "href": "/blog/medical-claim-denial-management-guide",
+          "text": "complete denial management guide"
+        },
+        {
+          "href": "/services/denial-management",
+          "text": "denial management services"
+        }
+      ],
+      "slug": "top-claim-denial-reasons-by-payer-analysis",
+      "publishedAt": "2026-07-10"
     }
   ]
 }
