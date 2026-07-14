@@ -11,6 +11,74 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "co-97-denial-code-meaning-how-to-fix",
+    "title": "CO-97 Denial Code Meaning and How to Fix It: A Practical Guide for U.S. Practices",
+    "category": "Denials & Appeals",
+    "author": "Michael Torres",
+    "date": "2026-07-14",
+    "readTime": "5 min read",
+    "image": "/images/blog/denials-appeals.svg",
+    "excerpt": "Learn what the CO-97 denial means, why it occurs, and practical steps to correct and prevent it.",
+    "sections": [
+      {
+        "p": [
+          "CO-97 denial code meaning and how to fix it is a common concern for U.S. practice owners when a Medicare claim is returned with the “Missing or Invalid Information” explanation. This article breaks down the code, why it shows up, and what you can do today to get paid."
+        ]
+      },
+      {
+        "h": "Understanding the CO-97 Denial Code",
+        "p": [
+          "CO-97 is a Medicare Administrative Contractor (MAC) denial that signals the payer could not process the claim because required data elements were missing, incomplete, or did not match the payer’s rules. The quickest way to verify the exact reason is to consult the <a href=\"/tools/denial-code-lookup\">denial code lookup tool</a>, which provides payer‑specific guidance."
+        ]
+      },
+      {
+        "h": "Common Triggers for CO-97",
+        "p": [
+          "Several routine issues trigger the CO-97 response. Identify which of these applies to your claim before you start the appeal."
+        ],
+        "ul": [
+          "Missing or inaccurate patient demographics (e.g., date of birth, gender).",
+          "Incorrect or omitted place of service (POS) code.",
+          "Invalid or mismatched National Provider Identifier (NPI).",
+          "Failure to include required modifiers or service dates.",
+          "Submission of a claim to the wrong payer or using an outdated billing form."
+        ]
+      },
+      {
+        "h": "How to Resolve a CO-97 Denial",
+        "p": [
+          "Fixing a CO-97 denial is a systematic process that can be done in‑house or through a specialized partner."
+        ],
+        "ul": [
+          "1. Pull the original claim and compare every data element to the information in the patient’s registration and EHR.",
+          "2. Correct the identified errors—update demographics, POS, NPI, dates, or modifiers as needed.",
+          "3. Resubmit the claim with a clear “re‑submit” indicator and attach a brief note describing the correction.",
+          "4. If the payer rejects again, file an appeal referencing the corrected fields and include supporting documentation.",
+          "5. Consider leveraging <a href=\"/services/denial-management\">denial management services</a> to automate tracking and ensure timely follow‑up."
+        ]
+      },
+      {
+        "h": "Preventing Future CO-97 Denials",
+        "p": [
+          "Proactive safeguards keep the CO-97 code from reappearing in your daily workflow."
+        ],
+        "ul": [
+          "Implement real‑time eligibility and benefit verification that flags missing fields before claim generation.",
+          "Standardize data entry with drop‑down lists for POS, modifiers, and relationship codes.",
+          "Run a nightly claim edit report that runs against the <a href=\"/tools/denial-code-lookup\">denial code lookup tool</a> to catch CO‑97 patterns early.",
+          "Provide regular training for front‑office staff on accurate demographic capture and NPI verification.",
+          "Set up an automated alert in your practice management system when a CO‑97 denial is returned."
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions offers a full suite of <a href=\"/services/denial-management\">denial management services</a> that include claim scrubbing, rapid CO‑97 correction, and appeal support, so your team can focus on patient care. Ready to eliminate CO‑97 roadblocks? Schedule a <a href=\"/free-assessment\">free revenue assessment</a> and see how we can boost your clean claim rate."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "top-claim-denial-reasons-by-payer-analysis",
     "title": "Top Claim Denial Reasons by Payer: A Practical Guide for U.S. Practices",
     "category": "Denials & Appeals",
