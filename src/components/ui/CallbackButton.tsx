@@ -6,18 +6,29 @@ import { submitToWorker } from '@/lib/worker';
 
 export default function CallbackButton() {
   const [open, setOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: '', phone: '', bestTime: '', specialty: '', hp_field: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '', bestTime: '', specialty: '', hp_field: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
+  // The CRM ingest endpoint requires a valid email; without one it rejects the
+  // lead (400) and submitToWorker silently degrades to the email backup, so the
+  // callback never reaches the CRM. Email is therefore required here.
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim());
+  const canSubmit = Boolean(formData.name.trim() && formData.phone.trim() && emailValid);
+
   const handleRequestCallback = async () => {
-    if (!formData.name || !formData.phone) return;
+    if (!canSubmit) return;
     // Honeypot: silently succeed if bot filled hidden field
     if (formData.hp_field) { setStatus('success'); return; }
     setStatus('submitting');
     try {
-      await submitToWorker('callback_request', formData);
+      await submitToWorker('callback_request', {
+        ...formData,
+        name: formData.name.trim(),
+        phone: formData.phone.trim(),
+        email: formData.email.trim(),
+      });
       setStatus('success');
-      setFormData({ name: '', phone: '', bestTime: '', specialty: '', hp_field: '' });
+      setFormData({ name: '', phone: '', email: '', bestTime: '', specialty: '', hp_field: '' });
       setTimeout(() => { setOpen(false); setStatus('idle'); }, 3500);
     } catch {
       setStatus('error');
@@ -94,6 +105,13 @@ export default function CallbackButton() {
                   onChange={e => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-teal transition-colors"
                 />
+                <input
+                  type="email"
+                  placeholder="Email *"
+                  aria-label="Email address" value={formData.email}
+                  onChange={e => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-teal transition-colors"
+                />
                 <select
                   aria-label="Your specialty" value={formData.specialty}
                   onChange={e => setFormData({ ...formData, specialty: e.target.value })}
@@ -124,7 +142,7 @@ export default function CallbackButton() {
                 )}
                 <button
                   onClick={handleRequestCallback}
-                  disabled={status === 'submitting' || !formData.name || !formData.phone}
+                  disabled={status === 'submitting' || !canSubmit}
                   className="w-full bg-navy hover:bg-teal disabled:opacity-50 text-white font-bold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2"
                 >
                   {status === 'submitting' ? (
