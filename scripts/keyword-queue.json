@@ -2,20 +2,6 @@
   "_comment": "Prioritized keyword queue for the auto-blog. Each run pops pending[0], writes an article targeting that keyword, forces the internal links below, then moves the item to done[]. When pending is empty the generator falls back to free-choice topics. Add new targets to the END of pending[]. Categories MUST match one of the allowed CATEGORIES in blogPosts.ts.",
   "pending": [
     {
-      "keyword": "CO-16 denial code meaning and how to fix it",
-      "category": "Denials & Appeals",
-      "links": [
-        {
-          "href": "/tools/denial-code-lookup",
-          "text": "denial code lookup tool"
-        },
-        {
-          "href": "/services/denial-management",
-          "text": "denial management services"
-        }
-      ]
-    },
-    {
       "keyword": "timely filing limits by payer 2026",
       "category": "Denials & Appeals",
       "links": [
@@ -178,6 +164,22 @@
       ],
       "slug": "co-97-denial-code-meaning-how-to-fix",
       "publishedAt": "2026-07-14"
+    },
+    {
+      "keyword": "CO-16 denial code meaning and how to fix it",
+      "category": "Denials & Appeals",
+      "links": [
+        {
+          "href": "/tools/denial-code-lookup",
+          "text": "denial code lookup tool"
+        },
+        {
+          "href": "/services/denial-management",
+          "text": "denial management services"
+        }
+      ],
+      "slug": "co-16-denial-code-meaning-how-to-fix",
+      "publishedAt": "2026-07-17"
     }
   ]
 }

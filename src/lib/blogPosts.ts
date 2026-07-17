@@ -11,6 +11,70 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "co-16-denial-code-meaning-how-to-fix",
+    "title": "CO-16 Denial Code Meaning and How to Fix It: A Practical Guide for U.S. Practices",
+    "category": "Denials & Appeals",
+    "author": "David Chen",
+    "date": "2026-07-17",
+    "readTime": "5 min read",
+    "image": "/images/blog/denials-appeals.svg",
+    "excerpt": "Learn what the CO-16 denial code means, why it occurs, and step‑by‑step actions to resolve and prevent it.",
+    "sections": [
+      {
+        "p": [
+          "CO-16 denial code meaning and how to fix it is a frequent pain point for practice owners, administrators, and billers who see claims bounce back for missing or mismatched patient information; use our <a href=\"/tools/denial-code-lookup\">denial code lookup tool</a> to confirm the exact definition before you begin remediation."
+        ]
+      },
+      {
+        "h": "What Triggers a CO-16 Denial?",
+        "p": [
+          "Payers issue CO-16 when the claim’s patient demographic data—typically name, date of birth, or gender—does not match the information on file with the insurer. Common sources of the mismatch include manual entry errors, outdated EMR data, and incomplete insurance eligibility checks."
+        ],
+        "ul": [
+          "Incorrect spelling or transposed digits in the patient’s name or DOB",
+          "Gender discrepancy between the EMR and payer records",
+          "Failure to update patient demographics after a name change or marriage"
+        ]
+      },
+      {
+        "h": "Step‑by‑Step Fix for CO-16 Denials",
+        "p": [
+          "Resolving a CO-16 denial involves confirming the correct patient information, updating your records, and resubmitting the claim with a clear correction note."
+        ],
+        "ul": [
+          "1. Verify the patient’s details against the payer’s eligibility portal or recent explanation of benefits (EOB).",
+          "2. Correct any errors in the EMR or practice management system; ensure the same data is used for eligibility verification and claim generation.",
+          "3. Add a remark code (e.g., \"CO-16 corrected – patient demographics updated\") on the resubmission to alert the payer.",
+          "4. Resubmit the claim electronically; if the payer requires a paper claim, follow their specific instructions."
+        ]
+      },
+      {
+        "h": "Preventing Future CO-16 Denials",
+        "p": [
+          "Proactive controls keep demographic mismatches from reaching the payer in the first place."
+        ],
+        "ul": [
+          "Implement real‑time eligibility verification that pulls the latest patient data directly from the payer.",
+          "Standardize data entry with dropdown menus and validation rules for DOB and gender fields.",
+          "Schedule quarterly audits of patient demographics and reconcile any discrepancies with payer records.",
+          "Leverage our <a href=\"/services/denial-management\">denial management services</a> to monitor and correct patterns before they become costly."
+        ]
+      },
+      {
+        "h": "When to Escalate to a Formal Appeal",
+        "p": [
+          "If a resubmitted claim is rejected again with CO-16, or if the payer claims the information is still incorrect despite your verification, it’s time to file a formal appeal. Include supporting documents such as a copy of the patient’s driver’s license or passport, a recent eligibility verification screenshot, and a concise cover letter explaining the correction."
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions offers end‑to‑end support for CO-16 denials—from real‑time demographic validation to expert appeal drafting—so you can focus on patient care while we safeguard your revenue. Ready to eliminate CO-16 roadblocks? Request a <a href=\"/free-assessment\">free revenue assessment</a> today."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "co-97-denial-code-meaning-how-to-fix",
     "title": "CO-97 Denial Code Meaning and How to Fix It: A Practical Guide for U.S. Practices",
     "category": "Denials & Appeals",
