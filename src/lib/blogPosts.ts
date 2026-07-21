@@ -11,6 +11,74 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "timely-filing-limits-2026-payer-guide",
+    "title": "Mastering Timely Filing Limits by Payer 2026: A Practical Guide for U.S. Practices",
+    "category": "Denials & Appeals",
+    "author": "Michael Torres",
+    "date": "2026-07-21",
+    "readTime": "5 min read",
+    "image": "/images/blog/denials-appeals.svg",
+    "excerpt": "Learn how to navigate 2026 timely filing limits across major payers, avoid lost revenue, and streamline your claims workflow.",
+    "sections": [
+      {
+        "p": [
+          "timely filing limits by payer 2026 are a critical deadline that can make or break your practice’s cash flow. Understanding each payer’s window and building a proactive process ensures claims are submitted on time and revenue is protected. For quick calculations, try our <a href=\"/tools/timely-filing-calculator\">timely filing calculator</a>."
+        ]
+      },
+      {
+        "h": "Understanding Timely Filing Limits by Payer in 2026",
+        "p": [
+          "Each insurer sets its own clock on when a claim must be received after service. While the rules are generally consistent, small variations can trip up even seasoned billers."
+        ],
+        "ul": [
+          "Medicare and most Medicaid programs typically allow 12 months from the date of service.",
+          "Commercial insurers often set limits between 90 and 180 days, though some may extend to 365 days with prior agreement.",
+          "State Medicaid programs can vary widely; always verify the specific contract language for your state."
+        ]
+      },
+      {
+        "h": "Why Timely Filing Limits Matter for Your Bottom Line",
+        "p": [
+          "Missing a filing deadline usually results in an automatic denial, regardless of the claim’s clinical validity."
+        ],
+        "ul": [
+          "Lost revenue that could have covered overhead and staff salaries.",
+          "Increased administrative burden from re‑work and appeal attempts.",
+          "Potential damage to payer relationships and future contract negotiations."
+        ]
+      },
+      {
+        "h": "Practical Strategies to Stay Within Limits",
+        "p": [
+          "Implementing systematic checks and leveraging technology are the most effective ways to avoid late submissions."
+        ],
+        "ul": [
+          "Use claim‑submission software that timestamps each claim and flags approaching deadlines.",
+          "Create internal “soft” deadlines (e.g., submit within 30 days for commercial payers) to build a safety buffer.",
+          "Assign a dedicated staff member to run weekly reports from the <a href=\"/services/claims-billing\">claims submission services</a> dashboard and chase overdue items.",
+          "Integrate the <a href=\"/tools/timely-filing-calculator\">timely filing calculator</a> into your daily workflow to instantly verify eligibility windows."
+        ]
+      },
+      {
+        "h": "Handling Late Submissions and Appeals",
+        "p": [
+          "Even with safeguards, occasional late submissions happen. Knowing the correct appeal pathway can rescue revenue."
+        ],
+        "ul": [
+          "Review the payer’s “timely filing exception” policy; many allow a one‑time grace period with supporting documentation.",
+          "Submit a written appeal that includes the original claim, a clear explanation of the delay, and any extenuating circumstances (e.g., system outage).",
+          "Track appeal outcomes in a centralized log to identify repeat offenders and adjust processes accordingly."
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions offers end‑to‑end revenue‑cycle support, from real‑time claim monitoring to expert appeal writing. Our team can configure custom alerts that keep you ahead of every payer’s filing window, and we handle exception requests on your behalf. Ready to eliminate missed filing deadlines? Schedule a <a href=\"/free-assessment\">free revenue assessment</a> today."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "co-16-denial-code-meaning-how-to-fix",
     "title": "CO-16 Denial Code Meaning and How to Fix It: A Practical Guide for U.S. Practices",
     "category": "Denials & Appeals",
