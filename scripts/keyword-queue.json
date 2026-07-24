@@ -2,20 +2,6 @@
   "_comment": "Prioritized keyword queue for the auto-blog. Each run pops pending[0], writes an article targeting that keyword, forces the internal links below, then moves the item to done[]. When pending is empty the generator falls back to free-choice topics. Add new targets to the END of pending[]. Categories MUST match one of the allowed CATEGORIES in blogPosts.ts.",
   "pending": [
     {
-      "keyword": "provider credentialing timeline and CAQH",
-      "category": "Credentialing & Enrollment",
-      "links": [
-        {
-          "href": "/services/credentialing",
-          "text": "provider credentialing services"
-        },
-        {
-          "href": "/free-assessment",
-          "text": "free assessment"
-        }
-      ]
-    },
-    {
       "keyword": "prior authorization process guide for practices",
       "category": "Prior Authorization",
       "links": [
@@ -182,6 +168,22 @@
       ],
       "slug": "timely-filing-limits-2026-payer-guide",
       "publishedAt": "2026-07-21"
+    },
+    {
+      "keyword": "provider credentialing timeline and CAQH",
+      "category": "Credentialing & Enrollment",
+      "links": [
+        {
+          "href": "/services/credentialing",
+          "text": "provider credentialing services"
+        },
+        {
+          "href": "/free-assessment",
+          "text": "free assessment"
+        }
+      ],
+      "slug": "optimizing-provider-credentialing-timeline-caqh",
+      "publishedAt": "2026-07-24"
     }
   ]
 }
