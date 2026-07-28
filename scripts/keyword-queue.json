@@ -2,20 +2,6 @@
   "_comment": "Prioritized keyword queue for the auto-blog. Each run pops pending[0], writes an article targeting that keyword, forces the internal links below, then moves the item to done[]. When pending is empty the generator falls back to free-choice topics. Add new targets to the END of pending[]. Categories MUST match one of the allowed CATEGORIES in blogPosts.ts.",
   "pending": [
     {
-      "keyword": "prior authorization process guide for practices",
-      "category": "Prior Authorization",
-      "links": [
-        {
-          "href": "/services/prior-authorization",
-          "text": "prior authorization services"
-        },
-        {
-          "href": "/services/eligibility-verification",
-          "text": "eligibility verification services"
-        }
-      ]
-    },
-    {
       "keyword": "how to design patient payment plans that get paid",
       "category": "Patient Access & Collections",
       "links": [
@@ -184,6 +170,22 @@
       ],
       "slug": "optimizing-provider-credentialing-timeline-caqh",
       "publishedAt": "2026-07-24"
+    },
+    {
+      "keyword": "prior authorization process guide for practices",
+      "category": "Prior Authorization",
+      "links": [
+        {
+          "href": "/services/prior-authorization",
+          "text": "prior authorization services"
+        },
+        {
+          "href": "/services/eligibility-verification",
+          "text": "eligibility verification services"
+        }
+      ],
+      "slug": "prior-authorization-process-guide-for-practices",
+      "publishedAt": "2026-07-28"
     }
   ]
 }
