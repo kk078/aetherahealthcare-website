@@ -11,6 +11,77 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "how-to-design-patient-payment-plans-that-get-paid",
+    "title": "How to Design Patient Payment Plans That Get Paid: A Practical Guide for U.S. Practices",
+    "category": "Patient Access & Collections",
+    "author": "Mark Wilson",
+    "date": "2026-07-31",
+    "readTime": "5 min read",
+    "image": "/images/blog/patient-access-collections.svg",
+    "excerpt": "Learn practical steps to create patient payment plans that improve collections, keep patients satisfied, and protect revenue.",
+    "sections": [
+      {
+        "p": [
+          "How to design patient payment plans that get paid begins with a clear strategy that aligns patient affordability with practice cash flow, and it starts long before the patient leaves the exam room."
+        ]
+      },
+      {
+        "h": "Key Principles for Effective Payment Plans",
+        "p": [
+          "Transparency, simplicity, and flexibility are the foundation of any plan that patients will actually follow, and leveraging your <a href=\"/services/patient-collections\">patient collections services</a> can help automate reminders and track compliance."
+        ],
+        "ul": [
+          "Be transparent about the total cost and any fees up front.",
+          "Offer multiple payment frequencies (weekly, bi‑weekly, monthly) to match patient cash flow.",
+          "Set realistic payment amounts based on the patient's ability to pay.",
+          "Include clear default and termination clauses to protect the practice."
+        ]
+      },
+      {
+        "h": "Structuring the Plan: Terms, Frequency, and Communication",
+        "p": [
+          "A well‑structured agreement reduces confusion and encourages on‑time payments."
+        ],
+        "ul": [
+          "Define the total balance, any interest (if permissible), and the exact payment schedule.",
+          "Choose a cadence that aligns with typical payroll cycles—weekly, bi‑weekly, or monthly.",
+          "Provide a written agreement that the patient signs electronically or on paper.",
+          "Use the patient portal to share the schedule and allow easy access to balance details."
+        ]
+      },
+      {
+        "h": "Integrating Payment Plans into Your Workflow and Technology",
+        "p": [
+          "Embedding the payment plan process into existing front‑end and back‑end systems prevents manual errors and keeps revenue flowing."
+        ],
+        "ul": [
+          "Capture financial information and consent during check‑in or intake.",
+          "Generate the payment schedule automatically within your EHR or billing platform.",
+          "Set up automated SMS/email reminders tied to the schedule.",
+          "Link the schedule to claim posting so that payments are applied correctly in real time."
+        ]
+      },
+      {
+        "h": "Ensuring Compliance and Avoiding Pitfalls",
+        "p": [
+          "Compliance with federal and state regulations protects both the practice and the patient."
+        ],
+        "ul": [
+          "Avoid interest rates that exceed state usury limits.",
+          "Do not charge for services already covered by insurance under the No Surprises Act.",
+          "Provide an easy opt‑out mechanism and clear instructions for stopping payments.",
+          "Document patient consent and the payment agreement in the medical record."
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions can design, implement, and monitor custom payment‑plan programs that fit your specialty and patient demographics. Schedule a <a href=\"/free-assessment\">free assessment</a> to see how our expertise and technology can boost collections while preserving patient satisfaction."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "prior-authorization-process-guide-for-practices",
     "title": "Prior Authorization Process Guide for Practices: Streamlined Steps to Reduce Delays",
     "category": "Prior Authorization",
