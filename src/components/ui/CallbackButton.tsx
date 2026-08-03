@@ -20,19 +20,19 @@ export default function CallbackButton() {
     // Honeypot: silently succeed if bot filled hidden field
     if (formData.hp_field) { setStatus('success'); return; }
     setStatus('submitting');
-    try {
-      await submitToWorker('callback_request', {
-        ...formData,
-        name: formData.name.trim(),
-        phone: formData.phone.trim(),
-        email: formData.email.trim(),
-      });
-      setStatus('success');
-      setFormData({ name: '', phone: '', email: '', bestTime: '', specialty: '', hp_field: '' });
-      setTimeout(() => { setOpen(false); setStatus('idle'); }, 3500);
-    } catch {
+    const ok = await submitToWorker('callback_request', {
+      ...formData,
+      name: formData.name.trim(),
+      phone: formData.phone.trim(),
+      email: formData.email.trim(),
+    });
+    if (!ok) {
       setStatus('error');
+      return;
     }
+    setStatus('success');
+    setFormData({ name: '', phone: '', email: '', bestTime: '', specialty: '', hp_field: '' });
+    setTimeout(() => { setOpen(false); setStatus('idle'); }, 3500);
   };
 
   return (

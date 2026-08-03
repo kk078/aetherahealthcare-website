@@ -26,7 +26,9 @@ export default function TimelyFilingCalculator() {
     if (!dos) return null;
     const start = new Date(dos + 'T00:00:00');
     if (isNaN(start.getTime())) return null;
-    const deadline = new Date(start.getTime() + days * DAY);
+    // Add calendar days (not ms) so the deadline stays on the right date across DST transitions.
+    const deadline = new Date(start);
+    deadline.setDate(deadline.getDate() + days);
     const t0 = new Date(); t0.setHours(0, 0, 0, 0);
     const remaining = Math.round((deadline.getTime() - t0.getTime()) / DAY);
     let status: 'past' | 'urgent' | 'ok';

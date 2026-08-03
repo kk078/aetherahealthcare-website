@@ -148,7 +148,7 @@ export default function Services() {
         subtitle="Revenue cycle management tailored to your specialty and practice — coding, claims, denials, and collections, engineered for financial precision."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/contact', label: 'Talk to an Expert' }}
-        chips={['12 RCM services', '26+ specialties', '900+ payers']}
+        chips={['15 RCM services', '26+ specialties', '900+ payers']}
       />
 
       {/* Services Overview */}

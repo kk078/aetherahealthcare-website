@@ -1,41 +1,16 @@
 name: CI — Pull Request Checks
 
 on:
+  pull_request:
+  push:
+    branches: [master, main]
   workflow_dispatch: {}
 
 jobs:
-  # ── 1. Worker unit tests ──────────────────────────────────────────────────
-  worker-tests:
-    name: Worker Unit Tests (Vitest)
+  # ── 1. Next.js build + type check ─────────────────────────────────────────
+  build:
+    name: Next.js Build & Type Check
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: aethera-worker
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: aethera-worker/package-lock.json
-
-      - name: Install Worker dependencies
-        run: npm ci --legacy-peer-deps
-
-      - name: Run Worker unit tests
-        run: npm test
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-
-  # ── 2. Next.js build check ────────────────────────────────────────────────
-  nextjs-build:
-    name: Next.js Build
-    runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -48,11 +23,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Next.js site
+      - name: Build Next.js site (includes TypeScript check)
         run: npm run build
         env:
-          NEXT_PUBLIC_WORKER_URL: https://aethera-forms.aetherahealthcare.workers.dev
-          NEXT_PUBLIC_SITE_URL: https://aetherahealthcare.com
+          NEXT_PUBLIC_GOOGLE_ADS_ID: AW-18295729018
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
@@ -61,12 +35,14 @@ jobs:
           path: out/
           retention-days: 1
 
-  # ── 3. Playwright E2E (against production) ───────────────────────────────
-  e2e-smoke:
-    name: E2E Smoke Tests
+  # ── 2. Playwright E2E ─────────────────────────────────────────────────────
+  # Page tests run against the PR's own build served locally; header and API
+  # tests run read-only against production. No test POSTs live form data
+  # (the contact-form live-submit test self-skips without E2E_LIVE_SUBMIT=1).
+  e2e:
+    name: E2E Tests
     runs-on: ubuntu-latest
-    needs: [nextjs-build]
-
+    needs: [build]
     steps:
       - uses: actions/checkout@v4
 
@@ -79,13 +55,25 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright browsers
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: nextjs-out
+          path: out
+
+      - name: Install Playwright browser
         run: npx playwright install chromium --with-deps
 
-      - name: Run smoke + security header tests
-        run: npx playwright test tests/e2e/smoke.spec.ts tests/e2e/security-headers.spec.ts tests/e2e/worker-api.spec.ts
+      - name: Serve the built site
+        run: python3 -m http.server 3000 --directory out &
+
+      - name: Page tests (against this build)
+        run: npx playwright test tests/e2e/smoke.spec.ts tests/e2e/contact-form.spec.ts tests/e2e/gap-analysis-redirect.spec.ts --project=chromium
         env:
-          BASE_URL: https://aetherahealthcare.com
+          BASE_URL: http://localhost:3000
+
+      - name: Security-header & API tests (against production, read-only)
+        run: npx playwright test tests/e2e/security-headers.spec.ts tests/e2e/crm-api.spec.ts --project=chromium
 
       - name: Upload Playwright report
         if: failure()

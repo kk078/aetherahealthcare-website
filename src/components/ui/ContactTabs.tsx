@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import ContactForm from '@/components/ui/ContactForm';
 
 export default function ContactTabs() {
@@ -52,9 +53,13 @@ export default function ContactTabs() {
               </li>
             </ul>
           </div>
-          <button className="w-full bg-mint hover:bg-teal dark:hover:bg-teal text-navy dark:text-cream font-bold py-3 px-6 rounded-full transition-colors duration-300">
+          <Link
+            prefetch={false}
+            href="/schedule"
+            className="block w-full text-center bg-mint hover:bg-teal dark:hover:bg-teal text-navy dark:text-cream font-bold py-3 px-6 rounded-full transition-colors duration-300"
+          >
             Schedule Consultation
-          </button>
+          </Link>
         </div>
       )}
     </div>

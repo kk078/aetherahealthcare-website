@@ -5,18 +5,20 @@ import { test, expect } from '@playwright/test';
  */
 
 const criticalPages = [
-  { path: '/',                      title: /Aethera/i },
-  { path: '/about',                 title: /About/i },
-  { path: '/services',              title: /Services/i },
-  { path: '/pricing',               title: /Pricing/i },
-  { path: '/contact',               title: /Contact/i },
-  { path: '/free-assessment',       title: /Assessment/i },
-  { path: '/gap-analysis',          title: /Portal|Analysis/i },
-  { path: '/integrations',          title: /Integration/i },
-  { path: '/payers',                title: /Payer/i },
-  { path: '/case-studies',          title: /Case/i },
-  { path: '/blog',                  title: /Blog/i },
-  { path: '/specialties/cardiology',title: /Cardiology/i },
+  { path: '/',                              title: /Aethera/i },
+  { path: '/about',                         title: /About/i },
+  { path: '/services',                      title: /Services/i },
+  { path: '/pricing',                       title: /Pricing/i },
+  { path: '/contact',                       title: /Contact/i },
+  { path: '/free-assessment',               title: /Assessment|Gap Analysis/i },
+  { path: '/integrations',                  title: /Integration/i },
+  { path: '/payers',                        title: /Payer/i },
+  { path: '/case-studies',                  title: /Case/i },
+  { path: '/blog',                          title: /Pulse|Blog/i },
+  { path: '/specialties',                   title: /Specialt/i },
+  { path: '/medical-billing/cardiology',    title: /Cardiology/i },
+  { path: '/tools/denial-code-lookup',      title: /Denial/i },
+  { path: '/payers/directory/aetna',        title: /Aetna/i },
 ];
 
 for (const page of criticalPages) {

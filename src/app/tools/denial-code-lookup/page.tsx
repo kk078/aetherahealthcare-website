@@ -9,7 +9,7 @@ import { AlertTriangle, ArrowLeft } from 'lucide-react';
 export const metadata = {
   title: { absolute: 'Denial Code Lookup — Full CARC & RARC Reason Code List | Aethera Healthcare Solutions' },
   description:
-    'Free searchable lookup of 280+ CARC and RARC denial codes for billing and AR teams. Get the official reason for any code, plus how to work and prevent the most common denials.',
+    'Free searchable lookup of 1,200+ CARC and RARC denial codes for billing and AR teams. Get the official reason for any code, plus how to work and prevent the most common denials.',
 };
 
 export default function DenialCodeLookupPage() {

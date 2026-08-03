@@ -93,7 +93,7 @@ export default function ContactForm() {
         </h3>
         <p className="text-gray mb-6 max-w-md mx-auto">
           {activeTab === 'message'
-            ? 'Thank you for reaching out. Our team will respond to support@aetherahealthcare.com within 1 business day.'
+            ? 'Thank you for reaching out. Our team will reply to the email you provided within 1 business day.'
             : "We'll reach out within 1 business day to confirm your consultation time. Check your email for a confirmation."}
         </p>
         <button

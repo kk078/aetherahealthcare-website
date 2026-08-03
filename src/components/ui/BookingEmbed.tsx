@@ -62,7 +62,7 @@ function MeetingRequestForm({ compact = false }: { compact?: boolean }) {
   const [open, setOpen] = useState(!compact);
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const [form, setForm] = useState({
-    name: '', email: '', phone: '', practice: '', preferredTime: '', message: '',
+    name: '', email: '', phone: '', practice: '', preferredTime: '', message: '', hp_field: '',
   });
 
   const set = (k: string, v: string) => setForm((f) => ({ ...f, [k]: v }));
@@ -72,23 +72,25 @@ function MeetingRequestForm({ compact = false }: { compact?: boolean }) {
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || status === 'sending') return;
+    // Honeypot: silently succeed if a bot filled the hidden field
+    if (form.hp_field) { setStatus('sent'); return; }
     setStatus('sending');
-    try {
-      await submitToWorker('meeting_request', {
-        name: form.name.trim(),
-        email: form.email.trim(),
-        phone: form.phone.trim(),
-        practice: form.practice.trim(),
-        preferredTime: form.preferredTime.trim(),
-        message:
-          `Meeting request from the website. Preferred time: ${form.preferredTime || 'flexible'}. ` +
-          (form.message ? `Notes: ${form.message}` : ''),
-      });
-      trackConversion('meeting');
-      setStatus('sent');
-    } catch {
+    const ok = await submitToWorker('meeting_request', {
+      name: form.name.trim(),
+      email: form.email.trim(),
+      phone: form.phone.trim(),
+      practice: form.practice.trim(),
+      preferredTime: form.preferredTime.trim(),
+      message:
+        `Meeting request from the website. Preferred time: ${form.preferredTime || 'flexible'}. ` +
+        (form.message ? `Notes: ${form.message}` : ''),
+    });
+    if (!ok) {
       setStatus('error');
+      return;
     }
+    trackConversion('meeting');
+    setStatus('sent');
   }
 
   if (status === 'sent') {
@@ -123,6 +125,10 @@ function MeetingRequestForm({ compact = false }: { compact?: boolean }) {
           <p className="text-sm text-gray mb-5">Tell us when works and we&rsquo;ll confirm a time that fits your schedule.</p>
         </>
       )}
+      {/* Honeypot — hidden from humans, filled by bots */}
+      <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
+        <input type="text" aria-hidden="true" aria-label="Leave empty" tabIndex={-1} autoComplete="off" value={form.hp_field} onChange={(e) => set('hp_field', e.target.value)} />
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="mr-name" className="block text-sm font-semibold text-navy mb-1">Name *</label>

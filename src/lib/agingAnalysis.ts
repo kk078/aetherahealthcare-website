@@ -310,8 +310,10 @@ export function computeMetrics(
   const writeOffPct = bench.writeOff; estimated.push('writeOff');
   const writeOffValue = (writeOffPct / 100) * chargeBase;
 
-  const patientRespValue = agg.patientResp > 0 ? agg.patientResp : (estimated.push('patientResp'), total * 0.10);
-  const patientRespPct = (patientRespValue / denom) * 100;
+  // Clamp to total A/R — a malformed upload (e.g. patient-resp column summed across
+  // duplicate rows) must never render a >100% share or a negative payer balance.
+  const patientRespValue = Math.min(total, agg.patientResp > 0 ? agg.patientResp : (estimated.push('patientResp'), total * 0.10));
+  const patientRespPct = Math.min(100, (patientRespValue / denom) * 100);
   const payerRespValue = Math.max(0, total - patientRespValue);
 
   const targets: TargetGap[] = [

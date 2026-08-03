@@ -41,10 +41,12 @@ function mapToCrm(formType: string, data: AnyData): { path: string; payload: Any
   const email = s('email') || s('scheduleEmail') || '';
   const phone = s('phone') || s('schedulePhone') || '';
   const specialty = s('specialty') || s('practiceSpecialty') || '';
-  const message =
-    s('message') || s('consultationNotes') ||
-    (s('preferredTime') ? `Preferred time: ${s('preferredTime')}` : '') ||
-    `${formType.replace(/_/g, ' ')} from website`;
+  const messageParts = [
+    s('message') || s('consultationNotes'),
+    s('preferredTime') ? `Preferred time: ${s('preferredTime')}` : '',
+    s('bestTime') ? `Best time to call: ${s('bestTime')}` : '',
+  ].filter(Boolean);
+  const message = messageParts.join(' — ') || `${formType.replace(/_/g, ' ')} from website`;
   return { path: '/contact', payload: { name, practice, email, phone, specialty, message } };
 }
 
@@ -53,7 +55,7 @@ function mapToCrm(formType: string, data: AnyData): { path: string; payload: Any
 // public, client-side key by design.
 const WEB3FORMS_KEY = 'b1e9389e-b14d-4e6a-84eb-e4708fcb39f4';
 
-async function emailFallback(formType: string, data: AnyData): Promise<void> {
+async function emailFallback(formType: string, data: AnyData): Promise<boolean> {
   try {
     const details = Object.entries(data)
       .filter(([, v]) => v != null && typeof v !== 'object')
@@ -61,7 +63,7 @@ async function emailFallback(formType: string, data: AnyData): Promise<void> {
       .join('\n');
     const email = String(data.email || data.scheduleEmail || '') || 'no-reply@aetherahealthcare.com';
     const name = String(data.firstName || data.name || data.practiceContact || 'Website Visitor');
-    await fetch('https://api.web3forms.com/submit', {
+    const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
@@ -75,17 +77,20 @@ async function emailFallback(formType: string, data: AnyData): Promise<void> {
         botcheck: '',
       }),
     });
+    return res.ok;
   } catch {
-    // last resort — nothing further we can do
+    return false; // last resort — nothing further we can do
   }
 }
 
 /**
  * Post a lead to the CRM. If the CRM does not confirm receipt (non-2xx, network,
  * or CORS failure), automatically send an email backup so no prospect is ever
- * lost. Never throws.
+ * lost. Never throws; resolves true when at least one delivery channel
+ * confirmed receipt, false when both failed (callers should surface a
+ * "call us instead" message rather than a false success).
  */
-export async function submitToWorker(formType: string, data: AnyData): Promise<void> {
+export async function submitToWorker(formType: string, data: AnyData): Promise<boolean> {
   const { path, payload } = mapToCrm(formType, data);
   try {
     const res = await fetch(CRM_INGEST_BASE + path, {
@@ -93,10 +98,10 @@ export async function submitToWorker(formType: string, data: AnyData): Promise<v
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     });
-    if (res.ok) return; // CRM accepted the lead — done.
+    if (res.ok) return true; // CRM accepted the lead — done.
   } catch {
     // network / CORS failure — fall through to the email backup.
   }
   // CRM did not accept the lead → email backup so no prospect is ever lost.
-  await emailFallback(formType, data);
+  return emailFallback(formType, data);
 }

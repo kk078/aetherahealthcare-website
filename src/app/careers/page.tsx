@@ -318,9 +318,12 @@ export default function Careers() {
                       </div>
                     </div>
                     <div className="mt-4 md:mt-0">
-                      <button className="bg-teal hover:bg-navy text-white font-bold py-2 px-6 rounded-full transition-colors">
+                      <a
+                        href={`mailto:careers@aetherahealthcare.com?subject=${encodeURIComponent(`Application: ${position.title}`)}`}
+                        className="inline-block bg-teal hover:bg-navy text-white font-bold py-2 px-6 rounded-full transition-colors"
+                      >
                         Apply Now
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>

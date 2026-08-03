@@ -31,7 +31,7 @@ export default function RvuCalculator() {
   const [gpciW, setGpciW] = useState(1.0);
   const [gpciPe, setGpciPe] = useState(1.0);
   const [gpciMp, setGpciMp] = useState(1.0);
-  const [cf, setCf] = useState(32.35);
+  const [cf, setCf] = useState(33.40);
 
   const { totalRVU, payment } = useMemo(() => {
     const totalRVU = wRVU * gpciW + peRVU * gpciPe + mpRVU * gpciMp;
@@ -60,7 +60,7 @@ export default function RvuCalculator() {
         </div>
 
         <Num label="Medicare conversion factor ($)" value={cf} onChange={setCf} step={0.0001}
-          hint="Update to the current CMS conversion factor for the year you’re estimating." />
+          hint="Default is the CY2026 non-QP factor ($33.40; QP is $33.57). Update to the current CMS conversion factor for the year you’re estimating." />
       </div>
 
       <div className="lg:sticky lg:top-24 h-fit bg-navy rounded-2xl p-6 text-white shadow-sm">
