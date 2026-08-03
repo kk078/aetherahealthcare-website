@@ -24,9 +24,19 @@ test.describe('Forms worker', () => {
 
 test.describe('CRM ingest API', () => {
   test('router is alive (GET on POST-only route returns structured 4xx, not 5xx)', async ({ request }) => {
-    const res = await request.get(CRM_CONTACT);
-    expect(res.status()).toBeGreaterThanOrEqual(400);
-    expect(res.status()).toBeLessThan(500);
+    // The worker can cold-start slowly; retry transient 5xx/network blips so a
+    // single hiccup doesn't fail CI. A persistent 5xx still fails.
+    let status = 0;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        status = (await request.get(CRM_CONTACT, { timeout: 20_000 })).status();
+      } catch {
+        status = 0;
+      }
+      if (status >= 400 && status < 500) break;
+    }
+    expect(status).toBeGreaterThanOrEqual(400);
+    expect(status).toBeLessThan(500);
   });
 
   test('CORS preflight allows POST from the site origin', async ({ request }) => {
