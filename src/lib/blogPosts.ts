@@ -16,7 +16,7 @@ export const POSTS: BlogPost[] = [
     "category": "Patient Access & Collections",
     "author": "Mark Wilson",
     "date": "2026-07-31",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Learn practical steps to create patient payment plans that improve collections, keep patients satisfied, and protect revenue.",
     "sections": [
@@ -87,7 +87,7 @@ export const POSTS: BlogPost[] = [
     "category": "Prior Authorization",
     "author": "Michael Torres",
     "date": "2026-07-28",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/prior-authorization.svg",
     "excerpt": "A practical, step‑by‑step guide that helps U.S. practice owners and billing teams streamline the prior authorization workflow and avoid common setbacks.",
     "sections": [
@@ -162,7 +162,7 @@ export const POSTS: BlogPost[] = [
     "category": "Credentialing & Enrollment",
     "author": "Lisa Thompson",
     "date": "2026-07-24",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/credentialing-enrollment.svg",
     "excerpt": "A practical guide for U.S. practice leaders on shortening the credentialing timeline, mastering CAQH enrollment, and keeping revenue flowing smoothly.",
     "sections": [
@@ -232,7 +232,7 @@ export const POSTS: BlogPost[] = [
     "category": "Denials & Appeals",
     "author": "Michael Torres",
     "date": "2026-07-21",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/denials-appeals.svg",
     "excerpt": "Learn how to navigate 2026 timely filing limits across major payers, avoid lost revenue, and streamline your claims workflow.",
     "sections": [
@@ -300,7 +300,7 @@ export const POSTS: BlogPost[] = [
     "category": "Denials & Appeals",
     "author": "David Chen",
     "date": "2026-07-17",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/denials-appeals.svg",
     "excerpt": "Learn what the CO-16 denial code means, why it occurs, and step‑by‑step actions to resolve and prevent it.",
     "sections": [
@@ -364,7 +364,7 @@ export const POSTS: BlogPost[] = [
     "category": "Denials & Appeals",
     "author": "Michael Torres",
     "date": "2026-07-14",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/denials-appeals.svg",
     "excerpt": "Learn what the CO-97 denial means, why it occurs, and practical steps to correct and prevent it.",
     "sections": [
@@ -432,7 +432,7 @@ export const POSTS: BlogPost[] = [
     "category": "Denials & Appeals",
     "author": "Michael Torres",
     "date": "2026-07-10",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/denials-appeals.svg",
     "excerpt": "Explore the most common claim denial reasons by major payers and learn actionable steps to reduce denials and improve cash flow.",
     "sections": [
@@ -497,7 +497,7 @@ export const POSTS: BlogPost[] = [
     "category": "Denials & Appeals",
     "author": "Robert Johnson",
     "date": "2026-07-07",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/denials-appeals.svg",
     "excerpt": "Discover how denied claims drain revenue beyond the lost reimbursement and learn practical steps to measure and reduce the true cost.",
     "sections": [
@@ -607,7 +607,7 @@ export const POSTS: BlogPost[] = [
     "author": "Amanda Rodriguez",
     "date": "2026-07-03",
     "image": "/images/blog/specialty-billing.svg",
-    "readTime": "5 min read",
+    "readTime": "1 min read",
     "slug": "pediatric-medical-billing-guide",
     "title": "Pediatric Billing: Vaccines, Well-Child Visits & Denials",
     "category": "Specialty Billing",
@@ -654,7 +654,7 @@ export const POSTS: BlogPost[] = [
     "author": "David Chen",
     "date": "2026-07-03",
     "image": "/images/blog/specialty-billing.svg",
-    "readTime": "5 min read",
+    "readTime": "1 min read",
     "slug": "internal-medicine-billing-guide",
     "title": "Internal Medicine Billing: Chronic Care, E/M & Denials",
     "category": "Specialty Billing",
@@ -701,7 +701,7 @@ export const POSTS: BlogPost[] = [
     "author": "Lisa Thompson",
     "date": "2026-07-03",
     "image": "/images/blog/compliance-privacy.svg",
-    "readTime": "5 min read",
+    "readTime": "1 min read",
     "slug": "medical-billing-compliance-guide",
     "title": "Medical Billing Compliance in 2026: The Complete Guide",
     "category": "Compliance & Privacy",
@@ -754,7 +754,7 @@ export const POSTS: BlogPost[] = [
     "author": "Jennifer Walsh",
     "date": "2026-07-03",
     "image": "/images/blog/patient-access-collections.svg",
-    "readTime": "5 min read",
+    "readTime": "1 min read",
     "slug": "patient-collections-guide",
     "title": "Patient Collections That Don’t Hurt Retention: A Complete Guide",
     "category": "Patient Access & Collections",
@@ -807,7 +807,7 @@ export const POSTS: BlogPost[] = [
     "author": "Sarah Kim",
     "date": "2026-07-03",
     "image": "/images/blog/specialty-billing.svg",
-    "readTime": "5 min read",
+    "readTime": "1 min read",
     "slug": "dermatology-medical-billing-guide",
     "title": "Dermatology Billing: Procedures, Modifiers & Denials",
     "category": "Specialty Billing",
@@ -854,7 +854,7 @@ export const POSTS: BlogPost[] = [
     "author": "Amanda Rodriguez",
     "date": "2026-07-03",
     "image": "/images/blog/specialty-billing.svg",
-    "readTime": "5 min read",
+    "readTime": "1 min read",
     "slug": "behavioral-health-billing-guide",
     "title": "Behavioral Health Billing: The Rules That Trip Up Practices",
     "category": "Specialty Billing",
@@ -913,7 +913,7 @@ export const POSTS: BlogPost[] = [
     "author": "Robert Johnson",
     "date": "2026-07-03",
     "image": "/images/blog/specialty-billing.svg",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "slug": "orthopedic-medical-billing-guide",
     "title": "Orthopedic Billing: Global Periods, Modifiers & Denials",
     "category": "Specialty Billing",
@@ -972,7 +972,7 @@ export const POSTS: BlogPost[] = [
     "author": "David Chen",
     "date": "2026-07-03",
     "image": "/images/blog/specialty-billing.svg",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "slug": "gastroenterology-medical-billing-guide",
     "title": "Gastroenterology Billing: Screening vs Diagnostic Coding",
     "category": "Specialty Billing",
@@ -1033,7 +1033,7 @@ export const POSTS: BlogPost[] = [
     "category": "Data & Analytics",
     "author": "Lisa Thompson",
     "date": "2026-07-03",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/data-analytics.svg",
     "excerpt": "Learn how to define, measure, and improve your clean claim rate, with actionable steps and tools to set a realistic benchmark for revenue cycle success.",
     "sections": [
@@ -1161,7 +1161,7 @@ export const POSTS: BlogPost[] = [
     "author": "Jennifer Walsh",
     "date": "2026-07-03",
     "image": "/images/blog/revenue-cycle.svg",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "slug": "signs-medical-billing-losing-revenue",
     "title": "Signs Your Medical Billing Is Quietly Losing Revenue",
     "category": "Revenue Cycle",
@@ -1220,7 +1220,7 @@ export const POSTS: BlogPost[] = [
     "author": "Sarah Kim",
     "date": "2026-07-03",
     "image": "/images/blog/specialty-billing.svg",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "slug": "cardiology-medical-billing-guide",
     "title": "Cardiology Medical Billing: Codes, Denials & Best Practices",
     "category": "Specialty Billing",
@@ -1279,7 +1279,7 @@ export const POSTS: BlogPost[] = [
     "author": "Michael Torres",
     "date": "2026-07-03",
     "image": "/images/blog/practice-management.svg",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "slug": "cost-to-outsource-medical-billing",
     "title": "How Much Does It Cost to Outsource Medical Billing?",
     "category": "Practice Management",
@@ -1343,7 +1343,7 @@ export const POSTS: BlogPost[] = [
     "author": "Jennifer Walsh",
     "date": "2026-07-03",
     "image": "/images/blog/revenue-cycle.svg",
-    "readTime": "5 min read",
+    "readTime": "3 min read",
     "slug": "medical-billing-for-small-practices",
     "title": "Medical Billing for Small & Independent Practices",
     "category": "Revenue Cycle",
@@ -1396,7 +1396,7 @@ export const POSTS: BlogPost[] = [
     "author": "Sarah Kim",
     "date": "2026-07-03",
     "image": "/images/blog/denials-appeals.svg",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "slug": "medical-claim-denial-management-guide",
     "title": "Medical Claim Denial Management: The Complete Guide",
     "category": "Denials & Appeals",
@@ -1451,7 +1451,7 @@ export const POSTS: BlogPost[] = [
     "category": "Practice Management",
     "author": "Michael Torres",
     "date": "2026-06-30",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/practice-management.svg",
     "excerpt": "A practical guide for practice leaders to capture missed revenue by tightening the post-visit workflow.",
     "sections": [
@@ -1518,7 +1518,7 @@ export const POSTS: BlogPost[] = [
     "category": "Revenue Cycle",
     "author": "Michael Torres",
     "date": "2026-06-26",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/revenue-cycle.svg",
     "excerpt": "A clear, step‑by‑step guide to tighten your claim submission process, reduce rework, and accelerate cash flow for U.S. medical practices.",
     "sections": [
@@ -1596,7 +1596,7 @@ export const POSTS: BlogPost[] = [
     "category": "Data & Analytics",
     "author": "Amanda Rodriguez",
     "date": "2026-06-23",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/data-analytics.svg",
     "excerpt": "Learn how to design and implement a live revenue‑cycle dashboard that gives practice owners actionable insights to improve cash flow and reduce denials.",
     "sections": [
@@ -1666,7 +1666,7 @@ export const POSTS: BlogPost[] = [
     "category": "Revenue Cycle",
     "author": "Amanda Rodriguez",
     "date": "2026-06-19",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/revenue-cycle.svg",
     "excerpt": "Learn a step‑by‑step approach to capture revenue from out‑of‑network claims while keeping patients informed and satisfied.",
     "sections": [
@@ -1742,7 +1742,7 @@ export const POSTS: BlogPost[] = [
     "category": "Patient Access & Collections",
     "author": "David Chen",
     "date": "2026-06-16",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Learn practical steps to tighten eligibility checks and pre‑authorization workflows, reduce claim rejections, and protect your practice’s bottom line.",
     "sections": [
@@ -1825,7 +1825,7 @@ export const POSTS: BlogPost[] = [
     "category": "Practice Management",
     "author": "Lisa Thompson",
     "date": "2026-06-12",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/practice-management.svg",
     "excerpt": "Learn how to build a sustainable training program that keeps your front‑office, billing, and clinical teams aligned with evolving revenue‑cycle best practices, reducing errors and boosting cash flow.",
     "sections": [
@@ -1895,7 +1895,7 @@ export const POSTS: BlogPost[] = [
     "category": "Patient Access & Collections",
     "author": "David Chen",
     "date": "2026-06-09",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Learn practical steps to create, implement, and manage patient payment plans that improve cash flow while enhancing the patient experience.",
     "sections": [
@@ -1985,7 +1985,7 @@ export const POSTS: BlogPost[] = [
     "category": "Patient Access & Collections",
     "author": "David Chen",
     "date": "2026-06-08",
-    "readTime": "5 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Learn how embedding financial counseling at the front end of the visit can improve collections, reduce surprise bills, and enhance patient satisfaction.",
     "sections": [
@@ -2073,7 +2073,7 @@ export const POSTS: BlogPost[] = [
     "category": "Denials & Appeals",
     "author": "Jennifer Walsh",
     "date": "2026-05-12",
-    "readTime": "8 min read",
+    "readTime": "2 min read",
     "image": "/images/blog/denials-appeals.svg",
     "excerpt": "Roughly one in ten U.S. claims is denied on first submission — and a large share are never reworked. Most denials are preventable. Here are five front-loaded plays that protect revenue before a claim ever leaves your practice.",
     "sections": [
@@ -2137,7 +2137,7 @@ export const POSTS: BlogPost[] = [
     "category": "Revenue Cycle",
     "author": "Michael Torres",
     "date": "2026-05-10",
-    "readTime": "12 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/revenue-cycle.svg",
     "excerpt": "From scheduling to zero balance, the revenue cycle is the engine of practice finance. This guide breaks down every stage — and where U.S. practices quietly leak money.",
     "sections": [
@@ -2188,7 +2188,7 @@ export const POSTS: BlogPost[] = [
     "category": "Practice Management",
     "author": "Sarah Kim",
     "date": "2026-05-06",
-    "readTime": "7 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/practice-management.svg",
     "excerpt": "In-house billing eventually hits a ceiling — staff turnover, coding complexity, and payer churn. Here is when a specialized RCM partner pays for itself.",
     "sections": [
@@ -2237,7 +2237,7 @@ export const POSTS: BlogPost[] = [
     "category": "Telehealth",
     "author": "David Chen",
     "date": "2026-05-02",
-    "readTime": "10 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/telehealth.svg",
     "excerpt": "Telehealth is permanent — but its billing rules are a moving target. POS codes, modifiers, audio-only nuances, and payer parity, decoded.",
     "sections": [
@@ -2281,7 +2281,7 @@ export const POSTS: BlogPost[] = [
     "category": "Patient Access & Collections",
     "author": "Amanda Rodriguez",
     "date": "2026-04-27",
-    "readTime": "9 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Patients are now one of your largest \"payers.\" Compassionate, well-timed collections lift cash flow without bruising relationships.",
     "sections": [
@@ -2334,7 +2334,7 @@ export const POSTS: BlogPost[] = [
     "category": "Credentialing & Enrollment",
     "author": "Robert Johnson",
     "date": "2026-04-22",
-    "readTime": "8 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/credentialing-enrollment.svg",
     "excerpt": "Every day a provider is uncredentialed is a day of unbillable care. Build a credentialing engine that prevents costly enrollment gaps.",
     "sections": [
@@ -2375,7 +2375,7 @@ export const POSTS: BlogPost[] = [
     "category": "Compliance & Privacy",
     "author": "Lisa Thompson",
     "date": "2026-04-18",
-    "readTime": "11 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/compliance-privacy.svg",
     "excerpt": "The privacy and security bar keeps rising. A practical refresh on safeguards, breach exposure, and the habits that keep your practice audit-ready.",
     "sections": [
@@ -2424,7 +2424,7 @@ export const POSTS: BlogPost[] = [
     "category": "Medical Coding",
     "author": "Mark Wilson",
     "date": "2026-04-14",
-    "readTime": "13 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/medical-coding.svg",
     "excerpt": "Under-coding leaves revenue on the table; over-coding invites takebacks. A repeatable audit process that protects both accuracy and reimbursement.",
     "sections": [
@@ -2470,7 +2470,7 @@ export const POSTS: BlogPost[] = [
     "category": "Prior Authorization",
     "author": "Jennifer Walsh",
     "date": "2026-04-09",
-    "readTime": "10 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/prior-authorization.svg",
     "excerpt": "Prior authorization is the #1 administrative burden in U.S. care. Workflows and automation that cut turnaround and stop revenue from stalling.",
     "sections": [
@@ -2508,7 +2508,7 @@ export const POSTS: BlogPost[] = [
     "category": "Denials & Appeals",
     "author": "Michael Torres",
     "date": "2026-04-05",
-    "readTime": "12 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/denials-appeals.svg",
     "excerpt": "Move from reactive appeals to denial prevention: root-cause analytics, payer scorecards, and the SLAs that win money back.",
     "sections": [
@@ -2558,7 +2558,7 @@ export const POSTS: BlogPost[] = [
     "category": "Patient Access & Collections",
     "author": "Sarah Kim",
     "date": "2026-04-01",
-    "readTime": "8 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Clear statements, the right channel, the right tone — turn billing anxiety into on-time payment and a better patient experience.",
     "sections": [
@@ -2605,7 +2605,7 @@ export const POSTS: BlogPost[] = [
     "category": "Data & Analytics",
     "author": "David Chen",
     "date": "2026-03-27",
-    "readTime": "11 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/data-analytics.svg",
     "excerpt": "Your PM system is sitting on gold. The dashboards and KPIs that reveal where cash is trapped and which fixes move the needle.",
     "sections": [
@@ -2644,7 +2644,7 @@ export const POSTS: BlogPost[] = [
     "category": "Payer Contracting",
     "author": "Amanda Rodriguez",
     "date": "2026-03-23",
-    "readTime": "14 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/payer-contracting.svg",
     "excerpt": "Most payer contracts auto-renew at yesterday’s rates. How to benchmark, build leverage, and negotiate reimbursement that reflects your value.",
     "sections": [
@@ -2682,7 +2682,7 @@ export const POSTS: BlogPost[] = [
     "category": "Regulatory & Policy",
     "author": "Lisa Thompson",
     "date": "2026-03-19",
-    "readTime": "10 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/regulatory-policy.svg",
     "excerpt": "Balance billing for many out-of-network situations is off the table. What the No Surprises Act requires — Good Faith Estimates, the IDR process, and notice-and-consent.",
     "sections": [
@@ -2725,7 +2725,7 @@ export const POSTS: BlogPost[] = [
     "category": "Regulatory & Policy",
     "author": "Robert Johnson",
     "date": "2026-03-15",
-    "readTime": "9 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/regulatory-policy.svg",
     "excerpt": "Transparency rules are now enforced with real penalties. What hospitals and practices must publish — and how to turn estimates into a patient-experience win.",
     "sections": [
@@ -2768,7 +2768,7 @@ export const POSTS: BlogPost[] = [
     "category": "Medicare & Medicaid",
     "author": "Mark Wilson",
     "date": "2026-03-11",
-    "readTime": "9 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/medicare-medicaid.svg",
     "excerpt": "Every year the Medicare Physician Fee Schedule resets what you are paid. RVUs, the conversion factor, and how to protect your practice from cuts.",
     "sections": [
@@ -2805,7 +2805,7 @@ export const POSTS: BlogPost[] = [
     "category": "Value-Based Care",
     "author": "Michael Torres",
     "date": "2026-03-07",
-    "readTime": "12 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/value-based-care.svg",
     "excerpt": "Fee-for-service is giving ground to value. ACOs, shared savings, and capitation change how — and when — you get paid.",
     "sections": [
@@ -2843,7 +2843,7 @@ export const POSTS: BlogPost[] = [
     "category": "Value-Based Care",
     "author": "Lisa Thompson",
     "date": "2026-03-03",
-    "readTime": "11 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/value-based-care.svg",
     "excerpt": "Your Medicare payments now hinge on quality scores. How MIPS categories, thresholds, and reporting translate into payment adjustments.",
     "sections": [
@@ -2881,7 +2881,7 @@ export const POSTS: BlogPost[] = [
     "category": "Medical Coding",
     "author": "Mark Wilson",
     "date": "2026-02-27",
-    "readTime": "12 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/medical-coding.svg",
     "excerpt": "In risk-based contracts, documentation IS revenue. How Hierarchical Condition Categories and RAF scores drive accurate payment.",
     "sections": [
@@ -2919,7 +2919,7 @@ export const POSTS: BlogPost[] = [
     "category": "Clinical Documentation",
     "author": "Jennifer Walsh",
     "date": "2026-02-23",
-    "readTime": "10 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/clinical-documentation.svg",
     "excerpt": "Codes can only be as good as the note behind them. CDI bridges the gap between great care and accurate, compliant reimbursement.",
     "sections": [
@@ -2957,7 +2957,7 @@ export const POSTS: BlogPost[] = [
     "category": "Patient Access & Collections",
     "author": "Robert Johnson",
     "date": "2026-02-19",
-    "readTime": "8 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Most denials are born at the front desk. Real-time eligibility and benefits verification is the cheapest revenue you will ever protect.",
     "sections": [
@@ -3001,7 +3001,7 @@ export const POSTS: BlogPost[] = [
     "category": "Revenue Cycle",
     "author": "David Chen",
     "date": "2026-02-15",
-    "readTime": "9 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/revenue-cycle.svg",
     "excerpt": "Services rendered but never billed are pure lost revenue. A disciplined charge-capture process closes the gap between the visit and the claim.",
     "sections": [
@@ -3039,7 +3039,7 @@ export const POSTS: BlogPost[] = [
     "category": "Revenue Cycle",
     "author": "Amanda Rodriguez",
     "date": "2026-02-11",
-    "readTime": "9 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/revenue-cycle.svg",
     "excerpt": "Payment posting is more than data entry — it is where underpayments and missed denials are caught. ERA/EFT done right keeps your A/R honest.",
     "sections": [
@@ -3077,7 +3077,7 @@ export const POSTS: BlogPost[] = [
     "category": "Payer Contracting",
     "author": "Michael Torres",
     "date": "2026-02-07",
-    "readTime": "10 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/payer-contracting.svg",
     "excerpt": "Payers don’t always pay what they agreed to. Contract-variance analysis recovers the silent dollars between your rate sheet and your remittances.",
     "sections": [
@@ -3109,7 +3109,7 @@ export const POSTS: BlogPost[] = [
     "category": "Technology & AI",
     "author": "David Chen",
     "date": "2026-02-03",
-    "readTime": "11 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/technology-ai.svg",
     "excerpt": "From claim scrubbing to denial prediction, AI is reshaping RCM. Where automation genuinely pays off — and where human expertise still wins.",
     "sections": [
@@ -3148,7 +3148,7 @@ export const POSTS: BlogPost[] = [
     "category": "Technology & AI",
     "author": "Lisa Thompson",
     "date": "2026-01-30",
-    "readTime": "10 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/technology-ai.svg",
     "excerpt": "Interoperability rules are reshaping how data — and authorizations — move. FHIR APIs, TEFCA, and information-blocking rules, in plain English.",
     "sections": [
@@ -3180,7 +3180,7 @@ export const POSTS: BlogPost[] = [
     "category": "Compliance & Privacy",
     "author": "Robert Johnson",
     "date": "2026-01-26",
-    "readTime": "11 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/compliance-privacy.svg",
     "excerpt": "A single ransomware event can halt claims for weeks. After industry-shaking outages, resilience planning is now a revenue-cycle necessity.",
     "sections": [
@@ -3224,7 +3224,7 @@ export const POSTS: BlogPost[] = [
     "category": "Data & Analytics",
     "author": "Jennifer Walsh",
     "date": "2026-01-22",
-    "readTime": "9 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/data-analytics.svg",
     "excerpt": "A plain-English glossary of the revenue-cycle metrics that actually predict cash — and the benchmarks to aim for.",
     "sections": [
@@ -3266,7 +3266,7 @@ export const POSTS: BlogPost[] = [
     "category": "Specialty Billing",
     "author": "Amanda Rodriguez",
     "date": "2026-01-18",
-    "readTime": "10 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/specialty-billing.svg",
     "excerpt": "Behavioral health billing has its own rules — time-based codes, telehealth nuance, and parity protections. Get reimbursed for the care you provide.",
     "sections": [
@@ -3298,7 +3298,7 @@ export const POSTS: BlogPost[] = [
     "category": "Specialty Billing",
     "author": "Mark Wilson",
     "date": "2026-01-14",
-    "readTime": "10 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/specialty-billing.svg",
     "excerpt": "State fee schedules, paper-heavy documentation, and long A/R make workers’ comp uniquely tricky — and uniquely worth getting right.",
     "sections": [
@@ -3330,7 +3330,7 @@ export const POSTS: BlogPost[] = [
     "category": "Specialty Billing",
     "author": "Lisa Thompson",
     "date": "2026-01-10",
-    "readTime": "9 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/specialty-billing.svg",
     "excerpt": "Durable medical equipment billing lives and dies on documentation — medical necessity, prior auth, and HCPCS precision.",
     "sections": [
@@ -3362,7 +3362,7 @@ export const POSTS: BlogPost[] = [
     "category": "Specialty Billing",
     "author": "David Chen",
     "date": "2026-01-06",
-    "readTime": "10 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/specialty-billing.svg",
     "excerpt": "ASC billing rewards precision — implant carve-outs, bundling edits, and multiple-procedure discounting all decide whether a case is profitable.",
     "sections": [
@@ -3394,7 +3394,7 @@ export const POSTS: BlogPost[] = [
     "category": "Patient Access & Collections",
     "author": "Sarah Kim",
     "date": "2026-01-02",
-    "readTime": "9 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/patient-access-collections.svg",
     "excerpt": "Patients judge your practice by their bill as much as their visit. A modern financial experience drives both loyalty and collections.",
     "sections": [
@@ -3432,7 +3432,7 @@ export const POSTS: BlogPost[] = [
     "category": "Medicare & Medicaid",
     "author": "Robert Johnson",
     "date": "2025-12-29",
-    "readTime": "9 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/medicare-medicaid.svg",
     "excerpt": "As Medicaid eligibility is re-checked, millions cycle on and off coverage. Practices that verify aggressively avoid a wave of preventable denials.",
     "sections": [
@@ -3464,7 +3464,7 @@ export const POSTS: BlogPost[] = [
     "category": "Practice Management",
     "author": "Amanda Rodriguez",
     "date": "2025-12-24",
-    "readTime": "10 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/practice-management.svg",
     "excerpt": "The real question is not cost alone — it is capability, resilience, and focus. A practical framework for the in-house vs. outsource decision.",
     "sections": [
@@ -3502,7 +3502,7 @@ export const POSTS: BlogPost[] = [
     "category": "Compliance & Privacy",
     "author": "Mark Wilson",
     "date": "2025-12-20",
-    "readTime": "11 min read",
+    "readTime": "1 min read",
     "image": "/images/blog/compliance-privacy.svg",
     "excerpt": "Billing compliance is more than privacy. Stark, the Anti-Kickback Statute, and the False Claims Act carry serious penalties for getting it wrong.",
     "sections": [

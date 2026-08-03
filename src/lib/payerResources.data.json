@@ -775,7 +775,7 @@
     {
       "slug": "caresource",
       "name": "CareSource",
-      "type": "Commercial",
+      "type": "Medicaid",
       "providerHome": "https://www.caresource.com/providers/",
       "providerManual": "https://www.caresource.com/providers/tools-resources/provider-manual/",
       "policies": "https://www.caresource.com/providers/tools-resources/health-partner-policies/",

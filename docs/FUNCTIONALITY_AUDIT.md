@@ -1,5 +1,11 @@
 # aetherahealthcare.com — Full Functionality Audit
 
+> **Remediation status (2026-08-03):** every in-repo defect below has been fixed on this branch — the six user-visible breakages (except "Client Login", excluded by request), the lead-wiring gaps, stale tests/CI, dead code, and data/copy issues. Two things remain that only the site owner can do:
+> 1. **Rotate the `CLOUDFLARE_API_TOKEN` GitHub Actions secret.** The token was invalidated on 2026-07-17 (auto-blog deploys fail with Cloudflare auth errors 10000/9109). Until it's rotated, **no deploy — including this branch's fixes and the 5 stranded blog posts — can reach production.** See DEPLOY.md §3 for steps.
+> 2. **Restore `rcm.aetherahealthcare.com`** (Client Login target, currently Cloudflare error 1033) — explicitly excluded from this remediation.
+>
+> Optional dashboard-side items: raise HSTS max-age to ≥1 year and set X-Frame-Options DENY at the Cloudflare zone level; supply real Google Ads conversion labels (`NEXT_PUBLIC_GADS_LABEL_*`) and LinkedIn/Meta pixel IDs if those campaigns are wanted — the code paths exist and are env-gated.
+
 **Date:** 2026-08-03 · **Scope:** every feature, module, and sub-module of the website repo plus the live production site.
 **Method:** clean `npm ci` + production build + type-check + lint; headless-Chromium crawl of the built static export (40 pages, hydration/console-error checks); live-production checks of all 360+ sitemap URLs, decks, worker/CRM endpoints (GET/HEAD only); 10 parallel module code-audits; every critical/major finding independently re-verified by an adversarial reviewer. No production form was submitted and no code was changed.
 

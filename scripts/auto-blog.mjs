@@ -235,7 +235,7 @@ function normalize(raw, posts) {
     readTime: '', image: imgUrl(category),
     excerpt: String(raw.excerpt || raw.title), sections,
   };
-  post.readTime = `${Math.max(5, Math.min(14, Math.round(wordCount(post) / 200)))} min read`;
+  post.readTime = `${Math.max(1, Math.min(14, Math.round(wordCount(post) / 200)))} min read`;
   return post;
 }
 
@@ -257,7 +257,7 @@ async function main() {
   }
 
   enforceInternalLinks(post, target);
-  post.readTime = `${Math.max(5, Math.min(14, Math.round(wordCount(post) / 200)))} min read`;
+  post.readTime = `${Math.max(1, Math.min(14, Math.round(wordCount(post) / 200)))} min read`;
   posts.unshift(post);
   const outContent = (header + JSON.stringify(posts, null, 2) + footer).replace(/\r\n/g, '\n');
   await writeFile(POSTS_FILE, outContent, 'utf8');

@@ -10,7 +10,7 @@ export function GET() {
 
   const staticRoutes = [
     '/', '/about', '/services', '/specialties', '/pricing', '/process', '/contact',
-    '/free-assessment', '/gap-analysis', '/schedule',
+    '/free-assessment', '/schedule',
     '/compliance', '/compliance/hipaa', '/compliance/privacy-policy', '/compliance/terms-of-service',
     '/compliance/baa', '/compliance/security', '/blog', '/faq', '/careers',
     '/payers', '/payer-services', '/integrations', '/portal', '/case-studies', '/decks',
@@ -35,8 +35,9 @@ export function GET() {
     '/tools/eligibility-checklist', '/tools/payer-provider-manuals',
   ];
 
-  // Blog articles
+  // Blog articles (lastmod from each post's publish date)
   const blogRoutes = POSTS.map((p) => `/blog/${p.slug}`);
+  const blogLastmod = new Map(POSTS.map((p) => [`/blog/${p.slug}`, p.date]));
 
   // Payer directory
   const payerRoutes = [
@@ -63,21 +64,24 @@ export function GET() {
     ...payerRoutes, ...compareRoutes, ...billingRoutes, ...blogRoutes,
   ];
 
-  const lastmod = new Date().toISOString();
+  const buildLastmod = new Date().toISOString();
   const priority = (route: string) => {
     if (route === '/') return '1.0';
-    if (route === '/free-assessment' || route === '/gap-analysis') return '0.9';
+    if (route === '/free-assessment') return '0.9';
     if (route.startsWith('/services/') || route.startsWith('/medical-billing/')) return '0.8';
     if (route.startsWith('/tools') || route.startsWith('/compare') || route.startsWith('/payers/directory')) return '0.7';
     if (route.startsWith('/blog/')) return '0.6';
     return '0.6';
   };
+  // The site exports with trailingSlash: true, so the canonical URL for every
+  // non-root route ends in '/' (the slashless form is a 308 redirect).
+  const loc = (route: string) => (route === '/' ? `${baseUrl}/` : `${baseUrl}${route}/`);
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allRoutes.map(route => `  <url>
-    <loc>${baseUrl}${route}</loc>
-    <lastmod>${lastmod}</lastmod>
+    <loc>${loc(route)}</loc>
+    <lastmod>${blogLastmod.get(route) ?? buildLastmod}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${priority(route)}</priority>
   </url>`).join('\n')}

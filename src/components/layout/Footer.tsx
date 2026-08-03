@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const services = [
-  { name: 'Hospitalist Billing', href: '/services/hospitalist-billing' },
   { name: 'Medical Coding', href: '/services/medical-coding' },
   { name: 'Claims & Billing', href: '/services/claims-billing' },
   { name: 'Payment Posting', href: '/services/payment-posting' },

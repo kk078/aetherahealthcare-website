@@ -46,8 +46,10 @@ export default function DenialCodeLookup({
 
   const terms = useMemo(() => q.toLowerCase().split(/\s+/).filter(Boolean), [q]);
 
+  // Curated top-denial codes are all CARCs, so they belong in the CARC tab too
+  // (the CARC tab count already includes them).
   const guided = useMemo(
-    () => (mode === 'all' || mode === 'guided' ? codes.filter(d => matchGuided(d, terms)) : []),
+    () => (mode === 'all' || mode === 'guided' || mode === 'CARC' ? codes.filter(d => matchGuided(d, terms)) : []),
     [codes, terms, mode]
   );
   const refs = useMemo(() => {

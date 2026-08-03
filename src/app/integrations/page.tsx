@@ -51,7 +51,7 @@ const EHR_LOGOS_AVAILABLE = new Set<string>([]);
 
 export default function Integrations() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
       <Navbar />
 
       <RcmHeroBand

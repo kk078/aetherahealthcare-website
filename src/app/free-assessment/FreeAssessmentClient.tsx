@@ -94,6 +94,7 @@ export default function FreeAssessmentClient() {
   const [agg, setAgg] = useState<ParsedAggregates | null>(null);
   const [fileName, setFileName] = useState('');
   const [uploadState, setUploadState] = useState<'idle' | 'parsing' | 'done' | 'error'>('idle');
+  const [hpField, setHpField] = useState('');
   const [uploadErr, setUploadErr] = useState('');
   const [dragOver, setDragOver] = useState(false);
   const [showOv, setShowOv] = useState(false);
@@ -193,9 +194,13 @@ export default function FreeAssessmentClient() {
     if (!p.firstName.trim() || !p.lastName.trim() || !p.practiceName.trim() || !p.email.trim() || !p.phone.trim()) {
       setErrorMsg('Please complete the required fields (name, practice, email, phone).'); return;
     }
+    // Honeypot: silently succeed if a bot filled the hidden field
+    if (hpField) {
+      setStatus('success');
+      return;
+    }
     setStatus('submitting'); setErrorMsg('');
-    try {
-      await submitToWorker('gap', {
+    const ok = await submitToWorker('gap', {
         firstName: p.firstName.trim(), lastName: p.lastName.trim(), email: p.email.trim(), phone: p.phone.trim(),
         practiceName: p.practiceName.trim(), specialty: specLabel,
         providerCount: p.providerCount, monthlyClaims: p.claimVolume, claimVolume: p.claimVolume,
@@ -209,13 +214,14 @@ export default function FreeAssessmentClient() {
           ehr: p.ehr, challenge: p.challenge, agingSource: metrics.source, fileName,
           metrics, // full de-identified analysis (no PHI)
         },
-      });
-      trackConversion('assessment');
-      setStatus('success');
-      setTimeout(() => reportRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
-    } catch {
+    });
+    if (!ok) {
       setStatus('error'); setErrorMsg('Something went wrong sending your report. Please call us at +1 (813) 519-4640.');
+      return;
     }
+    trackConversion('assessment');
+    setStatus('success');
+    setTimeout(() => reportRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
   };
 
   const inputCls = 'w-full border border-gray/30 rounded-lg px-4 py-2.5 text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal text-sm';
@@ -247,7 +253,7 @@ export default function FreeAssessmentClient() {
             </h1>
             <p className="text-xl text-cream max-w-3xl mx-auto">
               Upload your A/R aging report (or enter your numbers) and instantly get a full revenue diagnostic —
-              KPIs, denial breakdown, payer bottlenecks and a recovery action plan — emailed to you and downloadable as a PDF.
+              KPIs, denial breakdown, payer bottlenecks and a recovery action plan — on-screen instantly and downloadable as a PDF.
             </p>
           </FadeIn>
           <FadeIn delay={0.25}>
@@ -329,6 +335,11 @@ export default function FreeAssessmentClient() {
                   <label htmlFor="email" className="block text-sm font-semibold text-navy mb-1">Work Email *</label>
                   <input id="email" required type="email" aria-label="Email Address" name="email" value={p.email} onChange={onP} placeholder="you@yourpractice.com" className={inputCls} />
                 </div>
+              </div>
+
+              {/* Honeypot — hidden from humans, filled by bots */}
+              <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
+                <input type="text" aria-hidden="true" aria-label="Leave empty" tabIndex={-1} autoComplete="off" value={hpField} onChange={(e) => setHpField(e.target.value)} />
               </div>
               <div>
                 <label htmlFor="challenge" className="block text-sm font-semibold text-navy mb-1">Biggest Billing Challenge (optional)</label>
@@ -453,11 +464,11 @@ export default function FreeAssessmentClient() {
               <div className="bg-white rounded-2xl p-6 border border-gray/10 shadow-sm">
                 <button type="submit" disabled={status === 'submitting'}
                   className="w-full bg-teal hover:bg-navy text-white font-bold py-3.5 px-8 rounded-full transition-colors duration-300 flex items-center justify-center disabled:opacity-60">
-                  {status === 'submitting' ? 'Generating your report…' : (<>Generate My Report &amp; Email It <ArrowRight className="h-5 w-5 ml-2" /></>)}
+                  {status === 'submitting' ? 'Generating your report…' : (<>Generate My Free Report <ArrowRight className="h-5 w-5 ml-2" /></>)}
                 </button>
                 {errorMsg && <p className="text-center text-red-600 text-sm mt-3">{errorMsg}</p>}
                 <p className="text-xs text-gray text-center mt-3">
-                  We’ll email a copy and show it on-screen to download. By submitting you agree to our{' '}
+                  Your report appears on-screen instantly — download or print it below. By submitting you agree to our{' '}
                   <Link prefetch={false} href="/compliance/privacy-policy" className="text-teal hover:underline">Privacy Policy</Link>. We never share your data.
                 </p>
               </div>
@@ -474,8 +485,8 @@ export default function FreeAssessmentClient() {
               <div className="flex items-center gap-3">
                 <CheckCircle className="h-9 w-9 text-teal flex-shrink-0" />
                 <div>
-                  <p className="font-bold text-navy">Your report is ready — and on its way to {p.email}.</p>
-                  <p className="text-gray text-sm">Download a PDF copy below, or keep this page for your records.</p>
+                  <p className="font-bold text-navy">Your report is ready below.</p>
+                  <p className="text-gray text-sm">Download a PDF copy below — our team has your results and will follow up at {p.email}.</p>
                 </div>
               </div>
               <button type="button" onClick={() => window.print()} className="bg-teal hover:bg-navy text-white font-bold py-3 px-6 rounded-full transition-colors flex items-center whitespace-nowrap">

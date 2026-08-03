@@ -14,7 +14,7 @@ export default function ExitIntentCTA() {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState('');
   const [hp, setHp] = useState('');
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -51,10 +51,14 @@ export default function ExitIntentCTA() {
     if (!email || status === 'submitting') return;
     if (hp) { setStatus('success'); return; } // bot honeypot
     setStatus('submitting');
-    await submitToWorker('exit_intent', {
+    const ok = await submitToWorker('exit_intent', {
       email,
       message: 'Exit-intent lead — requested a free denial-leakage assessment from the website.',
     });
+    if (!ok) {
+      setStatus('error');
+      return;
+    }
     setStatus('success');
     setTimeout(close, 3500);
   };
@@ -127,6 +131,11 @@ export default function ExitIntentCTA() {
                   'Get My Free Assessment'
                 )}
               </button>
+              {status === 'error' && (
+                <p className="text-center text-xs text-red-500">
+                  Something went wrong — please call <a href="tel:+18135194640" className="underline">(813) 519-4640</a> or email support@aetherahealthcare.com.
+                </p>
+              )}
               <p className="text-center text-xs text-slate-400">
                 No spam. No commitment. Cancel anytime.
               </p>

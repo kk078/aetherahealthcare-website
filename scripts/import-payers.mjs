@@ -66,18 +66,36 @@ const imported = rows
       claimsAddress: pick(r, 'claimsaddress', 'claimaddress', 'mailingaddress', 'address'),
       fax: pick(r, 'fax', 'claimsfax', 'faxnumber'),
       notes: pick(r, 'notes', 'note', 'comments'),
-      verified: pick(r, 'verified', 'lastverified', 'verifieddate') || today,
+      // Only carry a verified date the sheet actually provides — never stamp
+      // unverified rows as verified-today.
+      verified: pick(r, 'verified', 'lastverified', 'verifieddate'),
     };
   })
   .filter(Boolean);
 
 let out;
 if (replace) {
-  out = imported;
+  out = imported.map(p => ({ ...p, aka: p.aka || [] }));
 } else {
   const existing = JSON.parse(readFileSync(DATA, 'utf8')).payers || [];
   const bySlug = new Map(existing.map(p => [p.slug, p]));
-  for (const p of imported) bySlug.set(p.slug, { ...(bySlug.get(p.slug) || {}), ...p });
+  // Many curated entries use hand-written slugs (e.g. 'bcbs-texas') that don't
+  // equal slugify(name), so reconcile sheet rows against existing payers by
+  // normalized name/aka first — otherwise a re-import duplicates them.
+  const slugByName = new Map();
+  for (const p of existing) {
+    slugByName.set(norm(p.name), p.slug);
+    for (const a of p.aka || []) slugByName.set(norm(a), p.slug);
+  }
+  for (const row of imported) {
+    const slug = slugByName.get(norm(row.name)) || row.slug;
+    // Drop empty fields from the sheet row so a sparse spreadsheet never nulls
+    // out curated values on merge.
+    const clean = Object.fromEntries(
+      Object.entries({ ...row, slug }).filter(([, v]) => v != null && !(Array.isArray(v) && v.length === 0))
+    );
+    bySlug.set(slug, { aka: [], ...(bySlug.get(slug) || {}), ...clean });
+  }
   out = [...bySlug.values()];
 }
 

@@ -112,7 +112,7 @@ const caseStudies = [
 
 export default function CaseStudies() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
       <Navbar />
 
       <RcmHeroBand

@@ -105,7 +105,6 @@ export default function Home() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org", "@type": "WebSite", "name": "Aethera Healthcare Solutions",
           "url": "https://aetherahealthcare.com",
-          "potentialAction": { "@type": "SearchAction", "target": "https://aetherahealthcare.com/search?q={search_term_string}", "query-input": "required name=search_term_string" },
         }) }} />
       </>
       <Navbar />
@@ -157,7 +156,7 @@ export default function Home() {
                   <span className="flex items-center gap-2"><Network className="h-4 w-4 text-mint" /> 900+ payers</span>
                   <span className="flex items-center gap-2"><Zap className="h-4 w-4 text-mint" /> 50+ EHR integrations</span>
                   <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-mint" /> HIPAA-compliant</span>
-                  <span className="flex items-center gap-2"><BarChart3 className="h-4 w-4 text-mint" /> 12 RCM services</span>
+                  <span className="flex items-center gap-2"><BarChart3 className="h-4 w-4 text-mint" /> 15 RCM services</span>
                 </div>
               </FadeIn>
             </div>
