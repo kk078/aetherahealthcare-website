@@ -11,6 +11,74 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "no-surprises-act-compliance-practice-checklist",
+    "title": "No Surprises Act Compliance for Practices: A Practical Checklist for U.S. Medical Offices",
+    "category": "Regulatory & Policy",
+    "author": "David Chen",
+    "date": "2026-08-04",
+    "readTime": "2 min read",
+    "image": "/images/blog/regulatory-policy.svg",
+    "excerpt": "A step‑by‑step guide to help practice owners, administrators, and billers meet No Surprises Act requirements while protecting revenue and patient satisfaction.",
+    "sections": [
+      {
+        "p": [
+          "No surprises act compliance for practices is no longer optional; it’s a fundamental component of a sustainable revenue cycle. In this guide we outline practical steps U.S. practice owners, administrators, and billers can take to meet the law’s transparency and billing obligations while protecting revenue. Our approach aligns with the broader suite of <a href=\"/services/compliance-auditing\">compliance & auditing services</a> and integrates seamlessly with your existing <a href=\"/services\">revenue cycle management services</a>."
+        ]
+      },
+      {
+        "h": "Core Elements of the No Surprises Act",
+        "p": [
+          "Understanding the law’s baseline requirements helps you focus resources where they matter most. The Act centers on three pillars that directly affect everyday billing operations."
+        ],
+        "ul": [
+          "Transparent, patient‑friendly cost estimates for scheduled services,",
+          "Prohibition of balance‑billing for emergency services and certain non‑emergency services when the patient is out‑of‑network,",
+          "Clear dispute‑resolution pathways for patients and providers"
+        ]
+      },
+      {
+        "h": "Creating a Reliable Patient Cost Estimate Process",
+        "p": [
+          "Accurate estimates are the linchpin of compliance. Build a workflow that captures all relevant charge components before the patient’s appointment."
+        ],
+        "ul": [
+          "Capture scheduled procedure codes and anticipated ancillary services early in the scheduling call or portal,",
+          "Use your contracted fee schedule or, if unavailable, a reasonable estimate based on Medicare rates plus a customary add‑on,",
+          "Deliver the estimate in writing (email or patient portal) at least 24 hours before the service,",
+          "Document the estimate and patient acknowledgment in the EHR for auditability"
+        ]
+      },
+      {
+        "h": "Adjusting Claims and Billing Workflows",
+        "p": [
+          "Your billing team must reflect the Act’s protections on the claim form and in post‑service communications."
+        ],
+        "ul": [
+          "Tag out‑of‑network services that fall under the No Surprises Act with a specific modifier (e.g., 78) to trigger the appropriate payer process,",
+          "If a patient receives a surprise bill, route the claim through the payer’s independent dispute resolution (IDR) portal rather than billing the patient directly,",
+          "Maintain a separate “No Surprises” audit log that tracks estimate delivery, patient acknowledgment, and any subsequent disputes"
+        ]
+      },
+      {
+        "h": "Staff Training, Audits, and Ongoing Monitoring",
+        "p": [
+          "Compliance is a continuous effort. Equip your front‑office and billing staff with the knowledge and tools to stay ahead of regulatory changes."
+        ],
+        "ul": [
+          "Conduct quarterly training sessions that cover estimate creation, documentation, and IDR filing,",
+          "Leverage your <a href=\"/services/compliance-auditing\">compliance & auditing services</a> to perform mock audits and identify gaps before regulators do,",
+          "Incorporate a KPI that measures the percentage of estimates delivered on time and the rate of surprise‑bill disputes resolved"
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions partners with practices to embed No Surprises Act compliance into every stage of the revenue cycle. From building automated estimate templates to handling IDR submissions, our team ensures you stay audit‑ready while maximizing cash flow. Ready to assess your current compliance posture? Schedule a <a href=\"/free-assessment\">free revenue assessment</a> today."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "how-to-design-patient-payment-plans-that-get-paid",
     "title": "How to Design Patient Payment Plans That Get Paid: A Practical Guide for U.S. Practices",
     "category": "Patient Access & Collections",

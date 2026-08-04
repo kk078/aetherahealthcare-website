@@ -2,20 +2,6 @@
   "_comment": "Prioritized keyword queue for the auto-blog. Each run pops pending[0], writes an article targeting that keyword, forces the internal links below, then moves the item to done[]. When pending is empty the generator falls back to free-choice topics. Add new targets to the END of pending[]. Categories MUST match one of the allowed CATEGORIES in blogPosts.ts.",
   "pending": [
     {
-      "keyword": "no surprises act compliance for practices",
-      "category": "Regulatory & Policy",
-      "links": [
-        {
-          "href": "/services/compliance-auditing",
-          "text": "compliance & auditing services"
-        },
-        {
-          "href": "/services",
-          "text": "revenue cycle management services"
-        }
-      ]
-    },
-    {
       "keyword": "how to reduce accounts receivable days in a medical practice",
       "category": "Revenue Cycle",
       "links": [
@@ -188,6 +174,22 @@
       ],
       "slug": "how-to-design-patient-payment-plans-that-get-paid",
       "publishedAt": "2026-07-31"
+    },
+    {
+      "keyword": "no surprises act compliance for practices",
+      "category": "Regulatory & Policy",
+      "links": [
+        {
+          "href": "/services/compliance-auditing",
+          "text": "compliance & auditing services"
+        },
+        {
+          "href": "/services",
+          "text": "revenue cycle management services"
+        }
+      ],
+      "slug": "no-surprises-act-compliance-practice-checklist",
+      "publishedAt": "2026-08-04"
     }
   ]
 }
