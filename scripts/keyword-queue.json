@@ -2,20 +2,6 @@
   "_comment": "Prioritized keyword queue for the auto-blog. Each run pops pending[0], writes an article targeting that keyword, forces the internal links below, then moves the item to done[]. When pending is empty the generator falls back to free-choice topics. Add new targets to the END of pending[]. Categories MUST match one of the allowed CATEGORIES in blogPosts.ts.",
   "pending": [
     {
-      "keyword": "how to reduce accounts receivable days in a medical practice",
-      "category": "Revenue Cycle",
-      "links": [
-        {
-          "href": "/services/ar-followup",
-          "text": "A/R follow-up services"
-        },
-        {
-          "href": "/tools/ar-cost-calculator",
-          "text": "A/R cost calculator"
-        }
-      ]
-    },
-    {
       "keyword": "medical coding audit best practices",
       "category": "Medical Coding",
       "links": [
@@ -190,6 +176,22 @@
       ],
       "slug": "no-surprises-act-compliance-practice-checklist",
       "publishedAt": "2026-08-04"
+    },
+    {
+      "keyword": "how to reduce accounts receivable days in a medical practice",
+      "category": "Revenue Cycle",
+      "links": [
+        {
+          "href": "/services/ar-followup",
+          "text": "A/R follow-up services"
+        },
+        {
+          "href": "/tools/ar-cost-calculator",
+          "text": "A/R cost calculator"
+        }
+      ],
+      "slug": "reduce-ar-days-practice-strategies",
+      "publishedAt": "2026-08-07"
     }
   ]
 }

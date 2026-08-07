@@ -11,6 +11,84 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "reduce-ar-days-practice-strategies",
+    "title": "How to Reduce Accounts Receivable Days in a Medical Practice: Actionable Steps for Faster Cash Flow",
+    "category": "Revenue Cycle",
+    "author": "Amanda Rodriguez",
+    "date": "2026-08-07",
+    "readTime": "2 min read",
+    "image": "/images/blog/revenue-cycle.svg",
+    "excerpt": "Practical guidance for practice owners and billing teams to cut A/R days through data, workflow tweaks, and technology, without sacrificing patient satisfaction.",
+    "sections": [
+      {
+        "p": [
+          "How to reduce accounts receivable days in a medical practice starts with a clear view of where money is getting stuck, and the first step is to measure the cost of those delays. Using tools like the <a href=\"/tools/ar-cost-calculator\">A/R cost calculator</a> helps you translate aging reports into dollars, while our <a href=\"/services/ar-followup\">A/R follow-up services</a> demonstrate how timely outreach can move claims off the books faster."
+        ]
+      },
+      {
+        "h": "Assess Your Current A/R Landscape",
+        "p": [
+          "Before you can improve, you need a baseline. Pull an aging report for the past three months and compare it to your practice’s historical trends. Look for patterns by payer, service line, and claim type."
+        ],
+        "ul": [
+          "Calculate average days in A/R and identify outliers (>90 days).",
+          "Segment the report by payer to spot contracts that consistently lag.",
+          "Track the ratio of clean claims to total submissions."
+        ]
+      },
+      {
+        "h": "Streamline Front‑End Processes",
+        "p": [
+          "Errors at registration and eligibility verification are the most common source of downstream delays. Investing time in front‑end accuracy pays dividends in reduced A/R days."
+        ],
+        "ul": [
+          "Verify insurance eligibility in real time before the visit.",
+          "Capture accurate patient demographics and payer IDs at check‑in.",
+          "Use standardized intake forms that include secondary coverage fields."
+        ]
+      },
+      {
+        "h": "Accelerate Claim Submission and Follow‑Up",
+        "p": [
+          "Even a clean claim can sit idle if it isn’t submitted promptly or tracked aggressively. Build a cadence for claim monitoring that aligns with payer timelines."
+        ],
+        "ul": [
+          "Submit claims within the payer’s electronic claim window (often within 24‑48 hours).",
+          "Implement automated claim scrubbing to catch coding errors before submission.",
+          "Schedule daily A/R follow‑up tasks, prioritizing claims approaching the 30‑day mark."
+        ]
+      },
+      {
+        "h": "Leverage Technology and Analytics",
+        "p": [
+          "Modern RCM platforms provide real‑time dashboards that surface bottlenecks the moment they appear. Use these insights to make data‑driven adjustments."
+        ],
+        "ul": [
+          "Set alerts for claims that remain unpaid beyond standard aging thresholds.",
+          "Utilize AI‑driven denial prediction to pre‑emptively address high‑risk submissions.",
+          "Integrate payment posting workflows to reduce manual reconciliation time."
+        ]
+      },
+      {
+        "h": "Engage Patients Early in Financial Conversations",
+        "p": [
+          "When patients understand their financial responsibility up front, they’re more likely to pay promptly, which directly lowers A/R days."
+        ],
+        "ul": [
+          "Provide cost estimates at the time of scheduling.",
+          "Offer transparent payment options and convenient online portals.",
+          "Introduce a brief financial counseling step during checkout."
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions combines expert A/R follow‑up, advanced analytics, and customized workflow consulting to shrink your days in accounts receivable. Ready to see measurable improvement? Request a <a href=\"/free-assessment\">free revenue assessment</a> and let our team design a roadmap tailored to your practice."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "no-surprises-act-compliance-practice-checklist",
     "title": "No Surprises Act Compliance for Practices: A Practical Checklist for U.S. Medical Offices",
     "category": "Regulatory & Policy",
