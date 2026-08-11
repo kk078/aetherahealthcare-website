@@ -1,21 +1,6 @@
 {
   "_comment": "Prioritized keyword queue for the auto-blog. Each run pops pending[0], writes an article targeting that keyword, forces the internal links below, then moves the item to done[]. When pending is empty the generator falls back to free-choice topics. Add new targets to the END of pending[]. Categories MUST match one of the allowed CATEGORIES in blogPosts.ts.",
-  "pending": [
-    {
-      "keyword": "medical coding audit best practices",
-      "category": "Medical Coding",
-      "links": [
-        {
-          "href": "/services/medical-coding",
-          "text": "medical coding services"
-        },
-        {
-          "href": "/services/compliance-auditing",
-          "text": "coding audit services"
-        }
-      ]
-    }
-  ],
+  "pending": [],
   "done": [
     {
       "keyword": "what is a good clean claim rate benchmark",
@@ -192,6 +177,22 @@
       ],
       "slug": "reduce-ar-days-practice-strategies",
       "publishedAt": "2026-08-07"
+    },
+    {
+      "keyword": "medical coding audit best practices",
+      "category": "Medical Coding",
+      "links": [
+        {
+          "href": "/services/medical-coding",
+          "text": "medical coding services"
+        },
+        {
+          "href": "/services/compliance-auditing",
+          "text": "coding audit services"
+        }
+      ],
+      "slug": "medical-coding-audit-best-practices-guide",
+      "publishedAt": "2026-08-11"
     }
   ]
 }

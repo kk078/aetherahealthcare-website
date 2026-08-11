@@ -11,6 +11,77 @@ export interface BlogPost {
 
 export const POSTS: BlogPost[] = [
   {
+    "slug": "medical-coding-audit-best-practices-guide",
+    "title": "Medical Coding Audit Best Practices: A Practical Guide for U.S. Practices",
+    "category": "Medical Coding",
+    "author": "Amanda Rodriguez",
+    "date": "2026-08-11",
+    "readTime": "2 min read",
+    "image": "/images/blog/medical-coding.svg",
+    "excerpt": "Learn durable, step‑by‑step best practices for conducting medical coding audits that protect revenue, reduce compliance risk, and improve overall coding accuracy.",
+    "sections": [
+      {
+        "p": [
+          "Implementing medical coding audit best practices is essential for protecting revenue and staying compliant, and a well‑designed audit process can uncover hidden billing errors before they become costly. Our <a href=\"/services/compliance-auditing\">coding audit services</a> provide the framework you need to start strong."
+        ]
+      },
+      {
+        "h": "Medical Coding Audit Best Practices: Build a Structured Framework",
+        "p": [
+          "A repeatable audit framework keeps your team focused, ensures consistency, and aligns with payer expectations."
+        ],
+        "ul": [
+          "Define audit scope (specialties, CPT/ICD ranges, time periods) based on revenue impact and known risk areas.",
+          "Create a written audit policy that outlines roles, responsibilities, frequency, and escalation paths.",
+          "Schedule audits quarterly or semi‑annually to stay ahead of regulatory changes.",
+          "Use a risk‑based approach: prioritize high‑volume codes, new service lines, and any recent payer updates."
+        ]
+      },
+      {
+        "h": "Key Data Sources & Documentation Review",
+        "p": [
+          "Accurate audits rely on complete, searchable data. Pull information from multiple systems to get a full picture."
+        ],
+        "ul": [
+          "Electronic Health Record (EHR) encounter notes – verify that the documented service matches the submitted CPT/HCPCS codes.",
+          "Charge capture logs – ensure every billable service was entered before claim generation.",
+          "Claim edit reports from clearinghouses – spot systematic coding mismatches early.",
+          "Payer denial reports – identify recurring denial patterns that may indicate coding gaps."
+        ]
+      },
+      {
+        "h": "Leveraging Technology & Automation",
+        "p": [
+          "Modern audit tools reduce manual effort and increase detection accuracy."
+        ],
+        "ul": [
+          "Use analytics dashboards to flag outliers such as unusually high RVU per encounter or mismatched modifiers.",
+          "Deploy rule‑based audit software that automatically compares documentation to coded data.",
+          "Integrate audit findings back into the EHR for real‑time feedback to providers.",
+          "Consider AI‑assisted coding review for complex specialty lines, but always retain a human reviewer for final validation."
+        ]
+      },
+      {
+        "h": "Post‑Audit Action Plan & Continuous Improvement",
+        "p": [
+          "The audit is only valuable if the insights lead to measurable change."
+        ],
+        "ul": [
+          "Create a detailed findings report that includes code‑by‑code examples, severity rating, and payer impact.",
+          "Develop corrective‑action plans with specific owners, timelines, and follow‑up metrics.",
+          "Schedule targeted education sessions for providers and coders based on the most common errors.",
+          "Re‑audit the same sample after 60‑90 days to confirm that remediation efforts are effective."
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Aethera Healthcare Solutions combines deep expertise in <a href=\"/services/medical-coding\">medical coding services</a> with proven <a href=\"/services/compliance-auditing\">coding audit services</a> to give your practice a turnkey solution. Our team conducts the audit, delivers a clear action plan, and provides ongoing education to keep your coding accurate year after year. Ready to see where your practice can improve? Request a <a href=\"/free-assessment\">free revenue assessment</a> and let us show you the ROI of a disciplined audit program."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "reduce-ar-days-practice-strategies",
     "title": "How to Reduce Accounts Receivable Days in a Medical Practice: Actionable Steps for Faster Cash Flow",
     "category": "Revenue Cycle",
