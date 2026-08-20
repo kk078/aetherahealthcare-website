@@ -87,7 +87,8 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <p className="text-lg md:text-xl font-bold text-navy leading-relaxed mb-6">
-              Aethera was founded in 2026 by <strong>Kiran Pedapudi</strong>.
+              Aethera was founded in 2026 by <strong>Kiran Pedapudi</strong>, who spent years adjudicating claims
+              on the insurance side before running billing operations for providers.
             </p>
             <div className="space-y-5 text-gray text-lg leading-relaxed">
               <p>

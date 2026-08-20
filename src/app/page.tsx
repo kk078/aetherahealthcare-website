@@ -170,11 +170,11 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={0.2}>
                 <p className="text-lg md:text-xl text-cream/85 max-w-xl leading-relaxed mb-8">
-                  Aethera is an AI-first revenue cycle back office. Our software verifies every patient&apos;s
-                  coverage before the visit and works every claim with a full audit trail — and our AI is
-                  never allowed to guess: it cannot invent a code, a dollar amount, or a date. Anything
-                  ambiguous goes to a trained human. That&apos;s why we can offer you a free 50-claim pilot
-                  and put the results in writing.
+                  Aethera&apos;s founder spent years adjudicating claims on the insurance side before running
+                  billing operations for providers. That knowledge is now software: AI that verifies everything
+                  and is never allowed to guess — it cannot invent a code, a dollar amount, or a date — with a
+                  tamper-evident audit trail on every action. Free 50-claim pilot; success criteria agreed in
+                  writing.
                 </p>
               </FadeIn>
               <FadeIn delay={0.3}>
