@@ -5,7 +5,7 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   title: { absolute: 'About Aethera Healthcare Solutions | Built by an Operator, Run in the Open' },
-  description: 'Aethera Healthcare Solutions was founded in 2026 by Kiran Kumar Pedapudi. Automation with hard boundaries, humans where judgment matters, and an audit trail on everything — delivered from India at a cost structure that changes the economics for small and mid-size billing operations.',
+  description: 'Aethera Healthcare Solutions was founded in 2026 by Kiran Pedapudi, an 18-year US healthcare RCM operator. Automation with hard boundaries, humans where judgment matters, and an audit trail on everything — delivered from India at a cost structure that changes the economics for small and mid-size billing operations.',
 };
 
 const principles = [
@@ -34,7 +34,7 @@ export default function About() {
               "@context": "https://schema.org",
               "@type": "AboutPage",
               "name": "About Aethera Healthcare Solutions",
-              "description": "Aethera Healthcare Solutions was founded in 2026 by Kiran Kumar Pedapudi — automation with hard boundaries, humans where judgment matters, and an audit trail on everything.",
+              "description": "Aethera Healthcare Solutions was founded in 2026 by Kiran Pedapudi — automation with hard boundaries, humans where judgment matters, and an audit trail on everything.",
               "url": "https://aetherahealthcare.com/about",
               "publisher": {
                 "@type": "Organization",
@@ -57,7 +57,7 @@ export default function About() {
               "foundingDate": "2026",
               "founder": {
                 "@type": "Person",
-                "name": "Kiran Kumar Pedapudi"
+                "name": "Kiran Pedapudi"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
@@ -86,10 +86,35 @@ export default function About() {
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <p className="text-lg md:text-xl text-navy leading-relaxed">
-              Aethera was founded in 2026 by <strong>Kiran Kumar Pedapudi</strong> [1&ndash;2 sentence bio:
-              background, why RCM &mdash; KIRAN TO SUPPLY].
+            <p className="text-lg md:text-xl font-bold text-navy leading-relaxed mb-6">
+              Aethera was founded in 2026 by <strong>Kiran Pedapudi</strong>.
             </p>
+            <div className="space-y-5 text-gray text-lg leading-relaxed">
+              <p>
+                Kiran Pedapudi has spent eighteen years on both sides of the American healthcare claim.
+              </p>
+              <p>
+                He entered the industry at Wipro BPO in 2007. From 2012 he worked the payer side of US health
+                insurance &mdash; member services, provider services, and work audits at Ecosmos Solutions, then
+                leading teams in claims processing, adjudication, and insurance credentialing at Progressive
+                Corporate Services. In 2017 he joined STAT Billing Solutions (later Aqkode Healthcare Solutions),
+                where he rose to General Manager of Operations, led both the payor and provider teams, served at
+                board level within the Aqkode group, and &mdash; after the payer process wound down in 2021
+                &mdash; ran the provider-side RCM business along with the India operation end to end: operations,
+                HR, IT, and compliance, until 2025.
+              </p>
+              <p>
+                Then he did something unusual for an operations veteran: he built. Aethera&apos;s
+                eligibility-verification platform &mdash; deterministic parsing, live clearinghouse integration, a
+                tamper-evident audit trail on every action &mdash; was designed and shipped by Kiran himself, with
+                AI used the way Aethera uses it everywhere: aggressively for speed, never for guesswork.
+              </p>
+              <p>
+                Kiran holds a B.Com in Accounting from Loyola College, Chennai. When you work with Aethera, you
+                work with him &mdash; the person who has adjudicated claims as the payer, recovered them as the
+                provider, and now automates both.
+              </p>
+            </div>
           </FadeIn>
         </div>
       </section>
@@ -136,7 +161,7 @@ export default function About() {
           <FadeIn>
             <h2 className="text-3xl font-bold text-white font-jakarta mb-6">Where we are</h2>
             <p className="text-cream/85 text-lg leading-relaxed">
-              Registered in India ([City, India]), serving US clients on US hours through our +1 813 number.
+              Registered in India (Chennai, Tamil Nadu), serving US clients on US hours through our +1 813 number.
               Founder-led: when you call, you get the person who signs the quality bar.
             </p>
           </FadeIn>

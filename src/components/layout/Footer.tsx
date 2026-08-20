@@ -168,7 +168,7 @@ export default function Footer() {
           {/* Legal / registered-entity block */}
           <div className="mt-6 pt-6 border-t border-gray/20 text-gray/70 text-xs leading-relaxed text-center md:text-left">
             <p>Aethera Healthcare Solutions Private Limited &middot; CIN U82990TN2026PTC189331</p>
-            <p>[Registered office street address, City, State, PIN, India]</p>
+            <p>1373, Balasundram, I.A.S. Salai, Royappa Ngr, Chennai - 600048, Tamil Nadu, India</p>
             <p>US contact: +1 (813) 519-4640 &middot; info@aetherahealthcare.com</p>
           </div>
         </div>
