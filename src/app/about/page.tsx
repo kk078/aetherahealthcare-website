@@ -1,47 +1,26 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
-import SectionHeader from '@/components/ui/SectionHeader';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
-  title: { absolute: "About Aethera Healthcare Solutions | Our Story & Mission" },
-  description: "Learn about Aethera Healthcare Solutions, a startup focused on providing personalized revenue cycle management for independent healthcare providers. Discover our mission, values, and commitment to your success.",
+  title: { absolute: 'About Aethera Healthcare Solutions | Built by an Operator, Run in the Open' },
+  description: 'Aethera Healthcare Solutions was founded in 2026 by Kiran Kumar Pedapudi. Automation with hard boundaries, humans where judgment matters, and an audit trail on everything — delivered from India at a cost structure that changes the economics for small and mid-size billing operations.',
 };
 
-const values = [
+const principles = [
   {
-    title: 'Accuracy',
-    description: 'We maintain the highest standards of coding and billing accuracy to maximize your revenue and minimize denials.',
+    title: 'Deterministic first.',
+    description: 'Software parses payer responses by the book. Unknowns route to humans. Nothing is guessed.',
   },
   {
-    title: 'Transparency',
-    description: 'Real-time access to your financial data with comprehensive reporting and no hidden fees or contracts.',
+    title: 'Real numbers only.',
+    description: "We publish no metric we can't defend — including on this website.",
   },
   {
-    title: 'Accountability',
-    description: 'We take ownership of your revenue cycle success with dedicated account teams and measurable performance metrics.',
+    title: 'Compliance as architecture.',
+    description: 'HIPAA safeguards, US-resident data, and VDI-only access are built into how we operate, not bolted on for the sales call.',
   },
-  {
-    title: 'Partnership',
-    description: 'We work as an extension of your team, providing proactive recommendations and strategic guidance.',
-  },
-];
-
-const stats = [
-  { value: '2025', label: 'Year Founded' },
-  { value: '12+', label: 'Services Offered' },
-  { value: '26+', label: 'Specialties Supported' },
-  { value: '100%', label: 'Committed to Your Success' },
-];
-
-const reasons = [
-  'Personalized attention — we partner with a select number of practices so every client gets the focus they deserve',
-  'Specialty-specific billing expertise across 26+ specialties',
-  'A dedicated point of contact who understands your practice',
-  'Advanced technology with real-time reporting',
-  'Comprehensive compliance and security program',
-  'Transparent pricing with no hidden fees',
 ];
 
 export default function About() {
@@ -55,7 +34,7 @@ export default function About() {
               "@context": "https://schema.org",
               "@type": "AboutPage",
               "name": "About Aethera Healthcare Solutions",
-              "description": "Learn about Aethera Healthcare Solutions, a startup focused on providing personalized revenue cycle management for independent healthcare providers. Discover our mission, values, and commitment to your success.",
+              "description": "Aethera Healthcare Solutions was founded in 2026 by Kiran Kumar Pedapudi — automation with hard boundaries, humans where judgment matters, and an audit trail on everything.",
               "url": "https://aetherahealthcare.com/about",
               "publisher": {
                 "@type": "Organization",
@@ -74,11 +53,11 @@ export default function About() {
               "@type": "Organization",
               "name": "Aethera Healthcare Solutions",
               "alternateName": "Aethera",
-              "description": "Personalized revenue cycle management for independent healthcare providers",
-              "foundingDate": "2025",
+              "description": "AI-first revenue cycle back office for US healthcare providers, delivered from India with hard AI boundaries and a full audit trail.",
+              "foundingDate": "2026",
               "founder": {
                 "@type": "Person",
-                "name": "Aethera Healthcare Solutions Team"
+                "name": "Kiran Kumar Pedapudi"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
@@ -97,68 +76,53 @@ export default function About() {
 
       <RcmHeroBand
         eyebrow="About Aethera"
-        title="Focused on your revenue, so you can focus on patients"
-        subtitle="We help healthcare providers concentrate on patient care while we handle the complexities of medical billing — with accuracy, transparency, and accountability."
-        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        title="Built by an operator, run in the open"
+        primary={{ href: '/free-assessment', label: 'Start the Free 50-Claim Pilot' }}
         secondary={{ href: '/contact', label: 'Contact Us' }}
-        chips={['Accuracy', 'Transparency', 'Partnership']}
+        chips={['Founder-led', 'Deterministic first', 'Compliance as architecture']}
       />
 
-      {/* Company Story */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <FadeIn>
-                <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
-                  Our Story
-                </h2>
-                <p className="text-gray mb-6">
-                  Aethera Healthcare Solutions was founded in 2025 with a clear mission: to give independent healthcare providers the same quality of revenue cycle management that large hospital systems enjoy, but at a price point and service level designed for growing practices.
-                </p>
-                <p className="text-gray mb-6">
-                  Our founding team brings years of experience in medical billing, coding, and healthcare operations. We saw firsthand how small and mid-sized practices were being underserved by large billing companies that treated them as afterthoughts — slow response times, generic support, and a revolving door of account managers who didn't understand their specialty.
-                </p>
-                <p className="text-gray">
-                  We built Aethera to be different. We&apos;re built to partner with a select number of providers, giving each one focused attention from people who take the time to learn their specialty, their payers, and their practice. We&apos;re small by design — close enough to give you genuine personal attention, with the rigor to deliver results.
-                </p>
-              </FadeIn>
-            </div>
-            <div>
-              <FadeIn delay={0.2}>
-                <div className="bg-cream rounded-2xl p-8 h-full">
-                  <h3 className="text-2xl font-bold text-navy mb-6">Our Mission</h3>
-                  <p className="text-gray mb-6">
-                    To empower independent healthcare providers with expert, personalized revenue cycle management that maximizes collections and lets them focus on patient care.
-                  </p>
-                  <div className="border-t border-gray/10 pt-6">
-                    <h3 className="text-2xl font-bold text-navy mb-6">Our Vision</h3>
-                    <p className="text-gray">
-                      To be the most trusted billing partner for independent medical practices in the United States.
-                    </p>
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
-          </div>
+      {/* Founder intro */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <p className="text-lg md:text-xl text-navy leading-relaxed">
+              Aethera was founded in 2026 by <strong>Kiran Kumar Pedapudi</strong> [1&ndash;2 sentence bio:
+              background, why RCM &mdash; KIRAN TO SUPPLY].
+            </p>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="OUR VALUES"
-            title="What Guides Us"
-            description="These core principles shape everything we do at Aethera Healthcare Solutions."
-          />
+      {/* Why we exist */}
+      <section className="py-16 md:py-20 bg-cream">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">Why we exist</h2>
+            <p className="text-gray text-lg leading-relaxed">
+              US practices lose billions every year to preventable denials — half of them decided before the
+              patient even reaches the front desk. The industry&apos;s answer has been cheaper labor or louder
+              AI promises. Ours is different: automation with hard boundaries, humans where judgment matters,
+              and an audit trail on everything, delivered from India at a cost structure that changes the
+              economics for small and mid-size billing operations.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-            {values.map((value, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <div className="bg-white rounded-xl shadow-md p-6 border border-gray/10 h-full">
-                  <h3 className="text-xl font-bold text-navy mb-4">{value.title}</h3>
-                  <p className="text-gray">{value.description}</p>
+      {/* How we work */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <p className="text-xs font-bold tracking-[0.16em] text-teal uppercase mb-3">How we work</p>
+            <h2 className="font-jakarta font-bold text-navy text-3xl md:text-4xl tracking-tight">Three principles</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {principles.map((p, index) => (
+              <FadeIn key={p.title} delay={index * 0.1}>
+                <div className="bg-cream rounded-xl p-7 border border-gray/10 h-full">
+                  <h3 className="text-xl font-bold text-navy mb-3 italic">{p.title}</h3>
+                  <p className="text-gray leading-relaxed">{p.description}</p>
                 </div>
               </FadeIn>
             ))}
@@ -166,43 +130,16 @@ export default function About() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <div className="text-center">
-                  <p className="text-4xl font-bold text-teal mb-2">{stat.value}</p>
-                  <p className="text-gray">{stat.label}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            label="WHY CHOOSE US"
-            title="Why Healthcare Providers Choose Aethera"
-            description="Six key reasons practices partner with us for their revenue cycle management."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-            {reasons.map((reason, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <div className="flex items-start">
-                  <div className="bg-teal text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                    {index + 1}
-                  </div>
-                  <p className="text-gray ml-4">{reason}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+      {/* Where we are */}
+      <section className="py-16 md:py-20 bg-navy">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="text-3xl font-bold text-white font-jakarta mb-6">Where we are</h2>
+            <p className="text-cream/85 text-lg leading-relaxed">
+              Registered in India ([City, India]), serving US clients on US hours through our +1 813 number.
+              Founder-led: when you call, you get the person who signs the quality bar.
+            </p>
+          </FadeIn>
         </div>
       </section>
 

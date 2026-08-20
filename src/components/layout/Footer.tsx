@@ -34,7 +34,7 @@ const resources = [
   { name: 'State of Denials Report', href: '/state-of-denials' },
   { name: 'Payer Directory', href: '/payers/directory' },
   { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Provider Portal', href: '/portal' },
+  { name: 'For Billing Companies', href: '/for-billing-companies' },
   { name: 'EHR Integrations', href: '/integrations' },
   { name: 'Free Assessment', href: '/free-assessment' },
 ];
@@ -44,14 +44,14 @@ const compliance = [
   { name: 'Privacy Policy', href: '/compliance/privacy-policy' },
   { name: 'Terms of Service', href: '/compliance/terms-of-service' },
   { name: 'Business Associate Agreement', href: '/compliance/baa' },
-  { name: 'Security Practices', href: '/compliance/security' },
+  { name: 'Security & Compliance', href: '/compliance/security' },
 ];
 
 const trustBadges = [
-  { label: 'HIPAA Compliant', icon: '🔒' },
-  { label: 'SOC 2-Aligned', icon: '✓' },
-  { label: 'HBMA Member', icon: '★' },
+  { label: 'HIPAA-Compliant Architecture', icon: '🔒' },
   { label: 'BAA Available', icon: '📄' },
+  { label: 'SOC 2-Aligned Controls', icon: '✓' },
+  { label: 'US Data Residency', icon: '🇺🇸' },
 ];
 
 export default function Footer() {
@@ -163,6 +163,13 @@ export default function Footer() {
             <p className="text-gray text-sm mt-3 md:mt-0">
               Serving practices nationwide &middot; aetherahealthcare.com
             </p>
+          </div>
+
+          {/* Legal / registered-entity block */}
+          <div className="mt-6 pt-6 border-t border-gray/20 text-gray/70 text-xs leading-relaxed text-center md:text-left">
+            <p>Aethera Healthcare Solutions Private Limited &middot; CIN U82990TN2026PTC189331</p>
+            <p>[Registered office street address, City, State, PIN, India]</p>
+            <p>US contact: +1 (813) 519-4640 &middot; info@aetherahealthcare.com</p>
           </div>
         </div>
       </div>

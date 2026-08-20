@@ -189,8 +189,10 @@ export default function ROICalculator() {
             <p className="text-sm text-gray mt-1">Estimated ROI: <span className="text-white font-semibold">{Math.round(results.roi)}%</span></p>
           </div>
 
-          <p className="text-xs text-gray/60 leading-relaxed">
-            Projections based on Aethera&apos;s target benchmarks: 96% net collection rate, 97.5% clean claim rate. Actual results vary by practice.
+          <p className="text-xs text-gray/60 leading-relaxed italic">
+            Estimate only. Based on your inputs and published industry benchmark improvement ranges — not on
+            Aethera client results. Your actual results depend on payer mix, specialty, and current process.
+            We&apos;ll validate these numbers against your own data in a free assessment.
           </p>
 
           {/* Lead capture — turn the projection into a captured lead */}

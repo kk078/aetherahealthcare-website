@@ -34,7 +34,7 @@ const specialtyServices = [
 const whyAethera = [
   { name: 'Guides', href: '/decks', desc: 'Specialty one-pagers & playbooks' },
   { name: 'Case Studies', href: '/case-studies', desc: 'Results our process is built to deliver' },
-  { name: 'Provider Portal', href: '/portal', desc: '24/7 real-time billing dashboard' },
+  { name: 'Security & Compliance', href: '/compliance/security', desc: 'How we protect PHI, offshore and in the US' },
   { name: 'Payer Network', href: '/payers', desc: '900+ insurers we work with' },
   { name: 'EHR Integrations', href: '/integrations', desc: '50+ systems, zero disruption' },
   { name: 'Compare Options', href: '/compare', desc: 'Outsourced vs. in-house, and how to choose' },
@@ -118,6 +118,9 @@ export default function Navbar() {
               <Link prefetch={false} href="/payer-services" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                 Payer Services
               </Link>
+              <Link prefetch={false} href="/for-billing-companies" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+                For Billing Companies
+              </Link>
               <Link prefetch={false} href="/tools" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                 Free Tools
               </Link>
@@ -159,19 +162,17 @@ export default function Navbar() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-2">
-            <a
-              href="https://rcm.aetherahealthcare.com/portal/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link prefetch={false}
+              href="/schedule"
               className="text-[#1d1d1f] hover:text-[#003087] font-medium py-2 px-4 rounded-full text-sm transition-colors duration-200"
             >
-              Client Login
-            </a>
+              Book a Call
+            </Link>
             <Link prefetch={false}
               href="/free-assessment"
               className="bg-[#003087] hover:bg-[#001A52] text-white font-semibold py-2 px-5 rounded-full transition-all duration-200 text-sm shadow-sm hover:shadow-md"
             >
-              Free Assessment
+              Start Free Pilot
             </Link>
           </div>
 
@@ -220,27 +221,26 @@ export default function Navbar() {
             <div className="border-t border-[#003087]/10 pt-3 space-y-2">
               <Link prefetch={false} href="/specialties" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Specialties</Link>
               <Link prefetch={false} href="/payer-services" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Payer Services</Link>
+              <Link prefetch={false} href="/for-billing-companies" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>For Billing Companies</Link>
               <Link prefetch={false} href="/tools" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Free Tools</Link>
               <Link prefetch={false} href="/pricing" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
               <Link prefetch={false} href="/about" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>About</Link>
               <Link prefetch={false} href="/blog" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Blog</Link>
               <Link prefetch={false} href="/contact" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Contact</Link>
               <Link prefetch={false} href="/schedule" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Schedule</Link>
-              <a
-                href="https://rcm.aetherahealthcare.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link prefetch={false}
+                href="/schedule"
                 className="block border-2 border-[#003087] text-[#003087] font-semibold py-2.5 px-5 rounded-md transition-colors duration-300 text-sm text-center mt-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Client Login
-              </a>
+                Book a Call
+              </Link>
               <Link prefetch={false}
                 href="/free-assessment"
                 className="block bg-[#003087] hover:bg-[#001A52] text-white font-bold py-2.5 px-5 rounded-md transition-colors duration-300 text-sm text-center mt-1"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Free Assessment
+                Start Free Pilot
               </Link>
             </div>
           </div>

@@ -13,7 +13,7 @@ export function GET() {
     '/free-assessment', '/schedule',
     '/compliance', '/compliance/hipaa', '/compliance/privacy-policy', '/compliance/terms-of-service',
     '/compliance/baa', '/compliance/security', '/blog', '/faq', '/careers',
-    '/payers', '/payer-services', '/integrations', '/portal', '/case-studies', '/decks',
+    '/payers', '/payer-services', '/for-billing-companies', '/integrations', '/portal', '/case-studies', '/decks',
   ];
 
   const serviceRoutes = [
