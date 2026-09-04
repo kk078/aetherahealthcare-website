@@ -41,7 +41,12 @@ export default defineConfig({
     },
     {
       name: 'mobile-chrome',
-      use: { ...devices['Pixel 5'] },
+      use: {
+        ...devices['Pixel 5'],
+        launchOptions: {
+          executablePath: process.env.CI ? undefined : '/usr/bin/google-chrome',
+        },
+      },
     },
   ],
 });

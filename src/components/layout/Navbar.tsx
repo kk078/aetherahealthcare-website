@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 
 const services = [
   { name: 'Medical Coding', href: '/services/medical-coding' },
@@ -168,8 +168,30 @@ export default function Navbar() {
             </div>
           </nav>
 
-          {/* CTA Buttons */}
+          {/* Desktop Search + CTA Buttons */}
           <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+            {/* Desktop Command Palette Trigger */}
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
+              className="hidden xl:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 bg-slate-50/90 hover:bg-white hover:border-[#003087]/40 text-xs text-slate-500 hover:text-[#003087] transition-all shadow-xs mr-1"
+              aria-label="Search payers, denial codes, and tools (⌘K)"
+            >
+              <Search className="w-3.5 h-3.5 text-slate-400" />
+              <span className="font-medium text-[13px]">Search payers, codes, tools…</span>
+              <kbd className="inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-semibold text-slate-500 bg-white rounded border border-slate-200 shadow-xs">
+                <span>⌘</span>K
+              </kbd>
+            </button>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
+              className="hidden lg:inline-flex xl:hidden p-2 rounded-full text-[#334155] hover:text-[#003087] hover:bg-slate-100 transition-colors"
+              aria-label="Search payers, denial codes, and tools (⌘K)"
+            >
+              <Search className="w-4 h-4" />
+            </button>
+
             <Link prefetch={false}
               href="/schedule"
               className="text-[#1d1d1f] hover:text-[#003087] font-medium py-2 px-3 xl:px-4 rounded-full text-sm transition-colors duration-200 whitespace-nowrap"
@@ -184,8 +206,16 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
+          {/* Mobile search + menu button */}
+          <div className="lg:hidden flex items-center gap-1">
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
+              className="p-2 text-[#334155] hover:text-[#003087] hover:bg-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+              aria-label="Search payers, codes, and tools"
+            >
+              <Search className="h-5 w-5" />
+            </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-[#334155] hover:text-[#003087] p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
@@ -201,6 +231,23 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="lg:hidden bg-white shadow-2xl h-[calc(100vh-6rem)] overflow-y-auto border-t border-[#003087]/10">
           <div className="px-4 pt-4 pb-8 space-y-4">
+            {/* Mobile Quick Search Bar */}
+            <button
+              type="button"
+              onClick={() => {
+                setIsMenuOpen(false);
+                window.dispatchEvent(new CustomEvent('open-command-palette'));
+              }}
+              className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-sm text-slate-600 font-medium"
+              aria-label="Search payers, codes, and tools"
+            >
+              <span className="flex items-center gap-2">
+                <Search className="h-4 w-4 text-[#003087]" />
+                <span>Search payers, codes &amp; tools…</span>
+              </span>
+              <span className="text-xs text-slate-400 font-mono">⌘K</span>
+            </button>
+
             {/* Quick Action CTAs */}
             <div className="grid grid-cols-2 gap-2 pt-1 pb-3 border-b border-slate-100">
               <Link prefetch={false}

@@ -122,6 +122,28 @@ export default function CallbackButton() {
     }
   };
 
+  const handleSendMessageRef = useRef(handleSendMessage);
+  useEffect(() => {
+    handleSendMessageRef.current = handleSendMessage;
+  });
+
+  // Listen for external open-expert-modal triggers (e.g. from Command Palette or Navbar)
+  useEffect(() => {
+    const handleOpenEvent = (e: Event) => {
+      const custom = e as CustomEvent<{ mode?: TabMode; initialQuery?: string }>;
+      setOpen(true);
+      if (custom.detail?.mode) {
+        setActiveTab(custom.detail.mode);
+      }
+      if (custom.detail?.initialQuery) {
+        handleSendMessageRef.current(custom.detail.initialQuery);
+      }
+    };
+
+    window.addEventListener('open-expert-modal', handleOpenEvent);
+    return () => window.removeEventListener('open-expert-modal', handleOpenEvent);
+  }, []);
+
   // Switch to callback tab with pre-filled context
   const handleEscalateToCallback = (contextNote?: string) => {
     setActiveTab('callback');

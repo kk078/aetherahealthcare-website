@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState, type FormEvent } from 'react';
+import { useMemo, useState, useEffect, type FormEvent } from 'react';
 import { Search, ChevronDown, Mail, CheckCircle2, ShieldAlert, Star } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
 import {
@@ -43,6 +43,20 @@ export default function DenialCodeLookup({
 
   const [email, setEmail] = useState('');
   const [leadStatus, setLeadStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
+
+  // Parse deep-linked code or search query from URL
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search);
+    const codeParam = params.get('code') || params.get('q');
+    if (codeParam) {
+      requestAnimationFrame(() => {
+        setQ(codeParam);
+        const clean = codeParam.trim().replace(/^(CARC|RARC|CO|PR|OA|PI|CR)[-\s]?/i, '');
+        setOpenCode(clean);
+      });
+    }
+  }, []);
 
   const terms = useMemo(() => q.toLowerCase().split(/\s+/).filter(Boolean), [q]);
 

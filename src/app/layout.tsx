@@ -50,6 +50,7 @@ import GoogleAds from '@/components/ui/GoogleAds';
 import CookieConsent from '@/components/ui/CookieConsent';
 import BackToTop from '@/components/ui/BackToTop';
 import CallbackButton from '@/components/ui/CallbackButton';
+import CommandPalette from '@/components/ui/CommandPalette';
 import ExitIntentCTA from '@/components/ui/ExitIntentCTA';
 import RetargetingPixels from '@/components/ui/RetargetingPixels';
 
@@ -66,6 +67,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-cream text-dark">
         <TopContactBar />
         {children}
+        <CommandPalette />
         <CookieConsent />
         <BackToTop />
         <CallbackButton />
