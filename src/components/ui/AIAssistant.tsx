@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Sparkles, X, Send, Loader2 } from 'lucide-react';
-import { askGeminiAgent, type AssistantMessage } from '@/lib/gemini';
+import { askAiAgent, type AssistantMessage } from '@/lib/aiAgent';
 import { PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
 
 const GREETING =
@@ -76,7 +76,7 @@ export default function AIAssistant() {
     setBusy(true);
 
     try {
-      const response = await askGeminiAgent(q, history);
+      const response = await askAiAgent(q, history);
       setMsgs(m => [...m, makeAiMsg('assistant', response.text)]);
     } catch {
       setMsgs(m => [

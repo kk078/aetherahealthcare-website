@@ -1,8 +1,8 @@
 /**
- * Gemini Agentic AI Client for Aethera Healthcare Solutions.
+ * Agentic AI Client for Aethera Healthcare Solutions.
  *
  * Multi-tier intelligent architecture:
- * 1. Google Gemini 2.5 Flash / 1.5 Flash API (when NEXT_PUBLIC_GEMINI_API_KEY is configured)
+ * 1. Direct LLM REST API (when NEXT_PUBLIC_AI_API_KEY is configured)
  * 2. Cloudflare Worker Assistant proxy (https://aethera-forms.aetherahealthcare.workers.dev/api/assistant)
  * 3. Grounded Deterministic RCM Knowledge Engine (instant lookup across 229+ payers and CARC/RARC denial codes)
  *
@@ -27,7 +27,7 @@ export interface AssistantMessage {
 }
 
 const FORMS_URL = process.env.NEXT_PUBLIC_FORMS_URL || 'https://aethera-forms.aetherahealthcare.workers.dev';
-const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY || '';
+const API_KEY = process.env.NEXT_PUBLIC_AI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY || '';
 
 const SYSTEM_PROMPT = `You are Aethera's Senior AI Revenue Cycle & Practice Management Specialist, pairing with Kiran and the senior billing leadership team at Aethera Healthcare Solutions.
 
@@ -255,9 +255,9 @@ How can I help your practice today? You can also request a callback from Kiran a
 }
 
 /**
- * Send a prompt to Gemini Agentic AI with fallback to forms worker and local grounded engine.
+ * Send a prompt to Agentic AI with fallback to forms worker and local grounded engine.
  */
-export async function askGeminiAgent(
+export async function askAiAgent(
   prompt: string,
   history: Array<{ role: 'user' | 'assistant'; content: string }> = []
 ): Promise<{ text: string; actions: AgentAction[] }> {
@@ -266,8 +266,8 @@ export async function askGeminiAgent(
     return { text: 'Please enter a question about billing, payers, or services.', actions: [] };
   }
 
-  // 1. If NEXT_PUBLIC_GEMINI_API_KEY is available, query Google Gemini REST API directly
-  if (GEMINI_API_KEY) {
+  // 1. If API key is available, query direct REST API
+  if (API_KEY) {
     try {
       const contents = [
         ...history.slice(-6).map(h => ({
@@ -277,7 +277,7 @@ export async function askGeminiAgent(
         { role: 'user', parts: [{ text: cleanPrompt }] },
       ];
 
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
       const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -331,3 +331,4 @@ export async function askGeminiAgent(
   const actions = extractAgentActions(cleanPrompt, groundedText);
   return { text: groundedText, actions };
 }
+

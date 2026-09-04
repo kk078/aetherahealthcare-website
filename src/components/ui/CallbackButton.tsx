@@ -18,7 +18,7 @@ import {
   UserCheck
 } from 'lucide-react';
 import { submitToWorker, sendLeadToKiran, PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
-import { askGeminiAgent, type AssistantMessage, type AgentAction } from '@/lib/gemini';
+import { askAiAgent, type AssistantMessage, type AgentAction } from '@/lib/aiAgent';
 
 const INITIAL_GREETING =
   "Hi! I'm Aethera's AI Revenue Cycle & Practice Specialist. Ask me anything about payer timely filing limits, denial codes (CO-45, PR-204, CO-16), specialty medical billing, or our 3.5%–5.0% performance pricing. You can also connect directly with Kiran for a practice audit.";
@@ -83,7 +83,7 @@ export default function CallbackButton() {
     }
   }, [messages, isThinking, activeTab, open]);
 
-  // Handle sending message to Gemini Agent
+  // Handle sending message to AI Agent
   const handleSendMessage = async (textToSend?: string) => {
     const query = (textToSend ?? input).trim();
     if (!query || isThinking) return;
@@ -99,7 +99,7 @@ export default function CallbackButton() {
         .filter(m => m.content !== INITIAL_GREETING)
         .map(m => ({ role: m.role, content: m.content }));
 
-      const response = await askGeminiAgent(query, historyForApi);
+      const response = await askAiAgent(query, historyForApi);
       const botMsg = makeMsg('assistant', response.text, response.actions);
       setMessages(prev => [...prev, botMsg]);
     } catch {
