@@ -31,7 +31,7 @@ export default function ToolConversionBridge({
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-            <div className="bg-white/10 border border-white/10 rounded-2xl p-4">
+            <div className="bg-white/10 border border-white/10 hover:border-mint/30 hover:bg-white/15 hover:-translate-y-0.5 transition-all duration-300 rounded-2xl p-4">
               <div className="flex items-center gap-2 text-mint font-bold text-sm mb-1">
                 <ShieldCheck className="h-4 w-4" />
                 Free 50-Claim Audit Pilot
@@ -41,7 +41,7 @@ export default function ToolConversionBridge({
               </p>
             </div>
 
-            <div className="bg-white/10 border border-white/10 rounded-2xl p-4">
+            <div className="bg-white/10 border border-white/10 hover:border-mint/30 hover:bg-white/15 hover:-translate-y-0.5 transition-all duration-300 rounded-2xl p-4">
               <div className="flex items-center gap-2 text-mint font-bold text-sm mb-1">
                 <FileSpreadsheet className="h-4 w-4" />
                 Instant A/R Gap Analysis
@@ -56,7 +56,7 @@ export default function ToolConversionBridge({
             <Link
               prefetch={false}
               href="/schedule"
-              className="inline-flex items-center justify-center gap-2 bg-teal hover:bg-mint text-navy font-bold py-3.5 px-6 rounded-full transition-colors text-sm shadow-md"
+              className="btn-shimmer inline-flex items-center justify-center gap-2 bg-teal hover:bg-mint text-navy font-bold py-3.5 px-6 rounded-full transition-all duration-300 text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               <CalendarClock className="h-4 w-4" />
               Schedule 50-Claim Pilot
@@ -65,7 +65,7 @@ export default function ToolConversionBridge({
             <Link
               prefetch={false}
               href="/free-assessment"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold py-3.5 px-6 rounded-full transition-colors text-sm"
+              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40 font-semibold py-3.5 px-6 rounded-full transition-all duration-300 text-sm hover:-translate-y-0.5"
             >
               Run Free A/R Assessment
               <ArrowRight className="h-4 w-4" />

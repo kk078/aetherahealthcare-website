@@ -65,7 +65,7 @@ export default function AgingVisualizer({ buckets, total: inputTotal, compact = 
     <div className="w-full space-y-3">
       {/* Benchmark status pill */}
       {!compact && (
-        <div className={`flex items-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium ${status.badgeCls}`}>
+        <div className={`flex items-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-300 ease-out ${status.badgeCls}`}>
           {status.icon === 'check' && <CheckCircle className="h-4 w-4 shrink-0 text-emerald-600" />}
           {status.icon === 'warning' && <AlertTriangle className="h-4 w-4 shrink-0 text-amber-600" />}
           {status.icon === 'alert' && <ShieldAlert className="h-4 w-4 shrink-0 text-rose-600" />}
@@ -84,7 +84,7 @@ export default function AgingVisualizer({ buckets, total: inputTotal, compact = 
             <div
               key={it.key}
               style={{ width: `${Math.max(1, it.pct)}%` }}
-              className={`${it.color} h-full transition-all duration-300 relative group flex items-center justify-center`}
+              className={`${it.color} h-full transition-[width] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] relative group flex items-center justify-center`}
               title={`${it.longLabel}: ${fmt(it.val)} (${pct(it.pct)})`}
             >
               {it.pct >= 11 && (

@@ -20,7 +20,7 @@ export default defineConfig({
     baseURL: process.env.BASE_URL || 'https://aetherahealthcare.com',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    video: process.env.CI ? 'retain-on-failure' : 'off',
     actionTimeout: 10_000,
     navigationTimeout: 30_000,
   },
@@ -28,7 +28,12 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        launchOptions: {
+          executablePath: process.env.CI ? undefined : '/usr/bin/google-chrome',
+        },
+      },
     },
     {
       name: 'firefox',

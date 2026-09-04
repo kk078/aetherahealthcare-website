@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
+import ScrollProgress from '@/components/ui/ScrollProgress';
 import { Check, X, ArrowRight } from 'lucide-react';
 
 export const metadata = {
@@ -49,6 +50,7 @@ export default function OutsourcedVsInHouse() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
+      <ScrollProgress />
 
       <section className="pt-8 pb-10 md:pt-12 md:pb-12 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

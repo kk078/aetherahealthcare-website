@@ -5,6 +5,7 @@ import { Calendar, Clock, Tag, User, ArrowLeft, ArrowRight } from 'lucide-react'
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
+import ScrollProgress from '@/components/ui/ScrollProgress';
 
 interface Related { slug: string; title: string; image: string; }
 interface PostProp {
@@ -36,6 +37,7 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }} />
       <Navbar />
+      <ScrollProgress />
 
       <section className="pt-8 pb-8 md:pt-12 md:pb-12 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

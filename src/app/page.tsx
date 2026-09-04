@@ -1,7 +1,9 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import {
   CheckCircle,
   DollarSign,
@@ -58,28 +60,102 @@ const specialties = [
   'Orthopedics', 'Pediatrics', 'Psychiatry', 'Surgery', 'Urology', 'Other',
 ];
 
-const targets = [
+interface TargetItem {
+  targetNumber: number;
+  prefix?: string;
+  suffix?: string;
+  label: string;
+  barClass: string;
+  barWidth: string;
+  icon: React.ReactNode;
+  iconWrap: string;
+}
+
+const targets: TargetItem[] = [
   {
-    value: '95%+', label: 'Clean-Claim Rate',
+    targetNumber: 95, suffix: '%+', label: 'Clean-Claim Rate',
     barClass: 'bg-emerald', barWidth: '95%',
     icon: <CheckCircle className="h-5 w-5" />, iconWrap: 'bg-emerald/10 text-emerald',
   },
   {
-    value: '<5%', label: 'Eligibility-Driven Denial Rate',
+    targetNumber: 5, prefix: '<', suffix: '%', label: 'Eligibility-Driven Denial Rate',
     barClass: 'bg-royal', barWidth: '20%',
     icon: <AlertTriangle className="h-5 w-5" />, iconWrap: 'bg-royal/10 text-royal',
   },
   {
-    value: '<30 days', label: 'In Accounts Receivable',
+    targetNumber: 30, prefix: '<', suffix: ' days', label: 'In Accounts Receivable',
     barClass: 'bg-navy', barWidth: '40%',
     icon: <Clock className="h-5 w-5" />, iconWrap: 'bg-navy/10 text-navy',
   },
   {
-    value: '96%+', label: 'Of Billed Revenue Collected',
+    targetNumber: 96, suffix: '%+', label: 'Of Billed Revenue Collected',
     barClass: 'bg-teal', barWidth: '96%',
     icon: <DollarSign className="h-5 w-5" />, iconWrap: 'bg-teal/10 text-teal',
   },
 ];
+
+function TargetCard({ t, index }: { t: TargetItem; index: number }) {
+  const [inView, setInView] = useState<boolean>(() => {
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return true;
+    }
+    return false;
+  });
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (inView) return;
+
+    const el = ref.current;
+    if (!el) {
+      const fallbackTimer = setTimeout(() => setInView(true), 0);
+      return () => clearTimeout(fallbackTimer);
+    }
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [inView]);
+
+  return (
+    <div
+      ref={ref}
+      className="bg-white rounded-2xl p-7 border border-gray/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-mint/40 transition-all duration-300 h-full flex flex-col justify-between"
+    >
+      <div>
+        <span className={`inline-flex items-center justify-center h-11 w-11 rounded-xl mb-6 ${t.iconWrap}`}>
+          {t.icon}
+        </span>
+        <div className="font-jakarta font-extrabold text-navy text-4xl tracking-tight mb-1">
+          <AnimatedCounter
+            to={t.targetNumber}
+            prefix={t.prefix}
+            suffix={t.suffix}
+            duration={1100 + index * 150}
+          />
+        </div>
+        <div className="text-xs font-bold tracking-[0.12em] text-gray uppercase mb-4">{t.label}</div>
+        <div className="w-full bg-gray/10 h-1.5 rounded-full overflow-hidden">
+          <div
+            className={`h-full rounded-full ${t.barClass}`}
+            style={{
+              width: inView ? t.barWidth : '0%',
+              transition: `width 1s cubic-bezier(0.16, 1, 0.3, 1) ${0.2 + index * 0.1}s`,
+            }}
+          />
+        </div>
+      </div>
+      <p className="mt-5 text-sm text-gray italic">Contractual target</p>
+    </div>
+  );
+}
 
 const difference = [
   {
@@ -151,8 +227,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-ink via-navy to-[#06304f]" />
         <div className="absolute inset-0 opacity-[0.35] pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(rgba(120,160,200,0.35) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
-        <div className="absolute -top-1/3 -right-1/4 w-[70%] h-[140%] rounded-full pointer-events-none"
-          style={{ background: 'radial-gradient(closest-side, rgba(69,196,176,0.16), transparent)' }} />
+        <div className="absolute -top-1/3 -right-1/4 w-[70%] h-[140%] rounded-full pointer-events-none ambient-orb"
+          style={{ background: 'radial-gradient(closest-side, rgba(69,196,176,0.18), transparent)' }} />
+        <div className="absolute -bottom-1/4 -left-1/4 w-[50%] h-[100%] rounded-full pointer-events-none ambient-orb"
+          style={{ background: 'radial-gradient(closest-side, rgba(13,115,119,0.16), transparent)', animationDelay: '-5s' }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 md:pt-16 md:pb-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center">
@@ -160,6 +238,7 @@ export default function Home() {
             <div>
               <FadeIn>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/15 px-3.5 py-1.5 text-xs font-semibold tracking-[0.14em] text-cream uppercase">
+                  <span className="pulse-beacon text-mint mr-0.5"><span className="h-2 w-2 rounded-full bg-mint" /></span>
                   <ShieldCheck className="h-4 w-4 text-mint" /> AI-first revenue cycle
                 </span>
               </FadeIn>
@@ -192,7 +271,7 @@ export default function Home() {
               <FadeIn delay={0.3}>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link prefetch={false} href="/free-assessment"
-                    className="inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-7 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20">
+                    className="btn-shimmer inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-7 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20">
                     Start the Free 50-Claim Pilot <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link prefetch={false} href="#aethera-difference"
@@ -236,15 +315,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {targets.map((t, i) => (
               <FadeIn key={t.label} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl p-7 border border-gray/15 shadow-sm hover:shadow-xl transition-shadow h-full">
-                  <span className={`inline-flex items-center justify-center h-11 w-11 rounded-xl mb-6 ${t.iconWrap}`}>{t.icon}</span>
-                  <div className="font-jakarta font-extrabold text-navy text-4xl tracking-tight mb-1">{t.value}</div>
-                  <div className="text-xs font-bold tracking-[0.12em] text-gray uppercase mb-4">{t.label}</div>
-                  <div className="w-full bg-gray/10 h-1.5 rounded-full overflow-hidden">
-                    <div className={`h-full rounded-full ${t.barClass}`} style={{ width: t.barWidth }} />
-                  </div>
-                  <p className="mt-5 text-sm text-gray italic">Contractual target</p>
-                </div>
+                <TargetCard t={t} index={i} />
               </FadeIn>
             ))}
           </div>
@@ -267,13 +338,24 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {difference.map((d, i) => (
               <FadeIn key={d.title} delay={i * 0.1}>
-                <div className="bg-cream rounded-2xl p-8 border border-gray/10 h-full">
-                  <span className="inline-flex items-center justify-center h-12 w-12 rounded-xl bg-navy text-white mb-5">{d.icon}</span>
-                  <h3 className="font-jakarta font-bold text-navy text-xl mb-3">{d.title}</h3>
-                  <p className="text-gray leading-relaxed">{d.desc}</p>
+                <div className="group bg-cream rounded-2xl p-8 border border-gray/10 hover:border-teal/30 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 h-full flex flex-col justify-between">
+                  <div>
+                    <span className="inline-flex items-center justify-center h-12 w-12 rounded-xl bg-navy text-white mb-5 group-hover:bg-teal group-hover:scale-110 transition-all duration-300">
+                      {d.icon}
+                    </span>
+                    <h3 className="font-jakarta font-bold text-navy text-xl mb-3 group-hover:text-teal transition-colors">
+                      {d.title}
+                    </h3>
+                    <p className="text-gray leading-relaxed text-sm">{d.desc}</p>
+                  </div>
                   {d.link && (
-                    <Link prefetch={false} href={d.link.href} className="inline-flex items-center gap-1.5 text-teal font-semibold hover:text-navy transition-colors mt-4">
-                      {d.link.label} <ArrowRight className="h-4 w-4" />
+                    <Link
+                      prefetch={false}
+                      href={d.link.href}
+                      className="inline-flex items-center gap-1.5 text-teal font-semibold hover:text-navy transition-colors mt-5 text-sm"
+                    >
+                      {d.link.label}{' '}
+                      <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                     </Link>
                   )}
                 </div>
@@ -293,16 +375,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mb-12">
             {pilotSteps.map((s) => (
               <FadeIn key={s.n} delay={Number(s.n) * 0.1}>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-7 h-full">
-                  <span className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-mint text-navy font-bold text-sm mb-5">{s.n}</span>
+                <div className="bg-white/5 border border-white/10 hover:border-mint/30 hover:bg-white/10 hover:-translate-y-1 rounded-2xl p-7 h-full transition-all duration-300">
+                  <span className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-mint text-navy font-bold text-sm mb-5 shadow-sm">
+                    {s.n}
+                  </span>
                   <h3 className="font-jakarta font-bold text-white text-lg mb-2">{s.title}</h3>
                   <p className="text-cream/80 leading-relaxed text-sm">{s.desc}</p>
                 </div>
               </FadeIn>
             ))}
           </div>
-          <Link prefetch={false} href="/free-assessment"
-            className="inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-8 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20">
+          <Link
+            prefetch={false}
+            href="/free-assessment"
+            className="btn-shimmer inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-8 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20"
+          >
             Claim your pilot slot <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

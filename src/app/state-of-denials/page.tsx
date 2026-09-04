@@ -2,6 +2,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import DenialsReport from '@/components/ui/DenialsReport';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
+import ScrollProgress from '@/components/ui/ScrollProgress';
 import { INDUSTRY_HEADLINES } from '@/lib/denialBenchmarks';
 import { AlertTriangle } from 'lucide-react';
 
@@ -26,6 +27,7 @@ export default function StateOfDenialsPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
+      <ScrollProgress />
 
       <RcmHeroBand
         eyebrow="Benchmark Report · 2026"

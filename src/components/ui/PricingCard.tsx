@@ -18,9 +18,13 @@ export default function PricingCard({
   href,
 }: PricingCardProps) {
   return (
-    <div className={`rounded-2xl shadow-lg p-8 relative flex flex-col justify-between h-full bg-white transition-all duration-300 hover:shadow-xl ${isPopular ? 'border-2 border-mint ring-1 ring-mint/30' : 'border border-gray/15'}`}>
+    <div
+      className={`rounded-2xl shadow-lg p-8 relative flex flex-col justify-between h-full bg-white transition-all duration-300 hover:shadow-2xl hover:-translate-y-1.5 ${
+        isPopular ? 'border-2 border-mint ring-2 ring-mint/30 shadow-mint/10' : 'border border-gray/15 hover:border-teal/30'
+      }`}
+    >
       {isPopular && (
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-mint text-navy text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-sm tracking-wide uppercase">
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-mint text-navy text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-md tracking-wide uppercase">
           Most Popular
         </div>
       )}
@@ -40,9 +44,10 @@ export default function PricingCard({
         </ul>
       </div>
 
-      <Link prefetch={false}
+      <Link
+        prefetch={false}
         href={href}
-        className={`mt-auto block w-full py-3 px-6 rounded-full font-bold text-center text-sm transition-all duration-200 shadow-sm hover:shadow ${
+        className={`btn-shimmer mt-auto block w-full py-3 px-6 rounded-full font-bold text-center text-sm transition-all duration-200 shadow-sm hover:shadow-md ${
           isPopular
             ? 'bg-mint hover:bg-teal hover:text-white text-navy'
             : 'bg-navy hover:bg-teal text-white'
