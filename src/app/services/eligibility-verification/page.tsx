@@ -84,7 +84,7 @@ export const metadata = {
 
 export default function EligibilityVerification() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"
@@ -117,7 +117,7 @@ export default function EligibilityVerification() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
+      <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>

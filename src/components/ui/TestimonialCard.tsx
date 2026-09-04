@@ -13,7 +13,7 @@ export default function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <div className="bg-white rounded-xl shadow-md p-8 border border-gray/10">
-      <div className="text-teal text-5xl mb-4">"</div>
+      <div className="text-teal text-5xl mb-4">&ldquo;</div>
       <p className="text-gray mb-6 italic">{quote}</p>
       <div className="border-t border-gray/10 pt-6">
         <p className="font-bold text-navy">{author}</p>

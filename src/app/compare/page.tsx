@@ -3,7 +3,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
-import { Scale, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export const metadata = {
   title: { absolute: 'Compare Medical Billing Options | Aethera Healthcare Solutions' },
@@ -27,7 +27,7 @@ const pages = [
 
 export default function CompareHub() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <RcmHeroBand
         eyebrow="Compare Options"

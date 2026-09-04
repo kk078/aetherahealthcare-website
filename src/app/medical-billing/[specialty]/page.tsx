@@ -71,10 +71,10 @@ export default async function SpecialtyPage({ params }: { params: Params }) {
   const others = SEO_SPECIALTIES.filter((x) => x.slug !== s.slug).slice(0, 6);
 
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <section className="pt-24 pb-12 md:pt-28 md:pb-14 bg-gradient-to-br from-navy to-teal">
+      <section className="pt-8 pb-10 md:pt-12 md:pb-12 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-cream/80 text-sm mb-3">Medical Billing · Nationwide</p>
           <FadeIn>

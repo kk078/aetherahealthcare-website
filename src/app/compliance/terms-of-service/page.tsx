@@ -1,9 +1,7 @@
 import Link from 'next/link';
-import { FileText, CheckCircle, Users } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
-import SectionHeader from '@/components/ui/SectionHeader';
 
 const terms = [
   {
@@ -43,11 +41,11 @@ export const metadata = {
 
 export default function TermsOfService() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
+      <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
@@ -73,8 +71,8 @@ export default function TermsOfService() {
                 Agreement to Terms
               </h2>
               <p className="text-gray mb-6">
-                These Terms of Service ("Terms") govern your access to and use of the services provided by Aethera
-                Healthcare Solutions ("we," "us," or "our"). By accessing or using our services, you agree to be bound
+                These Terms of Service (&quot;Terms&quot;) govern your access to and use of the services provided by Aethera
+                Healthcare Solutions (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By accessing or using our services, you agree to be bound
                 by these Terms and all applicable laws and regulations.
               </p>
               <p className="text-gray mb-6">
@@ -84,7 +82,7 @@ export default function TermsOfService() {
               </p>
               <p className="text-gray">
                 We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will
-                provide notice of any material changes by updating the "Last Updated" date at the top of this page.
+                provide notice of any material changes by updating the &quot;Last Updated&quot; date at the top of this page.
                 Your continued use of our services after any such changes constitutes acceptance of the new Terms.
               </p>
             </FadeIn>
@@ -211,7 +209,7 @@ export default function TermsOfService() {
                 You agree to defend, indemnify, and hold harmless Aethera Healthcare Solutions and its affiliates,
                 licensors, and service providers, and their respective officers, directors, employees, contractors,
                 agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages,
-                judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out
+                judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys&apos; fees) arising out
                 of or relating to your violation of these Terms or your use of our services, including but not limited
                 to your violation of any law or regulation or third-party rights.
               </p>
@@ -298,7 +296,7 @@ export default function TermsOfService() {
               <p className="text-gray">
                 The arbitrator may award any relief that would be available in court. The parties agree that the
                 arbitrator shall have no authority to award punitive damages. Each party shall bear its own costs
-                and expenses and an equal share of the arbitrator's fees and expenses.
+                and expenses and an equal share of the arbitrator&apos;s fees and expenses.
               </p>
             </FadeIn>
           </div>

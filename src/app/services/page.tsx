@@ -7,7 +7,6 @@ import {
   Users,
   CheckCircle,
   Calendar,
-  Headphones,
   Zap,
   Clock,
   BarChart3,
@@ -118,7 +117,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"

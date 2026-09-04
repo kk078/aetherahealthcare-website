@@ -6,6 +6,8 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import PayerManualFinder from '@/components/ui/PayerManualFinder';
 import { getPayerResources } from '@/lib/payerResources';
 
+import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
+
 export const metadata = {
   title: { absolute: 'Payer Provider Manual & Policy Finder | Aethera Healthcare Solutions' },
   description:
@@ -15,7 +17,7 @@ export const metadata = {
 export default function PayerManualFinderPage() {
   const count = getPayerResources().length;
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       <RcmHeroBand
@@ -46,13 +48,10 @@ export default function PayerManualFinderPage() {
             </p>
           </div>
 
-          <div className="mt-10 bg-navy rounded-2xl p-6 md:p-8 text-white text-center">
-            <p className="font-jakarta text-xl font-bold mb-2">We already know your payers’ rules.</p>
-            <p className="text-cream/80 text-sm mb-5 max-w-2xl mx-auto">Aethera works 900+ payers every day — manuals, policies, credentialing, and appeals. Let us handle the payer maze for your practice.</p>
-            <Link prefetch={false} href="/free-assessment" className="inline-block bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">
-              Get a Free Assessment
-            </Link>
-          </div>
+          <ToolConversionBridge
+            toolName="Payer Manual"
+            contextText="Tired of navigating complicated payer portals and contradictory policies? Aethera manages credentialing and billing across 900+ payers."
+          />
         </div>
       </section>
 

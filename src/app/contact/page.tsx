@@ -14,7 +14,7 @@ export const metadata = {
 export default function Contact() {
 
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"
@@ -163,8 +163,8 @@ export default function Contact() {
 
             <FadeIn delay={0.3}>
               <div className="bg-cream rounded-xl p-6">
-                <h3 className="text-lg font-bold text-navy mb-2">What's the best way to reach you?</h3>
-                <p className="text-gray">Call us at +1 (813) 519-4640 during business hours, or email info@aetherahealthcare.com anytime. We'll get back to you within one business day.</p>
+                <h3 className="text-lg font-bold text-navy mb-2">What&apos;s the best way to reach you?</h3>
+                <p className="text-gray">Call us at +1 (813) 519-4640 during business hours, or email info@aetherahealthcare.com anytime. We&apos;ll get back to you within one business day.</p>
               </div>
             </FadeIn>
           </div>

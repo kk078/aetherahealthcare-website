@@ -67,7 +67,7 @@ export default function BlogIndexClient() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-navy via-navy to-teal relative overflow-hidden">
+      <section className="pt-8 pb-10 md:pt-12 md:pb-14 bg-gradient-to-br from-navy via-navy to-teal relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-mint/15 to-transparent"></div>
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-mint/10 blur-3xl"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

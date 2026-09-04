@@ -73,7 +73,7 @@ const commitments = [
 
 export default function Compliance() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"
@@ -115,7 +115,7 @@ export default function Compliance() {
                   Unwavering Commitment to Compliance
                 </h2>
                 <p className="text-gray mb-6">
-                  At Aethera Healthcare Solutions, compliance isn't just a requirement—it's the foundation of everything we do.
+                  At Aethera Healthcare Solutions, compliance isn&apos;t just a requirement—it&apos;s the foundation of everything we do.
                   We maintain the highest standards of data protection, privacy, and regulatory adherence to ensure your trust
                   and confidence in our services.
                 </p>

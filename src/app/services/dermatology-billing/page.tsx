@@ -54,7 +54,7 @@ export default function DermatologyBilling() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal relative overflow-hidden">
+      <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-gradient-to-br from-navy to-teal relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-mint/10 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
@@ -146,7 +146,7 @@ export default function DermatologyBilling() {
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
-            <FadeIn><h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Get Your Mohs Billing Right?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free dermatology billing assessment. We'll audit your Mohs coding, destruction specificity, and denial patterns.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Derm Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
+            <FadeIn><h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Get Your Mohs Billing Right?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free dermatology billing assessment. We&apos;ll audit your Mohs coding, destruction specificity, and denial patterns.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Derm Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
           </div>
         </div>
       </section>

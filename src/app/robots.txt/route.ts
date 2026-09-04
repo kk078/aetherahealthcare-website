@@ -1,5 +1,3 @@
-import { MetadataRoute } from 'next';
-
 // Make this route static for export
 export const dynamic = 'force-static';
 

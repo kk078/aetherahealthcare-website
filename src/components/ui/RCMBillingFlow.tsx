@@ -3,20 +3,19 @@
 /**
  * RCMBillingFlow
  * --------------
- * A literal, looping 2D animation of the U.S. medical-billing revenue cycle —
+ * A literal, interactive 2D animation of the U.S. medical-billing revenue cycle —
  * the real workflow Aethera runs for clients:
  *
  *   Encounter → Coding (ICD-10 / CPT) → Scrub → Submit → Payer
  *      → Denied (CARC 16) → Worked & appealed → PAID
  *
- * A single claim card travels the pipeline and transforms at each stage; code
- * chips assemble during coding; the claim gets denied at the payer, drops into
- * the "denials worked" tray, is appealed, and returns as PAID while a lifetime
- * "$ recovered" counter ticks up. Pure SVG + rAF (no WebGL). Respects
- * prefers-reduced-motion (renders a static paid state).
+ * Visitors can let it auto-loop or click/tap any station to pause and inspect
+ * Aethera's real-world SLA, technology, and clean-claim guarantee.
+ * Respects prefers-reduced-motion.
  */
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
+import { Play, Pause, CheckCircle2 } from 'lucide-react';
 
 const DURATION = 15000; // ms per loop
 const FONT = "var(--font-inter), ui-sans-serif, system-ui, sans-serif";
@@ -79,39 +78,87 @@ const CODE_CHIPS = [
   { t: 'CPT  93000', c: TEAL },
 ];
 
-const STATIONS = [
-  { x: 120, label: 'Encounter' },
-  { x: 240, label: 'Coding' },
-  { x: 380, label: 'Submit' },
-  { x: 490, label: 'Payer' },
-  { x: 560, label: 'Paid' },
+interface StationDetail {
+  id: string;
+  x: number;
+  label: string;
+  targetP: number;
+  badge: string;
+  sla: string;
+  desc: string;
+}
+
+const STATIONS: StationDetail[] = [
+  { id: 'encounter', x: 120, label: 'Encounter', targetP: 0.05, badge: 'Intake', sla: 'Real-time', desc: 'Eligibility & benefits verified before the encounter across 900+ payers.' },
+  { id: 'coding', x: 240, label: 'Coding', targetP: 0.22, badge: 'AAPC Certified', sla: '<24h Turnaround', desc: 'Dual AI-assisted & certified coder validation for 98%+ clean claim rate.' },
+  { id: 'submit', x: 380, label: 'Submit', targetP: 0.46, badge: 'NCCI Scrubbed', sla: 'Same-day', desc: 'Clearinghouse transmission with automated rule scrubbing against LCD/NCD edits.' },
+  { id: 'payer', x: 490, label: 'Payer', targetP: 0.58, badge: 'ERA / 835', sla: 'Live Track', desc: 'Automated 835 remittance matching and immediate denial detection.' },
+  { id: 'paid', x: 560, label: 'Paid', targetP: 0.95, badge: 'Reconciled', sla: '<30 DAR', desc: 'Clean payment posted to practice bank account and reconciled with fee schedules.' },
 ];
 
-function fmt(n: number) { return '$' + Math.round(n).toLocaleString('en-US'); }
-
 export default function RCMBillingFlow({ compact = false }: { compact?: boolean }) {
-  const [now, setNow] = useState(0);
-  const [reduce, setReduce] = useState(false);
-  const startRef = useRef<number | null>(null);
-
-  useEffect(() => {
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setReduce(true);
-      return;
+  // Read prefers-reduced-motion without triggering cascading render in effect
+  const [reduce] = useState<boolean>(() => {
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     }
+    return false;
+  });
+
+  const [now, setNow] = useState(0);
+  const [activeStation, setActiveStation] = useState<StationDetail | null>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const startRef = useRef<number | null>(null);
+  const pauseOffsetRef = useRef<number>(0);
+  const lastTsRef = useRef<number>(0);
+
+  // Animation loop with throttled rendering (~33fps) to save mobile CPU/battery
+  useEffect(() => {
+    if (reduce) return;
+
     let raf = 0;
     const loop = (ts: number) => {
-      if (startRef.current === null) startRef.current = ts;
-      setNow(ts - startRef.current);
+      if (startRef.current === null) startRef.current = ts - pauseOffsetRef.current;
+
+      if (!isPaused && !activeStation) {
+        if (ts - lastTsRef.current >= 30) {
+          lastTsRef.current = ts;
+          const currentOffset = ts - startRef.current;
+          pauseOffsetRef.current = currentOffset % DURATION;
+          setNow(pauseOffsetRef.current);
+        }
+      }
       raf = requestAnimationFrame(loop);
     };
+
     raf = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(raf);
-  }, []);
+  }, [reduce, isPaused, activeStation]);
 
-  // progress
-  const p = reduce ? 0.90 : (now % DURATION) / DURATION;
+  const selectStation = useCallback((st: StationDetail) => {
+    if (activeStation?.id === st.id) {
+      setActiveStation(null);
+      setIsPaused(false);
+      startRef.current = performance.now() - (st.targetP * DURATION);
+    } else {
+      setActiveStation(st);
+      setIsPaused(true);
+      setNow(st.targetP * DURATION);
+    }
+  }, [activeStation]);
 
+  const togglePause = useCallback(() => {
+    if (isPaused || activeStation) {
+      setActiveStation(null);
+      setIsPaused(false);
+      startRef.current = performance.now() - now;
+    } else {
+      setIsPaused(true);
+    }
+  }, [isPaused, activeStation, now]);
+
+  // progress calculation
+  const p = reduce ? 0.90 : activeStation ? activeStation.targetP : (now % DURATION) / DURATION;
   const claim = interp(CLAIM, p);
   const status = statusFor(p);
   const pillW = Math.max(96, status.t.length * 7.2 + 26);
@@ -119,7 +166,7 @@ export default function RCMBillingFlow({ compact = false }: { compact?: boolean 
   // denial branch highlight (payer → tray → paid)
   const branchOn = p > 0.58 && p < 0.94;
 
-  // ambient claim ticks (independent of loop phase)
+  // ambient claim ticks
   const secs = now / 1000;
   const ambient = Array.from({ length: 6 }, (_, i) => {
     const u = (secs * 0.06 + i / 6) % 1;
@@ -129,7 +176,7 @@ export default function RCMBillingFlow({ compact = false }: { compact?: boolean 
   const showChips = p > 0.10 && p < 0.35;
 
   return (
-    <div className="absolute inset-0" aria-label="Animated medical-billing revenue cycle: coding, scrubbing, claim submission, denial, appeal, and payment.">
+    <div className="relative w-full h-full select-none" aria-label="Animated medical-billing revenue cycle: coding, scrubbing, claim submission, denial, appeal, and payment.">
       <svg viewBox="0 0 680 600" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
         <defs>
           <filter id="cardShadow" x="-30%" y="-30%" width="160%" height="160%">
@@ -163,12 +210,39 @@ export default function RCMBillingFlow({ compact = false }: { compact?: boolean 
 
         {/* ===== pipeline rail ===== */}
         <line x1={120} y1={250} x2={560} y2={250} stroke="url(#rail)" strokeWidth={3} strokeOpacity={0.55} />
-        {STATIONS.map((s) => (
-          <g key={s.label} fontFamily={FONT}>
-            <circle cx={s.x} cy={250} r={6} fill="#0a2036" stroke="#ffffff" strokeOpacity={0.5} strokeWidth={1.5} />
-            <text x={s.x} y={286} fill="#9fc3e0" fontSize={11.5} fontWeight={600} textAnchor="middle">{s.label}</text>
-          </g>
-        ))}
+        {STATIONS.map((s) => {
+          const isCurrent = activeStation?.id === s.id;
+          return (
+            <g
+              key={s.label}
+              fontFamily={FONT}
+              className="cursor-pointer"
+              onClick={() => selectStation(s)}
+            >
+              {/* hit target for touch */}
+              <circle cx={s.x} cy={250} r={18} fill="transparent" />
+              <circle
+                cx={s.x}
+                cy={250}
+                r={isCurrent ? 8 : 6}
+                fill={isCurrent ? MINT : '#0a2036'}
+                stroke="#ffffff"
+                strokeOpacity={isCurrent ? 1 : 0.5}
+                strokeWidth={isCurrent ? 2.5 : 1.5}
+              />
+              <text
+                x={s.x}
+                y={286}
+                fill={isCurrent ? '#ffffff' : '#9fc3e0'}
+                fontSize={11.5}
+                fontWeight={isCurrent ? 800 : 600}
+                textAnchor="middle"
+              >
+                {s.label}
+              </text>
+            </g>
+          );
+        })}
 
         {/* denial branch */}
         <path d="M490 258 C 470 360, 420 420, 372 452 M372 452 C 470 420, 540 360, 560 258"
@@ -190,7 +264,7 @@ export default function RCMBillingFlow({ compact = false }: { compact?: boolean 
           const oIn = smooth(appear, appear + 0.03, p);
           const oOut = 1 - smooth(0.31, 0.345, p);
           const o = clamp01(oIn) * clamp01(oOut);
-          const flyX = smooth(0.31, 0.35, p) * 150; // slide left into card as it "attaches"
+          const flyX = smooth(0.31, 0.35, p) * 150;
           const cx = claim.x + 118 - flyX + (1 - clamp01(oIn)) * 24;
           const cy = claim.y - 52 + i * 30;
           const w = chip.t.length * 6.2 + 22;
@@ -205,22 +279,67 @@ export default function RCMBillingFlow({ compact = false }: { compact?: boolean 
         {/* ===== the claim card ===== */}
         <g transform={`translate(${claim.x} ${claim.y})`} opacity={claim.o} fontFamily={FONT}>
           <rect x={-95} y={-62} width={190} height={124} rx={12} fill="#ffffff" filter="url(#cardShadow)" />
-          {/* header */}
           <text x={-80} y={-40} fill={NAVY} fontSize={12} fontWeight={800} letterSpacing="0.4">CMS-1500</text>
           <text x={80} y={-40} fill={SLATE} fontSize={11} fontWeight={600} textAnchor="end">#A-1042</text>
           <line x1={-80} y1={-31} x2={80} y2={-31} stroke="#e2e8f0" strokeWidth={1} />
-          {/* placeholder detail lines */}
           <rect x={-80} y={-22} width={110} height={6} rx={3} fill="#e8edf3" />
           <rect x={-80} y={-10} width={150} height={6} rx={3} fill="#eef2f7" />
-          {/* amount */}
           <text x={-80} y={22} fill={NAVY} fontSize={20} fontWeight={800} letterSpacing="-0.4">$420.00</text>
-          {/* status pill */}
           <g>
             <rect x={-pillW / 2} y={34} width={pillW} height={24} rx={12} fill={status.bg} />
             <text x={0} y={50} fill="#ffffff" fontSize={11.5} fontWeight={800} textAnchor="middle" letterSpacing="0.3">{status.t}</text>
           </g>
         </g>
       </svg>
+
+      {/* Interactive station callout overlay when inspected */}
+      {activeStation && (
+        <div className="absolute bottom-3 left-4 right-4 sm:left-6 sm:right-auto sm:max-w-md bg-navy/95 border border-mint/40 backdrop-blur-md rounded-xl p-3.5 shadow-2xl text-white animate-in fade-in slide-in-from-bottom-2 duration-200 z-20">
+          <div className="flex items-center justify-between gap-2 mb-1.5">
+            <span className="flex items-center gap-1.5 text-xs font-bold text-mint uppercase tracking-wider">
+              <CheckCircle2 className="h-3.5 w-3.5 text-mint" />
+              Stage {STATIONS.findIndex((s) => s.id === activeStation.id) + 1} of 5: {activeStation.label}
+            </span>
+            <span className="text-[10px] font-semibold bg-mint/20 text-mint border border-mint/30 px-2 py-0.5 rounded-full">
+              SLA: {activeStation.sla}
+            </span>
+          </div>
+          <p className="text-xs text-cream/90 leading-relaxed">{activeStation.desc}</p>
+          <div className="mt-2 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-cream/60">
+            <span>Tap another step or play to resume</span>
+            <button
+              onClick={togglePause}
+              className="text-mint font-semibold hover:underline flex items-center gap-1"
+            >
+              Resume flow &rarr;
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Play / Pause toggle control */}
+      {!reduce && (
+        <div className="absolute top-2 right-2 z-10 flex items-center gap-1.5">
+          <button
+            type="button"
+            onClick={togglePause}
+            aria-label={isPaused || activeStation ? 'Play animation' : 'Pause animation'}
+            className="flex items-center gap-1.5 bg-black/40 hover:bg-black/60 text-white/80 hover:text-white text-[11px] font-medium px-2.5 py-1 rounded-full border border-white/15 backdrop-blur-sm transition-colors"
+          >
+            {isPaused || activeStation ? (
+              <>
+                <Play className="h-3 w-3 text-mint fill-mint" />
+                <span>Play</span>
+              </>
+            ) : (
+              <>
+                <Pause className="h-3 w-3 text-white/70" />
+                <span>Pause</span>
+              </>
+            )}
+          </button>
+        </div>
+      )}
     </div>
   );
 }

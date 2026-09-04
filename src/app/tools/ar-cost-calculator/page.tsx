@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import ARCostCalculator from '@/components/ui/ARCostCalculator';
 import { ArrowLeft } from 'lucide-react';
+import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
   title: { absolute: 'A/R Days Cost Calculator — What Slow Accounts Receivable Costs You | Aethera Healthcare Solutions' },
@@ -13,10 +14,10 @@ export const metadata = {
 
 export default function ARCostCalculatorPage() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <section className="pt-24 pb-12 md:pt-28 md:pb-14 bg-gradient-to-br from-navy to-teal">
+      <section className="pt-8 pb-10 md:pt-12 md:pb-12 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link prefetch={false} href="/tools" className="inline-flex items-center text-cream/80 hover:text-white text-sm mb-5">
             <ArrowLeft className="h-4 w-4 mr-1.5" /> All tools
@@ -36,6 +37,10 @@ export default function ARCostCalculatorPage() {
       <section className="py-12 md:py-16 bg-cream flex-1">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ARCostCalculator />
+          <ToolConversionBridge
+            toolName="A/R Days Cost"
+            contextText="Want to compress your practice's Days in A/R down to under 30 days? Aethera unlocks cash trapped in aging balances."
+          />
         </div>
       </section>
 

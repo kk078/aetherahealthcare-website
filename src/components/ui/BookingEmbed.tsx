@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 import Link from 'next/link';
-import { Calendar, CalendarClock, CheckCircle2, Loader2, Phone, Video, ArrowUpRight } from 'lucide-react';
+import { Calendar, CalendarClock, CheckCircle2, Loader2, Phone, Video, ArrowUpRight, Globe } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
 
@@ -25,12 +25,28 @@ export default function BookingEmbed() {
  * live availability, Google Meet link, and invites are handled by the calendar.
  */
 function BookCard({ url }: { url: string }) {
+  const [tz] = useState<string>(() => {
+    if (typeof Intl !== 'undefined' && Intl.DateTimeFormat) {
+      try {
+        return Intl.DateTimeFormat().resolvedOptions().timeZone.replace(/_/g, ' ');
+      } catch {
+        return '';
+      }
+    }
+    return '';
+  });
+
   return (
     <div className="rounded-2xl border border-gray/15 bg-white shadow-sm p-7 md:p-9 text-center">
       <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-teal/10 text-teal mb-4">
         <CalendarClock className="h-7 w-7" />
       </span>
       <h3 className="text-xl md:text-2xl font-bold text-navy mb-2">Pick a time on our live calendar</h3>
+      {tz && (
+        <p className="inline-flex items-center gap-1.5 text-xs text-teal font-medium bg-teal/5 border border-teal/15 px-3 py-1 rounded-full mb-3">
+          <Globe className="h-3.5 w-3.5" /> Local Timezone: {tz}
+        </p>
+      )}
       <p className="text-gray text-sm max-w-md mx-auto mb-6">
         Choose a slot that works for you. You&rsquo;ll get a confirmation with a{' '}
         <span className="inline-flex items-center gap-1 font-semibold text-navy"><Video className="h-3.5 w-3.5 text-teal" /> Google Meet</span>{' '}

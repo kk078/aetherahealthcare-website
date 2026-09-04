@@ -9,8 +9,7 @@ import {
   FileText,
   Shield,
   Zap,
-  Users,
-  Clock
+  Users
 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -171,7 +170,7 @@ export default function FaqClient() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"
@@ -241,10 +240,10 @@ export default function FaqClient() {
           <div className="text-center max-w-3xl mx-auto">
             <FadeIn>
               <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
-                We're Here to Help
+                We&apos;re Here to Help
               </h2>
               <p className="text-gray text-lg mb-8">
-                Browse our comprehensive FAQ to find answers to your questions. If you don't see what you're looking for,
+                Browse our comprehensive FAQ to find answers to your questions. If you don&apos;t see what you&apos;re looking for,
                 our team is always available to provide personalized assistance.
               </p>
               <div className="flex flex-wrap justify-center gap-3">

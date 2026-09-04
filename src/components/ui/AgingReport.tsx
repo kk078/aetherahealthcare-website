@@ -1,6 +1,7 @@
 'use client';
 
 import type { AgingMetrics } from '@/lib/agingAnalysis';
+import AgingVisualizer from '@/components/ui/AgingVisualizer';
 import {
   Activity, Layers, ShieldAlert, Building2, Target, Wrench, AlertTriangle,
 } from 'lucide-react';
@@ -69,6 +70,9 @@ export default function AgingReport({ m }: { m: AgingMetrics }) {
 
       {/* 2. Aging Analysis */}
       <SectionTitle icon={<Layers className="h-4 w-4" />} n={2} title="Aging Analysis by Bucket" />
+      <div className="mb-4">
+        <AgingVisualizer buckets={m.buckets} total={m.totalAR} compact />
+      </div>
       <div className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>

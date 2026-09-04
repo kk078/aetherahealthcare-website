@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { CheckCircle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
@@ -151,7 +150,7 @@ const faqs = [
 
 export default function Pricing() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"

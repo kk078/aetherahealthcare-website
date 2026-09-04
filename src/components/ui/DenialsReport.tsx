@@ -2,7 +2,7 @@
 
 import { useMemo, useState, type FormEvent } from 'react';
 import Link from 'next/link';
-import { Lock, Mail, CheckCircle2, TrendingDown, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Lock, CheckCircle2, TrendingDown, ArrowRight, ShieldCheck } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
 import { SPECIALTY_BENCHMARKS, INDUSTRY_HEADLINES, getBenchmark } from '@/lib/denialBenchmarks';
 

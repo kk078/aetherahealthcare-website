@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import { TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+import { TrendingUp, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
-import SectionHeader from '@/components/ui/SectionHeader';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
@@ -112,7 +111,7 @@ const caseStudies = [
 
 export default function CaseStudies() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       <RcmHeroBand
@@ -180,7 +179,7 @@ export default function CaseStudies() {
               Ready to Be Our Next Success Story?
             </h2>
             <p className="text-cream text-lg max-w-2xl mx-auto mb-8">
-              Start with a free revenue cycle assessment. We'll show you exactly what your practice could be collecting.
+              Start with a free revenue cycle assessment. We&apos;ll show you exactly what your practice could be collecting.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">

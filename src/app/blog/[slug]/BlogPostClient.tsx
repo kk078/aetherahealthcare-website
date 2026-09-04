@@ -37,7 +37,7 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }} />
       <Navbar />
 
-      <section className="pt-24 pb-8 md:pt-32 md:pb-12 bg-gradient-to-br from-navy to-teal">
+      <section className="pt-8 pb-8 md:pt-12 md:pb-12 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link prefetch={false} href="/blog" className="text-cream hover:text-white inline-flex items-center">
             <ArrowLeft className="h-4 w-4 mr-2" /> Back to The Aethera Pulse

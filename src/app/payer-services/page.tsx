@@ -177,9 +177,9 @@ export default function PayerServices() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
             <FadeIn>
-              <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Let's Talk About Your Plan Operations</h2>
+              <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Let&apos;s Talk About Your Plan Operations</h2>
               <p className="text-cream max-w-xl mx-auto mb-8">
-                Whether you need one function or a full back-office partner, we'll scope a payer-services engagement around your accuracy, recovery, and compliance goals.
+                Whether you need one function or a full back-office partner, we&apos;ll scope a payer-services engagement around your accuracy, recovery, and compliance goals.
               </p>
               <Link prefetch={false} href="/contact" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
                 Schedule a Capabilities Briefing <ArrowRight className="h-4 w-4 ml-2" />

@@ -5,6 +5,8 @@ import Footer from '@/components/layout/Footer';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import RvuCalculator from '@/components/ui/RvuCalculator';
 
+import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
+
 export const metadata = {
   title: { absolute: 'RVU Payment Calculator — Medicare Fee Schedule Estimate | Aethera Healthcare Solutions' },
   description:
@@ -13,7 +15,7 @@ export const metadata = {
 
 export default function RvuCalculatorPage() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       <RcmHeroBand
@@ -42,13 +44,10 @@ export default function RvuCalculatorPage() {
             </p>
           </div>
 
-          <div className="mt-10 bg-navy rounded-2xl p-6 md:p-8 text-white text-center">
-            <p className="font-jakarta text-xl font-bold mb-2">Getting paid the RVUs you earn?</p>
-            <p className="text-cream/80 text-sm mb-5 max-w-2xl mx-auto">Aethera’s coding team makes sure every service is captured and coded to the correct RVU — no undercoding, no leakage.</p>
-            <Link prefetch={false} href="/free-assessment" className="inline-block bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">
-              Get a Free Assessment
-            </Link>
-          </div>
+          <ToolConversionBridge
+            toolName="RVU Payment"
+            contextText="Are you getting paid the full RVU value of every patient encounter? Aethera eliminates downcoding and documentation gaps."
+          />
         </div>
       </section>
 

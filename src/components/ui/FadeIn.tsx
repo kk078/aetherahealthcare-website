@@ -1,18 +1,19 @@
 'use client';
 
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, type HTMLAttributes } from 'react';
+
+interface FadeInProps extends HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+}
 
 export default function FadeIn({
   children,
   className,
   delay = 0,
   ...props
-}: {
-  children: React.ReactNode;
-  className?: string;
-  delay?: number;
-  [key: string]: any;
-}) {
+}: FadeInProps) {
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

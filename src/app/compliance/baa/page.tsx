@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FileText, Shield, CheckCircle, Users } from 'lucide-react';
+import { FileText, Shield, CheckCircle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
@@ -48,11 +48,11 @@ export const metadata = {
 
 export default function BusinessAssociateAgreement() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
+      <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
@@ -90,7 +90,7 @@ export default function BusinessAssociateAgreement() {
                 </p>
                 <p className="text-gray">
                   Aethera Healthcare Solutions executes BAAs with all covered entity clients before accessing any PHI,
-                  demonstrating our commitment to protecting your patients' sensitive health information.
+                  demonstrating our commitment to protecting your patients&apos; sensitive health information.
                 </p>
               </FadeIn>
             </div>
@@ -369,7 +369,7 @@ export default function BusinessAssociateAgreement() {
 
             <FadeIn delay={0.2}>
               <div className="bg-white rounded-xl p-6 border border-gray/10">
-                <h3 className="text-lg font-bold text-navy mb-2">What happens if there's a breach of PHI?</h3>
+                <h3 className="text-lg font-bold text-navy mb-2">What happens if there&apos;s a breach of PHI?</h3>
                 <p className="text-gray">
                   We maintain a comprehensive incident response plan that includes immediate breach identification,
                   prompt notification to affected parties and the covered entity, and full cooperation with any

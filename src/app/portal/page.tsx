@@ -234,7 +234,7 @@ export default function Portal() {
               <div className="bg-gradient-to-br from-navy to-teal rounded-2xl p-8 text-white text-center">
                 <Users className="h-12 w-12 text-mint mx-auto mb-4" />
                 <h3 className="text-2xl font-bold font-jakarta mb-3">Ready to See It Live?</h3>
-                <p className="text-cream mb-6">We'll walk you through a live demo of the portal using sample data from your specialty.</p>
+                <p className="text-cream mb-6">We&apos;ll walk you through a live demo of the portal using sample data from your specialty.</p>
                 <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300">
                   Request Your Demo
                   <ArrowRight className="h-4 w-4 ml-2" />

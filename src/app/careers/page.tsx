@@ -86,7 +86,7 @@ export const metadata = {
 
 export default function Careers() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"
@@ -132,9 +132,9 @@ export default function Careers() {
                   can do what they do best—save lives and improve health outcomes.
                 </p>
                 <p className="text-gray mb-6">
-                  We're looking for talented, dedicated professionals who share our commitment to excellence and our passion
+                  We&apos;re looking for talented, dedicated professionals who share our commitment to excellence and our passion
                   for making a difference in healthcare. If you thrive in a collaborative, innovative environment and want
-                  to be part of a growing company that's transforming revenue cycle management, we'd love to hear from you.
+                  to be part of a growing company that&apos;s transforming revenue cycle management, we&apos;d love to hear from you.
                 </p>
                 <p className="text-gray">
                   Our remote-first culture allows talented professionals from across the country to contribute to our mission
@@ -249,7 +249,7 @@ export default function Careers() {
                   Professional Development
                 </h2>
                 <p className="text-gray mb-6">
-                  We invest in our team members' growth through comprehensive professional development programs:
+                  We invest in our team members&apos; growth through comprehensive professional development programs:
                 </p>
                 <ul className="space-y-4 mb-6">
                   <li className="flex items-start">
@@ -333,7 +333,7 @@ export default function Careers() {
 
           <div className="text-center mt-12">
             <p className="text-gray mb-6">
-              Don't see a position that matches your skills? We're always interested in hearing from talented professionals.
+              Don&apos;t see a position that matches your skills? We&apos;re always interested in hearing from talented professionals.
             </p>
             <Link prefetch={false}
               href="mailto:careers@aetherahealthcare.com"

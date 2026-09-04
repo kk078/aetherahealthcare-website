@@ -68,7 +68,7 @@ export default function Navbar() {
       } transition-all duration-300 ${
         isScrolled
           ? 'glass-nav border-b border-[rgba(0,0,0,0.1)] shadow-[0_1px_0_rgba(0,0,0,0.08)]'
-          : 'bg-white/95 border-b border-[rgba(0,0,0,0.06)]'
+          : 'bg-white border-b border-[rgba(0,0,0,0.06)]'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

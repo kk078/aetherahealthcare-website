@@ -51,7 +51,7 @@ const EHR_LOGOS_AVAILABLE = new Set<string>([]);
 
 export default function Integrations() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       <RcmHeroBand
@@ -141,7 +141,7 @@ export default function Integrations() {
                 <Shield className="h-7 w-7 text-teal mr-3" />
                 <h2 className="text-3xl font-bold text-navy font-jakarta">Data Security Throughout</h2>
               </div>
-              <p className="text-gray mb-6">Every data transfer between your EHR and Aethera's systems is fully HIPAA-compliant, encrypted end-to-end, and logged for audit purposes.</p>
+              <p className="text-gray mb-6">Every data transfer between your EHR and Aethera&apos;s systems is fully HIPAA-compliant, encrypted end-to-end, and logged for audit purposes.</p>
               <div className="space-y-3">
                 {[
                   'TLS 1.3 encryption on all data in transit',
@@ -160,7 +160,7 @@ export default function Integrations() {
             </FadeIn>
             <FadeIn delay={0.2}>
               <div className="bg-cream rounded-2xl p-8 border border-gray/10">
-                <h3 className="text-xl font-bold text-navy font-jakarta mb-4">Don't See Your System?</h3>
+                <h3 className="text-xl font-bold text-navy font-jakarta mb-4">Don&apos;t See Your System?</h3>
                 <p className="text-gray mb-5 text-sm">
                   We support custom integrations via HL7 2.x, HL7 FHIR, CCD, CSV upload, and secure file transfer. If you use it, we can almost certainly connect to it. Contact us for a custom integration assessment.
                 </p>
@@ -182,7 +182,7 @@ export default function Integrations() {
                 Start Your Integration Assessment Today
               </h2>
               <p className="text-cream text-lg max-w-xl mx-auto mb-8">
-                Tell us your EHR and we'll outline exactly how the integration works, what it requires, and how long it takes.
+                Tell us your EHR and we&apos;ll outline exactly how the integration works, what it requires, and how long it takes.
               </p>
               <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
                 Get Started Free <ArrowRight className="h-4 w-4 ml-2" />

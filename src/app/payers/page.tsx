@@ -187,7 +187,7 @@ export default function Payers() {
                 <Shield className="h-10 w-10 text-mint mb-4" />
                 <h3 className="text-xl font-bold font-jakarta mb-4">Payer Contract Expertise</h3>
                 <p className="text-cream/80 mb-5 text-sm">
-                  We don't just submit to your payers — we know them. Our team maintains active knowledge of each payer's specific rules, fee schedules, timely filing deadlines, and prior auth requirements.
+                  We don&apos;t just submit to your payers — we know them. Our team maintains active knowledge of each payer&apos;s specific rules, fee schedules, timely filing deadlines, and prior auth requirements.
                 </p>
                 <div className="space-y-3">
                   {[
@@ -213,8 +213,8 @@ export default function Payers() {
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
-            <h3 className="text-xl font-bold text-navy font-jakarta mb-3">Don't See Your Payer?</h3>
-            <p className="text-gray mb-6">We likely work with them. With 900+ payers in our network, if you don't see a specific plan listed, contact us for a payer-specific confirmation.</p>
+            <h3 className="text-xl font-bold text-navy font-jakarta mb-3">Don&apos;t See Your Payer?</h3>
+            <p className="text-gray mb-6">We likely work with them. With 900+ payers in our network, if you don&apos;t see a specific plan listed, contact us for a payer-specific confirmation.</p>
             <Link prefetch={false} href="/contact" className="inline-flex items-center bg-teal hover:bg-navy text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
               Ask About Your Payer <ArrowRight className="h-4 w-4 ml-2" />
             </Link>

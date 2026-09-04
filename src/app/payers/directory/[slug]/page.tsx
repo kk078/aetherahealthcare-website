@@ -50,7 +50,7 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
   };
 
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 

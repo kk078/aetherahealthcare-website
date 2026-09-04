@@ -5,6 +5,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import DenialCodeLookup from '@/components/ui/DenialCodeLookup';
 import { getAllDenialCodes, getReferenceCodes } from '@/lib/denialCodes';
 import { AlertTriangle, ArrowLeft } from 'lucide-react';
+import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
   title: { absolute: 'Denial Code Lookup — Full CARC & RARC Reason Code List | Aethera Healthcare Solutions' },
@@ -31,10 +32,10 @@ export default function DenialCodeLookupPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <section className="pt-24 pb-12 md:pt-28 md:pb-14 bg-gradient-to-br from-navy to-teal">
+      <section className="pt-8 pb-10 md:pt-12 md:pb-12 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link prefetch={false} href="/tools" className="inline-flex items-center text-cream/80 hover:text-white text-sm mb-5">
             <ArrowLeft className="h-4 w-4 mr-1.5" /> All tools
@@ -62,6 +63,11 @@ export default function DenialCodeLookupPage() {
           </div>
 
           <DenialCodeLookup codes={codes} reference={reference} />
+          
+          <ToolConversionBridge
+            toolName="Denial Code"
+            contextText="Tired of researching CARC/RARC codes one-by-one? Let Aethera audit 50 of your recent denials and build automated root-cause appeal playbooks."
+          />
         </div>
       </section>
 

@@ -11,6 +11,7 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import AgingReport from '@/components/ui/AgingReport';
+import AgingVisualizer, { type AgingBuckets } from '@/components/ui/AgingVisualizer';
 import { submitToWorker } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
 import {
@@ -44,10 +45,37 @@ interface Profile {
   phone: string; email: string; challenge: string;
 }
 
+interface PdfTextItem {
+  str: string;
+  transform: number[];
+}
+
+interface PdfJsNamespace {
+  GlobalWorkerOptions: { workerSrc: string };
+  getDocument: (source: { data: ArrayBuffer }) => {
+    promise: Promise<{
+      numPages: number;
+      getPage: (pg: number) => Promise<{
+        getTextContent: () => Promise<{ items: PdfTextItem[] }>;
+      }>;
+    }>;
+  };
+}
+
+interface XlsxNamespace {
+  read: (data: ArrayBuffer, opts: { type: string }) => {
+    SheetNames: string[];
+    Sheets: Record<string, unknown>;
+  };
+  utils: {
+    sheet_to_json: (sheet: unknown, opts: Record<string, unknown>) => string[][];
+  };
+}
+
 // Best-effort PDF -> rows (text reconstruction). Returns [] on any failure.
 async function parsePdfToRows(file: File): Promise<string[][]> {
   try {
-    const pdfjs: any = await import('pdfjs-dist');
+    const pdfjs = (await import('pdfjs-dist')) as unknown as PdfJsNamespace;
     try {
       pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url).toString();
     } catch { /* fall through; pdfjs may use a fake worker */ }
@@ -58,7 +86,7 @@ async function parsePdfToRows(file: File): Promise<string[][]> {
       const page = await doc.getPage(pg);
       const content = await page.getTextContent();
       const byLine = new Map<number, { x: number; s: string }[]>();
-      for (const it of content.items as any[]) {
+      for (const it of content.items) {
         const y = Math.round(it.transform[5]);
         const x = it.transform[4];
         if (!byLine.has(y)) byLine.set(y, []);
@@ -90,7 +118,7 @@ export default function FreeAssessmentClient() {
     providerCount: '', claimVolume: '', billingSituation: '', ehr: '',
     phone: '', email: '', challenge: '',
   });
-  const [b, setB] = useState<Record<string, number>>({ b30: 120000, b60: 80000, b90: 50000, b120: 35000, bOv: 45000 });
+  const [b, setB] = useState<AgingBuckets>({ b30: 120000, b60: 80000, b90: 50000, b120: 35000, bOv: 45000 });
   const [agg, setAgg] = useState<ParsedAggregates | null>(null);
   const [fileName, setFileName] = useState('');
   const [uploadState, setUploadState] = useState<'idle' | 'parsing' | 'done' | 'error'>('idle');
@@ -106,8 +134,15 @@ export default function FreeAssessmentClient() {
 
   const onP = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setP((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  const setBucket = (k: string, v: number) => setB((prev) => ({ ...prev, [k]: v }));
-  const loadExample = () => { clearUpload(); setB({ b30: 150000, b60: 95000, b90: 65000, b120: 45000, bOv: 55000 }); };
+  const setBucket = (k: keyof AgingBuckets, v: number) => setB((prev) => ({ ...prev, [k]: v }));
+  const loadSoloPreset = () => {
+    clearUpload();
+    setB({ b30: 160000, b60: 90000, b90: 45000, b120: 30000, bOv: 25000 });
+  };
+  const loadGroupPreset = () => {
+    clearUpload();
+    setB({ b30: 520000, b60: 290000, b90: 170000, b120: 110000, bOv: 110000 });
+  };
 
   function clearUpload() {
     setAgg(null); setFileName(''); setUploadState('idle'); setUploadErr('');
@@ -120,10 +155,10 @@ export default function FreeAssessmentClient() {
       const ext = (file.name.toLowerCase().split('.').pop() || '');
       let rows: string[][] = [];
       if (ext === 'xlsx' || ext === 'xls') {
-        const XLSX: any = await import('xlsx');
+        const XLSX = (await import('xlsx')) as unknown as XlsxNamespace;
         const wb = XLSX.read(await file.arrayBuffer(), { type: 'array' });
         const ws = wb.Sheets[wb.SheetNames[0]];
-        rows = XLSX.utils.sheet_to_json(ws, { header: 1, raw: false, defval: '' }) as string[][];
+        rows = XLSX.utils.sheet_to_json(ws, { header: 1, raw: false, defval: '' });
       } else if (ext === 'pdf') {
         rows = await parsePdfToRows(file);
       } else {
@@ -241,7 +276,7 @@ export default function FreeAssessmentClient() {
       <div className="no-print"><Navbar /></div>
 
       {/* Hero */}
-      <section className="no-print pt-24 pb-12 md:pt-32 md:pb-16 bg-gradient-to-br from-navy to-teal relative overflow-hidden">
+      <section className="no-print pt-8 pb-10 md:pt-12 md:pb-14 bg-gradient-to-br from-navy to-teal relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-mint/10 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <FadeIn>
@@ -389,9 +424,19 @@ export default function FreeAssessmentClient() {
 
                 {/* manual sliders (also reflect uploaded values) */}
                 <div className="mt-5 pt-5 border-t border-gray/10">
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                     <p className="text-sm font-semibold text-navy">{agg ? 'Parsed aging (editable)' : 'Or enter your A/R aging'}</p>
-                    {!agg && <button type="button" onClick={loadExample} className="text-xs font-semibold text-teal hover:text-navy">Load example</button>}
+                    {!agg && (
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <span className="text-xs text-gray">Sample data:</span>
+                        <button type="button" onClick={loadSoloPreset} className="text-xs font-semibold bg-teal/10 hover:bg-teal hover:text-white text-teal px-2.5 py-1 rounded transition-colors">
+                          Solo ($350k)
+                        </button>
+                        <button type="button" onClick={loadGroupPreset} className="text-xs font-semibold bg-teal/10 hover:bg-teal hover:text-white text-teal px-2.5 py-1 rounded transition-colors">
+                          Group ($1.2M)
+                        </button>
+                      </div>
+                    )}
                   </div>
                   <div className="space-y-4">
                     {BUCKETS.map((bk) => (
@@ -405,6 +450,12 @@ export default function FreeAssessmentClient() {
                           className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-cream accent-teal" />
                       </div>
                     ))}
+                  </div>
+
+                  {/* Real-time Aging Distribution Visualizer */}
+                  <div className="mt-6 pt-5 border-t border-gray/10">
+                    <p className="text-xs font-bold text-navy uppercase tracking-wider mb-2.5">Aging Distribution &amp; MGMA Benchmark</p>
+                    <AgingVisualizer buckets={b} total={r.total} />
                   </div>
                 </div>
 

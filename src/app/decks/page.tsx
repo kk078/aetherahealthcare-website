@@ -34,7 +34,7 @@ const decks = [
 
 export default function Decks() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       {/* Hero */}

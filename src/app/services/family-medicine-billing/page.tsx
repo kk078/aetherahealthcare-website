@@ -54,7 +54,7 @@ export default function FamilyMedicineBilling() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal relative overflow-hidden">
+      <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-gradient-to-br from-navy to-teal relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-mint/10 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
@@ -93,7 +93,7 @@ export default function FamilyMedicineBilling() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <FadeIn>
               <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">How Aethera Handles Family Medicine Billing</h2>
-              <p className="text-gray mb-5">Family medicine is high-volume, high-complexity billing. You see hundreds of patients a week across preventive care, chronic disease management, acute visits, and care coordination — each with its own coding rules. Generalist billing teams handle the volume but miss the nuance. We don't.</p>
+              <p className="text-gray mb-5">Family medicine is high-volume, high-complexity billing. You see hundreds of patients a week across preventive care, chronic disease management, acute visits, and care coordination — each with its own coding rules. Generalist billing teams handle the volume but miss the nuance. We don&apos;t.</p>
               <p className="text-gray">Our family medicine billing specialists run continuous E&M distribution analysis, track CCM eligibility across your panel, and maintain Medicare preventive coding accuracy for your entire Medicare population. On average, family medicine practices see an 18% revenue increase in year one.</p>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -146,7 +146,7 @@ export default function FamilyMedicineBilling() {
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
-            <FadeIn><h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to See What Your Practice Is Actually Worth?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free family medicine billing assessment. We'll run an E&M distribution analysis and show you what's being left on the table.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Family Medicine Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
+            <FadeIn><h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to See What Your Practice Is Actually Worth?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free family medicine billing assessment. We&apos;ll run an E&M distribution analysis and show you what&apos;s being left on the table.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Family Medicine Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
           </div>
         </div>
       </section>

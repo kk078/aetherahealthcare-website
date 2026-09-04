@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, type FieldValues } from 'react-hook-form';
 import { CheckCircle, AlertCircle, Loader2, Calendar, MessageSquare } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -50,7 +50,7 @@ export default function ContactForm() {
     if (!result.success) throw new Error(result.message || 'Submission failed');
   }
 
-  const onMessageSubmit = async (data: any) => {
+  const onMessageSubmit = async (data: FieldValues) => {
     // Honeypot: silently succeed if bot filled the hidden field
     if (data.hp_field) { setStatus('success'); messageForm.reset(); return; }
     setStatus('submitting');
@@ -61,13 +61,14 @@ export default function ContactForm() {
       trackConversion('contact');
       setStatus('success');
       messageForm.reset();
-    } catch (e: any) {
+    } catch (e: unknown) {
       setStatus('error');
-      setErrorMsg(e.message || 'Something went wrong. Please try again or call us directly.');
+      const err = e instanceof Error ? e.message : 'Something went wrong. Please try again or call us directly.';
+      setErrorMsg(err);
     }
   };
 
-  const onScheduleSubmit = async (data: any) => {
+  const onScheduleSubmit = async (data: FieldValues) => {
     // Honeypot: silently succeed if bot filled the hidden field
     if (data.hp_field) { setStatus('success'); scheduleForm.reset(); return; }
     setStatus('submitting');
@@ -78,9 +79,10 @@ export default function ContactForm() {
       trackConversion('contact');
       setStatus('success');
       scheduleForm.reset();
-    } catch (e: any) {
+    } catch (e: unknown) {
       setStatus('error');
-      setErrorMsg(e.message || 'Something went wrong. Please try again or call us directly.');
+      const err = e instanceof Error ? e.message : 'Something went wrong. Please try again or call us directly.';
+      setErrorMsg(err);
     }
   };
 

@@ -106,7 +106,7 @@ export const metadata = {
 
 export default function Process() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"

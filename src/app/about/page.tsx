@@ -25,7 +25,7 @@ const principles = [
 
 export default function About() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"

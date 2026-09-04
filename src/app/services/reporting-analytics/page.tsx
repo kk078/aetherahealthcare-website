@@ -84,7 +84,7 @@ export const metadata = {
 
 export default function ReportingAnalytics() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"
@@ -117,7 +117,7 @@ export default function ReportingAnalytics() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
+      <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
@@ -144,7 +144,7 @@ export default function ReportingAnalytics() {
                   Data-Driven Insights for Practice Success
                 </h2>
                 <p className="text-gray mb-6">
-                  Our comprehensive reporting and analytics services provide real-time visibility into your practice's financial performance with actionable insights and industry benchmarking.
+                  Our comprehensive reporting and analytics services provide real-time visibility into your practice&apos;s financial performance with actionable insights and industry benchmarking.
                 </p>
                 <p className="text-gray mb-6">
                   We deliver daily operational reports, monthly performance dashboards, quarterly business reviews, and custom analytics to support strategic decision-making and performance optimization.

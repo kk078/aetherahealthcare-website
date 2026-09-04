@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
-import SectionHeader from '@/components/ui/SectionHeader';
 import SpecialtyBadge from '@/components/ui/SpecialtyBadge';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
@@ -161,7 +160,7 @@ export const metadata = {
 
 export default function Specialties() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"

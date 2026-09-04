@@ -16,10 +16,10 @@ export default function PayerDirectoryIndex() {
   const types = payerTypes();
 
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <section className="pt-24 pb-14 md:pt-28 md:pb-16 bg-gradient-to-br from-navy to-teal">
+      <section className="pt-8 pb-10 md:pt-12 md:pb-14 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-5">Payer Directory</h1>

@@ -5,6 +5,8 @@ import Footer from '@/components/layout/Footer';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import DenialCostCalculator from '@/components/ui/DenialCostCalculator';
 
+import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
+
 export const metadata = {
   title: { absolute: 'Denial Cost Calculator — Revenue Lost & Rework Cost | Aethera Healthcare Solutions' },
   description:
@@ -13,7 +15,7 @@ export const metadata = {
 
 export default function DenialCostPage() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       <RcmHeroBand
@@ -43,13 +45,10 @@ export default function DenialCostPage() {
             </p>
           </div>
 
-          <div className="mt-10 bg-navy rounded-2xl p-6 md:p-8 text-white text-center">
-            <p className="font-jakarta text-xl font-bold mb-2">Most of that is recoverable.</p>
-            <p className="text-cream/80 text-sm mb-5 max-w-2xl mx-auto">Aethera lowers denial rates and works every denial to resolution. See how much of this number we could win back for your practice.</p>
-            <Link prefetch={false} href="/free-assessment" className="inline-block bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">
-              Get a Free Assessment
-            </Link>
-          </div>
+          <ToolConversionBridge
+            toolName="Denial Cost"
+            contextText="Shocked by your annual denial rework cost? Aethera reduces denial rates to under 5% and appeals every valid denial within 48 hours."
+          />
         </div>
       </section>
 

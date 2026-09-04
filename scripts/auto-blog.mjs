@@ -27,7 +27,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const POSTS_FILE = resolve(__dirname, '..', 'src', 'lib', 'blogPosts.ts');
 const QUEUE_FILE = resolve(__dirname, 'keyword-queue.json');
 const START = 'export const POSTS: BlogPost[] = ';
-const FOOTER_MARK = ';\n\nexport const CATEGORIES';
 
 // Default internal links appended to every post as a safety net (SEO: never publish an orphan).
 const DEFAULT_LINKS = [
@@ -42,17 +41,6 @@ const CATEGORIES = [
   'Regulatory & Policy', 'Medicare & Medicaid', 'Value-Based Care', 'Clinical Documentation',
   'Technology & AI', 'Specialty Billing',
 ];
-const IMG = {
-  'Denials & Appeals': '1519494026892-80bb41fb7d0a', 'Revenue Cycle': '1586495777744-4413f21062fa',
-  'Practice Management': '1576091160550-2173dba999ef', 'Telehealth': '1581091226825-a6a2a5aee158',
-  'Patient Access & Collections': '1554224155-6726b3ff858f', 'Credentialing & Enrollment': '1517242039478-88104f383fb5',
-  'Compliance & Privacy': '1563986768609-322da13575f3', 'Medical Coding': '1454165804606-c3d57bc86b40',
-  'Prior Authorization': '1576091160399-112ba8d25d1d', 'Data & Analytics': '1551288049-bebda4e38f71',
-  'Payer Contracting': '1450101499163-c8848c66ca85', 'Regulatory & Policy': '1450101499163-c8848c66ca85',
-  'Medicare & Medicaid': '1576091160550-2173dba999ef', 'Value-Based Care': '1551288049-bebda4e38f71',
-  'Clinical Documentation': '1454165804606-c3d57bc86b40', 'Technology & AI': '1551288049-bebda4e38f71',
-  'Specialty Billing': '1576091160550-2173dba999ef',
-};
 const AUTHORS = ['Jennifer Walsh', 'Michael Torres', 'Sarah Kim', 'David Chen', 'Amanda Rodriguez', 'Robert Johnson', 'Lisa Thompson', 'Mark Wilson'];
 const imgUrl = (cat) => `/images/blog/${slugify(cat)}.svg`;
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 70);

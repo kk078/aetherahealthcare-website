@@ -84,7 +84,7 @@ const relatedServices = [
 
 export default function PaymentPosting() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <>
         <script
           type="application/ld+json"
@@ -117,7 +117,7 @@ export default function PaymentPosting() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
+      <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
@@ -150,7 +150,7 @@ export default function PaymentPosting() {
                   We handle electronic remittance advices, paper EOBs, patient payments, and insurance payments with precision, reducing days in accounts receivable and accelerating collections.
                 </p>
                 <p className="text-gray">
-                  With our comprehensive payment posting, you can eliminate payment posting errors, reduce write-off discrepancies, and optimize your practice's cash flow.
+                  With our comprehensive payment posting, you can eliminate payment posting errors, reduce write-off discrepancies, and optimize your practice&apos;s cash flow.
                 </p>
               </FadeIn>
             </div>

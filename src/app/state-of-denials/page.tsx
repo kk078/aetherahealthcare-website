@@ -1,10 +1,9 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import FadeIn from '@/components/ui/FadeIn';
 import DenialsReport from '@/components/ui/DenialsReport';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import { INDUSTRY_HEADLINES } from '@/lib/denialBenchmarks';
-import { BarChart3, AlertTriangle } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 export const metadata = {
   title: { absolute: 'The State of Medical Billing Denials 2026 — Benchmark Report by Specialty | Aethera Healthcare Solutions' },
@@ -25,7 +24,7 @@ export default function StateOfDenialsPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       <RcmHeroBand

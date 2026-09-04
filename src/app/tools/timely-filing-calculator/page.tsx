@@ -5,6 +5,8 @@ import Footer from '@/components/layout/Footer';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import TimelyFilingCalculator from '@/components/ui/TimelyFilingCalculator';
 
+import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
+
 export const metadata = {
   title: { absolute: 'Timely Filing Calculator — Claim Deadline & Days Remaining | Aethera Healthcare Solutions' },
   description:
@@ -13,7 +15,7 @@ export const metadata = {
 
 export default function TimelyFilingPage() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       <RcmHeroBand
@@ -43,13 +45,10 @@ export default function TimelyFilingPage() {
             </p>
           </div>
 
-          <div className="mt-10 bg-navy rounded-2xl p-6 md:p-8 text-white text-center">
-            <p className="font-jakarta text-xl font-bold mb-2">Missing filing deadlines is lost revenue.</p>
-            <p className="text-cream/80 text-sm mb-5 max-w-2xl mx-auto">Aethera’s A/R team tracks every claim against its payer deadline so nothing ages out. See what your practice is leaving on the table.</p>
-            <Link prefetch={false} href="/free-assessment" className="inline-block bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">
-              Get a Free Assessment
-            </Link>
-          </div>
+          <ToolConversionBridge
+            toolName="Timely Filing"
+            contextText="Missing filing deadlines is permanent lost revenue. Aethera tracks every claim with automated SLA timers and submits in <24 hours."
+          />
         </div>
       </section>
 

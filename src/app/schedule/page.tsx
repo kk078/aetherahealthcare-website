@@ -14,10 +14,10 @@ export const metadata = {
 
 export default function SchedulePage() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <section className="pt-24 pb-10 md:pt-28 md:pb-12 bg-gradient-to-br from-ink via-navy to-[#06304f] relative overflow-hidden">
+      <section className="pt-8 pb-10 md:pt-12 md:pb-12 bg-gradient-to-br from-ink via-navy to-[#06304f] relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.25] pointer-events-none" style={{ backgroundImage: 'radial-gradient(rgba(120,160,200,0.4) 1px, transparent 1px)', backgroundSize: '34px 34px' }} />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>

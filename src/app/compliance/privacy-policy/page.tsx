@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import { Shield, FileText, Users, Lock } from 'lucide-react';
+import { Users } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
-import SectionHeader from '@/components/ui/SectionHeader';
 
 const sections = [
   {
@@ -39,11 +38,11 @@ export const metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-navy to-teal">
+      <section className="pt-8 pb-12 md:pt-12 md:pb-16 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <FadeIn>
@@ -69,7 +68,7 @@ export default function PrivacyPolicy() {
                 Introduction and Scope
               </h2>
               <p className="text-gray mb-6">
-                This Privacy Policy describes how Aethera Healthcare Solutions ("we," "us," or "our") collects, uses,
+                This Privacy Policy describes how Aethera Healthcare Solutions (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects, uses,
                 and protects information when you visit our website or use our medical billing and revenue cycle
                 management services. We are committed to protecting your privacy and complying with all applicable
                 healthcare privacy laws, including the Health Insurance Portability and Accountability Act (HIPAA).
@@ -104,7 +103,7 @@ export default function PrivacyPolicy() {
                 <div>
                   <h3 className="text-xl font-bold text-navy mb-4">Personally Identifiable Information (PII)</h3>
                   <p className="text-gray">
-                    Information that can be used to distinguish or trace an individual's identity, including demographic
+                    Information that can be used to distinguish or trace an individual&apos;s identity, including demographic
                     data, medical information, and other data that is linked or linkable to a specific individual.
                   </p>
                 </div>
@@ -191,7 +190,7 @@ export default function PrivacyPolicy() {
           <div className="prose max-w-none">
             <FadeIn>
               <h2 className="text-3xl font-bold text-navy font-jakarta mb-6">
-                Children's Privacy
+                Children&apos;s Privacy
               </h2>
               <p className="text-gray">
                 Our website and services are not directed to children under the age of 13. We do not knowingly collect
@@ -213,7 +212,7 @@ export default function PrivacyPolicy() {
               </h2>
               <p className="text-gray mb-6">
                 We may update our Privacy Policy from time to time. We will notify you of any changes by posting the
-                new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this
+                new Privacy Policy on this page and updating the &quot;Last Updated&quot; date. You are advised to review this
                 Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they
                 are posted on this page.
               </p>
@@ -226,7 +225,7 @@ export default function PrivacyPolicy() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-teal font-bold mr-2">•</span>
-                    <span>Updating the "Last Updated" date</span>
+                    <span>Updating the &quot;Last Updated&quot; date</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-teal font-bold mr-2">•</span>

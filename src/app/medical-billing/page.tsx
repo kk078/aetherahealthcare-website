@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function MedicalBillingHub() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
 
       <RcmHeroBand
