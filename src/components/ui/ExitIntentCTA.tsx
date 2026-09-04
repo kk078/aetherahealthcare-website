@@ -133,7 +133,7 @@ export default function ExitIntentCTA() {
               </button>
               {status === 'error' && (
                 <p className="text-center text-xs text-red-500">
-                  Something went wrong — please call <a href="tel:+18135194640" className="underline">(813) 519-4640</a> or email support@aetherahealthcare.com.
+                  Something went wrong — please call <a href="tel:+18135194640" className="underline">(813) 519-4640</a> or email <a href="mailto:kirkmar078@gmail.com?subject=Aethera%20Healthcare%20Inquiry" className="underline">support@aetherahealthcare.com</a>.
                 </p>
               )}
               <p className="text-center text-xs text-slate-400">

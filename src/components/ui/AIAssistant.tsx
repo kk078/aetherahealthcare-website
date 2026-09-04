@@ -2,33 +2,59 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { Sparkles, X, Send, Loader2 } from 'lucide-react';
-
-const FORMS_URL = process.env.NEXT_PUBLIC_FORMS_URL || 'https://aethera-forms.aetherahealthcare.workers.dev';
-
-interface Msg { role: 'user' | 'assistant'; content: string }
+import { askGeminiAgent, type AssistantMessage } from '@/lib/gemini';
+import { PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
 
 const GREETING =
-  "Hi! I'm Aethera's billing assistant. Ask me about timely-filing limits, payer IDs, our services, pricing, or onboarding.";
+  "Hi! I'm Aethera's AI billing assistant. Ask me about timely-filing limits, payer IDs, our services, pricing, or onboarding.";
+
 const SUGGESTIONS = [
   "What's UnitedHealthcare's timely filing limit?",
   'How much does Aethera charge?',
   'Do you bill for cardiology?',
 ];
 
+let aiMsgCounter = 0;
+function makeAiMsg(role: 'user' | 'assistant', content: string): AssistantMessage {
+  aiMsgCounter += 1;
+  const d = new Date();
+  const h = d.getHours().toString().padStart(2, '0');
+  const m = d.getMinutes().toString().padStart(2, '0');
+  return {
+    id: `ai-${aiMsgCounter}`,
+    role,
+    content,
+    timestamp: `${h}:${m}`,
+  };
+}
+
 /** Turn internal paths, phone, and email in an answer into clickable links. */
 function render(text: string) {
-  const parts = text.split(/(\/[a-z][a-z0-9-]*(?:\/[a-z0-9-]+)*|\(813\) 519-4640|support@aetherahealthcare\.com)/g);
+  const parts = text.split(/(\/[a-z][a-z0-9-]*(?:\/[a-z0-9-]+)*|\(813\) 519-4640|kirkmar078@gmail\.com|support@aetherahealthcare\.com)/g);
   return parts.map((p, i) => {
     if (/^\/[a-z]/.test(p)) return <a key={i} href={p} className="text-teal underline hover:text-navy">{p}</a>;
     if (p === '(813) 519-4640') return <a key={i} href="tel:+18135194640" className="text-teal underline">{p}</a>;
-    if (p === 'support@aetherahealthcare.com') return <a key={i} href="mailto:support@aetherahealthcare.com" className="text-teal underline">{p}</a>;
+    if (p === PRIMARY_EXPERT_EMAIL || p === 'support@aetherahealthcare.com') {
+      return (
+        <a key={i} href={`mailto:${PRIMARY_EXPERT_EMAIL}?subject=Aethera%20Healthcare%20Inquiry`} className="text-teal underline">
+          {p}
+        </a>
+      );
+    }
     return <span key={i}>{p}</span>;
   });
 }
 
 export default function AIAssistant() {
   const [open, setOpen] = useState(false);
-  const [msgs, setMsgs] = useState<Msg[]>([{ role: 'assistant', content: GREETING }]);
+  const [msgs, setMsgs] = useState<AssistantMessage[]>(() => [
+    {
+      id: 'ai-init',
+      role: 'assistant',
+      content: GREETING,
+      timestamp: 'Now',
+    },
+  ]);
   const [input, setInput] = useState('');
   const [busy, setBusy] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -40,20 +66,23 @@ export default function AIAssistant() {
   async function send(text: string) {
     const q = text.trim();
     if (!q || busy) return;
-    const history = msgs.filter(m => m.content !== GREETING).slice(-6);
-    setMsgs(m => [...m, { role: 'user', content: q }]);
+    const history = msgs
+      .filter(m => m.content !== GREETING)
+      .slice(-6)
+      .map(m => ({ role: m.role, content: m.content }));
+
+    setMsgs(m => [...m, makeAiMsg('user', q)]);
     setInput('');
     setBusy(true);
+
     try {
-      const r = await fetch(`${FORMS_URL}/api/assistant`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: q, history }),
-      });
-      const data = await r.json().catch(() => ({}));
-      setMsgs(m => [...m, { role: 'assistant', content: data.answer || "Sorry — I couldn't reach the assistant. Call (813) 519-4640 or try /free-assessment." }]);
+      const response = await askGeminiAgent(q, history);
+      setMsgs(m => [...m, makeAiMsg('assistant', response.text)]);
     } catch {
-      setMsgs(m => [...m, { role: 'assistant', content: "I'm having trouble connecting. Call (813) 519-4640 or get a free assessment at /free-assessment." }]);
+      setMsgs(m => [
+        ...m,
+        makeAiMsg('assistant', `I'm having trouble connecting. Call (813) 519-4640 or contact Kiran at ${PRIMARY_EXPERT_EMAIL}.`),
+      ]);
     } finally {
       setBusy(false);
     }
@@ -68,7 +97,7 @@ export default function AIAssistant() {
               <Sparkles className="h-5 w-5 text-mint" />
               <div>
                 <p className="text-white font-bold text-sm leading-none">Aethera AI</p>
-                <p className="text-white/70 text-[11px] mt-1">Billing & payer answers · grounded</p>
+                <p className="text-white/70 text-[11px] mt-1">Billing &amp; payer answers · Gemini Agent</p>
               </div>
             </div>
             <button onClick={() => setOpen(false)} className="text-white/70 hover:text-white" aria-label="Close"><X className="h-5 w-5" /></button>
@@ -106,7 +135,7 @@ export default function AIAssistant() {
               <Send className="h-4 w-4" />
             </button>
           </form>
-          <p className="text-[11px] text-slate-500 text-center pb-2 px-3 bg-white">AI can be wrong — verify payer specifics with the payer or your clearinghouse.</p>
+          <p className="text-[11px] text-slate-500 text-center pb-2 px-3 bg-white">Powered by Gemini AI · Routed to {PRIMARY_EXPERT_EMAIL}</p>
         </div>
       )}
 

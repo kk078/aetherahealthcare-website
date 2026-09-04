@@ -103,8 +103,12 @@ export default function Contact() {
                     </div>
                     <div className="ml-4">
                       <h4 className="font-bold text-navy">Email</h4>
-                      <p className="text-gray">info@aetherahealthcare.com</p>
-                      <p className="text-gray">support@aetherahealthcare.com</p>
+                      <p className="text-gray">
+                        <a href="mailto:kirkmar078@gmail.com?subject=Aethera%20Healthcare%20Inquiry" className="hover:text-teal transition-colors">info@aetherahealthcare.com</a>
+                      </p>
+                      <p className="text-gray">
+                        <a href="mailto:kirkmar078@gmail.com?subject=Aethera%20Healthcare%20Support%20Inquiry" className="hover:text-teal transition-colors">support@aetherahealthcare.com</a>
+                      </p>
                       <p className="text-gray">aetherahealthcare.com</p>
                     </div>
                   </div>

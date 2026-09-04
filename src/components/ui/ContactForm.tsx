@@ -36,7 +36,10 @@ export default function ContactForm() {
   async function submitToWeb3Forms(data: Record<string, unknown>, subject: string) {
     const payload = {
       access_key: WEB3FORMS_KEY,
-      subject,
+      subject: `[Aethera Inquiry -> kirkmar078@gmail.com] ${subject}`,
+      to_email: 'kirkmar078@gmail.com',
+      recipient: 'kirkmar078@gmail.com',
+      reply_to: (data.email as string) || (data.scheduleEmail as string),
       from_name: (data.name as string) || (data.practiceContact as string) || 'Website Visitor',
       botcheck: '',
       ...data,

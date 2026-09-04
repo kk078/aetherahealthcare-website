@@ -51,7 +51,6 @@ import CookieConsent from '@/components/ui/CookieConsent';
 import BackToTop from '@/components/ui/BackToTop';
 import CallbackButton from '@/components/ui/CallbackButton';
 import ExitIntentCTA from '@/components/ui/ExitIntentCTA';
-import AIAssistant from '@/components/ui/AIAssistant';
 import RetargetingPixels from '@/components/ui/RetargetingPixels';
 
 export default function RootLayout({
@@ -71,7 +70,6 @@ export default function RootLayout({
         <BackToTop />
         <CallbackButton />
         <ExitIntentCTA />
-        <AIAssistant />
         <CloudflareAnalytics />
         <GoogleAds />
         <RetargetingPixels />

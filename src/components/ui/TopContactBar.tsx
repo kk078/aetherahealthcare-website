@@ -13,7 +13,7 @@ export default function TopContactBar() {
         (813) 519-4640
       </a>
       <a
-        href="mailto:support@aetherahealthcare.com"
+        href="mailto:kirkmar078@gmail.com?subject=Aethera%20Healthcare%20Inquiry"
         className="flex items-center gap-1.5 hover:text-[#93C5FD] transition-colors"
       >
         <Mail className="h-3 w-3 flex-shrink-0" />

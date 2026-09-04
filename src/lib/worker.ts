@@ -1,9 +1,16 @@
 /**
- * CRM ingest integration.
+ * CRM ingest integration + Web3Forms Email Routing to Kiran (kirkmar078@gmail.com).
  * All website forms call submitToWorker(); it posts directly to the Aethera
  * CRM public ingest endpoints so submissions land in the CRM inbox (live DB).
+ * If the CRM is unavailable or returns non-200, it falls back to Web3Forms
+ * explicitly routed to Kiran (kirkmar078@gmail.com).
  * Best-effort — never throws.
  */
+
+export const PRIMARY_EXPERT_EMAIL = 'kirkmar078@gmail.com';
+export const DISPLAY_SUPPORT_EMAIL = 'support@aetherahealthcare.com';
+export const DISPLAY_INFO_EMAIL = 'info@aetherahealthcare.com';
+
 export const CRM_INGEST_BASE = `${process.env.NEXT_PUBLIC_CRM_API_URL || 'https://aethera-crm-api.aetherahealthcare.workers.dev/api/v1'}/public/website`;
 
 type AnyData = Record<string, unknown>;
@@ -18,6 +25,7 @@ function mapToCrm(formType: string, data: AnyData): { path: string; payload: Any
         specialty: s('specialty'), providerCount: s('providerCount'), claimVolume: s('claimVolume'),
         billingSituation: s('billingSituation'), ehr: s('ehr'), email: s('email'),
         phone: s('phone'), challenge: s('challenge') || s('message'),
+        routedTo: PRIMARY_EXPERT_EMAIL,
       },
     };
   }
@@ -32,10 +40,11 @@ function mapToCrm(formType: string, data: AnyData): { path: string; payload: Any
         daysInAr: s('daysInAr'), currentBilling: s('currentBilling') || s('billingSituation'),
         ehr: s('ehr'), challenge: s('challenge'),
         answers: (data.answers as AnyData) || data,
+        routedTo: PRIMARY_EXPERT_EMAIL,
       },
     };
   }
-  // contact_message | consultation_request | callback_request -> contact
+  // contact_message | consultation_request | callback_request | expert_ai_consultation -> contact
   const name = s('name') || s('practiceContact') || 'Website Visitor';
   const practice = s('practice') || s('practiceName') || '';
   const email = s('email') || s('scheduleEmail') || '';
@@ -45,20 +54,20 @@ function mapToCrm(formType: string, data: AnyData): { path: string; payload: Any
     s('message') || s('consultationNotes'),
     s('preferredTime') ? `Preferred time: ${s('preferredTime')}` : '',
     s('bestTime') ? `Best time to call: ${s('bestTime')}` : '',
+    s('chatContext') ? `AI Chat Context:\n${s('chatContext')}` : '',
   ].filter(Boolean);
   const message = messageParts.join(' — ') || `${formType.replace(/_/g, ' ')} from website`;
-  return { path: '/contact', payload: { name, practice, email, phone, specialty, message } };
+  return { path: '/contact', payload: { name, practice, email, phone, specialty, message, routedTo: PRIMARY_EXPERT_EMAIL } };
 }
 
-// Email backup so a CRM outage can never silently lose a lead. Uses the same
-// Web3Forms channel the contact form already relies on; the access key is a
-// public, client-side key by design.
+// Email backup so a CRM outage can never silently lose a lead. Uses Web3Forms
+// routed directly to Kiran (kirkmar078@gmail.com).
 const WEB3FORMS_KEY = 'b1e9389e-b14d-4e6a-84eb-e4708fcb39f4';
 
 async function emailFallback(formType: string, data: AnyData): Promise<boolean> {
   try {
     const details = Object.entries(data)
-      .filter(([, v]) => v != null && typeof v !== 'object')
+      .filter(([k, v]) => v != null && typeof v !== 'object' && k !== 'hp_field')
       .map(([k, v]) => `${k}: ${String(v)}`)
       .join('\n');
     const email = String(data.email || data.scheduleEmail || '') || 'no-reply@aetherahealthcare.com';
@@ -68,12 +77,26 @@ async function emailFallback(formType: string, data: AnyData): Promise<boolean> 
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
         access_key: WEB3FORMS_KEY,
-        subject: `[LEAD BACKUP] ${formType} — CRM did not confirm receipt`,
-        from_name: name,
+        subject: `[AETHERA LEAD -> ${PRIMARY_EXPERT_EMAIL}] ${formType.replace(/_/g, ' ').toUpperCase()} from ${name}`,
+        from_name: `${name} (Aethera Web Lead)`,
         email,
+        to_email: PRIMARY_EXPERT_EMAIL,
+        recipient: PRIMARY_EXPERT_EMAIL,
+        target_email: PRIMARY_EXPERT_EMAIL,
+        reply_to: email,
         message:
-          `A website lead came in via "${formType}" but the CRM did not confirm receipt, ` +
-          `so this email backup was sent to make sure the prospect is not lost.\n\n${details}`,
+          `====================================================\n` +
+          `AETHERA HEALTHCARE SOLUTIONS — NEW WEBSITE INQUIRY\n` +
+          `ROUTED DIRECTLY TO: ${PRIMARY_EXPERT_EMAIL}\n` +
+          `====================================================\n\n` +
+          `Form Channel: ${formType}\n` +
+          `Timestamp: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })} ET\n` +
+          `Visitor Name: ${name}\n` +
+          `Visitor Email: ${email}\n\n` +
+          `--- Ingest Data ---\n` +
+          `${details}\n\n` +
+          `Please follow up within 2 business hours.\n` +
+          `====================================================`,
         botcheck: '',
       }),
     });
@@ -84,11 +107,31 @@ async function emailFallback(formType: string, data: AnyData): Promise<boolean> 
 }
 
 /**
+ * Directly dispatch an inquiry/lead to Kiran (kirkmar078@gmail.com) with optional AI chat transcript.
+ */
+export async function sendLeadToKiran(
+  inquiryType: string,
+  data: AnyData,
+  chatHistory?: Array<{ role: string; content: string }>
+): Promise<boolean> {
+  const chatContext = chatHistory && chatHistory.length > 0
+    ? chatHistory.map(m => `${m.role.toUpperCase()}: ${m.content}`).join('\n\n')
+    : undefined;
+
+  const augmentedData: AnyData = {
+    ...data,
+    chatContext,
+    target_recipient: PRIMARY_EXPERT_EMAIL,
+    routed_at: new Date().toISOString(),
+  };
+
+  return submitToWorker(inquiryType, augmentedData);
+}
+
+/**
  * Post a lead to the CRM. If the CRM does not confirm receipt (non-2xx, network,
- * or CORS failure), automatically send an email backup so no prospect is ever
- * lost. Never throws; resolves true when at least one delivery channel
- * confirmed receipt, false when both failed (callers should surface a
- * "call us instead" message rather than a false success).
+ * or CORS failure), automatically send an email backup routed to Kiran (kirkmar078@gmail.com).
+ * Never throws; resolves true when at least one delivery channel confirmed receipt.
  */
 export async function submitToWorker(formType: string, data: AnyData): Promise<boolean> {
   const { path, payload } = mapToCrm(formType, data);
@@ -102,6 +145,6 @@ export async function submitToWorker(formType: string, data: AnyData): Promise<b
   } catch {
     // network / CORS failure — fall through to the email backup.
   }
-  // CRM did not accept the lead → email backup so no prospect is ever lost.
+  // CRM did not accept the lead → email backup routed directly to Kiran.
   return emailFallback(formType, data);
 }
