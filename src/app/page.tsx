@@ -127,7 +127,7 @@ const faqs = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col pt-16 font-inter">
+    <div className="min-h-screen flex flex-col font-inter">
       <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org", "@type": "Organization",
@@ -154,7 +154,7 @@ export default function Home() {
         <div className="absolute -top-1/3 -right-1/4 w-[70%] h-[140%] rounded-full pointer-events-none"
           style={{ background: 'radial-gradient(closest-side, rgba(69,196,176,0.16), transparent)' }} />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 md:pt-24 md:pb-28">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 md:pt-16 md:pb-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center">
             {/* Left */}
             <div>
@@ -169,13 +169,25 @@ export default function Home() {
                 </h1>
               </FadeIn>
               <FadeIn delay={0.2}>
-                <p className="text-lg md:text-xl text-cream/85 max-w-xl leading-relaxed mb-8">
-                  Aethera&apos;s founder spent years adjudicating claims on the insurance side before running
-                  billing operations for providers. That knowledge is now software: AI that verifies everything
-                  and is never allowed to guess — it cannot invent a code, a dollar amount, or a date — with a
-                  tamper-evident audit trail on every action. Free 50-claim pilot; success criteria agreed in
-                  writing.
+                <p className="text-lg md:text-xl text-cream/90 max-w-xl leading-relaxed mb-6 font-normal">
+                  End-to-end medical billing with deterministic software and certified human coders.
+                  Built from years of payer adjudication experience: AI that never guesses codes,
+                  dollar figures, or dates — backed by a tamper-evident audit trail and contractual clean-claim guarantees.
                 </p>
+                <div className="space-y-2.5 mb-8 text-cream/85 text-sm max-w-lg">
+                  <div className="flex items-center gap-2.5">
+                    <span className="h-2 w-2 rounded-full bg-mint shrink-0" />
+                    <span><strong className="text-white">Deterministic AI:</strong> Strict algorithmic rules; software never invents data.</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <span className="h-2 w-2 rounded-full bg-mint shrink-0" />
+                    <span><strong className="text-white">Tamper-evident audit trail:</strong> 1-click proof for every claim exception.</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <span className="h-2 w-2 rounded-full bg-mint shrink-0" />
+                    <span><strong className="text-white">Risk-free 50-claim pilot:</strong> Verified results in your numbers in 14 days.</span>
+                  </div>
+                </div>
               </FadeIn>
               <FadeIn delay={0.3}>
                 <div className="flex flex-col sm:flex-row gap-3">

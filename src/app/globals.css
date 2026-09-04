@@ -38,27 +38,26 @@ body {
 
 /* ---------------------------------------------------------------------------
    Fixed-header offset.
-   The header stack is TopContactBar (fixed top-0, h-8 = 2rem) + Navbar
-   (fixed top-8, h-16 = 4rem). `body` reserves baseline space so page content
-   never slides under the fixed header. These rules are intentionally UNLAYERED
-   so they win over Tailwind's layered utilities without needing !important.
-   Individual pages may add their own top padding (pt-16 / pt-24) for hero
-   spacing on top of this baseline.
+   The header stack is TopContactBar (fixed top-0, h-8 = 2rem = 32px) + Navbar
+   (fixed top-8, h-16 = 4rem = 64px). Total fixed header height is 6rem (96px).
+   `body` reserves this baseline space so page content never slides under the
+   fixed header. We reset padding-top on `.min-h-screen.flex.flex-col` to 0
+   to eliminate duplicate padding and white gaps above hero sections.
 --------------------------------------------------------------------------- */
 body {
-  padding-top: 4rem;
+  padding-top: 6rem;
 }
 
 .min-h-screen.flex.flex-col {
-  padding-top: 4rem;
+  padding-top: 0;
 }
 
-/* Frosted-glass Navbar once the page is scrolled. Referenced by the
-   `glass-nav` class in components/layout/Navbar.tsx. */
+/* Frosted-glass Navbar once the page is scrolled: high opacity prevents
+   underlying text bleed while maintaining modern glass aesthetic. */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: saturate(180%) blur(12px);
-  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
 }
 
 /* RCM re-skin, site-wide: display type is Plus Jakarta Sans, body is Inter. */

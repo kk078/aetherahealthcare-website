@@ -32,14 +32,21 @@ const specialtyServices = [
 ];
 
 const whyAethera = [
-  { name: 'Guides', href: '/decks', desc: 'Specialty one-pagers & playbooks' },
+  { name: 'About Us', href: '/about', desc: 'Our story, founder adjudication roots & team' },
   { name: 'Case Studies', href: '/case-studies', desc: 'Results our process is built to deliver' },
   { name: 'Security & Compliance', href: '/compliance/security', desc: 'How we protect PHI, offshore and in the US' },
-  { name: 'Payer Network', href: '/payers', desc: '900+ insurers we work with' },
-  { name: 'EHR Integrations', href: '/integrations', desc: '50+ systems, zero disruption' },
   { name: 'Compare Options', href: '/compare', desc: 'Outsourced vs. in-house, and how to choose' },
-  { name: 'Billing by Specialty', href: '/medical-billing', desc: 'Specialty billing for practices nationwide' },
-  { name: 'State of Denials', href: '/state-of-denials', desc: 'Free benchmark report by specialty' },
+  { name: 'Blog & Articles', href: '/blog', desc: 'Healthcare RCM insights & payer guides' },
+  { name: 'State of Denials Report', href: '/state-of-denials', desc: 'Free benchmark report by specialty' },
+  { name: 'Guides & Playbooks', href: '/decks', desc: 'Specialty one-pagers & revenue playbooks' },
+];
+
+const solutions = [
+  { name: 'For Billing Companies', href: '/for-billing-companies', desc: 'White-label back-office billing partnership' },
+  { name: 'Payer Services', href: '/payer-services', desc: 'Contracting, credentialing & fee schedules' },
+  { name: 'EHR Integrations', href: '/integrations', desc: '50+ certified EHR & PM platforms supported' },
+  { name: 'Payer Network', href: '/payers', desc: '900+ commercial, Medicare & Medicaid plans' },
+  { name: 'Billing by Specialty', href: '/specialties', desc: 'Tailored workflows for 15+ medical fields' },
 ];
 
 export default function Navbar() {
@@ -56,7 +63,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-8 w-full z-40 transition-all duration-300 ${
+      className={`fixed top-8 w-full ${
+        isMenuOpen ? 'z-[60]' : 'z-40'
+      } transition-all duration-300 ${
         isScrolled
           ? 'glass-nav border-b border-[rgba(0,0,0,0.1)] shadow-[0_1px_0_rgba(0,0,0,0.08)]'
           : 'bg-white/95 border-b border-[rgba(0,0,0,0.06)]'
@@ -81,7 +90,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:block">
-            <div className="ml-6 flex items-center space-x-6">
+            <div className="ml-4 xl:ml-6 flex items-center space-x-4 xl:space-x-6">
 
               {/* Services Dropdown */}
               <div className="relative group">
@@ -112,19 +121,27 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link prefetch={false} href="/specialties" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                Specialties
-              </Link>
-              <Link prefetch={false} href="/payer-services" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                Payer Services
-              </Link>
-              <Link prefetch={false} href="/for-billing-companies" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                For Billing Companies
-              </Link>
-              <Link prefetch={false} href="/tools" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+              {/* Solutions Dropdown */}
+              <div className="relative group">
+                <button className="inline-flex items-center gap-1 whitespace-nowrap text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+                  Solutions <span aria-hidden>▾</span>
+                </button>
+                <div className="absolute left-0 mt-2 w-80 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-[#003087]/10">
+                  <div className="p-4 space-y-1">
+                    {solutions.map((item) => (
+                      <Link prefetch={false} key={item.name} href={item.href} className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-[#F0F4FB] transition-colors">
+                        <span className="text-sm font-semibold text-[#001A52]">{item.name}</span>
+                        <span className="text-xs text-[#64748B] mt-0.5">{item.desc}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <Link prefetch={false} href="/tools" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium whitespace-nowrap">
                 Free Tools
               </Link>
-              <Link prefetch={false} href="/pricing" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+              <Link prefetch={false} href="/pricing" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium whitespace-nowrap">
                 Pricing
               </Link>
 
@@ -133,7 +150,7 @@ export default function Navbar() {
                 <button className="inline-flex items-center gap-1 whitespace-nowrap text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
                   Why Aethera <span aria-hidden>▾</span>
                 </button>
-                <div className="absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-[#003087]/10">
+                <div className="absolute left-0 mt-2 w-80 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-[#003087]/10">
                   <div className="p-4 space-y-1">
                     {whyAethera.map((item) => (
                       <Link prefetch={false} key={item.name} href={item.href} className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-[#F0F4FB] transition-colors">
@@ -145,32 +162,23 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link prefetch={false} href="/about" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                About
-              </Link>
-              <Link prefetch={false} href="/blog" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                Blog
-              </Link>
-              <Link prefetch={false} href="/contact" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
+              <Link prefetch={false} href="/contact" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium whitespace-nowrap">
                 Contact
-              </Link>
-              <Link prefetch={false} href="/schedule" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                Schedule
               </Link>
             </div>
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
             <Link prefetch={false}
               href="/schedule"
-              className="text-[#1d1d1f] hover:text-[#003087] font-medium py-2 px-4 rounded-full text-sm transition-colors duration-200"
+              className="text-[#1d1d1f] hover:text-[#003087] font-medium py-2 px-3 xl:px-4 rounded-full text-sm transition-colors duration-200 whitespace-nowrap"
             >
               Book a Call
             </Link>
             <Link prefetch={false}
               href="/free-assessment"
-              className="bg-[#003087] hover:bg-[#001A52] text-white font-semibold py-2 px-5 rounded-full transition-all duration-200 text-sm shadow-sm hover:shadow-md"
+              className="bg-[#003087] hover:bg-[#001A52] text-white font-semibold py-2 px-4 xl:px-5 rounded-full transition-all duration-200 text-sm shadow-sm hover:shadow-md whitespace-nowrap"
             >
               Start Free Pilot
             </Link>
@@ -180,7 +188,8 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-[#334155] hover:text-[#003087] focus:outline-none"
+              className="text-[#334155] hover:text-[#003087] p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -190,58 +199,104 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white shadow-lg max-h-[80vh] overflow-y-auto border-t border-[#003087]/10">
-          <div className="px-4 pt-3 pb-5 space-y-1">
-            <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest py-2">Services</p>
-            <div className="pl-2 grid grid-cols-2 gap-1 mb-2">
-              {services.map((service) => (
-                <Link prefetch={false} key={service.name} href={service.href} className="text-[#334155] hover:text-[#003087] transition-colors text-sm py-1" onClick={() => setIsMenuOpen(false)}>
-                  {service.name}
-                </Link>
-              ))}
-            </div>
-            <p className="text-xs font-bold text-[#003087] uppercase tracking-widest pt-2 pb-1">By Specialty</p>
-            <div className="pl-2 space-y-1 mb-2">
-              {specialtyServices.map((s) => (
-                <Link prefetch={false} key={s.name} href={s.href} className="block text-[#003087] hover:text-[#001A52] transition-colors text-sm py-1 font-medium" onClick={() => setIsMenuOpen(false)}>
-                  {s.name}
-                </Link>
-              ))}
-            </div>
-            <div className="border-t border-[#003087]/10 pt-2">
-              <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest py-2">Why Aethera</p>
-              <div className="pl-2 space-y-1">
-                {whyAethera.map((item) => (
-                  <Link prefetch={false} key={item.name} href={item.href} className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-1" onClick={() => setIsMenuOpen(false)}>
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="border-t border-[#003087]/10 pt-3 space-y-2">
-              <Link prefetch={false} href="/specialties" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Specialties</Link>
-              <Link prefetch={false} href="/payer-services" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Payer Services</Link>
-              <Link prefetch={false} href="/for-billing-companies" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>For Billing Companies</Link>
-              <Link prefetch={false} href="/tools" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Free Tools</Link>
-              <Link prefetch={false} href="/pricing" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
-              <Link prefetch={false} href="/about" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>About</Link>
-              <Link prefetch={false} href="/blog" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Blog</Link>
-              <Link prefetch={false} href="/contact" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-              <Link prefetch={false} href="/schedule" className="block text-[#334155] hover:text-[#003087] transition-colors text-sm py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Schedule</Link>
+        <div className="lg:hidden bg-white shadow-2xl h-[calc(100vh-6rem)] overflow-y-auto border-t border-[#003087]/10">
+          <div className="px-4 pt-4 pb-8 space-y-4">
+            {/* Quick Action CTAs */}
+            <div className="grid grid-cols-2 gap-2 pt-1 pb-3 border-b border-slate-100">
               <Link prefetch={false}
                 href="/schedule"
-                className="block border-2 border-[#003087] text-[#003087] font-semibold py-2.5 px-5 rounded-md transition-colors duration-300 text-sm text-center mt-2"
+                className="flex items-center justify-center border-2 border-[#003087] text-[#003087] font-semibold py-2.5 px-3 rounded-xl text-sm text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Book a Call
               </Link>
               <Link prefetch={false}
                 href="/free-assessment"
-                className="block bg-[#003087] hover:bg-[#001A52] text-white font-bold py-2.5 px-5 rounded-md transition-colors duration-300 text-sm text-center mt-1"
+                className="flex items-center justify-center bg-[#003087] hover:bg-[#001A52] text-white font-bold py-2.5 px-3 rounded-xl text-sm text-center shadow-sm"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Start Free Pilot
               </Link>
+            </div>
+
+            {/* Services */}
+            <div>
+              <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest mb-2">RCM Services</p>
+              <div className="grid grid-cols-2 gap-1">
+                {services.map((service) => (
+                  <Link
+                    prefetch={false}
+                    key={service.name}
+                    href={service.href}
+                    className="text-[#334155] hover:text-[#003087] hover:bg-slate-50 transition-colors text-sm py-2 px-2.5 rounded-lg flex items-center"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Solutions & Platform */}
+            <div className="border-t border-slate-100 pt-3">
+              <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest mb-2">Solutions &amp; Platform</p>
+              <div className="space-y-1">
+                {solutions.map((item) => (
+                  <Link
+                    prefetch={false}
+                    key={item.name}
+                    href={item.href}
+                    className="text-[#334155] hover:text-[#003087] hover:bg-slate-50 transition-colors text-sm py-2 px-2.5 rounded-lg flex flex-col"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span className="font-medium text-navy">{item.name}</span>
+                    <span className="text-xs text-slate-500">{item.desc}</span>
+                  </Link>
+                ))}
+                <Link
+                  prefetch={false}
+                  href="/tools"
+                  className="text-navy hover:text-[#003087] hover:bg-slate-50 transition-colors text-sm py-2 px-2.5 rounded-lg flex items-center font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Free Tools &amp; Denial Lookup
+                </Link>
+                <Link
+                  prefetch={false}
+                  href="/pricing"
+                  className="text-navy hover:text-[#003087] hover:bg-slate-50 transition-colors text-sm py-2 px-2.5 rounded-lg flex items-center font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Pricing Plans &amp; ROI
+                </Link>
+              </div>
+            </div>
+
+            {/* Company & Knowledge */}
+            <div className="border-t border-slate-100 pt-3">
+              <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest mb-2">Why Aethera &amp; About</p>
+              <div className="space-y-1">
+                {whyAethera.map((item) => (
+                  <Link
+                    prefetch={false}
+                    key={item.name}
+                    href={item.href}
+                    className="text-[#334155] hover:text-[#003087] hover:bg-slate-50 transition-colors text-sm py-2 px-2.5 rounded-lg flex items-center justify-between"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span>{item.name}</span>
+                    <span className="text-xs text-slate-400">→</span>
+                  </Link>
+                ))}
+                <Link
+                  prefetch={false}
+                  href="/contact"
+                  className="text-[#003087] hover:bg-slate-50 transition-colors text-sm py-2.5 px-2.5 rounded-lg flex items-center font-bold"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact Our Team
+                </Link>
+              </div>
             </div>
           </div>
         </div>

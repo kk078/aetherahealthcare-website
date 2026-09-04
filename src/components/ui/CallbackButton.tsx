@@ -79,10 +79,10 @@ export default function CallbackButton() {
                   Email Us
                 </a>
               </div>
-              <p className="text-center text-xs text-slate-400 mb-1">(813) 519-4640 · support@aetherahealthcare.com</p>
+              <p className="text-center text-xs text-slate-500 mb-1">(813) 519-4640 · support@aetherahealthcare.com</p>
               <div className="flex items-center gap-2 my-3">
                 <div className="flex-1 h-px bg-slate-200"></div>
-                <span className="text-xs text-slate-400">or request a callback</span>
+                <span className="text-xs text-slate-500">or request a callback</span>
                 <div className="flex-1 h-px bg-slate-200"></div>
               </div>
               {/* Form */}
@@ -160,7 +160,7 @@ export default function CallbackButton() {
       {/* Main trigger button */}
       <button
         onClick={() => setOpen(!open)}
-        className={`flex items-center gap-2.5 ${open ? 'bg-navy' : 'bg-teal hover:bg-navy'} text-white font-bold py-3 px-5 rounded-full shadow-xl transition-all duration-300 group`}
+        className={`flex items-center gap-2.5 ${open ? 'bg-navy' : 'bg-teal hover:bg-navy'} text-white font-bold p-3 sm:py-3 sm:px-5 rounded-full shadow-xl transition-all duration-300 group`}
         aria-label="Talk to a billing expert"
       >
         {open ? (
@@ -168,7 +168,7 @@ export default function CallbackButton() {
         ) : (
           <MessageSquare className="h-5 w-5 group-hover:scale-110 transition-transform" />
         )}
-        <span className="text-sm">{open ? 'Close' : 'Talk to an Expert'}</span>
+        <span className="text-sm hidden sm:inline">{open ? 'Close' : 'Talk to an Expert'}</span>
       </button>
     </div>
   );

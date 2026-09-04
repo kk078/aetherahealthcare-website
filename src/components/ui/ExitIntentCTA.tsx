@@ -33,8 +33,8 @@ export default function ExitIntentCTA() {
     };
     // Desktop: cursor leaves toward the address bar / tab strip.
     document.addEventListener('mouseout', onMouseOut);
-    // Mobile / no-mouse fallback: show after meaningful dwell.
-    const timer = window.setTimeout(trigger, 60000);
+    // Mobile / no-mouse fallback: show only after extended meaningful dwell (2 minutes).
+    const timer = window.setTimeout(trigger, 120000);
     function cleanup() {
       document.removeEventListener('mouseout', onMouseOut);
       window.clearTimeout(timer);

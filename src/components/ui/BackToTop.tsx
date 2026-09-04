@@ -34,7 +34,7 @@ export default function BackToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-8 right-8 bg-teal hover:bg-navy dark:hover:bg-teal text-white p-3 rounded-full shadow-lg transition-all duration-300 z-40"
+      className="fixed bottom-24 right-6 bg-navy/85 hover:bg-teal text-white p-3 rounded-full shadow-lg transition-all duration-300 z-40 hover:scale-105"
       aria-label="Back to top"
     >
       <ArrowUp className="h-5 w-5" />

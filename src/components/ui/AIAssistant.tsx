@@ -106,17 +106,17 @@ export default function AIAssistant() {
               <Send className="h-4 w-4" />
             </button>
           </form>
-          <p className="text-[10px] text-slate-400 text-center pb-2 px-3 bg-white">AI can be wrong — verify payer specifics with the payer or your clearinghouse.</p>
+          <p className="text-[11px] text-slate-500 text-center pb-2 px-3 bg-white">AI can be wrong — verify payer specifics with the payer or your clearinghouse.</p>
         </div>
       )}
 
       <button
         onClick={() => setOpen(!open)}
-        className={`flex items-center gap-2.5 ${open ? 'bg-navy' : 'bg-navy hover:bg-teal'} text-white font-bold py-3 px-5 rounded-full shadow-xl transition-all duration-300 group`}
+        className={`flex items-center gap-2.5 ${open ? 'bg-navy' : 'bg-navy hover:bg-teal'} text-white font-bold p-3 sm:py-3 sm:px-5 rounded-full shadow-xl transition-all duration-300 group`}
         aria-label="Open Aethera AI assistant"
       >
         {open ? <X className="h-5 w-5" /> : <Sparkles className="h-5 w-5 text-mint group-hover:scale-110 transition-transform" />}
-        <span className="text-sm">{open ? 'Close' : 'Ask Aethera AI'}</span>
+        <span className="text-sm hidden sm:inline">{open ? 'Close' : 'Ask Aethera AI'}</span>
       </button>
     </div>
   );
