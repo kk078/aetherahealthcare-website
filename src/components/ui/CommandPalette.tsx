@@ -27,7 +27,7 @@ const CATEGORIES: { key: SearchCategory; label: string }[] = [
   { key: 'all', label: 'All Results' },
   { key: 'payers', label: 'Payers (229+)' },
   { key: 'denials', label: 'Denial Codes' },
-  { key: 'tools', label: 'Free Tools (8)' },
+  { key: 'tools', label: 'Free Tools (14)' },
   { key: 'specialties', label: 'Specialties' },
   { key: 'services', label: 'RCM Services' },
 ];
@@ -143,6 +143,26 @@ export default function CommandPalette() {
           detail: { mode: 'chat', initialQuery: query ? `Tell me about ${query}` : undefined },
         })
       );
+      return;
+    }
+
+    if (item.actionDetail?.type === 'theme_toggle') {
+      closePalette();
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('aethera-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('aethera-theme', 'clinical-dark');
+      }
+      window.dispatchEvent(new CustomEvent('aethera-theme-change'));
+      return;
+    }
+
+    if (item.actionDetail?.type === 'print_page') {
+      closePalette();
+      setTimeout(() => window.print(), 150);
       return;
     }
 

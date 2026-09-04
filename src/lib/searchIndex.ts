@@ -32,7 +32,7 @@ export interface SearchItem {
     portalUrl?: string | null;
   };
   actionDetail?: {
-    type: 'expert_chat' | 'expert_callback';
+    type: 'expert_chat' | 'expert_callback' | 'theme_toggle' | 'print_page';
   };
 }
 
@@ -125,6 +125,72 @@ const TOOL_ITEMS: SearchItem[] = [
     badge: 'Reference',
     badgeVariant: 'slate',
     keywords: ['payer', 'provider', 'manual', 'guidelines', 'portal', 'availity', 'optum', 'policy'],
+  },
+  {
+    id: 'tool-ncci-scrubber',
+    category: 'tools',
+    title: 'CMS NCCI Claim Scrubber & Modifier Validator',
+    subtitle: 'Test CPT bundling rules & modifier 25 / 59 / XS indicators',
+    description: 'Verify procedure-to-procedure (PTP) edits against official CMS NCCI rules to prevent CARC 97 denials.',
+    href: '/tools/ncci-claim-scrubber',
+    badge: 'Claim Scrubber',
+    badgeVariant: 'emerald',
+    keywords: ['ncci', 'scrubber', 'ptp', 'bundling', 'modifier 25', 'modifier 59', 'xs', 'cpt', 'unbundling', 'claim check'],
+  },
+  {
+    id: 'tool-appeal-generator',
+    category: 'tools',
+    title: 'Medical Denial Appeal Letter Generator',
+    subtitle: 'Formal letters with ERISA & ACA statutory citations',
+    description: 'Generate legal-grade dispute letters for CARC 50, 197, 16, 29, 97, and 22 with clinical rationales.',
+    href: '/tools/appeal-letter-generator',
+    badge: 'Appeal Playbook',
+    badgeVariant: 'blue',
+    keywords: ['appeal', 'letter', 'generator', 'template', 'carc 50', 'erisa', 'dispute', 'reconsideration', 'overturn'],
+  },
+  {
+    id: 'tool-proposal-wizard',
+    category: 'tools',
+    title: 'Custom Practice Proposal & SLA Wizard',
+    subtitle: '3-minute tailored RCM proposal, pricing & collections lift',
+    description: 'Model collections lift and custom performance pricing (3.5%–5.0%) for your medical specialty and EHR.',
+    href: '/tools/practice-proposal-wizard',
+    badge: 'Proposal Wizard',
+    badgeVariant: 'purple',
+    keywords: ['proposal', 'wizard', 'sla', 'pricing', 'quote', 'collections lift', 'roi', 'assessment', 'custom'],
+  },
+  {
+    id: 'tool-fee-benchmarker',
+    category: 'tools',
+    title: 'CPT Fee Schedule & Reimbursement Benchmarker',
+    subtitle: 'Compare commercial payer allowances against 2026 Medicare',
+    description: 'Quantify your practice’s annual underpayment gap against 135%–160% regional commercial PPO benchmarks.',
+    href: '/tools/fee-schedule-benchmarker',
+    badge: 'Fee Benchmark',
+    badgeVariant: 'amber',
+    keywords: ['fee schedule', 'reimbursement', 'benchmarker', 'medicare allowable', 'cpt', 'underpayment', 'gap', 'rates'],
+  },
+  {
+    id: 'tool-era-decoder',
+    category: 'tools',
+    title: '835 Electronic Remittance Advice (ERA) Decoder',
+    subtitle: 'Parse raw 835 EDI loops (CLP, CAS, SVC) into plain English',
+    description: 'Translate CO, PR, and OA adjustment reason codes into clear financial allocations and action items.',
+    href: '/tools/era-835-decoder',
+    badge: 'ERA Parser',
+    badgeVariant: 'teal',
+    keywords: ['835', 'era', 'remittance', 'clp', 'cas', 'decoder', 'parser', 'eob', 'co-45', 'pr-1', 'edi'],
+  },
+  {
+    id: 'tool-timely-matrix',
+    category: 'tools',
+    title: 'Multi-Payer Timely Filing & Deadline Matrix',
+    subtitle: '50-state Medicaid & commercial payer filing cutoffs',
+    description: 'Compare initial claim deadlines, corrected claim windows, and appeal cutoffs across all major plans.',
+    href: '/tools/timely-filing-matrix',
+    badge: 'Deadline Matrix',
+    badgeVariant: 'slate',
+    keywords: ['timely filing', 'matrix', 'state medicaid', 'appeal deadline', 'cutoff', 'california', 'texas', 'florida'],
   },
 ];
 
@@ -329,6 +395,17 @@ const SERVICE_ITEMS: SearchItem[] = [
 // Key Conversion Actions & Guides
 const ACTION_ITEMS: SearchItem[] = [
   {
+    id: 'act-portal-demo',
+    category: 'actions',
+    title: 'Provider Portal & Analytics Live Sandbox',
+    subtitle: 'Interactive live demo of 24/7 claims, denial queue & AR aging dashboard',
+    description: 'Explore live KPI cards, interactive 5-bucket AR aging bars, and real-time denial appeal tracking.',
+    href: '/portal',
+    badge: 'Live Sandbox',
+    badgeVariant: 'teal',
+    keywords: ['portal', 'dashboard', 'demo', 'sandbox', 'kpis', 'aging', 'claims stream', 'analytics'],
+  },
+  {
     id: 'act-free-pilot',
     category: 'actions',
     title: 'Start Free 50-Claim Pilot',
@@ -361,6 +438,30 @@ const ACTION_ITEMS: SearchItem[] = [
     badgeVariant: 'purple',
     keywords: ['ai', 'agent', 'expert', 'talk to expert', 'assistant', 'chat', 'kiran', 'help'],
     actionDetail: { type: 'expert_chat' },
+  },
+  {
+    id: 'act-theme-toggle',
+    category: 'actions',
+    title: 'Toggle Clinical Low-Glare Mode (Dark / Light)',
+    subtitle: 'Switch between low-glare clinical dark mode and daytime light mode',
+    description: 'High-contrast low-glare theme designed for night-shift billing and clinical workflows.',
+    href: '#theme-toggle',
+    badge: 'Appearance',
+    badgeVariant: 'teal',
+    keywords: ['dark mode', 'dark', 'light mode', 'light', 'theme', 'clinical dark', 'glare', 'night mode', 'contrast'],
+    actionDetail: { type: 'theme_toggle' },
+  },
+  {
+    id: 'act-print-report',
+    category: 'actions',
+    title: 'Print Executive Report / Save as PDF',
+    subtitle: '1-click export of current view to clean PDF with Aethera letterhead',
+    description: 'Exports current dashboard, fee benchmarks, or appeal letters directly to PDF or physical printer.',
+    href: '#print',
+    badge: 'Export',
+    badgeVariant: 'blue',
+    keywords: ['print', 'pdf', 'export', 'download report', 'save pdf', 'document', 'save as pdf'],
+    actionDetail: { type: 'print_page' },
   },
   {
     id: 'act-pricing',

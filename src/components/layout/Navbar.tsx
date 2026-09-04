@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, Search } from 'lucide-react';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 const services = [
   { name: 'Medical Coding', href: '/services/medical-coding' },
@@ -192,6 +193,9 @@ export default function Navbar() {
               <Search className="w-4 h-4" />
             </button>
 
+            <ThemeToggle variant="pill" className="hidden xl:inline-flex" />
+            <ThemeToggle variant="compact" className="hidden lg:inline-flex xl:hidden" />
+
             <Link prefetch={false}
               href="/schedule"
               className="text-[#1d1d1f] hover:text-[#003087] font-medium py-2 px-3 xl:px-4 rounded-full text-sm transition-colors duration-200 whitespace-nowrap"
@@ -206,8 +210,9 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile search + menu button */}
+          {/* Mobile search + theme + menu button */}
           <div className="lg:hidden flex items-center gap-1">
+            <ThemeToggle variant="compact" />
             <button
               type="button"
               onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
@@ -247,6 +252,12 @@ export default function Navbar() {
               </span>
               <span className="text-xs text-slate-400 font-mono">⌘K</span>
             </button>
+
+            {/* Mobile Low-Glare Mode Switcher */}
+            <div className="flex items-center justify-between px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700">
+              <span className="font-medium">Theme Appearance</span>
+              <ThemeToggle variant="pill" />
+            </div>
 
             {/* Quick Action CTAs */}
             <div className="grid grid-cols-2 gap-2 pt-1 pb-3 border-b border-slate-100">

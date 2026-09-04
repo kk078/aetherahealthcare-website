@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
+import InteractivePortalDemo from '@/components/ui/InteractivePortalDemo';
 
 export const metadata = {
   title: 'Provider Portal | Real-Time Billing Dashboard | Aethera Healthcare',
@@ -103,90 +104,9 @@ export default function Portal() {
             description="Representative view of the Aethera Provider Portal. Your actual dashboard reflects your live data."
           />
           <FadeIn delay={0.2}>
-            <div className="mt-12 rounded-2xl overflow-hidden border border-gray/20 shadow-2xl">
-              {/* Browser chrome */}
-              <div className="bg-gray/10 border-b border-gray/20 px-4 py-3 flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                <div className="ml-4 flex-grow bg-white rounded px-3 py-1 text-xs text-gray">portal.aetherahealthcare.com</div>
-              </div>
-
-              {/* Portal UI */}
-              <div className="flex h-auto min-h-[520px]">
-                {/* Sidebar */}
-                <div className="bg-navy w-52 flex-shrink-0 p-4 hidden md:block">
-                  <div className="flex items-center mb-8 mt-2">
-                    <div className="bg-gradient-to-r from-teal to-mint rounded w-7 h-7 flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">A</span>
-                    </div>
-                    <span className="ml-2 text-white font-bold text-sm font-jakarta">Aethera</span>
-                  </div>
-                  {['Dashboard','Claims','Payments','Denials','AR Report','Analytics','Settings'].map((item, i) => (
-                    <div key={i} className={`flex items-center px-3 py-2.5 rounded-lg mb-1 text-sm ${i === 0 ? 'bg-teal text-white font-semibold' : 'text-gray hover:bg-white/5 cursor-pointer'}`}>
-                      <div className={`w-1.5 h-1.5 rounded-full mr-3 ${i === 0 ? 'bg-mint' : 'bg-gray/40'}`}></div>
-                      {item}
-                    </div>
-                  ))}
-                </div>
-
-                {/* Main content */}
-                <div className="flex-grow bg-cream p-6 overflow-auto">
-                  <div className="flex items-center justify-between mb-6">
-                    <div>
-                      <h2 className="text-lg font-bold text-navy font-jakarta">Dashboard</h2>
-                      <p className="text-xs text-gray">May 2026 · All Providers</p>
-                    </div>
-                    <span className="text-xs bg-teal/10 text-teal border border-teal/20 px-3 py-1 rounded-full font-medium">Live Data</span>
-                  </div>
-
-                  {/* KPI Grid */}
-                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
-                    {[
-                      { label: 'Clean Claim Rate', value: '97.2%', change: '+8.1%', up: true },
-                      { label: 'Denial Rate', value: '3.1%', change: '−8.7%', up: true },
-                      { label: 'Net Collection Rate', value: '96.8%', change: '+4.2%', up: true },
-                      { label: 'Days in AR', value: '24.3', change: '−22.7 days', up: true },
-                      { label: 'Monthly Collections', value: '$284,500', change: '+$51,200', up: true },
-                      { label: 'Appeals Won', value: '71.4%', change: '+18.6%', up: true },
-                    ].map((kpi, i) => (
-                      <div key={i} className="bg-white rounded-xl p-4 border border-gray/10">
-                        <p className="text-xs text-gray mb-1">{kpi.label}</p>
-                        <p className="text-xl font-bold text-navy">{kpi.value}</p>
-                        <p className={`text-xs font-semibold mt-1 ${kpi.up ? 'text-teal' : 'text-red-500'}`}>
-                          {kpi.change} vs prior period
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Bar Chart */}
-                  <div className="bg-white rounded-xl p-4 border border-gray/10">
-                    <p className="text-sm font-bold text-navy mb-4">Monthly Collections (6 months)</p>
-                    <div className="flex items-end gap-3 h-28">
-                      {[
-                        { month: 'Dec', h: 55, val: '$233K' },
-                        { month: 'Jan', h: 62, val: '$249K' },
-                        { month: 'Feb', h: 58, val: '$241K' },
-                        { month: 'Mar', h: 70, val: '$261K' },
-                        { month: 'Apr', h: 75, val: '$271K' },
-                        { month: 'May', h: 100, val: '$285K' },
-                      ].map((bar, i) => (
-                        <div key={i} className="flex flex-col items-center flex-1">
-                          <span className="text-xs text-gray mb-1">{bar.val}</span>
-                          <div
-                            className={`w-full rounded-t-md ${i === 5 ? 'bg-teal' : 'bg-teal/30'}`}
-                            style={{ height: `${bar.h}%` }}
-                          ></div>
-                          <span className="text-xs text-gray mt-1">{bar.month}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="mt-12">
+              <InteractivePortalDemo />
             </div>
-            <p className="text-center text-xs text-gray mt-3">Portal Preview — Representative Screenshot · Your data will populate automatically</p>
           </FadeIn>
         </div>
       </section>

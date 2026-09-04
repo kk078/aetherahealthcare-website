@@ -3,19 +3,77 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
-import { Search, ClipboardCheck, Calculator, ArrowRight, CalendarClock, ListChecks, TrendingDown, Gauge, BookOpen } from 'lucide-react';
+import {
+  Search,
+  ClipboardCheck,
+  Calculator,
+  ArrowRight,
+  CalendarClock,
+  ListChecks,
+  TrendingDown,
+  Gauge,
+  BookOpen,
+  FileCheck2,
+  DollarSign,
+  FileCode,
+  FileText,
+  Clock,
+  Sparkles,
+} from 'lucide-react';
 
 export const metadata = {
   title: { absolute: 'Free Medical Billing & AR Tools | Aethera Healthcare Solutions' },
   description:
-    'Free tools for billing and AR teams: a CARC/RARC denial-code lookup, a clean-claim readiness scorecard, and an A/R days cost calculator. No login required.',
+    '14 free tools for billing and AR teams: CARC/RARC lookup, NCCI claim scrubber, fee schedule benchmarker, 835 ERA decoder, appeal letter generator, and timely filing matrix. No login required.',
 };
 
 const tools = [
   {
+    href: '/tools/ncci-claim-scrubber',
+    icon: FileCheck2,
+    name: 'CMS NCCI Claim Scrubber',
+    desc: 'Test CPT code pairs against official CMS PTP bundling rules. Check modifier -25 and -59/-XS indicators to prevent CARC 97 denials.',
+    tag: 'Scrubber',
+  },
+  {
+    href: '/tools/appeal-letter-generator',
+    icon: FileText,
+    name: 'Appeal Letter Generator',
+    desc: 'Generate legal-grade, formal appeal letters with statutory citations (ERISA, ACA § 2719, CMS NCCI) for CARC 50, 197, 16, 29, 97, and 22.',
+    tag: 'Playbook',
+  },
+  {
+    href: '/tools/practice-proposal-wizard',
+    icon: Sparkles,
+    name: 'Custom Practice Proposal Wizard',
+    desc: 'Build a tailored revenue cycle proposal in 3 minutes. Calculate estimated collections lift, target AR days, and transparent performance pricing.',
+    tag: 'Proposal',
+  },
+  {
+    href: '/tools/fee-schedule-benchmarker',
+    icon: DollarSign,
+    name: 'Fee Schedule Benchmarker',
+    desc: 'Compare your commercial payer reimbursement allowances against 2026 Medicare and regional PPO percentiles to quantify underpayments.',
+    tag: 'Calculator',
+  },
+  {
+    href: '/tools/era-835-decoder',
+    icon: FileCode,
+    name: '835 ERA Remittance Decoder',
+    desc: 'Parse raw 835 EDI segments (CLP, CAS, SVC). Translate adjustment reason codes (CO, PR, OA) into clear financial allocations and action items.',
+    tag: 'Parser',
+  },
+  {
+    href: '/tools/timely-filing-matrix',
+    icon: Clock,
+    name: 'Multi-Payer Timely Filing Matrix',
+    desc: 'Compare initial claim deadlines, corrected claim cutoffs, and appeal windows across 50 state Medicaid programs and commercial PPOs.',
+    tag: 'Reference',
+  },
+  {
     href: '/tools/denial-code-lookup',
     icon: Search,
-    name: 'Denial Code Lookup',
+    name: 'Denial Code Lookup (1,283+ Codes)',
     desc: 'Search CARC/RARC denial codes and get plain-English reasons, how to work each one, and how to prevent it.',
     tag: 'Reference',
   },
@@ -81,7 +139,7 @@ export default function ToolsHub() {
         subtitle="Practical tools our own RCM team uses every day — open to anyone working denials, clean claims, timely filing, and A/R."
         primary={{ href: '#tools', label: 'Browse the Tools' }}
         secondary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
-        chips={['8 free tools', 'No login', 'Built by billers']}
+        chips={['14 free tools', 'No login', 'Built by billers']}
       />
 
       <section id="tools" className="py-14 md:py-20 bg-cream flex-1 scroll-mt-24">

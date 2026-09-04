@@ -63,7 +63,22 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${jakarta.variable} ${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var theme = localStorage.getItem('aethera-theme');
+                if (theme === 'clinical-dark') {
+                  document.documentElement.classList.add('dark');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-cream text-dark">
         <TopContactBar />
         {children}

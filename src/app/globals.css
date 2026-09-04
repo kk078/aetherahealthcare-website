@@ -149,4 +149,287 @@ h1, h2, h3, h4, h5, h6 {
     animation: none !important;
     transition: none !important;
   }
-}
+}
+
+/* ---------------------------------------------------------------------------
+   Clinical Low-Glare (Dark Mode) System
+   Engineered for nocturnal billing shifts, provider EHR workflows, and low-light
+   hospital environments to minimize ocular fatigue while retaining data clarity.
+--------------------------------------------------------------------------- */
+html.dark {
+  --background: #070E18;
+  --foreground: #F8FAFC;
+  --cream: #FAFCFB;
+  --dark: #F8FAFC;
+  --gray: #94A3B8;
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #070E18 !important;
+  color: #F8FAFC !important;
+}
+
+html.dark .bg-cream {
+  background-color: #091322 !important;
+}
+
+html.dark .text-cream {
+  color: #F8FAFC !important;
+}
+
+html.dark .glass-nav {
+  background: rgba(7, 14, 24, 0.96) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+html.dark header.bg-white {
+  background-color: #070E18 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .bg-white {
+  background-color: #0D192C !important;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-gray-50 {
+  background-color: #0A1424 !important;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #122238 !important;
+}
+
+html.dark .border-slate-200,
+html.dark .border-slate-100,
+html.dark .border-gray-200,
+html.dark .border-gray-100 {
+  border-color: rgba(255, 255, 255, 0.09) !important;
+}
+
+html.dark .border-\[\#003087\]\/10 {
+  border-color: rgba(56, 189, 248, 0.18) !important;
+}
+
+html.dark .text-slate-900,
+html.dark .text-\[\#001A52\],
+html.dark .text-\[\#111827\],
+html.dark .text-\[\#1d1d1f\] {
+  color: #F8FAFC !important;
+}
+
+html.dark .text-slate-800 {
+  color: #F1F5F9 !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-\[\#334155\] {
+  color: #CBD5E1 !important;
+}
+
+html.dark .text-slate-600,
+html.dark .text-\[\#64748B\] {
+  color: #94A3B8 !important;
+}
+
+html.dark .text-\[\#003087\] {
+  color: #60A5FA !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #0A1525 !important;
+  color: #F8FAFC !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #64748B !important;
+}
+
+html.dark .hover\:bg-\[\#F0F4FB\]:hover {
+  background-color: #14253F !important;
+}
+
+html.dark .bg-\[\#F0F4FB\] {
+  background-color: #0F1F38 !important;
+}
+
+html.dark .hover\:bg-slate-50:hover {
+  background-color: #112035 !important;
+}
+
+html.dark .hover\:bg-slate-100:hover {
+  background-color: #162942 !important;
+}
+
+/* Translucent Clinical Stat Badges in Dark Mode */
+html.dark .bg-emerald-50 {
+  background-color: rgba(16, 185, 129, 0.14) !important;
+}
+html.dark .text-emerald-950,
+html.dark .text-emerald-900 {
+  color: #34D399 !important;
+}
+html.dark .text-emerald-800,
+html.dark .text-emerald-700 {
+  color: #6EE7B7 !important;
+}
+html.dark .border-emerald-200 {
+  border-color: rgba(16, 185, 129, 0.28) !important;
+}
+
+html.dark .bg-blue-50 {
+  background-color: rgba(59, 130, 246, 0.14) !important;
+}
+html.dark .border-blue-200 {
+  border-color: rgba(59, 130, 246, 0.28) !important;
+}
+
+html.dark .bg-teal-50 {
+  background-color: rgba(13, 115, 119, 0.16) !important;
+}
+html.dark .text-teal-950,
+html.dark .text-teal-900 {
+  color: #5EEAD4 !important;
+}
+html.dark .text-teal-800,
+html.dark .text-teal-700 {
+  color: #99F6E4 !important;
+}
+html.dark .border-teal-200 {
+  border-color: rgba(13, 115, 119, 0.3) !important;
+}
+
+html.dark .bg-rose-50 {
+  background-color: rgba(244, 63, 94, 0.14) !important;
+}
+html.dark .text-rose-950,
+html.dark .text-rose-900 {
+  color: #FB7185 !important;
+}
+html.dark .border-rose-200 {
+  border-color: rgba(244, 63, 94, 0.28) !important;
+}
+
+html.dark .bg-amber-50 {
+  background-color: rgba(245, 158, 11, 0.14) !important;
+}
+html.dark .text-amber-950,
+html.dark .text-amber-900 {
+  color: #FCD34D !important;
+}
+html.dark .border-amber-200 {
+  border-color: rgba(245, 158, 11, 0.28) !important;
+}
+
+/* ---------------------------------------------------------------------------
+   Universal 1-Click Executive PDF Export & Print Stylesheet
+   Formats revenue reports, denial letters, and benchmark analyses into
+   clean, board-ready executive documents with Aethera letterhead.
+--------------------------------------------------------------------------- */
+@media print {
+  @page {
+    margin: 1.2cm 1cm;
+    size: auto;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    padding-top: 0 !important;
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Strip all non-document chrome, navigation, widgets, and banners */
+  header,
+  footer,
+  nav,
+  #fixed-header,
+  #top-contact-bar,
+  .no-print,
+  button:not(.allow-print),
+  [role="dialog"]:not(.allow-print),
+  [aria-label="Back to top"],
+  [aria-label="Schedule Callback"],
+  [aria-label="Cookie consent"],
+  .cookie-banner,
+  .ambient-orb,
+  .pulse-beacon::before {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Executive Aethera Letterhead */
+  body::before {
+    content: "AETHERA HEALTHCARE SOLUTIONS • REVENUE CYCLE MANAGEMENT EXECUTIVE ANALYSIS • CONFIDENTIAL";
+    display: block;
+    text-align: center;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #003087;
+    border-bottom: 2px solid #003087;
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* Executive Confidentiality Footer */
+  body::after {
+    content: "Aethera Healthcare Solutions • (813) 519-4640 • support@aetherahealthcare.com • https://aetherahealthcare.com • Confidential Medical Practice Analysis";
+    display: block;
+    text-align: center;
+    font-size: 7.5pt;
+    color: #64748b;
+    border-top: 1px solid #cbd5e1;
+    padding-top: 8px;
+    margin-top: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  /* Container width normalization */
+  .max-w-7xl,
+  .max-w-6xl,
+  .max-w-5xl,
+  .max-w-4xl,
+  .max-w-3xl {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Prevent split cuts across pages on cards and tables */
+  .print-avoid-break,
+  .rounded-2xl,
+  .rounded-3xl,
+  table,
+  tr,
+  pre,
+  .border {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    box-shadow: none !important;
+  }
+
+  /* Ensure high contrast crisp borders */
+  .border,
+  .border-slate-200,
+  .border-slate-100 {
+    border-color: #cbd5e1 !important;
+  }
+
+  /* Suppress browser link URL printing */
+  a[href]::after {
+    content: none !important;
+  }
+}
+

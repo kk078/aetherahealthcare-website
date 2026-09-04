@@ -3,7 +3,7 @@ import { Phone, Mail } from 'lucide-react';
 
 export default function TopContactBar() {
   return (
-    <div className="fixed top-0 w-full z-50 h-8 bg-[#003087] text-white text-xs flex items-center justify-center gap-4 md:gap-8 px-4">
+    <div id="top-contact-bar" className="fixed top-0 w-full z-50 h-8 bg-[#003087] text-white text-xs flex items-center justify-center gap-4 md:gap-8 px-4 no-print">
       <span className="hidden md:inline text-white/85">Serving physicians, hospitalists &amp; group practices nationwide</span>
       <a
         href="tel:+18135194640"
