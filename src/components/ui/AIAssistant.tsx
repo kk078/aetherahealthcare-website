@@ -97,7 +97,7 @@ export default function AIAssistant() {
               <Sparkles className="h-5 w-5 text-mint" />
               <div>
                 <p className="text-white font-bold text-sm leading-none">Aethera AI</p>
-                <p className="text-white/70 text-[11px] mt-1">Billing &amp; payer answers · Gemini Agent</p>
+                <p className="text-white/70 text-[11px] mt-1">Billing &amp; payer answers · Aethera AI</p>
               </div>
             </div>
             <button onClick={() => setOpen(false)} className="text-white/70 hover:text-white" aria-label="Close"><X className="h-5 w-5" /></button>
@@ -135,7 +135,7 @@ export default function AIAssistant() {
               <Send className="h-4 w-4" />
             </button>
           </form>
-          <p className="text-[11px] text-slate-500 text-center pb-2 px-3 bg-white">Powered by Gemini AI · Routed to {PRIMARY_EXPERT_EMAIL}</p>
+          <p className="text-[11px] text-slate-500 text-center pb-2 px-3 bg-white">Powered by Aethera AI · Routed to {PRIMARY_EXPERT_EMAIL}</p>
         </div>
       )}
 

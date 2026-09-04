@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Talk to an Expert - Gemini Agentic AI & Email Routing', () => {
+test.describe('Talk to an Expert - Agentic AI & Email Routing', () => {
   test('Talk to an Expert floating button is visible and opens dual-mode modal', async ({ page }) => {
     await page.goto('/');
 
@@ -10,8 +10,8 @@ test.describe('Talk to an Expert - Gemini Agentic AI & Email Routing', () => {
     // Click to open modal
     await triggerBtn.click();
 
-    // Verify modal header and Gemini Agentic AI badge
-    await expect(page.getByText('Gemini Agentic AI')).toBeVisible();
+    // Verify modal header and Agentic AI badge
+    await expect(page.getByText('Agentic AI')).toBeVisible();
     await expect(page.getByRole('button', { name: /AI Expert Chat/i })).toBeVisible();
     await expect(page.getByRole('button', { name: /Request Callback/i })).toBeVisible();
 

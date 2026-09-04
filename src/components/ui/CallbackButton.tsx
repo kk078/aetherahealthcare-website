@@ -375,7 +375,7 @@ export default function CallbackButton() {
                   <div className="flex items-center gap-1.5">
                     <p className="font-bold text-sm leading-none">Talk to an Expert</p>
                     <span className="bg-mint/20 text-mint text-[10px] font-semibold px-1.5 py-0.5 rounded border border-mint/30">
-                      Gemini Agentic AI
+                      Agentic AI
                     </span>
                   </div>
                   <p className="text-white/70 text-[11px] mt-1">Live RCM Answers · Routed to Kiran</p>
@@ -442,7 +442,7 @@ export default function CallbackButton() {
                   <div className="flex justify-start">
                     <div className="bg-white border border-slate-200 rounded-2xl rounded-bl-none px-4 py-2.5 text-slate-500 text-xs flex items-center gap-2 shadow-sm">
                       <Loader2 className="h-3.5 w-3.5 animate-spin text-teal" />
-                      <span>Gemini is analyzing RCM rules…</span>
+                      <span>Analyzing RCM rules…</span>
                     </div>
                   </div>
                 )}
@@ -679,7 +679,7 @@ export default function CallbackButton() {
           )}
         </div>
         <div className="hidden sm:flex flex-col items-start text-left leading-none">
-          <span className="text-xs font-medium text-white/80">Gemini AI &amp; Experts</span>
+          <span className="text-xs font-medium text-white/80">AI &amp; Billing Experts</span>
           <span className="text-sm font-bold mt-0.5">{open ? 'Close' : 'Talk to an Expert'}</span>
         </div>
       </button>
