@@ -46,6 +46,7 @@ import {
   Bot,
   FlaskConical,
   Compass,
+  Microscope,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -59,6 +60,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/pediatric-tef-ea-scrubber',
+    icon: Baby,
+    name: 'Pediatric TEF & Esophageal Atresia Scrubber',
+    desc: 'Audit neonatal esophageal atresia and tracheoesophageal fistula repairs (43305/43312), rigid bronchoscopy (+31622-59), gastrostomy (+43653-59), and staged Foker elongation (Modifier -58).',
+    category: 'scrubbers',
+    tag: 'Pediatric Surgery & Neonatology',
+    badge: 'New',
+  },
+  {
+    href: '/tools/diep-flap-reconstruction-scrubber',
+    icon: Microscope,
+    name: 'DIEP Flap Breast Reconstruction Scrubber',
+    desc: 'Audit autologous microvascular DIEP breast reconstructions (19364), bilateral reconstruction (19364-50), operating microscope (+69990), ICG angiography (+15860), and venous rescue (35201-59).',
+    category: 'scrubbers',
+    tag: 'Plastic & Reconstructive Surgery',
+    badge: 'New',
+  },
   {
     href: '/tools/pediatric-sct-coccygectomy-scrubber',
     icon: Baby,

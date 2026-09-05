@@ -91,6 +91,8 @@ const specialtyLinks: Record<string, string> = {
   'Multi-Level Minimally Invasive Adult Spinal Deformity & Lateral Interbody Fusion (LLIF/XLIF)': '/medical-billing/minimally-invasive-adult-spine-deformity',
   'Pediatric Sacrococcygeal Teratoma (SCT) & Congenital Presacral Tumor Resection': '/medical-billing/pediatric-sacrococcygeal-teratoma',
   'Complex Adult Retroperitoneal Sarcoma & Multivisceral Compartment Resection': '/medical-billing/adult-retroperitoneal-sarcoma',
+  'Pediatric Tracheoesophageal Fistula & Esophageal Atresia (TEF/EA) Repair': '/medical-billing/pediatric-tef-esophageal-atresia',
+  'Complex Adult Reconstructive Microsurgery & Autologous DIEP Flap Breast Reconstruction': '/medical-billing/diep-flap-breast-reconstruction',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -617,6 +619,18 @@ const specialties = [
         description: 'Radical compartment en-bloc resection for retroperitoneal sarcoma (>10 cm 49205), contiguous radical nephrectomy (50240), adrenalectomy (60540), hemicolectomy (44140), and IVC replacement (35281).',
         cptCodes: '49203, 49204, 49205, 50240, 60540, 44140, 35221, 35281, 49000, 99223',
         challenges: 'Contiguous organ resection (nephrectomy/adrenalectomy) bundling into 49205, major vascular graft reconstruction unbundling denials, and multi-surgeon Modifier -62 matching discrepancies.'
+      },
+      {
+        name: 'Pediatric Tracheoesophageal Fistula & Esophageal Atresia (TEF/EA) Repair',
+        description: 'Neonatal surgical repair of esophageal atresia with tracheoesophageal fistula (43305/43312), staged Foker traction elongation (Modifier -58), gastrostomy tube placement (+43653), and diagnostic rigid bronchoscopy (+31622).',
+        cptCodes: '43305, 43312, 43314, 43653, 31622, 31600, 31780, 32100, 99468, 99291',
+        challenges: 'Enteral gastrostomy tube (+43653) bundling into primary thoracic repair, staged Foker elongation global period clawbacks absent Modifier -58, and diagnostic airway rigid bronchoscopy (+31622) unbundling denials.'
+      },
+      {
+        name: 'Complex Adult Reconstructive Microsurgery & Autologous DIEP Flap Breast Reconstruction',
+        description: 'Autologous microvascular free deep inferior epigastric perforator (DIEP) flap breast reconstruction (19364), operating microscope add-on (+69990), indocyanine green (ICG) laser fluorescence angiography (+15860), and secondary venous outflow rescue (+35201).',
+        cptCodes: '19364, 15756, 15757, 19357, 15860, 69990, 35201, 35206, 99223, 99233',
+        challenges: 'Bilateral DIEP flap (19364-50) fee reduction and downcoding, operating microscope (+69990) unbundling denials, indocyanine green (ICG) angiography (+15860) payer coverage disputes, and second venous anastomotic rescue (+35201) clawbacks.'
       }
     ]
   }
@@ -624,13 +638,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 82+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 84+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 82+ specialties — Pediatric Sacrococcygeal Teratoma, Adult Retroperitoneal Sarcoma, Pediatric Single-Ventricle Palliation, and more.',
+    description: 'Expert medical billing across 84+ specialties — Pediatric TEF/EA Repair, DIEP Flap Breast Reconstruction, Pediatric Sacrococcygeal Teratoma, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -641,7 +655,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 82 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 84 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -662,10 +676,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 82+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 84+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['82+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['84+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

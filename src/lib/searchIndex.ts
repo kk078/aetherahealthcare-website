@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 87 Interactive Tools
+// 89 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -1017,6 +1017,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'emerald',
     keywords: ['retroperitoneal sarcoma', 'soft tissue sarcoma', '49205', '49204', '49203', 'radical nephrectomy', '50240', 'adrenalectomy', '60540', 'hemicolectomy', '44140', 'ivc replacement', '35281', 'vascular reconstruction', 'modifier 62', 'co-surgeon', 'surgical oncology'],
   },
+  {
+    id: 'tool-pediatric-tef-ea',
+    category: 'tools',
+    title: 'Pediatric TEF & Esophageal Atresia Scrubber',
+    subtitle: 'Atresia repair (43305/43312), rigid bronchoscopy (+31622-59) & gastrostomy (+43653-59)',
+    description: 'Audit neonatal esophageal atresia with tracheoesophageal fistula repairs, staged Foker elongation (Modifier -58), and diagnostic airway endoscopy.',
+    href: '/tools/pediatric-tef-ea-scrubber',
+    badge: 'Pediatric TEF',
+    badgeVariant: 'teal',
+    keywords: ['pediatric tef', 'esophageal atresia', 'tracheoesophageal fistula', '43312', '43305', '43314', 'foker elongation', 'modifier 58', 'gastrostomy tube', '43653', 'rigid bronchoscopy', '31622', 'modifier 22', 'neonatal surgery', 'pediatric thoracic surgery'],
+  },
+  {
+    id: 'tool-diep-flap-reconstruction',
+    category: 'tools',
+    title: 'DIEP Flap Breast Reconstruction Scrubber',
+    subtitle: 'Autologous free flap (19364/19364-50), operating microscope (+69990) & venous rescue (35201-59)',
+    description: 'Audit autologous microvascular DIEP breast reconstructions, bilateral reconstruction WHCRA compliance, operating microscope unbundling, and second venous coupling.',
+    href: '/tools/diep-flap-reconstruction-scrubber',
+    badge: 'Microsurgery',
+    badgeVariant: 'purple',
+    keywords: ['diep flap', 'breast reconstruction', 'autologous free flap', '19364', 'modifier 50', 'bilateral diep', 'operating microscope', '69990', 'icg angiography', '15860', 'venous rescue', '35201', 'whcra', 'plastic surgery', 'microsurgery'],
+  },
 ];
 
 // Specialties
@@ -1872,14 +1894,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['retroperitoneal sarcoma', 'multivisceral resection', '49205', 'radical nephrectomy', '50240', 'adrenalectomy', '60540', 'colectomy', '44140', 'ivc replacement', '35281', 'modifier 62', 'co-surgery', 'surgical oncology'],
   },
   {
+    id: 'spec-pediatric-tef-esophageal-atresia',
+    category: 'specialties',
+    title: 'Pediatric Tracheoesophageal Fistula & Esophageal Atresia (TEF/EA) Repair Billing',
+    subtitle: 'Thoracic esophagoplasty (43312/43305), bronchoscopy (+31622-59) & staged Foker (Mod -58)',
+    href: '/medical-billing/pediatric-tef-esophageal-atresia',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric tef', 'esophageal atresia', 'tracheoesophageal fistula', '43312', '43305', '43314', 'foker elongation', 'modifier 58', 'gastrostomy', '43653', 'bronchoscopy', '31622', 'neonatal surgery', 'pediatric thoracic surgery'],
+  },
+  {
+    id: 'spec-diep-flap-breast-reconstruction',
+    category: 'specialties',
+    title: 'Complex Adult Reconstructive Microsurgery & Autologous DIEP Flap Breast Reconstruction Billing',
+    subtitle: 'Bilateral DIEP flap (19364-50), microscope (+69990), ICG (+15860) & WHCRA statutory parity',
+    href: '/medical-billing/diep-flap-breast-reconstruction',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['diep flap', 'breast reconstruction', 'autologous microsurgery', '19364', 'modifier 50', 'bilateral flap', 'operating microscope', '69990', 'icg angiography', '15860', 'second vein anastomosis', '35201', 'whcra', 'plastic reconstructive surgery'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 82+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 84+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass', 'pediatric mibg', 'neuroblastoma', 'robotic hernia', 'tar component separation', 'pediatric tpiat', 'islet transplant', 'endoscopic skull base', 'odontoidectomy', 'single ventricle', 'norwood', 'glenn', 'fontan', 'adult spine deformity', 'llif', 'xlif', 'pediatric sct', 'sacrococcygeal teratoma', 'retroperitoneal sarcoma'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass', 'pediatric mibg', 'neuroblastoma', 'robotic hernia', 'tar component separation', 'pediatric tpiat', 'islet transplant', 'endoscopic skull base', 'odontoidectomy', 'single ventricle', 'norwood', 'glenn', 'fontan', 'adult spine deformity', 'llif', 'xlif', 'pediatric sct', 'sacrococcygeal teratoma', 'retroperitoneal sarcoma', 'pediatric tef', 'esophageal atresia', 'diep flap', 'breast reconstruction'],
   },
 ];
 

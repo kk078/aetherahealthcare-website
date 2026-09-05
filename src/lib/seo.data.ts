@@ -1500,6 +1500,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How is inferior vena cava (IVC) vascular resection and reconstruction reported during retroperitoneal sarcoma surgery?', a: 'When retroperitoneal sarcoma involves the retrohepatic or infrarenal IVC requiring prosthetic tube graft replacement or patch cavoplasty, vascular repair is reported using CPT 35281 (repair blood vessel with other than vein; intra-abdominal) or CPT 35221. If a vascular surgeon performs the vascular resection and replacement while a surgical oncologist performs the tumor resection, each surgeon reports their respective primary codes, or Modifier -62 is appended if co-performing the primary oncologic excision.' },
     ],
   },
+  {
+    slug: 'pediatric-tef-esophageal-atresia',
+    name: 'Pediatric Tracheoesophageal Fistula & Esophageal Atresia (TEF/EA) Repair',
+    noun: 'pediatric thoracic surgeons, neonatal general surgeons, pediatric otolaryngologists, and children\'s hospital fetal care centers',
+    cpt: '43305, 43312, 43314, 43653, 31622, 31600, 31780, 32100, 99468, 99291',
+    blurb:
+      'Neonatal surgical repair for Gross Types A–E esophageal atresia and tracheoesophageal fistula: primary extrapleural thoracotomy / thoracoscopic fistula ligation and primary end-to-end esophageal anastomosis (43305/43312), staged Foker traction elongation for long-gap atresia (Modifier -58), gastrostomy tube placement (+43653), and diagnostic rigid bronchoscopy (+31622).',
+    painPoints: [
+      'Gastrostomy tube placement (+43653) bundling into TEF repair: Payers improperly denying enteral access placement as inclusive to primary thoracotomy',
+      'Staged Foker elongation global period clawbacks: Subsequent surgical sessions for internal traction tightening denied absent staged procedure Modifier -58',
+      'Diagnostic rigid bronchoscopy (+31622) unbundling denials: Disallowance of pre-repair airway bronchoscopy performed to rule out secondary proximal fistulae',
+      'Thoracoscopic minimally invasive approach downcoding: Rejection of Modifier -22 on delicate neonatal thoracoscopic fistula division',
+    ],
+    faqs: [
+      { q: 'How is primary repair of neonatal esophageal atresia with tracheoesophageal fistula coded?', a: 'Primary repair of esophageal atresia with tracheoesophageal fistula via right thoracotomy or thoracoscopy is reported using CPT 43305 (esophagoplasty with repair of tracheoesophageal fistula, cervical approach) or CPT 43312 (esophagoplasty with repair of tracheoesophageal fistula, thoracic or abdominal approach). When performed thoracoscopically with extensive intra-thoracic dissection in neonates under 2.5 kg, Modifier -22 is supported with documented operative time increases.' },
+      { q: 'Can gastrostomy tube placement (+43653) and bronchoscopy (+31622) be billed separately with TEF repair?', a: 'Yes. Pre-repair rigid bronchoscopy (CPT 31622) to locate the fistula orifice relative to the carina is separately billable with Modifier -59 or -XU as a distinct diagnostic airway evaluation. Concomitant gastrostomy placement (CPT 43653 or 43830) for gastric decompression is performed via a separate abdominal incision and is separately reimbursable with Modifier -59.' },
+    ],
+  },
+  {
+    slug: 'diep-flap-breast-reconstruction',
+    name: 'Complex Adult Reconstructive Microsurgery & Autologous DIEP Flap Breast Reconstruction',
+    noun: 'plastic and reconstructive microsurgeons, surgical oncologists, autologous breast reconstructive teams, and comprehensive cancer institutes',
+    cpt: '19364, 15756, 15757, 19357, 15860, 69990, 35201, 35206, 99223, 99233',
+    blurb:
+      'Advanced autologous microvascular post-mastectomy breast reconstruction: deep inferior epigastric perforator (DIEP) free flap harvest with microvascular anastomosis to internal mammary recipient vessels (CPT 19364), operating microscope add-on (+69990), indocyanine green (ICG) laser fluorescence angiography (+15860), second venous coupling (+35201), and bilateral symmetry reconstruction.',
+    painPoints: [
+      'Bilateral DIEP flap (19364-50) fee reduction and downcoding: Commercial payers downcoding bilateral free flaps to pedicled TRAM flaps or rejecting bilateral modifier billing',
+      'Operating microscope (+69990) unbundling denials: Inappropriate denial of high-power microvascular magnification during 1mm–2mm arterial and venous coupler anastomoses',
+      'Indocyanine green (ICG) angiography (+15860) coverage disputes: Health plans denying intraoperative perfusion imaging as experimental or inclusive to flap transfer',
+      'Second venous anastomotic rescue (+35201/+35206) clawbacks: Disallowance of additional venous outflow anastomoses performed to prevent microvascular flap congestion',
+    ],
+    faqs: [
+      { q: 'How should bilateral DIEP flap breast reconstructions be coded under federal WHCRA guidelines?', a: 'Under the Women’s Health and Cancer Rights Act (WHCRA) and CPT coding guidelines, autologous free DIEP flap reconstruction is reported using CPT 19364 (breast reconstruction; with other than muscle-sparing free flap of lower abdomen). For bilateral reconstructions, surgeons should report CPT 19364-50 (or 19364-RT and 19364-LT depending on payer modifier rules). Each breast represents an independent microvascular harvest, transfer, and dual-vessel anastomosis requiring dedicated operative documentation.' },
+      { q: 'Is the operating microscope (+69990) separately billable with free flap breast reconstruction (CPT 19364)?', a: 'Yes. Under CMS NCCI Chapter VIII guidelines, CPT 19364 does not include the operating microscope. Add-on code +69990 is fully reportable when the operating microscope is utilized for microvascular dissection and micro-arterial/venous anastomoses (e.g. 9-0 or 10-0 nylon sutures under 10x–16x magnification), distinct from surgical loupes.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
