@@ -33,6 +33,8 @@ const specialtyLinks: Record<string, string> = {
   'Ambulatory Surgery Centers (ASC)': '/medical-billing/asc',
   'Emergency Medicine': '/medical-billing/emergency-medicine',
   'Urgent Care': '/medical-billing/urgent-care',
+  'Nephrology & Dialysis': '/medical-billing/nephrology',
+  'Otolaryngology & ENT': '/medical-billing/ent',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -136,6 +138,12 @@ const specialties = [
         description: 'Chemotherapy infusion administration sequencing, high-cost immunotherapy J-codes, and clinical trial modifiers.',
         cptCodes: '96413, 96415, 96372, J9000-J9999',
         challenges: 'Multi-drug infusion hierarchy rules, mandatory JW/JZ drug wastage tracking, and pre-authorization denials for target biotherapies.'
+      },
+      {
+        name: 'Nephrology & Dialysis',
+        description: 'ESRD monthly capitation payment (MCP) tiers, in-center hemodialysis and peritoneal dialysis supervision, and CKD coordination.',
+        cptCodes: '90951-90970, 90935-90945, 90989, 99202-99215',
+        challenges: 'Partial-month MCP day calculations during patient hospital stays, dialysis facility duplicate claims, and vascular access coding.'
       }
     ]
   },
@@ -165,6 +173,12 @@ const specialties = [
         description: 'Diagnosis and treatment of conditions affecting the urinary tract and male reproductive system.',
         cptCodes: '50010-55899, 99211-99215, 93000-93010',
         challenges: 'Stone procedure coding, prostate procedures, and chemotherapy administration.'
+      },
+      {
+        name: 'Otolaryngology & ENT',
+        description: 'Functional endoscopic sinus surgery (FESS), balloon sinuplasty, diagnostic nasal endoscopy, and multi-antigen allergy immunotherapy.',
+        cptCodes: '31231-31298, 95165, 92557, 69210, 69436',
+        challenges: 'Multiple endoscopy reduction rule deductions, same-day E/M modifier 25 documentation, and allergy vial billing limits.'
       }
     ]
   },

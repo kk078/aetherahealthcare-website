@@ -41,6 +41,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/denial-overturn-predictor',
+    icon: ShieldAlert,
+    name: 'Claim Denial Overturn Probability & Strategy Predictor',
+    desc: 'Calculate statistical likelihood of overturning CARC denials (CO-50, CO-197, CO-97, CO-16, CO-29), track statutory appeal deadlines, and copy ERISA/CMS legal citations.',
+    category: 'scrubbers',
+    tag: 'Appeal Predictor',
+    badge: 'New',
+  },
+  {
+    href: '/tools/prompt-pay-statutes',
+    icon: Scale,
+    name: '50-State Prompt-Payment Statute & Penalty Matrix',
+    desc: 'Look up electronic clean-claim deadlines (15–30 days), compute accrued annual interest penalties (12%–18%), and generate formal demand notices across 50 states.',
+    category: 'calculators',
+    tag: 'Prompt Pay',
+    badge: 'New',
+  },
+  {
     href: '/tools/underpayment-analyzer',
     icon: DollarSign,
     name: 'Payer Contract Underpayment & Variance Analyzer',
@@ -352,7 +370,7 @@ export default function ToolsDirectory() {
               type="search"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search 27 free tools & engines…"
+              placeholder="Search 29 free tools & engines…"
               className="w-full pl-9 pr-3 py-1.5 border border-gray/25 rounded-xl text-xs text-navy focus:outline-none focus:ring-2 focus:ring-teal"
             />
           </div>

@@ -420,6 +420,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How are rapid point-of-care laboratory tests paid without rejections?', a: 'We automatically append Modifier QW to CLIA-waived testing CPTs and populate the provider clinic\'s active CLIA ID across Loop 2300 (REF*X4) on all 837P electronic files.' },
     ],
   },
+  {
+    slug: 'nephrology',
+    name: 'Nephrology & Dialysis Centers',
+    noun: 'nephrologists, dialysis centers, and kidney care clinics',
+    cpt: '90951–90970, 90935–90945, 90989, 90999, 99202–99215',
+    blurb:
+      'ESRD monthly capitation payment (MCP) tiers, in-center and home dialysis supervision, vascular access management, and CKD chronic disease coordination.',
+    painPoints: [
+      'MCP monthly capitation denials (90951–90970) due to patient mid-month hospitalizations, transient dialysis treatments, or unbilled partial-month days (90970)',
+      'Dialysis facility vs professional physician duplicate claim rejections under CMS ESRD Prospective Payment System (PPS)',
+      'Commercial payer underpayments on immunosuppressive post-transplant medication management and complex CKD care plan oversight (G0511/99490)',
+      'Vascular access declotting and fistulogram coding mismatches (36901–36906) triggering NCCI PTP edits and bilateral bundling clawbacks',
+    ],
+    faqs: [
+      { q: 'How do you handle patient hospitalizations during an ESRD Monthly Capitation Payment (MCP) cycle?', a: 'When an ESRD patient is hospitalized during a month, full MCP codes cannot be billed. We automatically pivot to per-day MCP codes (90970) for the non-hospitalized days, preventing complete monthly reimbursement forfeiture.' },
+      { q: 'How do you verify vascular access intervention coding compliance?', a: 'Our certified coders audit diagnostic angiography vs mechanical thrombectomy within the dialysis access circuit, ensuring proper usage of peripheral/central segment CPTs 36901–36906 with appropriate angiographic documentation.' },
+    ],
+  },
+  {
+    slug: 'ent',
+    name: 'Otolaryngology & ENT',
+    noun: 'otolaryngologists, head & neck surgeons, and ENT specialty groups',
+    cpt: '31231–31298, 95165, 92557, 69210, 69436, 30520, 30140',
+    blurb:
+      'Functional endoscopic sinus surgery (FESS), in-office balloon sinuplasty, diagnostic nasal endoscopy, multi-antigen allergy immunotherapy (95165), and audiology billing.',
+    painPoints: [
+      'Diagnostic nasal endoscopy (31231) bundled into surgical sinus endoscopy (31254–31288) or denied when billed with same-day E/M without Modifier 25',
+      'Commercial payer downcoding and unit clawbacks on multi-dose allergy vial preparation (95165) under restrictive payer unit limits',
+      'Multiple endoscopy reduction rule deductions automatically discounting sinus procedures within the same surgical family without contractual review',
+      'Cerumen removal (69210) claim denials when performed bilaterally or without documentation of instrumentation and clinical necessity',
+    ],
+    faqs: [
+      { q: 'How do you prevent denials when billing nasal endoscopy (31231) with an office visit?', a: 'We verify that the medical record details a distinct and separately identifiable evaluation with standalone medical decision-making before appending Modifier 25 to the E/M code.' },
+      { q: 'How do you navigate multiple endoscopy reduction rules in sinus surgery?', a: 'We model the base endoscopy code values against secondary sinus procedures, sequencing the highest RVU surgery primarily and tracking appropriate modifier 51/59 indicators to protect net surgeon yield.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
