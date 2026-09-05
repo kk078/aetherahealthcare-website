@@ -1212,6 +1212,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How should surgical teams document Modifier -22 on complex robotic partial nephrectomy (50543)?', a: 'When an endophytic, central, or hilar renal tumor requires prolonged warm ischemia, multiple intraoperative ultrasound assessments, complex vascular control, and double-layer renorrhaphy, Modifier -22 (increased procedural services) should be appended to CPT 50543. The operative note must include a dedicated "Modifier 22 Justification" paragraph documenting specific percentage increases in operative time, blood loss, and technical complexity beyond standard partial nephrectomy.' },
     ],
   },
+  {
+    slug: 'pediatric-cdh-ecmo',
+    name: 'Pediatric Congenital Diaphragmatic Hernia (CDH) & ECMO Surgical Repair',
+    noun: 'pediatric general surgeons, pediatric surgical critical care specialists, neonatologists, and children\'s hospital fetal care institutes',
+    cpt: '39503, 39540, 33946, 33947, 49605, 49568, 36510, 36660, 99468, 99469, 99291, 99223',
+    blurb:
+      'Comprehensive surgical management for neonatal congenital diaphragmatic hernia (CDH): open subcostal/thoracoscopic Bochdalek hernia repair with prosthetic patch reconstruction, venoarterial (VA) ECMO cannulation, temporary abdominal domain silo staging with Modifier -58, and continuous neonatal surgical intensive care.',
+    painPoints: [
+      'Gore-Tex / biologic patch reinforcement unbundling denials: Commercial payers bundling prosthetic patch material and insertion (+49568/20999) into primary neonatal CDH repair (39503)',
+      'Neonatal ECMO initiation (+33946/+33947) bundling into bedside resuscitation: Clearinghouses erroneously bundling surgical VA-ECMO cutdown cannulation into neonatal delivery room critical care (99468)',
+      'Staged abdominal closure (silo placement 49605) global clawbacks: Subsequent abdominal wall silo reduction and definitive fascial closure denied absent staged procedure Modifier -58',
+      'Concurrent neonatology and pediatric surgery critical care audits: Payers rejecting same-day pediatric surgical critical care (99291-25) when neonatology bills initial neonatal intensive care (99468)',
+    ],
+    faqs: [
+      { q: 'Can neonatal ECMO cannulation (33946/33947) be billed alongside CDH repair (39503)?', a: 'Yes. When severe pulmonary hypoplasia and persistent pulmonary hypertension of the newborn (PPHN) necessitate extracorporeal membrane oxygenation, surgical cutdown cannulation of the right common carotid artery and internal jugular vein (CPT 33946 for VA ECMO initiate, 33947 for central) is separately billable with Modifier -59 or -XU from the diaphragmatic hernia repair (39503), as they represent completely distinct operative sites, incisions, and clinical indications.' },
+      { q: 'How should staged abdominal wall silo placement and closure be coded during CDH repair?', a: 'When visceral-abdominal disproportion causes prohibitive intra-abdominal hypertension, the pediatric surgeon constructs a temporary spring-loaded or prosthetic abdominal silo (CPT 49605). Subsequent operative visits for silo reduction and delayed primary abdominal closure must be appended with Modifier -58 (staged procedure by the same surgeon during postoperative period), referencing the initial operative note where staged domain expansion was documented as the planned clinical course.' },
+    ],
+  },
+  {
+    slug: 'taaa-fenestrated-evar',
+    name: 'Thoracoabdominal Aortic Aneurysm (TAAA) Repair & Branched/Fenestrated EVAR (FEVAR)',
+    noun: 'vascular surgeons, cardiothoracic aortic specialists, endovascular aortic reconstructive teams, and comprehensive aortic centers',
+    cpt: '33877, 34841, 34842, 34843, 34844, 34845, 34846, 34847, 34848, 62272, 36245, 37236, 99291, 99223',
+    blurb:
+      'Complex thoracoabdominal aortic aneurysm (TAAA) repair across Crawford Extents I–IV: fenestrated and branched endovascular aortic repair (FEVAR / BEVAR) with visceral vessel branch integration (celiac, SMA, renal arteries), open thoracoabdominal graft replacement, prophylactic spinal cord CSF drainage (62272), and multi-surgeon co-surgery.',
+    painPoints: [
+      'Visceral vessel branch tier unbundling denials (34841-34848): Clearinghouses bundling multi-vessel fenestrated/branched visceral modules into single-branch codes, drastically discounting high-complexity 3-vessel and 4-vessel FEVAR',
+      'Prophylactic spinal cord protective lumbar CSF drainage (62272) bundling: Payers rejecting neuroprotective lumbar drainage catheter placement as inclusive to endovascular aortic repair',
+      'Vascular co-surgeon Modifier -62 matching failures: High-acuity open Crawford TAAA repairs requiring paired cardiothoracic and vascular surgeons failing reimbursement due to unaligned operative codes',
+      'Selective visceral catheterization add-on denials (+36245-+36247): Erroneous bundling of target visceral artery catheterization and bridging stent deployment into primary FEVAR deployment',
+    ],
+    faqs: [
+      { q: 'How are visceral branches coded under current CPT guidelines for FEVAR (34841-34848)?', a: 'CPT codes 34841–34848 specifically categorize fenestrated/branched endovascular aortic repair based on whether the endograft incorporates the abdominal aorta only (34841–34844) or the visceral aorta extending into the lower thoracic aorta (34845–34848), tiered by the exact number of visceral arteries revascularized (1, 2, 3, or 4 vessels including celiac, superior mesenteric, right renal, and left renal arteries). Each visceral artery revascularized must be explicitly identified in the operative summary.' },
+      { q: 'Is prophylactic lumbar CSF drainage (62272) separately billable during thoracoabdominal aneurysm repair?', a: 'Yes. Prophylactic spinal cord protection via lumbar cerebrospinal fluid catheter placement (CPT 62272) to monitor and maintain spinal cord perfusion pressure (mitigating paraplegia risk) is performed prior to aortic cross-clamping or endograft deployment. Under CMS NCCI guidelines, CPT 62272 is separately billable with Modifier -59 or -XU, documented with pre-incision catheter placement and distinct physiological monitoring rationale.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

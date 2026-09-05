@@ -58,6 +58,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/pediatric-cdh-ecmo-scrubber',
+    icon: Baby,
+    name: 'Pediatric CDH & Neonatal ECMO Repair Scrubber',
+    desc: 'Audit neonatal CDH repair (39503), defend Gore-Tex patch reconstruction (+49568-59), unbundle VA-ECMO cutdown cannulation (+33946-59), and safeguard staged silo closure (49605-58).',
+    category: 'scrubbers',
+    tag: 'Pediatric General & Critical Care Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/taaa-fevar-scrubber',
+    icon: Heart,
+    name: 'Complex Fenestrated/Branched EVAR (FEVAR) & TAAA Scrubber',
+    desc: 'Audit multi-vessel visceral aortic endografts (34841-34848), defend open Crawford TAAA resections (33877), unbundle lumbar CSF drainage (62272-59), and coordinate Modifier -62.',
+    category: 'scrubbers',
+    tag: 'Vascular & Endovascular Surgery',
+    badge: 'New',
+  },
+  {
     href: '/tools/pediatric-craniosynostosis-scrubber',
     icon: Bone,
     name: 'Pediatric Cranial Vault Remodeling & Synostosis Scrubber',

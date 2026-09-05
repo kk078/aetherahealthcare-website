@@ -75,6 +75,8 @@ const specialtyLinks: Record<string, string> = {
   'Cytoreductive Surgery & Hyperthermic Intraperitoneal Chemotherapy (HIPEC)': '/medical-billing/hipec-surgical-oncology',
   'Pediatric Craniosynostosis & Cranial Vault Remodeling': '/medical-billing/pediatric-craniosynostosis',
   'Cytoreductive Prostatectomy & High-Risk Robotic Urologic Oncology': '/medical-billing/robotic-urologic-oncology',
+  'Pediatric Congenital Diaphragmatic Hernia (CDH) & ECMO Surgical Repair': '/medical-billing/pediatric-cdh-ecmo',
+  'Thoracoabdominal Aortic Aneurysm (TAAA) Repair & Branched/Fenestrated EVAR (FEVAR)': '/medical-billing/taaa-fenestrated-evar',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -505,6 +507,18 @@ const specialties = [
         description: 'Robot-assisted radical prostatectomy (RARP) with extended pelvic lymph node dissection (ePLND), retroperitoneal robotic partial nephrectomy with warm ischemia preservation, and robot-assisted radical cystectomy (RARC) with intracorporeal urinary diversion (neobladder/ileal conduit).',
         cptCodes: '55866, 38571, 38572, 50543, 50545, 51596, 50825, 49320, 50845, 99214, 99223',
         challenges: 'Extended pelvic lymphadenectomy (+38571/+38572) unbundling denials, robotic instrumentation S-code denials (S2900), intracorporeal urinary diversion bundling in radical cystectomy, and complex renal tumor Modifier -22 justification.'
+      },
+      {
+        name: 'Pediatric Congenital Diaphragmatic Hernia (CDH) & ECMO Surgical Repair',
+        description: 'Neonatal CDH repair (39503/39540), Gore-Tex/bioprosthetic patch reconstruction (+49568/20999), venoarterial (VA) ECMO cannulation (+33946/+33947), abdominal wall silo staging (49605-58), and neonatal critical care.',
+        cptCodes: '39503, 39540, 33946, 33947, 49605, 49568, 36510, 36660, 99468, 99469, 99291, 99223',
+        challenges: 'Prosthetic patch unbundling denials into 39503, neonatal ECMO cannulation bundling into critical care (99468), and staged silo closure global clawbacks absent Modifier -58.'
+      },
+      {
+        name: 'Thoracoabdominal Aortic Aneurysm (TAAA) Repair & Branched/Fenestrated EVAR (FEVAR)',
+        description: 'Crawford Extent I–IV open thoracoabdominal aortic replacement (33877), fenestrated/branched EVAR with visceral vessel branches (34841-34848: celiac, SMA, renals), and spinal cord protective CSF drainage (62272).',
+        cptCodes: '33877, 34841, 34842, 34843, 34844, 34845, 34846, 34847, 34848, 62272, 36245, 37236, 99291, 99223',
+        challenges: 'Visceral vessel branch tier unbundling denials (34841-34848), prophylactic spinal cord lumbar CSF drain (62272) bundling, and dual vascular/cardiac co-surgeon Modifier -62 coordination.'
       }
     ]
   }
@@ -512,13 +526,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 66+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 68+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 66+ specialties — Pediatric Craniosynostosis, Robotic Urologic Oncology, Pediatric Spine & EOS, Cytoreductive Surgery & HIPEC, and more.',
+    description: 'Expert medical billing across 68+ specialties — Pediatric CDH & ECMO, Thoracoabdominal Aortic Aneurysm (TAAA) & FEVAR, Pediatric Craniosynostosis, Robotic Urologic Oncology, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -529,7 +543,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 66 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 68 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -550,10 +564,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 66+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 68+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['66+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['68+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

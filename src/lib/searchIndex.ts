@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 71 Interactive Tools
+// 73 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -841,6 +841,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'teal',
     keywords: ['robotic urologic oncology', 'rarp', 'prostatectomy', '55866', 'extended pelvic lymphadenectomy', '38572', 'partial nephrectomy', '50543', 'radical cystectomy', '51595', '51596', 'neobladder', 'ileal conduit', 'modifier 22', 'modifier 59', 's-code', 's2900', 'ureteral stent', '50947', 'modifier 51'],
   },
+  {
+    id: 'tool-pediatric-cdh-ecmo',
+    category: 'tools',
+    title: 'Pediatric CDH & Neonatal ECMO Repair Scrubber',
+    subtitle: 'CDH repair (39503), Gore-Tex patch (+49568-59), VA-ECMO (+33946-59) & staged silo (49605-58)',
+    description: 'Audit neonatal congenital diaphragmatic hernia repair (CPT 39503), defend Gore-Tex prosthetic patch reconstruction (+49568-59), unbundle VA-ECMO cutdown cannulation (+33946-59), and safeguard staged silo closure (49605-58).',
+    href: '/tools/pediatric-cdh-ecmo-scrubber',
+    badge: 'Pediatric Surgery',
+    badgeVariant: 'teal',
+    keywords: ['pediatric cdh', 'congenital diaphragmatic hernia', '39503', 'bochdalek', 'ecmo', 'va-ecmo', '33946', '33947', 'prosthetic patch', 'gore-tex', '49568', 'abdominal silo', '49605', 'modifier 58', 'modifier 59', 'modifier 25', 'umbilical line', '36660', 'neonatal critical care', '99468'],
+  },
+  {
+    id: 'tool-taaa-fevar',
+    category: 'tools',
+    title: 'Complex Fenestrated/Branched EVAR (FEVAR) & TAAA Scrubber',
+    subtitle: '4-vessel FEVAR (34844), Crawford open repair (33877), CSF drain (62272-59) & Co-Surgeon Mod 62',
+    description: 'Audit multi-vessel visceral aortic endografts (CPT 34841-34848), defend open Crawford TAAA resections (33877), unbundle prophylactic spinal cord lumbar CSF drains (62272-59), and coordinate co-surgeon Modifier -62 matching.',
+    href: '/tools/taaa-fevar-scrubber',
+    badge: 'Vascular Surgery',
+    badgeVariant: 'amber',
+    keywords: ['fevar', 'bevar', 'taaa', 'thoracoabdominal aortic aneurysm', '34844', '34843', '34842', 'crawford repair', '33877', 'csf drain', 'lumbar drain', '62272', 'bridging stent', '37236', 'modifier 59', 'modifier 62', 'co-surgeon', 'modifier 51', 'modifier 25', 'vascular critical care', '99291'],
+  },
 ];
 
 // Specialties
@@ -1536,14 +1558,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['robotic urology', 'urologic oncology', 'rarp', 'prostatectomy', '55866', 'extended lymphadenectomy', '38572', 'partial nephrectomy', '50543', 'radical cystectomy', '51596', 'neobladder', 'ileal conduit', 'modifier 22', 'modifier 59', 's2900'],
   },
   {
+    id: 'spec-pediatric-cdh-ecmo',
+    category: 'specialties',
+    title: 'Pediatric Congenital Diaphragmatic Hernia (CDH) & ECMO Billing',
+    subtitle: 'CDH repair (39503), Gore-Tex patch (+49568), VA-ECMO cutdown (+33946) & staged silo (49605-58)',
+    href: '/medical-billing/pediatric-cdh-ecmo',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric cdh', 'congenital diaphragmatic hernia', '39503', 'bochdalek', 'ecmo', 'va-ecmo', '33946', '33947', 'patch closure', '49568', 'silo', '49605', 'modifier 58', 'modifier 59', 'neonatal critical care', '99468', 'pediatric surgery'],
+  },
+  {
+    id: 'spec-taaa-fenestrated-evar',
+    category: 'specialties',
+    title: 'Thoracoabdominal Aortic Aneurysm (TAAA) & FEVAR Billing',
+    subtitle: 'Visceral FEVAR (34841-34848), Crawford open repair (33877), lumbar CSF drain (62272) & Mod 62',
+    href: '/medical-billing/taaa-fenestrated-evar',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['taaa', 'fevar', 'bevar', 'thoracoabdominal aneurysm', 'crawford repair', '33877', '34844', '34843', '34842', 'lumbar csf drain', '62272', 'visceral branches', 'bridging stent', '37236', 'modifier 62', 'co-surgeon', 'vascular surgery', 'aortic surgery'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 66+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 68+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm'],
   },
 ];
 
