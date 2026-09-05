@@ -45,6 +45,8 @@ const specialtyLinks: Record<string, string> = {
   'Wound Care & Hyperbaric Medicine': '/medical-billing/wound-care',
   'FQHC & Community Health Clinics': '/medical-billing/fqhc',
   'Sleep Medicine & Polysomnography': '/medical-billing/sleep-medicine',
+  'Neonatal & Pediatric Intensive Care (NICU/PICU)': '/medical-billing/nicu-picu',
+  'Radiation Oncology & Proton Therapy': '/medical-billing/radiation-oncology',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -295,6 +297,18 @@ const specialties = [
         description: 'In-lab polysomnography (PSG), Home Sleep Apnea Testing (HSAT Types II–IV), split-night CPAP titrations, and 90-day PAP compliance.',
         cptCodes: '95800, 95806, 95810, 95811, 95782, G0398-G0400, 94660',
         challenges: 'HSAT vs in-lab prior authorization denials, split-night study threshold failures, and CMS 90-day CPAP compliance telemetry clawbacks.'
+      },
+      {
+        name: 'Neonatal & Pediatric Intensive Care (NICU/PICU)',
+        description: 'Global per-day critical care management (initial/subsequent), delivery room resuscitation, umbilical vascular lines, and concurrent subspecialist care.',
+        cptCodes: '99468-99476, 99465, 36510, 36660, 94610, 99477',
+        challenges: 'Per-day global bundling disputes, day-28 and 24-month age threshold transitions, and concurrent neonatology/pediatric surgery claim rejections.'
+      },
+      {
+        name: 'Radiation Oncology & Proton Therapy',
+        description: 'IMRT treatment planning, stereotactic body radiotherapy (SBRT), medical physics consultations, weekly 5-fraction management, and proton therapy.',
+        cptCodes: '77261-77263, 77300, 77301, 77334, 77338, 77385-77386, 77371-77373, 77427, 77520-77525',
+        challenges: 'IMRT planning (77301) unbundling NCCI edits, weekly 5-fraction math reconciliations, and commercial proton beam investigational denials.'
       }
     ]
   }
@@ -302,13 +316,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 36+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 38+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 36+ specialties — Cardiology, Orthopedics, Interventional Radiology, FQHC, Sleep Medicine, Addiction Medicine, Home Health & Hospice, Wound Care, and more.',
+    description: 'Expert medical billing across 38+ specialties — Cardiology, Orthopedics, NICU/PICU, Radiation Oncology, FQHC, Sleep Medicine, Addiction Medicine, Home Health & Hospice, Wound Care, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -319,7 +333,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 36 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 38 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -340,10 +354,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 36+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 38+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['36+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['38+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

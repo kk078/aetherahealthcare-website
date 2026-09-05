@@ -31,6 +31,9 @@ import {
   Dna,
   Building2,
   Ambulance,
+  Radiation,
+  Droplets,
+  Baby,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -44,6 +47,33 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/nicu-critical-care-scrubber',
+    icon: Baby,
+    name: 'NICU & Pediatric Critical Care Scrubber',
+    desc: 'Validate inpatient per-day neonatal critical care codes (CPT 99468–99476), weight-banded intensive step-down tiers (99477–99480), and scrub out CPT bundled catheterizations (36510/36660) and intubations.',
+    category: 'scrubbers',
+    tag: 'NICU / PICU',
+    badge: 'New',
+  },
+  {
+    href: '/tools/rad-onc-scrubber',
+    icon: Radiation,
+    name: 'Radiation Oncology IMRT Bundling & Fraction Scrubber',
+    desc: 'Audit IMRT planning (CPT 77301) bundling edits against simulation and dosimetry, compute CPT 77427 weekly treatment management fraction math, and generate ANSI X12 837P claim lines.',
+    category: 'scrubbers',
+    tag: 'Radiation Oncology',
+    badge: 'New',
+  },
+  {
+    href: '/tools/dialysis-mcp-calculator',
+    icon: Droplets,
+    name: 'Dialysis Monthly Capitation Payment (MCP) Tier Calculator',
+    desc: 'Compute physician allowable reimbursement under CPT 90951–90962 and 90966, calculate inpatient hospital stay pro-rations, and model downcoding revenue recovery.',
+    category: 'calculators',
+    tag: 'Nephrology',
+    badge: 'New',
+  },
   {
     href: '/tools/fqhc-pps-scrubber',
     icon: Building2,

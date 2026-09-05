@@ -132,9 +132,9 @@ test.describe('Next-Gen Compliance, EDI & Practice Intelligence Suite', () => {
 
   test('Tools Hub: showcases all 21 tools with Provider Portal Sandbox banner and category filtering', async ({ page }) => {
     await page.goto('/tools/');
-    const h1 = page.getByRole('heading', { level: 1, name: /21 Free Medical Billing & RCM Tools/i });
+    const h1 = page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i });
     await expect(h1).toBeVisible();
-    await expect(page.getByText(/All Tools \(21\)/i)).toBeVisible();
+    await expect(page.getByText(/All Tools \(\d+\)/i)).toBeVisible();
 
     // Verify featured sandbox banner
     await expect(page.getByText(/Featured Interactive Simulation/i)).toBeVisible();

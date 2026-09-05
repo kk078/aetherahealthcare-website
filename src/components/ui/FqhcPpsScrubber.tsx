@@ -245,7 +245,7 @@ export default function FqhcPpsScrubber() {
 
       const ok = await sendLeadToKiran('fqhc_pps_scrubber_inquiry', payload);
       if (ok) {
-        trackConversion('conversion');
+        trackConversion('assessment');
         setSubmitted(true);
       }
     } catch {

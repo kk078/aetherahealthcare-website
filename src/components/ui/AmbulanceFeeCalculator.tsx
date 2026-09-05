@@ -221,7 +221,7 @@ export default function AmbulanceFeeCalculator() {
 
       const ok = await sendLeadToKiran('ambulance_calculator_inquiry', payload);
       if (ok) {
-        trackConversion('conversion');
+        trackConversion('calculator');
         setSubmitted(true);
       }
     } catch {

@@ -672,6 +672,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How do you prevent CPAP setup and DME rental recoupments?', a: 'We integrate with CPAP cloud telemetry platforms (AirView, Care Orchestrator) to capture 30-day adherence compliance data and physician face-to-face re-evaluation documentation before submitting 90-day compliance attestations.' },
     ],
   },
+  {
+    slug: 'nicu-picu',
+    name: 'Neonatal & Pediatric Intensive Care (NICU/PICU)',
+    noun: 'neonatology groups, level III/IV NICU units, and pediatric critical care specialists',
+    cpt: '99468–99476, 99465, 36510, 36660, 94610, 99477',
+    blurb:
+      'Global per-day critical care management (initial/subsequent), delivery room neonatal resuscitation, umbilical catheterization, and pediatric intensivist concurrent care.',
+    painPoints: [
+      'Per-day global bundling rejections: Payers denying claims when bedside procedures (umbilical lines 36510, intubation 31500, surfactant 94610) are billed alongside global daily codes 99468/99469 without appropriate split billing',
+      'Age threshold downcoding: Automatic claim denials when patients cross 28 days of life (transition from 99468/99469 to 99471/99472) or 24 months without updated patient demographics',
+      'Concurrent care denials with pediatric subspecialists: Denials when pediatric cardiologists or surgeons bill same-day inpatient care without distinctly documented primary diagnosis separation',
+      'Transfer of care between neonatology groups: Complex billing splits when an infant is transferred mid-day between Level III NICU and quaternary children\'s hospital',
+    ],
+    faqs: [
+      { q: 'Can bedside procedures be billed separately on the same day as neonatal critical care (CPT 99468)?', a: 'Under CPT guidelines, procedures like endotracheal intubation, umbilical vascular lines, blood gas monitoring, and transfusion are included in the per-day global code 99468/99469. However, surgical procedures such as chest tube insertion (32551) or peritoneal dialysis catheterization are distinctly billable with Modifier 59 when supported by medical necessity.' },
+      { q: 'How do you handle concurrent care billing between neonatologists and pediatric surgeons?', a: 'Both physicians can bill on the same date provided they document entirely distinct primary diagnoses (e.g. respiratory distress syndrome for the neonatologist and necrotizing enterocolitis perforation for the pediatric surgeon) and maintain non-overlapping clinical management roles.' },
+    ],
+  },
+  {
+    slug: 'radiation-oncology',
+    name: 'Radiation Oncology & Proton Therapy',
+    noun: 'radiation oncology centers, proton beam therapy facilities, and hospital cancer clinics',
+    cpt: '77261–77263, 77300, 77301, 77334, 77338, 77385–77386, 77371–77373, 77427, 77520–77525',
+    blurb:
+      'IMRT treatment planning, stereotactic body radiotherapy (SBRT), medical physics consultations, weekly 5-fraction management, and proton therapy prior-authorization defense.',
+    painPoints: [
+      'IMRT planning (CPT 77301) unbundling denials: NCCI PTP edits denying dosimetry (77300), 3D simulation (77295), or device design (77334) billed during the IMRT development window',
+      'Weekly treatment management (CPT 77427) fraction math rejections: Denials triggered when billing fractions out of sequence or misapplying the 3-to-4 fraction carry-over rule at treatment completion',
+      'Stereotactic body radiotherapy (SBRT) vs SRS coding disputes: Payers refusing CPT 77373 for non-cranial lesions due to missing fiducial marker tracking or respiratory gating documentation',
+      'Proton beam therapy (CPT 77520–77525) prior-auth rejections: Commercial payers denying proton beam as investigational without comparative IMRT/proton DVH dose-volume histogram proof',
+    ],
+    faqs: [
+      { q: 'What services are bundled into CPT 77301 (IMRT Planning)?', a: 'Under CMS guidelines, CPT 77301 includes the initial 3D simulation (77295), basic dosimetry (77300), and treatment devices (77334) when performed for the initial plan. Physics consultations (77336) and port verification films (77417) remain separately payable during the treatment course.' },
+      { q: 'How do you calculate weekly radiation treatment management (CPT 77427)?', a: 'CPT 77427 is reported once for every 5 fractions delivered. At the end of treatment, a remaining cluster of 3 or 4 fractions qualifies for an additional 77427 billing; however, 1 or 2 remaining fractions are non-billable standalone under CMS § 100.1.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
