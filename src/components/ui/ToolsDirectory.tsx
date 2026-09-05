@@ -38,6 +38,7 @@ import {
   Eye,
   GitBranch,
   Bone,
+  Heart,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -51,6 +52,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/cardiothoracic-cannulation-scrubber',
+    icon: Heart,
+    name: 'Cardiothoracic Bypass & Cannulation Scrubber',
+    desc: 'Audit CABG arterial-venous graft combinations (33533 + +33517 add-ons), endoscopic vein harvest (+33508), concomitant valve replacements (33405/33430), and ECMO/ECLS cannulation bundling rules.',
+    category: 'scrubbers',
+    tag: 'Cardiothoracic',
+    badge: 'New',
+  },
+  {
+    href: '/tools/scoliosis-deformity-scrubber',
+    icon: Baby,
+    name: 'Pediatric Scoliosis & Multi-Rod Deformity Scrubber',
+    desc: 'Audit spinal deformity arthrodesis (22800, 22802, 22804), prevent payer interspace downcoding, safeguard pelvic fixation (+22848 S2AI screws), and validate multi-level Ponte osteotomy claims.',
+    category: 'scrubbers',
+    tag: 'Pediatric Orthopedics',
+    badge: 'New',
+  },
   {
     href: '/tools/spine-arthrodesis-scrubber',
     icon: Bone,

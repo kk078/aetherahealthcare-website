@@ -816,6 +816,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'What documentation is required to support complex urodynamics billing (CPT 51728 + 51797)?', a: 'The medical record must include calibrated printed or digital tracing graphs showing intravesical and intra-abdominal pressures, simultaneous EMG recordings (51784), documented post-void residual (PVR), and a formal signed physician interpretation detailing detrusor overactivity, bladder compliance, and leak point pressures.' },
     ],
   },
+  {
+    slug: 'cardiothoracic-surgery',
+    name: 'Cardiothoracic Surgery & Extracorporeal Membrane Oxygenation (ECMO)',
+    noun: 'cardiothoracic surgeons, cardiovascular surgical practices, and thoracic aortic institutes',
+    cpt: '33533–33536, 33517–33523, 33405–33430, 33946–33989, 33967, 33968, 33508, 32663, 32666',
+    blurb:
+      'Coronary artery bypass grafting (CABG arterial/venous combos), endoscopic vein harvest (+33508), complex valvular repairs/replacements, VA/VV ECMO initiation & daily cannula management, and aortic root reconstructions.',
+    painPoints: [
+      'CABG arterial-venous graft combination unbundling: Payers erroneously denying venous graft add-on codes (+33517–+33523) when billed alongside primary internal mammary arterial bypass (33533–33536)',
+      'ECMO/ECLS initiation vs cannula insertion bundling edits: Rejection of surgical cutdown cannulation (33951–33956) or unbundled daily physician ECMO management (33948/33949) during open cardiopulmonary bypass procedures',
+      'Endoscopic vein harvest (+33508) denial disputes: Commercial payers inappropriately bundling endoscopic saphenous vein harvest (+33508) into open CABG primary codes in violation of CPT parenthetical instructions',
+      'Concomitant valve and bypass global surgical reductions: Inappropriate 50% multiple procedure reductions applied to distinct sternotomy valve replacements (33405/33430) performed with coronary bypass without proper modifier sequencing',
+    ],
+    faqs: [
+      { q: 'How are combined arterial and venous coronary artery bypass grafts (CABG) properly coded?', a: 'When a surgeon utilizes both arterial (e.g. internal mammary artery) and venous grafts (e.g. saphenous vein), the primary arterial code (33533 for single, 33534 for two, 33535 for three, 33536 for four or more) must be reported as the primary base code. Venous grafts are reported using the secondary add-on codes (+33517–+33523) depending on the number of venous anastomoses. Add-on venous graft codes are modifier -51 exempt and must never be billed with standalone venous graft codes (33510–33516) on the same claim.' },
+      { q: 'Can extracorporeal membrane oxygenation (ECMO) cannulation be billed separately from initiation?', a: 'CPT codes 33946 (initiation, veno-venous) and 33947 (initiation, veno-arterial) include the overall technical management and hemodynamic stabilization during circuit initiation. However, surgical cannula insertion via open cutdown or percutaneous approach (33951–33964) is separately reportable when performed by the surgical team, provided operative documentation details site selection, vessel size, cannula placement, and circuit priming.' },
+    ],
+  },
+  {
+    slug: 'pediatric-orthopedics',
+    name: 'Pediatric Orthopedics & Scoliosis Deformity Correction',
+    noun: 'pediatric orthopedic surgeons, children’s scoliosis centers, and pediatric musculoskeletal specialists',
+    cpt: '22800, 22802, 22804, 22842–22844, 22848, 22210, 22214, 20930, 20936, 29450, 27146, 27151',
+    blurb:
+      'Spinal deformity arthrodesis for adolescent idiopathic scoliosis (AIS), multi-rod segmental instrumentation, pelvic fixation (S2AI/iliac screws), Ponseti serial casting for congenital clubfoot, and pelvic/femoral osteotomies for DDH.',
+    painPoints: [
+      'Scoliosis fusion segment tier downcoding: Commercial payers auditing and downcoding posterior deformity fusion codes (22800 1–6 segments, 22802 7–12 segments, 22804 13+ segments) due to rigid vertebral body vs interspace level interpretations',
+      'Pelvic fixation (+22848) add-on rejections: Erroneous bundling of pelvic anchor fixation (S2-alar-iliac screws / iliac bolts) into primary deformity posterior instrumentation (+22842–+22844)',
+      'Ponseti serial clubfoot casting global unbundling: Denials of CPT 29450 (application of clubfoot cast) when billed during the active weekly casting phase due to misapplied 10-day or 90-day surgical global periods',
+      'Developmental dysplasia of the hip (DDH) osteotomy bundling: Inappropriate payer bundling of femoral shortening osteotomy (27165) into periacetabular pelvic osteotomies (27146/27151) when addressing complex congenital hip dislocations',
+    ],
+    faqs: [
+      { q: 'How are vertebral segments counted for pediatric posterior scoliosis arthrodesis (CPT 22800–22804)?', a: 'For spinal deformity arthrodesis, CPT codes are categorized by the number of vertebral segments spanned, NOT interspaces: 22800 covers 1 to 6 vertebral segments, 22802 spans 7 to 12 vertebral segments, and 22804 spans 13 or more vertebral segments. A thoracic-to-lumbar fusion from T3 to L3 encompasses 13 vertebral segments (T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, L1, L2, L3) and is correctly billed as 22804.' },
+      { q: 'Is pelvic fixation (+22848) separately reportable with segmental scoliosis instrumentation (+22842–+22844)?', a: 'Yes. CPT +22848 (pelvic fixation other than sacrum) is an approved add-on code reportable in addition to posterior segmental instrumentation (+22842–+22844) when fixation anchors extend into the ilium or S2 alar-iliac bone to stabilize high-degree lumbosacral curves. It is exempt from Modifier 51.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

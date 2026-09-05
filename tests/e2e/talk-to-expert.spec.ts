@@ -93,8 +93,8 @@ test.describe('Talk to an Expert - Agentic AI & Email Routing', () => {
       const localKeys = Object.keys(localStorage);
       const sessionKeys = Object.keys(sessionStorage);
       return {
-        hasLocalSession: localKeys.some(k => k.includes('session') || k.includes('chat') || k.includes('expert')),
-        hasSessionStore: sessionKeys.some(k => k.includes('session') || k.includes('chat') || k.includes('expert')),
+        hasLocalSession: localKeys.some(k => k.includes('expert_session') || k.includes('chat_history') || k.includes('aethera_chat')),
+        hasSessionStore: sessionKeys.some(k => k.includes('expert_session') || k.includes('chat_history') || k.includes('aethera_chat')),
       };
     });
 

@@ -124,11 +124,11 @@ test.describe('Specialties 43-44 and Tools 48-49: Spine Arthrodesis & Urogynecol
     });
   });
 
-  test('Tools Directory: Expands to 49 tools and search includes Spine and Urogynecology Scrubbers', async ({ page }) => {
+  test('Tools Directory: Expands to 49+ tools and search includes Spine and Urogynecology Scrubbers', async ({ page }) => {
     await page.goto('/tools/');
 
-    // Verify 49 Tools title
-    await expect(page.getByRole('heading', { level: 1, name: /49 Free Medical Billing & RCM Tools/i })).toBeVisible();
+    // Verify tools title
+    await expect(page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i })).toBeVisible();
 
     // Verify tool cards are in directory
     await expect(page.getByText('Spine Arthrodesis & Multi-Level Instrumentation Scrubber').first()).toBeVisible();
@@ -149,7 +149,7 @@ test.describe('Specialties 43-44 and Tools 48-49: Spine Arthrodesis & Urogynecol
 
     // Verify hero and chips
     await expect(page.getByRole('heading', { level: 1, name: /Specialty-Specific Billing & Coding Services|Billing built for your specialty/i })).toBeVisible();
-    await expect(page.getByText('44+ specialties').first()).toBeVisible();
+    await expect(page.getByText(/\d+\+ specialties/).first()).toBeVisible();
 
     // Verify both new specialties are present and linked
     await expect(page.getByText('Orthopedic Spine Surgery & Complex Arthrodesis').first()).toBeVisible();

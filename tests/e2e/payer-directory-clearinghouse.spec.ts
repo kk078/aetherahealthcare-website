@@ -42,9 +42,9 @@ test.describe('National Clearinghouse Payer Directory Integration', () => {
     const eraChip = page.getByRole('button', { name: /835 Remittance \(ERA\)/i });
     await eraChip.click();
 
-    // Click first payer card to open EDI specs modal
-    const firstCard = page.locator('.cursor-pointer').first();
-    await firstCard.click();
+    // Click first payer card or View EDI Specs button to open EDI specs modal
+    const viewSpecsBtn = page.getByText(/View EDI Specs/i).first();
+    await viewSpecsBtn.click();
 
     // Verify modal elements
     await expect(page.locator('text=Supported EDI Transaction Sets').first()).toBeVisible();

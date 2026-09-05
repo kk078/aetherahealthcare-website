@@ -53,6 +53,8 @@ const specialtyLinks: Record<string, string> = {
   'Vascular Surgery & Endovascular Interventions': '/medical-billing/vascular-surgery',
   'Orthopedic Spine Surgery & Complex Arthrodesis': '/medical-billing/spine-surgery',
   'Gynecologic Minimally Invasive Surgery & Urogynecology': '/medical-billing/urogynecology',
+  'Cardiothoracic Surgery & Extracorporeal Membrane Oxygenation (ECMO)': '/medical-billing/cardiothoracic-surgery',
+  'Pediatric Orthopedics & Scoliosis Deformity Correction': '/medical-billing/pediatric-orthopedics',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -221,6 +223,18 @@ const specialties = [
         description: 'Laparoscopic sacrocolpopexy, mid-urethral sling procedures, multi-component urodynamics testing, pelvic organ prolapse repair, and diagnostic cystoscopy audit defense.',
         cptCodes: '57425, 57288, 51726–51729, 51741, 51797, 52000, 57240, 57250, 57260, 57282',
         challenges: 'Cystoscopy (52000) bundling post-sling, urodynamics technical/professional component unbundling, and POP-Q prolapse staging denials.'
+      },
+      {
+        name: 'Cardiothoracic Surgery & Extracorporeal Membrane Oxygenation (ECMO)',
+        description: 'Coronary artery bypass grafting (CABG arterial/venous combos), endoscopic vein harvest (+33508), complex valvular repairs/replacements, VA/VV ECMO initiation & daily cannula management, and aortic root reconstructions.',
+        cptCodes: '33533–33536, 33517–33523, 33405–33430, 33946–33989, 33967, 33968, 33508',
+        challenges: 'CABG arterial/venous unbundling, ECMO cannula insertion bundling edits, endoscopic vein harvest (+33508) payer denials, and valve/CABG global reductions.'
+      },
+      {
+        name: 'Pediatric Orthopedics & Scoliosis Deformity Correction',
+        description: 'Spinal deformity arthrodesis for adolescent idiopathic scoliosis (AIS), multi-rod segmental instrumentation, pelvic fixation (S2AI/iliac screws), Ponseti serial casting for congenital clubfoot, and pelvic/femoral osteotomies for DDH.',
+        cptCodes: '22800, 22802, 22804, 22842–22844, 22848, 22210, 22214, 20930, 20936, 29450, 27146, 27151',
+        challenges: 'Scoliosis fusion segment tier downcoding (22800–22804), pelvic fixation (+22848) bundling denials, and Ponseti clubfoot casting global unbundling.'
       }
     ]
   },
@@ -358,13 +372,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 44+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 46+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 44+ specialties — Spine Surgery, Urogynecology, Cardiology, Electrophysiology, Plastic Surgery, Retina & Ophthalmology, Vascular Surgery, NICU/PICU, Radiation Oncology, FQHC, and more.',
+    description: 'Expert medical billing across 46+ specialties — Cardiothoracic Surgery, Pediatric Orthopedics, Spine Surgery, Urogynecology, Cardiology, Electrophysiology, Plastic Surgery, Retina & Ophthalmology, Vascular Surgery, NICU/PICU, Radiation Oncology, FQHC, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -375,7 +389,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 44 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 46 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -396,10 +410,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 44+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 46+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['44+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['46+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

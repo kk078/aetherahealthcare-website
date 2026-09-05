@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 49 Interactive Tools
+// 51 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -599,6 +599,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'teal',
     keywords: ['urogynecology', 'fpmrs', 'sacrocolpopexy', '57425', 'sling', '57288', 'cystoscopy', '52000', 'colporrhaphy', '57260', 'pop-q', 'urodynamics', '51729', '51784', '51797'],
   },
+  {
+    id: 'tool-cardiothoracic-cannulation',
+    category: 'tools',
+    title: 'Cardiothoracic Bypass & Cannulation Scrubber',
+    subtitle: 'CABG arterial/venous graft hierarchy (33533 + 33517), endoscopic harvest (+33508) & ECMO',
+    description: 'Audit complex CABG arterial-venous graft combinations, endoscopic vein harvest add-ons (+33508), concomitant valve replacement sequencing (33405/33430), and ECMO/ECLS cannulation bundling rules.',
+    href: '/tools/cardiothoracic-cannulation-scrubber',
+    badge: 'Cardiothoracic',
+    badgeVariant: 'purple',
+    keywords: ['cardiothoracic', 'cabg', 'bypass', '33533', '33534', '33517', '33518', '33508', 'endoscopic harvest', 'ecmo', '33946', '33947', '33954', 'avr', '33405', 'mvr', '33430', 'iabp', 'impella'],
+  },
+  {
+    id: 'tool-scoliosis-deformity',
+    category: 'tools',
+    title: 'Pediatric Scoliosis & Multi-Rod Deformity Scrubber',
+    subtitle: 'Posterior deformity fusions (22800–22804), interspace downcoding defense & pelvic fixation (+22848)',
+    description: 'Audit spinal deformity arthrodesis, combat payer interspace downcoding of CPT 22804, safeguard pelvic fixation add-ons (+22848 S2AI screws), and validate multi-level Ponte osteotomy claims.',
+    href: '/tools/scoliosis-deformity-scrubber',
+    badge: 'Pediatric Orthopedics',
+    badgeVariant: 'teal',
+    keywords: ['pediatric orthopedics', 'scoliosis', 'spinal deformity', 'arthrodesis', '22800', '22802', '22804', '22842', '22844', '22848', 's2ai', 'ponte osteotomy', '22210', '22214', 'cobb angle', 'ais'],
+  },
 ];
 
 // Specialties
@@ -1074,14 +1096,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['urogynecology', 'fpmrs', 'sacrocolpopexy', '57425', 'sling', '57288', 'urodynamics', '51729', 'colporrhaphy', '57260', 'pop-q', 'cystoscopy', '52000'],
   },
   {
+    id: 'spec-cardiothoracic-surgery',
+    category: 'specialties',
+    title: 'Cardiothoracic Surgery & ECMO Billing',
+    subtitle: 'CABG arterial/venous combos, endoscopic vein harvest (+33508), valve repairs & ECMO cannulation',
+    href: '/medical-billing/cardiothoracic-surgery',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['cardiothoracic surgery', 'cardiovascular surgery', 'cabg', '33533', '33517', '33508', 'ecmo', '33946', '33947', '33954', 'aortic valve', 'mitral valve', '33405', '33430', 'iabp', 'impella'],
+  },
+  {
+    id: 'spec-pediatric-orthopedics',
+    category: 'specialties',
+    title: 'Pediatric Orthopedics & Scoliosis Deformity Billing',
+    subtitle: 'Spinal deformity fusions (22800–22804), pelvic fixation (+22848), osteotomies & clubfoot casting',
+    href: '/medical-billing/pediatric-orthopedics',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric orthopedics', 'scoliosis', 'spinal deformity', 'arthrodesis', '22800', '22802', '22804', '22844', '22848', 's2ai', 'ponte osteotomy', '22210', 'ponseti', 'clubfoot', 'ddh'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 44+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 46+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics'],
   },
 ];
 
