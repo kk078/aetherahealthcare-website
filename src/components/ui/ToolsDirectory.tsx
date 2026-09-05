@@ -42,6 +42,7 @@ import {
   Crosshair,
   Stethoscope,
   Smile,
+  Brain,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -55,6 +56,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/lvad-cardiac-scrubber',
+    icon: HeartPulse,
+    name: 'Durable LVAD Implantation & Cardiac Reoperation Scrubber',
+    desc: 'Audit durable continuous-flow LVAD implants (33979), defend redo sternotomy add-ons (+33530), validate concomitant tricuspid/aortic valve repairs, and prevent RV failure critical care clawbacks.',
+    category: 'scrubbers',
+    tag: 'Cardiothoracic Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/pediatric-epilepsy-scrubber',
+    icon: Brain,
+    name: 'Pediatric Hemispherotomy & Stereo-EEG Scrubber',
+    desc: 'Audit stereo-EEG robotic depth electrode placements (61760), defend cranial neuronavigation (+61781), enforce staged hemispherotomy Modifier -58 compliance, and safeguard continuous video-EEG (95724).',
+    category: 'scrubbers',
+    tag: 'Pediatric Neurosurgery',
+    badge: 'New',
+  },
   {
     href: '/tools/vcr-spine-scrubber',
     icon: Bone,

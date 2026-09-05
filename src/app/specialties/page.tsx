@@ -65,6 +65,8 @@ const specialtyLinks: Record<string, string> = {
   'Pediatric Craniofacial & Cleft Palate Surgery': '/medical-billing/pediatric-craniofacial',
   'Complex Spine Deformity & Vertebral Column Resection': '/medical-billing/complex-spine-deformity',
   'Pediatric Solid Organ Transplant & Intestinal Rehabilitation': '/medical-billing/pediatric-transplant',
+  'Complex Adult Cardiac Reoperation & Ventricular Assist Devices (LVAD)': '/medical-billing/cardiac-lvad-reoperation',
+  'Pediatric Epilepsy Surgery & Hemispherotomy': '/medical-billing/pediatric-epilepsy-surgery',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -435,6 +437,18 @@ const specialties = [
         description: 'Pediatric orthotopic liver, kidney, and multivisceral transplantation, isolated small bowel grafts, vascular bench reconstruction, and serial transverse enteroplasty (STEP procedure).',
         cptCodes: '44132, 44133, 44135, 47135, 47140, 50360, 44130, 44715, 44720, 99291',
         challenges: 'Organ acquisition cost-center vs professional fee disputes, STEP enteroplasty experimental exclusion denials, back-table vascular bench bundling, and post-transplant rejection critical care audits.'
+      },
+      {
+        name: 'Complex Adult Cardiac Reoperation & Ventricular Assist Devices (LVAD)',
+        description: 'Durable LVAD implantation (33979), reoperation sternotomy add-on (+33530), LVAD pump replacement/exchange, temporary ECMO/VAD support, and concomitant valve repairs.',
+        cptCodes: '33979, 33980, 33530, 33981, 33982, 33405, 33427, 33533, 99291',
+        challenges: 'Redo sternotomy add-on (+33530) bundling clawbacks, durable LVAD downcoding to temporary systems, and concomitant tricuspid/aortic valve repair unbundling rejections.'
+      },
+      {
+        name: 'Pediatric Epilepsy Surgery & Hemispherotomy',
+        description: 'Stereo-electroencephalography (sEEG 61760), cranial stereotactic navigation (+61781), subdural grid placement (61533), anatomical/functional hemispherotomy (61543), and laser ablation.',
+        cptCodes: '61760, 61781, 61533, 61534, 61543, 61736, 95716, 95724',
+        challenges: 'Stereo-EEG trajectory unit audits, robotic stereotactic navigation add-on (+61781) unbundling, and complete hemispherotomy downcoding to simple lobectomy.'
       }
     ]
   }
@@ -442,13 +456,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 56+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 58+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 56+ specialties — Spine Deformity, Pediatric Transplant, Pancreatic Surgery, Pediatric Craniofacial, Colorectal Surgery, Pediatric Neuro-Oncology, and more.',
+    description: 'Expert medical billing across 58+ specialties — Cardiac LVAD Reoperation, Pediatric Epilepsy Surgery, Spine Deformity, Pediatric Transplant, Pancreatic Surgery, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -459,7 +473,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 56 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 58 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -480,10 +494,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 56+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 58+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['56+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['58+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

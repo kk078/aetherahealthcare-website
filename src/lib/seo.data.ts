@@ -1032,6 +1032,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How can programs defend STEP enteroplasty (CPT 44130) prior authorization against experimental exclusions?', a: 'Prior authorization appeals must submit clinical documentation demonstrating total parenteral nutrition (TPN) dependence, recurrent catheter-associated bloodstream infections (CLABSI), and intestinal failure-associated liver disease (IFALD). Submitting ACG and NASPGHAN consensus guidelines establishes Serial Transverse Enteroplasty as standard-of-care autologous bowel reconstruction that prevents irreversible liver failure and multi-million dollar multivisceral transplantation.' },
     ],
   },
+  {
+    slug: 'cardiac-lvad-reoperation',
+    name: 'Complex Adult Cardiac Reoperation & Ventricular Assist Devices (LVAD)',
+    noun: 'cardiac surgeons, mechanical circulatory support (MCS) teams, heart failure surgical groups, and advanced cardiovascular institutes',
+    cpt: '33979, 33980, 33530, 33981, 33982, 33983, 33405, 33427, 33533, 33517, 99291, 99223',
+    blurb:
+      'Durable left ventricular assist device (LVAD) implantation, redo sternotomy adhesiolysis add-on (+33530), LVAD pump replacement, temporary ECMO/VAD support, and concomitant valvular reconstructions.',
+    painPoints: [
+      'Redo sternotomy add-on (+33530) bundling clawbacks: Commercial payers and clearinghouses rejecting reoperation code +33530 when billed with durable LVAD (33979) or redo CABG despite documented prior sternotomy >30 days',
+      'Durable LVAD (33979) vs temporary VAD (33975) downcoding: Health plans downcoding long-term intracorporeal LVAD implants to percutaneous or temporary extracorporeal support systems',
+      'Concomitant valve repair unbundling rejections: Erroneous bundling of aortic valve closure/oversewing or tricuspid valve annuloplasty (33464) into primary ventricular assist device placement',
+      'Postoperative vasoplegia and RV failure critical care audits: Recoupment challenges against surgical intensive care critical care hours (CPT 99291/99292-24) during acute right heart failure episodes',
+    ],
+    faqs: [
+      { q: 'Can redo sternotomy add-on (+33530) be billed alongside durable LVAD implantation (33979)?', a: 'Yes. Under CPT coding rules and CMS Physician Fee Schedule guidelines, CPT +33530 (redo sternotomy/thoracotomy add-on) is reportable with durable LVAD insertion (33979) provided the patient underwent prior open cardiac surgery via sternotomy or thoracotomy more than 30 days prior. Operative dictation must specifically document extensive pericardial and mediastinal adhesiolysis required to establish safe cannulation and pump pocket creation.' },
+      { q: 'How should concomitant tricuspid valve repairs (33464) or aortic valve procedures be billed with LVAD implantation?', a: 'When severe tricuspid regurgitation requires concurrent tricuspid valve annuloplasty (33464) or aortic insufficiency requires aortic valve closure/replacement (33405) to prevent LVAD regurgitant loops, these procedures are separately reportable with Modifier 51. The operative report must clearly delineate separate cannulation, cardioplegic arrest periods, and valvular reconstructive techniques.' },
+    ],
+  },
+  {
+    slug: 'pediatric-epilepsy-surgery',
+    name: 'Pediatric Epilepsy Surgery & Hemispherotomy',
+    noun: 'pediatric epilepsy neurosurgeons, pediatric epileptologists, comprehensive epilepsy centers (NAEC Level 4), and pediatric neurosurgical teams',
+    cpt: '61760, 61781, 61533, 61534, 61536, 61543, 61736, 61737, 95700, 95716, 95724, 99214',
+    blurb:
+      'Stereo-electroencephalography (sEEG) robotic depth electrode implantation, subdural grid placement, anatomical/functional hemispherotomy, laser interstitial thermal therapy (LITT), and continuous video-EEG seizure mapping.',
+    painPoints: [
+      'Stereo-EEG (sEEG 61760) trajectory unit denials: Commercial payers auditing multi-trajectory robotic depth electrode implantations and disallowing per-electrode or multi-lead billing',
+      'Robotic stereotactic navigation add-on (+61781) unbundling: Clearinghouses rejecting cranial neuronavigation (+61781) when billed with depth electrode insertion (61760) or craniotomy for grid placement (61533)',
+      'Hemispherotomy (61543) downcoding clawbacks: Payers downgrading complete hemispherectomy/hemispherotomy to simple single-lobe cortical resection (61537) slashing over 35 RVUs',
+      'Continuous long-term video-EEG (95716-95724) technical component recoupments: Post-implant intracranial EEG monitoring units rejected due to overlapping inpatient ICU billing guidelines',
+    ],
+    faqs: [
+      { q: 'How is stereo-EEG (sEEG) depth electrode implantation coded under current CPT rules?', a: 'CPT code 61760 describes stereotactic implantation of depth electrodes. When robotic guidance systems (such as ROSA or StealthStation) are utilized for multiple trajectory stereotactic guidance, add-on code +61781 (computer-assisted stereotactic navigation, cranial) is reportable to capture the multi-planar registration and coordinate mapping, supported by operative logs documenting 10 to 18 distinct stereotactic entry trajectories.' },
+      { q: 'What clinical criteria differentiate anatomical/functional hemispherotomy (61543) from lobectomy (61537)?', a: 'Hemispherotomy (CPT 61543) involves complete surgical disconnection of an entire cerebral hemisphere—including temporal lobectomy, amygdalohippocampectomy, frontal and parietal opercular disconnections, and transventricular corpus callosotomy. CPT 61537 only covers partial cortical resection or single lobectomy. Operative notes must detail ventricular entry, callosotomy completion, and circumferential hemispheric isolation to overturn downcoding.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

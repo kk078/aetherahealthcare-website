@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 61 Interactive Tools
+// 63 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -731,6 +731,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'teal',
     keywords: ['pediatric transplant', 'intestinal rehabilitation', 'short bowel syndrome', 'step enteroplasty', 'serial transverse enteroplasty', '44130', 'intestinal allotransplantation', '44132', '44133', '44135', 'liver transplant', '47135', 'reduced-size liver', '47140', 'split liver', '47141', 'kidney transplant', '50360', '50365', 'organ acquisition', 'worksheet d-4', 'back-table bench surgery', '44715', '44720', 'post-transplant critical care', '99291', 'modifier 24'],
   },
+  {
+    id: 'tool-lvad-cardiac',
+    category: 'tools',
+    title: 'Durable LVAD Implantation & Cardiac Reoperation Scrubber',
+    subtitle: 'Durable LVAD (33979), redo sternotomy add-on (+33530), tricuspid repair (33464) & Mod 62',
+    description: 'Audit durable continuous-flow LVAD implants (33979), defend redo sternotomy adhesiolysis add-ons (+33530), validate concomitant tricuspid/aortic valve repairs, and prevent acute RV failure critical care clawbacks.',
+    href: '/tools/lvad-cardiac-scrubber',
+    badge: 'Cardiothoracic Surgery',
+    badgeVariant: 'amber',
+    keywords: ['lvad', 'left ventricular assist device', 'mechanical circulatory support', 'mcs', 'heart failure', '33979', 'temporary vad', '33975', 'bivad', '33980', 'lvad exchange', '33981', 'redo sternotomy', 'reoperation add-on', '33530', 'tricuspid annuloplasty', '33464', 'aortic valve closure', '33405', 'rv failure', 'critical care', '99291', 'modifier 62', 'co-surgery'],
+  },
+  {
+    id: 'tool-pediatric-epilepsy',
+    category: 'tools',
+    title: 'Pediatric Hemispherotomy & Stereo-EEG Scrubber',
+    subtitle: 'Stereo-EEG (61760), robotic neuronavigation (+61781), staged hemispherotomy (61543) & Mod 58',
+    description: 'Audit stereo-EEG robotic depth electrode placements (61760), defend cranial neuronavigation (+61781), enforce staged hemispherotomy Modifier -58 compliance, and safeguard continuous video-EEG (95724).',
+    href: '/tools/pediatric-epilepsy-scrubber',
+    badge: 'Pediatric Neurosurgery',
+    badgeVariant: 'purple',
+    keywords: ['pediatric epilepsy', 'epilepsy surgery', 'stereo-eeg', 'seeg', 'depth electrodes', '61760', 'subdural grid', '61533', 'robotic navigation', 'cranial neuronavigation', '61781', 'hemispherotomy', 'hemispherectomy', '61543', 'laser ablation', 'litt', '61736', 'temporal lobectomy', '61538', 'video-eeg', '95724', 'modifier 58', 'staged procedure'],
+  },
 ];
 
 // Specialties
@@ -1326,14 +1348,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['pediatric transplant', 'intestinal rehabilitation', 'short bowel syndrome', 'step enteroplasty', 'serial transverse enteroplasty', '44130', 'intestinal allotransplantation', '44132', '44133', '44135', 'liver transplant', '47135', 'reduced-size liver', '47140', 'split liver', '47141', 'kidney transplant', '50360', '50365', 'organ acquisition', 'worksheet d-4', 'back-table bench surgery', '44715', '44720', 'post-transplant critical care', '99291', 'modifier 24'],
   },
   {
+    id: 'spec-cardiac-lvad-reoperation',
+    category: 'specialties',
+    title: 'Complex Adult Cardiac Reoperation & Ventricular Assist Devices (LVAD) Billing',
+    subtitle: 'Durable LVAD (33979), redo sternotomy add-on (+33530), and concomitant valve repairs',
+    href: '/medical-billing/cardiac-lvad-reoperation',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['cardiac surgery', 'lvad', 'left ventricular assist device', 'mechanical circulatory support', 'mcs', 'heart failure', '33979', 'temporary vad', '33975', 'redo sternotomy', '33530', 'tricuspid annuloplasty', '33464', 'aortic valve closure', '33405', 'rv failure', 'critical care', '99291', 'modifier 62', 'co-surgery'],
+  },
+  {
+    id: 'spec-pediatric-epilepsy-surgery',
+    category: 'specialties',
+    title: 'Pediatric Epilepsy Surgery & Hemispherotomy Billing',
+    subtitle: 'Stereo-EEG (61760), robotic neuronavigation (+61781), staged hemispherotomy (61543) & Mod 58',
+    href: '/medical-billing/pediatric-epilepsy-surgery',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric neurosurgery', 'pediatric epilepsy', 'epilepsy surgery', 'stereo-eeg', 'seeg', 'depth electrodes', '61760', 'subdural grid', '61533', 'cranial neuronavigation', '61781', 'hemispherotomy', 'hemispherectomy', '61543', 'laser ablation', 'litt', '61736', 'video-eeg', '95724', 'modifier 58'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 56+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 58+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy'],
   },
 ];
 
