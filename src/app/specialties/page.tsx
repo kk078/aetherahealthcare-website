@@ -57,6 +57,8 @@ const specialtyLinks: Record<string, string> = {
   'Pediatric Orthopedics & Scoliosis Deformity Correction': '/medical-billing/pediatric-orthopedics',
   'Surgical Critical Care & Trauma Surgery': '/medical-billing/trauma-critical-care',
   'Pediatric Allergy, Pulmonology & Cystic Fibrosis': '/medical-billing/pediatric-pulmonology',
+  'Hepatobiliary Surgery & Complex Liver Resection': '/medical-billing/hepatobiliary-surgery',
+  'Pediatric Hematology-Oncology & Cellular Therapy': '/medical-billing/pediatric-heme-onc',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -379,6 +381,18 @@ const specialties = [
         description: 'Pediatric spirometry and plethysmography, pre/post bronchodilator responsiveness, quantitative sweat chloride iontophoresis, high-cost CFTR modulator prior-authorizations, and aerosolized antibiotic infusions.',
         cptCodes: '94010, 94060, 94726, 82435, 94640, 95004, J7605, J7626, J7613',
         challenges: 'Pre/post bronchodilator unbundling (94060 into 94010), sweat chloride test medical necessity denials, and CFTR modulator prior-auth appeals.'
+      },
+      {
+        name: 'Hepatobiliary Surgery & Complex Liver Resection',
+        description: 'Major anatomic hepatectomies (trisegmentectomy, lobectomy), complex Roux-en-Y biliary reconstructions, living/deceased donor liver transplantation, intraoperative ultrasound guidance, and vascular graft reconstructions.',
+        cptCodes: '47120, 47122, 47125, 47130, 47760, 47780, 47135, 47140, 76998, 35221, 47010',
+        challenges: 'Hepatectomy downcoding from trisegmentectomy (47125) to partial (47120), vascular reconstruction bundling clawbacks, and Roux-en-Y biliary overlap rejections.'
+      },
+      {
+        name: 'Pediatric Hematology-Oncology & Cellular Therapy',
+        description: 'Pediatric allogeneic and autologous stem cell transplants, FDA-approved CAR-T cell immunotherapy processing and infusion, diagnostic bone marrow harvests, intrathecal chemotherapy, and complex pediatric cytokine release syndrome critical care.',
+        cptCodes: '38205, 38206, 38240, 38241, 0537T, 0538T, 0539T, 0540T, 96450, 36561, 99291, 99292',
+        challenges: 'CAR-T cellular therapy prior-authorization denials, stem cell processing unbundling rejections, and inpatient cytokine release syndrome (CRS) critical care time downcoding.'
       }
     ]
   }
@@ -386,13 +400,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 48+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 50+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 48+ specialties — Trauma Surgery, Pediatric Pulmonology, Cardiothoracic, Pediatric Orthopedics, Spine Surgery, Urogynecology, Cardiology, Electrophysiology, Plastic Surgery, Retina, Vascular, and more.',
+    description: 'Expert medical billing across 50+ specialties — Hepatobiliary Surgery, Pediatric Heme-Onc, Trauma Surgery, Pediatric Pulmonology, Cardiothoracic, Pediatric Orthopedics, Spine Surgery, Urogynecology, Cardiology, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -403,7 +417,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 48 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 50 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -424,10 +438,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 48+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 50+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['48+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['50+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

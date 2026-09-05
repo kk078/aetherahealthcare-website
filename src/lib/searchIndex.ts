@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 53 Interactive Tools
+// 55 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -643,6 +643,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'teal',
     keywords: ['pediatric pulmonology', 'cystic fibrosis', 'cftr', 'trikafta', 'kalydeco', 'spirometry', 'pft', '94010', '94060', '94726', 'sweat chloride', '82435', 'allergy prick', '95004', 'aerosol', '94640'],
   },
+  {
+    id: 'tool-hepatobiliary-resection',
+    category: 'tools',
+    title: 'Hepatobiliary Resection & Biliary Reconstruction Scrubber',
+    subtitle: 'Hepatic trisegmentectomy downcoding defense (47125 vs 47120), vascular add-ons & Roux-en-Y',
+    description: 'Audit extended hepatic trisegmentectomy (47125), total lobectomy (47130), defend payer downcoding to partial wedge (47120), safeguard vascular reconstruction (+35221), and unbundle Roux-en-Y biliary reconstruction (47760).',
+    href: '/tools/hepatobiliary-resection-scrubber',
+    badge: 'Hepatobiliary Surgery',
+    badgeVariant: 'emerald',
+    keywords: ['hepatobiliary', 'liver resection', 'hepatectomy', 'trisegmentectomy', '47125', '47130', '47122', '47120', 'roux-en-y', '47760', 'vascular reconstruction', '35221', 'ious', '76998', 'modifier 62', 'co-surgeons'],
+  },
+  {
+    id: 'tool-pediatric-cell-therapy',
+    category: 'tools',
+    title: 'Pediatric Stem Cell & CAR-T Cellular Therapy Scrubber',
+    subtitle: 'Autologous CAR-T cell infusion (0540T/Q2042), prior auth dossier & CRS critical care defense',
+    description: 'Audit autologous CAR-T cell infusions (0540T/Q2042), prior authorization dossiers, severe Cytokine Release Syndrome (CRS) critical care (99291), and restaging lumbar puncture unbundling (96450 vs 38222).',
+    href: '/tools/pediatric-cell-therapy-scrubber',
+    badge: 'Pediatric Oncology',
+    badgeVariant: 'purple',
+    keywords: ['pediatric oncology', 'car-t', 'kymriah', '0540t', 'q2042', 'stem cell transplant', 'bmt', '38240', '38241', '38205', 'bone marrow biopsy', '38222', 'intrathecal chemo', '96450', 'cytokine release syndrome', 'crs', '99291'],
+  },
 ];
 
 // Specialties
@@ -1158,14 +1180,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['pediatric pulmonology', 'pediatric allergy', 'cystic fibrosis', 'cftr', 'trikafta', 'kalydeco', 'spirometry', 'pft', '94010', '94060', '94726', 'sweat chloride', '82435', 'allergy prick', '95004', 'aerosol', '94640'],
   },
   {
+    id: 'spec-hepatobiliary-surgery',
+    category: 'specialties',
+    title: 'Hepatobiliary Surgery & Complex Liver Resection Billing',
+    subtitle: 'Anatomic hepatectomies (47125/47130), downcoding defense, vascular repairs & Roux-en-Y',
+    href: '/medical-billing/hepatobiliary-surgery',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['hepatobiliary surgery', 'liver resection', 'hepatectomy', 'trisegmentectomy', '47125', '47130', '47122', '47120', 'roux-en-y', '47760', 'vascular reconstruction', '35221', 'ious', '76998', 'modifier 62', 'co-surgeon'],
+  },
+  {
+    id: 'spec-pediatric-heme-onc',
+    category: 'specialties',
+    title: 'Pediatric Hematology-Oncology & Cellular Therapy Billing',
+    subtitle: 'Pediatric CAR-T cell infusions (0540T/Q2042), stem cell transplants & CRS critical care',
+    href: '/medical-billing/pediatric-heme-onc',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric oncology', 'pediatric hematology', 'car-t', 'kymriah', '0540t', 'q2042', 'stem cell transplant', 'bmt', '38240', '38241', '38205', 'bone marrow biopsy', '38222', 'intrathecal chemo', '96450', 'crs', '99291'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 48+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 50+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy'],
   },
 ];
 

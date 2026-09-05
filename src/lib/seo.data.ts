@@ -888,6 +888,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'What documentation is required to overturn CFTR modulator prior authorization rejections?', a: 'Appeals must include certified CLIA molecular genetic sequencing demonstrating at least one F508del mutation (or FDA-approved responsive CFTR variant), baseline percent predicted FEV1 spirometry curves, comprehensive liver function panels, sweat chloride quantitative baseline concentration (>= 60 mmol/L), and an attestation of CF Foundation accredited center multidisciplinary oversight.' },
     ],
   },
+  {
+    slug: 'hepatobiliary-surgery',
+    name: 'Hepatobiliary Surgery & Complex Liver Resection',
+    noun: 'hepatobiliary & pancreatic (HPB) surgeons, abdominal transplant surgical specialists, and surgical oncology teams',
+    cpt: '47120, 47122, 47125, 47130, 47760, 47780, 47135, 47140, 76998, 35221, 47010, 99223',
+    blurb:
+      'Major anatomic hepatectomies (trisegmentectomy, lobectomy), complex Roux-en-Y biliary reconstructions, living/deceased donor liver transplantation, intraoperative ultrasound guidance, and vascular graft reconstructions.',
+    painPoints: [
+      'Hepatectomy anatomic downcoding: Commercial payers downcoding extended hepatic lobectomy/trisegmentectomy (47125/47130) to partial non-anatomic hepatectomy (47120) by arguing unproven Couinaud segment boundaries',
+      'Vascular reconstruction bundling clawbacks: Routine bundling denials for major vascular reconstructions (+35221 / +35251 for portal vein or hepatic artery resections) performed during oncologic margin clearance',
+      'Concomitant biliary reconstruction disallowances: Payers rejecting Roux-en-Y hepaticojejunostomy (47760) when performed concomitantly with major liver resections, citing global surgical package overlap',
+      'Co-surgeon Modifier -62 rejections: Blanket clearinghouse rejections of Modifier 62 on complex multi-specialty HPB cases (e.g. transplant surgeon + surgical oncologist) lacking paired operative reports',
+    ],
+    faqs: [
+      { q: 'Can portal vein resection and reconstruction (+35221) be billed alongside major hepatectomy (47130)?', a: 'Yes. When vascular reconstruction of the portal vein or hepatic artery is required to obtain clear oncologic margins during a major hepatectomy, CPT 35221 (repair blood vessel with vein graft) or 35251 (repair blood vessel with direct anastomosis) is separately reportable. NCCI guidelines permit these vascular add-ons when supported by distinct operative dictation showing dedicated microvascular reconstruction distinct from parenchymal transection.' },
+      { q: 'What documentation is required to defend CPT 47130 (total right or left hepatic lobectomy)?', a: 'Documentation must explicitly define the vascular and biliary pedicle ligation, mobilization of the vena cava, transection along Cantlie\'s line, and identification of specific Couinaud segments resected (Segments V, VI, VII, and VIII for right lobectomy; Segments II, III, and IV for left). If an additional segment across the line is taken, CPT 47125 (trisegmentectomy) must be supported by operative pathology weights and intraoperative ultrasound (76998).' },
+    ],
+  },
+  {
+    slug: 'pediatric-heme-onc',
+    name: 'Pediatric Hematology-Oncology & Cellular Therapy',
+    noun: 'pediatric oncologists, pediatric hematologists, cellular immunotherapy teams, and pediatric bone marrow transplant centers',
+    cpt: '38205, 38206, 38240, 38241, 0537T, 0538T, 0539T, 0540T, 96450, 36561, 99291, 99292',
+    blurb:
+      'Pediatric allogeneic and autologous stem cell transplants, FDA-approved CAR-T cell immunotherapy processing and infusion, diagnostic bone marrow harvests, intrathecal chemotherapy, and complex pediatric cytokine release syndrome critical care.',
+    painPoints: [
+      'CAR-T cellular therapy prior authorization denials: Payers rejecting autologous chimeric antigen receptor (CAR-T) therapy (CPT 0537T-0540T) due to rigid CD19+ relapsed/refractory pediatric ALL trial criteria documentation requirements',
+      'Stem cell processing unbundling rejections: Clearinghouses bundling allogeneic bone marrow harvesting (38205), cell processing/cryopreservation, and infusion (38240) into an arbitrary single-event payment',
+      'Intrathecal chemotherapy administration bundled with lumbar puncture: Denials of CPT 96450 (chemotherapy administration into CNS with lumbar puncture) when billed alongside routine pediatric sedation or bone marrow aspiration',
+      'Inpatient cytokine release syndrome (CRS) critical care downcoding: Downcoding of complex ICU critical care (99291/99292) during severe post-CAR-T neurotoxicity (ICANS) and tocilizumab/steroid titration',
+    ],
+    faqs: [
+      { q: 'How are CAR-T cellular therapy procedures coded and reimbursed for pediatric patients?', a: 'CAR-T therapy involves multiple sequential phases: cell collection/leukapheresis (38206), preparation and laboratory processing (0537T, 0538T, 0539T), and autologous CAR-T cell infusion (0540T). In addition to professional procedure codes, the product itself is billed with HCPCS Q2042 (tisagenlecleucel, Kymriah) under an approved FDA REMS program. Prior authorization must be secured across all collection, laboratory manufacturing, and inpatient administration phases.' },
+      { q: 'Can bone marrow aspiration (38220) and biopsy (38221) be billed during the same pediatric encounter as intrathecal chemo (96450)?', a: 'Yes. When performed under general anesthesia during pediatric leukemia restaging, CPT 38222 (diagnostic bone marrow biopsy and aspiration) and CPT 96450 (intrathecal chemotherapy via lumbar puncture) represent distinct anatomic sites and distinct procedures. Modifier 59 (or XE/XS) is appended to 96450 to reflect separate procedural intervention, and time spent on sedation cannot overlap with physician procedural time.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

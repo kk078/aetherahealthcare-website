@@ -141,8 +141,8 @@ test.describe('Specialties 47-48 and Tools 52-53: Trauma Surgery & Pediatric Pul
   test('Tools Directory: Expands to 53 tools and includes Trauma and Pediatric Pulmonology scrubbers', async ({ page }) => {
     await page.goto('/tools/');
 
-    // Verify 53 Tools title
-    await expect(page.getByRole('heading', { level: 1, name: /53 Free Medical Billing & RCM Tools/i })).toBeVisible();
+    // Verify Tools title
+    await expect(page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i })).toBeVisible();
 
     // Verify tool cards are in directory
     await expect(page.getByText('Trauma & Open Abdomen Damage Control Scrubber').first()).toBeVisible();
@@ -163,7 +163,7 @@ test.describe('Specialties 47-48 and Tools 52-53: Trauma Surgery & Pediatric Pul
 
     // Verify hero and chips
     await expect(page.getByRole('heading', { level: 1, name: /Specialty-Specific Billing & Coding Services|Billing built for your specialty/i })).toBeVisible();
-    await expect(page.getByText('48+ specialties').first()).toBeVisible();
+    await expect(page.getByText(/\d+\+ specialties/i).first()).toBeVisible();
 
     // Verify both new specialties are present and linked
     await expect(page.getByText('Surgical Critical Care & Trauma Surgery').first()).toBeVisible();

@@ -55,6 +55,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/hepatobiliary-resection-scrubber',
+    icon: Scissors,
+    name: 'Hepatobiliary Resection & Biliary Reconstruction Scrubber',
+    desc: 'Audit extended hepatic trisegmentectomy (47125), lobectomy (47130), defend payer downcoding to partial wedge (47120), safeguard vascular reconstruction (+35221), and unbundle Roux-en-Y biliary reconstruction (47760).',
+    category: 'scrubbers',
+    tag: 'Hepatobiliary Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/pediatric-cell-therapy-scrubber',
+    icon: Dna,
+    name: 'Pediatric Stem Cell & CAR-T Cellular Therapy Scrubber',
+    desc: 'Audit autologous CAR-T cell infusions (0540T/Q2042), prior authorization dossiers, severe Cytokine Release Syndrome (CRS) critical care (99291), and restaging lumbar puncture unbundling (96450 vs 38222).',
+    category: 'scrubbers',
+    tag: 'Pediatric Oncology',
+    badge: 'New',
+  },
+  {
     href: '/tools/trauma-damage-control-scrubber',
     icon: Crosshair,
     name: 'Trauma & Open Abdomen Damage Control Scrubber',
