@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 33 Interactive Tools
+// 47 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -555,6 +555,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'emerald',
     keywords: ['plastic surgery', 'reconstructive', 'cosmetic', 'schnur scale', 'breast reduction', '19318', 'blepharoplasty', '15823', 'panniculectomy', '15830', 'whcra', 'mastectomy'],
   },
+  {
+    id: 'tool-retina-injection',
+    category: 'tools',
+    title: 'Anti-VEGF Intravitreal Injection & Bilateral Scrubber',
+    subtitle: 'Anti-VEGF dosage, single-dose vial JW/JZ wastage & 28-day LCD interval compliance',
+    description: 'Audit ophthalmic anti-VEGF drug dosage and wastage (Modifiers JW/JZ), check Medicare Part B 28-day injection intervals, evaluate bilateral modifier rules (-50 vs -RT/-LT), and generate compliant ANSI 837P claim lines.',
+    href: '/tools/retina-injection-scrubber',
+    badge: 'Ophthalmology',
+    badgeVariant: 'blue',
+    keywords: ['retina', 'ophthalmology', 'anti-vegf', 'eylea', 'j0178', 'lucentis', 'j2778', 'vabysmo', 'q5128', 'intravitreal', '67028', 'modifier jw', 'modifier jz', 'oct', '92134'],
+  },
+  {
+    id: 'tool-pad-revascularization',
+    category: 'tools',
+    title: 'Endovascular & PAD Revascularization Scrubber',
+    subtitle: 'CPT 37220–37235 vascular territory hierarchy, selective catheter bundling & angiography rules',
+    description: 'Audit endovascular peripheral arterial disease (PAD) revascularization coding hierarchies across iliac, femoral-popliteal, and tibial-peroneal territories under CMS NCCI guidelines.',
+    href: '/tools/pad-revascularization-scrubber',
+    badge: 'Vascular Surgery',
+    badgeVariant: 'teal',
+    keywords: ['vascular surgery', 'endovascular', 'pad', 'revascularization', '37224', '37225', '37226', '37227', '37228', 'atherectomy', 'stent', 'angioplasty', 'ivus', '37252', '75710'],
+  },
 ];
 
 // Specialties
@@ -990,14 +1012,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['plastic surgery', 'reconstructive', 'breast reduction', 'schnur', '19318', 'blepharoplasty', '15823', 'panniculectomy', '15830', 'whcra', 'flaps', '14000'],
   },
   {
+    id: 'spec-retina-vitreous',
+    category: 'specialties',
+    title: 'Ophthalmology & Vitreoretinal Surgery Billing',
+    subtitle: 'Anti-VEGF intravitreal injections (67028), buy-and-bill J-codes, bilateral modifiers & vitrectomy',
+    href: '/medical-billing/retina-vitreous',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['retina', 'ophthalmology', 'anti-vegf', 'eylea', 'j0178', 'lucentis', 'vabysmo', 'vitrectomy', '67028', '67108', 'oct', '92134', 'fluorescein'],
+  },
+  {
+    id: 'spec-vascular-surgery',
+    category: 'specialties',
+    title: 'Vascular Surgery & Endovascular Interventions Billing',
+    subtitle: 'EVAR/TEVAR aneurysm repair, lower extremity PAD hierarchy, dialysis fistula & venous ablation',
+    href: '/medical-billing/vascular-surgery',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['vascular surgery', 'endovascular', 'pad', 'revascularization', 'evar', 'tevar', '34701', '37224', '37226', 'av fistula', '36821', 'thrombectomy', 'obl'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 40+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 42+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery'],
   },
 ];
 

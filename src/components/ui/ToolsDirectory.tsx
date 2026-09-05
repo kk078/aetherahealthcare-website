@@ -35,6 +35,8 @@ import {
   Droplets,
   Baby,
   HeartPulse,
+  Eye,
+  GitBranch,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -48,6 +50,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/retina-injection-scrubber',
+    icon: Eye,
+    name: 'Anti-VEGF Intravitreal Injection & Bilateral Scrubber',
+    desc: 'Audit anti-VEGF dosage and wastage (Modifiers JW/JZ), calculate Medicare Part B bilateral modifier logic (-50 vs -RT/-LT), and enforce 28-day LCD frequency limits.',
+    category: 'scrubbers',
+    tag: 'Ophthalmology',
+    badge: 'New',
+  },
+  {
+    href: '/tools/pad-revascularization-scrubber',
+    icon: GitBranch,
+    name: 'Endovascular & PAD Revascularization Scrubber',
+    desc: 'Enforce CPT vascular territory hierarchy (iliac, fem/pop, tibial/peroneal), suppress bundled angioplasties and catheter placements (36245–36248), and audit diagnostic angiography exemptions.',
+    category: 'scrubbers',
+    tag: 'Vascular Surgery',
+    badge: 'New',
+  },
   {
     href: '/tools/cardiac-ep-scrubber',
     icon: HeartPulse,

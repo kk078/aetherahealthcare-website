@@ -49,6 +49,8 @@ const specialtyLinks: Record<string, string> = {
   'Neonatal & Pediatric Intensive Care (NICU/PICU)': '/medical-billing/nicu-picu',
   'Radiation Oncology & Proton Therapy': '/medical-billing/radiation-oncology',
   'Cardiac Electrophysiology & Catheter Ablation': '/medical-billing/cardiac-electrophysiology',
+  'Ophthalmology & Vitreoretinal Surgery': '/medical-billing/retina-vitreous',
+  'Vascular Surgery & Endovascular Interventions': '/medical-billing/vascular-surgery',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -323,6 +325,18 @@ const specialties = [
         description: 'Functional reconstructive surgery, federal WHCRA post-mastectomy breast reconstruction, blepharoplasty visual field proof, and panniculectomy medical necessity appeals.',
         cptCodes: '19357-19364, 15823, 15830, 19318, 14000-14061, 15100, 21120',
         challenges: 'Cosmetic exclusion rejections (CARC CO-24), Schnur sliding scale tissue weight disputes, and commercial WHCRA contralateral symmetry denials.'
+      },
+      {
+        name: 'Ophthalmology & Vitreoretinal Surgery',
+        description: 'Anti-VEGF intravitreal injections, buy-and-bill drug reimbursement, bilateral surgery modifiers (-50 vs -LT/-RT), pars plana vitrectomy, and OCT diagnostic compliance.',
+        cptCodes: '67028, 67108, 67113, 67210, 67228, 92134, 92235, 92240, J0178, J2778, Q5128',
+        challenges: 'Intravitreal bilateral modifier denials, high-cost anti-VEGF drug margin leakage, Modifier JW/JZ wastage audits, and OCT frequency threshold edits.'
+      },
+      {
+        name: 'Vascular Surgery & Endovascular Interventions',
+        description: 'Endovascular aneurysm repair (EVAR/TEVAR), lower extremity revascularization (PAD hierarchy), dialysis vascular access creation & salvage, and venous ablation.',
+        cptCodes: '34701–34716, 37220–37235, 36475, 36478, 36821, 36830, 36901–36909, 36245–36248, 37252',
+        challenges: 'Vascular territory unbundling rejections, selective catheter placement NCCI bundling edits, dialysis access thrombectomy downcodings, and OBL facility fee disputes.'
       }
     ]
   }
@@ -330,13 +344,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 40+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 42+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 40+ specialties — Cardiology, Electrophysiology, Plastic Surgery, NICU/PICU, Radiation Oncology, FQHC, Sleep Medicine, Addiction Medicine, Home Health & Hospice, Wound Care, and more.',
+    description: 'Expert medical billing across 42+ specialties — Cardiology, Electrophysiology, Plastic Surgery, Retina & Ophthalmology, Vascular Surgery, NICU/PICU, Radiation Oncology, FQHC, Sleep Medicine, Addiction Medicine, Home Health & Hospice, Wound Care, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -347,7 +361,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 40 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 42 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -368,10 +382,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 40+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 42+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['40+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['42+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

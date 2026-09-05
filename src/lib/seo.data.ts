@@ -744,6 +744,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Are bilateral procedures covered under the Women\'s Health and Cancer Rights Act (WHCRA)?', a: 'Yes. Under federal law 29 U.S.C. § 1185b, any health plan offering mastectomy coverage must cover all stages of reconstruction on the diseased breast, surgery and reconstruction of the other breast to produce a symmetrical appearance, and prostheses and treatment of physical complications including lymphedema.' },
     ],
   },
+  {
+    slug: 'retina-vitreous',
+    name: 'Ophthalmology & Vitreoretinal Surgery',
+    noun: 'retina specialists, vitreoretinal surgeons, and ophthalmic surgery centers',
+    cpt: '67028, 67108, 67113, 67210, 67228, 92134, 92235, 92240, J0178, J2778, Q5128',
+    blurb:
+      'Anti-VEGF intravitreal injections, buy-and-bill drug reimbursement, bilateral surgery modifiers (-50 vs -LT/-RT), pars plana vitrectomy, and OCT diagnostic compliance.',
+    painPoints: [
+      'Intravitreal injection bilateral modifier denials: Payers rejecting CPT 67028 when billed with -50 instead of distinct -LT and -RT claim lines with 50% multiple procedure reductions',
+      'Buy-and-Bill anti-VEGF drug margin clawbacks: Expensive J-codes (J0178 Eylea, J2778 Lucentis, Q5128 Vabysmo) denied or underpaid due to missing NDC 11-digit formatting or mismatched units',
+      'Modifier JW / JZ drug wastage audit penalties: Audits and claim suspensions for failing to document single-dose vial (SDV) discarded milligrams on secondary claim lines',
+      'Diagnostic OCT (92134) frequency edits: Payers denying optical coherence tomography as exceeding medical LCD frequency thresholds during active anti-VEGF treatment cycles',
+    ],
+    faqs: [
+      { q: 'How should bilateral intravitreal injections (CPT 67028) be reported?', a: 'Billing rules vary by payer: Medicare Part B typically accepts CPT 67028 with Modifier 50 on a single line with 2 units or two lines with 67028-RT and 67028-LT-51. The injected medication (e.g. J0178) is billed on separate lines with the exact units administered and discarded.' },
+      { q: 'What are the documentation rules for anti-VEGF drug wastage (Modifier JW vs JZ)?', a: 'CMS mandates Modifier JZ when zero drug is discarded from a single-dose vial, and Modifier JW on a separate claim line reporting the exact number of discarded units. The clinical record must explicitly document the total vial volume, administered dose, and discarded remainder.' },
+    ],
+  },
+  {
+    slug: 'vascular-surgery',
+    name: 'Vascular Surgery & Endovascular Interventions',
+    noun: 'vascular surgeons, endovascular specialists, and outpatient endovascular centers (OBLs)',
+    cpt: '34701–34716, 37220–37235, 36475, 36478, 36821, 36830, 36901–36909, 36245–36248, 37252',
+    blurb:
+      'Endovascular aneurysm repair (EVAR/TEVAR), lower extremity revascularization (PAD hierarchy), dialysis vascular access creation & salvage, and venous ablation.',
+    painPoints: [
+      'Lower extremity revascularization territory unbundling: Commercial payers rejecting angioplasty, atherectomy, and stenting when billed together in the same vascular territory (iliac, fem/pop, or tibial/peroneal)',
+      'Selective catheter placement unbundling edits: Denials of CPT 36245–36248 when bundled into lower extremity revascularization codes 37220–37235 under CMS NCCI policy',
+      'Dialysis circuit declotting and salvage denials: Erroneous bundling of balloon angioplasty (36902) into thrombectomy (36901) without separate documentation of distinct stenosis lesions',
+      'Office-Based Lab (OBL) global facility fee reductions: Drastic downcoding of device-intensive endovascular interventions due to incorrect site-of-service POS 11 vs POS 24 reporting',
+    ],
+    faqs: [
+      { q: 'How does the lower extremity revascularization coding hierarchy work (CPT 37220–37235)?', a: 'Codes are categorized by vascular territory (iliac, femoral-popliteal, and tibial-peroneal). In each territory, only the most intensive service per vessel is coded (atherectomy + stenting > atherectomy alone > stenting alone > angioplasty alone). Lesser interventions in the same vessel are bundled.' },
+      { q: 'Can diagnostic angiography be billed with an endovascular intervention?', a: 'Diagnostic angiography (e.g. 75710) may only be billed with an intervention if there was no prior catheter-based diagnostic study, the study was medically necessary to decide upon intervention, and it is reported with Modifier 59 or XU.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
