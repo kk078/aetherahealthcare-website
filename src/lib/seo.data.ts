@@ -996,6 +996,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How can pediatric craniofacial practices overturn commercial cosmetic exclusions for LeFort osteotomies (CPT 21141-21155)?', a: 'Appeals must document functional impairment under ICD-10 congenital malformation codes (e.g. Q87.0 Crouzon/Apert syndrome, Q35.9 cleft palate). Required evidence includes cephalometric radiographic tracings proving severe Class III malocclusion, pediatric sleep study (polysomnography) demonstrating obstructive sleep apnea due to midface retrusion, speech-language pathology nasometry documenting velopharyngeal insufficiency, and multidisciplinary ACPA (American Cleft Palate-Craniofacial Association) team records.' },
     ],
   },
+  {
+    slug: 'complex-spine-deformity',
+    name: 'Complex Spine Deformity & Vertebral Column Resection',
+    noun: 'orthopedic spine deformity surgeons, complex spine neurosurgeons, scoliosis reconstructive teams, and spine surgery institutes',
+    cpt: '22206, 22207, 22208, 22210, 22212, 22214, 22842, 22843, 22844, 22848, 22853, 95940, 95941, 99223',
+    blurb:
+      'Surgical correction of severe rigid kyphoscoliosis, 3-column osteotomies (pedicle subtraction osteotomy PSO, vertebral column resection VCR), long-construct posterior spinal instrumentation, pelvic fixation, and multimodal intraoperative neuromonitoring.',
+    painPoints: [
+      '3-Column osteotomy downcoding clawbacks: Commercial payers arbitrarily reclassifying vertebral column resection (CPT 22207) or PSO (22206) as simple posterior arthrodesis or posterior osteotomy (22212/22214)',
+      'Multiple-level osteotomy add-on denials: Clearinghouses bundling additional segment osteotomy codes (+22208) into primary osteotomy units without clinical review',
+      'Pelvi-sacral fixation unbundling rejections: Denial of S2-alar-iliac (S2AI) or iliac screw fixation (+22848) as inclusive to posterior spinal instrumentation (22842-22844)',
+      'Dual attending co-surgeon Modifier -62 audits: Multi-surgeon long-construct deformity cases suspended due to minor variations in surgeon operative reports',
+    ],
+    faqs: [
+      { q: 'What is the coding distinction between Pedicle Subtraction Osteotomy (22206) and Vertebral Column Resection (22207)?', a: 'CPT 22206 describes osteotomy of the spine, including posterior trisegment decompression, single or multiple approaches, for severe deformity, 3-column osteotomy, posterior approach, each vertebral segment, lumbar. CPT 22207 describes the same 3-column osteotomy in the thoracic spine. When complete removal of the vertebral body and adjacent discs (vertebral column resection / VCR) is performed via a posterior-only approach for fixed coronal/sagittal imbalance, CPT 22206/22207 is reportable per vertebral segment excised, with additional contiguous segments coded using add-on code +22208.' },
+      { q: 'Can pelvic fixation (+22848) and anterior column structural cages (+22853) be billed with posterior instrumentation (22843/22844)?', a: 'Yes. CPT +22848 (pelvic fixation other than sacrum) and CPT +22853 (insertion of interbody biomechanical device) are exempt from Modifier 51 and multiple procedure reductions under CMS physician fee schedule rules. Pelvic fixation requires explicit operative documentation of bilateral iliac or S2-alar-iliac screw anchor placement with connecting rod modularity separate from sacral pedicle screws.' },
+    ],
+  },
+  {
+    slug: 'pediatric-transplant',
+    name: 'Pediatric Solid Organ Transplant & Intestinal Rehabilitation',
+    noun: 'pediatric transplant surgeons, pediatric abdominal organ specialists, intestinal rehabilitation directors, and pediatric transplant centers',
+    cpt: '44132, 44133, 44135, 47135, 47140, 47141, 50360, 50365, 44130, 44715, 44720, 99291, 99223',
+    blurb:
+      'Pediatric orthotopic liver, kidney, and multivisceral transplantation, isolated small bowel intestinal grafts, living donor graft procurement, vascular bench surgery, and serial transverse enteroplasty (STEP procedure) for pediatric short bowel syndrome.',
+    painPoints: [
+      'Organ acquisition cost center vs professional billing disputes: Medicare and commercial payers confusing pre-transplant donor organ procurement expenses with recipient surgeon professional fees',
+      'Intestinal lengthening (STEP procedure 44130) denials: Payers rejecting autologous gastrointestinal reconstruction for pediatric short bowel syndrome under investigational non-coverage clauses',
+      'Back-table vascular reconstruction bundling: Clearinghouse denials of recipient graft arterial and venous bench reconstructions (+44720, +44721) as inclusive to primary transplant allotransplantation',
+      'Post-transplant acute rejection critical care recoupments: Recoupment audits on pediatric intensive care bedside evaluations (CPT 99291/99292) during severe graft rejection episodes',
+    ],
+    faqs: [
+      { q: 'How should pediatric transplant programs separate organ acquisition costs from recipient surgeon professional fees?', a: 'Living and deceased donor organ acquisition activities (including organ procurement travel, tissue typing, perfusion preservation, and donor hepatectomy/enterectomy) must be cost-reported on Medicare Cost Report Form CMS-2552-10 Worksheet D-4 for certified transplant hospitals. In contrast, recipient implantation codes (CPT 44135, 47135, 50360) and donor bench reconstruction add-ons (+44720) are billed on CMS-1500 / 837P with appropriate recipient demographic identifiers and organ transplant tracking modifiers.' },
+      { q: 'How can programs defend STEP enteroplasty (CPT 44130) prior authorization against experimental exclusions?', a: 'Prior authorization appeals must submit clinical documentation demonstrating total parenteral nutrition (TPN) dependence, recurrent catheter-associated bloodstream infections (CLABSI), and intestinal failure-associated liver disease (IFALD). Submitting ACG and NASPGHAN consensus guidelines establishes Serial Transverse Enteroplasty as standard-of-care autologous bowel reconstruction that prevents irreversible liver failure and multi-million dollar multivisceral transplantation.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

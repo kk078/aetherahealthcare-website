@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 59 Interactive Tools
+// 61 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -709,6 +709,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'teal',
     keywords: ['pediatric craniofacial', 'cleft palate', 'cleft lip', 'palatoplasty', '42200', '42205', '42210', '42215', 'alveolar bone graft', 'lefort osteotomy', '21141', 'cranial vault remodeling', 'craniosynostosis', '21175', 'modifier 58', 'modifier 62', 'vpi', 'velopharyngeal insufficiency', 'speech pathology', 'rhinoplasty', '30460'],
   },
+  {
+    id: 'tool-vcr-spine',
+    category: 'tools',
+    title: 'Vertebral Column Resection (VCR) & Spine Deformity Scrubber',
+    subtitle: '3-column osteotomy (22206/22207), add-on segments (+22208), long constructs & Mod 62',
+    description: 'Audit 3-column osteotomy (22206/22207), additional vertebral segments (+22208), long-construct arthrodesis (22843/22844), pelvic fixation (+22848), and defend Modifier -62 co-surgeon billing.',
+    href: '/tools/vcr-spine-scrubber',
+    badge: 'Spine Surgery',
+    badgeVariant: 'amber',
+    keywords: ['spine surgery', 'vertebral column resection', 'vcr', '3-column osteotomy', 'pedicle subtraction osteotomy', 'pso', '22206', '22207', '22208', 'posterior osteotomy', '22210', '22212', '22214', 'spinal deformity', 'arthrodesis', '22842', '22843', '22844', 'pelvic fixation', '22848', 'biomechanical interbody', '22853', 'ionm', '95940', '95941', 'modifier 62', 'co-surgery'],
+  },
+  {
+    id: 'tool-pediatric-transplant',
+    category: 'tools',
+    title: 'Pediatric Solid Organ Transplant & Intestinal Rehabilitation Scrubber',
+    subtitle: 'STEP enteroplasty (44130), allotransplant (44135/47135), organ acquisition Worksheet D-4 & Mod 24',
+    description: 'Audit STEP enteroplasty (44130), intestinal/liver allotransplantation (44135/47135), defend Worksheet D-4 organ acquisition carve-outs, back-table vascular bench surgery (+44720), and Modifier -24 post-op critical care.',
+    href: '/tools/pediatric-transplant-scrubber',
+    badge: 'Pediatric Transplant',
+    badgeVariant: 'teal',
+    keywords: ['pediatric transplant', 'intestinal rehabilitation', 'short bowel syndrome', 'step enteroplasty', 'serial transverse enteroplasty', '44130', 'intestinal allotransplantation', '44132', '44133', '44135', 'liver transplant', '47135', 'reduced-size liver', '47140', 'split liver', '47141', 'kidney transplant', '50360', '50365', 'organ acquisition', 'worksheet d-4', 'back-table bench surgery', '44715', '44720', 'post-transplant critical care', '99291', 'modifier 24'],
+  },
 ];
 
 // Specialties
@@ -1284,14 +1306,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['pediatric craniofacial', 'cleft palate', 'palatoplasty', '42200', '42205', '42210', 'alveolar bone graft', 'midface lefort', '21141', 'cranial vault remodeling', '21175', 'craniosynostosis', 'modifier 58', 'vpi', 'velopharyngeal insufficiency', 'pediatric plastic surgery'],
   },
   {
+    id: 'spec-complex-spine-deformity',
+    category: 'specialties',
+    title: 'Complex Spine Deformity & Vertebral Column Resection Billing',
+    subtitle: '3-column osteotomy (22206/22207), add-on segments (+22208), long constructs & pelvic fixation',
+    href: '/medical-billing/complex-spine-deformity',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['complex spine deformity', 'vertebral column resection', 'vcr', '3-column osteotomy', 'pedicle subtraction osteotomy', 'pso', '22206', '22207', '22208', 'posterior osteotomy', '22210', '22212', '22214', 'spinal deformity', 'arthrodesis', '22842', '22843', '22844', 'pelvic fixation', '22848', 'biomechanical interbody', '22853', 'ionm', '95940', '95941', 'modifier 62', 'co-surgery'],
+  },
+  {
+    id: 'spec-pediatric-transplant',
+    category: 'specialties',
+    title: 'Pediatric Solid Organ Transplant & Intestinal Rehabilitation Billing',
+    subtitle: 'STEP enteroplasty (44130), allotransplant (44135/47135), organ acquisition Worksheet D-4 & Mod 24',
+    href: '/medical-billing/pediatric-transplant',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric transplant', 'intestinal rehabilitation', 'short bowel syndrome', 'step enteroplasty', 'serial transverse enteroplasty', '44130', 'intestinal allotransplantation', '44132', '44133', '44135', 'liver transplant', '47135', 'reduced-size liver', '47140', 'split liver', '47141', 'kidney transplant', '50360', '50365', 'organ acquisition', 'worksheet d-4', 'back-table bench surgery', '44715', '44720', 'post-transplant critical care', '99291', 'modifier 24'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 54+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 56+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty'],
   },
 ];
 

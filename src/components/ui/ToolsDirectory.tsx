@@ -56,6 +56,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/vcr-spine-scrubber',
+    icon: Bone,
+    name: 'Vertebral Column Resection (VCR) & Spine Deformity Scrubber',
+    desc: 'Audit 3-column osteotomy (22206/22207), additional vertebral segments (+22208), long-construct arthrodesis (22843/22844), pelvic fixation (+22848), and defend Modifier -62 co-surgeon billing.',
+    category: 'scrubbers',
+    tag: 'Spine Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/pediatric-transplant-scrubber',
+    icon: Baby,
+    name: 'Pediatric Solid Organ Transplant & Intestinal Rehabilitation Scrubber',
+    desc: 'Audit STEP enteroplasty (44130), intestinal/liver allotransplantation (44135/47135), defend Worksheet D-4 organ acquisition carve-outs, back-table vascular bench surgery (+44720), and Modifier -24 post-op critical care.',
+    category: 'scrubbers',
+    tag: 'Pediatric Transplant',
+    badge: 'New',
+  },
+  {
     href: '/tools/whipple-resection-scrubber',
     icon: Scissors,
     name: 'Whipple Procedure & Pancreatic Resection Scrubber',

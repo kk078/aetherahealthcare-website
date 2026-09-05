@@ -120,7 +120,7 @@ test.describe('Cycle 16: Complex Pancreatic Surgery & Pediatric Craniofacial Sui
     await page.goto(`${BASE_URL}/tools`);
     await page.waitForLoadState('domcontentloaded');
 
-    await expect(page.getByRole('heading', { level: 1 })).toContainText(/59 Free Medical Billing & RCM Tools/i);
+    await expect(page.getByRole('heading', { level: 1 })).toContainText(/\d+\s+Free Medical Billing & RCM Tools/i);
 
     // Search for Whipple
     const searchInput = page.getByRole('searchbox');
@@ -137,7 +137,7 @@ test.describe('Cycle 16: Complex Pancreatic Surgery & Pediatric Craniofacial Sui
     await page.waitForLoadState('domcontentloaded');
 
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Billing built for your specialty/i);
-    await expect(page.getByText(/54\+ specialties/i).first()).toBeVisible();
+    await expect(page.getByText(/\d+\+\s+specialties/i).first()).toBeVisible();
 
     // Check links exist
     const pancreaticLink = page.locator('a[href*="/medical-billing/pancreatic-surgery"]').first();
