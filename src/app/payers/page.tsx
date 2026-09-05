@@ -7,8 +7,8 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
-  title: { absolute: 'Insurance Payer Network | 900+ Payers | Aethera Healthcare Solutions' },
-  description: 'Aethera Healthcare Solutions works with 900+ insurance payers including Medicare, Medicaid, and all major commercial insurers. Real-time eligibility verification included.',
+  title: { absolute: 'Insurance Payer Network | 10,600+ Payers & Clearinghouse Routes | Aethera Healthcare Solutions' },
+  description: 'Aethera Healthcare Solutions connects with 10,600+ insurance payers and clearinghouse EDI gateways including Medicare, Medicaid, commercial insurers, and workers comp. Real-time eligibility verification included.',
 };
 
 const payerGroups = [
@@ -73,12 +73,12 @@ export default function Payers() {
       <Navbar />
 
       <RcmHeroBand
-        eyebrow="Payer Network"
+        eyebrow="Payer Network &amp; EDI Routing"
         title="We work with your payers"
-        subtitle="Aethera connects with 900+ payers nationwide — from Medicare and Medicaid to every major commercial insurer. If they pay claims, we know how to work with them."
-        primary={{ href: '/payers/directory', label: 'Browse Payer Directory' }}
+        subtitle="Aethera connects with 10,600+ payers and clearinghouse EDI gateways nationwide — from Medicare and Medicaid to commercial insurers, dental, and workers' compensation."
+        primary={{ href: '/payers/directory', label: 'Browse 10,600+ Payer Directory' }}
         secondary={{ href: '/tools/payer-provider-manuals', label: 'Payer Manual Finder' }}
-        chips={['900+ payers', 'All 50 states', 'Real-time eligibility']}
+        chips={['10,600+ clearinghouse routes', 'All 50 states', 'Real-time 270/271 eligibility', '835 ERA remittance']}
       />
 
       {/* Stats */}
@@ -86,7 +86,7 @@ export default function Payers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: '900+', label: 'Payers Connected' },
+              { value: '10,640+', label: 'Clearinghouse Routes' },
               { value: '99.8%', label: 'Electronic Claim Rate' },
               { value: '94%', label: 'Eligibility Denials Prevented' },
               { value: '48h', label: 'Avg. Clearinghouse Turnaround' },

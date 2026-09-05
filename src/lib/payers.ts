@@ -1,5 +1,26 @@
 import data from './payers.data.json';
 
+export interface PayerEdiCapabilities {
+  era: boolean;
+  eligibility: boolean;
+  claimStatus: boolean;
+  professional: boolean;
+  hospital: boolean;
+  dental: boolean;
+  secondary: boolean;
+  workersComp: boolean;
+  auto: boolean;
+  attachments: boolean;
+}
+
+export interface ClaimLogicMatch {
+  id: string;
+  name: string;
+  par: 'Par' | 'Non-Par';
+  enrollment: boolean;
+  services: string[];
+}
+
 export interface Payer {
   slug: string;
   name: string;
@@ -17,10 +38,21 @@ export interface Payer {
   fax: string | null;
   notes?: string | null;
   verified: string | null;
+  claimLogicId?: string | null;
+  parStatus?: 'Par' | 'Non-Par' | null;
+  enrollmentRequired?: boolean | null;
+  ediCapabilities?: PayerEdiCapabilities | null;
+  claimLogicMatches?: ClaimLogicMatch[];
 }
 
 interface PayerFile {
-  _meta: { note: string; updated: string };
+  _meta: {
+    note: string;
+    updated: string;
+    claimlogic_source?: string;
+    claimlogic_total_payors?: number;
+    claimlogic_updated?: string;
+  };
   payers: Payer[];
 }
 
