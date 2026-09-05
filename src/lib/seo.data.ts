@@ -528,6 +528,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How do you prevent Modifier 25 denials on same-day allergy testing visits?', a: 'We ensure physician clinical notes distinctly separate the evaluation of allergic rhinitis or asthma triggers from the technical execution of skin tests (95004/95024), satisfying payer modifier 25 requirements.' },
     ],
   },
+  {
+    slug: 'interventional-radiology',
+    name: 'Interventional Radiology & Endovascular',
+    noun: 'interventional radiologists, endovascular surgeons, and vein clinics',
+    cpt: '36200–36248, 37241–37243, 37220–37235, 75710, 75625, 75774, 36556–36585',
+    blurb:
+      'High-complexity catheterization tree hierarchy, vascular family selective catheter placements, transcatheter embolization, revascularization, and radiological supervision.',
+    painPoints: [
+      'Vascular family catheterization hierarchy: Non-selective (36200) vs selective 1st, 2nd, and 3rd order branch catheterization (36245–36248) downcoding',
+      'Diagnostic angiography bundling during intervention: Denials when billing diagnostic studies (75710) in conjunction with peripheral vascular interventions (37220–37235)',
+      'Vascular embolization bundling: Transcatheter embolization (37241–37244) bundled into tumor ablation or uterine artery embolization procedures',
+      'Venous access device insertion vs replacement vs repair (CPT 36556–36585) rejections over tunneled vs non-tunneled documentation gaps',
+    ],
+    faqs: [
+      { q: 'How do you prevent vascular catheterization hierarchy downcoding?', a: 'Our interventional radiology billing specialists trace the catheter roadmap through each vascular family branch order, verifying selective catheterization CPT codes (36245–36248) alongside imaging supervision and interpretation (S&I) codes.' },
+      { q: 'When is diagnostic angiography separately billable during a vascular intervention?', a: 'We apply CMS guidelines verifying that diagnostic angiograms are billable with Modifier 59/XU only when performed prior to the intervention to decide on treatment or when examining a distinct anatomical territory.' },
+    ],
+  },
+  {
+    slug: 'oral-surgery',
+    name: 'Oral & Maxillofacial Surgery (CDT/CPT)',
+    noun: 'oral and maxillofacial surgery (OMS) practices and surgical suites',
+    cpt: '21085, 21141–21155, 21193–21206, 21240–21243, 40810–40818, D7210–D7999',
+    blurb:
+      'Dual dental (CDT) and medical (CPT) cross-coding, orthognathic surgery, TMJ arthroplasty, bone grafts, and traumatic facial reconstruction under medical insurance.',
+    painPoints: [
+      'Dental vs Medical carrier finger-pointing: Medical insurance denying impacted extractions or TMJ as dental, while dental insurance denies them as exceeding benefit limits',
+      'Orthognathic surgical planning: Le Fort osteotomies (21141–21155) and sagittal split ramus osteotomies (21193–21206) denied for cosmetic exclusion without cephalometric proof',
+      'TMJ arthroscopy and arthroplasty (21240–21243) denials requiring prior conservative non-surgical splint therapy documentation',
+      'In-office surgical bone grafting (CPT 21210/21215 vs CDT D7950/D7953) underpayment and site-of-service fee differentials',
+    ],
+    faqs: [
+      { q: 'How do you successfully cross-code oral surgery CDT dental codes to medical CPT?', a: 'We perform automated primary medical claim submission using standard HCFA-1500 / 837P formats with required ICD-10 medical necessity diagnoses (e.g. severe skeletal malocclusion or osteonecrosis) before coordinating secondary benefits through dental payers.' },
+      { q: 'What documentation is required for medical pre-authorization of orthognathic surgery?', a: 'We compile and submit comprehensive cephalometric tracings, facial photographic analysis, diagnostic dental models, and airway sleep study documentation to overcome cosmetic exclusion barriers.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

@@ -27,6 +27,7 @@ import {
   ShieldAlert,
   Activity,
   Scale,
+  Scissors,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -40,6 +41,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/global-period-scrubber',
+    icon: Scissors,
+    name: 'Surgical Global Period & Post-Op Modifier Scrubber',
+    desc: 'Scrub surgical follow-ups against 0-day, 10-day, and 90-day global fee packages under CMS Ch. 12 § 40.1. Validate Modifiers 24, 58, 78, 79, 54, and 55.',
+    category: 'scrubbers',
+    tag: 'Global Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/dmepos-validator',
+    icon: ShieldCheck,
+    name: 'DMEPOS Medical Necessity & Prior Auth Validator',
+    desc: 'Validate Medicare DMEPOS claims across Oxygen, CPAP, Mobility Assistive Equipment, and Orthotics. Verify SWO, Face-to-Face timing, and DME MAC jurisdiction routing.',
+    category: 'scrubbers',
+    tag: 'DMEPOS Rules',
+    badge: 'New',
+  },
   {
     href: '/tools/msp-determination-engine',
     icon: Scale,

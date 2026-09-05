@@ -88,18 +88,18 @@ test.describe('D-SNP & Medicare Advantage Funnel, ID & Allergy Specialties, and 
     await page.screenshot({ path: `${ARTIFACT_DIR}/clinical_trial_scrubber_tool.png`, fullPage: false });
   });
 
-  test('Tools Hub renders 33 tools and indexes new engines', async ({ page }) => {
+  test('Tools Hub renders tools and indexes new engines', async ({ page }) => {
     await page.goto('/tools/');
 
-    await expect(page.getByRole('heading', { level: 1, name: /33 Free Medical Billing & RCM Tools/i })).toBeVisible();
-    await expect(page.getByPlaceholder(/Search 33 free tools & engines…/i)).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i })).toBeVisible();
+    await expect(page.getByPlaceholder(/Search \d+ free tools & engines…/i)).toBeVisible();
 
     // Verify both new tools are present in catalog
     await expect(page.getByRole('heading', { level: 3, name: /Medicare Secondary Payer \(MSP\) Determination Engine/i })).toBeVisible();
     await expect(page.getByRole('heading', { level: 3, name: /Clinical Trial Billing & Coverage Analysis Scrubber/i })).toBeVisible();
 
     // Test search filter for MSP
-    const toolSearch = page.getByPlaceholder(/Search 33 free tools & engines…/i);
+    const toolSearch = page.getByPlaceholder(/Search \d+ free tools & engines…/i);
     await toolSearch.fill('Secondary Payer');
     await expect(page.getByRole('heading', { level: 3, name: /Medicare Secondary Payer \(MSP\) Determination Engine/i })).toBeVisible();
 

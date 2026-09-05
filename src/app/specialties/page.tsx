@@ -37,6 +37,8 @@ const specialtyLinks: Record<string, string> = {
   'Otolaryngology & ENT': '/medical-billing/ent',
   'Infectious Disease': '/medical-billing/infectious-disease',
   'Allergy & Immunology': '/medical-billing/allergy-immunology',
+  'Interventional Radiology': '/medical-billing/interventional-radiology',
+  'Oral & Maxillofacial Surgery': '/medical-billing/oral-surgery',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -181,6 +183,12 @@ const specialties = [
         description: 'Functional endoscopic sinus surgery (FESS), balloon sinuplasty, diagnostic nasal endoscopy, and multi-antigen allergy immunotherapy.',
         cptCodes: '31231-31298, 95165, 92557, 69210, 69436',
         challenges: 'Multiple endoscopy reduction rule deductions, same-day E/M modifier 25 documentation, and allergy vial billing limits.'
+      },
+      {
+        name: 'Oral & Maxillofacial Surgery',
+        description: 'Dual dental (CDT) and medical (CPT) cross-coding, orthognathic surgery, TMJ arthroplasty, and facial trauma reconstruction.',
+        cptCodes: '21141-21206, 21240, 40810, D7210-D7999',
+        challenges: 'Dental vs medical payer coverage disputes, cosmetic exclusion pre-authorizations, and bone graft site-of-service rules.'
       }
     ]
   },
@@ -216,6 +224,12 @@ const specialties = [
         description: 'Hospital-based emergency department staffing and independent physician groups managing high-acuity adult and pediatric encounters.',
         cptCodes: '99281-99285, 99291-99292, 99221-99223',
         challenges: 'Level 5 (99285) downcoding audits, Critical Care time documentation, and No Surprises Act Qualified Payment Amount (QPA) disputes.'
+      },
+      {
+        name: 'Interventional Radiology',
+        description: 'Selective catheterization, vascular tree navigation, transcatheter embolization, revascularization, and radiological supervision.',
+        cptCodes: '36200-36248, 37241-37243, 37220-37235, 75710',
+        challenges: 'Vascular family branch hierarchy downcoding and diagnostic angiography unbundling denials.'
       }
     ]
   },
@@ -246,13 +260,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 28+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 30+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 28+ specialties — Cardiology, Orthopedics, Pain Management, Oncology, Rheumatology, Pulmonology, Infectious Disease, Allergy, and more.',
+    description: 'Expert medical billing across 30+ specialties — Cardiology, Orthopedics, Interventional Radiology, Oral Surgery, Oncology, Rheumatology, Pulmonology, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -263,7 +277,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 28 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 30 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -284,10 +298,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 28+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 30+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['28+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['30+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}
