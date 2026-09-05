@@ -7,9 +7,9 @@ import ToolsDirectory from '@/components/ui/ToolsDirectory';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: { absolute: '81 Free Medical Billing, EDI & RCM Tools | Aethera Healthcare' },
+  title: { absolute: '83 Free Medical Billing, EDI & RCM Tools | Aethera Healthcare' },
   description:
-    '81 free tools for revenue cycle teams: pediatric MIBG radiopharmaceutical scrubber, complex robotic hernia TAR scrubber, pediatric biochemical genetics scrubber, complex skull base bypass scrubber, and EDI parsers. No login required.',
+    '83 free tools for revenue cycle teams: pediatric TPIAT islet isolation scrubber, endoscopic skull base odontoid scrubber, pediatric MIBG radiopharmaceutical scrubber, complex robotic hernia TAR scrubber, and EDI parsers. No login required.',
 };
 
 export default function ToolsHub() {
@@ -19,11 +19,11 @@ export default function ToolsHub() {
 
       <RcmHeroBand
         eyebrow="Free · No Login Required"
-        title="81 Free Medical Billing & RCM Tools"
+        title="83 Free Medical Billing & RCM Tools"
         subtitle="Clinical scrubbers, federal compliance engines, financial calculators, and EDI diagnostic parsers used daily by our senior billing specialists — open to all healthcare providers."
-        primary={{ href: '#tools', label: 'Explore All 81 Tools' }}
+        primary={{ href: '#tools', label: 'Explore All 83 Tools' }}
         secondary={{ href: '/free-assessment', label: 'Get a Free Practice Audit' }}
-        chips={['81 Free Tools', 'No Login Required', 'Federal Statutory Compliance', 'Built by AAPC Coders']}
+        chips={['83 Free Tools', 'No Login Required', 'Federal Statutory Compliance', 'Built by AAPC Coders']}
       />
 
       <section id="tools" className="py-12 md:py-16 flex-1 scroll-mt-24">

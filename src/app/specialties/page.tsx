@@ -85,6 +85,8 @@ const specialtyLinks: Record<string, string> = {
   'Complex Skull Base Cerebrovascular Bypass & Microvascular EC-IC Anastomosis': '/medical-billing/skull-base-cerebrovascular-bypass',
   'Pediatric Targeted Radioiodine & MIBG Therapy for Neuroblastoma': '/medical-billing/pediatric-mibg-radiopharmaceutical',
   'Multi-Compartment Complex Robotic & Laparoscopic Hernia Reconstruction': '/medical-billing/complex-robotic-hernia-reconstruction',
+  'Pediatric Total Pancreatectomy with Islet Autotransplantation (TPIAT)': '/medical-billing/pediatric-tpiat-islet-transplant',
+  'Endoscopic Transnasal Odontoid & Pituitary Skull Base Resection': '/medical-billing/endoscopic-pituitary-odontoid-resection',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -575,6 +577,18 @@ const specialties = [
         description: 'Modern CPT 2023+ anterior abdominal wall hernia repairs: robotic/laparoscopic repair (49591–49618), posterior component separation with transversus abdominis release (TAR add-on +49622), retrorectus prosthetic mesh (+49623), and incarcerated/strangulated repair justification.',
         cptCodes: '49591, 49592, 49593, 49594, 49595, 49596, 49613, 49614, 49615, 49616, 49622, 49623',
         challenges: 'Transversus abdominis release (TAR +49622) bundling denials, mesh placement add-on (+49623) unbundling clawbacks, multi-defect sizing disputes, and incarcerated hernia tier downcoding.'
+      },
+      {
+        name: 'Pediatric Total Pancreatectomy with Islet Autotransplantation (TPIAT)',
+        description: 'Total pancreatectomy for pediatric hereditary pancreatitis (48155), cGMP back-table enzymatic islet isolation and purification (48805), portal vein catheterization (36481/37202), and intraportal islet autotransplantation (+48554).',
+        cptCodes: '48155, 48805, 48554, 48556, 36481, 37202, 75885, 99223, 99291',
+        challenges: 'Back-table islet isolation (48805) unbundling denials into pancreatectomy, autotransplantation vs allotransplantation coverage confusion, portal vein access bundling, and postoperative glycemic critical care recoupments.'
+      },
+      {
+        name: 'Endoscopic Transnasal Odontoid & Pituitary Skull Base Resection',
+        description: 'Expanded endonasal skull base surgery (EEA): transnasal odontoidectomy for basilar invagination (61575), transsphenoidal hypophysectomy (61548/62165), vascularized Hadad nasoseptal flap (+15730/+30520), neuronavigation (+61782), and ENT/Neurosurgery co-surgery (Modifier -62).',
+        cptCodes: '61548, 61575, 62165, 31290, 31291, 30520, 15730, 61782, 62272, 69990',
+        challenges: 'Vascularized nasoseptal flap (+15730) bundling into approach, transnasal odontoidectomy (61575) downcoding to simple pituitary excision, and dual-surgeon Modifier -62 matching discrepancies.'
       }
     ]
   }
@@ -582,13 +596,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 76+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 78+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 76+ specialties — Pediatric Targeted Radioiodine & MIBG Therapy, Complex Robotic Hernia TAR Reconstruction, Pediatric Biochemical Genetics, Skull Base Cerebrovascular Bypass, and more.',
+    description: 'Expert medical billing across 78+ specialties — Pediatric TPIAT Islet Autotransplant, Endoscopic Skull Base Odontoid Resection, Pediatric Targeted MIBG Therapy, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -599,7 +613,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 76 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 78 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -620,10 +634,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 76+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 78+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['76+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['78+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

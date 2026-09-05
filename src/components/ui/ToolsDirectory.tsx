@@ -59,6 +59,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/pediatric-tpiat-islet-transplant-scrubber',
+    icon: FlaskConical,
+    name: 'Pediatric TPIAT & Islet Isolation Scrubber',
+    desc: 'Audit total pancreatectomy (48155), cGMP clean-room islet isolation (48805), intraportal autotransplantation (+48554), and portal vein catheterization.',
+    category: 'scrubbers',
+    tag: 'Pediatric Pancreas & Islet Transplant',
+    badge: 'New',
+  },
+  {
+    href: '/tools/endoscopic-pituitary-odontoid-scrubber',
+    icon: Brain,
+    name: 'Endoscopic Skull Base Pituitary & Odontoid Scrubber',
+    desc: 'Audit transnasal odontoidectomy (61575), transsphenoidal hypophysectomy (61548), vascularized Hadad nasoseptal flaps (+15730), and ENT/Neurosurgery Modifier -62.',
+    category: 'scrubbers',
+    tag: 'Endoscopic Skull Base & Neurosurgery',
+    badge: 'New',
+  },
+  {
     href: '/tools/pediatric-mibg-radiopharmaceutical-scrubber',
     icon: Radiation,
     name: 'Pediatric Targeted MIBG & Radiopharmaceutical Scrubber',

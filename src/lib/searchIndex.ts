@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 81 Interactive Tools
+// 83 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -951,6 +951,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'amber',
     keywords: ['complex hernia', 'robotic hernia', 'ventral hernia', 'incisional hernia', '49591', '49593', '49595', '49592', '49594', '49596', '49613', '49615', '49617', '49614', '49616', '49618', 'tar', 'transversus abdominis release', '49622', 'mesh add-on', '49623', 'component separation', 'abdominal wall reconstruction', 'non-contiguous defects', 'modifier 59'],
   },
+  {
+    id: 'tool-pediatric-tpiat',
+    category: 'tools',
+    title: 'Pediatric TPIAT & Islet Isolation Scrubber',
+    subtitle: 'Total pancreatectomy (48155), cGMP islet isolation (48805) & autotransplantation (+48554)',
+    description: 'Audit total pancreatectomy (48155), cGMP clean-room islet isolation (48805), intraportal autotransplantation (+48554), and portal vein catheterization.',
+    href: '/tools/pediatric-tpiat-islet-transplant-scrubber',
+    badge: 'Islet Transplant',
+    badgeVariant: 'teal',
+    keywords: ['pediatric tpiat', 'islet transplant', 'pancreatectomy', '48155', 'islet isolation', '48805', 'autotransplantation', '48554', 'portal vein catheter', '36481', '37202', 'chronic pancreatitis', 'prss1', 'cf', 'hereditary pancreatitis'],
+  },
+  {
+    id: 'tool-endoscopic-pituitary-odontoid',
+    category: 'tools',
+    title: 'Endoscopic Skull Base Pituitary & Odontoid Scrubber',
+    subtitle: 'Transnasal odontoid (61575), transsphenoidal hypophysectomy (61548) & nasoseptal flap (+15730)',
+    description: 'Audit transnasal odontoidectomy (61575), transsphenoidal hypophysectomy (61548), vascularized Hadad nasoseptal flaps (+15730), and ENT/Neurosurgery Modifier -62.',
+    href: '/tools/endoscopic-pituitary-odontoid-scrubber',
+    badge: 'Endoscopic Skull Base',
+    badgeVariant: 'amber',
+    keywords: ['endoscopic skull base', 'odontoidectomy', '61575', 'pituitary tumor', 'hypophysectomy', '61548', 'chordoma', '61600', 'nasoseptal flap', 'hadad flap', '15730', 'neuronavigation', '61782', 'lumbar drain', '62272', 'modifier 62', 'co-surgeon', 'rhinology', 'neurosurgery'],
+  },
 ];
 
 // Specialties
@@ -1746,14 +1768,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['complex hernia', 'robotic hernia', 'abdominal wall reconstruction', 'tar', 'transversus abdominis release', '49622', '49623', '49591', '49593', '49595', '49613', '49615', '49617', 'mesh placement', 'ventral hernia', 'incisional hernia'],
   },
   {
+    id: 'spec-pediatric-tpiat-islet-transplant',
+    category: 'specialties',
+    title: 'Pediatric Total Pancreatectomy with Islet Autotransplantation (TPIAT) Billing',
+    subtitle: 'Total pancreatectomy (48155), cGMP islet processing (48805) & intraportal infusion (+48554)',
+    href: '/medical-billing/pediatric-tpiat-islet-transplant',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric tpiat', 'islet autotransplantation', 'pancreatectomy', '48155', 'islet isolation', '48805', '48554', 'prss1', 'hereditary pancreatitis', 'chronic pancreatitis', 'cellular therapy', 'portal vein'],
+  },
+  {
+    id: 'spec-endoscopic-pituitary-odontoid-resection',
+    category: 'specialties',
+    title: 'Endoscopic Transnasal Odontoid & Pituitary Skull Base Resection Billing',
+    subtitle: 'Transnasal odontoidectomy (61575), pituitary resection (61548) & nasoseptal flap (+15730)',
+    href: '/medical-billing/endoscopic-pituitary-odontoid-resection',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['endoscopic skull base', 'transnasal odontoidectomy', '61575', 'pituitary adenoma', '61548', 'nasoseptal flap', '15730', 'neuronavigation', '61782', 'modifier 62', 'co-surgery', 'rhinology', 'neurosurgery'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 76+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 78+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass', 'pediatric mibg', 'neuroblastoma', 'robotic hernia', 'tar component separation'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass', 'pediatric mibg', 'neuroblastoma', 'robotic hernia', 'tar component separation', 'pediatric tpiat', 'islet transplant', 'endoscopic skull base', 'odontoidectomy'],
   },
 ];
 

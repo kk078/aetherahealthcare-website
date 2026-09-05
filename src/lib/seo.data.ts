@@ -1392,6 +1392,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Can posterior component separation (TAR add-on +49622) and mesh (+49623) be billed together?', a: 'Yes. Transversus abdominis release (TAR) or posterior component separation is explicitly reported using add-on code +49622 when transversus abdominis muscle release is performed to gain retrorectus fascial medial mobilization. In addition, prosthetic mesh reinforcement placed in the retrorectus (sublay) position is separately reported using add-on code +49623. Both add-on codes are exempt from Modifier -51 multi-procedure fee reductions.' },
     ],
   },
+  {
+    slug: 'pediatric-tpiat-islet-transplant',
+    name: 'Pediatric Total Pancreatectomy with Islet Autotransplantation (TPIAT)',
+    noun: 'pediatric hepatobiliary and pancreatic surgeons, pediatric islet transplant specialists, pediatric gastroenterologists, and tertiary pancreas centers',
+    cpt: '48155, 48805, 48554, 48556, 36481, 37202, 75885, 99223, 99291',
+    blurb:
+      'Pediatric total pancreatectomy with islet autotransplantation for refractory genetic/chronic pancreatitis: total pancreatectomy (48155), cGMP back-table enzymatic islet isolation and purification (48805), transhepatic or mesenteric portal vein catheterization (36481/37202), and gravity-fed intraportal islet autotransplantation (+48554/+48556).',
+    painPoints: [
+      'Islet isolation processing (48805) unbundling denials: Payers improperly bundling multi-hour cGMP back-table islet enzymatic digestion into primary pancreatectomy',
+      'Autotransplantation (+48554) vs allotransplantation coverage confusion: Health plans erroneously denying autologous islet infusion under experimental deceased-donor allotransplant policies',
+      'Portal vein catheter access (36481/37202) bundling clawbacks: Denial of separate mesenteric/transhepatic venipuncture for islet infusion',
+      'Postoperative glycemic management and ICU critical care (99291) global period disputes',
+    ],
+    faqs: [
+      { q: 'How is back-table islet isolation (CPT 48805) billed during pediatric TPIAT?', a: 'Enzymatic digestion and laboratory isolation of pancreatic islet cells is reported using CPT 48805 (preparation and laboratory processing of autologous islet cells for transplantation). Because islet processing occurs in a specialized clean-room facility during or immediately following pancreatectomy, it represents a distinct technical laboratory service separate from the surgical pancreatectomy (CPT 48155). Operative reports and laboratory isolation certificates detailing islet equivalent (IEQ/kg) yields must be submitted with the claim.' },
+      { q: 'Can intraportal islet autotransplantation (+48554) be billed concurrently with total pancreatectomy (48155)?', a: 'Yes. Intraportal reinfusion of autologous islets into the hepatic portal venous circulation is reported using CPT 48554 (transplantation of pancreatic islet cells; autotransplantation). Under CMS NCCI guidelines, islet autotransplantation is distinct from pancreatectomy and is recognized as a life-preserving metabolic procedure to prevent surgical brittle diabetes.' },
+    ],
+  },
+  {
+    slug: 'endoscopic-pituitary-odontoid-resection',
+    name: 'Endoscopic Transnasal Odontoid & Pituitary Skull Base Resection',
+    noun: 'endoscopic skull base neurosurgeons, rhinology and anterior skull base otolaryngologists, and tertiary pituitary centers',
+    cpt: '61548, 61575, 62165, 31290, 31291, 30520, 15730, 61782, 62272, 69990',
+    blurb:
+      'Expanded endoscopic endonasal approaches (EEA) to the sella, clivus, and craniovertebral junction: transnasal resection of retroflexed odontoid / basilar invagination (61575), transsphenoidal pituitary adenoma excision (61548/62165), vascularized Hadad-Bassagasteguy nasoseptal flap reconstruction (+30520 / +15730), stereotactic neuronavigation (+61782), and co-surgeon Modifier -62 orchestration between otolaryngology and neurosurgery.',
+    painPoints: [
+      'Vascularized nasoseptal flap reconstruction (+30520 / 15730) bundling denials: Clearinghouses rejecting local vascularized pedicle flap closure into the surgical approach',
+      'Transnasal odontoidectomy (61575) downcoding: Payers improperly downcoding craniovertebral junction transnasal decompression to simple transsphenoidal hypophysectomy (61548)',
+      'Stereotactic intraoperative navigation (+61782) unbundling disputes on anterior skull base cases',
+      'Dual-surgeon Modifier -62 mismatch rejections between ENT and neurosurgery operative notes',
+    ],
+    faqs: [
+      { q: 'How are ENT and Neurosurgery co-surgeons coded for expanded endonasal skull base surgery?', a: 'Expanded endoscopic endonasal approaches (EEA) typically utilize a dual-attending team: the otolaryngologist performs the transnasal sphenoidotomy/clivus approach and vascularized nasoseptal flap reconstruction, while the neurosurgeon performs the dural opening, sellar/odontoid resection, and intradural dissection. Both surgeons bill the primary resection code (e.g., CPT 61548 or 61575) with Modifier -62, accompanied by distinct operative notes detailing their specific surgical contributions.' },
+      { q: 'Can a vascularized nasoseptal flap (15730 / 30520) be billed separately from endoscopic skull base tumor excision?', a: 'Yes. Reconstruction of high-flow cerebrospinal fluid (CSF) fistulae using a pedicled Hadad-Bassagasteguy nasoseptal flap requires microvascular branch preservation of the posterior septal artery. Flap harvesting, mobilization, and multilayer skull base repair is coded using CPT 15730 (or +30520 depending on payer local coverage determination) and is not bundled into endoscopic sinus approaches when substantiated by dural defect size and CSF leak grade.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
