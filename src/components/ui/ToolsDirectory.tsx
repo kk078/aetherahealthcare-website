@@ -28,6 +28,7 @@ import {
   Activity,
   Scale,
   Scissors,
+  Dna,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -41,6 +42,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/moldx-zcode-scrubber',
+    icon: Dna,
+    name: 'Molecular Diagnostics MolDX® Z-Code & LCD Scrubber',
+    desc: 'Verify DEX Z-Codes and LCD coverage criteria for molecular pathology, next-generation sequencing panels, and PGx under CMS MolDX requirements.',
+    category: 'scrubbers',
+    tag: 'MolDX',
+    badge: 'New',
+  },
+  {
+    href: '/tools/ctp-skin-substitute-calculator',
+    icon: Scissors,
+    name: 'Skin Substitute & CTP Wastage Modifier JW / JZ Calculator',
+    desc: 'Calculate single-use skin substitute administered vs discarded sq cm, determine mandatory Modifiers JW and JZ, and generate dual-line 837P Loop 2400 snippets.',
+    category: 'calculators',
+    tag: 'Wound Care',
+    badge: 'New',
+  },
   {
     href: '/tools/critical-care-scrubber',
     icon: Clock,

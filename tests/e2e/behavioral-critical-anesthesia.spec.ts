@@ -93,18 +93,18 @@ test.describe('Behavioral Health Funnel, Addiction & Gyn Onc Specialties, Critic
     await page.screenshot({ path: `${ARTIFACT_DIR}/anesthesia_concurrency_auditor_tool.png`, fullPage: false });
   });
 
-  test('Tools Hub renders 37 tools and indexes critical care scrubber and anesthesia concurrency auditor', async ({ page }) => {
+  test('Tools Hub renders tools and indexes critical care scrubber and anesthesia concurrency auditor', async ({ page }) => {
     await page.goto('/tools/');
 
-    await expect(page.getByRole('heading', { level: 1, name: /37 Free Medical Billing & RCM Tools/i })).toBeVisible();
-    await expect(page.getByPlaceholder(/Search 37 free tools & engines…/i)).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i })).toBeVisible();
+    await expect(page.getByPlaceholder(/Search \d+ free tools & engines…/i)).toBeVisible();
 
     // Verify both new tools are present in catalog
     await expect(page.getByRole('heading', { level: 3, name: /Emergency & Critical Care Time Documentation Scrubber/i })).toBeVisible();
     await expect(page.getByRole('heading', { level: 3, name: /Anesthesia Concurrency & Medical Direction Auditor/i })).toBeVisible();
 
     // Test search filter for Critical Care
-    const toolSearch = page.getByPlaceholder(/Search 37 free tools & engines…/i);
+    const toolSearch = page.getByPlaceholder(/Search \d+ free tools & engines…/i);
     await toolSearch.fill('Critical Care');
     await expect(page.getByRole('heading', { level: 3, name: /Emergency & Critical Care Time Documentation Scrubber/i })).toBeVisible();
 

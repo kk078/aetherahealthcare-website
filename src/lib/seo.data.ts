@@ -600,6 +600,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How do you bill co-surgery with surgical oncologists or colorectal teams?', a: 'Both surgeons bill the identical primary CPT code appended with Modifier 62, backed by distinct, individualized operative dictations detailing the distinct operative components performed by each specialist.' },
     ],
   },
+  {
+    slug: 'home-health-hospice',
+    name: 'Home Health & Hospice Care',
+    noun: 'Medicare home health agencies, hospice organizations, and palliative care teams',
+    cpt: 'G0151–G0154, G0299–G0300, Q5001–Q5009, 0023 (HIPPS), G0156',
+    blurb:
+      'PDGM 30-day billing periods, OASIS-E HIPPS grouping, 5-day Notice of Admission (NOA) filing, and statutory hospice aggregate cap reconciliation.',
+    painPoints: [
+      'PDGM LUPA threshold payment cuts: Episodes converted to drastically discounted per-visit rates when nurse visit milestones are missed by a single encounter',
+      '5-day Notice of Admission (NOA) late penalties: CMS reducing 30-day payment by 1/30th per day for late electronic intake transmission (CARC 253)',
+      'Hospice aggregate and inpatient respite cap clawbacks: Year-end Medicare MAC recoupments when per-beneficiary reimbursement exceeds statutory buffers',
+      'OASIS-E functional impairment scoring mismatches: Downcoding of HIPPS acuity groupings caused by discrepancies between therapy notes and OASIS submissions',
+    ],
+    faqs: [
+      { q: 'How do you prevent Low Utilization Payment Adjustments (LUPAs) under PDGM?', a: 'We monitor active 30-day episode visit frequencies daily against patient-specific PDGM clinical thresholds (2–6 visits), triggering clinical coordinator alerts well before episode close to avert automatic downcoding.' },
+      { q: 'How do you guarantee timely 5-day Notice of Admission (NOA) submissions?', a: 'Our billing engine receives start-of-care (SOC) intake data electronically and generates EDI 837I type of bill 32A transactions within 24 hours, completely eliminating late penalty reductions.' },
+    ],
+  },
+  {
+    slug: 'wound-care',
+    name: 'Wound Care & Hyperbaric Medicine',
+    noun: 'outpatient wound care centers, hyperbaric physicians, and mobile wound specialists',
+    cpt: '11042–11047, 97597–97598, Q4100–Q4280, 99183, G0277, 29580–29584',
+    blurb:
+      'Surgical excisional debridement, Cellular & Tissue-Based Products (CTPs/skin substitutes) with Modifier JW/JZ wastage, and multi-chamber Hyperbaric Oxygen Therapy (HBOT).',
+    painPoints: [
+      'Skin substitute CTP wastage billing rejections: Failure to properly split administered vs discarded square centimeters with required Modifiers JW and JZ',
+      'Excisional vs non-excisional debridement downcoding: Payers downcoding CPT 11042 to 97597 due to missing documentation of depth (subcutaneous tissue vs dermis)',
+      'Hyperbaric oxygen (HBOT G0277) prior-authorization denials: Medicare MAC rejections demanding documented 30-day failure of conventional wound therapy',
+      'Compression bandage (29581) bundling denials: Unna boot or multi-layer compression wraps erroneously bundled into routine E/M or debridement codes',
+    ],
+    faqs: [
+      { q: 'How do you ensure full reimbursement for expensive cellular and tissue products (CTPs)?', a: 'We verify manufacturer invoice pricing, assign exact product Q-codes, calculate separate administered and discarded portions with Modifiers JW and JZ, and verify prior-auth against local MAC LCD coverage requirements.' },
+      { q: 'What documentation prevents surgical debridement (11042–11047) downcoding?', a: 'We require clinical notes to record wound surface measurements before and after debridement, depth of tissue removed (down to subcutaneous/fascia/muscle), instruments utilized, and percent of devitalized tissue excised.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

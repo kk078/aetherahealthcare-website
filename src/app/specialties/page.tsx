@@ -41,6 +41,8 @@ const specialtyLinks: Record<string, string> = {
   'Oral & Maxillofacial Surgery': '/medical-billing/oral-surgery',
   'Addiction Medicine & SUD': '/medical-billing/addiction-medicine',
   'Gynecologic Oncology': '/medical-billing/gynecologic-oncology',
+  'Home Health & Hospice Care': '/medical-billing/home-health-hospice',
+  'Wound Care & Hyperbaric Medicine': '/medical-billing/wound-care',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -267,6 +269,18 @@ const specialties = [
         description: 'Opioid Treatment Program (OTP) weekly bundles, OBOT buprenorphine induction, and residential per diem billing.',
         cptCodes: 'G2086-G2088, G2074-G2080, H0001-H0035, G0480-G0483',
         challenges: 'Concurrent review denials, ASAM level-of-care step-downs, and definitive urine drug screen recoupment audits.'
+      },
+      {
+        name: 'Home Health & Hospice Care',
+        description: 'PDGM 30-day periods, OASIS-E HIPPS scoring, timely 5-day NOA filing, and hospice statutory aggregate cap reconciliation.',
+        cptCodes: 'G0151-G0154, G0299-G0300, Q5001-Q5009, 0023 HIPPS, G0156',
+        challenges: 'PDGM LUPA threshold visit drops, late NOA penalties (CARC 253), and hospice annual aggregate cap clawbacks.'
+      },
+      {
+        name: 'Wound Care & Hyperbaric Medicine',
+        description: 'Surgical excisional debridement, Cellular & Tissue-Based Products (CTPs/skin substitutes) with Modifier JW/JZ, and HBOT.',
+        cptCodes: '11042-11047, 97597-97598, Q4100-Q4280, 99183, G0277, 29580',
+        challenges: 'Skin substitute CTP wastage billing (JW/JZ), debridement depth downcoding, and HBOT 30-day conservative therapy prior auth.'
       }
     ]
   }
@@ -274,13 +288,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 32+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 34+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 32+ specialties — Cardiology, Orthopedics, Interventional Radiology, Addiction Medicine, Gynecologic Oncology, and more.',
+    description: 'Expert medical billing across 34+ specialties — Cardiology, Orthopedics, Interventional Radiology, Addiction Medicine, Gynecologic Oncology, Home Health & Hospice, Wound Care, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -291,7 +305,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 32 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 34 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -312,10 +326,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 32+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 34+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['32+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['34+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}
