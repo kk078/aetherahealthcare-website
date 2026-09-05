@@ -660,7 +660,7 @@ export function getPayerSearchItems(): SearchItem[] {
     aka?: string[];
     type: string;
     payerId?: string | null;
-    claimLogicId?: string | null;
+    clearinghouseId?: string | null;
     parStatus?: string | null;
     timelyFiling?: string | null;
     portalUrl?: string | null;
@@ -672,13 +672,13 @@ export function getPayerSearchItems(): SearchItem[] {
     title: p.name,
     subtitle: [
       p.type ? `${p.type} Plan` : '',
-      p.claimLogicId ? `EDI ID: ${p.claimLogicId}` : p.payerId ? `Payer ID: ${p.payerId}` : '',
+      p.clearinghouseId ? `EDI ID: ${p.clearinghouseId}` : p.payerId ? `Payer ID: ${p.payerId}` : '',
       p.parStatus ? `Status: ${p.parStatus}` : '',
       p.timelyFiling ? `Filing: ${p.timelyFiling.slice(0, 35)}…` : '',
     ]
       .filter(Boolean)
       .join(' • '),
-    description: p.timelyFiling || `Payer profile with ClaimLogic EDI routing, timely filing deadlines, and claims routing.`,
+    description: p.timelyFiling || `Payer profile with clearinghouse EDI routing, timely filing deadlines, and claims routing.`,
     href: `/payers/directory/${p.slug}`,
     badge: p.type || 'Payer',
     badgeVariant: p.type === 'BCBS' ? 'blue' : p.type === 'Medicare' ? 'purple' : 'teal',
@@ -687,10 +687,9 @@ export function getPayerSearchItems(): SearchItem[] {
       p.slug.toLowerCase(),
       p.type?.toLowerCase() || '',
       p.payerId?.toLowerCase() || '',
-      p.claimLogicId?.toLowerCase() || '',
+      p.clearinghouseId?.toLowerCase() || '',
       ...(p.aka || []).map((a) => a.toLowerCase()),
       'payer',
-      'claimlogic',
       'clearinghouse',
       'edi',
       'insurance',

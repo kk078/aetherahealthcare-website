@@ -2,9 +2,9 @@
   "_meta": {
     "note": "Comprehensive payer reference compiled from public sources (payer provider sites, clearinghouse payer lists, CMS). Payer IDs, timely-filing limits, appeal windows, and addresses vary by plan, region, line of business, and contract — every researched record is UNVERIFIED and must be confirmed via the payer portal or your clearinghouse before filing. Never treat as contract-binding.",
     "updated": "2026-06-30",
-    "claimlogic_source": "ClaimLogic Clearinghouse Master Payor List",
-    "claimlogic_total_payors": 10641,
-    "claimlogic_updated": "2026-09-05"
+    "clearinghouse_source": "National Clearinghouse Master EDI Directory",
+    "clearinghouse_total_payors": 10641,
+    "clearinghouse_updated": "2026-09-05"
   },
   "payers": [
     {
@@ -28,7 +28,6 @@
       "fax": null,
       "notes": "Multi-state Blue plan; provider phone, claims address, payer ID, and appeal address all vary by state and are printed on the member ID card.",
       "verified": null,
-      "claimLogicId": "47198",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -43,7 +42,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "47198",
+      "clearinghouseMatches": [
         {
           "id": "47198",
           "name": "Anthem Blue Cross",
@@ -77,7 +77,6 @@
       "fax": null,
       "notes": "Submit claims (including BlueCard) electronically through Availity; paper to PO Box 2181.",
       "verified": null,
-      "claimLogicId": "ARBC0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -92,7 +91,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "ARBC0",
+      "clearinghouseMatches": [
         {
           "id": "ARBC0",
           "name": "Ar Bcbs",
@@ -126,7 +126,6 @@
       "fax": "601-936-5886",
       "notes": "Runs its own EDI clearinghouse rather than Availity. Provider Services 601-932-1122 / 800-257-5825.",
       "verified": null,
-      "claimLogicId": "10040",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -141,7 +140,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10040",
+      "clearinghouseMatches": [
         {
           "id": "10040",
           "name": "Bcbs Of Mississippi",
@@ -183,7 +183,6 @@
       "fax": null,
       "notes": "Distinct Blue Cross (00370) vs Blue Shield (00870) payer IDs; verify per member card.",
       "verified": null,
-      "claimLogicId": "RIBC0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -198,7 +197,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "RIBC0",
+      "clearinghouseMatches": [
         {
           "id": "10304",
           "name": "Bcbs Of Rhode Island",
@@ -280,7 +280,6 @@
       "fax": null,
       "notes": "Verify timely filing (~2 yrs) and provider phone in the BCBSAL provider manual / ProviderAccess portal.",
       "verified": null,
-      "claimLogicId": "10025",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -295,7 +294,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10025",
+      "clearinghouseMatches": [
         {
           "id": "10025",
           "name": "Bcbs Of Alabama",
@@ -368,7 +368,6 @@
       "fax": null,
       "notes": "HCSC-operated Illinois Blue plan; claims routing differs by product.",
       "verified": null,
-      "claimLogicId": "ILBC0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -383,7 +382,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "ILBC0",
+      "clearinghouseMatches": [
         {
           "id": "10033",
           "name": "Bcbs Of Illinois",
@@ -437,7 +437,6 @@
       "fax": null,
       "notes": "Claims processed through ASK. The 180-day window cited is for resubmission of rejected claims.",
       "verified": null,
-      "claimLogicId": "10473",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -452,7 +451,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10473",
+      "clearinghouseMatches": [
         {
           "id": "10473",
           "name": "Bcbs Of Kansas City",
@@ -500,7 +500,6 @@
       "fax": null,
       "notes": "15-month commercial timely filing per provider manual. Verify payer ID and per-plan timely filing in iLinkBlue.",
       "verified": null,
-      "claimLogicId": "10035",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -515,7 +514,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10035",
+      "clearinghouseMatches": [
         {
           "id": "10035",
           "name": "Bcbs Of Louisiana",
@@ -548,7 +548,6 @@
       "fax": null,
       "notes": "Submits EDI via Availity; payer ID 00200 for commercial.",
       "verified": null,
-      "claimLogicId": "MABC0",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -563,7 +562,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "MABC0",
+      "clearinghouseMatches": [
         {
           "id": "10037",
           "name": "Bcbs Of Massachusetts",
@@ -616,7 +616,6 @@
       "fax": null,
       "notes": "Electronic-only claims via Availity; payer ID 00720 commercial/Medicare, 00726 MHCP. Provider Services 651-662-5200 / 800-262-0820.",
       "verified": null,
-      "claimLogicId": "10039",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -631,7 +630,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10039",
+      "clearinghouseMatches": [
         {
           "id": "10039",
           "name": "Bcbs Of Minnesota",
@@ -682,7 +682,6 @@
       "fax": null,
       "notes": "HCSC-operated Blue plan. Commercial timely filing and numeric payer ID not confidently confirmed.",
       "verified": null,
-      "claimLogicId": "10516",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -697,7 +696,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10516",
+      "clearinghouseMatches": [
         {
           "id": "10516",
           "name": "Bcbs Of Montana",
@@ -739,7 +739,6 @@
       "fax": null,
       "notes": "NaviNet is the primary provider portal. Multiple product-specific payer IDs exist.",
       "verified": null,
-      "claimLogicId": "10384",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -754,7 +753,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10384",
+      "clearinghouseMatches": [
         {
           "id": "10384",
           "name": "Bcbs Of Nebraska",
@@ -796,7 +796,6 @@
       "fax": null,
       "notes": "HCSC-operated Blue plan. Confirm payer ID, address, and timely-filing against your contract.",
       "verified": null,
-      "claimLogicId": "10042",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -811,7 +810,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10042",
+      "clearinghouseMatches": [
         {
           "id": "10042",
           "name": "Bcbs Of New Mexico",
@@ -852,7 +852,6 @@
       "fax": null,
       "notes": "877-258-3334 is the claim-filing help line; EDI support 888-333-8594.",
       "verified": null,
-      "claimLogicId": "10383",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -867,7 +866,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10383",
+      "clearinghouseMatches": [
         {
           "id": "10383",
           "name": "Bcbs Of North Carolina",
@@ -908,7 +908,6 @@
       "fax": null,
       "notes": "HCSC-operated Blue plan. The 180-day timely-filing value is the HCSC standard — verify.",
       "verified": null,
-      "claimLogicId": "OKBC0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -923,7 +922,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "OKBC0",
+      "clearinghouseMatches": [
         {
           "id": "10582",
           "name": "Bcbs Of Oklahoma",
@@ -966,7 +966,6 @@
       "fax": "855-235-1055",
       "notes": "HCSC-operated Texas Blue plan; payer ID, timely-filing windows, and addresses differ by product line.",
       "verified": null,
-      "claimLogicId": "84980",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -981,7 +980,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "84980",
+      "clearinghouseMatches": [
         {
           "id": "84980",
           "name": "Bcbs Dental Of Tx",
@@ -1033,7 +1033,6 @@
       "fax": "802-225-7698",
       "notes": "Provider relations: providerrelations@bcbsvt.com. Verify payer ID, phone, and address via the BCBSVT Provider Resource Center.",
       "verified": null,
-      "claimLogicId": "10624",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -1048,7 +1047,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10624",
+      "clearinghouseMatches": [
         {
           "id": "10624",
           "name": "Bcbs Of Vermont",
@@ -1080,7 +1080,6 @@
       "fax": null,
       "notes": "AZ Blue routes provider transactions via Availity Essentials. Confirm commercial limits and payer ID with AZ Blue/Availity.",
       "verified": null,
-      "claimLogicId": "53589",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -1095,7 +1094,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "53589",
+      "clearinghouseMatches": [
         {
           "id": "10027",
           "name": "Bcbs Of Arizona",
@@ -1139,7 +1139,6 @@
       "fax": null,
       "notes": "Claims addresses differ by product/claim type. Physicians 800-344-8525; hospitals 800-249-5103.",
       "verified": null,
-      "claimLogicId": "MIBC0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -1154,7 +1153,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "MIBC0",
+      "clearinghouseMatches": [
         {
           "id": "MIBC0",
           "name": "Blue Cross Blue Shield Michigan",
@@ -1209,7 +1209,6 @@
       "fax": "701-277-2209",
       "notes": "Claims submit electronically via Availity. The 55891 ID found is Medicaid-Expansion-specific — verify the commercial ID with BCBSND.",
       "verified": null,
-      "claimLogicId": "CX004",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -1224,7 +1223,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "CX004",
+      "clearinghouseMatches": [
         {
           "id": "CX004",
           "name": "Blue Cross Blue Shield Of North Dakota",
@@ -1257,7 +1257,6 @@
       "fax": null,
       "notes": "Some employer groups carry sub-year filing limits; verify per member and contract.",
       "verified": null,
-      "claimLogicId": "WYBC0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -1272,7 +1271,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "WYBC0",
+      "clearinghouseMatches": [
         {
           "id": "DX213",
           "name": "Blue Cross Blue Shield Of Wyoming",
@@ -1313,7 +1313,6 @@
       "fax": null,
       "notes": "Idaho is served by both Blue Cross of Idaho and Regence BlueShield of Idaho — confirm which carrier is on the member card.",
       "verified": null,
-      "claimLogicId": "00610",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -1328,7 +1327,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "00610",
+      "clearinghouseMatches": [
         {
           "id": "00054",
           "name": "Blue Cross Of Idaho",
@@ -1383,7 +1383,6 @@
       "fax": null,
       "notes": "800-868-2505 is the EDI Support Center; the BlueLine eligibility line is 800-676-2583.",
       "verified": null,
-      "claimLogicId": "SCBC0",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -1398,7 +1397,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "SCBC0",
+      "clearinghouseMatches": [
         {
           "id": "SCBC0",
           "name": "Blue Cross Blue Shield South Carolina",
@@ -1428,7 +1428,6 @@
       "fax": null,
       "notes": "Two payer IDs (00890 and 00390) circulate; 00890 is the more commonly cited commercial ID.",
       "verified": null,
-      "claimLogicId": "TNBC0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -1443,7 +1442,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "TNBC0",
+      "clearinghouseMatches": [
         {
           "id": "TNBC0",
           "name": "Blue Cross Blue Shield Tennessee",
@@ -1477,7 +1477,6 @@
       "fax": "717-541-6915",
       "notes": "Central PA / Lehigh Valley. Provider automation line 800-874-8433.",
       "verified": null,
-      "claimLogicId": "23045",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -1492,7 +1491,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "23045",
+      "clearinghouseMatches": [
         {
           "id": "23045",
           "name": "Capital Bc And Capital Advantage Insurance (Caic)",
@@ -1533,7 +1533,6 @@
       "fax": null,
       "notes": "Serves Maryland, DC, and parts of Northern Virginia. Confirm payer ID 00580 and timely filing on provider.carefirst.com.",
       "verified": null,
-      "claimLogicId": "00580",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -1548,7 +1547,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "00580",
+      "clearinghouseMatches": [
         {
           "id": "00580",
           "name": "Carefirst - Blue Cross Blue Shield Of Maryland",
@@ -1581,11 +1581,11 @@
       "fax": null,
       "notes": "Upstate NY Blue plan (Rochester, Syracuse, Utica, Central NY, Southern Tier).",
       "verified": null,
-      "claimLogicId": null,
       "parStatus": null,
       "enrollmentRequired": null,
       "ediCapabilities": null,
-      "claimLogicMatches": []
+      "clearinghouseId": null,
+      "clearinghouseMatches": []
     },
     {
       "slug": "florida-blue",
@@ -1610,7 +1610,6 @@
       "fax": null,
       "notes": "Commercial BCBS affiliate for Florida (a GuideWell company); also operates Health Options Inc. (HMO). Claims address is product-specific — confirm on the member ID card. THIS IS FLORIDA'S BLUE PLAN.",
       "verified": null,
-      "claimLogicId": "10031",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -1625,7 +1624,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10031",
+      "clearinghouseMatches": [
         {
           "id": "10031",
           "name": "Bcbs Of Florida",
@@ -1662,7 +1662,6 @@
       "fax": null,
       "notes": "HMSA is the BCBS licensee for Hawaii. General/provider line 808-948-6079 or 800-776-4672.",
       "verified": null,
-      "claimLogicId": "CAMK0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -1677,7 +1676,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "CAMK0",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -1764,7 +1764,6 @@
       "fax": null,
       "notes": "Highmark serves PA, WV, and DE (plus a separate Western NY entity); submit electronically via Availity.",
       "verified": null,
-      "claimLogicId": "47181",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -1779,7 +1778,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "47181",
+      "clearinghouseMatches": [
         {
           "id": "WC734",
           "name": "Blue Cross",
@@ -1830,7 +1830,6 @@
       "fax": null,
       "notes": "Commercial Horizon BCBSNJ. Commercial paper-claims address not confidently confirmed.",
       "verified": null,
-      "claimLogicId": "22099",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -1845,7 +1844,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "22099",
+      "clearinghouseMatches": [
         {
           "id": "22099",
           "name": "Blue Cross Of New Jersey",
@@ -1929,7 +1929,6 @@
       "fax": null,
       "notes": "Serves the 5-county Philadelphia region; claims route through the Highmark EDI gateway and by member-ID prefix.",
       "verified": null,
-      "claimLogicId": "54704",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -1944,7 +1943,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "54704",
+      "clearinghouseMatches": [
         {
           "id": "54704",
           "name": "Ibc Personal Choice",
@@ -1978,7 +1978,6 @@
       "fax": "425-918-4234",
       "notes": "Verify the correct PO box for your line of business (WA vs AK vs FEP).",
       "verified": null,
-      "claimLogicId": "WABC1",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -1993,7 +1992,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "WABC1",
+      "clearinghouseMatches": [
         {
           "id": "WC734",
           "name": "Blue Cross",
@@ -2058,7 +2058,6 @@
       "fax": "866-458-5488",
       "notes": "A Cambia Health Solutions plan serving ID/OR/UT and select WA counties. State-specific payer IDs and PO boxes vary.",
       "verified": null,
-      "claimLogicId": "89070",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -2073,7 +2072,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "89070",
+      "clearinghouseMatches": [
         {
           "id": "89070",
           "name": "Utah, Regence Bluecross Blueshield",
@@ -2107,7 +2107,6 @@
       "fax": null,
       "notes": "Serves Iowa and South Dakota. Verify payer ID and claims address against the member ID card.",
       "verified": null,
-      "claimLogicId": "IABC0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -2122,7 +2121,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "IABC0",
+      "clearinghouseMatches": [
         {
           "id": "IABC0",
           "name": "Blue Cross Blue Shield Iowa",
@@ -2164,7 +2164,6 @@
       "fax": null,
       "notes": "National TPA (23+ regional offices) for self-funded and level-funded plans; payer ID and address vary by office/group.",
       "verified": null,
-      "claimLogicId": "37257",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -2179,7 +2178,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "37257",
+      "clearinghouseMatches": [
         {
           "id": "37257",
           "name": "90 Degree Benefits (Formerly Employee Benefits Consultants/Ebso)",
@@ -2215,7 +2215,6 @@
       "fax": null,
       "notes": "Aetna routes most provider transactions through Availity. Owned by CVS Health.",
       "verified": "2026-06-24",
-      "claimLogicId": "10004",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -2230,7 +2229,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10004",
+      "clearinghouseMatches": [
         {
           "id": "10004",
           "name": "Aetna",
@@ -2324,7 +2324,6 @@
       "fax": null,
       "notes": "Lets self-funded plans access the Aetna network while a partner TPA adjudicates claims; bill per the member ID card.",
       "verified": null,
-      "claimLogicId": "10004",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -2339,7 +2338,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10004",
+      "clearinghouseMatches": [
         {
           "id": "10004",
           "name": "Aetna",
@@ -2387,7 +2387,6 @@
       "fax": null,
       "notes": "One of the largest independent national TPAs for self-funded employer plans — not a risk-bearing insurer. Benefits derive from the specific employer plan; always read the member card.",
       "verified": null,
-      "claimLogicId": "10898",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -2402,7 +2401,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10898",
+      "clearinghouseMatches": [
         {
           "id": "10898",
           "name": "Allied Benefit Systems",
@@ -2447,11 +2447,11 @@
       "fax": null,
       "notes": "Kansas-based small-group self-funded/level-funded TPA — NOT to be confused with Allied Benefit Systems (37308).",
       "verified": null,
-      "claimLogicId": null,
       "parStatus": null,
       "enrollmentRequired": null,
       "ediCapabilities": null,
-      "claimLogicMatches": []
+      "clearinghouseId": null,
+      "clearinghouseMatches": []
     },
     {
       "slug": "ambetter",
@@ -2474,7 +2474,6 @@
       "fax": null,
       "notes": "Centene's ACA marketplace brand sold through state subsidiaries. Payer ID, timely filing, addresses, and phones all vary by state plan.",
       "verified": null,
-      "claimLogicId": "68069",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -2489,7 +2488,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "68069",
+      "clearinghouseMatches": [
         {
           "id": "68069",
           "name": "Absolute Total Care",
@@ -2576,7 +2576,6 @@
       "fax": null,
       "notes": "NJ/PA/DE plan with multiple payer IDs by state and by HMO vs. non-HMO — a common source of wrong-ID denials. Always confirm the correct ID for the member's product and state.",
       "verified": null,
-      "claimLogicId": "54763",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -2591,7 +2590,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "54763",
+      "clearinghouseMatches": [
         {
           "id": "10974",
           "name": "Amerihealth",
@@ -2654,7 +2654,6 @@
       "fax": null,
       "notes": "Newer tech-driven carrier (Aetna/Nomi network for many products); timely filing is plan-specific.",
       "verified": null,
-      "claimLogicId": "39856",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -2669,7 +2668,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "39856",
+      "clearinghouseMatches": [
         {
           "id": "39856",
           "name": "Angle Insurance",
@@ -2717,7 +2717,6 @@
       "fax": null,
       "notes": "Anthem is the Blue Cross licensee in 14 states under Elevance Health. Payer ID and timely filing are state-specific.",
       "verified": "2026-06-24",
-      "claimLogicId": "47198",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -2732,7 +2731,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "47198",
+      "clearinghouseMatches": [
         {
           "id": "47198",
           "name": "Anthem Blue Cross",
@@ -2764,7 +2764,6 @@
       "fax": null,
       "notes": "Virginia Anthem BCBS commercial/HMO entity (HealthKeepers, Inc.); commercial and Medicaid lines use different routing.",
       "verified": null,
-      "claimLogicId": "00423",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -2779,7 +2778,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "00423",
+      "clearinghouseMatches": [
         {
           "id": "00423",
           "name": "Healthkeepers",
@@ -2813,7 +2813,6 @@
       "fax": "330-363-9804",
       "notes": "Ohio-based commercial payer (Stark County region); related Medicare Advantage product is PrimeTime Health Plan.",
       "verified": null,
-      "claimLogicId": "10472",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -2828,7 +2827,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10472",
+      "clearinghouseMatches": [
         {
           "id": "10472",
           "name": "Aultcare",
@@ -2864,7 +2864,6 @@
       "fax": null,
       "notes": "Midwest TPA administering self-funded and tribal health plans; claims address and timely filing are group-specific.",
       "verified": null,
-      "claimLogicId": "10900",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -2879,7 +2878,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10900",
+      "clearinghouseMatches": [
         {
           "id": "10900",
           "name": "Auxiant",
@@ -2924,7 +2924,6 @@
       "fax": "800-452-3847",
       "notes": "Commercial HMO + Medicare Advantage (South FL + Orlando metro), now under Sentara Health Plans. Appeals go to PO Box 569004, Miami, FL 33256-9004.",
       "verified": null,
-      "claimLogicId": "59274",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -2939,7 +2938,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "59274",
+      "clearinghouseMatches": [
         {
           "id": "59274",
           "name": "Avmed Inc.",
@@ -2972,7 +2972,6 @@
       "fax": null,
       "notes": "Commercial joint venture between Banner Health and Aetna (CVS Health) serving Arizona (Phoenix/Maricopa).",
       "verified": null,
-      "claimLogicId": "67895",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -2987,7 +2986,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "67895",
+      "clearinghouseMatches": [
         {
           "id": "67895",
           "name": "Banner Health And Aetna",
@@ -3029,7 +3029,6 @@
       "fax": null,
       "notes": "Texas-based (consolidated legacy Scott & White Health Plan). Redetermination mail: P.O. Box 211342, Eagan, MN 55121-1342.",
       "verified": null,
-      "claimLogicId": "94999",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -3044,7 +3043,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "94999",
+      "clearinghouseMatches": [
         {
           "id": "94999",
           "name": "Firstcare",
@@ -3086,11 +3086,11 @@
       "fax": null,
       "notes": "Brokerage/general agency; the administering TPA on the member ID card determines payer ID, address, and timely filing.",
       "verified": null,
-      "claimLogicId": null,
       "parStatus": null,
       "enrollmentRequired": null,
       "ediCapabilities": null,
-      "claimLogicMatches": []
+      "clearinghouseId": null,
+      "clearinghouseMatches": []
     },
     {
       "slug": "bcbs",
@@ -3118,7 +3118,6 @@
       "fax": null,
       "notes": "36 independent, locally-operated BCBS companies. Use the alpha-prefix on the member ID to identify the home plan; submit to the patient's local Blue plan via BlueCard.",
       "verified": "2026-06-24",
-      "claimLogicId": "WC734",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -3133,7 +3132,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "WC734",
+      "clearinghouseMatches": [
         {
           "id": "WC734",
           "name": "Blue Cross",
@@ -3175,7 +3175,6 @@
       "fax": null,
       "notes": "Commercial standalone Blue plan for California, distinct from Anthem Blue Cross of CA. CalPERS, FEP, and appeals route to separate Chico boxes.",
       "verified": null,
-      "claimLogicId": "CABC0",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -3190,7 +3189,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "CABC0",
+      "clearinghouseMatches": [
         {
           "id": "10051",
           "name": "Blue Cross Of California",
@@ -3263,7 +3263,6 @@
       "fax": null,
       "notes": "Texas-based TPA for self-funded employer groups; claims address and timely filing vary by group.",
       "verified": null,
-      "claimLogicId": "74238",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -3278,7 +3277,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "74238",
+      "clearinghouseMatches": [
         {
           "id": "74237",
           "name": "Boon Chapman",
@@ -3322,7 +3322,6 @@
       "fax": null,
       "notes": "DEFUNCT AS AN INSURER — exited ACA marketplaces and sold its last Medicare Advantage business to Molina; parent rebranded to NeueHealth. Treat any Bright HealthCare claims as legacy/run-out only.",
       "verified": null,
-      "claimLogicId": "NEUEH",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -3337,7 +3336,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "NEUEH",
+      "clearinghouseMatches": [
         {
           "id": "NEUEH",
           "name": "Neuehealth",
@@ -3371,7 +3371,6 @@
       "fax": null,
       "notes": "New York (Capital District) based; also Medicare and Medicaid lines.",
       "verified": null,
-      "claimLogicId": "CDPHP",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -3386,7 +3385,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "CDPHP",
+      "clearinghouseMatches": [
         {
           "id": "CDPHP",
           "name": "Cdphp",
@@ -3419,7 +3419,6 @@
       "fax": null,
       "notes": "Tallahassee/Leon County commercial HMO + Medicare Advantage; an Independent Licensee of the BCBS Association. Filing/appeal deadlines live in the provider contract.",
       "verified": null,
-      "claimLogicId": "13278",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -3434,7 +3433,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "13278",
+      "clearinghouseMatches": [
         {
           "id": "13278",
           "name": "Capital Health Plan",
@@ -3476,7 +3476,6 @@
       "fax": null,
       "notes": "ACO-based health plan/TPA for self-funded employers; timely filing is plan-specific.",
       "verified": null,
-      "claimLogicId": "14522",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -3491,7 +3490,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "14522",
+      "clearinghouseMatches": [
         {
           "id": "14522",
           "name": "Centivo",
@@ -3537,7 +3537,6 @@
       "fax": null,
       "notes": "Self-administered Catholic-organization employee benefit trust. Pull member-specific payer ID, pre-cert phone, and paper-claims address from the CBS coverage lookup.",
       "verified": null,
-      "claimLogicId": "38308",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -3552,7 +3551,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "38308",
+      "clearinghouseMatches": [
         {
           "id": "38308",
           "name": "Christian Brothers Services",
@@ -3587,7 +3587,6 @@
       "fax": null,
       "notes": "WINDING DOWN — this co-branded small-group product stopped new sales after Dec 15, 2024, with last member coverage Dec 14, 2025. As of 2026 effectively closed; expect only run-out claims.",
       "verified": null,
-      "claimLogicId": "10062",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -3602,7 +3601,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10062",
+      "clearinghouseMatches": [
         {
           "id": "10062",
           "name": "Cigna",
@@ -3663,7 +3663,6 @@
       "fax": null,
       "notes": "Evernorth is Cigna's health-services brand. Confirm timely filing in your provider agreement.",
       "verified": "2026-06-24",
-      "claimLogicId": "62308",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -3678,7 +3677,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "62308",
+      "clearinghouseMatches": [
         {
           "id": "62308",
           "name": "Cigna",
@@ -3773,7 +3773,6 @@
       "fax": null,
       "notes": "Michigan-based PPO network (Aetna/First Health affiliated); bill the payer ID and address on the member ID card.",
       "verified": null,
-      "claimLogicId": "65456",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -3788,7 +3787,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "65456",
+      "clearinghouseMatches": [
         {
           "id": "65456",
           "name": "Denver Health Medical Plan Cofinity",
@@ -3821,7 +3821,6 @@
       "fax": "713-295-7028",
       "notes": "Houston/Texas-based; also Medicaid (STAR, STAR+PLUS), CHIP, and Marketplace lines.",
       "verified": null,
-      "claimLogicId": "48145",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -3836,7 +3835,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "48145",
+      "clearinghouseMatches": [
         {
           "id": "48145",
           "name": "Community Health Choice",
@@ -3869,7 +3869,6 @@
       "fax": null,
       "notes": "Newer Texas-based employer health plan with no-cost-sharing design; timely filing is plan-specific.",
       "verified": null,
-      "claimLogicId": "14515",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -3884,7 +3883,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "14515",
+      "clearinghouseMatches": [
         {
           "id": "14515",
           "name": "Curative",
@@ -3931,7 +3931,6 @@
       "fax": null,
       "notes": "Wisconsin plan now part of Quartz; claims administration tied to Medica-Dean.",
       "verified": null,
-      "claimLogicId": "41822",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -3946,7 +3945,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "41822",
+      "clearinghouseMatches": [
         {
           "id": "41822",
           "name": "Dean Health Plan",
@@ -3992,7 +3992,6 @@
       "fax": null,
       "notes": "NY umbrella brand for two legacy plans, HIP and GHI, which carry distinct payer IDs — confirm the member's plan before submitting.",
       "verified": null,
-      "claimLogicId": "10616",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -4007,7 +4006,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10616",
+      "clearinghouseMatches": [
         {
           "id": "10616",
           "name": "Emblem Health",
@@ -4072,7 +4072,6 @@
       "fax": "406-652-5380",
       "notes": "Montana-based national TPA (miBenefits portal) for self-funded employer plans; timely filing varies by group.",
       "verified": null,
-      "claimLogicId": "10862",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -4087,7 +4086,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10862",
+      "clearinghouseMatches": [
         {
           "id": "10862",
           "name": "Ebms",
@@ -4147,7 +4147,6 @@
       "fax": null,
       "notes": "Cigna's behavioral-health carve-out, rebranded from Cigna Behavioral Health to Evernorth. Claims address varies by plan — use the member card.",
       "verified": null,
-      "claimLogicId": "62308",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -4162,7 +4161,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "62308",
+      "clearinghouseMatches": [
         {
           "id": "62308",
           "name": "Cigna",
@@ -4256,7 +4256,6 @@
       "fax": null,
       "notes": "NETWORK / REPRICER, not an insurer (a national rental PPO owned by Aetna/CVS Health). The ID-card insurer or TPA pays.",
       "verified": null,
-      "claimLogicId": "11190",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -4271,7 +4270,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "11190",
+      "clearinghouseMatches": [
         {
           "id": "11190",
           "name": "First Health Network",
@@ -4316,7 +4316,6 @@
       "fax": null,
       "notes": "Daytona Beach/Volusia regional commercial + Medicare Advantage plan, owned by Florida Blue/GuideWell but routes its own claims under 59322.",
       "verified": null,
-      "claimLogicId": "59322",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -4331,7 +4330,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "59322",
+      "clearinghouseMatches": [
         {
           "id": "59322",
           "name": "Florida Health Care Plan",
@@ -4374,7 +4374,6 @@
       "fax": null,
       "notes": "Pennsylvania plan offering commercial, GHP Family (Medicaid), and Geisinger Gold (Medicare Advantage). Reconsiderations run through Availity with a tight 60-day window.",
       "verified": null,
-      "claimLogicId": "10611",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -4389,7 +4388,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10611",
+      "clearinghouseMatches": [
         {
           "id": "10611",
           "name": "Geisinger Health Plan",
@@ -4434,7 +4434,6 @@
       "fax": null,
       "notes": "Louisiana-based TPA for self-funded employer and association plans; timely filing varies by group.",
       "verified": null,
-      "claimLogicId": "07205",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -4449,7 +4448,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "07205",
+      "clearinghouseMatches": [
         {
           "id": "07205",
           "name": "Gilsbar",
@@ -4515,7 +4515,6 @@
       "fax": null,
       "notes": "Legacy Great-West Healthcare business acquired by Cigna, now administered as GWH-Cigna.",
       "verified": null,
-      "claimLogicId": "62308",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -4530,7 +4529,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "62308",
+      "clearinghouseMatches": [
         {
           "id": "62308",
           "name": "Cigna",
@@ -4625,7 +4625,6 @@
       "fax": null,
       "notes": "Texas-based TPA acquired by/operating under Imagine360; payer ID and address are group-specific.",
       "verified": null,
-      "claimLogicId": "48143",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -4640,7 +4639,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "48143",
+      "clearinghouseMatches": [
         {
           "id": "48143",
           "name": "Group And Pension Administrators",
@@ -4686,7 +4686,6 @@
       "fax": null,
       "notes": "Massachusetts plan under the same Point32Health parent as Tufts. Claims routing differs by product — match to the member's plan.",
       "verified": null,
-      "claimLogicId": "04271",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -4701,7 +4700,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "04271",
+      "clearinghouseMatches": [
         {
           "id": "04271",
           "name": "Harvard Pilgrim",
@@ -4768,7 +4768,6 @@
       "fax": null,
       "notes": "Carle Health-owned Illinois plan. Carle announced it will cease Health Alliance commercial operations as of Jan 1, 2026 (MA discontinued 12/31/2025) — runout only. Confirm current status.",
       "verified": null,
-      "claimLogicId": "77950",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -4783,7 +4782,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "77950",
+      "clearinghouseMatches": [
         {
           "id": "77950",
           "name": "Health Alliance Medical Plans",
@@ -4816,7 +4816,6 @@
       "fax": null,
       "notes": "Commercial + Medicare Advantage plan based in Brevard/Space Coast; applies CMS rules across lines.",
       "verified": null,
-      "claimLogicId": "95019",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -4831,7 +4830,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "95019",
+      "clearinghouseMatches": [
         {
           "id": "95019",
           "name": "Health First Health Plans",
@@ -4865,7 +4865,6 @@
       "fax": null,
       "notes": "Centene subsidiary offering commercial, Medi-Cal, Medicare Advantage, and 'Ambetter from Health Net.' Payer IDs and addresses vary by state/plan.",
       "verified": null,
-      "claimLogicId": "95567",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -4880,7 +4879,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "95567",
+      "clearinghouseMatches": [
         {
           "id": "95567",
           "name": "Health Net Of California And Oregon",
@@ -4913,7 +4913,6 @@
       "fax": null,
       "notes": "Minnesota-based TPA for self-funded employer plans; timely filing is group-specific.",
       "verified": null,
-      "claimLogicId": "10656",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -4928,7 +4927,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10656",
+      "clearinghouseMatches": [
         {
           "id": "10656",
           "name": "Healthez",
@@ -4974,7 +4974,6 @@
       "fax": null,
       "notes": "Minnesota-based integrated health plan; also offers Medicare and Medicaid lines.",
       "verified": null,
-      "claimLogicId": "44547",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -4989,7 +4988,8 @@
         "auto": true,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "44547",
+      "clearinghouseMatches": [
         {
           "id": "44547",
           "name": "Healthpartners",
@@ -5066,7 +5066,6 @@
       "fax": null,
       "notes": "National TPA for self-funded employer plans; payer ID, claims address, and timely filing are group-specific.",
       "verified": null,
-      "claimLogicId": "J1481",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -5081,7 +5080,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "J1481",
+      "clearinghouseMatches": [
         {
           "id": "J1481",
           "name": "Healthsmart",
@@ -5140,7 +5140,6 @@
       "fax": null,
       "notes": "Large Medicare Advantage presence. Humana Military administers TRICARE East.",
       "verified": "2026-06-24",
-      "claimLogicId": "95092",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -5155,7 +5154,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "95092",
+      "clearinghouseMatches": [
         {
           "id": "95092",
           "name": "Care Plus",
@@ -5244,7 +5244,6 @@
       "fax": null,
       "notes": "TPA for self-funded employer plans using reference-based pricing (RBP) — filing/appeal deadlines are set per-employer SPD; identify the plan via the member card Group Number.",
       "verified": null,
-      "claimLogicId": "48143",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -5259,7 +5258,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "48143",
+      "clearinghouseMatches": [
         {
           "id": "48143",
           "name": "Group And Pension Administrators",
@@ -5304,7 +5304,6 @@
       "fax": null,
       "notes": "Western New York commercial HMO/PPO (Buffalo); also Medicare Advantage and NY State products.",
       "verified": null,
-      "claimLogicId": "95308",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -5319,7 +5318,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "95308",
+      "clearinghouseMatches": [
         {
           "id": "10536",
           "name": "Independent Health",
@@ -5368,7 +5368,6 @@
       "fax": null,
       "notes": "TPA for self-funded plans with claims repriced through Zelis; timely filing varies by group.",
       "verified": null,
-      "claimLogicId": "07689",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -5383,7 +5382,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "07689",
+      "clearinghouseMatches": [
         {
           "id": "07689",
           "name": "Global Care Inc",
@@ -5417,7 +5417,6 @@
       "fax": null,
       "notes": "Integrated payer-provider model. Out-of-network billing rules differ significantly by region.",
       "verified": "2026-06-24",
-      "claimLogicId": "A0066",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -5432,7 +5431,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "A0066",
+      "clearinghouseMatches": [
         {
           "id": "A0066",
           "name": "Kaiser Foundation Health Plan",
@@ -5463,7 +5463,6 @@
       "fax": null,
       "notes": "Large independent TPA for self-funded plans; payer ID and claims address vary by group/network.",
       "verified": null,
-      "claimLogicId": "37217",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -5478,7 +5477,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "37217",
+      "clearinghouseMatches": [
         {
           "id": "37217",
           "name": "Key Benefit Administrators",
@@ -5511,7 +5511,6 @@
       "fax": null,
       "notes": "Ohio-based TPA for self-funded employer plans; claims address and timely filing vary by group.",
       "verified": null,
-      "claimLogicId": "74323",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -5526,7 +5525,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "74323",
+      "clearinghouseMatches": [
         {
           "id": "74323",
           "name": "Medben (Newark, Oh)",
@@ -5596,7 +5596,6 @@
       "fax": null,
       "notes": "Minnesota-based, multi-state (MN/WI/IA/ND/SD/NE/KS/MO and others); also Medicare/Medicaid; now administers Dean Health Plan claims.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -5611,7 +5610,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "10125",
           "name": "Medica",
@@ -5671,7 +5671,6 @@
       "fax": null,
       "notes": "Dubuque, Iowa-based commercial/Medicare plan affiliated with Medical Associates Clinic.",
       "verified": null,
-      "claimLogicId": "MAHC1",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -5686,7 +5685,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "MAHC1",
+      "clearinghouseMatches": [
         {
           "id": "MAHC1",
           "name": "Medical Associates Health Plan",
@@ -5720,7 +5720,6 @@
       "fax": null,
       "notes": "Ohio plan offering commercial and Medicare Advantage. As of Sept 1, 2025 requires electronic claim submission and uses Availity as its provider portal/clearinghouse.",
       "verified": null,
-      "claimLogicId": "29076",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -5735,7 +5734,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "29076",
+      "clearinghouseMatches": [
         {
           "id": "29076",
           "name": "Medical Mutual Of Oh",
@@ -5795,7 +5795,6 @@
       "fax": null,
       "notes": "Aetna's third-party administrator for self-funded employer plans. The claims PO box and timely-filing window can be set by the specific employer group — always check the member card.",
       "verified": null,
-      "claimLogicId": "41124",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -5810,7 +5809,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "41124",
+      "clearinghouseMatches": [
         {
           "id": "41124",
           "name": "Corporate Benefit Services Of America (Cbsa)",
@@ -5889,7 +5889,6 @@
       "fax": null,
       "notes": "Oregon-based plan serving OR and AK, formerly ODS Health Plan.",
       "verified": null,
-      "claimLogicId": "13350",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -5904,7 +5903,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "13350",
+      "clearinghouseMatches": [
         {
           "id": "13350",
           "name": "Eastern Oregon Cco (Moda/Ods)",
@@ -5993,7 +5993,6 @@
       "fax": "800-781-6260",
       "notes": "Member-governed ACA-marketplace CO-OP serving MT, ID, and WY.",
       "verified": null,
-      "claimLogicId": "16664",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -6008,7 +6007,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "16664",
+      "clearinghouseMatches": [
         {
           "id": "16664",
           "name": "Mountain Health Co-Op",
@@ -6056,11 +6056,11 @@
       "fax": null,
       "notes": "NETWORK / REPRICER, not an insurer — it discounts/reprices claims; the payer or TPA on the member ID card actually pays. Parent rebranded from MultiPlan to Claritev in 2026.",
       "verified": null,
-      "claimLogicId": null,
       "parStatus": null,
       "enrollmentRequired": null,
       "ediCapabilities": null,
-      "claimLogicMatches": []
+      "clearinghouseId": null,
+      "clearinghouseMatches": []
     },
     {
       "slug": "mvp-health-care",
@@ -6082,7 +6082,6 @@
       "fax": null,
       "notes": "NY/VT plan offering commercial, Medicare Advantage, and Medicaid lines. Payer ID 14165 is the NY entity — confirm for Vermont membership.",
       "verified": null,
-      "claimLogicId": "14165",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -6097,7 +6096,8 @@
         "auto": true,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "14165",
+      "clearinghouseMatches": [
         {
           "id": "14165",
           "name": "Mvp",
@@ -6167,11 +6167,11 @@
       "fax": null,
       "notes": "Wisconsin-based (Menasha); also Medicare Advantage. Commercial payer ID could not be verified.",
       "verified": null,
-      "claimLogicId": null,
       "parStatus": null,
       "enrollmentRequired": null,
       "ediCapabilities": null,
-      "claimLogicMatches": []
+      "clearinghouseId": null,
+      "clearinghouseMatches": []
     },
     {
       "slug": "nippon-life-benefits",
@@ -6193,7 +6193,6 @@
       "fax": null,
       "notes": "National group medical/dental/vision carrier (Aetna network for many products).",
       "verified": null,
-      "claimLogicId": "10170",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -6208,7 +6207,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10170",
+      "clearinghouseMatches": [
         {
           "id": "10170",
           "name": "Nippon Life Benefits",
@@ -6281,7 +6281,6 @@
       "fax": null,
       "notes": "Behavioral-health carve-out administrator; provider portal is Provider Express. Claims address, timely filing, and phone vary by plan — call the number on the member card.",
       "verified": null,
-      "claimLogicId": "87726",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -6296,7 +6295,8 @@
         "auto": true,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "87726",
+      "clearinghouseMatches": [
         {
           "id": "87726",
           "name": "Coventrycares Of Virginia",
@@ -6386,7 +6386,6 @@
       "fax": null,
       "notes": "Commercial ACA marketplace (individual/family and small-group) insurer. Timely-filing and appeal deadlines are state-specific — verify per the state provider manual.",
       "verified": null,
-      "claimLogicId": "10881",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -6401,7 +6400,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10881",
+      "clearinghouseMatches": [
         {
           "id": "10881",
           "name": "Oscar",
@@ -6448,7 +6448,6 @@
       "fax": null,
       "notes": "UnitedHealthcare regional commercial brand for the NY/NJ/CT tri-state area; claims, eligibility, and appeals now run through uhcprovider.com.",
       "verified": null,
-      "claimLogicId": "06111",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -6463,7 +6462,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "06111",
+      "clearinghouseMatches": [
         {
           "id": "06111",
           "name": "Oxford Health Insurance Inc",
@@ -6527,7 +6527,6 @@
       "fax": null,
       "notes": "Regional commercial plan serving OR, ID, MT, and WA; provider self-service via InTouch.",
       "verified": null,
-      "claimLogicId": "93029",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -6542,7 +6541,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "93029",
+      "clearinghouseMatches": [
         {
           "id": "93029",
           "name": "Pacific Source Health Plan",
@@ -6588,7 +6588,6 @@
       "fax": null,
       "notes": "Paramount's commercial/Medicare lines acquired by Medical Mutual (2024); electronic-only claims effective Sept 1, 2025.",
       "verified": null,
-      "claimLogicId": "SX158",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -6603,7 +6602,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "SX158",
+      "clearinghouseMatches": [
         {
           "id": "SX158",
           "name": "Paramount Health Care",
@@ -6638,7 +6638,6 @@
       "fax": null,
       "notes": "Commercial HMO historically based in Lansing, MI; reportedly rebranded to University of Michigan Health Plan and winding down ~Dec 31, 2025. A separate unrelated PHP operates in Fort Wayne, Indiana — do not conflate.",
       "verified": null,
-      "claimLogicId": "37330",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -6653,7 +6652,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "37330",
+      "clearinghouseMatches": [
         {
           "id": "37330",
           "name": "Phpmm Physicians Hp",
@@ -6687,7 +6687,6 @@
       "fax": null,
       "notes": "New Mexico's largest locally-owned not-for-profit plan (commercial, Medicare Advantage, and Medicaid/Centennial Care).",
       "verified": null,
-      "claimLogicId": "10646",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -6702,7 +6701,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10646",
+      "clearinghouseMatches": [
         {
           "id": "10646",
           "name": "Presbyterian Health Plan",
@@ -6747,7 +6747,6 @@
       "fax": null,
       "notes": "Michigan plan with commercial, Medicaid, and Medicare Advantage lines. Provider portal is branded 'prism.'",
       "verified": null,
-      "claimLogicId": "10490",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -6762,7 +6761,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10490",
+      "clearinghouseMatches": [
         {
           "id": "10490",
           "name": "Priority Health",
@@ -6809,7 +6809,6 @@
       "fax": null,
       "notes": "Illinois-based TPA for self-funded employee benefit plans; timely filing varies by group.",
       "verified": null,
-      "claimLogicId": "36331",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -6824,7 +6823,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "36331",
+      "clearinghouseMatches": [
         {
           "id": "36331",
           "name": "Professional Benefit Administrators Inc. (Oak Brook, Il)",
@@ -6870,7 +6870,6 @@
       "fax": null,
       "notes": "Nevada commercial health plan (HMO and self-funded) owned by Universal Health Services (UHS).",
       "verified": null,
-      "claimLogicId": "11215",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -6885,7 +6884,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "11215",
+      "clearinghouseMatches": [
         {
           "id": "11215",
           "name": "Prominence Health Plan",
@@ -6931,7 +6931,6 @@
       "fax": null,
       "notes": "Oregon-based plan serving OR and WA. Payer ID is clearinghouse-specific (SX133 or PHP01).",
       "verified": null,
-      "claimLogicId": "10172",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -6946,7 +6945,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10172",
+      "clearinghouseMatches": [
         {
           "id": "10172",
           "name": "Providence Health Plan",
@@ -6992,7 +6992,6 @@
       "fax": null,
       "notes": "Utah's self-funded commercial-style plan for public and government employees statewide.",
       "verified": null,
-      "claimLogicId": "SX106",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -7007,7 +7006,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "SX106",
+      "clearinghouseMatches": [
         {
           "id": "SX106",
           "name": "Pehp/Ut Public Empl Hlth Plan",
@@ -7041,7 +7041,6 @@
       "fax": null,
       "notes": "Wisconsin-based; absorbed Unity Health Insurance and Dean Health Plan. Also Medicaid/BadgerCare Plus and Medicare.",
       "verified": null,
-      "claimLogicId": "39180",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -7056,7 +7055,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "39180",
+      "clearinghouseMatches": [
         {
           "id": "39180",
           "name": "Quartz",
@@ -7111,7 +7111,6 @@
       "fax": null,
       "notes": "UnitedHealthcare company serving Colorado (commercial, Exchange, Medicaid/Health First Colorado RAE Region 1, CHP+, Medicare).",
       "verified": null,
-      "claimLogicId": "87726",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -7126,7 +7125,8 @@
         "auto": true,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "87726",
+      "clearinghouseMatches": [
         {
           "id": "87726",
           "name": "Coventrycares Of Virginia",
@@ -7216,7 +7216,6 @@
       "fax": null,
       "notes": "Cincinnati-based TPA (now branded Reflect Health) for self-funded/exchange/association plans.",
       "verified": null,
-      "claimLogicId": "31441",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -7231,7 +7230,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "31441",
+      "clearinghouseMatches": [
         {
           "id": "31441",
           "name": "S&Amp;Amp;S Healthcare Strategies",
@@ -7275,7 +7275,6 @@
       "fax": null,
       "notes": "All-in-one health plan for small/mid employers using the HealthSmart network; timely filing is plan-specific.",
       "verified": null,
-      "claimLogicId": "50114",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -7290,7 +7289,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "50114",
+      "clearinghouseMatches": [
         {
           "id": "50114",
           "name": "Sana Benefits",
@@ -7325,7 +7325,6 @@
       "fax": null,
       "notes": "Operates in ND/SD/IA/MN; also Medicare Advantage (Align).",
       "verified": null,
-      "claimLogicId": "10533",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -7340,7 +7339,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10533",
+      "clearinghouseMatches": [
         {
           "id": "10533",
           "name": "Sanford Health Plan",
@@ -7386,7 +7386,6 @@
       "fax": null,
       "notes": "Wisconsin-based, part of Sanford Health; also Medicare Advantage, Medicaid/BadgerCare, Medicare Supplement.",
       "verified": null,
-      "claimLogicId": "10864",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -7401,7 +7400,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10864",
+      "clearinghouseMatches": [
         {
           "id": "10864",
           "name": "Security Health Plan",
@@ -7447,7 +7447,6 @@
       "fax": null,
       "notes": "Intermountain Healthcare's plan serving UT, ID, NV, and CO; not to be confused with the unrelated Select Health of South Carolina.",
       "verified": null,
-      "claimLogicId": "SX107",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -7462,7 +7461,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "SX107",
+      "clearinghouseMatches": [
         {
           "id": "SX107",
           "name": "Intermountain Health Care",
@@ -7505,7 +7505,6 @@
       "fax": null,
       "notes": "Virginia-based; formerly Optima Health. Also Medicaid (Sentara Community Plan) and Medicare.",
       "verified": null,
-      "claimLogicId": "00453",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -7520,7 +7519,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "00453",
+      "clearinghouseMatches": [
         {
           "id": "00453",
           "name": "Optima Health",
@@ -7607,7 +7607,6 @@
       "fax": "858-303-9049",
       "notes": "San Diego County commercial HMO/POS/PPO (also Medicare Advantage, FEHB).",
       "verified": null,
-      "claimLogicId": "SHP76",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -7622,7 +7621,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "SHP76",
+      "clearinghouseMatches": [
         {
           "id": "SHP76",
           "name": "Sharp Health Plan",
@@ -7662,7 +7662,6 @@
       "fax": null,
       "notes": "Fixed-benefit/ACA carrier; members often pay with a Sidecar Visa card and submit claims themselves; providers may bill directly via SDCAR.",
       "verified": null,
-      "claimLogicId": "SDCAR",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -7677,7 +7676,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "SDCAR",
+      "clearinghouseMatches": [
         {
           "id": "SDCAR",
           "name": "Sidecar Health",
@@ -7710,7 +7710,6 @@
       "fax": null,
       "notes": "Nevada commercial carrier, a UnitedHealthcare company (often uses the UHC Choice Plus network).",
       "verified": null,
-      "claimLogicId": "76342",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -7725,7 +7724,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "76342",
+      "clearinghouseMatches": [
         {
           "id": "76342",
           "name": "Sierra Health And Life (Health Plan Of Nevada)",
@@ -7759,7 +7759,6 @@
       "fax": "330-996-8545",
       "notes": "Ohio-based commercial/Medicare Advantage plan; self-funded vs fully-funded use different payer IDs. As of Mar 4, 2026 disputes go through Plan Central.",
       "verified": null,
-      "claimLogicId": "95202",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -7774,7 +7773,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "95202",
+      "clearinghouseMatches": [
         {
           "id": "95202",
           "name": "Summa Management Services Organization (Smso) / Summacare",
@@ -7819,7 +7819,6 @@
       "fax": "866-427-7703",
       "notes": "UnitedHealthcare company (formerly Bind). Critical: always use payer ID 25463 or the claim is denied with no record.",
       "verified": null,
-      "claimLogicId": "14407",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -7834,7 +7833,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "14407",
+      "clearinghouseMatches": [
         {
           "id": "14407",
           "name": "Surest",
@@ -7880,7 +7880,6 @@
       "fax": null,
       "notes": "Northern California commercial HMO, rebranded from Sutter Health Plus. Most claims route to the member's PPG.",
       "verified": null,
-      "claimLogicId": "13287",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -7895,7 +7894,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "13287",
+      "clearinghouseMatches": [
         {
           "id": "13287",
           "name": "Sutter Health Plus",
@@ -7930,11 +7930,11 @@
       "fax": "512-233-7720",
       "notes": "Marketplace carrier in OK and ME, rebranding to Mending; claims also accepted at claims@tarohealth.com.",
       "verified": null,
-      "claimLogicId": null,
       "parStatus": null,
       "enrollmentRequired": null,
       "ediCapabilities": null,
-      "claimLogicMatches": []
+      "clearinghouseId": null,
+      "clearinghouseMatches": []
     },
     {
       "slug": "loomis-company",
@@ -7955,7 +7955,6 @@
       "fax": null,
       "notes": "Pennsylvania-based TPA/broker administering self-funded plans; claims address and timely filing vary by group.",
       "verified": null,
-      "claimLogicId": "23223",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -7970,7 +7969,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "23223",
+      "clearinghouseMatches": [
         {
           "id": "23223",
           "name": "Loomis Company",
@@ -8018,7 +8018,6 @@
       "fax": null,
       "notes": "National third-party administrator, formerly CoreSource, with a sister TPA brand (Luminare Health). Routing varies heavily by employer group.",
       "verified": null,
-      "claimLogicId": "35183",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -8033,7 +8032,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "35183",
+      "clearinghouseMatches": [
         {
           "id": "35183",
           "name": "Coresource",
@@ -8080,7 +8080,6 @@
       "fax": null,
       "notes": "Massachusetts plan now under Point32Health (Tufts + Harvard Pilgrim merger). Multiple product lines with different rules — match the member's product.",
       "verified": null,
-      "claimLogicId": "04298",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -8095,7 +8094,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "04298",
+      "clearinghouseMatches": [
         {
           "id": "P3201",
           "name": "Point32 Health",
@@ -8151,7 +8151,6 @@
       "fax": null,
       "notes": "Largest US third-party administrator (a UnitedHealthcare company) for self-funded employer plans. Payer ID, claims address, timely filing, and phone all vary by employer group — the member ID card is the source of truth.",
       "verified": null,
-      "claimLogicId": "39026",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -8166,7 +8165,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "39026",
+      "clearinghouseMatches": [
         {
           "id": "39026",
           "name": "Benesight",
@@ -8264,7 +8264,6 @@
       "fax": null,
       "notes": "Optum manages much of UHC's provider operations. Verify the payer ID for the member's specific plan on the ID card.",
       "verified": "2026-06-24",
-      "claimLogicId": "87726",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -8279,7 +8278,8 @@
         "auto": true,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "87726",
+      "clearinghouseMatches": [
         {
           "id": "87726",
           "name": "Coventrycares Of Virginia",
@@ -8368,7 +8368,6 @@
       "fax": null,
       "notes": "Network-access/shared-services product for self-funded plans, often administered via UMR. Payer ID, claims address, and timely filing are plan-specific — always read the member card.",
       "verified": null,
-      "claimLogicId": "39026",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -8383,7 +8382,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "39026",
+      "clearinghouseMatches": [
         {
           "id": "39026",
           "name": "Benesight",
@@ -8478,7 +8478,6 @@
       "fax": null,
       "notes": "Student health insurance arm for school-sponsored plans. Use payer ID 74227, not the main UHC ID.",
       "verified": null,
-      "claimLogicId": "74227",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -8493,7 +8492,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "74227",
+      "clearinghouseMatches": [
         {
           "id": "74227",
           "name": "Bankers United Life",
@@ -8587,7 +8587,6 @@
       "fax": "877-203-9401",
       "notes": "Western New York commercial plan operated by Excellus Health Plan (Excellus BCBS family); also Medicare Advantage.",
       "verified": null,
-      "claimLogicId": "10535",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -8602,7 +8601,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10535",
+      "clearinghouseMatches": [
         {
           "id": "10535",
           "name": "Univera",
@@ -8635,7 +8635,6 @@
       "fax": null,
       "notes": "Pennsylvania plan with commercial, UPMC for You (Medicaid), and UPMC for Life (Medicare Advantage) lines. Payer ID and filing window are from a secondary aggregator — confirm against UPMC's EDI docs.",
       "verified": null,
-      "claimLogicId": "23281",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -8650,7 +8649,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "23281",
+      "clearinghouseMatches": [
         {
           "id": "23281",
           "name": "Upmc Dental Advantage",
@@ -8707,7 +8707,6 @@
       "fax": null,
       "notes": "Louisiana-based commercial HMO (Monroe, LA). Address shown is corporate — verify claims address.",
       "verified": null,
-      "claimLogicId": "72128",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -8722,7 +8721,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "72128",
+      "clearinghouseMatches": [
         {
           "id": "72128",
           "name": "Vantage Health Plan",
@@ -8787,7 +8787,6 @@
       "fax": null,
       "notes": "GuideWell-owned third-party administrator; networks vary by group. Payer ID, group number, address, and phone are member/group-specific.",
       "verified": null,
-      "claimLogicId": "75261",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -8802,7 +8801,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "75261",
+      "clearinghouseMatches": [
         {
           "id": "75261",
           "name": "Chec A Subsidiary Of Sprint",
@@ -8855,7 +8855,6 @@
       "fax": "916-568-0331",
       "notes": "Commercial HMO for greater Sacramento and Northern CA. Paper claims address varies by medical group/IPA.",
       "verified": null,
-      "claimLogicId": "10201",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -8870,7 +8869,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10201",
+      "clearinghouseMatches": [
         {
           "id": "10201",
           "name": "Western Health Advantage",
@@ -8928,7 +8928,6 @@
       "fax": null,
       "notes": "Federal employee (FEHB/PSHB) plan that rents the UnitedHealthcare Choice Plus network. As of 1/1/2025 use payer ID 39026 and the dedicated GEHA portal.",
       "verified": null,
-      "claimLogicId": "39026",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -8943,7 +8942,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "39026",
+      "clearinghouseMatches": [
         {
           "id": "39026",
           "name": "Benesight",
@@ -9039,7 +9039,6 @@
       "fax": null,
       "notes": "Administered regionally: Humana Military (East) and the West contractor. Use the correct region for the beneficiary.",
       "verified": "2026-06-24",
-      "claimLogicId": "12274",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -9054,7 +9053,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "12274",
+      "clearinghouseMatches": [
         {
           "id": "89070",
           "name": "Metlife Tricare",
@@ -9141,7 +9141,6 @@
       "fax": null,
       "notes": "Aetna's multi-state Medicaid managed-care brand; many state-specific entities, some with Medicare D-SNP. Payer ID, timely filing, claims address, and phone differ by state — look up the specific state plan.",
       "verified": null,
-      "claimLogicId": "60054",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -9156,7 +9155,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "60054",
+      "clearinghouseMatches": [
         {
           "id": "60054",
           "name": "Aetna",
@@ -9203,7 +9203,6 @@
       "fax": "844-235-1340",
       "notes": "Claims go to El Paso, TX but appeals go to PO Box 81040, Cleveland, OH 44181. El Paso box effective 2/2022.",
       "verified": null,
-      "claimLogicId": "128FL",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -9218,7 +9217,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "128FL",
+      "clearinghouseMatches": [
         {
           "id": "128FL",
           "name": "Coventry Health Care Of Florida",
@@ -9253,7 +9253,6 @@
       "fax": null,
       "notes": "Arizona's state Medicaid agency and the FFS payer. Most claims route to managed-care plans — confirm the member's plan first.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -9268,7 +9267,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -9332,7 +9332,6 @@
       "fax": "855-891-7173",
       "notes": "Medi-Cal (Medicaid) managed-care plan for Alameda County (CA).",
       "verified": null,
-      "claimLogicId": "95327",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -9347,7 +9346,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "95327",
+      "clearinghouseMatches": [
         {
           "id": "95327",
           "name": "Alameda Alliance For Health",
@@ -9381,7 +9381,6 @@
       "fax": null,
       "notes": "Multi-state Medicaid family of companies (PA, LA, FL, DC, SC, NC, OH, and others). Values shown are for AmeriHealth Caritas Pennsylvania (payer ID 22248).",
       "verified": null,
-      "claimLogicId": "22248",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -9396,7 +9395,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "22248",
+      "clearinghouseMatches": [
         {
           "id": "22248",
           "name": "Amerihealth Caritas Pennsylvania",
@@ -9431,7 +9431,6 @@
       "fax": null,
       "notes": "Prestige Health Choice rebranded to AmeriHealth Caritas Florida. Uses Change Healthcare as its named clearinghouse rather than Availity. EDI setup 877-363-3666.",
       "verified": null,
-      "claimLogicId": "77003",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -9446,7 +9445,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "77003",
+      "clearinghouseMatches": [
         {
           "id": "45056",
           "name": "Prestige Health Choice",
@@ -9487,7 +9487,6 @@
       "fax": null,
       "notes": "New York City Medicaid Special Needs Plan (SNP) for people living with HIV/AIDS and other special-needs populations.",
       "verified": null,
-      "claimLogicId": "79966",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -9502,7 +9501,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "79966",
+      "clearinghouseMatches": [
         {
           "id": "79966",
           "name": "Star Administrators For Amida Medicare",
@@ -9536,7 +9536,6 @@
       "fax": null,
       "notes": "California Medi-Cal Managed Care line of Anthem Blue Cross; also subcontracts with L.A. Care. Use the 180/210-day window, not '90 days' seen on aggregators.",
       "verified": null,
-      "claimLogicId": "47198",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -9551,7 +9550,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "47198",
+      "clearinghouseMatches": [
         {
           "id": "47198",
           "name": "Anthem - Blue Cross Of California",
@@ -9603,7 +9603,6 @@
       "fax": null,
       "notes": "Washington State's Medicaid program, administered by the Health Care Authority (HCA) via ProviderOne. Most enrollees are in managed-care plans.",
       "verified": null,
-      "claimLogicId": "WAMK0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -9618,7 +9617,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "WAMK0",
+      "clearinghouseMatches": [
         {
           "id": "WAMK0",
           "name": "Wa Medicaid",
@@ -9653,7 +9653,6 @@
       "fax": null,
       "notes": "Ohio Medicaid managed-care plan, a Centene subsidiary.",
       "verified": null,
-      "claimLogicId": "68069",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -9668,7 +9667,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "68069",
+      "clearinghouseMatches": [
         {
           "id": "68069",
           "name": "Absolute Total Care",
@@ -9754,7 +9754,6 @@
       "fax": null,
       "notes": "California Medi-Cal managed-care plan (County Organized Health System) serving Orange County. Claims delegated to multiple health networks.",
       "verified": null,
-      "claimLogicId": "COLTC",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -9769,7 +9768,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "COLTC",
+      "clearinghouseMatches": [
         {
           "id": "COLTC",
           "name": "Caloptima",
@@ -9820,7 +9820,6 @@
       "fax": null,
       "notes": "Medi-Cal (Medicaid) managed-care plan for Fresno, Kings, and Madera counties (CA), administered by Health Net.",
       "verified": null,
-      "claimLogicId": "68069",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -9835,7 +9834,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "68069",
+      "clearinghouseMatches": [
         {
           "id": "68069",
           "name": "Absolute Total Care",
@@ -9922,7 +9922,6 @@
       "fax": null,
       "notes": "Multi-state Medicaid MCO (OH, IN, GA, KY, WV, and others). Payer ID, address, timely filing, and phone all differ by state.",
       "verified": null,
-      "claimLogicId": "37311",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -9937,7 +9936,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "37311",
+      "clearinghouseMatches": [
         {
           "id": "26160",
           "name": "Caresource",
@@ -9994,7 +9994,6 @@
       "fax": null,
       "notes": "Largest Medicaid managed-care organization in the U.S., operating under many state brand names.",
       "verified": "2026-06-24",
-      "claimLogicId": "68069",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -10009,7 +10008,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "68069",
+      "clearinghouseMatches": [
         {
           "id": "14329",
           "name": "Ambetter",
@@ -10063,7 +10063,6 @@
       "fax": null,
       "notes": "Specialty plan for children with special health care needs; administered by Sunshine Health. As of 7/1/2025 CMS enrollment transferred to AHCA — confirm current administration.",
       "verified": null,
-      "claimLogicId": "68069",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -10078,7 +10077,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "68069",
+      "clearinghouseMatches": [
         {
           "id": "68069",
           "name": "Absolute Total Care",
@@ -10163,7 +10163,6 @@
       "fax": null,
       "notes": "HIV/AIDS specialty Medicaid plan administered by Simply Healthcare (Elevance/Anthem). Note the split professional (65062) vs institutional (12K89) payer IDs.",
       "verified": null,
-      "claimLogicId": "12261",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -10178,7 +10177,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "12261",
+      "clearinghouseMatches": [
         {
           "id": "12261",
           "name": "Clear Health Alliance",
@@ -10225,7 +10225,6 @@
       "fax": "954-417-7106",
       "notes": "Broward provider-owned plan (Broward Health + Memorial Healthcare System). Do NOT confuse with Florida Community Care (FCC) — both surface under payer ID 59065.",
       "verified": null,
-      "claimLogicId": "59064",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -10240,7 +10239,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "59064",
+      "clearinghouseMatches": [
         {
           "id": "59064",
           "name": "Community Care Plan",
@@ -10295,7 +10295,6 @@
       "fax": null,
       "notes": "County-operated Medi-Cal (Medicaid) managed-care plan for Contra Costa County (CA); also offers commercial Care Plus.",
       "verified": null,
-      "claimLogicId": "15545",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -10310,7 +10309,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "15545",
+      "clearinghouseMatches": [
         {
           "id": "15545",
           "name": "Contra Costa Health Plan",
@@ -10357,7 +10357,6 @@
       "fax": null,
       "notes": "Texas Medicaid managed-care plan serving the Nueces and Hidalgo service areas (STAR, STAR Kids, CHIP).",
       "verified": null,
-      "claimLogicId": "74284",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -10372,7 +10371,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "74284",
+      "clearinghouseMatches": [
         {
           "id": "74284",
           "name": "Driscoll Childrens Health Plan",
@@ -10420,7 +10420,6 @@
       "fax": null,
       "notes": "New York managed-care plan owned by Centene.",
       "verified": null,
-      "claimLogicId": "11315",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -10435,7 +10434,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "11315",
+      "clearinghouseMatches": [
         {
           "id": "11315",
           "name": "Centercare",
@@ -10493,7 +10493,6 @@
       "fax": null,
       "notes": "Statewide Medicaid Long-Term Care (LTC) plan, Miami-based — DISTINCT from Community Care Plan (Broward).",
       "verified": null,
-      "claimLogicId": "FLCCR",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -10508,7 +10507,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "FLCCR",
+      "clearinghouseMatches": [
         {
           "id": "FLCCR",
           "name": "Flordia Community Care",
@@ -10544,7 +10544,6 @@
       "fax": null,
       "notes": "Administered by FL AHCA with fiscal agent Gainwell Technologies; this is the FFS sliver — most FL Medicaid recipients are in SMMC managed-care plans.",
       "verified": null,
-      "claimLogicId": "10086",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -10559,7 +10558,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10086",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -10647,7 +10647,6 @@
       "fax": null,
       "notes": "County-organized Medi-Cal (Medicaid) plan for Ventura County (CA); also operates Total Care Advantage HMO D-SNP.",
       "verified": null,
-      "claimLogicId": "77160",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -10662,7 +10661,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "77160",
+      "clearinghouseMatches": [
         {
           "id": "77160",
           "name": "Gold Coast Health Plan",
@@ -10695,7 +10695,6 @@
       "fax": null,
       "notes": "California Medi-Cal managed-care plan (Centene); also administers CalViva Health in Fresno/Kings/Madera.",
       "verified": null,
-      "claimLogicId": "CAMK0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -10710,7 +10709,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "CAMK0",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -10786,7 +10786,6 @@
       "fax": null,
       "notes": "New York-only Medicaid managed care / Medicare Advantage / Marketplace plan serving NYC and surrounding counties.",
       "verified": null,
-      "claimLogicId": "10673",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -10801,7 +10800,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10673",
+      "clearinghouseMatches": [
         {
           "id": "10673",
           "name": "Health First Health Plan",
@@ -10873,7 +10873,6 @@
       "fax": "844-207-0334",
       "notes": "Pennsylvania (and West Virginia) Medicaid/Medicare plan, formerly Gateway Health Plan — rebranded to Highmark Wholecare.",
       "verified": null,
-      "claimLogicId": "25169",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -10888,7 +10887,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "25169",
+      "clearinghouseMatches": [
         {
           "id": "25169",
           "name": "Gateway Health Plan - Medicaid Pennsylvania",
@@ -10922,7 +10922,6 @@
       "fax": null,
       "notes": "New Jersey Medicaid (NJ FamilyCare) managed-care plan from Horizon BCBS of NJ. Behavioral health and appeals may route differently.",
       "verified": null,
-      "claimLogicId": "22326",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -10937,7 +10936,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "22326",
+      "clearinghouseMatches": [
         {
           "id": "22326",
           "name": "Horizon New Jersey Health",
@@ -10983,7 +10983,6 @@
       "fax": null,
       "notes": "Payer ID 61101 is shared across Humana's book — confirm LOB routing. Grievances & Appeals: PO Box 14546, Lexington, KY 40512-4546.",
       "verified": null,
-      "claimLogicId": "61101",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -10998,7 +10997,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "61101",
+      "clearinghouseMatches": [
         {
           "id": "61101",
           "name": "Cariten Healthcare",
@@ -11088,7 +11088,6 @@
       "fax": null,
       "notes": "California Medi-Cal managed-care plan serving Riverside and San Bernardino counties. Claim appeals go to P.O. Box 4319.",
       "verified": null,
-      "claimLogicId": "IEHP1",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -11103,7 +11102,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "IEHP1",
+      "clearinghouseMatches": [
         {
           "id": "IEHP1",
           "name": "Inland Empire Health Plan",
@@ -11137,7 +11137,6 @@
       "fax": null,
       "notes": "Southeastern Pennsylvania Medicaid (HealthChoices) plan, part of the AmeriHealth Caritas family.",
       "verified": null,
-      "claimLogicId": "10300",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -11152,7 +11151,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10300",
+      "clearinghouseMatches": [
         {
           "id": "10300",
           "name": "Keystone First",
@@ -11232,7 +11232,6 @@
       "fax": null,
       "notes": "California Medi-Cal managed-care plan serving Los Angeles County.",
       "verified": null,
-      "claimLogicId": "11060",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -11247,7 +11246,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "11060",
+      "clearinghouseMatches": [
         {
           "id": "11060",
           "name": "L A Care Health Plan",
@@ -11305,7 +11305,6 @@
       "fax": null,
       "notes": "California fee-for-service Medicaid administered by DHCS via CA-MMIS. Most members are in managed-care plans (IEHP, L.A. Care, etc.) with their own payer IDs.",
       "verified": null,
-      "claimLogicId": "10055",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -11320,7 +11319,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10055",
+      "clearinghouseMatches": [
         {
           "id": "10055",
           "name": "California Medicaid",
@@ -11355,7 +11355,6 @@
       "fax": null,
       "notes": "Each state runs its own Medicaid program and MCOs, each with its own payer ID, timely filing, and claims address. Confirm with the specific state plan.",
       "verified": "2026-06-24",
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -11370,7 +11369,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -11435,7 +11435,6 @@
       "fax": "602-351-2300",
       "notes": "Arizona-only Medicaid managed-care plan administered by Aetna/CVS under contract with AHCCCS. Eligibility verified through the AHCCCS portal.",
       "verified": null,
-      "claimLogicId": "86052",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -11450,7 +11449,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "86052",
+      "clearinghouseMatches": [
         {
           "id": "86052",
           "name": "Mercy Care Plan",
@@ -11496,7 +11496,6 @@
       "fax": null,
       "notes": "Michigan and Illinois Medicaid MCO; a Centene/WellCare subsidiary. Verify the member's state before submitting.",
       "verified": null,
-      "claimLogicId": "J2JVH",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -11511,7 +11510,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "J2JVH",
+      "clearinghouseMatches": [
         {
           "id": "J2JVH",
           "name": "Jvhl Meridian Health Plan Of Michigan",
@@ -11588,7 +11588,6 @@
       "fax": null,
       "notes": "New York City Medicaid/Marketplace/Medicare plan affiliated with NYC Health + Hospitals.",
       "verified": null,
-      "claimLogicId": "13265",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -11603,7 +11602,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "13265",
+      "clearinghouseMatches": [
         {
           "id": "10846",
           "name": "Metroplus",
@@ -11658,7 +11658,6 @@
       "fax": null,
       "notes": "Medicaid, Medicare, and Marketplace plans across multiple states.",
       "verified": "2026-06-24",
-      "claimLogicId": "UNMTP",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -11673,7 +11672,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "UNMTP",
+      "clearinghouseMatches": [
         {
           "id": "UNMTP",
           "name": "Molina",
@@ -11709,7 +11709,6 @@
       "fax": null,
       "notes": "California Medi-Cal managed-care plan. Provider portal moved to Availity Essentials.",
       "verified": null,
-      "claimLogicId": "38333",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -11724,7 +11723,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "38333",
+      "clearinghouseMatches": [
         {
           "id": "38333",
           "name": "Molina Healthcare Long Beach Ca",
@@ -11769,7 +11769,6 @@
       "fax": null,
       "notes": "Availity is Molina's named portal/clearinghouse. Verify timely filing per your participation agreement.",
       "verified": null,
-      "claimLogicId": "51062",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -11784,7 +11783,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "51062",
+      "clearinghouseMatches": [
         {
           "id": "51062",
           "name": "Molina Healthcare Of Florida",
@@ -11818,7 +11818,6 @@
       "fax": "877-319-6852",
       "notes": "Texas Medicaid managed-care plan (STAR+PLUS, STAR, CHIP). Provider complaints & appeals go to P.O. Box 165089, Irving, TX 75016.",
       "verified": null,
-      "claimLogicId": "20554",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -11833,7 +11832,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "20554",
+      "clearinghouseMatches": [
         {
           "id": "20554",
           "name": "Molina Healthcare Of Texas",
@@ -11868,7 +11868,6 @@
       "fax": null,
       "notes": "New York State fee-for-service Medicaid, administered through the eMedNY claims system.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -11883,7 +11882,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -11949,7 +11949,6 @@
       "fax": null,
       "notes": "California Medi-Cal managed-care plan (COHS) serving 24 Northern California counties. EDI enrollment required before electronic submission.",
       "verified": null,
-      "claimLogicId": "10164",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -11964,7 +11963,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10164",
+      "clearinghouseMatches": [
         {
           "id": "10164",
           "name": "Partnership Health Plan Of California",
@@ -12012,7 +12012,6 @@
       "fax": null,
       "notes": "Georgia Medicaid managed-care plan, a Centene subsidiary. Notably short 30-day appeal window.",
       "verified": null,
-      "claimLogicId": "68069",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -12027,7 +12026,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "68069",
+      "clearinghouseMatches": [
         {
           "id": "68069",
           "name": "Absolute Total Care",
@@ -12112,7 +12112,6 @@
       "fax": "408-376-3537",
       "notes": "County-organized Medi-Cal (Medicaid) plan for Santa Clara County (CA); also runs SCFHP DualConnect (HMO D-SNP).",
       "verified": null,
-      "claimLogicId": "24077",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -12127,7 +12126,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "24077",
+      "clearinghouseMatches": [
         {
           "id": "10876",
           "name": "Santa Clara Family Health Plan",
@@ -12171,7 +12171,6 @@
       "fax": null,
       "notes": "Elevance/Anthem-owned. The 90-day-for-full-payment rule with a 50% reduction window is an outlier — verify. Absorbed former Vivida (Region 8) and Lighthouse (Regions 1-2) Medicaid members.",
       "verified": null,
-      "claimLogicId": "SMPLY",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -12186,7 +12185,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "SMPLY",
+      "clearinghouseMatches": [
         {
           "id": "SMPLY",
           "name": "Simply Healthcare",
@@ -12234,7 +12234,6 @@
       "fax": null,
       "notes": "Largest FL Medicaid (SMMC) plan. The Farmington, MO box above is for adjustments/disputes; verify the first-pass claims box separately. EDI dept: 800-225-2573 ext. 25525.",
       "verified": null,
-      "claimLogicId": "68069",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -12249,7 +12248,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "68069",
+      "clearinghouseMatches": [
         {
           "id": "68069",
           "name": "Absolute Total Care",
@@ -12337,7 +12337,6 @@
       "fax": null,
       "notes": "Texas Medicaid managed-care plan (Centene): STAR, STAR+PLUS, STAR Kids, CHIP. Verify the claims PO box by line of business.",
       "verified": null,
-      "claimLogicId": "68069",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -12352,7 +12351,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "68069",
+      "clearinghouseMatches": [
         {
           "id": "68069",
           "name": "Absolute Total Care",
@@ -12439,7 +12439,6 @@
       "fax": null,
       "notes": "Texas Medicaid FFS claims administrator. Acute-care FFS claims go through TMHP; managed-care claims must route to the member's assigned MCO.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -12454,7 +12453,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -12542,7 +12542,6 @@
       "fax": null,
       "notes": "UnitedHealthcare's Medicaid managed-care arm operating in 25+ states. Nearly every field varies by state contract — check the state manual on uhcprovider.com.",
       "verified": null,
-      "claimLogicId": "87726",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -12557,7 +12556,8 @@
         "auto": true,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "87726",
+      "clearinghouseMatches": [
         {
           "id": "87726",
           "name": "Coventrycares Of Virginia",
@@ -12647,7 +12647,6 @@
       "fax": null,
       "notes": "87726 is a shared multi-state UHC payer ID; confirm FL Medicaid routing. LTC provider line 800-791-9233.",
       "verified": null,
-      "claimLogicId": "87726",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -12662,7 +12661,8 @@
         "auto": true,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "87726",
+      "clearinghouseMatches": [
         {
           "id": "87726",
           "name": "Coventrycares Of Virginia",
@@ -12752,7 +12752,6 @@
       "fax": null,
       "notes": "Texas Medicaid managed-care plan (STAR, STAR+PLUS). UHC uses multiple PO boxes by line of business — verify.",
       "verified": null,
-      "claimLogicId": "87726",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -12767,7 +12766,8 @@
         "auto": true,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "87726",
+      "clearinghouseMatches": [
         {
           "id": "87726",
           "name": "Coventrycares Of Virginia",
@@ -12858,7 +12858,6 @@
       "fax": null,
       "notes": "Multi-state Medicaid/Medicare brand owned by Centene. Provider phone, address, and appeal deadlines vary by state/plan.",
       "verified": null,
-      "claimLogicId": "14163",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -12873,7 +12872,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "14163",
+      "clearinghouseMatches": [
         {
           "id": "14163",
           "name": "Care1st Health Plan Arizona Medicare",
@@ -12963,7 +12963,6 @@
       "fax": null,
       "notes": "Elevance Health's multi-state rebrand of Amerigroup (Medicaid/Medicare) — same plans, new name. Timely filing, phone, and addresses are state-specific.",
       "verified": null,
-      "claimLogicId": "10019",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -12978,7 +12977,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10019",
+      "clearinghouseMatches": [
         {
           "id": "10019",
           "name": "Amerigroup",
@@ -13070,7 +13070,6 @@
       "fax": null,
       "notes": "Texas Medicaid managed-care plan — Amerigroup TX rebranded to Wellpoint (eff. Jan 1, 2024). 'Amerigroup' and 26375 are legacy.",
       "verified": null,
-      "claimLogicId": "WLPNT",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -13085,7 +13084,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "WLPNT",
+      "clearinghouseMatches": [
         {
           "id": "WLPNT",
           "name": "Amerigroup/Wellpoint",
@@ -13176,7 +13176,6 @@
       "fax": null,
       "notes": "CGS Administrators is the MAC for Jurisdiction 15, covering KY and OH, and also operates as a DME MAC.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -13191,7 +13190,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -13270,7 +13270,6 @@
       "fax": null,
       "notes": "First Coast is the Medicare Administrative Contractor for Florida, Puerto Rico, and the U.S. Virgin Islands (Jurisdiction N). This is the MAC that serves Florida practices.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -13285,7 +13284,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -13363,7 +13363,6 @@
       "fax": null,
       "notes": "Claims route to the Medicare Administrative Contractor (MAC) for your state. The 1-year timely-filing limit is set by federal law.",
       "verified": "2026-06-24",
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -13378,7 +13377,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -13456,7 +13456,6 @@
       "fax": null,
       "notes": "DMEPOS claims route to one of four DME MACs (A–D) based on the beneficiary's residence. CGS handles B & C; Noridian handles A & D.",
       "verified": null,
-      "claimLogicId": "CAMK0",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -13471,7 +13470,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "CAMK0",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -13561,7 +13561,6 @@
       "fax": null,
       "notes": "NGS is the MAC for Jurisdiction 6, covering IL, MN, and WI.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -13576,7 +13575,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -13655,7 +13655,6 @@
       "fax": null,
       "notes": "NGS is the MAC for Jurisdiction K, covering CT, NY, ME, MA, NH, RI, and VT.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -13670,7 +13669,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -13749,7 +13749,6 @@
       "fax": null,
       "notes": "Noridian is the MAC for Jurisdiction E, covering CA, HI, NV, and Pacific territories. California claims go to Jurisdiction E (not JF).",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -13764,7 +13763,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -13842,7 +13842,6 @@
       "fax": null,
       "notes": "Noridian is the MAC for Jurisdiction F, covering AK, AZ, ID, MT, ND, OR, SD, UT, WA, and WY.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -13857,7 +13856,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -13936,7 +13936,6 @@
       "fax": null,
       "notes": "Novitas is the MAC for Jurisdiction H, covering TX, CO, NM, OK, AR, LA, and MS.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -13951,7 +13950,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -14029,7 +14029,6 @@
       "fax": null,
       "notes": "Novitas is the MAC for Jurisdiction L, covering PA, NJ, MD, DE, and Washington D.C.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -14044,7 +14043,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -14122,7 +14122,6 @@
       "fax": null,
       "notes": "Palmetto GBA is the MAC for Jurisdiction J, covering AL, GA, and TN.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -14137,7 +14136,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -14215,7 +14215,6 @@
       "fax": null,
       "notes": "Palmetto GBA is the MAC for Jurisdiction M, covering NC, SC, VA, and WV.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -14230,7 +14229,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -14308,7 +14308,6 @@
       "fax": null,
       "notes": "Palmetto GBA administers Railroad Medicare nationwide for RRB beneficiaries (Part B). Bill separately from the regional MAC.",
       "verified": null,
-      "claimLogicId": "RRMCR",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -14323,7 +14322,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "RRMCR",
+      "clearinghouseMatches": [
         {
           "id": "RRMCR",
           "name": "Railroad Medicare",
@@ -14358,7 +14358,6 @@
       "fax": null,
       "notes": "WPS GHA is the MAC for Jurisdiction 5, covering IA, KS, MO, and NE.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -14373,7 +14372,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -14452,7 +14452,6 @@
       "fax": null,
       "notes": "WPS GHA is the MAC for Jurisdiction 8, covering IN and MI.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -14467,7 +14466,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -14546,7 +14546,6 @@
       "fax": null,
       "notes": "Aetna (a CVS Health company) is a major Medicare Advantage carrier.",
       "verified": null,
-      "claimLogicId": "10004",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -14561,7 +14560,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10004",
+      "clearinghouseMatches": [
         {
           "id": "10004",
           "name": "Aetna",
@@ -14621,7 +14621,6 @@
       "fax": null,
       "notes": "Alignment Health Plan is a Medicare Advantage carrier concentrated in California and several other states.",
       "verified": null,
-      "claimLogicId": "CCHPC",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -14636,7 +14635,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "CCHPC",
+      "clearinghouseMatches": [
         {
           "id": "CCHPC",
           "name": "Alignment Healthcare",
@@ -14671,7 +14671,6 @@
       "fax": null,
       "notes": "Anthem (an Elevance Health company) offers Blue Cross MA plans across many states. Payer IDs vary by state — verify by member prefix.",
       "verified": null,
-      "claimLogicId": "47198",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -14686,7 +14685,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "47198",
+      "clearinghouseMatches": [
         {
           "id": "47198",
           "name": "Anthem Blue Cross",
@@ -14720,7 +14720,6 @@
       "fax": null,
       "notes": "No single national Blue Cross MA payer — claims route to the member's LOCAL Blue plan (identified by the alpha prefix).",
       "verified": null,
-      "claimLogicId": "MIBC2",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -14735,7 +14734,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "MIBC2",
+      "clearinghouseMatches": [
         {
           "id": "MIBC2",
           "name": "Bcbs Medicare Advantage",
@@ -14789,7 +14789,6 @@
       "fax": null,
       "notes": "California-based Medicare Advantage HMO (special needs/chronic-condition focus).",
       "verified": null,
-      "claimLogicId": "14406",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -14804,7 +14803,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "14406",
+      "clearinghouseMatches": [
         {
           "id": "14406",
           "name": "Brand New Day",
@@ -14839,7 +14839,6 @@
       "fax": null,
       "notes": "Florida-only Medicare Advantage HMO, a Humana company. Watch the 180-day (contracted) vs 12-month (non-contracted) filing split.",
       "verified": null,
-      "claimLogicId": "95092",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -14854,7 +14853,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "95092",
+      "clearinghouseMatches": [
         {
           "id": "95092",
           "name": "Care Plus",
@@ -14889,7 +14889,6 @@
       "fax": null,
       "notes": "Cigna Healthcare offers Medicare Advantage plans in select markets.",
       "verified": null,
-      "claimLogicId": "10062",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -14904,7 +14903,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10062",
+      "clearinghouseMatches": [
         {
           "id": "10062",
           "name": "Cigna",
@@ -14998,7 +14998,6 @@
       "fax": null,
       "notes": "Cigna's Medicare Advantage line, branded HealthSpring. Verify the paper claims address before mailing.",
       "verified": null,
-      "claimLogicId": "52192",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -15013,7 +15012,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "52192",
+      "clearinghouseMatches": [
         {
           "id": "52192",
           "name": "Cigna Health Spring (Bravo Health Elder Health)",
@@ -15082,7 +15082,6 @@
       "fax": null,
       "notes": "Clover Health is a Medicare Advantage carrier operating in select states.",
       "verified": null,
-      "claimLogicId": "13285",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -15097,7 +15096,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "13285",
+      "clearinghouseMatches": [
         {
           "id": "13285",
           "name": "Clover Health",
@@ -15131,7 +15131,6 @@
       "fax": null,
       "notes": "Medicare Advantage plan (HMO/PPO), significant Florida presence — not a commercial/employer insurer. Verify the state-specific payer ID.",
       "verified": null,
-      "claimLogicId": "12268",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -15146,7 +15145,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "12268",
+      "clearinghouseMatches": [
         {
           "id": "12268",
           "name": "Devoted Health",
@@ -15193,7 +15193,6 @@
       "fax": null,
       "notes": "Medicare Advantage (MA/MAPD) with a strong Florida footprint. Electronic claims via DEVOT strongly preferred.",
       "verified": null,
-      "claimLogicId": "DEVOT",
       "parStatus": "Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -15208,7 +15207,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "DEVOT",
+      "clearinghouseMatches": [
         {
           "id": "DEVOT",
           "name": "Devoted Health",
@@ -15243,7 +15243,6 @@
       "fax": null,
       "notes": "Florida Blue offers BlueMedicare Advantage products statewide — directly relevant to Florida practices.",
       "verified": null,
-      "claimLogicId": "00772",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -15258,7 +15257,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "00772",
+      "clearinghouseMatches": [
         {
           "id": "00772",
           "name": "Blue Medicare Advantage",
@@ -15347,7 +15347,6 @@
       "fax": null,
       "notes": "One of the largest Medicare Advantage carriers nationwide. Verify the exact payer ID and windows against your agreement and the member's plan.",
       "verified": null,
-      "claimLogicId": "61101",
       "parStatus": "Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -15362,7 +15361,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "61101",
+      "clearinghouseMatches": [
         {
           "id": "61101",
           "name": "Cariten Healthcare",
@@ -15449,7 +15449,6 @@
       "fax": "626-380-9049",
       "notes": "Primarily a Medicare Advantage HMO carrier (also ACA Marketplace) across several Western states.",
       "verified": null,
-      "claimLogicId": "IHP01",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -15464,7 +15463,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "IHP01",
+      "clearinghouseMatches": [
         {
           "id": "IHP01",
           "name": "Imperial Health Plan Of California Inc",
@@ -15498,7 +15498,6 @@
       "fax": null,
       "notes": "Kaiser offers Senior Advantage Medicare plans through its regional integrated systems. Payer IDs and processes differ by region.",
       "verified": null,
-      "claimLogicId": "10125",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -15513,7 +15512,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "10125",
+      "clearinghouseMatches": [
         {
           "id": "J1289",
           "name": "Edic",
@@ -15590,7 +15590,6 @@
       "fax": null,
       "notes": "Louisiana-based Medicare Advantage plan (incl. D-SNP); owned by/integrated into UnitedHealthcare since Jan 1, 2024.",
       "verified": null,
-      "claimLogicId": "87726",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -15605,7 +15604,8 @@
         "auto": true,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "87726",
+      "clearinghouseMatches": [
         {
           "id": "87726",
           "name": "Coventrycares Of Virginia",
@@ -15695,7 +15695,6 @@
       "fax": null,
       "notes": "SCAN Health Plan is a Medicare Advantage carrier concentrated in California and several Western/Southwestern states.",
       "verified": null,
-      "claimLogicId": "72261",
       "parStatus": "Non-Par",
       "enrollmentRequired": true,
       "ediCapabilities": {
@@ -15710,7 +15709,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "72261",
+      "clearinghouseMatches": [
         {
           "id": "72261",
           "name": "Scan Health Plan",
@@ -15746,7 +15746,6 @@
       "fax": null,
       "notes": "UnitedHealthcare administers AARP-branded Medicare Advantage plans and is among the largest MA carriers.",
       "verified": null,
-      "claimLogicId": "87726",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -15761,7 +15760,8 @@
         "auto": true,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "87726",
+      "clearinghouseMatches": [
         {
           "id": "87726",
           "name": "Coventrycares Of Virginia",
@@ -15852,7 +15852,6 @@
       "fax": null,
       "notes": "Wellcare is Centene's Medicare Advantage / Part D brand, operating across many states under multiple legacy plan names.",
       "verified": null,
-      "claimLogicId": "14163",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -15867,7 +15866,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "14163",
+      "clearinghouseMatches": [
         {
           "id": "14163",
           "name": "Care1st Health Plan Arizona Medicare",
@@ -15957,7 +15957,6 @@
       "fax": null,
       "notes": "After Centene's 2021 acquisition, WellCare's FLORIDA Medicaid business moved to Sunshine Health — in Florida 'WellCare' now means Medicare Advantage / Part D only.",
       "verified": null,
-      "claimLogicId": "14163",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -15972,7 +15971,8 @@
         "auto": false,
         "attachments": true
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "14163",
+      "clearinghouseMatches": [
         {
           "id": "14163",
           "name": "Care1st Health Plan Arizona Medicare",
@@ -16061,7 +16061,6 @@
       "fax": null,
       "notes": "Medicare Advantage carrier operating in select states (focus on underserved communities).",
       "verified": null,
-      "claimLogicId": "14462",
       "parStatus": "Non-Par",
       "enrollmentRequired": false,
       "ediCapabilities": {
@@ -16076,7 +16075,8 @@
         "auto": false,
         "attachments": false
       },
-      "claimLogicMatches": [
+      "clearinghouseId": "14462",
+      "clearinghouseMatches": [
         {
           "id": "14462",
           "name": "Zing Health",

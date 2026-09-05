@@ -13,7 +13,7 @@ export interface PayerEdiCapabilities {
   attachments: boolean;
 }
 
-export interface ClaimLogicMatch {
+export interface ClearinghouseMatch {
   id: string;
   name: string;
   par: 'Par' | 'Non-Par';
@@ -38,20 +38,20 @@ export interface Payer {
   fax: string | null;
   notes?: string | null;
   verified: string | null;
-  claimLogicId?: string | null;
+  clearinghouseId?: string | null;
   parStatus?: 'Par' | 'Non-Par' | null;
   enrollmentRequired?: boolean | null;
   ediCapabilities?: PayerEdiCapabilities | null;
-  claimLogicMatches?: ClaimLogicMatch[];
+  clearinghouseMatches?: ClearinghouseMatch[];
 }
 
 interface PayerFile {
   _meta: {
     note: string;
     updated: string;
-    claimlogic_source?: string;
-    claimlogic_total_payors?: number;
-    claimlogic_updated?: string;
+    clearinghouse_source?: string;
+    clearinghouse_total_payors?: number;
+    clearinghouse_updated?: string;
   };
   payers: Payer[];
 }

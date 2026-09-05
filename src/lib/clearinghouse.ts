@@ -1,4 +1,4 @@
-export interface ClaimLogicPayer {
+export interface ClearinghousePayer {
   name: string;
   id: string;
   type: string;
@@ -18,7 +18,7 @@ export interface ClaimLogicPayer {
   curatedSlug?: string | null;
 }
 
-export const CLAIM_LOGIC_FLAGS = {
+export const CLEARINGHOUSE_FLAGS = {
   PAR: 1 << 0,
   ENROLLMENT: 1 << 1,
   AUTO: 1 << 2,
@@ -36,30 +36,30 @@ export const CLAIM_LOGIC_FLAGS = {
 
 export type CompactPayerTuple = [string, string, string, number, string];
 
-export function decodePayerTuple(tuple: CompactPayerTuple): ClaimLogicPayer {
+export function decodePayerTuple(tuple: CompactPayerTuple): ClearinghousePayer {
   const [name, id, type, mask, slug] = tuple;
   return {
     name,
     id,
     type,
-    par: !!(mask & CLAIM_LOGIC_FLAGS.PAR),
-    enrollment: !!(mask & CLAIM_LOGIC_FLAGS.ENROLLMENT),
-    auto: !!(mask & CLAIM_LOGIC_FLAGS.AUTO),
-    status: !!(mask & CLAIM_LOGIC_FLAGS.STATUS),
-    dental: !!(mask & CLAIM_LOGIC_FLAGS.DENTAL),
-    eligibility: !!(mask & CLAIM_LOGIC_FLAGS.ELIGIBILITY),
-    encounters: !!(mask & CLAIM_LOGIC_FLAGS.ENCOUNTERS),
-    hospital: !!(mask & CLAIM_LOGIC_FLAGS.HOSPITAL),
-    professional: !!(mask & CLAIM_LOGIC_FLAGS.PROFESSIONAL),
-    era: !!(mask & CLAIM_LOGIC_FLAGS.ERA),
-    secondary: !!(mask & CLAIM_LOGIC_FLAGS.SECONDARY),
-    wc: !!(mask & CLAIM_LOGIC_FLAGS.WC),
-    att: !!(mask & CLAIM_LOGIC_FLAGS.ATT),
+    par: !!(mask & CLEARINGHOUSE_FLAGS.PAR),
+    enrollment: !!(mask & CLEARINGHOUSE_FLAGS.ENROLLMENT),
+    auto: !!(mask & CLEARINGHOUSE_FLAGS.AUTO),
+    status: !!(mask & CLEARINGHOUSE_FLAGS.STATUS),
+    dental: !!(mask & CLEARINGHOUSE_FLAGS.DENTAL),
+    eligibility: !!(mask & CLEARINGHOUSE_FLAGS.ELIGIBILITY),
+    encounters: !!(mask & CLEARINGHOUSE_FLAGS.ENCOUNTERS),
+    hospital: !!(mask & CLEARINGHOUSE_FLAGS.HOSPITAL),
+    professional: !!(mask & CLEARINGHOUSE_FLAGS.PROFESSIONAL),
+    era: !!(mask & CLEARINGHOUSE_FLAGS.ERA),
+    secondary: !!(mask & CLEARINGHOUSE_FLAGS.SECONDARY),
+    wc: !!(mask & CLEARINGHOUSE_FLAGS.WC),
+    att: !!(mask & CLEARINGHOUSE_FLAGS.ATT),
     curatedSlug: slug || null,
   };
 }
 
-export const CLAIM_LOGIC_TYPES = [
+export const CLEARINGHOUSE_TYPES = [
   'Commercial',
   'Workers Comp',
   'Dental',

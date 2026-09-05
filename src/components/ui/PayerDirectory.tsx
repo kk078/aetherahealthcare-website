@@ -19,16 +19,16 @@ import {
   ShieldCheck,
   HelpCircle,
   FileCheck2,
-  FileSpreadsheet,
+  BookOpen,
   X
 } from 'lucide-react';
 import type { Payer } from '@/lib/payers';
 import {
-  type ClaimLogicPayer,
+  type ClearinghousePayer,
   type CompactPayerTuple,
   decodePayerTuple,
-  CLAIM_LOGIC_TYPES
-} from '@/lib/claimLogic';
+  CLEARINGHOUSE_TYPES
+} from '@/lib/clearinghouse';
 
 interface UnifiedPayer {
   name: string;
@@ -65,14 +65,14 @@ export default function PayerDirectory({
   const [parFilter, setParFilter] = useState<'all' | 'par' | 'non-par'>('all');
   const [enrollmentFilter, setEnrollmentFilter] = useState<'all' | 'required' | 'none'>('all');
   const [serviceFilter, setServiceFilter] = useState<string>('all');
-  const [viewMode, setViewMode] = useState<'all' | 'curated'>('all');
+  const [playbookOnly, setPlaybookOnly] = useState<boolean>(false);
   const [page, setPage] = useState(1);
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [selectedPayer, setSelectedPayer] = useState<UnifiedPayer | null>(null);
 
-  // Full ClaimLogic dataset state
-  const [claimLogicLoaded, setClaimLogicLoaded] = useState(false);
-  const [claimLogicPayers, setClaimLogicPayers] = useState<UnifiedPayer[]>([]);
+  // Full clearinghouse dataset state
+  const [clearinghouseLoaded, setClearinghouseLoaded] = useState(false);
+  const [clearinghousePayers, setClearinghousePayers] = useState<UnifiedPayer[]>([]);
 
   // Build curated map for fast slug and data lookup
   const curatedMap = useMemo(() => {
@@ -80,16 +80,16 @@ export default function PayerDirectory({
     payers.forEach(p => {
       map.set(p.slug, p);
       if (p.payerId) map.set(p.payerId.toLowerCase(), p);
-      if (p.claimLogicId) map.set(p.claimLogicId.toLowerCase(), p);
+      if (p.clearinghouseId) map.set(p.clearinghouseId.toLowerCase(), p);
     });
     return map;
   }, [payers]);
 
-  // Transform initial 229 curated payers into UnifiedPayers
+  // Initial SSR-friendly curated unified payers
   const initialCuratedUnified = useMemo<UnifiedPayer[]>(() => {
     return payers.map(p => ({
       name: p.name,
-      id: p.claimLogicId || p.payerId || 'Varies',
+      id: p.clearinghouseId || p.payerId || 'Varies',
       type: p.type,
       par: p.parStatus === 'Par',
       enrollment: !!p.enrollmentRequired,
@@ -109,10 +109,10 @@ export default function PayerDirectory({
     }));
   }, [payers]);
 
-  // Load complete 10,641 ClaimLogic database in background
+  // Load complete national clearinghouse database in background
   useEffect(() => {
     let active = true;
-    fetch('/data/claimlogic_payers.json')
+    fetch('/data/clearinghouse_payers.json')
       .then(res => res.json())
       .then((data: CompactPayerTuple[]) => {
         if (!active || !Array.isArray(data)) return;
@@ -125,37 +125,39 @@ export default function PayerDirectory({
             curatedPayer: matchedPayer,
           };
         });
-        setClaimLogicPayers(decoded);
-        setClaimLogicLoaded(true);
+        setClearinghousePayers(decoded);
+        setClearinghouseLoaded(true);
       })
       .catch(err => {
-        console.warn('Could not load ClaimLogic dataset in background:', err);
+        console.warn('Could not load national clearinghouse dataset in background:', err);
       });
     return () => {
       active = false;
     };
   }, [curatedMap]);
 
-  // Dataset to search
+  // Unified single dataset: contains all 10,641 payers with embedded curated AR playbook links
   const activeDataset = useMemo(() => {
-    if (viewMode === 'curated') {
-      return initialCuratedUnified;
-    }
-    if (claimLogicLoaded && claimLogicPayers.length > 0) {
-      return claimLogicPayers;
+    if (clearinghouseLoaded && clearinghousePayers.length > 0) {
+      return clearinghousePayers;
     }
     return initialCuratedUnified;
-  }, [viewMode, claimLogicLoaded, claimLogicPayers, initialCuratedUnified]);
+  }, [clearinghouseLoaded, clearinghousePayers, initialCuratedUnified]);
 
   // Filtered dataset
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
 
     return activeDataset.filter(p => {
-      // Search needle
+      // Search query (name, electronic ID, type, aliases)
       if (needle) {
         const hay = `${p.name} ${p.id} ${p.type} ${p.curatedPayer?.aka?.join(' ') || ''}`.toLowerCase();
         if (!hay.includes(needle)) return false;
+      }
+
+      // Playbook only filter
+      if (playbookOnly && !p.curatedSlug) {
+        return false;
       }
 
       // Type filter
@@ -183,12 +185,12 @@ export default function PayerDirectory({
 
       return true;
     });
-  }, [activeDataset, q, type, parFilter, enrollmentFilter, serviceFilter]);
+  }, [activeDataset, q, type, parFilter, enrollmentFilter, serviceFilter, playbookOnly]);
 
   // Reset page on filter change
   useEffect(() => {
     setPage(1);
-  }, [q, type, parFilter, enrollmentFilter, serviceFilter, viewMode]);
+  }, [q, type, parFilter, enrollmentFilter, serviceFilter, playbookOnly]);
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE) || 1;
   const paginatedResults = useMemo(() => {
@@ -206,7 +208,7 @@ export default function PayerDirectory({
 
   return (
     <div className="space-y-6">
-      {/* Top Banner: Status & View Mode */}
+      {/* Top Banner: Status & Unified Overview */}
       <div className="bg-white rounded-2xl border border-gray/15 p-4 sm:p-5 shadow-sm">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
@@ -216,39 +218,30 @@ export default function PayerDirectory({
             </span>
             <div>
               <p className="text-sm font-bold text-navy flex items-center gap-1.5">
-                ClaimLogic EDI Clearinghouse Network
+                National EDI Clearinghouse Network
                 <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-teal/10 text-teal">
-                  {claimLogicLoaded ? `${claimLogicPayers.length.toLocaleString()} Payers Active` : 'Loading 10,600+ Payers…'}
+                  {clearinghouseLoaded ? `${clearinghousePayers.length.toLocaleString()} Payers Active` : 'Loading 10,600+ Payers…'}
                 </span>
               </p>
               <p className="text-xs text-gray">
-                Real-time electronic payer IDs, par statuses, enrollment requirements &amp; transaction capabilities.
+                Complete clearinghouse directory with electronic payer IDs, par statuses, pre-enrollment rules, and in-depth AR playbooks.
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 bg-cream/70 p-1 rounded-xl border border-gray/10 self-start md:self-auto">
+          {/* Optional Quick Toggle to focus on Detailed AR Playbooks */}
+          <div className="flex items-center gap-2 self-start md:self-auto">
             <button
               type="button"
-              onClick={() => setViewMode('all')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                viewMode === 'all'
-                  ? 'bg-navy text-white shadow-sm'
-                  : 'text-gray hover:text-navy'
+              onClick={() => setPlaybookOnly(!playbookOnly)}
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all border ${
+                playbookOnly
+                  ? 'bg-teal text-white border-teal shadow-xs'
+                  : 'bg-cream text-navy border-gray/20 hover:border-teal'
               }`}
             >
-              All Clearinghouse Payers ({claimLogicLoaded ? claimLogicPayers.length.toLocaleString() : '10,641'})
-            </button>
-            <button
-              type="button"
-              onClick={() => setViewMode('curated')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                viewMode === 'curated'
-                  ? 'bg-teal text-white shadow-sm'
-                  : 'text-gray hover:text-navy'
-              }`}
-            >
-              Curated AR Playbooks ({payers.length})
+              <BookOpen className="h-3.5 w-3.5" />
+              {playbookOnly ? 'Showing AR Playbooks (229)' : 'Filter: Detailed AR Playbooks Only'}
             </button>
           </div>
         </div>
@@ -282,8 +275,8 @@ export default function PayerDirectory({
               aria-label="Filter by payer type"
               className="w-full py-2.5 px-3 text-sm border border-gray/25 rounded-xl text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
             >
-              <option value="">All Categories ({CLAIM_LOGIC_TYPES.length})</option>
-              {CLAIM_LOGIC_TYPES.map(t => (
+              <option value="">All Categories ({CLEARINGHOUSE_TYPES.length})</option>
+              {CLEARINGHOUSE_TYPES.map(t => (
                 <option key={t} value={t}>
                   {t}
                 </option>
@@ -356,6 +349,7 @@ export default function PayerDirectory({
           Showing <span className="font-bold text-navy">{filtered.length.toLocaleString()}</span> payor{filtered.length === 1 ? '' : 's'}
           {q ? ` matching “${q}”` : ''}
           {type ? ` in ${type}` : ''}
+          {playbookOnly ? ' · with Detailed AR Playbooks' : ''}
           {parFilter !== 'all' ? ` · ${parFilter === 'par' ? 'Participating' : 'Non-Participating'}` : ''}
           {serviceFilter !== 'all' ? ` · with ${serviceFilter.toUpperCase()}` : ''}
         </p>
@@ -364,16 +358,18 @@ export default function PayerDirectory({
         </p>
       </div>
 
-      {/* Grid of Payer Cards */}
+      {/* Unified Grid of Payer Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {paginatedResults.map((p, idx) => (
           <div
             key={`${p.id}-${p.name}-${idx}`}
             onClick={() => setSelectedPayer(p)}
-            className="group bg-white rounded-2xl border border-gray/15 p-5 hover:shadow-lg hover:border-teal/40 transition-all duration-200 flex flex-col justify-between cursor-pointer"
+            className={`group bg-white rounded-2xl border p-5 hover:shadow-lg transition-all duration-200 flex flex-col justify-between cursor-pointer ${
+              p.curatedSlug ? 'border-teal/30 hover:border-teal' : 'border-gray/15 hover:border-teal/40'
+            }`}
           >
             <div>
-              {/* Header: Name & Type */}
+              {/* Header: Name, Category, Badges */}
               <div className="flex items-start justify-between gap-2 mb-2">
                 <div className="min-w-0">
                   <h3 className="font-bold text-navy text-base leading-snug truncate group-hover:text-teal transition-colors">
@@ -399,6 +395,11 @@ export default function PayerDirectory({
                     ) : (
                       <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-teal/5 text-teal border border-teal/20">
                         Instant Route
+                      </span>
+                    )}
+                    {p.curatedSlug && (
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-navy text-white flex items-center gap-1">
+                        <BookOpen className="h-2.5 w-2.5 text-mint" /> AR Playbook
                       </span>
                     )}
                   </div>
@@ -503,7 +504,7 @@ export default function PayerDirectory({
                   View EDI Specs <ArrowRight className="h-3 w-3" />
                 </button>
               )}
-              <span className="text-[11px] text-gray">ClaimLogic Gateway</span>
+              <span className="text-[11px] text-gray">EDI Gateway</span>
             </div>
           </div>
         ))}
@@ -525,6 +526,7 @@ export default function PayerDirectory({
               setParFilter('all');
               setEnrollmentFilter('all');
               setServiceFilter('all');
+              setPlaybookOnly(false);
             }}
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold bg-navy text-white hover:bg-teal transition-colors"
           >
@@ -587,7 +589,7 @@ export default function PayerDirectory({
               </span>
               <h2 className="text-2xl font-bold text-navy font-jakarta">{selectedPayer.name}</h2>
               <p className="text-xs text-gray mt-1">
-                Clearinghouse Network: ClaimLogic Clearinghouse Master · Real-time EDI Gateway
+                Clearinghouse Network: National EDI Clearinghouse Gateway · Real-time EDI Routing
               </p>
             </div>
 
@@ -629,8 +631,8 @@ export default function PayerDirectory({
               </p>
               <p className="text-sm text-slate-700 leading-relaxed">
                 {selectedPayer.enrollment
-                  ? 'Pre-enrollment is required before transmitting electronic claims or receiving 835 ERA files through ClaimLogic. Aethera handles clearinghouse credentialing and provider enrollment packets end-to-end.'
-                  : 'No EDI pre-enrollment is required for basic 837 claim submission through ClaimLogic. Claims route immediately using the electronic payer ID.'}
+                  ? 'Pre-enrollment is required before transmitting electronic claims or receiving 835 ERA files through the clearinghouse network. Aethera handles clearinghouse credentialing and provider enrollment packets end-to-end.'
+                  : 'No EDI pre-enrollment is required for basic 837 claim submission through the clearinghouse network. Claims route immediately using the electronic payer ID.'}
               </p>
             </div>
 
@@ -657,7 +659,7 @@ export default function PayerDirectory({
                     key={item.label}
                     className={`flex items-center gap-2 p-2 rounded-xl border ${
                       item.active
-                        ? 'bg-emerald-50/70 border-emerald-200 text-emerald-900 font-semibold'
+                        ? 'bg-emerald-50/70 border-emerald-200 text-emerald-950 font-semibold'
                         : 'bg-slate-50 border-slate-100 text-slate-400 font-normal'
                     }`}
                   >

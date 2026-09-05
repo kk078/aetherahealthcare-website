@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!p) return { title: 'Payer Not Found' };
   return {
     title: { absolute: `${p.name} — Payer ID, Timely Filing & EDI Routing | Aethera Healthcare Solutions` },
-    description: `${p.name}: clearinghouse payer ID ${p.claimLogicId || p.payerId || '(varies)'}, timely filing ${p.timelyFiling || 'varies'}, appeals, ClaimLogic EDI capabilities, and provider portal. A free AR reference from Aethera Healthcare Solutions.`,
+    description: `${p.name}: clearinghouse payer ID ${p.clearinghouseId || p.payerId || '(varies)'}, timely filing ${p.timelyFiling || 'varies'}, appeals, clearinghouse EDI capabilities, and provider portal. A free AR reference from Aethera Healthcare Solutions.`,
   };
 }
 
@@ -100,7 +100,7 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
                   ? 'bg-emerald-500/20 text-emerald-100 border border-emerald-400/30'
                   : 'bg-white/10 text-white border border-white/20'
               }`}>
-                {p.parStatus === 'Par' ? 'ClaimLogic Participating (Par)' : 'Non-Participating'}
+                {p.parStatus === 'Par' ? 'Clearinghouse Participating (Par)' : 'Non-Participating'}
               </span>
             )}
             {p.enrollmentRequired !== null && p.enrollmentRequired !== undefined && (
@@ -126,15 +126,15 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
               <Field
                 icon={Hash}
                 label="Electronic Payer ID"
-                value={p.claimLogicId || p.payerId}
-                note={p.payerIdNote || (p.claimLogicId ? `Verified ClaimLogic Clearinghouse ID: ${p.claimLogicId}` : null)}
+                value={p.clearinghouseId || p.payerId}
+                note={p.payerIdNote || (p.clearinghouseId ? `Verified Clearinghouse EDI ID: ${p.clearinghouseId}` : null)}
               />
               <Field icon={Clock} label="Timely Filing Limit (TFL)" value={p.timelyFiling} />
               <Field icon={RotateCcw} label="Appeal Window" value={p.appeal} />
               <Field
                 icon={Network}
                 label="Clearinghouse Gateway"
-                value={p.clearinghouse || 'ClaimLogic / Availity Gateway'}
+                value={p.clearinghouse || 'National Clearinghouse / EDI Gateway'}
               />
               <Field icon={Phone} label="Provider Services" value={p.providerPhone} />
               <Field icon={Printer} label="Claims Fax" value={p.fax} />
@@ -174,7 +174,7 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
           {p.ediCapabilities && (
             <div className="bg-white rounded-2xl border border-gray/15 p-6 md:p-8 shadow-xs">
               <h2 className="text-lg font-bold text-navy font-jakarta mb-2 flex items-center gap-2">
-                <FileCheck className="h-5 w-5 text-teal" /> ClaimLogic EDI Clearinghouse Capabilities
+                <FileCheck className="h-5 w-5 text-teal" /> National EDI Clearinghouse Capabilities
               </h2>
               <p className="text-xs text-gray mb-6">
                 Direct ANSI X12 electronic transaction support verified for {p.name}.
@@ -212,14 +212,14 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
             </div>
           )}
 
-          {/* Alternate Clearinghouse IDs Table (if multiple exist in ClaimLogic) */}
-          {p.claimLogicMatches && p.claimLogicMatches.length > 1 && (
+          {/* Associated Clearinghouse IDs Table */}
+          {p.clearinghouseMatches && p.clearinghouseMatches.length > 1 && (
             <div className="bg-white rounded-2xl border border-gray/15 p-6 md:p-8 shadow-xs">
               <h2 className="text-lg font-bold text-navy font-jakarta mb-2 flex items-center gap-2">
                 <Layers className="h-5 w-5 text-teal" /> Associated Clearinghouse Payer IDs
               </h2>
               <p className="text-xs text-gray mb-4">
-                ClaimLogic maintains dedicated routing IDs for specific transaction lines or subsidiaries under {p.name}.
+                National clearinghouse networks maintain dedicated routing IDs for specific transaction lines or subsidiaries under {p.name}.
               </p>
 
               <div className="overflow-x-auto">
@@ -234,7 +234,7 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray/10">
-                    {p.claimLogicMatches.map((m, i) => (
+                    {p.clearinghouseMatches.map((m, i) => (
                       <tr key={i} className="hover:bg-cream/40">
                         <td className="py-2.5 font-medium text-navy pr-3">{m.name}</td>
                         <td className="py-2.5 font-mono font-bold text-teal pr-3">{m.id}</td>
@@ -316,7 +316,7 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
           <div className="flex items-start gap-2 pt-2">
             <AlertTriangle className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
             <p className="text-xs text-gray leading-relaxed">
-              Values vary by plan, line of business, and provider agreement. Confirm in the payer portal or through ClaimLogic
+              Values vary by plan, line of business, and provider agreement. Confirm in the payer portal or with your clearinghouse gateway
               before submitting electronic claims.
               {p.verified && <> Last verified {p.verified}.</>}
             </p>

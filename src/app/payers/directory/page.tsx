@@ -8,7 +8,7 @@ import { AlertTriangle, ShieldCheck, Sparkles, Building2, CheckCircle2, ArrowRig
 export const metadata = {
   title: { absolute: '10,600+ Payer Directory & Clearinghouse EDI Routing | Aethera Healthcare Solutions' },
   description:
-    'Comprehensive U.S. insurance payer directory and ClaimLogic clearinghouse EDI routing guide. Look up 10,600+ electronic payer IDs, par statuses, pre-enrollment rules, 835 ERA remittance support, and real-time 270/271 eligibility.',
+    'Comprehensive U.S. insurance payer directory and clearinghouse EDI routing guide. Look up 10,600+ electronic payer IDs, par statuses, pre-enrollment rules, 835 ERA remittance support, and real-time 270/271 eligibility.',
 };
 
 export default function PayerDirectoryIndex() {
@@ -22,7 +22,7 @@ export default function PayerDirectoryIndex() {
       <section className="pt-8 pb-10 md:pt-12 md:pb-14 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-mint text-xs font-semibold mb-4 backdrop-blur-xs">
-            <Sparkles className="h-3.5 w-3.5" /> ClaimLogic Clearinghouse Master Dataset Active
+            <Sparkles className="h-3.5 w-3.5" /> National Clearinghouse EDI Master Feed Active
           </div>
           <FadeIn>
             <h1 className="text-4xl md:text-5xl font-bold text-white font-jakarta mb-4">
@@ -64,7 +64,7 @@ export default function PayerDirectoryIndex() {
             <div className="text-sm text-amber-950 leading-relaxed">
               <p>
                 <strong>Clearinghouse Gateway &amp; Clinical Verification:</strong> Electronic payer IDs, Par statuses, and
-                pre-enrollment rules are synchronized with the ClaimLogic clearinghouse master feed. Always verify
+                pre-enrollment rules are synchronized with national clearinghouse EDI master feeds. Always verify
                 provider-level contract terms, timely filing deadlines, and secondary routing before claim dispatch.
                 Last updated {payersMeta.updated}.
               </p>
