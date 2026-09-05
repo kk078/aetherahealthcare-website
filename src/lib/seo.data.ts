@@ -492,6 +492,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How do you manage sleep study pre-authorizations and compliance verification?', a: 'We capture all necessary clinical documentation—including documented snoring, witnessed apneas, and high Epworth Sleepiness Scale scores—to secure pre-authorization prior to patient sleep lab intake.' },
     ],
   },
+  {
+    slug: 'infectious-disease',
+    name: 'Infectious Disease & OPAT',
+    noun: 'infectious disease specialists, OPAT clinics, and travel medicine practices',
+    cpt: '99205, 99215, 99223, 99233, 96365–96379, 99453–99458, G0498',
+    blurb:
+      'High-complexity cognitive consultations, Outpatient Parenteral Antimicrobial Therapy (OPAT) management, home IV infusion coordination, and remote physiological monitoring.',
+    painPoints: [
+      'Inpatient consultation split billing: Downcoding of high-acuity initial inpatient consults (99223/99255) by Medicare Advantage plans questioning medical necessity',
+      'OPAT home infusion denials: Medicare Part B vs Part D vs DME unbundling rejections for prolonged intravenous antibiotic administration (G0498)',
+      'Prolonged cognitive service under-reimbursement: Failing to capture add-on codes (G2212) for 60+ minute complex multi-microbial evaluations',
+      'Microbiology and culture diagnostic testing denials due to lack of distinct ICD-10 infection site and pathogen linkage',
+    ],
+    faqs: [
+      { q: 'How do you capture proper reimbursement for prolonged complex infectious disease visits?', a: 'We substantiate extended cognitive decision-making using CMS time-based billing thresholds and add-on code G2212, documenting comprehensive pathogen workups and multi-drug regimen monitoring.' },
+      { q: 'How do you manage OPAT home IV antibiotic claims?', a: 'We bill OPAT encounters with explicit drug administration codes (96365/96366 or G0498) and synchronize home infusion pharmacy NDC tracking with nursing oversight visits.' },
+    ],
+  },
+  {
+    slug: 'allergy-immunology',
+    name: 'Allergy, Asthma & Clinical Immunology',
+    noun: 'allergists, immunologists, and asthma care clinics',
+    cpt: '95004, 95024, 95165, 95115, 95117, 94010, 94060, J0517, J2357',
+    blurb:
+      'Percutaneous skin prick and intracutaneous testing, allergen immunotherapy antigen compounding (95165), desensitization injections, and biologic asthma J-codes.',
+    painPoints: [
+      'Antigen compounding (95165) unit conversion rejections: Payer billing disputes over single-dose vs multi-dose maintenance vial treatment units',
+      'Venom immunotherapy unbundling: Commercial payer denials when billing Hymenoptera venom testing and extract preparation concurrently',
+      'Same-day skin testing and E/M denials: Modifier 25 rejections when diagnostic scratch testing (95004) is performed during an initial allergy consultation',
+      'Asthma biologic prior-authorization lapses: High-cost biologic therapies (Xolair J2357, Dupixent, Fasenra) denied due to lapsed 6-month clinical recertification',
+    ],
+    faqs: [
+      { q: 'How do you calculate and bill allergen extract preparation (95165) accurately?', a: 'We calculate exact treatment dose units based on individual vial volume and maintenance concentrations, preventing payer audit recoupments and ensuring 100% compliance with Medicare unit definitions.' },
+      { q: 'How do you prevent Modifier 25 denials on same-day allergy testing visits?', a: 'We ensure physician clinical notes distinctly separate the evaluation of allergic rhinitis or asthma triggers from the technical execution of skin tests (95004/95024), satisfying payer modifier 25 requirements.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

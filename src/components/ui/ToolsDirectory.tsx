@@ -41,6 +41,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/msp-determination-engine',
+    icon: Scale,
+    name: 'Medicare Secondary Payer (MSP) Determination Engine',
+    desc: 'Evaluate statutory primary vs secondary liability under Section 1862(b) of the Social Security Act across Working Aged, Disability, ESRD 30-mo coordination, and No-Fault/WC.',
+    category: 'scrubbers',
+    tag: 'MSP Rules',
+    badge: 'New',
+  },
+  {
+    href: '/tools/clinical-trial-billing',
+    icon: FileCheck2,
+    name: 'Clinical Trial Billing & Coverage Analysis Scrubber',
+    desc: 'Separate Medicare routine care (Modifier Q1 + Z00.6) from sponsor-funded investigational items under CMS NCD 310.1 and FDA IDE Category A/B rules.',
+    category: 'scrubbers',
+    tag: 'Clinical Trials',
+    badge: 'New',
+  },
+  {
     href: '/tools/hcc-raf-calculator',
     icon: Activity,
     name: 'CMS HCC Risk Adjustment & RAF Score Benchmarker',
@@ -388,7 +406,7 @@ export default function ToolsDirectory() {
               type="search"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search 31 free tools & engines…"
+              placeholder="Search 33 free tools & engines…"
               className="w-full pl-9 pr-3 py-1.5 border border-gray/25 rounded-xl text-xs text-navy focus:outline-none focus:ring-2 focus:ring-teal"
             />
           </div>

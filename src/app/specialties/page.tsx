@@ -35,6 +35,8 @@ const specialtyLinks: Record<string, string> = {
   'Urgent Care': '/medical-billing/urgent-care',
   'Nephrology & Dialysis': '/medical-billing/nephrology',
   'Otolaryngology & ENT': '/medical-billing/ent',
+  'Infectious Disease': '/medical-billing/infectious-disease',
+  'Allergy & Immunology': '/medical-billing/allergy-immunology',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -244,13 +246,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 26+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 28+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 26+ specialties — Cardiology, Orthopedics, Pain Management, Oncology, Rheumatology, Pulmonology, and more.',
+    description: 'Expert medical billing across 28+ specialties — Cardiology, Orthopedics, Pain Management, Oncology, Rheumatology, Pulmonology, Infectious Disease, Allergy, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -261,7 +263,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 26 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 28 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -282,10 +284,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 26+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 28+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['26+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['28+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

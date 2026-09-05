@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 31 Interactive Tools
+// 33 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -390,6 +390,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'purple',
     keywords: ['mips', 'qpp', 'penalty', 'macra', 'part b adjustment', 'quality measures', 'promoting interoperability', 'improvement activities', 'cost category', 'cehrt'],
   },
+  {
+    id: 'tool-msp-determination',
+    category: 'tools',
+    title: 'Medicare Secondary Payer (MSP) Determination Engine',
+    subtitle: 'Working Aged, Disability & ESRD 30-month coordination period rules & 837P Loop 2320 mapping',
+    description: 'Determine statutory primary vs secondary payer order pursuant to Section 1862(b) of the Social Security Act and generate ANSI X12 837P Loop 2320 crossover claim segments.',
+    href: '/tools/msp-determination-engine',
+    badge: 'MSP Rules',
+    badgeVariant: 'amber',
+    keywords: ['msp', 'medicare secondary', 'working aged', 'disability', 'esrd coordination', 'loop 2320', 'co-22', 'conditional payment', 'workers comp', 'no fault'],
+  },
+  {
+    id: 'tool-clinical-trial-billing',
+    category: 'tools',
+    title: 'Clinical Trial Billing & Coverage Analysis Scrubber',
+    subtitle: 'Separate Medicare routine care (Modifier Q1 + Z00.6) from sponsor-funded items under NCD 310.1',
+    description: 'Separate Medicare-covered routine costs from sponsor-funded investigational items under CMS NCD 310.1 and FDA IDE Category A/B rules with 8-digit NCT validation.',
+    href: '/tools/clinical-trial-billing',
+    badge: 'Clinical Trials',
+    badgeVariant: 'teal',
+    keywords: ['clinical trial', 'ncd 310.1', 'nct', 'modifier q1', 'modifier q0', 'ide category b', 'coverage analysis', 'z00.6', 'research billing', 'false claims'],
+  },
 ];
 
 // Specialties
@@ -685,10 +707,30 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['pulmonology', 'sleep medicine', 'pft', 'spirometry', 'polysomnography', '95810', 'hsat', 'sleep apnea', 'cpap', 'bronchoscopy'],
   },
   {
+    id: 'spec-infectious-disease',
+    category: 'specialties',
+    title: 'Infectious Disease & OPAT Billing',
+    subtitle: 'High-complexity cognitive consults (99205/99215), OPAT home infusions & remote monitoring',
+    href: '/medical-billing/infectious-disease',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['infectious disease', 'opat', 'infusion', 'antibiotics', 'g0498', 'g2212', 'prolonged service', 'inpatient consult', 'microbiology', 'hiv'],
+  },
+  {
+    id: 'spec-allergy-immunology',
+    category: 'specialties',
+    title: 'Allergy, Asthma & Clinical Immunology Billing',
+    subtitle: 'Percutaneous testing (95004), antigen compounding (95165) & asthma biologic J-codes',
+    href: '/medical-billing/allergy-immunology',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['allergy', 'immunology', 'asthma', 'antigen', '95165', '95004', 'skin prick', 'xolair', 'dupixent', 'venom immunotherapy'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 26+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 28+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
