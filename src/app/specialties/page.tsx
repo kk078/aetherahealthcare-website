@@ -545,6 +545,18 @@ const specialties = [
         description: 'Complex multi-level facial skeleton trauma repair: Le Fort I/II/III midface fractures (21422–21436), open reduction internal fixation (ORIF) of zygomaticomaxillary complex (ZMC 21360/21365), mandibular angle/symphysis fractures (21461/21462), intermaxillary fixation (IMF 21110), and orbital floor blow-out reconstruction (21385–21395).',
         cptCodes: '21422, 21423, 21435, 21436, 21360, 21365, 21461, 21462, 21110, 21385, 21390, 20900',
         challenges: 'Intermaxillary fixation (IMF 21110) unbundling denials, Le Fort midface and ZMC fracture multi-procedure fee reductions, orbital blow-out autogenous bone graft (+20900) disallowance, and multi-surgeon co-management denials.'
+      },
+      {
+        name: 'Pediatric Inborn Errors of Metabolism & Biochemical Genetics',
+        description: 'Specialized metabolic laboratory and clinical workups: tandem mass spectrometry (MS/MS) acylcarnitine profiling (82136), urine organic acids (83918), molecular genetics, prolonged counseling (+99417), and medical formula authorization (B4157–B4162).',
+        cptCodes: '82009, 82136, 82139, 82610, 83918, 83921, 99205, 99215, 99417, B4157, B4162',
+        challenges: 'Tandem mass spectrometry analyte unbundling, medical formula (HCPCS B4157-B4162) non-coverage denials, prolonged geneticist counseling (+99417) downcoding, and emergency hyperammonemia protocol audits.'
+      },
+      {
+        name: 'Complex Skull Base Cerebrovascular Bypass & Microvascular EC-IC Anastomosis',
+        description: 'Extracranial-to-intracranial (EC-IC) arterial bypass (STA-MCA 61711), high-flow saphenous vein or radial artery interposition grafting (35500/35600), complex giant aneurysm trapping (61697), skull base orbitozygomatic craniotomy (61592), and operating microscope (+69990).',
+        cptCodes: '61711, 61697, 61698, 61700, 61702, 61592, 61600, 69990, 15756, 35500, 95940',
+        challenges: 'Skull base craniotomy approach unbundling, autologous vein/artery graft harvest bundling into 61711, operating microscope (+69990) unbundling denials, and dual-surgeon Modifier -62 matching rejections.'
       }
     ]
   }
@@ -552,13 +564,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 72+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 74+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 72+ specialties — Pediatric Deep Brain Stimulation, Panfacial Trauma Reconstruction, Pediatric Vascular Malformations, Orthopedic Oncology Limb Salvage, and more.',
+    description: 'Expert medical billing across 74+ specialties — Pediatric Biochemical Genetics, Skull Base Cerebrovascular Bypass, Pediatric Deep Brain Stimulation, Panfacial Trauma Reconstruction, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -569,7 +581,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 72 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 74 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -590,10 +602,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 72+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 74+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['72+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['74+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

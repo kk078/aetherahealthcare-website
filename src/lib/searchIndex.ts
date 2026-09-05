@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 77 Interactive Tools
+// 79 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -907,6 +907,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'amber',
     keywords: ['panfacial trauma', 'facial fractures', 'le fort', 'le fort iii', '21435', 'le fort ii', '21423', 'le fort i', '21422', 'zmc', 'malar fracture', '21365', 'mandibular fracture', '21462', '21461', 'imf', 'arch bars', '21110', 'orbital floor blowout', '21390', '21385', 'bone graft', '20900', 'modifier xs', 'modifier 51', 'modifier 59'],
   },
+  {
+    id: 'tool-pediatric-biochemical-genetics',
+    category: 'tools',
+    title: 'Pediatric Biochemical Genetics & Metabolic Formula Scrubber',
+    subtitle: 'Tandem MS/MS amino acids (82139/82136), urine organics (83918) & formula prior-auth (B4162)',
+    description: 'Audit tandem mass spectrometry amino acid panels (82139/82136), urine organic acids (83918), prolonged visits (+99417), and defend medical formula prior-auth (B4162/B4157).',
+    href: '/tools/pediatric-biochemical-genetics-scrubber',
+    badge: 'Biochemical Genetics',
+    badgeVariant: 'teal',
+    keywords: ['pediatric biochemical genetics', 'inborn errors of metabolism', 'amino acids', '82139', '82136', 'urine organic acids', '83918', 'acylcarnitine', '82010', 'carnitine', 'prolonged care', '99417', '99205', '99215', 'medical food', 'metabolic formula', 'b4162', 'b4157', 'msud', 'pku', 'mma', 'propionic acidemia'],
+  },
+  {
+    id: 'tool-skull-base-bypass',
+    category: 'tools',
+    title: 'Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber',
+    subtitle: 'STA-MCA bypass (61711), orbitozygomatic approach (61592) & graft harvest (+35500/35600)',
+    description: 'Audit STA-MCA microvascular bypass (61711), unbundle orbitozygomatic approaches (61592), defend autologous graft harvest (+35500/35600), and capture microscope add-ons (+69990).',
+    href: '/tools/skull-base-bypass-aneurysm-scrubber',
+    badge: 'Cerebrovascular',
+    badgeVariant: 'amber',
+    keywords: ['cerebrovascular bypass', 'ec-ic bypass', 'sta-mca', '61711', 'high flow bypass', 'vein graft', '35500', 'radial artery', '35600', 'orbitozygomatic approach', '61592', 'skull base craniotomy', 'operating microscope', '69990', 'aneurysm', 'giant aneurysm', 'modifier 62', 'co-surgeon', 'moyamoya'],
+  },
 ];
 
 // Specialties
@@ -1662,14 +1684,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['panfacial trauma', 'craniofacial fracture', 'le fort iii', '21435', '21436', 'le fort ii', '21423', 'le fort i', '21422', 'zmc fracture', '21365', 'mandibular fracture', '21462', 'imf', 'intermaxillary fixation', '21110', 'orbital blowout', '21390', 'bone graft', '20900', 'omfs', 'facial trauma', 'level 1 trauma'],
   },
   {
+    id: 'spec-pediatric-biochemical-genetics',
+    category: 'specialties',
+    title: 'Pediatric Inborn Errors of Metabolism & Biochemical Genetics Billing',
+    subtitle: 'Tandem MS/MS amino acids (82139), urine organics (83918) & medical formula prior-auth',
+    href: '/medical-billing/pediatric-biochemical-genetics',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric biochemical genetics', 'inborn errors of metabolism', 'metabolic genetics', 'amino acids', '82139', '82136', 'urine organic acids', '83918', 'acylcarnitine', '82010', 'prolonged consultation', '99417', 'medical food', 'metabolic formula', 'b4162', 'b4157', 'rare disease', 'msud', 'pku', 'mma'],
+  },
+  {
+    id: 'spec-skull-base-cerebrovascular-bypass',
+    category: 'specialties',
+    title: 'Complex Skull Base Cerebrovascular Bypass & Microvascular EC-IC Anastomosis Billing',
+    subtitle: 'STA-MCA bypass (61711), orbitozygomatic approaches & autologous graft harvest',
+    href: '/medical-billing/skull-base-cerebrovascular-bypass',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['cerebrovascular bypass', 'skull base bypass', 'ec-ic bypass', 'sta-mca', '61711', 'vein graft harvest', '35500', 'radial artery', '35600', 'orbitozygomatic craniotomy', '61592', 'aneurysm', 'giant aneurysm', 'operating microscope', '69990', 'modifier 62', 'co-surgery', 'neurosurgery'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 72+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 74+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass'],
   },
 ];
 

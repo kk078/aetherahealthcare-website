@@ -44,6 +44,7 @@ import {
   Smile,
   Brain,
   Bot,
+  FlaskConical,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -57,6 +58,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/pediatric-biochemical-genetics-scrubber',
+    icon: FlaskConical,
+    name: 'Pediatric Biochemical Genetics & Metabolic Formula Scrubber',
+    desc: 'Audit tandem mass spectrometry amino acid panels (82139/82136), urine organic acids (83918), prolonged visits (+99417), and defend medical formula prior-auth (B4162/B4157).',
+    category: 'scrubbers',
+    tag: 'Biochemical Genetics & Rare Disease',
+    badge: 'New',
+  },
+  {
+    href: '/tools/skull-base-bypass-aneurysm-scrubber',
+    icon: GitBranch,
+    name: 'Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber',
+    desc: 'Audit STA-MCA microvascular bypass (61711), unbundle orbitozygomatic approaches (61592), defend autologous graft harvest (+35500/35600), and capture microscope add-ons (+69990).',
+    category: 'scrubbers',
+    tag: 'Cerebrovascular & Skull Base',
+    badge: 'New',
+  },
   {
     href: '/tools/pediatric-dbs-neuromodulation-scrubber',
     icon: Brain,

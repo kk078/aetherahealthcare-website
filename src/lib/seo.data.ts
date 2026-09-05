@@ -1320,6 +1320,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How are multi-level panfacial fractures (Le Fort, ZMC, and mandible) coded on the same operative date?', a: 'Panfacial trauma requires reporting the highest-valued open reconstruction as the primary procedure (e.g. CPT 21435/21436 for Le Fort III open reduction or 21462 for complicated mandibular ORIF), followed by secondary anatomical repairs (such as CPT 21365 for complicated ZMC fracture repair with bone grafting and CPT 21390 for orbital floor periorbital reconstruction) appended with Modifier -51 (multiple procedures) or Modifier -59/-XS (distinct procedural service) based on payer specific NCCI PTP edit tables.' },
     ],
   },
+  {
+    slug: 'pediatric-biochemical-genetics',
+    name: 'Pediatric Inborn Errors of Metabolism & Biochemical Genetics',
+    noun: 'pediatric biochemical geneticists, metabolic specialists, pediatric endocrinologists, and academic rare disease centers',
+    cpt: '82009, 82136, 82139, 82610, 83918, 83921, 99205, 99215, 99417, B4157, B4162',
+    blurb:
+      'Specialized metabolic laboratory and clinical workups: tandem mass spectrometry (MS/MS) acylcarnitine profiling (82136), urine organic acid quantitative chromatography (83918/83921), total and free carnitine panels (82367/82009), prolonged complex geneticist counseling (+99417), and medical formula HCPCS B-code authorization (B4157–B4162).',
+    painPoints: [
+      'Tandem mass spectrometry panel unbundling: Commercial health plans disallowing individual amino acid or acylcarnitine analyte billing under non-specific chemistry edits',
+      'Medical food and amino-acid formula (HCPCS B4157-B4162) non-coverage denials: Payers rejecting essential metabolic disease formulations as nutritional supplements rather than statutory medical therapies',
+      'Prolonged outpatient consultation (+99417) downcoding: Denials on high-time genetic counseling sessions exceeding standard 99205/99215 thresholds',
+      'Emergency hyperammonemia rescue protocol billing recoupments: Disputes over simultaneous dialysis consultation, nitrogen scavenger IV infusion, and metabolic lab panels',
+    ],
+    faqs: [
+      { q: 'How are quantitative plasma amino acids and acylcarnitine profiles reported for inborn errors of metabolism?', a: 'Quantitative plasma amino acids are coded using CPT 82139 (amino acids, multiple, quantitative, each specimen) or 82136 for tandem mass spectrometry analysis. Acylcarnitine profiling is reported using CPT 82009 (acylcarnitines, qualitative) or CPT 82010 (acylcarnitines, quantitative, each). When diagnostic fractionation is required, each analyte must have specific ICD-10 indication documentation (e.g. E71.0 for Maple Syrup Urine Disease, E72.0 for Cystinuria, or E70.0 for Classical Phenylketonuria).' },
+      { q: 'Can specialized medical formulas (HCPCS B4157-B4162) be defended against over-the-counter supplement exclusions?', a: 'Yes. Under state metabolic mandate statutes and federal parity guidelines, specialized amino-acid formulas (such as HCPCS B4157 for special metabolic formulas or B4162 for enteral formulas for pediatrics with inherited metabolic disorders) are classified as medical foods essential for survival. Prior-authorization packets must include physician-signed letters of medical necessity, specific biochemical enzyme deficiency diagnoses, and nutritional prescription formulas demonstrating prevention of neurocognitive decline or metabolic crisis.' },
+    ],
+  },
+  {
+    slug: 'skull-base-cerebrovascular-bypass',
+    name: 'Complex Skull Base Cerebrovascular Bypass & Microvascular EC-IC Anastomosis',
+    noun: 'cerebrovascular neurosurgeons, skull base surgical teams, microvascular neurosurgical specialists, and comprehensive stroke centers',
+    cpt: '61711, 61697, 61698, 61700, 61702, 61592, 61600, 69990, 15756, 35500, 95940',
+    blurb:
+      'Extracranial-to-intracranial (EC-IC) microvascular arterial bypass: superficial temporal artery to middle cerebral artery (STA-MCA 61711), high-flow saphenous vein or radial artery interposition grafting (35500/35600), complex giant unclippable cerebral aneurysm trapping (61697/61698), skull base orbitozygomatic craniotomy (61592), operating microscope microdissection (+69990), and intraoperative ICG videoangiography.',
+    painPoints: [
+      'Skull base craniotomy approach unbundling: Clearinghouses bundling orbitozygomatic or subtemporal approaches (61592/61600) into EC-IC bypass (61711)',
+      'Autologous graft harvest (saphenous vein 35500 / radial artery 35600) bundling: Commercial payers disallowing separate interposition vessel harvesting performed during high-flow bypass',
+      'Operating microscope (+69990) unbundling denials: Inappropriate denial of microvascular anastomosis magnification codes under outdated non-specific global bundling edits',
+      'Dual-surgeon co-management Modifier -62 rejections: Payment suspensions when vascular neurosurgery and skull base neurotology co-manage complex aneurysm bypass revascularizations',
+    ],
+    faqs: [
+      { q: 'Is CPT 61711 billable with autologous interposition vein or arterial graft harvesting?', a: 'When performing a high-flow EC-IC bypass requiring a conduit graft from the cervical carotid to an intracranial target vessel (e.g. M2 MCA or basilar artery), the anastomosis is reported using CPT 61711. The harvesting of the autologous vein graft is separately reportable using CPT +35500 (harvest of saphenous vein graft) or CPT 35600 for radial artery harvest, as these procedures involve a distinct anatomical incision and prep site.' },
+      { q: 'Can the operating microscope (+69990) be billed with EC-IC microvascular bypass (61711)?', a: 'Yes. Under CMS NCCI Chapter VIII guidelines, CPT 61711 does not intrinsically include the operating microscope. Operating microscope add-on code +69990 is fully reimbursable when microvascular suturing of donor-to-recipient vessels (such as 1mm STA branch to cortical M4 vessel with 10-0 nylon) is documented in the operative narrative.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
