@@ -203,12 +203,13 @@ export default function Navbar() {
             >
               Book a Call
             </Link>
-            <Link prefetch={false}
-              href="/free-assessment"
-              className="bg-[#003087] hover:bg-[#001A52] text-white font-semibold py-2 px-4 xl:px-5 rounded-full transition-all duration-200 text-sm shadow-sm hover:shadow-md whitespace-nowrap"
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-free-pilot-modal'))}
+              className="bg-[#003087] hover:bg-[#001A52] text-white font-semibold py-2 px-4 xl:px-5 rounded-full transition-all duration-200 text-sm shadow-sm hover:shadow-md whitespace-nowrap cursor-pointer"
             >
               Start Free Pilot
-            </Link>
+            </button>
           </div>
 
           {/* Mobile search + theme + menu button */}
@@ -269,13 +270,16 @@ export default function Navbar() {
               >
                 Book a Call
               </Link>
-              <Link prefetch={false}
-                href="/free-assessment"
-                className="flex items-center justify-center bg-[#003087] hover:bg-[#001A52] text-white font-bold py-2.5 px-3 rounded-xl text-sm text-center shadow-sm"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                type="button"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  window.dispatchEvent(new CustomEvent('open-free-pilot-modal'));
+                }}
+                className="flex items-center justify-center bg-[#003087] hover:bg-[#001A52] text-white font-bold py-2.5 px-3 rounded-xl text-sm text-center shadow-sm cursor-pointer"
               >
                 Start Free Pilot
-              </Link>
+              </button>
             </div>
 
             {/* Services */}

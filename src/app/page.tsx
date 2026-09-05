@@ -270,10 +270,13 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={0.3}>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link prefetch={false} href="/free-assessment"
-                    className="btn-shimmer inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-7 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20">
+                  <button
+                    type="button"
+                    onClick={() => window.dispatchEvent(new CustomEvent('open-free-pilot-modal'))}
+                    className="btn-shimmer inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-7 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20 cursor-pointer"
+                  >
                     Start the Free 50-Claim Pilot <ArrowRight className="h-4 w-4" />
-                  </Link>
+                  </button>
                   <Link prefetch={false} href="#aethera-difference"
                     className="inline-flex items-center justify-center border border-white/35 text-white hover:bg-white/10 font-semibold py-3.5 px-7 rounded-xl transition-colors duration-200">
                     How our AI works
@@ -385,13 +388,13 @@ export default function Home() {
               </FadeIn>
             ))}
           </div>
-          <Link
-            prefetch={false}
-            href="/free-assessment"
-            className="btn-shimmer inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-8 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20"
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new CustomEvent('open-free-pilot-modal'))}
+            className="btn-shimmer inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-8 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20 cursor-pointer"
           >
             Claim your pilot slot <ArrowRight className="h-4 w-4" />
-          </Link>
+          </button>
         </div>
       </section>
 

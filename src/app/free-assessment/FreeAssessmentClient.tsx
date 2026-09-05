@@ -297,6 +297,16 @@ export default function FreeAssessmentClient() {
                 <span key={bdg} className="bg-white/15 border border-white/30 text-white px-4 py-1.5 rounded-full text-sm font-medium">✓ {bdg}</span>
               ))}
             </div>
+            <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-3 text-xs text-cream/90">
+              <span>Looking to test Aethera on live claims instead of uploading an aging report?</span>
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new CustomEvent('open-free-pilot-modal'))}
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-mint text-navy font-bold hover:bg-white transition-colors cursor-pointer shadow-xs"
+              >
+                Activate Free 50-Claim Pilot <ArrowRight className="h-3.5 w-3.5" />
+              </button>
+            </div>
           </FadeIn>
         </div>
       </section>

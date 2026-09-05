@@ -53,6 +53,7 @@ import CallbackButton from '@/components/ui/CallbackButton';
 import CommandPalette from '@/components/ui/CommandPalette';
 import ExitIntentCTA from '@/components/ui/ExitIntentCTA';
 import RetargetingPixels from '@/components/ui/RetargetingPixels';
+import FreePilotModal from '@/components/ui/FreePilotModal';
 
 export default function RootLayout({
   children,
@@ -87,6 +88,7 @@ export default function RootLayout({
         <BackToTop />
         <CallbackButton />
         <ExitIntentCTA />
+        <FreePilotModal />
         <CloudflareAnalytics />
         <GoogleAds />
         <RetargetingPixels />
