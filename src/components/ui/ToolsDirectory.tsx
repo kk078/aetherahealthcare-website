@@ -42,6 +42,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/critical-care-scrubber',
+    icon: Clock,
+    name: 'Emergency & Critical Care Time Documentation Scrubber',
+    desc: 'Evaluate CPT 99291 and 99292 time thresholds, automatically deduct bedside procedure times, and verify split/shared visit substantive portion rules.',
+    category: 'scrubbers',
+    tag: 'Critical Care',
+    badge: 'New',
+  },
+  {
+    href: '/tools/anesthesia-concurrency-auditor',
+    icon: Activity,
+    name: 'Anesthesia Concurrency & Medical Direction Auditor',
+    desc: 'Audit operating room concurrency logs under 42 CFR § 415.110. Model 1:4 TEFRA direction rules, verify Modifiers QK, QY, QX, QZ, and calculate Modifier AD penalties.',
+    category: 'calculators',
+    tag: 'Concurrency',
+    badge: 'New',
+  },
+  {
     href: '/tools/global-period-scrubber',
     icon: Scissors,
     name: 'Surgical Global Period & Post-Op Modifier Scrubber',
@@ -425,7 +443,7 @@ export default function ToolsDirectory() {
               type="search"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search 33 free tools & engines…"
+              placeholder={`Search ${TOOLS_LIST.length} free tools & engines…`}
               className="w-full pl-9 pr-3 py-1.5 border border-gray/25 rounded-xl text-xs text-navy focus:outline-none focus:ring-2 focus:ring-teal"
             />
           </div>

@@ -564,6 +564,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'What documentation is required for medical pre-authorization of orthognathic surgery?', a: 'We compile and submit comprehensive cephalometric tracings, facial photographic analysis, diagnostic dental models, and airway sleep study documentation to overcome cosmetic exclusion barriers.' },
     ],
   },
+  {
+    slug: 'addiction-medicine',
+    name: 'Addiction Medicine & SUD',
+    noun: 'addiction medicine clinics, OTP programs, and residential treatment centers',
+    cpt: 'G2086–G2088, G2074–G2080, H0001, H0004, H0015, H0020, H0035, G0480–G0483',
+    blurb:
+      'Opioid Treatment Program (OTP) weekly bundles, Office-Based Opioid Treatment (OBOT) buprenorphine induction, per diem residential billing, and definitive urine toxicology.',
+    painPoints: [
+      'Medicare OTP weekly bundle denials: G2074–G2080 bundled claims rejected when dispensing dates or counseling minutes do not match MAC billing schedules',
+      'Office-Based Opioid Treatment (OBOT) induction under-reimbursement: Failing to capture initial month intensive assessment and induction add-ons (G2086)',
+      'Definitive drug testing clawbacks: Commercial payers recouping multi-drug class UDT (G0480–G0483) panels when lacking individualized clinical justification',
+      'Parity Act non-compliance: Commercial payers arbitrarily capping residential bed days below ASAM criteria recommendations',
+    ],
+    faqs: [
+      { q: 'How do you bill Medicare Opioid Treatment Program (OTP) weekly bundled codes?', a: 'We bill HCPCS G2074–G2080 corresponding to the specific medication (methadone, buprenorphine, or naltrexone) with paired dispensing and clinical counseling documentation meeting CMS Chapter 17 requirements.' },
+      { q: 'How do you prevent urine drug screen denials in addiction treatment?', a: 'We separate presumptive point-of-care screening (80305) from physician-ordered definitive mass spectrometry confirmation (G0480), attaching specific clinical reasoning and risk level documentation for each test.' },
+    ],
+  },
+  {
+    slug: 'gynecologic-oncology',
+    name: 'Gynecologic Oncology & Pelvic Surgery',
+    noun: 'gynecologic oncologists and pelvic surgical centers',
+    cpt: '58210, 58548, 38571–38572, 49220, 58953–58956, 96560, 96413',
+    blurb:
+      'Complex radical pelvic resections, retroperitoneal and para-aortic lymphadenectomies, HIPEC intraperitoneal hyperthermic chemotherapy, and co-surgeon Modifier 62 compliance.',
+    painPoints: [
+      'Radical hysterectomy vs simple hysterectomy downcoding: Commercial payers downcoding CPT 58210/58548 when operative reports lack detailed parametrial and uterosacral ligament dissection',
+      'Pelvic & para-aortic lymphadenectomy unbundling denials: Inguinal and pelvic node dissections (38571/38572) erroneously bundled into cytoreductive debulking',
+      'HIPEC intraoperative chemotherapy: Hospital vs professional fee disputes on prolonged hyperthermic perfusion administration (CPT 96560)',
+      'Co-surgeon Modifier 62 disputes: Reimbursement rejections when gynecologic oncologists co-operate with colorectal or urologic surgical teams',
+    ],
+    faqs: [
+      { q: 'How do you ensure full payment for complex cytoreductive tumor debulking?', a: 'Our surgical coders substantiate ovarian tumor debulking codes (58953–58956) by documenting all concurrent resections—including omentectomy, peritoneal stripping, and bowel resections—with appropriate NCCI modifier exemptions.' },
+      { q: 'How do you bill co-surgery with surgical oncologists or colorectal teams?', a: 'Both surgeons bill the identical primary CPT code appended with Modifier 62, backed by distinct, individualized operative dictations detailing the distinct operative components performed by each specialist.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
