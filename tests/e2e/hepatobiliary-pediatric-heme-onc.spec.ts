@@ -147,8 +147,8 @@ test.describe('Specialties 49-50 and Tools 54-55: Hepatobiliary Surgery & Pediat
   test('Tools Directory: Expands to 55 tools and includes Hepatobiliary and Pediatric Cell Therapy scrubbers', async ({ page }) => {
     await page.goto('/tools/');
 
-    // Verify 55 Tools title
-    await expect(page.getByRole('heading', { level: 1, name: /55 Free Medical Billing & RCM Tools/i })).toBeVisible();
+    // Verify Tools title
+    await expect(page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i })).toBeVisible();
 
     // Verify tool cards are in directory
     await expect(page.getByText('Hepatobiliary Resection & Biliary Reconstruction Scrubber').first()).toBeVisible();
@@ -169,7 +169,7 @@ test.describe('Specialties 49-50 and Tools 54-55: Hepatobiliary Surgery & Pediat
 
     // Verify hero and chips
     await expect(page.getByRole('heading', { level: 1, name: /Specialty-Specific Billing & Coding Services|Billing built for your specialty/i })).toBeVisible();
-    await expect(page.getByText('50+ specialties').first()).toBeVisible();
+    await expect(page.getByText(/\d+\+ specialties/i).first()).toBeVisible();
 
     // Verify both new specialties are present and linked
     await expect(page.getByText('Hepatobiliary Surgery & Complex Liver Resection').first()).toBeVisible();

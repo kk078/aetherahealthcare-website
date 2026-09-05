@@ -55,6 +55,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/colorectal-exenteration-scrubber',
+    icon: Scissors,
+    name: 'Colorectal Surgery & Pelvic Exenteration Scrubber',
+    desc: 'Audit total mesorectal excision (45119/45110), pelvic exenteration (45126), defend protective loop ileostomy unbundling (44320-XE), and validate Modifier -62 co-surgeon billing.',
+    category: 'scrubbers',
+    tag: 'Colorectal Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/pediatric-brain-tumor-scrubber',
+    icon: Activity,
+    name: 'Pediatric Brain Tumor & Intraoperative Monitoring Scrubber',
+    desc: 'Audit posterior fossa craniotomy (61518/61520), intraoperative neurophysiological monitoring (95940/95941), defend external ventricular drain unbundling (61107-59), and protect stereotactic neuronavigation add-ons (+61781).',
+    category: 'scrubbers',
+    tag: 'Pediatric Neurosurgery',
+    badge: 'New',
+  },
+  {
     href: '/tools/hepatobiliary-resection-scrubber',
     icon: Scissors,
     name: 'Hepatobiliary Resection & Biliary Reconstruction Scrubber',

@@ -924,6 +924,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Can bone marrow aspiration (38220) and biopsy (38221) be billed during the same pediatric encounter as intrathecal chemo (96450)?', a: 'Yes. When performed under general anesthesia during pediatric leukemia restaging, CPT 38222 (diagnostic bone marrow biopsy and aspiration) and CPT 96450 (intrathecal chemotherapy via lumbar puncture) represent distinct anatomic sites and distinct procedures. Modifier 59 (or XE/XS) is appended to 96450 to reflect separate procedural intervention, and time spent on sedation cannot overlap with physician procedural time.' },
     ],
   },
+  {
+    slug: 'colorectal-surgery',
+    name: 'Colorectal Surgery & Complex Pelvic Exenteration',
+    noun: 'colorectal surgeons, surgical oncologists, pelvic reconstructive surgeons, and lower GI surgical groups',
+    cpt: '45110, 45119, 45126, 45136, 44140, 44145, 44204, 44320, 44625, 49010, 50650, 99223',
+    blurb:
+      'Total mesorectal excision (TME), low anterior resection (LAR) with coloanal anastomosis, multivisceral pelvic exenteration, diverting loop ileostomy creation and reversal, and sacrectomy co-surgery.',
+    painPoints: [
+      'Pelvic exenteration multi-surgeon unbundling denials: Payers rejecting co-surgeon or team surgery billing (Modifier 62/66) across colorectal, urologic, and gynecologic teams during en bloc multivisceral pelvic resections (CPT 45126)',
+      'Diverting stoma creation bundled into resection: Inappropriate bundling of protective loop ileostomy (44320/44145) into low anterior resection (45119) despite distinct laparoscopic or open mobilization documentation',
+      'Ureteral stent / vascular isolation disallowance: Payer denial of prophylactic indocyanine green (ICG) perfusion angiography (CPT +15777 / 0596T) or cystoscopic stent placement prior to deep pelvic dissection',
+      'Laparoscopic vs open conversion disputes: Downcoding of robotic/laparoscopic LAR conversions (CPT 44204 converted to 44145) with failure to reimburse complex open pelvic mobilization time carve-outs',
+    ],
+    faqs: [
+      { q: 'How should pelvic exenteration (CPT 45126) with bladder and rectal resection be coded across multiple surgical specialists?', a: 'CPT 45126 (pelvic exenteration for colorectal malignancy with proctectomy, cystectomy, hysterectomy, and pelvic lymphadenectomy) allows co-surgery when distinct specialists perform separate components (e.g. colorectal surgeon performing proctectomy and bowel reconstruction; urologic oncologist performing cystectomy and urinary diversion). Both surgeons must dictate separate operative notes detailing their individual surgical involvement and append Modifier 62. If an additional gynecologic surgeon performs the vaginectomy/hysterectomy portion, Modifier 66 (team surgery) with comprehensive operative protocol documentation is required.' },
+      { q: 'Can a diverting loop ileostomy (CPT 44320) be separately billed with a low anterior resection (CPT 45110)?', a: 'CPT 45110 describes proctectomy with pull-through and coloanal anastomosis, while CPT 45119 includes creation of a colonic J-pouch reservoir. When a diverting loop ileostomy is placed to protect a high-risk ultra-low anastomosis, CPT 44145 (partial colectomy with colostomy) or 44320 (colostomy/ileostomy) is subject to NCCI edit rules. If performed through a separate abdominal incision or clearly dictated as a non-integral protective bypass, documentation must specify medical necessity (e.g. prior pelvic radiation, ultra-low anastomotic height <3cm from anal verge) to defend modifier XE/59.' },
+    ],
+  },
+  {
+    slug: 'pediatric-neuro-oncology',
+    name: 'Pediatric Neuro-Oncology & Posterior Fossa Surgery',
+    noun: 'pediatric neurosurgeons, pediatric neuro-oncologists, cranial base surgical teams, and children\'s brain tumor centers',
+    cpt: '61518, 61520, 61545, 62223, 62230, 95940, 95941, 61781, 61783, 61605, 99291, 99292',
+    blurb:
+      'Posterior fossa craniotomy for medulloblastoma and ependymoma, continuous intraoperative neurophysiological monitoring (IONM), stereotactic neuronavigation, ventriculoperitoneal shunt placement, and brainstem mapping.',
+    painPoints: [
+      'Posterior fossa craniotomy downcoding: Payer downcoding of complex infratentorial brain tumor resection (CPT 61518/61520) to simple supratentorial craniotomy (61510) with severe RVU losses',
+      'Intraoperative neurophysiological monitoring (IONM) denials: Rejection of real-time IONM time-based codes (95940/95941) due to remote monitoring log deficiencies, missing baseline comparisons, or concurrent multi-patient surveillance disputes',
+      'Neuronavigation (+61781) and ultrasonic aspiration add-on bundling: Payer denial of computer-assisted stereotactic navigation add-ons (+61781) and Cavitron ultrasonic surgical aspirator (CUSA) documentation in posterior fossa exposure',
+      'VP shunt revision bundled into tumor resection: Denial of concurrent ventriculoperitoneal shunt placement (62223) or external ventricular drain (EVD 61107) performed during the same operative session to relieve acute hydrocephalus',
+    ],
+    faqs: [
+      { q: 'How is continuous intraoperative neurophysiological monitoring (IONM CPT 95940/95941) billed during pediatric craniotomies?', a: 'CPT 95940 (each 15 minutes of in-room monitoring) or CPT 95941 (each 15 minutes of remote monitoring) is billed as an add-on to the primary evoked potential codes (95925-95939). The monitoring neurophysiologist cannot be the operating neurosurgeon and cannot monitor more than three concurrent surgical cases under CMS guidelines. Documentation must reflect real-time uninterrupted continuous baseline latency and amplitude tracing notes with exact start and stop timestamps.' },
+      { q: 'Can stereotactic navigation (+61781) and ventriculostomy (61107) be billed with craniotomy for infratentorial tumor (61520)?', a: 'Yes. CPT +61781 (cranial computer-assisted navigation, infratentorial) is an designated add-on code that cannot be discounted under multiple procedure reductions. When acute intracranial pressure requires placement of a pre-craniotomy external ventricular drain (61107) through a separate twist drill/burr hole, Modifier 59 (or XS) is required with explicit operative documentation demonstrating distinct site access prior to prone positioning.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

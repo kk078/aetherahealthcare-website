@@ -59,6 +59,8 @@ const specialtyLinks: Record<string, string> = {
   'Pediatric Allergy, Pulmonology & Cystic Fibrosis': '/medical-billing/pediatric-pulmonology',
   'Hepatobiliary Surgery & Complex Liver Resection': '/medical-billing/hepatobiliary-surgery',
   'Pediatric Hematology-Oncology & Cellular Therapy': '/medical-billing/pediatric-heme-onc',
+  'Colorectal Surgery & Complex Pelvic Exenteration': '/medical-billing/colorectal-surgery',
+  'Pediatric Neuro-Oncology & Posterior Fossa Surgery': '/medical-billing/pediatric-neuro-oncology',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -393,6 +395,18 @@ const specialties = [
         description: 'Pediatric allogeneic and autologous stem cell transplants, FDA-approved CAR-T cell immunotherapy processing and infusion, diagnostic bone marrow harvests, intrathecal chemotherapy, and complex pediatric cytokine release syndrome critical care.',
         cptCodes: '38205, 38206, 38240, 38241, 0537T, 0538T, 0539T, 0540T, 96450, 36561, 99291, 99292',
         challenges: 'CAR-T cellular therapy prior-authorization denials, stem cell processing unbundling rejections, and inpatient cytokine release syndrome (CRS) critical care time downcoding.'
+      },
+      {
+        name: 'Colorectal Surgery & Complex Pelvic Exenteration',
+        description: 'Total mesorectal excision (TME), low anterior resection (LAR) with coloanal anastomosis, multivisceral pelvic exenteration, diverting loop ileostomy creation and reversal, and sacrectomy co-surgery.',
+        cptCodes: '45110, 45119, 45126, 45136, 44140, 44145, 44204, 44320, 44625',
+        challenges: 'Pelvic exenteration multi-surgeon co-surgery (Mod 62/66) denials, diverting loop ileostomy unbundling disputes, and robotic-to-open conversion time carve-outs.'
+      },
+      {
+        name: 'Pediatric Neuro-Oncology & Posterior Fossa Surgery',
+        description: 'Posterior fossa craniotomy for medulloblastoma and ependymoma, continuous intraoperative neurophysiological monitoring (IONM), stereotactic neuronavigation, ventriculoperitoneal shunt placement, and brainstem mapping.',
+        cptCodes: '61518, 61520, 61545, 62223, 62230, 95940, 95941, 61781, 61783',
+        challenges: 'Posterior fossa craniotomy downcoding to supratentorial, IONM remote monitoring denials, and same-day external ventricular drain / VP shunt bundling.'
       }
     ]
   }
@@ -400,13 +414,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 50+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 52+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 50+ specialties — Hepatobiliary Surgery, Pediatric Heme-Onc, Trauma Surgery, Pediatric Pulmonology, Cardiothoracic, Pediatric Orthopedics, Spine Surgery, Urogynecology, Cardiology, and more.',
+    description: 'Expert medical billing across 52+ specialties — Colorectal Surgery, Pediatric Neuro-Oncology, Hepatobiliary, Pediatric Heme-Onc, Trauma Surgery, Pediatric Pulmonology, Cardiothoracic, Pediatric Orthopedics, Spine Surgery, Urogynecology, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -417,7 +431,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 50 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 52 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -438,10 +452,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 50+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 52+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['50+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['52+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

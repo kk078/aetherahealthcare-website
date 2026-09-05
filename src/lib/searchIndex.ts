@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 55 Interactive Tools
+// 57 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -665,6 +665,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'purple',
     keywords: ['pediatric oncology', 'car-t', 'kymriah', '0540t', 'q2042', 'stem cell transplant', 'bmt', '38240', '38241', '38205', 'bone marrow biopsy', '38222', 'intrathecal chemo', '96450', 'cytokine release syndrome', 'crs', '99291'],
   },
+  {
+    id: 'tool-colorectal-exenteration',
+    category: 'tools',
+    title: 'Colorectal Surgery & Pelvic Exenteration Scrubber',
+    subtitle: 'TME, colonic J-pouch LAR downcoding defense (45119 vs 44145), loop ileostomy (44320-XE) & Mod 62',
+    description: 'Audit total mesorectal excision (45119/45110), pelvic exenteration (45126), defend protective loop ileostomy unbundling (44320-XE), and validate Modifier -62 co-surgeon billing.',
+    href: '/tools/colorectal-exenteration-scrubber',
+    badge: 'Colorectal Surgery',
+    badgeVariant: 'teal',
+    keywords: ['colorectal surgery', 'pelvic exenteration', 'lar', 'low anterior resection', 'j-pouch', '45119', '45110', '45126', 'loop ileostomy', '44320', '44310', 'modifier 62', 'modifier 66', 'modifier 22', 'ureteral stents', '52005', 'icg', '0596t'],
+  },
+  {
+    id: 'tool-pediatric-brain-tumor',
+    category: 'tools',
+    title: 'Pediatric Brain Tumor & Intraoperative Monitoring Scrubber',
+    subtitle: 'Posterior fossa craniotomy (61518/61520), IONM supervision compliance (95940/95941) & EVD defense (61107-59)',
+    description: 'Audit posterior fossa craniotomy (61518/61520), intraoperative neurophysiological monitoring (95940/95941), defend external ventricular drain unbundling (61107-59), and protect stereotactic neuronavigation add-ons (+61781).',
+    href: '/tools/pediatric-brain-tumor-scrubber',
+    badge: 'Pediatric Neurosurgery',
+    badgeVariant: 'purple',
+    keywords: ['pediatric neurosurgery', 'brain tumor', 'posterior fossa', 'medulloblastoma', 'ependymoma', 'craniotomy', '61518', '61520', '61510', 'ionm', '95940', '95941', '95938', 'evd', '61107', 'vp shunt', '62223', 'neuronavigation', '61781'],
+  },
 ];
 
 // Specialties
@@ -1200,14 +1222,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['pediatric oncology', 'pediatric hematology', 'car-t', 'kymriah', '0540t', 'q2042', 'stem cell transplant', 'bmt', '38240', '38241', '38205', 'bone marrow biopsy', '38222', 'intrathecal chemo', '96450', 'crs', '99291'],
   },
   {
+    id: 'spec-colorectal-surgery',
+    category: 'specialties',
+    title: 'Colorectal Surgery & Complex Pelvic Exenteration Billing',
+    subtitle: 'TME, low anterior resection (45119/45110), pelvic exenteration (45126) & protective loop stomas',
+    href: '/medical-billing/colorectal-surgery',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['colorectal surgery', 'pelvic exenteration', 'lar', 'low anterior resection', 'j-pouch', '45119', '45110', '45126', 'loop ileostomy', '44320', 'co-surgeon', 'modifier 62', 'modifier 66', 'tme'],
+  },
+  {
+    id: 'spec-pediatric-neuro-oncology',
+    category: 'specialties',
+    title: 'Pediatric Neuro-Oncology & Posterior Fossa Surgery Billing',
+    subtitle: 'Posterior fossa craniotomies (61518/61520), continuous IONM (95940/95941), and neuronavigation',
+    href: '/medical-billing/pediatric-neuro-oncology',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric neurosurgery', 'pediatric neuro-oncology', 'posterior fossa', 'medulloblastoma', 'ependymoma', 'craniotomy', '61518', '61520', 'ionm', '95940', '95941', 'evd', '61107', 'vp shunt', '62223'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 50+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 52+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery'],
   },
 ];
 
