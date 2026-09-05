@@ -60,6 +60,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/pediatric-sct-coccygectomy-scrubber',
+    icon: Baby,
+    name: 'Pediatric SCT & Coccygectomy Scrubber',
+    desc: 'Audit sacrococcygeal teratoma excision (49220/45120), en-bloc coccygectomy (27075-59), combined abdominoperineal staging (49000-59), and pelvic floor levatorplasty.',
+    category: 'scrubbers',
+    tag: 'Pediatric Oncology & Neonatal Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/adult-retroperitoneal-sarcoma-scrubber',
+    icon: ShieldCheck,
+    name: 'Adult Retroperitoneal Sarcoma & Multivisceral Scrubber',
+    desc: 'Audit radical retroperitoneal sarcoma excision (49203–49205), contiguous radical nephrectomy (50240-59), adrenalectomy (60540-59), and IVC replacement (35281-59).',
+    category: 'scrubbers',
+    tag: 'Surgical Oncology & Multivisceral Resection',
+    badge: 'New',
+  },
+  {
     href: '/tools/pediatric-single-ventricle-norwood-scrubber',
     icon: Heart,
     name: 'Pediatric Single-Ventricle Norwood & Glenn Scrubber',

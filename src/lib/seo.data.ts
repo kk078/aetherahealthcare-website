@@ -1464,6 +1464,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Can stereotactic neuronavigation (+61783) and percutaneous instrumentation be billed together?', a: 'Yes. Intraoperative stereotactic computer-assisted spinal navigation is coded using CPT +61783 and is fully reimbursable when 3D navigation is utilized to guide percutaneous pedicle screw placement (+22842–+22844) and verify lateral corridor trajectories relative to the lumbar plexus.' },
     ],
   },
+  {
+    slug: 'pediatric-sacrococcygeal-teratoma',
+    name: 'Pediatric Sacrococcygeal Teratoma (SCT) & Congenital Presacral Tumor Resection',
+    noun: 'pediatric surgical oncologists, neonatal general surgeons, pediatric colorectal specialists, and tertiary children\'s surgical centers',
+    cpt: '49220, 27075, 45120, 45123, 49000, 49010, 36510, 36660, 99291, 99468',
+    blurb:
+      'Complete en-bloc surgical resection of neonatal sacrococcygeal teratomas (Altman Types I–IV): en-bloc coccygectomy to prevent malignant recurrence, combined abdominoperineal pelvic approaches with Modifier -59, ligation of median sacral artery high-flow vascular feeders, pelvic floor levatorplasty reconstruction, and neonatal intensive care resuscitation.',
+    painPoints: [
+      'Coccygectomy bundling into pelvic tumor excision: Clearinghouses bundling mandatory en-bloc coccyx resection (27075/49220) into simple perineal mass excision despite oncology protocol mandates',
+      'Combined abdominoperineal two-incision approach unbundling denials: Denials of exploratory laparotomy / abdominal dissection (49000) when required for pelvic tumor mobilization (Altman Type II/III/IV)',
+      'Pelvic floor levator ani reconstruction downcoding: Commercial payers rejecting complex muscular levatorplasty wound closure as inclusive to tumor excision',
+      'Neonatal high-output cardiac failure and resuscitation bundling: Disallowance of delivery room resuscitation and critical care time (99468/99291) during immediate tumor excision',
+    ],
+    faqs: [
+      { q: 'Why is en-bloc coccygectomy essential and how is it coded for pediatric SCT?', a: 'Sacrococcygeal teratomas originate from the pluripotent cells of Hensen’s node; incomplete excision or retention of the coccyx results in a 30%–40% recurrence risk with high malignant transformation rates. Complete excision requires en-bloc resection of the tumor along with the coccyx. Coding incorporates radical pelvic/presacral tumor resection (CPT 49220 or 45120) with coccygectomy or radical bone resection (CPT 27075 benchmarked with Modifier -22 when documented by extensive pelvic dissection).' },
+      { q: 'Can a combined abdominoperineal approach be billed with separate procedural codes for SCT?', a: 'Yes. For Altman Type II, III, and IV tumors with substantial intrapelvic or retroperitoneal extension, pediatric surgeons perform an initial transabdominal laparotomy (CPT 49000 or 49220) to ligate the median sacral artery and mobilize the pelvic mass, followed by patient repositioning for a perineal chevron resection. When distinct incisions and anatomical compartments are documented, CPT 49000 or abdominal mobilization is separately billable with Modifier -59 or -XU.' },
+    ],
+  },
+  {
+    slug: 'adult-retroperitoneal-sarcoma',
+    name: 'Complex Adult Retroperitoneal Sarcoma & Multivisceral Compartment Resection',
+    noun: 'surgical oncologists, retroperitoneal sarcoma specialists, urologic oncologists, vascular surgeons, and comprehensive cancer centers',
+    cpt: '49203, 49204, 49205, 50240, 60540, 44140, 35221, 35281, 49000, 99223',
+    blurb:
+      'Radical compartment en-bloc resection for high-grade retroperitoneal soft tissue sarcomas: large retroperitoneal tumor excision >10 cm (49205), contiguous multivisceral organ resections (en-bloc radical nephrectomy 50240, adrenalectomy 60540, segmental hemicolectomy 44140), major vascular reconstruction (IVC replacement 35281), and multi-specialty co-surgery (Modifier -62).',
+    painPoints: [
+      'Contiguous organ resection (nephrectomy 50240 / adrenalectomy 60540) bundling clawbacks: Payers improperly bundling en-bloc multivisceral organ clearance into retroperitoneal tumor excision (49205)',
+      'Major vascular graft reconstruction (+35221/+35281) unbundling denials: Clearinghouse rejection of inferior vena cava (IVC) or iliac vessel reconstruction during retroperitoneal tumor clearance',
+      'Co-surgeon Modifier -62 matching discrepancies: Multi-specialty resections involving surgical oncology, urology, and vascular surgery delayed by non-harmonized operative dictations',
+      'Large tumor sizing and compartmental margin justification: Downcoding >10 cm malignant tumor excisions without detailed gross pathology and operative dimension records',
+    ],
+    faqs: [
+      { q: 'When is contiguous nephrectomy (50240) separately billable with retroperitoneal sarcoma resection (49205)?', a: 'Under surgical oncology guidelines and CMS NCCI standards, retroperitoneal sarcoma resection (CPT 49205 for tumor >10 cm) includes adjacent soft tissue clearance. However, when the sarcoma invades or encases the renal parenchyma or renal vessels necessitating en-bloc radical nephrectomy, CPT 50240 (nephrectomy, including partial ureterectomy, any open approach including rib resection; radical) is separately reimbursable with Modifier -59 or -XU, supported by pathology demonstrating direct parenchymal invasion or en-bloc oncologic necessity.' },
+      { q: 'How is inferior vena cava (IVC) vascular resection and reconstruction reported during retroperitoneal sarcoma surgery?', a: 'When retroperitoneal sarcoma involves the retrohepatic or infrarenal IVC requiring prosthetic tube graft replacement or patch cavoplasty, vascular repair is reported using CPT 35281 (repair blood vessel with other than vein; intra-abdominal) or CPT 35221. If a vascular surgeon performs the vascular resection and replacement while a surgical oncologist performs the tumor resection, each surgeon reports their respective primary codes, or Modifier -62 is appended if co-performing the primary oncologic excision.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

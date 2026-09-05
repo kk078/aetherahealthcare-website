@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 85 Interactive Tools
+// 87 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -995,6 +995,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'amber',
     keywords: ['adult spine deformity', 'llif', 'xlif', 'lateral interbody fusion', '22558', '22552', 'allr', 'anterior longitudinal ligament release', 'modifier 22', 'percutaneous pedicle screws', '22842', '22843', 'pelvic fixation', 's2ai', '22848', 'interbody cage', '22853', 'neuronavigation', '61783', 'ionm', '95940'],
   },
+  {
+    id: 'tool-pediatric-sct-coccygectomy',
+    category: 'tools',
+    title: 'Pediatric SCT & Coccygectomy Scrubber',
+    subtitle: 'Sacrococcygeal teratoma (49220/45120), en-bloc coccygectomy (27075-59) & approach (49000)',
+    description: 'Audit neonatal sacrococcygeal teratoma resections, en-bloc coccygectomy unbundling defenses, abdominoperineal two-incision staging, and pelvic floor levatorplasty.',
+    href: '/tools/pediatric-sct-coccygectomy-scrubber',
+    badge: 'Pediatric SCT',
+    badgeVariant: 'teal',
+    keywords: ['pediatric sct', 'sacrococcygeal teratoma', 'coccygectomy', '27075', 'altman', '49220', '45120', 'abdominoperineal', '49000', 'median sacral artery', '37617', 'levatorplasty', '49900', 'neonatal critical care', '99291', 'pediatric oncology'],
+  },
+  {
+    id: 'tool-adult-retroperitoneal-sarcoma',
+    category: 'tools',
+    title: 'Adult Retroperitoneal Sarcoma & Multivisceral Scrubber',
+    subtitle: 'Retroperitoneal mass (49203–49205), contiguous nephrectomy (50240-59) & IVC graft (35281)',
+    description: 'Audit radical retroperitoneal sarcoma excisions, contiguous multivisceral organ clearance (radical nephrectomy, adrenalectomy, colectomy), and major vascular IVC replacement.',
+    href: '/tools/adult-retroperitoneal-sarcoma-scrubber',
+    badge: 'Sarcoma Oncology',
+    badgeVariant: 'emerald',
+    keywords: ['retroperitoneal sarcoma', 'soft tissue sarcoma', '49205', '49204', '49203', 'radical nephrectomy', '50240', 'adrenalectomy', '60540', 'hemicolectomy', '44140', 'ivc replacement', '35281', 'vascular reconstruction', 'modifier 62', 'co-surgeon', 'surgical oncology'],
+  },
 ];
 
 // Specialties
@@ -1830,14 +1852,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['adult spinal deformity', 'llif', 'xlif', 'lateral lumbar interbody fusion', '22558', '22552', 'allr', 'modifier 22', 'percutaneous instrumentation', '22842', '22843', 'spinopelvic fixation', '22848', 'biomechanical cages', '22853', 'neuronavigation', '61783', 'ionm', '95940'],
   },
   {
+    id: 'spec-pediatric-sacrococcygeal-teratoma',
+    category: 'specialties',
+    title: 'Pediatric Sacrococcygeal Teratoma (SCT) & Congenital Presacral Tumor Billing',
+    subtitle: 'En-bloc coccygectomy (27075-59), combined abdominoperineal (49000-59) & levatorplasty',
+    href: '/medical-billing/pediatric-sacrococcygeal-teratoma',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric sct', 'sacrococcygeal teratoma', 'presacral tumor', 'coccygectomy', '27075', 'altman type', '49220', '45120', 'abdominoperineal approach', '49000', 'median sacral artery', '37617', 'levatorplasty', '49900', 'neonatal surgery', 'pediatric surgical oncology'],
+  },
+  {
+    id: 'spec-adult-retroperitoneal-sarcoma',
+    category: 'specialties',
+    title: 'Complex Adult Retroperitoneal Sarcoma & Multivisceral Compartment Resection Billing',
+    subtitle: 'Sarcoma excision >10 cm (49205), en-bloc nephrectomy (50240-59) & IVC replacement (35281)',
+    href: '/medical-billing/adult-retroperitoneal-sarcoma',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['retroperitoneal sarcoma', 'multivisceral resection', '49205', 'radical nephrectomy', '50240', 'adrenalectomy', '60540', 'colectomy', '44140', 'ivc replacement', '35281', 'modifier 62', 'co-surgery', 'surgical oncology'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 80+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 82+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass', 'pediatric mibg', 'neuroblastoma', 'robotic hernia', 'tar component separation', 'pediatric tpiat', 'islet transplant', 'endoscopic skull base', 'odontoidectomy', 'single ventricle', 'norwood', 'glenn', 'fontan', 'adult spine deformity', 'llif', 'xlif'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass', 'pediatric mibg', 'neuroblastoma', 'robotic hernia', 'tar component separation', 'pediatric tpiat', 'islet transplant', 'endoscopic skull base', 'odontoidectomy', 'single ventricle', 'norwood', 'glenn', 'fontan', 'adult spine deformity', 'llif', 'xlif', 'pediatric sct', 'sacrococcygeal teratoma', 'retroperitoneal sarcoma'],
   },
 ];
 

@@ -89,6 +89,8 @@ const specialtyLinks: Record<string, string> = {
   'Endoscopic Transnasal Odontoid & Pituitary Skull Base Resection': '/medical-billing/endoscopic-pituitary-odontoid-resection',
   'Pediatric Single-Ventricle Congenital Heart Disease Palliation (Norwood / Glenn / Fontan)': '/medical-billing/pediatric-single-ventricle-palliation',
   'Multi-Level Minimally Invasive Adult Spinal Deformity & Lateral Interbody Fusion (LLIF/XLIF)': '/medical-billing/minimally-invasive-adult-spine-deformity',
+  'Pediatric Sacrococcygeal Teratoma (SCT) & Congenital Presacral Tumor Resection': '/medical-billing/pediatric-sacrococcygeal-teratoma',
+  'Complex Adult Retroperitoneal Sarcoma & Multivisceral Compartment Resection': '/medical-billing/adult-retroperitoneal-sarcoma',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -603,6 +605,18 @@ const specialties = [
         description: 'Adult degenerative scoliosis and sagittal imbalance reconstruction: multi-level lateral lumbar interbody fusion (22558, each additional interspace +22552), anterior longitudinal ligament release (ALLR), percutaneous posterior fixation (+22842–+22844), spinopelvic screws (+22848), and 3D navigation (+61783).',
         cptCodes: '22558, 22552, 22842, 22843, 22844, 22848, 22853, 61783, 95940, 95941, 77002, 20930',
         challenges: 'Multi-level interbody fusion add-on (+22552) bundling clawbacks, anterior longitudinal ligament release unbundling disputes, and continuous intraoperative neuromonitoring (+95940) medical necessity denials.'
+      },
+      {
+        name: 'Pediatric Sacrococcygeal Teratoma (SCT) & Congenital Presacral Tumor Resection',
+        description: 'Complete en-bloc resection of neonatal SCT (Altman I–IV), mandatory coccygectomy to prevent malignant recurrence, combined abdominoperineal staging (Modifier -59), and pelvic floor levatorplasty.',
+        cptCodes: '49220, 27075, 45120, 45123, 49000, 49010, 36510, 36660, 99291, 99468',
+        challenges: 'Coccygectomy bundling into pelvic tumor excision, combined abdominoperineal approach denials, levator ani muscular reconstruction downcoding, and neonatal critical care overlaps.'
+      },
+      {
+        name: 'Complex Adult Retroperitoneal Sarcoma & Multivisceral Compartment Resection',
+        description: 'Radical compartment en-bloc resection for retroperitoneal sarcoma (>10 cm 49205), contiguous radical nephrectomy (50240), adrenalectomy (60540), hemicolectomy (44140), and IVC replacement (35281).',
+        cptCodes: '49203, 49204, 49205, 50240, 60540, 44140, 35221, 35281, 49000, 99223',
+        challenges: 'Contiguous organ resection (nephrectomy/adrenalectomy) bundling into 49205, major vascular graft reconstruction unbundling denials, and multi-surgeon Modifier -62 matching discrepancies.'
       }
     ]
   }
@@ -610,13 +624,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 80+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 82+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 80+ specialties — Pediatric Single-Ventricle Palliation, Minimally Invasive Adult Spine Deformity, Pediatric TPIAT Islet Autotransplant, and more.',
+    description: 'Expert medical billing across 82+ specialties — Pediatric Sacrococcygeal Teratoma, Adult Retroperitoneal Sarcoma, Pediatric Single-Ventricle Palliation, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -627,7 +641,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 80 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 82 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -648,10 +662,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 80+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 82+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['80+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['82+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

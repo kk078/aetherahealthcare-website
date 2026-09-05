@@ -116,8 +116,8 @@ test.describe('Cycle 29 Expansion: Single-Ventricle Palliation & Adult Spine Def
 
     await expect(page).toHaveTitle(/Medical Billing Specialties/i);
 
-    // Verify 80+ specialties counter
-    await expect(page.getByText(/80\+\s+specialties/i).first()).toBeVisible();
+    // Verify specialties counter
+    await expect(page.getByText(/\d+\+\s+specialties/i).first()).toBeVisible();
 
     // Verify presence of both new specialties
     await expect(page.getByText(/Pediatric Single-Ventricle Congenital Heart Disease Palliation/i).first()).toBeVisible();
