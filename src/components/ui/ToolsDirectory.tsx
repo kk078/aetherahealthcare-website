@@ -57,6 +57,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/skull-base-scrubber',
+    icon: Crosshair,
+    name: 'Lateral Skull Base & Acoustic Neuroma Co-Surgeon Scrubber',
+    desc: 'Audit translabyrinthine and retrosigmoid acoustic neuroma approaches (61526, 61530), validate dual-attending Modifier 62 matching, defend operating microscope (+69990), and secure facial nerve monitoring.',
+    category: 'scrubbers',
+    tag: 'Skull Base Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/pediatric-airway-scrubber',
+    icon: Baby,
+    name: 'Pediatric Laryngotracheal Reconstruction (LTR) Scrubber',
+    desc: 'Audit single/double-stage LTR (31587, 31590) and cricotracheal resection (31584), defend autologous costal cartilage rib graft (+20902-59), and safeguard staged surveillance bronchoscopy (Modifier -58).',
+    category: 'scrubbers',
+    tag: 'Pediatric Otolaryngology',
+    badge: 'New',
+  },
+  {
     href: '/tools/lvad-cardiac-scrubber',
     icon: HeartPulse,
     name: 'Durable LVAD Implantation & Cardiac Reoperation Scrubber',

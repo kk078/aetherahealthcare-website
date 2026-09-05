@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 63 Interactive Tools
+// 65 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -753,6 +753,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'purple',
     keywords: ['pediatric epilepsy', 'epilepsy surgery', 'stereo-eeg', 'seeg', 'depth electrodes', '61760', 'subdural grid', '61533', 'robotic navigation', 'cranial neuronavigation', '61781', 'hemispherotomy', 'hemispherectomy', '61543', 'laser ablation', 'litt', '61736', 'temporal lobectomy', '61538', 'video-eeg', '95724', 'modifier 58', 'staged procedure'],
   },
+  {
+    id: 'tool-skull-base',
+    category: 'tools',
+    title: 'Lateral Skull Base & Acoustic Neuroma Co-Surgeon Scrubber',
+    subtitle: 'Translabyrinthine (61526), retrosigmoid (61530), dual-attending Mod 62 & +69990',
+    description: 'Audit translabyrinthine and retrosigmoid acoustic neuroma approaches (61526, 61530), validate dual-attending Modifier 62 matching, defend operating microscope (+69990), and secure facial nerve monitoring.',
+    href: '/tools/skull-base-scrubber',
+    badge: 'Skull Base Surgery',
+    badgeVariant: 'teal',
+    keywords: ['skull base surgery', 'acoustic neuroma', 'vestibular schwannoma', 'translabyrinthine', '61526', 'retrosigmoid', 'suboccipital', '61530', 'middle fossa', '61590', 'infratemporal', 'co-surgery', 'modifier 62', 'operating microscope', '69990', 'cranial nerve monitoring', 'facial nerve emg', '95940', 'baep', 'fat graft harvest', '20926', 'csf leak', 'modifier 59', 'modifier 78'],
+  },
+  {
+    id: 'tool-pediatric-airway',
+    category: 'tools',
+    title: 'Pediatric Laryngotracheal Reconstruction (LTR) Scrubber',
+    subtitle: 'Single/double-stage LTR (31587, 31590), CTR (31584), rib graft (+20902-59) & Mod 58',
+    description: 'Audit single/double-stage LTR (31587, 31590) and cricotracheal resection (31584), defend autologous costal cartilage rib graft (+20902-59), and safeguard staged surveillance bronchoscopy (Modifier -58).',
+    href: '/tools/pediatric-airway-scrubber',
+    badge: 'Pediatric Otolaryngology',
+    badgeVariant: 'emerald',
+    keywords: ['pediatric airway', 'laryngotracheal reconstruction', 'ltr', 'subglottic stenosis', 'cricotracheal resection', 'ctr', '31587', '31590', '31584', 'costal cartilage', 'rib graft harvest', '20902', 'tracheoplasty', '31750', 'balloon dilation', '31630', 'staged bronchoscopy', '31622', '31575', 'modifier 58', 'modifier 59', 'cotton-myer', 'aerodigestive'],
+  },
 ];
 
 // Specialties
@@ -1368,14 +1390,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['pediatric neurosurgery', 'pediatric epilepsy', 'epilepsy surgery', 'stereo-eeg', 'seeg', 'depth electrodes', '61760', 'subdural grid', '61533', 'cranial neuronavigation', '61781', 'hemispherotomy', 'hemispherectomy', '61543', 'laser ablation', 'litt', '61736', 'video-eeg', '95724', 'modifier 58'],
   },
   {
+    id: 'spec-skull-base-surgery',
+    category: 'specialties',
+    title: 'Complex Lateral Skull Base Surgery & Acoustic Neuroma Billing',
+    subtitle: 'Translabyrinthine (61526), retrosigmoid (61530), dual-attending Mod 62 & +69990',
+    href: '/medical-billing/skull-base-surgery',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['skull base surgery', 'acoustic neuroma', 'vestibular schwannoma', 'translabyrinthine', '61526', 'retrosigmoid', '61530', 'middle fossa', '61590', 'infratemporal', 'co-surgery', 'modifier 62', 'operating microscope', '69990', 'cranial nerve monitoring', 'facial nerve', '95940', 'fat graft', '20926'],
+  },
+  {
+    id: 'spec-pediatric-airway',
+    category: 'specialties',
+    title: 'Pediatric Airway Reconstruction & Complex Laryngotracheal Stenosis Billing',
+    subtitle: 'Single/double-stage LTR (31587, 31590), CTR (31584), rib graft (+20902) & Mod 58',
+    href: '/medical-billing/pediatric-airway',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric airway', 'pediatric ent', 'laryngotracheal reconstruction', 'ltr', 'subglottic stenosis', 'cricotracheal resection', 'ctr', '31587', '31590', '31584', 'costal cartilage', 'rib graft', '20902', 'tracheoplasty', '31750', 'balloon dilation', '31630', 'staged bronchoscopy', '31622', 'modifier 58', 'modifier 59'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 58+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 60+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction'],
   },
 ];
 

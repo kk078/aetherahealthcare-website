@@ -67,6 +67,8 @@ const specialtyLinks: Record<string, string> = {
   'Pediatric Solid Organ Transplant & Intestinal Rehabilitation': '/medical-billing/pediatric-transplant',
   'Complex Adult Cardiac Reoperation & Ventricular Assist Devices (LVAD)': '/medical-billing/cardiac-lvad-reoperation',
   'Pediatric Epilepsy Surgery & Hemispherotomy': '/medical-billing/pediatric-epilepsy-surgery',
+  'Complex Lateral Skull Base Surgery & Acoustic Neuroma Resection': '/medical-billing/skull-base-surgery',
+  'Pediatric Airway Reconstruction & Complex Laryngotracheal Stenosis': '/medical-billing/pediatric-airway',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -449,6 +451,18 @@ const specialties = [
         description: 'Stereo-electroencephalography (sEEG 61760), cranial stereotactic navigation (+61781), subdural grid placement (61533), anatomical/functional hemispherotomy (61543), and laser ablation.',
         cptCodes: '61760, 61781, 61533, 61534, 61543, 61736, 95716, 95724',
         challenges: 'Stereo-EEG trajectory unit audits, robotic stereotactic navigation add-on (+61781) unbundling, and complete hemispherotomy downcoding to simple lobectomy.'
+      },
+      {
+        name: 'Complex Lateral Skull Base Surgery & Acoustic Neuroma Resection',
+        description: 'Translabyrinthine and retrosigmoid skull base approaches, intradural acoustic neuroma resection, neurotology/neurosurgery dual-attending co-surgery (Modifier 62), cranial nerve VII/VIII monitoring, and operating microscope add-ons.',
+        cptCodes: '61526, 61530, 61590, 61592, 61600, 61605, 61615, 61616, 69990, 95940, 95941',
+        challenges: 'Co-surgeon Modifier -62 matching discrepancies between ENT and neurosurgery, operating microscope (+69990) unbundling denials, and continuous cranial nerve monitoring clawbacks.'
+      },
+      {
+        name: 'Pediatric Airway Reconstruction & Complex Laryngotracheal Stenosis',
+        description: 'Single-stage vs double-stage laryngotracheoplasty (LTR), cricotracheal resection (CTR), costal cartilage rib graft harvest (+20902), airway balloon dilation, and pediatric tracheostomy decannulation protocols.',
+        cptCodes: '31587, 31590, 31584, 20902, 31780, 31575, 31579, 31622, 31630, 31600, 31610',
+        challenges: 'Autologous costal cartilage graft harvest (+20902) unbundling rejections, cricotracheal resection downcoding clawbacks, and missing staged procedure Modifier -58 on postoperative bronchoscopy.'
       }
     ]
   }
@@ -456,13 +470,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 58+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 60+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 58+ specialties — Cardiac LVAD Reoperation, Pediatric Epilepsy Surgery, Spine Deformity, Pediatric Transplant, Pancreatic Surgery, and more.',
+    description: 'Expert medical billing across 60+ specialties — Lateral Skull Base Surgery, Pediatric Airway Reconstruction, Cardiac LVAD Reoperation, Pediatric Epilepsy Surgery, Spine Deformity, Pediatric Transplant, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -473,7 +487,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 58 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 60 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -494,10 +508,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 58+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 60+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['58+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['60+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

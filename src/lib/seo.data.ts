@@ -1068,6 +1068,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'What clinical criteria differentiate anatomical/functional hemispherotomy (61543) from lobectomy (61537)?', a: 'Hemispherotomy (CPT 61543) involves complete surgical disconnection of an entire cerebral hemisphere—including temporal lobectomy, amygdalohippocampectomy, frontal and parietal opercular disconnections, and transventricular corpus callosotomy. CPT 61537 only covers partial cortical resection or single lobectomy. Operative notes must detail ventricular entry, callosotomy completion, and circumferential hemispheric isolation to overturn downcoding.' },
     ],
   },
+  {
+    slug: 'skull-base-surgery',
+    name: 'Complex Lateral Skull Base Surgery & Acoustic Neuroma Resection',
+    noun: 'lateral skull base neurosurgeons, neurotologists, otolaryngologists, and acoustic neuroma reconstructive teams',
+    cpt: '61526, 61530, 61590, 61592, 61600, 61605, 61615, 61616, 69990, 95940, 95941, 64864, 99223',
+    blurb:
+      'Translabyrinthine and retrosigmoid skull base approaches, intradural acoustic neuroma resection, neurotology/neurosurgery dual-attending co-surgery (Modifier 62), cranial nerve VII/VIII monitoring, and operating microscope add-ons.',
+    painPoints: [
+      'Co-surgeon Modifier -62 matching discrepancies: Approach surgeon (neurotology/ENT) and resection surgeon (neurosurgery) claims denied due to non-matching primary skull base approach (61590-61592) or definitive resection (61605-61616) coding',
+      'Operating microscope add-on (+69990) unbundling denials: Payers rejecting microdissection code +69990 by erroneously bundling it into vestibular schwannoma resection or craniotomy approach',
+      'Continuous intraoperative cranial nerve monitoring (95940/95941) clawbacks: Invalidation of facial nerve (CN VII) and brainstem auditory evoked potential (BAEP) neuromonitoring time increments during CPA tumor dissection',
+      'Staged cerebellopontine angle re-exploration: Denials of secondary wound debridement, CSF leak repair, or fat graft packing within the 90-day global surgical period lacking Modifier -58 or -78',
+    ],
+    faqs: [
+      { q: 'How should dual-attending co-surgery (Modifier 62) be billed between neurosurgery and neurotology for acoustic neuroma resection?', a: 'Under CMS and AMA CPT guidelines, when two surgeons of different surgical specialties act as co-surgeons performing distinct parts of a single skull base procedure, each surgeon bills the exact same primary skull base procedure code (e.g., CPT 61526, 61530, or paired approach 61590 and resection 61605) appended with Modifier -62. Each surgeon must author an independent operative note detailing their specific role (e.g., translabyrinthine approach by neurotology and tumor dissection off facial nerve by neurosurgery).' },
+      { q: 'Can operating microscope add-on (+69990) be reported during vestibular schwannoma resection?', a: 'Yes. CPT code +69990 is reportable when the operating microscope is used for microdissection during skull base tumor resections, provided the primary skull base resection code does not explicitly include microdissection in its descriptor. The operative dictation must specifically document the microdissection phase, operative microscope magnification, and careful preservation of the facial nerve (CN VII) and internal auditory canal structures.' },
+    ],
+  },
+  {
+    slug: 'pediatric-airway',
+    name: 'Pediatric Airway Reconstruction & Complex Laryngotracheal Stenosis',
+    noun: 'pediatric otolaryngologists, pediatric airway surgeons, aerodigestive teams, and pediatric bronchoscopy specialists',
+    cpt: '31587, 31590, 31584, 20902, 31780, 31575, 31579, 31622, 31630, 31600, 31610, 99214',
+    blurb:
+      'Single-stage vs double-stage laryngotracheoplasty (LTR), cricotracheal resection (CTR), costal cartilage rib graft harvest, airway balloon dilation, and pediatric tracheostomy decannulation protocols.',
+    painPoints: [
+      'Autologous costal cartilage graft harvest (+20902) unbundling rejections: Commercial payers rejecting separate rib cartilage graft harvest when billed alongside laryngotracheoplasty (31587) or cricotracheal resection (31584)',
+      'Cricotracheal resection (31584) downcoding clawbacks: Payers downgrading high-complexity CTR with complete subglottic resection and thyrotracheal anastomosis to basic tracheoplasty (31750) or simple scar excision',
+      'Missing staged procedure Modifier -58 on postoperative surveillance bronchoscopy: Surveillance microlaryngoscopy and bronchoscopy (31575/31622) during stent removal or airway remodeling denied as within the 90-day global surgical period',
+      'Endoscopic balloon dilation bundling: Erroneous bundling of balloon dilation (31630/31590) during complex revision airway reconstruction procedures',
+    ],
+    faqs: [
+      { q: 'Is costal cartilage graft harvest (+20902) separately reportable with laryngotracheoplasty (31587)?', a: 'Yes. CPT code 20902 (harvest of costal cartilage graft) is an autologous graft harvest code performed through a separate surgical incision (submammary or inframammary thoracotomy incision). Because CPT 31587 specifically covers laryngotracheoplasty with graft but does not include the distinct harvest procedure, CPT 20902 is separately billable with Modifier 59 or XS to denote a distinct anatomical site and separate operative incision.' },
+      { q: 'How should planned postoperative airway evaluations and stent removals be billed during the global period?', a: 'When a patient undergoes single-stage or double-stage LTR with an endoluminal stent or T-tube, subsequent operative microlaryngoscopy and bronchoscopy (MLB) for stent removal, airway sizing, or granulations debridement must be coded with Modifier -58 (staged or related procedure by the same physician during the postoperative period). The initial operative report should note that postoperative surveillance MLB is a planned component of the reconstructive care plan.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
