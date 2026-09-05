@@ -1,180 +1,45 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
-import FadeIn from '@/components/ui/FadeIn';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
-import {
-  Search,
-  ClipboardCheck,
-  Calculator,
-  ArrowRight,
-  CalendarClock,
-  ListChecks,
-  TrendingDown,
-  Gauge,
-  BookOpen,
-  FileCheck2,
-  DollarSign,
-  FileCode,
-  FileText,
-  Clock,
-  Sparkles,
-} from 'lucide-react';
+import ToolsDirectory from '@/components/ui/ToolsDirectory';
+import { ArrowRight } from 'lucide-react';
 
-export const metadata = {
-  title: { absolute: 'Free Medical Billing & AR Tools | Aethera Healthcare Solutions' },
+export const metadata: Metadata = {
+  title: { absolute: '21 Free Medical Billing, EDI & RCM Tools | Aethera Healthcare' },
   description:
-    '14 free tools for billing and AR teams: CARC/RARC lookup, NCCI claim scrubber, fee schedule benchmarker, 835 ERA decoder, appeal letter generator, and timely filing matrix. No login required.',
+    '21 free tools for revenue cycle teams: No Surprises Act GFE generator, patient liability calculator, 270/271 validator, 837 claim scrubber, MGMA scorecard, NCCI scrubber, and 835 decoder. No login required.',
 };
-
-const tools = [
-  {
-    href: '/tools/ncci-claim-scrubber',
-    icon: FileCheck2,
-    name: 'CMS NCCI Claim Scrubber',
-    desc: 'Test CPT code pairs against official CMS PTP bundling rules. Check modifier -25 and -59/-XS indicators to prevent CARC 97 denials.',
-    tag: 'Scrubber',
-  },
-  {
-    href: '/tools/appeal-letter-generator',
-    icon: FileText,
-    name: 'Appeal Letter Generator',
-    desc: 'Generate legal-grade, formal appeal letters with statutory citations (ERISA, ACA § 2719, CMS NCCI) for CARC 50, 197, 16, 29, 97, and 22.',
-    tag: 'Playbook',
-  },
-  {
-    href: '/tools/practice-proposal-wizard',
-    icon: Sparkles,
-    name: 'Custom Practice Proposal Wizard',
-    desc: 'Build a tailored revenue cycle proposal in 3 minutes. Calculate estimated collections lift, target AR days, and transparent performance pricing.',
-    tag: 'Proposal',
-  },
-  {
-    href: '/tools/fee-schedule-benchmarker',
-    icon: DollarSign,
-    name: 'Fee Schedule Benchmarker',
-    desc: 'Compare your commercial payer reimbursement allowances against 2026 Medicare and regional PPO percentiles to quantify underpayments.',
-    tag: 'Calculator',
-  },
-  {
-    href: '/tools/era-835-decoder',
-    icon: FileCode,
-    name: '835 ERA Remittance Decoder',
-    desc: 'Parse raw 835 EDI segments (CLP, CAS, SVC). Translate adjustment reason codes (CO, PR, OA) into clear financial allocations and action items.',
-    tag: 'Parser',
-  },
-  {
-    href: '/tools/timely-filing-matrix',
-    icon: Clock,
-    name: 'Multi-Payer Timely Filing Matrix',
-    desc: 'Compare initial claim deadlines, corrected claim cutoffs, and appeal windows across 50 state Medicaid programs and commercial PPOs.',
-    tag: 'Reference',
-  },
-  {
-    href: '/tools/denial-code-lookup',
-    icon: Search,
-    name: 'Denial Code Lookup (1,283+ Codes)',
-    desc: 'Search CARC/RARC denial codes and get plain-English reasons, how to work each one, and how to prevent it.',
-    tag: 'Reference',
-  },
-  {
-    href: '/tools/clean-claim-scorecard',
-    icon: ClipboardCheck,
-    name: 'Clean-Claim Scorecard',
-    desc: 'Score your front-end, coding, and submission workflow against 14 controls — and see which denials each gap invites.',
-    tag: 'Self-assessment',
-  },
-  {
-    href: '/tools/ar-cost-calculator',
-    icon: Calculator,
-    name: 'A/R Days Cost Calculator',
-    desc: 'See the cash tied up in slow A/R and the yearly carrying cost of staying above your target days-in-A/R.',
-    tag: 'Calculator',
-  },
-  {
-    href: '/tools/timely-filing-calculator',
-    icon: CalendarClock,
-    name: 'Timely Filing Calculator',
-    desc: 'Enter a date of service and the payer filing limit to get the exact submission deadline, days remaining, and a risk flag.',
-    tag: 'Calculator',
-  },
-  {
-    href: '/tools/eligibility-checklist',
-    icon: ListChecks,
-    name: 'Eligibility & Prior-Auth Checklist',
-    desc: 'Score your pre-visit verification against the checks that prevent CO-27, CO-197, and eligibility denials before they happen.',
-    tag: 'Self-assessment',
-  },
-  {
-    href: '/tools/denial-cost-calculator',
-    icon: TrendingDown,
-    name: 'Denial Cost Calculator',
-    desc: 'See what denials really cost — lost reimbursement plus rework — per week, month, and year, and the combined annual impact.',
-    tag: 'Calculator',
-  },
-  {
-    href: '/tools/rvu-calculator',
-    icon: Gauge,
-    name: 'RVU Payment Calculator',
-    desc: 'Turn work, PE, and malpractice RVUs into an estimated Medicare allowed amount using GPCI and the conversion factor.',
-    tag: 'Calculator',
-  },
-  {
-    href: '/tools/payer-provider-manuals',
-    icon: BookOpen,
-    name: 'Payer Manual & Policy Finder',
-    desc: 'Jump straight to provider manuals, medical/payment policies, credentialing, and eligibility pages for 200+ payers, Medicaid programs, and Medicare MACs.',
-    tag: 'Reference',
-  },
-  {
-    href: '/glossary',
-    icon: BookOpen,
-    name: 'Healthcare RCM & Billing Glossary',
-    desc: 'Authoritative clinical and financial dictionary covering 30+ core terms: EDI 837/835, NCCI PTP edits, CARC/RARC denial codes, and RVU benchmarks.',
-    tag: 'Knowledge Base',
-  },
-];
 
 export default function ToolsHub() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#fcfbf9]">
       <Navbar />
 
       <RcmHeroBand
-        eyebrow="Free · No login"
-        title="Free AR & medical-billing tools"
-        subtitle="Practical tools our own RCM team uses every day — open to anyone working denials, clean claims, timely filing, and A/R."
-        primary={{ href: '#tools', label: 'Browse the Tools' }}
-        secondary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
-        chips={['15 free tools & guides', 'No login', 'Built by billers']}
+        eyebrow="Free · No Login Required"
+        title="21 Free Medical Billing & RCM Tools"
+        subtitle="Clinical scrubbers, federal compliance engines, financial calculators, and EDI diagnostic parsers used daily by our senior billing specialists — open to all healthcare providers."
+        primary={{ href: '#tools', label: 'Explore All 21 Tools' }}
+        secondary={{ href: '/free-assessment', label: 'Get a Free Practice Audit' }}
+        chips={['21 Free Tools', 'No Login Required', 'Federal Statutory Compliance', 'Built by AAPC Coders']}
       />
 
-      <section id="tools" className="py-14 md:py-20 bg-cream flex-1 scroll-mt-24">
+      <section id="tools" className="py-12 md:py-16 flex-1 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {tools.map((t, i) => (
-              <FadeIn key={t.href} delay={i * 0.1}>
-                <Link prefetch={false} href={t.href} className="group block h-full bg-white rounded-2xl border border-gray/15 p-7 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="inline-flex items-center justify-center h-12 w-12 rounded-xl bg-teal/10 text-teal group-hover:bg-teal group-hover:text-white transition-colors">
-                      <t.icon className="h-6 w-6" />
-                    </span>
-                    <span className="text-[11px] font-semibold text-gray uppercase tracking-widest">{t.tag}</span>
-                  </div>
-                  <h2 className="text-lg font-bold text-navy mb-2">{t.name}</h2>
-                  <p className="text-sm text-gray leading-relaxed mb-4">{t.desc}</p>
-                  <span className="inline-flex items-center text-teal font-semibold text-sm group-hover:text-navy transition-colors">
-                    Open tool <ArrowRight className="h-4 w-4 ml-1.5 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
-              </FadeIn>
-            ))}
-          </div>
+          <ToolsDirectory />
 
-          <div className="mt-12 text-center">
-            <p className="text-gray mb-4">Looking for the payer reference? Browse timely-filing limits, payer IDs, and portals.</p>
-            <Link prefetch={false} href="/payers/directory" className="inline-flex items-center text-teal hover:text-navy font-semibold">
-              Open the Payer Directory <ArrowRight className="h-4 w-4 ml-1.5" />
+          <div className="mt-14 text-center p-6 rounded-2xl bg-white border border-gray/20 shadow-2xs">
+            <p className="text-xs sm:text-sm text-slate-600 mb-2">
+              Looking for our national clearinghouse directory? Explore timely-filing limits, EDI capabilities, and electronic routing IDs.
+            </p>
+            <Link
+              prefetch={false}
+              href="/payers/directory"
+              className="inline-flex items-center text-teal hover:text-navy font-bold text-xs sm:text-sm"
+            >
+              Open 10,600+ Payer Directory <ArrowRight className="h-4 w-4 ml-1.5" />
             </Link>
           </div>
         </div>
@@ -182,12 +47,16 @@ export default function ToolsHub() {
 
       <section className="py-14 bg-white border-t border-gray/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-navy mb-2">Rather have us run the whole thing?</h2>
-          <p className="text-gray mb-6 max-w-2xl mx-auto">
-            These tools show where revenue leaks. Aethera&apos;s team plugs the leaks — coding, claims, denials, and A/R follow-up end to end.
+          <h2 className="text-2xl font-bold text-navy mb-2">Rather Have Us Manage Your Entire Revenue Cycle?</h2>
+          <p className="text-slate-600 mb-6 text-sm max-w-2xl mx-auto leading-relaxed">
+            These tools reveal where revenue leaks. Aethera’s end-to-end team plugs the leaks permanently — charge capture, automated scrubbing, certified coding, denial recovery, and sub-30 day A/R compaction.
           </p>
-          <Link prefetch={false} href="/free-assessment" className="inline-block bg-teal hover:bg-navy text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm">
-            Get a Free Assessment
+          <Link
+            prefetch={false}
+            href="/free-assessment"
+            className="inline-block bg-teal hover:bg-navy text-white font-bold py-3 px-8 rounded-full transition-colors text-xs sm:text-sm shadow-sm"
+          >
+            Request Free Practice Assessment
           </Link>
         </div>
       </section>
