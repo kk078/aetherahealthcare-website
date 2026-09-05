@@ -27,7 +27,7 @@ const specialtyLinks: Record<string, string> = {
   'Urology': '/medical-billing/urology',
   'Radiology': '/medical-billing/radiology',
   'Physical Therapy & Rehabilitation': '/medical-billing/physical-therapy',
-  'Pathology': '/services/compliance-auditing',
+  'Pathology': '/medical-billing/pathology',
   'Anesthesiology': '/medical-billing/anesthesia',
   'Podiatry & Wound Care': '/medical-billing/podiatry',
   'Ambulatory Surgery Centers (ASC)': '/medical-billing/asc',

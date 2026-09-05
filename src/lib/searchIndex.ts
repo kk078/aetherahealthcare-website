@@ -302,6 +302,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'blue',
     keywords: ['telemetry', 'clearinghouse sla', 'performance', 'latency', 'ttfb', '837 dispatch', '835 auto post', 'hipaa', 'zero session'],
   },
+  {
+    id: 'tool-prior-auth-matrix',
+    category: 'tools',
+    title: 'Prior-Auth Requirement & Payer Gold-Card Matrix',
+    subtitle: 'CMS-0057-F turnaround SLAs, state Gold Card rules & peer-to-peer deadlines',
+    description: 'Inspect mandatory pre-authorization triggers, statutory 72-hr/7-day review SLAs, and Gold Card exemption criteria across 20+ procedures.',
+    href: '/tools/prior-auth-matrix',
+    badge: 'Prior Auth',
+    badgeVariant: 'amber',
+    keywords: ['prior auth', 'precertification', 'gold card', 'cms-0057-f', 'peer to peer', 'mri prior auth', 'carc 197', 'pre-auth turnaround'],
+  },
+  {
+    id: 'tool-modifier-compliance',
+    category: 'tools',
+    title: 'Modifier 25 & 59 / X{EPSU} Compliance Engine',
+    subtitle: 'CMS NCCI unbundling rules, same-day E/M validation & audit attestations',
+    description: 'Clinical qualification gates for Modifier 25 and distinct procedural services (Modifier 59, XE, XS, XP, XU) to eliminate CARC 97 denials.',
+    href: '/tools/modifier-compliance-engine',
+    badge: 'Compliance',
+    badgeVariant: 'teal',
+    keywords: ['modifier 25', 'modifier 59', 'modifier xs', 'modifier xe', 'ncci', 'unbundling', 'carc 97', 'same day em', 'audit attestation'],
+  },
 ];
 
 // Specialties
@@ -525,6 +547,16 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     badge: 'Specialty',
     badgeVariant: 'blue',
     keywords: ['asc', 'ambulatory surgery', 'facility billing', 'ub-04', '837i', 'revenue code 0490', '0278', 'implants', 'opps', 'surgical center'],
+  },
+  {
+    id: 'spec-pathology',
+    category: 'specialties',
+    title: 'Pathology & Clinical Laboratory Billing',
+    subtitle: 'Surgical pathology specimen levels (88305), IHC stains, CLIA compliance & MolDX Z-codes',
+    href: '/medical-billing/pathology',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pathology', 'clinical lab', 'laboratory', 'clia', '88305', 'ihc', '88342', 'moldx', 'z-code', 'histology', 'biopsy'],
   },
   {
     id: 'spec-all',

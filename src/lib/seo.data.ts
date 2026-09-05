@@ -366,6 +366,24 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How do you handle dual facility and physician billing?', a: 'We run parallel claim scrubbers for both the facility (837I) and the surgeon professional fee (837P) to synchronize diagnosis coding, procedure dates, and modifier consistency across both entities.' },
     ],
   },
+  {
+    slug: 'pathology',
+    name: 'Pathology & Clinical Laboratory',
+    noun: 'pathology practices, independent clinical laboratories, and histology labs',
+    cpt: '80047–89398, 88300–88309, 88312, 88342, MolDX Z-Codes',
+    blurb:
+      'High-complexity surgical pathology levels, immunohistochemistry stains, molecular diagnostics (MolDX Z-codes), and CLIA certificate tier validation.',
+    painPoints: [
+      'CLIA certificate level mismatches (Waived, Provider-Performed Microscopy, High Complexity) on 837 claim files triggering immediate electronic payer rejections',
+      'Surgical pathology unit calculation errors: Gross and microscopic examination levels (88302–88309) denied when multiple tissue specimens are unbundled without separate specimen identifiers',
+      'Immunohistochemistry (88342 for initial single antibody vs 88341 for each additional) and special stains (88312/88313) downcoded or denied as duplicative',
+      'Molecular diagnostic (MoPath) tier 1/tier 2 Palmetto MolDX Z-Code requirements leading to automatic commercial and Medicare denials',
+    ],
+    faqs: [
+      { q: 'How do you ensure CLIA compliance and prevent 277CA lab claim rejections?', a: 'We embed active CLIA number verification directly into Box 23 / Loop 2300 of our EDI 837 scrubbers, validating certificate expiration dates and test complexity tiers before claim generation.' },
+      { q: 'How are surgical pathology specimen levels and special stains properly billed?', a: 'Our certified pathology coders audit accession logs to verify each distinct anatomical specimen container is billed with its exact surgical pathology level (e.g., 88305 per container) and correct IHC add-on units.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

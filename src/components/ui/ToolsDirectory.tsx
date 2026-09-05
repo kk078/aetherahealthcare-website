@@ -26,6 +26,7 @@ import {
   ExternalLink,
   ShieldAlert,
   Activity,
+  Scale,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -39,6 +40,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/prior-auth-matrix',
+    icon: Scale,
+    name: 'Prior-Auth Requirement & Payer Gold-Card Matrix',
+    desc: 'Inspect mandatory prior auth triggers, statutory review SLAs under CMS-0057-F, peer-to-peer deadlines, and state Gold Card exemption rules across 20+ procedures.',
+    category: 'scrubbers',
+    tag: 'Prior Auth',
+    badge: 'New',
+  },
+  {
+    href: '/tools/modifier-compliance-engine',
+    icon: FileCheck2,
+    name: 'Modifier 25 & 59 / X{EPSU} Compliance Engine',
+    desc: 'Evaluate same-day E/M visits and surgical unbundling against CMS NCCI guidelines. Generate legal audit-defense attestations and eliminate CARC 97 recoupments.',
+    category: 'scrubbers',
+    tag: 'Compliance',
+    badge: 'New',
+  },
   {
     href: '/tools/anesthesia-calculator',
     icon: Calculator,
@@ -315,7 +334,7 @@ export default function ToolsDirectory() {
               type="search"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search 23 free tools & engines…"
+              placeholder="Search 25 free tools & engines…"
               className="w-full pl-9 pr-3 py-1.5 border border-gray/25 rounded-xl text-xs text-navy focus:outline-none focus:ring-2 focus:ring-teal"
             />
           </div>

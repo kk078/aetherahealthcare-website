@@ -7,6 +7,8 @@
  * Best-effort — never throws.
  */
 
+import { getAttribution } from '@/lib/attribution';
+
 export const PRIMARY_EXPERT_EMAIL = 'kirkmar078@gmail.com';
 export const DISPLAY_SUPPORT_EMAIL = 'support@aetherahealthcare.com';
 export const DISPLAY_INFO_EMAIL = 'info@aetherahealthcare.com';
@@ -72,6 +74,14 @@ async function emailFallback(formType: string, data: AnyData): Promise<boolean> 
       .join('\n');
     const email = String(data.email || data.scheduleEmail || '') || 'no-reply@aetherahealthcare.com';
     const name = String(data.firstName || data.name || data.practiceContact || 'Website Visitor');
+    const attr = getAttribution();
+    const source = String(data.campaign_source || attr?.utmSource || 'Direct / Organic');
+    const medium = String(data.campaign_medium || attr?.utmMedium || 'N/A');
+    const campaign = String(data.campaign_name || attr?.utmCampaign || 'N/A');
+    const term = String(data.campaign_term || attr?.utmTerm || 'N/A');
+    const gclid = String(data.google_click_id || attr?.gclid || 'None');
+    const landing = String(data.landing_page || attr?.landingPage || 'Direct entry');
+
     const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
@@ -93,6 +103,13 @@ async function emailFallback(formType: string, data: AnyData): Promise<boolean> 
           `Timestamp: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })} ET\n` +
           `Visitor Name: ${name}\n` +
           `Visitor Email: ${email}\n\n` +
+          `--- Marketing Campaign Attribution ---\n` +
+          `Traffic Source: ${source}\n` +
+          `Medium: ${medium}\n` +
+          `Campaign: ${campaign}\n` +
+          `Search Keyword / Term: ${term}\n` +
+          `Google Ads GCLID: ${gclid}\n` +
+          `Initial Landing Page: ${landing}\n\n` +
           `--- Ingest Data ---\n` +
           `${details}\n\n` +
           `Please follow up within 2 business hours.\n` +
@@ -118,8 +135,20 @@ export async function sendLeadToKiran(
     ? chatHistory.map(m => `${m.role.toUpperCase()}: ${m.content}`).join('\n\n')
     : undefined;
 
+  const attr = getAttribution();
+
   const augmentedData: AnyData = {
     ...data,
+    ...(attr ? {
+      campaign_source: attr.utmSource,
+      campaign_medium: attr.utmMedium,
+      campaign_name: attr.utmCampaign,
+      campaign_term: attr.utmTerm,
+      campaign_content: attr.utmContent,
+      google_click_id: attr.gclid,
+      landing_page: attr.landingPage,
+      referrer_domain: attr.referrer,
+    } : {}),
     chatContext,
     target_recipient: PRIMARY_EXPERT_EMAIL,
     routed_at: new Date().toISOString(),
