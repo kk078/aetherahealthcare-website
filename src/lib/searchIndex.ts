@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 67 Interactive Tools
+// 69 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -797,6 +797,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'teal',
     keywords: ['pediatric facial reanimation', 'facial palsy', 'moebius syndrome', 'free gracilis transfer', 'microneurovascular free flap', '15756', 'cross-face nerve graft', 'cfng', 'sural nerve harvest', '64890', '64891', 'masseteric nerve transfer', '64864', 'operating microscope', '69990', 'fascia lata sling', '20926', 'modifier 58', 'staged procedure', 'modifier 51', 'modifier 59'],
   },
+  {
+    id: 'tool-pediatric-eos',
+    category: 'tools',
+    title: 'Pediatric Early-Onset Scoliosis (EOS) & Growing Rod Scrubber',
+    subtitle: 'MCGR (22842), staged distraction (22849-58), VEPTR rib anchors (+22848) & clinic visits',
+    description: 'Audit magnetically controlled growing rods (MCGR), staged surgical lengthenings (22849-58), VEPTR rib distraction, pelvic anchors (+22848), and outpatient distraction clinics.',
+    href: '/tools/pediatric-eos-scrubber',
+    badge: 'Pediatric Orthopedics',
+    badgeVariant: 'emerald',
+    keywords: ['pediatric spine', 'early-onset scoliosis', 'eos', 'growing rods', 'mcgr', 'magec', '22842', 'veptr', 'thoracic insufficiency', '22848', 'staged distraction', '22849', '22850', 'modifier 58', 'ponte osteotomy', '22212', 'erc lengthening', '99214', '72082', 'ionm', '95940'],
+  },
+  {
+    id: 'tool-hipec',
+    category: 'tools',
+    title: 'Cytoreductive Surgery & HIPEC Perfusion Scrubber',
+    subtitle: 'Multivisceral peritonectomy (49205), HIPEC perfusion (+96560), Mod 62 & bowel resections',
+    description: 'Audit extensive peritonectomy (49205), defend 90-min heated chemoperfusion (+96560), coordinate co-surgeon Modifier -62, and safeguard concomitant bowel resections (44140-51).',
+    href: '/tools/hipec-scrubber',
+    badge: 'Surgical Oncology',
+    badgeVariant: 'amber',
+    keywords: ['hipec', 'cytoreductive surgery', 'crs', 'peritonectomy', '49205', '49204', 'hyperthermic intraperitoneal chemotherapy', '96560', 'co-surgery', 'modifier 62', 'colectomy', '44140', 'splenectomy', '38100', 'critical care', '99291', 'modifier 24', 'modifier 51', 'modifier 59'],
+  },
 ];
 
 // Specialties
@@ -1452,14 +1474,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['pediatric facial reanimation', 'moebius syndrome', 'facial paralysis', 'cross-face nerve graft', 'cfng', 'sural nerve', '64890', '64891', 'free gracilis transfer', '15756', 'masseteric nerve transposition', '64864', 'operating microscope', '69990', 'fascia lata', '20926', 'modifier 58', 'staged procedure'],
   },
   {
+    id: 'spec-pediatric-spine-eos',
+    category: 'specialties',
+    title: 'Pediatric Early-Onset Scoliosis (EOS) & Growing Rods Billing',
+    subtitle: 'MCGR (22842), staged distraction (+22849-58), VEPTR (+22848), and outpatient clinics',
+    href: '/medical-billing/pediatric-spine-eos',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric spine', 'early-onset scoliosis', 'eos', 'growing rods', 'mcgr', 'magec', '22842', 'veptr', 'thoracic insufficiency', '22848', 'staged distraction', '22849', '22850', 'modifier 58', 'ponte osteotomy', '22212', '99214', '72082'],
+  },
+  {
+    id: 'spec-hipec-surgical-oncology',
+    category: 'specialties',
+    title: 'Cytoreductive Surgery (CRS) & HIPEC Chemoperfusion Billing',
+    subtitle: 'Multivisceral peritonectomy (49205), HIPEC perfusion (+96560), Mod 62 & colectomy (44140)',
+    href: '/medical-billing/hipec-surgical-oncology',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['hipec', 'cytoreductive surgery', 'crs', 'peritonectomy', '49205', '49204', 'hyperthermic chemoperfusion', '96560', 'co-surgery', 'modifier 62', 'colectomy', '44140', 'splenectomy', '38100', 'critical care', '99291', 'modifier 24'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 62+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 64+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery'],
   },
 ];
 

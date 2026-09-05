@@ -1140,6 +1140,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Is motor nerve transposition (CPT 64864) separately reportable with free gracilis transfer (15756)?', a: 'Yes. When masseteric nerve transposition (branch of cranial nerve V3) is utilized for dual-innervation or primary motor input to the gracilis neurovascular pedicle, CPT 64864 is separately reportable with Modifier 51 or 59. Operative notes must detail separate nerve dissection and coaptation to the gracilis obturator nerve.' },
     ],
   },
+  {
+    slug: 'pediatric-spine-eos',
+    name: 'Complex Pediatric Spine Surgery & Early-Onset Scoliosis (EOS)',
+    noun: 'pediatric orthopedic spine surgeons, pediatric deformity specialists, scoliosis teams, and pediatric spine centers',
+    cpt: '22842, 22843, 22848, 22849, 22850, 22852, 22212, 22214, 20930, 20936, 99213, 99214',
+    blurb:
+      'Growth-friendly surgical treatment for early-onset scoliosis (EOS) and thoracic insufficiency syndrome (TIS): magnetically controlled growing rods (MCGR/MAGEC), traditional dual growing rods, rib-based VEPTR distraction, staged surgical lengthening with Modifier -58, and non-invasive magnetic distraction clinics.',
+    painPoints: [
+      'Staged surgical growing rod lengthening (+22849/22850) global bundling clawbacks: Commercial payers bundling 6-month planned lengthenings into initial instrumentation global period absent Modifier -58',
+      'Outpatient magnetic distraction (MCGR) E/M downcoding: Health plans rejecting high-complexity evaluation and management visits (99214) with non-invasive magnetic rod lengthening protocols',
+      'VEPTR rib-to-spine instrumentation unbundling rejections: Denial of rib hooks and cradle anchors (+22848) billed alongside growing construct implantation',
+      'Spinal growth construct removal and revision bundling: Disallowing rod exchange and hardware removal (22850/22852) during definitive fusion transition',
+    ],
+    faqs: [
+      { q: 'How should planned surgical lengthenings of growing rods be billed within the global period?', a: 'When a child undergoes surgical distraction of traditional growing rods or VEPTR (CPT 22849 or 22850), the procedure must be appended with Modifier -58 (staged or related procedure by the same physician during the postoperative period). The initial operative report must state that recurrent 6-month surgical distractions are a planned component of the patient\'s growth-sparing treatment plan.' },
+      { q: 'Can non-invasive magnetic lengthening of MCGR rods be billed separately from an E/M visit?', a: 'Currently, there is no discrete CPT code for non-invasive external magnetic distraction of MCGR rods. The physician encounter is reported using an established patient office visit code (99213 or 99214) based on medical decision making, accounting for neurological examination, radiographic assessment of rod expansion, and clinical deformity surveillance.' },
+    ],
+  },
+  {
+    slug: 'hipec-surgical-oncology',
+    name: 'Cytoreductive Surgery & Hyperthermic Intraperitoneal Chemotherapy (HIPEC)',
+    noun: 'surgical oncologists, peritoneal surface malignancy surgeons, gynecologic oncologists, and advanced cancer centers',
+    cpt: '49203, 49204, 49205, 49220, 96560, 77600, 44140, 44150, 44160, 38100, 47120, 49000, 99291',
+    blurb:
+      'Multivisceral cytoreductive surgery (CRS) and 90-minute closed-circuit heated intraperitoneal chemoperfusion (HIPEC) for appendiceal adenocarcinoma, pseudomyxoma peritonei, colorectal peritoneal metastases, and ovarian carcinoma: peritonectomy, visceral resections, perfusion monitoring, and multi-specialty co-surgery.',
+    painPoints: [
+      'Chemotherapy perfusion administration (+96560) payer denial: Commercial payers and Medicare MACs rejecting heated peritoneal chemoperfusion add-on as experimental or bundled into exploratory laparotomy',
+      'Multivisceral peritonectomy (49203-49205) downcoding audits: Health plans downcoding extensive pelvic and diaphragmatic peritonectomies to simple omentectomy (49255)',
+      'Bowel resection and ostomy unbundling clawbacks: Payers bundling concomitant rectosigmoid resection (44140) or bowel anastomosis into cytoreduction codes',
+      'Dual-specialty surgical team Modifier -62 coordination: Rejection of co-surgery between surgical oncology and gynecologic oncology on combined pelvectomy and HIPEC',
+    ],
+    faqs: [
+      { q: 'How should hyperthermic intraperitoneal chemotherapy (HIPEC) perfusion be coded?', a: 'HIPEC perfusion is commonly reported using CPT code 96560 (intraperitoneal chemotherapy administration, including preparation and monitoring) or unlisted chemotherapy administration (96549), often paired with CPT 77600/77605 (hyperthermia treatment) depending on payer-specific medical policies. Operative notes must detail chemotherapeutic agent (mitomycin-C or cisplatin), target temperature (41-43°C), 90-minute perfusion duration, and closed-circuit inflow/outflow catheter placement.' },
+      { q: 'Are bowel resections separately reportable with cytoreductive peritonectomy?', a: 'Yes. Under CMS NCCI guidelines, bowel resections (such as segmental colectomy 44140 or low anterior resection 44145) performed for direct oncologic tumor clearance are separately billable with Modifier -51 or -59 from cytoreductive debulking of peritoneal implants (49203-49205), provided the operative dictation clearly describes distinct visceral mesenteric resection.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

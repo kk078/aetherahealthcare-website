@@ -57,6 +57,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/pediatric-eos-scrubber',
+    icon: Bone,
+    name: 'Pediatric Early-Onset Scoliosis (EOS) & Growing Rod Scrubber',
+    desc: 'Audit magnetically controlled growing rods (MCGR), staged surgical lengthenings (22849-58), VEPTR rib distraction, pelvic anchors (+22848), and outpatient distraction clinics.',
+    category: 'scrubbers',
+    tag: 'Pediatric Orthopedic Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/hipec-scrubber',
+    icon: Droplets,
+    name: 'Cytoreductive Surgery & HIPEC Perfusion Scrubber',
+    desc: 'Audit extensive peritonectomy (49205), defend 90-min heated chemoperfusion (+96560), coordinate co-surgeon Modifier -62, and safeguard concomitant bowel resections (44140-51).',
+    category: 'scrubbers',
+    tag: 'Surgical Oncology',
+    badge: 'New',
+  },
+  {
     href: '/tools/achd-reoperation-scrubber',
     icon: Heart,
     name: 'Adult Congenital Heart Disease (ACHD) & Fontan Conversion Scrubber',

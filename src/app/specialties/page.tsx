@@ -71,6 +71,8 @@ const specialtyLinks: Record<string, string> = {
   'Pediatric Airway Reconstruction & Complex Laryngotracheal Stenosis': '/medical-billing/pediatric-airway',
   'Adult Congenital Heart Disease (ACHD) & Fontan Conversion': '/medical-billing/adult-congenital-heart-disease',
   'Pediatric Complex Facial Reanimation & Free Gracilis Transfer': '/medical-billing/pediatric-facial-reanimation',
+  'Complex Pediatric Spine Surgery & Early-Onset Scoliosis (EOS)': '/medical-billing/pediatric-spine-eos',
+  'Cytoreductive Surgery & Hyperthermic Intraperitoneal Chemotherapy (HIPEC)': '/medical-billing/hipec-surgical-oncology',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -477,6 +479,18 @@ const specialties = [
         description: 'Dynamic smile reanimation for congenital Moebius syndrome and pediatric facial paralysis, microneurovascular free gracilis muscle transfer (15756), cross-face sural nerve grafting (64890/64891), and masseteric nerve transposition (64864).',
         cptCodes: '15756, 64890, 64891, 64864, 64865, 20926, 69990, 15840, 15845',
         challenges: 'Sural nerve graft harvest unbundling, masseteric nerve transposition bundling into free flap, and missing staged Modifier -58 on Stage 2 muscle transfer.'
+      },
+      {
+        name: 'Complex Pediatric Spine Surgery & Early-Onset Scoliosis (EOS)',
+        description: 'Growth-friendly deformity surgery for EOS and thoracic insufficiency syndrome (TIS), magnetically controlled growing rods (MCGR/MAGEC), traditional growing rods, rib-to-spine distraction (VEPTR), and staged lengthenings (22849/22850) with Modifier -58.',
+        cptCodes: '22842, 22843, 22848, 22849, 22850, 22852, 22212, 22214, 20930, 20936, 99213, 99214',
+        challenges: 'Staged surgical growing rod lengthening global bundling clawbacks, outpatient magnetic distraction (MCGR) E/M downcoding, and VEPTR rib anchor unbundling.'
+      },
+      {
+        name: 'Cytoreductive Surgery & Hyperthermic Intraperitoneal Chemotherapy (HIPEC)',
+        description: 'Multivisceral cytoreductive surgery (CRS) and 90-minute closed-circuit heated intraperitoneal chemoperfusion (HIPEC), peritonectomy, visceral resections, perfusion monitoring, and multi-specialty co-surgery.',
+        cptCodes: '49203, 49204, 49205, 49220, 96560, 77600, 44140, 44150, 44160, 38100, 47120, 49000, 99291',
+        challenges: 'Chemotherapy perfusion administration (+96560) experimental denials, multivisceral peritonectomy downcoding, and bowel resection unbundling clawbacks.'
       }
     ]
   }
@@ -484,13 +498,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 62+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 64+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 62+ specialties — Adult Congenital Heart Disease, Pediatric Facial Reanimation, Skull Base Surgery, Pediatric Airway, LVAD Reoperation, and more.',
+    description: 'Expert medical billing across 64+ specialties — Pediatric Spine & EOS, Cytoreductive Surgery & HIPEC, Adult Congenital Heart Disease, Pediatric Facial Reanimation, Skull Base Surgery, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -501,7 +515,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 62 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 64 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -522,10 +536,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 62+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 64+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['62+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['64+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}
