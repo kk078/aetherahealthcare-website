@@ -43,6 +43,8 @@ const specialtyLinks: Record<string, string> = {
   'Gynecologic Oncology': '/medical-billing/gynecologic-oncology',
   'Home Health & Hospice Care': '/medical-billing/home-health-hospice',
   'Wound Care & Hyperbaric Medicine': '/medical-billing/wound-care',
+  'FQHC & Community Health Clinics': '/medical-billing/fqhc',
+  'Sleep Medicine & Polysomnography': '/medical-billing/sleep-medicine',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -281,6 +283,18 @@ const specialties = [
         description: 'Surgical excisional debridement, Cellular & Tissue-Based Products (CTPs/skin substitutes) with Modifier JW/JZ, and HBOT.',
         cptCodes: '11042-11047, 97597-97598, Q4100-Q4280, 99183, G0277, 29580',
         challenges: 'Skin substitute CTP wastage billing (JW/JZ), debridement depth downcoding, and HBOT 30-day conservative therapy prior auth.'
+      },
+      {
+        name: 'FQHC & Community Health Clinics',
+        description: 'CMS Prospective Payment System (PPS) encounters, Medicaid wrap reconciliations, and same-day medical & behavioral health billing.',
+        cptCodes: 'G0466-G0470, G0511, G0512, 0521/0900 (UB-04), 99213-99215',
+        challenges: 'Unbilled same-day behavioral health encounters, delayed Medicaid wrap reconciliations, and sliding fee discount schedule leakage.'
+      },
+      {
+        name: 'Sleep Medicine & Polysomnography',
+        description: 'In-lab polysomnography (PSG), Home Sleep Apnea Testing (HSAT Types II–IV), split-night CPAP titrations, and 90-day PAP compliance.',
+        cptCodes: '95800, 95806, 95810, 95811, 95782, G0398-G0400, 94660',
+        challenges: 'HSAT vs in-lab prior authorization denials, split-night study threshold failures, and CMS 90-day CPAP compliance telemetry clawbacks.'
       }
     ]
   }
@@ -288,13 +302,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 34+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 36+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 34+ specialties — Cardiology, Orthopedics, Interventional Radiology, Addiction Medicine, Gynecologic Oncology, Home Health & Hospice, Wound Care, and more.',
+    description: 'Expert medical billing across 36+ specialties — Cardiology, Orthopedics, Interventional Radiology, FQHC, Sleep Medicine, Addiction Medicine, Home Health & Hospice, Wound Care, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -305,7 +319,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 34 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 36 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -326,10 +340,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 34+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 36+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['34+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['36+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

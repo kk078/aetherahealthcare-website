@@ -636,6 +636,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'What documentation prevents surgical debridement (11042–11047) downcoding?', a: 'We require clinical notes to record wound surface measurements before and after debridement, depth of tissue removed (down to subcutaneous/fascia/muscle), instruments utilized, and percent of devitalized tissue excised.' },
     ],
   },
+  {
+    slug: 'fqhc',
+    name: 'FQHC & Community Health Clinics',
+    noun: 'Federally Qualified Health Centers, Look-Alikes, and Rural Health Clinics',
+    cpt: 'G0466–G0470, G0511, G0512, 0521 (UB-04), 0900 (Mental Health), 99213–99215',
+    blurb:
+      'CMS Prospective Payment System (PPS) encounter rates, Medicaid wrap-around payment reconciliation, and same-day medical plus behavioral health billing.',
+    painPoints: [
+      'Unbilled same-day behavioral health encounters: Payers improperly bundling mental health services (G0469/G0470) into medical encounters (G0466/G0467) when patients see both providers on the same date',
+      'Delayed Medicaid wrap-around reconciliations: State Medicaid managed care plans withholding supplemental interim payments and complex cost report true-ups',
+      'Sliding Fee Discount Schedule (SFDS) co-pay leakage: Inconsistent patient nominal fee collection and non-compliant poverty guideline tier verification',
+      'Chronic Care Management (G0511) and BHI (G0512) revenue loss: Failure to capture Medicare care coordination revenue across rural and underserved patient cohorts',
+    ],
+    faqs: [
+      { q: 'How do you bill both a medical and mental health visit for the same patient on the same day?', a: 'Under CMS PPS guidelines, an FQHC can bill two separate PPS encounter codes (e.g. G0467 for medical and G0470 for mental health) on the same date of service using Modifier 59 or XE and separate revenue lines (0521 and 0900), provided both visits meet independent medical necessity criteria.' },
+      { q: 'How does Aethera manage Medicaid PPS wrap-around reconciliations?', a: 'We track every Medicaid MCO claim adjudication against your state-approved PPS rate, automatically calculating the supplemental wrap-around differential and submitting electronic wrap logs to state Medicaid agencies for accelerated reimbursement.' },
+    ],
+  },
+  {
+    slug: 'sleep-medicine',
+    name: 'Sleep Medicine & Polysomnography',
+    noun: 'sleep disorders centers, accredited sleep labs, and polysomnography practices',
+    cpt: '95800, 95806, 95810, 95811, 95782, G0398–G0400, 94660',
+    blurb:
+      'In-lab polysomnography (PSG), Home Sleep Apnea Testing (HSAT Types II–IV), split-night CPAP titrations, and 90-day PAP compliance adherence tracking.',
+    painPoints: [
+      'Home Sleep Apnea Test (HSAT) vs in-lab prior-authorization denials: Payers mandating tiered home testing (CPT 95800/95806) before approving in-lab PSG (CPT 95810)',
+      'Split-night diagnostic & titration criteria failures: Denials for CPT 95811 when diagnostic recording time is under 2 hours or AHI criteria are not satisfied',
+      'CMS 90-day CPAP compliance recoupments: Payer clawbacks for durable medical equipment CPAP rentals when 4+ hours/night for 70% of 30 consecutive days is unverified',
+      'Place of Service (POS 11 vs 22 vs 12) split-billing errors: Rejections when home sleep tests (POS 12) or facility-based labs (POS 22) are billed with incorrect technical vs professional modifiers (TC/26)',
+    ],
+    faqs: [
+      { q: 'What clinical documentation is required to overturn in-lab PSG prior-authorization denials?', a: 'We package complete Epworth Sleepiness Scale (ESS >= 10) scores, documented cardiopulmonary or neuromuscular comorbidities (CHF, COPD, stroke history), physical airway exams (Mallampati IV), and prior failed or inconclusive HSAT reports.' },
+      { q: 'How do you prevent CPAP setup and DME rental recoupments?', a: 'We integrate with CPAP cloud telemetry platforms (AirView, Care Orchestrator) to capture 30-day adherence compliance data and physician face-to-face re-evaluation documentation before submitting 90-day compliance attestations.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

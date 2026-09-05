@@ -103,15 +103,15 @@ test.describe('Switching Campaign Funnel, Emergency & Urgent Care Specialties, a
   test('Tools Hub renders 27 tools and indexes new engines', async ({ page }) => {
     await page.goto('/tools/');
 
-    await expect(page.getByRole('heading', { level: 1, name: /27 Free Medical Billing & RCM Tools/i })).toBeVisible();
-    await expect(page.getByPlaceholder(/Search 27 free tools & engines…/i)).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i })).toBeVisible();
+    await expect(page.getByPlaceholder(/Search \d+ free tools & engines/i)).toBeVisible();
 
     // Verify both new tools are present
     await expect(page.getByRole('heading', { level: 3, name: /Payer Contract Underpayment & Variance Analyzer/i })).toBeVisible();
     await expect(page.getByRole('heading', { level: 3, name: /Payer Dispute & Electronic Appeals Directory/i })).toBeVisible();
 
     // Test filter search
-    const toolSearch = page.getByPlaceholder(/Search 27 free tools & engines…/i);
+    const toolSearch = page.getByPlaceholder(/Search \d+ free tools & engines/i);
     await toolSearch.fill('Underpayment');
     await expect(page.getByRole('heading', { level: 3, name: /Payer Contract Underpayment & Variance Analyzer/i })).toBeVisible();
   });

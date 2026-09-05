@@ -29,6 +29,8 @@ import {
   Scale,
   Scissors,
   Dna,
+  Building2,
+  Ambulance,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -42,6 +44,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/fqhc-pps-scrubber',
+    icon: Building2,
+    name: 'FQHC PPS Encounter Rate & Same-Day Service Scrubber',
+    desc: 'Calculate CMS FQHC PPS encounter rates with GAF geographic adjustments, validate same-day mental health statutory exceptions (Modifier 59/XE), and model Medicaid wrap-around reconciliations.',
+    category: 'scrubbers',
+    tag: 'FQHC / RHC',
+    badge: 'New',
+  },
+  {
+    href: '/tools/ambulance-fee-calculator',
+    icon: Ambulance,
+    name: 'Ambulance & EMS Fee Schedule Calculator',
+    desc: 'Compute Medicare Ambulance Fee Schedule reimbursement for BLS, ALS1, ALS2, and SCT, apply statutory rural mileage multipliers, and validate 2-character origin/destination modifier pairs.',
+    category: 'calculators',
+    tag: 'Ambulance / EMS',
+    badge: 'New',
+  },
   {
     href: '/tools/moldx-zcode-scrubber',
     icon: Dna,

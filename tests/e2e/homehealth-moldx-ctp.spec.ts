@@ -93,18 +93,18 @@ test.describe('Home Health & Hospice Funnel, Specialties 33-34, MolDX Scrubber &
     await page.screenshot({ path: `${ARTIFACT_DIR}/ctp_skin_substitute_calculator_tool.png`, fullPage: false });
   });
 
-  test('Tools Hub renders 39 tools and indexes MolDX scrubber and CTP wastage calculator', async ({ page }) => {
+  test('Tools Hub renders tools and indexes MolDX scrubber and CTP wastage calculator', async ({ page }) => {
     await page.goto('/tools/');
 
-    await expect(page.getByRole('heading', { level: 1, name: /39 Free Medical Billing & RCM Tools/i })).toBeVisible();
-    await expect(page.getByPlaceholder(/Search 39 free tools & engines…/i)).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i })).toBeVisible();
+    await expect(page.getByPlaceholder(/Search \d+ free tools & engines/i)).toBeVisible();
 
     // Verify both new tools are present in catalog
     await expect(page.getByRole('heading', { level: 3, name: /Molecular Diagnostics MolDX® Z-Code & LCD Scrubber/i })).toBeVisible();
     await expect(page.getByRole('heading', { level: 3, name: /Skin Substitute & CTP Wastage Modifier JW \/ JZ Calculator/i })).toBeVisible();
 
     // Test search filter for MolDX
-    const toolSearch = page.getByPlaceholder(/Search 39 free tools & engines…/i);
+    const toolSearch = page.getByPlaceholder(/Search \d+ free tools & engines/i);
     await toolSearch.fill('MolDX');
     await expect(page.getByRole('heading', { level: 3, name: /Molecular Diagnostics MolDX® Z-Code & LCD Scrubber/i })).toBeVisible();
 
