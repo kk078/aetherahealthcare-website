@@ -456,6 +456,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How do you navigate multiple endoscopy reduction rules in sinus surgery?', a: 'We model the base endoscopy code values against secondary sinus procedures, sequencing the highest RVU surgery primarily and tracking appropriate modifier 51/59 indicators to protect net surgeon yield.' },
     ],
   },
+  {
+    slug: 'rheumatology',
+    name: 'Rheumatology & Biologic Infusion',
+    noun: 'rheumatologists, arthritis centers, and biologic infusion suites',
+    cpt: '96413–96415, 96372, 20610, 20611, 77080, J1745, J9312, J3262',
+    blurb:
+      'High-cost specialty biologic Buy & Bill J-codes, in-office infusion therapy sequencing, ultrasound-guided arthrocentesis (20611), and DEXA bone density scans.',
+    painPoints: [
+      'Biologic Buy & Bill clawbacks: Commercial payer denials on high-dollar infused drugs (Remicade, Rituxan, Actemra) due to NDC unit conversion errors',
+      'JW/JZ waste modifier audit recoupments: Missing single-dose vial wastage documentation or incorrect discard unit calculation on CMS-1500',
+      'Arthrocentesis bundling: Joint injections (20610/20611) denied when billed with same-day follow-up visits without discrete Modifier 25 clinical notes',
+      'Prior-authorization re-certification lapses for ongoing maintenance biologic infusions causing sudden $5,000+ per-patient unreimbursed losses',
+    ],
+    faqs: [
+      { q: 'How do you prevent Buy and Bill financial leakage on rheumatology biologics?', a: 'Our dedicated specialty pharmacy pod verifies upfront pre-authorization, exact NDC 11-digit package identifiers, and unit conversions before scheduling the infusion, capturing 100% of drug costs.' },
+      { q: 'How do you ensure compliance with CMS JW and JZ drug waste modifiers?', a: 'We calculate exact discard units from single-dose vials, appending Modifier JW to documented wasted milligrams and Modifier JZ to zero-waste administrations per CMS requirements.' },
+    ],
+  },
+  {
+    slug: 'pulmonology',
+    name: 'Pulmonology & Sleep Medicine',
+    noun: 'pulmonologists, critical care physicians, and sleep diagnostic centers',
+    cpt: '94010, 94060, 94375, 94726, 95800–95811, 31622–31629, 99202–99215',
+    blurb:
+      'Complete pulmonary function testing (PFT), diagnostic and therapeutic sleep studies (polysomnography 95810), home sleep apnea tests (HSAT), and flexible bronchoscopy.',
+    painPoints: [
+      'PFT component bundling: Multiple PFT codes (spirometry 94010, plethysmography 94726, DLCO 94729) unbundled or denied under restrictive commercial payer bundles',
+      'Sleep study technical component denials: Polysomnography (95810/95811) denied due to insufficient continuous recording time (<6 hours) or lack of pre-authorization',
+      'Home sleep apnea test (HSAT 95800/G0399) denials when patient fails to meet strict Epworth Sleepiness Scale or clinical comorbidity criteria',
+      'Diagnostic bronchoscopy with biopsy (31625/31628) downcoded or bundled into primary airway inspection (31622)',
+    ],
+    faqs: [
+      { q: 'How do you ensure proper reimbursement for complete pulmonary function tests (PFTs)?', a: 'We bill comprehensive PFT panels using appropriate component coding (spirometry, gas dilution, and diffusion capacity) with distinct ICD-10 indications, eliminating unbundling rejections.' },
+      { q: 'How do you manage sleep study pre-authorizations and compliance verification?', a: 'We capture all necessary clinical documentation—including documented snoring, witnessed apneas, and high Epworth Sleepiness Scale scores—to secure pre-authorization prior to patient sleep lab intake.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

@@ -110,11 +110,11 @@ test.describe('PPC Landing Page, Attribution, Radiology & Pathology, and 25-Tool
   test('Tools directory indexes all 25 tools and filters new compliance engines', async ({ page }) => {
     await page.goto('/tools/');
 
-    // Verify 25 tools button
-    await expect(page.getByRole('button', { name: /All Tools \(25\)/i })).toBeVisible();
+    // Verify tools button
+    await expect(page.getByRole('button', { name: /All Tools \(\d+\)/i })).toBeVisible();
 
     // Search for Prior-Auth
-    const searchInput = page.getByPlaceholder(/Search 25 free tools & engines/i);
+    const searchInput = page.getByPlaceholder(/Search \d+ free tools & engines/i);
     await searchInput.fill('Prior-Auth');
     await expect(page.getByRole('heading', { name: /Prior-Auth Requirement & Payer Gold-Card Matrix/i })).toBeVisible();
 

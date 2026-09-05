@@ -41,6 +41,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/hcc-raf-calculator',
+    icon: Activity,
+    name: 'CMS HCC Risk Adjustment & RAF Score Benchmarker',
+    desc: 'Model risk score erosion transitioning from CMS-HCC v28 to v24. Estimate Medicare Advantage capitation changes, capture disease interactions, and review MEAT criteria.',
+    category: 'calculators',
+    tag: 'Risk Adjustment',
+    badge: 'New',
+  },
+  {
+    href: '/tools/mips-score-forecaster',
+    icon: Award,
+    name: 'CMS MIPS Performance Score & Penalty Forecaster',
+    desc: 'Forecast MIPS composite scores out of 100 points. Model Part B payment penalties (up to -9.0%) or positive incentive bonuses across Quality, Interoperability, Improvement Activities, and Cost.',
+    category: 'calculators',
+    tag: 'MIPS QPP',
+    badge: 'New',
+  },
+  {
     href: '/tools/denial-overturn-predictor',
     icon: ShieldAlert,
     name: 'Claim Denial Overturn Probability & Strategy Predictor',
@@ -370,7 +388,7 @@ export default function ToolsDirectory() {
               type="search"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search 29 free tools & engines…"
+              placeholder="Search 31 free tools & engines…"
               className="w-full pl-9 pr-3 py-1.5 border border-gray/25 rounded-xl text-xs text-navy focus:outline-none focus:ring-2 focus:ring-teal"
             />
           </div>

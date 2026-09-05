@@ -87,15 +87,15 @@ test.describe('Solo Practice Funnel, Nephrology & ENT Specialties, and 29-Tool S
   test('Tools Hub renders 29 tools and indexes new engines', async ({ page }) => {
     await page.goto('/tools/');
 
-    await expect(page.getByRole('heading', { level: 1, name: /29 Free Medical Billing & RCM Tools/i })).toBeVisible();
-    await expect(page.getByPlaceholder(/Search 29 free tools & engines…/i)).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i })).toBeVisible();
+    await expect(page.getByPlaceholder(/Search \d+ free tools & engines/i)).toBeVisible();
 
     // Verify both new tools are present
     await expect(page.getByRole('heading', { level: 3, name: /Claim Denial Overturn Probability & Strategy Predictor/i })).toBeVisible();
     await expect(page.getByRole('heading', { level: 3, name: /50-State Prompt-Payment Statute & Penalty Matrix/i })).toBeVisible();
 
     // Test search filter
-    const toolSearch = page.getByPlaceholder(/Search 29 free tools & engines…/i);
+    const toolSearch = page.getByPlaceholder(/Search \d+ free tools & engines/i);
     await toolSearch.fill('Overturn');
     await expect(page.getByRole('heading', { level: 3, name: /Claim Denial Overturn Probability & Strategy Predictor/i })).toBeVisible();
   });

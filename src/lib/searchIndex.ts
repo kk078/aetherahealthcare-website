@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 8 Interactive Tools
+// 31 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -368,6 +368,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'amber',
     keywords: ['prompt pay', 'statute', 'state laws', 'clean claim deadline', 'interest penalty', 'texas prompt pay', 'florida prompt pay', 'late claim penalty', 'demand letter'],
   },
+  {
+    id: 'tool-hcc-raf',
+    category: 'tools',
+    title: 'CMS HCC Risk Adjustment & RAF Score Benchmarker',
+    subtitle: 'CMS-HCC v28 vs v24 risk model comparison, disease interactions & capitation revenue',
+    description: 'Calculate and model patient risk adjustment factor (RAF) score erosion between CMS-HCC v28 and v24, benchmark Medicare Advantage revenue impacts, and audit MEAT criteria.',
+    href: '/tools/hcc-raf-calculator',
+    badge: 'Risk Adjustment',
+    badgeVariant: 'emerald',
+    keywords: ['hcc', 'raf', 'risk adjustment', 'cms v28', 'v24', 'meat criteria', 'medicare advantage', 'capitation', 'diabetes hcc', 'ckd stage 4', 'chf'],
+  },
+  {
+    id: 'tool-mips-forecaster',
+    category: 'tools',
+    title: 'CMS MIPS Performance Score & Penalty Forecaster',
+    subtitle: 'Forecast MIPS composite score out of 100 & Medicare Part B payment adjustments (-9.0% to +3.6%)',
+    description: 'Forecast Merit-based Incentive Payment System (MIPS) composite scores across Quality, Interoperability, Improvement Activities, and Cost to avoid the 75-point penalty cliff.',
+    href: '/tools/mips-score-forecaster',
+    badge: 'MIPS QPP',
+    badgeVariant: 'purple',
+    keywords: ['mips', 'qpp', 'penalty', 'macra', 'part b adjustment', 'quality measures', 'promoting interoperability', 'improvement activities', 'cost category', 'cehrt'],
+  },
 ];
 
 // Specialties
@@ -641,6 +663,26 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     badge: 'Specialty',
     badgeVariant: 'blue',
     keywords: ['ent', 'otolaryngology', 'sinus', 'fess', 'balloon sinuplasty', '31231', '31254', 'allergy', '95165', 'ear nose throat'],
+  },
+  {
+    id: 'spec-rheumatology',
+    category: 'specialties',
+    title: 'Rheumatology & Biologic Infusion Billing',
+    subtitle: 'High-cost Buy & Bill biologic J-codes, JW/JZ waste modifiers & ultrasound arthrocentesis',
+    href: '/medical-billing/rheumatology',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['rheumatology', 'biologics', 'infusion', 'remicade', 'rituxan', 'j-code', '20610', 'arthrocentesis', 'jw modifier', 'arthritis'],
+  },
+  {
+    id: 'spec-pulmonology',
+    category: 'specialties',
+    title: 'Pulmonology & Sleep Medicine Billing',
+    subtitle: 'Complete PFT panels (94010–94729), polysomnography (95810) & HSAT home sleep studies',
+    href: '/medical-billing/pulmonology',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pulmonology', 'sleep medicine', 'pft', 'spirometry', 'polysomnography', '95810', 'hsat', 'sleep apnea', 'cpap', 'bronchoscopy'],
   },
   {
     id: 'spec-all',

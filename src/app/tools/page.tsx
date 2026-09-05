@@ -7,9 +7,9 @@ import ToolsDirectory from '@/components/ui/ToolsDirectory';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: { absolute: '29 Free Medical Billing, EDI & RCM Tools | Aethera Healthcare' },
+  title: { absolute: '31 Free Medical Billing, EDI & RCM Tools | Aethera Healthcare' },
   description:
-    '29 free tools for revenue cycle teams: Denial overturn predictor, 50-state prompt pay matrix, contract underpayment analyzer, payer dispute directory, prior auth matrix, modifier compliance engine, and EDI scrubbers. No login required.',
+    '31 free tools for revenue cycle teams: CMS HCC RAF benchmarker, MIPS score forecaster, denial overturn predictor, 50-state prompt pay matrix, contract underpayment analyzer, and EDI scrubbers. No login required.',
 };
 
 export default function ToolsHub() {
@@ -19,11 +19,11 @@ export default function ToolsHub() {
 
       <RcmHeroBand
         eyebrow="Free · No Login Required"
-        title="29 Free Medical Billing & RCM Tools"
+        title="31 Free Medical Billing & RCM Tools"
         subtitle="Clinical scrubbers, federal compliance engines, financial calculators, and EDI diagnostic parsers used daily by our senior billing specialists — open to all healthcare providers."
-        primary={{ href: '#tools', label: 'Explore All 29 Tools' }}
+        primary={{ href: '#tools', label: 'Explore All 31 Tools' }}
         secondary={{ href: '/free-assessment', label: 'Get a Free Practice Audit' }}
-        chips={['29 Free Tools', 'No Login Required', 'Federal Statutory Compliance', 'Built by AAPC Coders']}
+        chips={['31 Free Tools', 'No Login Required', 'Federal Statutory Compliance', 'Built by AAPC Coders']}
       />
 
       <section id="tools" className="py-12 md:py-16 flex-1 scroll-mt-24">

@@ -15,8 +15,8 @@ const specialtyLinks: Record<string, string> = {
   'Endocrinology': '/medical-billing/internal-medicine',
   'Gastroenterology': '/medical-billing/gastroenterology',
   'Neurology': '/medical-billing/neurology',
-  'Pulmonology': '/medical-billing/internal-medicine',
-  'Rheumatology': '/medical-billing/internal-medicine',
+  'Pulmonology': '/medical-billing/pulmonology',
+  'Rheumatology': '/medical-billing/rheumatology',
   'Pain Management & Spine': '/medical-billing/pain-management',
   'Obstetrics & Gynecology (OB/GYN)': '/medical-billing/obgyn',
   'Ophthalmology & Optometry': '/medical-billing/ophthalmology',
@@ -244,32 +244,39 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 25+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 26+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  alternates: {
+    canonical: 'https://aetherahealthcare.com/specialties',
+  },
+  openGraph: {
+    title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
+    description: 'Expert medical billing across 26+ specialties — Cardiology, Orthopedics, Pain Management, Oncology, Rheumatology, Pulmonology, and more.',
+    url: 'https://aetherahealthcare.com/specialties',
+    type: 'website',
+  },
 };
 
-export default function Specialties() {
+export default function SpecialtiesPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
+    "description": "Expert billing and revenue cycle management for over 26 medical specialties with deep specialty-specific knowledge.",
+    "url": "https://aetherahealthcare.com/specialties",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aethera Healthcare Solutions",
+      "url": "https://aetherahealthcare.com",
+      "logo": "https://aetherahealthcare.com/logo.png"
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
-      <>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "name": "Medical Specialties We Serve | Aethera Healthcare Solutions",
-              "description": "Expert billing and revenue cycle management for over 25 medical specialties with deep specialty-specific knowledge.",
-              "url": "https://aetherahealthcare.com/specialties",
-              "publisher": {
-                "@type": "Organization",
-                "name": "Aethera Healthcare Solutions",
-                "url": "https://aetherahealthcare.com",
-                "logo": "https://aetherahealthcare.com/logo.png"
-              }
-            })
-          }}
-        />
-      </>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       <RcmHeroBand
