@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 65 Interactive Tools
+// 67 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -775,6 +775,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'emerald',
     keywords: ['pediatric airway', 'laryngotracheal reconstruction', 'ltr', 'subglottic stenosis', 'cricotracheal resection', 'ctr', '31587', '31590', '31584', 'costal cartilage', 'rib graft harvest', '20902', 'tracheoplasty', '31750', 'balloon dilation', '31630', 'staged bronchoscopy', '31622', '31575', 'modifier 58', 'modifier 59', 'cotton-myer', 'aerodigestive'],
   },
+  {
+    id: 'tool-achd-reoperation',
+    category: 'tools',
+    title: 'Adult Congenital Heart Disease (ACHD) & Fontan Conversion Scrubber',
+    subtitle: 'Fontan conversion (33737), redo sternotomy (+33530), cryoablation Maze (+33257/+33258) & PVR',
+    description: 'Scrub complex Fontan conversion (33737), defend redo sternotomy adhesiolysis add-ons (+33530), safeguard concomitant arrhythmia cryoablation Maze (+33257/+33258), and audit pulmonary valve replacements.',
+    href: '/tools/achd-reoperation-scrubber',
+    badge: 'ACHD Cardiac Surgery',
+    badgeVariant: 'purple',
+    keywords: ['achd', 'adult congenital heart disease', 'fontan conversion', 'extracardiac conduit', 'tcpc', '33737', 'fontan revision', '33735', 'rvot reconstruction', '33608', 'redo sternotomy', '33530', 'cryoablation maze', '33257', '33258', 'pulmonary valve replacement', 'pvr', '33475', 'modifier 51', 'fontan fenestration', '93581', 'ecmo', '33946', 'modifier 59'],
+  },
+  {
+    id: 'tool-pediatric-facial-reanimation',
+    category: 'tools',
+    title: 'Pediatric Facial Reanimation & Free Gracilis Scrubber',
+    subtitle: 'Staged Modifier -58 on Stage 2 free gracilis (15756), masseteric transposition (64864-51) & +69990',
+    description: 'Audit dynamic smile reanimation for congenital Moebius syndrome and pediatric facial palsy, enforce staged Modifier -58 compliance on Stage 2 free gracilis transfer (15756), defend masseteric nerve transposition (64864-51), and protect +69990.',
+    href: '/tools/pediatric-facial-reanimation-scrubber',
+    badge: 'Pediatric Microsurgery',
+    badgeVariant: 'teal',
+    keywords: ['pediatric facial reanimation', 'facial palsy', 'moebius syndrome', 'free gracilis transfer', 'microneurovascular free flap', '15756', 'cross-face nerve graft', 'cfng', 'sural nerve harvest', '64890', '64891', 'masseteric nerve transfer', '64864', 'operating microscope', '69990', 'fascia lata sling', '20926', 'modifier 58', 'staged procedure', 'modifier 51', 'modifier 59'],
+  },
 ];
 
 // Specialties
@@ -1410,14 +1432,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['pediatric airway', 'pediatric ent', 'laryngotracheal reconstruction', 'ltr', 'subglottic stenosis', 'cricotracheal resection', 'ctr', '31587', '31590', '31584', 'costal cartilage', 'rib graft', '20902', 'tracheoplasty', '31750', 'balloon dilation', '31630', 'staged bronchoscopy', '31622', 'modifier 58', 'modifier 59'],
   },
   {
+    id: 'spec-adult-congenital-heart-disease',
+    category: 'specialties',
+    title: 'Adult Congenital Heart Disease (ACHD) & Fontan Conversion Billing',
+    subtitle: 'Fontan conversion (33737), redo sternotomy (+33530), cryoablation Maze (+33257/+33258) & PVR',
+    href: '/medical-billing/adult-congenital-heart-disease',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['adult congenital heart disease', 'achd', 'fontan conversion', 'extracardiac conduit', 'tcpc', '33737', 'fontan revision', '33735', 'rvot reconstruction', '33608', 'redo sternotomy', '33530', 'cryoablation maze', '33257', '33258', 'pulmonary valve replacement', 'pvr', '33475', 'modifier 51', 'fenestration device closure', '93581', 'ecmo', '33946'],
+  },
+  {
+    id: 'spec-pediatric-facial-reanimation',
+    category: 'specialties',
+    title: 'Pediatric Complex Facial Reanimation & Free Gracilis Transfer Billing',
+    subtitle: 'Cross-face sural graft (64890), free gracilis (15756), masseteric transfer (64864) & Mod 58',
+    href: '/medical-billing/pediatric-facial-reanimation',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric facial reanimation', 'moebius syndrome', 'facial paralysis', 'cross-face nerve graft', 'cfng', 'sural nerve', '64890', '64891', 'free gracilis transfer', '15756', 'masseteric nerve transposition', '64864', 'operating microscope', '69990', 'fascia lata', '20926', 'modifier 58', 'staged procedure'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 60+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 62+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis'],
   },
 ];
 

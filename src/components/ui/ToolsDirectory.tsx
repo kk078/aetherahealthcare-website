@@ -57,6 +57,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/achd-reoperation-scrubber',
+    icon: Heart,
+    name: 'Adult Congenital Heart Disease (ACHD) & Fontan Conversion Scrubber',
+    desc: 'Scrub complex Fontan conversion (33737), defend redo sternotomy adhesiolysis add-ons (+33530), safeguard concomitant arrhythmia cryoablation Maze (+33257/+33258), and audit pulmonary valve replacements.',
+    category: 'scrubbers',
+    tag: 'Adult Congenital Cardiac Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/pediatric-facial-reanimation-scrubber',
+    icon: Smile,
+    name: 'Pediatric Facial Reanimation & Free Gracilis Scrubber',
+    desc: 'Audit dynamic smile reanimation for congenital Moebius syndrome and pediatric facial palsy, staged Modifier -58 on Stage 2 free gracilis transfer (15756), masseteric transposition (64864-51), and +69990.',
+    category: 'scrubbers',
+    tag: 'Pediatric Craniofacial Surgery',
+    badge: 'New',
+  },
+  {
     href: '/tools/skull-base-scrubber',
     icon: Crosshair,
     name: 'Lateral Skull Base & Acoustic Neuroma Co-Surgeon Scrubber',

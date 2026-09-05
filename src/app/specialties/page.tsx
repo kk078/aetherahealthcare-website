@@ -69,6 +69,8 @@ const specialtyLinks: Record<string, string> = {
   'Pediatric Epilepsy Surgery & Hemispherotomy': '/medical-billing/pediatric-epilepsy-surgery',
   'Complex Lateral Skull Base Surgery & Acoustic Neuroma Resection': '/medical-billing/skull-base-surgery',
   'Pediatric Airway Reconstruction & Complex Laryngotracheal Stenosis': '/medical-billing/pediatric-airway',
+  'Adult Congenital Heart Disease (ACHD) & Fontan Conversion': '/medical-billing/adult-congenital-heart-disease',
+  'Pediatric Complex Facial Reanimation & Free Gracilis Transfer': '/medical-billing/pediatric-facial-reanimation',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -463,6 +465,18 @@ const specialties = [
         description: 'Single-stage vs double-stage laryngotracheoplasty (LTR), cricotracheal resection (CTR), costal cartilage rib graft harvest (+20902), airway balloon dilation, and pediatric tracheostomy decannulation protocols.',
         cptCodes: '31587, 31590, 31584, 20902, 31780, 31575, 31579, 31622, 31630, 31600, 31610',
         challenges: 'Autologous costal cartilage graft harvest (+20902) unbundling rejections, cricotracheal resection downcoding clawbacks, and missing staged procedure Modifier -58 on postoperative bronchoscopy.'
+      },
+      {
+        name: 'Adult Congenital Heart Disease (ACHD) & Fontan Conversion',
+        description: 'Complex adult congenital heart disease revisions, Fontan conversion to extracardiac conduit (33737), concomitant arrhythmia cryoablation Maze (+33257/+33258), surgical and transcatheter pulmonary valve replacement (PVR), and redo sternotomy adhesiolysis (+33530).',
+        cptCodes: '33735, 33737, 33608, 33475, 33257, 33258, 33530, 33946, 33947, 93580, 93581',
+        challenges: 'Fontan conversion downcoding clawbacks, concomitant cryoablation Maze unbundling denials, and redo sternotomy adhesiolysis recoupments.'
+      },
+      {
+        name: 'Pediatric Complex Facial Reanimation & Free Gracilis Transfer',
+        description: 'Dynamic smile reanimation for congenital Moebius syndrome and pediatric facial paralysis, microneurovascular free gracilis muscle transfer (15756), cross-face sural nerve grafting (64890/64891), and masseteric nerve transposition (64864).',
+        cptCodes: '15756, 64890, 64891, 64864, 64865, 20926, 69990, 15840, 15845',
+        challenges: 'Sural nerve graft harvest unbundling, masseteric nerve transposition bundling into free flap, and missing staged Modifier -58 on Stage 2 muscle transfer.'
       }
     ]
   }
@@ -470,13 +484,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 60+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 62+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 60+ specialties — Lateral Skull Base Surgery, Pediatric Airway Reconstruction, Cardiac LVAD Reoperation, Pediatric Epilepsy Surgery, Spine Deformity, Pediatric Transplant, and more.',
+    description: 'Expert medical billing across 62+ specialties — Adult Congenital Heart Disease, Pediatric Facial Reanimation, Skull Base Surgery, Pediatric Airway, LVAD Reoperation, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -487,7 +501,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 60 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 62 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -508,10 +522,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 60+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 62+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['60+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['62+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

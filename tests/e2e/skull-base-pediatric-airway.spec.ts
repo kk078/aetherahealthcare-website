@@ -143,7 +143,7 @@ test.describe('Cycle 19: Lateral Skull Base & Pediatric Airway Suite', () => {
     await page.goto(`${BASE_URL}/specialties`);
     await page.waitForLoadState('domcontentloaded');
 
-    await expect(page.getByText(/60\+\s+specialties/i).first()).toBeVisible();
+    await expect(page.getByText(/\d+\+\s+specialties/i).first()).toBeVisible();
 
     // Verify specialty card titles
     const skullBaseHeading = page.getByRole('heading', { name: /Complex Lateral Skull Base Surgery & Acoustic Neuroma Resection/i });

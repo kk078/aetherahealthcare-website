@@ -1104,6 +1104,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How should planned postoperative airway evaluations and stent removals be billed during the global period?', a: 'When a patient undergoes single-stage or double-stage LTR with an endoluminal stent or T-tube, subsequent operative microlaryngoscopy and bronchoscopy (MLB) for stent removal, airway sizing, or granulations debridement must be coded with Modifier -58 (staged or related procedure by the same physician during the postoperative period). The initial operative report should note that postoperative surveillance MLB is a planned component of the reconstructive care plan.' },
     ],
   },
+  {
+    slug: 'adult-congenital-heart-disease',
+    name: 'Adult Congenital Heart Disease (ACHD) & Fontan Conversion',
+    noun: 'adult congenital heart disease (ACHD) cardiologists, congenital cardiac surgeons, heart failure teams, and structural heart centers',
+    cpt: '33735, 33737, 33608, 33475, 33257, 33258, 33530, 33946, 33947, 93580, 93581, 99223',
+    blurb:
+      'Fontan revision and extracardiac conduit conversion, arrhythmia cryoablation Maze add-ons, RVOT conduit and pulmonary valve replacement (PVR), redo sternotomy adhesiolysis, and transcatheter device closure of Fontan fenestrations.',
+    painPoints: [
+      'Fontan conversion (33737) downcoding clawbacks: Commercial payers downgrading complex Fontan conversion with total cavopulmonary connection (TCPC) and right atrial maze to basic pericardiectomy or isolated conduit revision',
+      'Concomitant cryoablation Maze (+33257/+33258) unbundling denials: Health plans rejecting atrial arrhythmia cryoablation add-ons when performed concurrently with open Fontan conversion or conduit revision',
+      'Redo sternotomy (+33530) denials in ACHD reoperations: Invalidation of reoperation add-on code +33530 despite documented severe retrosternal mediastinal adhesiolysis in 3rd or 4th redo sternotomies',
+      'Hemodynamic diagnostic heart catheterization bundling: Unbundling clawbacks when right/left heart cath (93530) is billed alongside transcatheter pulmonary valve replacement (TPVR)',
+    ],
+    faqs: [
+      { q: 'Can redo sternotomy add-on (+33530) be billed alongside Fontan conversion (33737)?', a: 'Yes. Under CMS National Correct Coding Initiative (NCCI) and AMA CPT rules, add-on code +33530 (redo sternotomy or thoracotomy >30 days from prior surgery) is reportable with open Fontan conversion and revision procedures. Operative documentation must specifically detail the dense substernal and epicardial adhesions encountered, dissecting the conduit off the sternal table, and prolonged dissection time before establishing safe cardiopulmonary bypass.' },
+      { q: 'How should surgical cryoablation for atrial tachycardia during Fontan conversion be coded?', a: 'When concomitant cryoablation is performed to treat refractory atrial flutter or intra-atrial reentrant tachycardia (IART), add-on code +33257 (operative tissue ablation, limited) or +33258 (extensive) is reported with the primary Fontan revision code (33735/33737). The surgical report must document distinct lesion sets placed across the isthmus, coronary sinus, or atrial wall utilizing cryothermal energy.' },
+    ],
+  },
+  {
+    slug: 'pediatric-facial-reanimation',
+    name: 'Pediatric Complex Facial Reanimation & Free Gracilis Transfer',
+    noun: 'pediatric facial plastic surgeons, pediatric microsurgeons, craniofacial reconstructive teams, and pediatric otolaryngologists',
+    cpt: '15756, 64890, 64891, 64864, 64865, 20926, 69990, 15840, 15845, 14040, 99214',
+    blurb:
+      'Dynamic smile reanimation for congenital Moebius syndrome and pediatric facial palsy: microneurovascular free gracilis muscle transfer, cross-face nerve grafting (CFNG with sural nerve), masseteric-to-facial nerve transposition (V-to-VII), and staged surgical global management.',
+    painPoints: [
+      'Sural nerve harvest (+64890/+64891) unbundling denials: Clearinghouses bundling donor sural nerve graft harvest and interposition into cross-face nerve graft procedures',
+      'Masseteric nerve transposition (64864) bundling: Commercial payers erroneously bundling motor nerve transfer (V-to-VII or XII-to-VII) into free neurovascular gracilis muscle transfer (15756)',
+      'Operating microscope (+69990) microvascular anastomosis unbundling clawbacks: Health plans rejecting microvascular anastomosis add-on +69990 under claims that magnification is inherent to microvascular transfer',
+      'Staged facial reanimation global surgical period recoupments: Second-stage muscle transfer or tendon anchoring denied as inclusive to Stage 1 cross-face grafting without Modifier -58',
+    ],
+    faqs: [
+      { q: 'How should two-stage dynamic facial reanimation be coded to prevent global period bundling?', a: 'Stage 1 involves sural nerve harvest (64890) and cross-face nerve graft coaptation (64864) to donor facial branches. Stage 2 (performed 6-9 months later) involves microvascular free gracilis muscle transfer (15756) with neurovascular anastomoses. Stage 2 must be submitted with Modifier -58 (staged procedure by the same surgeon during the postoperative period). The initial operative report must state in the postoperative plan that Stage 2 free muscle transplantation is a planned staged intervention.' },
+      { q: 'Is motor nerve transposition (CPT 64864) separately reportable with free gracilis transfer (15756)?', a: 'Yes. When masseteric nerve transposition (branch of cranial nerve V3) is utilized for dual-innervation or primary motor input to the gracilis neurovascular pedicle, CPT 64864 is separately reportable with Modifier 51 or 59. Operative notes must detail separate nerve dissection and coaptation to the gracilis obturator nerve.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
