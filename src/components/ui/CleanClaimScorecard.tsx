@@ -2,7 +2,7 @@
 
 import { useMemo, useState, type FormEvent } from 'react';
 import Link from 'next/link';
-import { ClipboardCheck, Mail, CheckCircle2, ArrowRight, AlertTriangle } from 'lucide-react';
+import { ClipboardCheck, Mail, CheckCircle2, ArrowRight, AlertTriangle, Printer, CheckSquare, RotateCcw } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
 
 interface Item {
@@ -12,24 +12,26 @@ interface Item {
   weight: number; // relative importance
   /** the denial(s) this control prevents — shown when unchecked */
   risk: string;
+  toolHref?: string;
+  toolLabel?: string;
 }
 
 const ITEMS: Item[] = [
-  { id: 'elig', group: 'Front-end', weight: 3, text: 'Eligibility & benefits verified for the date of service', risk: 'CARC 27 (coverage terminated), 96 (non-covered)' },
-  { id: 'auth', group: 'Front-end', weight: 3, text: 'Prior authorization obtained and number on file when required', risk: 'CARC 197 (auth absent)' },
-  { id: 'demo', group: 'Front-end', weight: 2, text: 'Patient demographics & subscriber/member ID confirmed', risk: 'CARC 16 (lacks information)' },
-  { id: 'cob', group: 'Front-end', weight: 2, text: 'Primary vs secondary payer (COB) order confirmed', risk: 'CARC 109 / 23 (wrong payer, COB)' },
-  { id: 'cred', group: 'Front-end', weight: 2, text: 'Rendering provider credentialed & effective with the payer', risk: 'CARC B7 (provider not eligible)' },
+  { id: 'elig', group: 'Front-end', weight: 3, text: 'Eligibility & benefits verified for the date of service', risk: 'CARC 27 (coverage terminated), 96 (non-covered)', toolHref: '/services/eligibility-verification', toolLabel: 'Eligibility Verification' },
+  { id: 'auth', group: 'Front-end', weight: 3, text: 'Prior authorization obtained and number on file when required', risk: 'CARC 197 (auth absent)', toolHref: '/tools/appeal-letter-generator', toolLabel: 'Auth Appeal Generator' },
+  { id: 'demo', group: 'Front-end', weight: 2, text: 'Patient demographics & subscriber/member ID confirmed', risk: 'CARC 16 (lacks information)', toolHref: '/tools/era-835-decoder', toolLabel: 'ERA 835 Decoder' },
+  { id: 'cob', group: 'Front-end', weight: 2, text: 'Primary vs secondary payer (COB) order confirmed', risk: 'CARC 109 / 23 (wrong payer, COB)', toolHref: '/tools/denial-code-lookup', toolLabel: 'Denial Lookup' },
+  { id: 'cred', group: 'Front-end', weight: 2, text: 'Rendering provider credentialed & effective with the payer', risk: 'CARC B7 (provider not eligible)', toolHref: '/services/credentialing', toolLabel: 'Provider Credentialing' },
 
-  { id: 'spec', group: 'Coding', weight: 3, text: 'Most-specific ICD-10 supported by the documentation', risk: 'CARC 50 / 11 (medical necessity, dx mismatch)' },
-  { id: 'link', group: 'Coding', weight: 2, text: 'Every CPT linked to a supporting diagnosis pointer', risk: 'CARC 11 / 16 (linkage, missing pointer)' },
-  { id: 'mod', group: 'Coding', weight: 2, text: 'Required modifiers applied; conflicting ones removed', risk: 'CARC 4 (modifier missing/inconsistent)' },
-  { id: 'ncci', group: 'Coding', weight: 2, text: 'NCCI PTP edits run; unbundling only with documentation', risk: 'CARC 97 (bundled)' },
-  { id: 'mue', group: 'Coding', weight: 1, text: 'Units within MUE / frequency limits', risk: 'CARC 151 (too many services)' },
+  { id: 'spec', group: 'Coding', weight: 3, text: 'Most-specific ICD-10 supported by the documentation', risk: 'CARC 50 / 11 (medical necessity, dx mismatch)', toolHref: '/tools/appeal-letter-generator', toolLabel: 'Appeal Generator' },
+  { id: 'link', group: 'Coding', weight: 2, text: 'Every CPT linked to a supporting diagnosis pointer', risk: 'CARC 11 / 16 (linkage, missing pointer)', toolHref: '/tools/ncci-claim-scrubber', toolLabel: 'NCCI Scrubber' },
+  { id: 'mod', group: 'Coding', weight: 2, text: 'Required modifiers applied; conflicting ones removed', risk: 'CARC 4 (modifier missing/inconsistent)', toolHref: '/tools/ncci-claim-scrubber', toolLabel: 'Modifier Validator' },
+  { id: 'ncci', group: 'Coding', weight: 2, text: 'NCCI PTP edits run; unbundling only with documentation', risk: 'CARC 97 (bundled)', toolHref: '/tools/ncci-claim-scrubber', toolLabel: 'PTP Scrubber' },
+  { id: 'mue', group: 'Coding', weight: 1, text: 'Units within MUE / frequency limits', risk: 'CARC 151 (too many services)', toolHref: '/tools/fee-schedule-benchmarker', toolLabel: 'Fee Benchmarker' },
 
-  { id: 'scrub', group: 'Submission', weight: 3, text: 'Claim scrubbed — NPIs, units, all required loops/segments complete', risk: 'CARC 16 (lacks information)' },
+  { id: 'scrub', group: 'Submission', weight: 3, text: 'Claim scrubbed — NPIs, units, all required loops/segments complete', risk: 'CARC 16 (lacks information)', toolHref: '/tools/era-835-decoder', toolLabel: '835 Decoder' },
   { id: 'dup', group: 'Submission', weight: 1, text: 'Claim history checked for duplicates before sending', risk: 'CARC 18 (duplicate)' },
-  { id: 'tfl', group: 'Submission', weight: 2, text: 'Submitted within the payer timely-filing window', risk: 'CARC 29 (timely filing)' },
+  { id: 'tfl', group: 'Submission', weight: 2, text: 'Submitted within the payer timely-filing window', risk: 'CARC 29 (timely filing)', toolHref: '/tools/timely-filing-matrix', toolLabel: 'Timely Filing Matrix' },
   { id: 'ack', group: 'Submission', weight: 1, text: 'Clearinghouse acceptance / 277CA acknowledgment reviewed', risk: 'Silent rejections never reach the payer' },
 ];
 
@@ -58,6 +60,16 @@ export default function CleanClaimScorecard() {
     setChecked(c => ({ ...c, [id]: !c[id] }));
   }
 
+  function selectAll() {
+    const all: Record<string, boolean> = {};
+    ITEMS.forEach(i => { all[i.id] = true; });
+    setChecked(all);
+  }
+
+  function resetAll() {
+    setChecked({});
+  }
+
   async function handleLead(e: FormEvent) {
     e.preventDefault();
     if (!email || leadStatus === 'sending') return;
@@ -73,58 +85,109 @@ export default function CleanClaimScorecard() {
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-      {/* Checklist */}
-      <div className="lg:col-span-2 space-y-6">
-        {GROUPS.map(g => (
-          <div key={g} className="bg-white rounded-2xl border border-gray/15 p-6">
-            <h3 className="text-sm font-bold text-navy uppercase tracking-widest mb-4 flex items-center">
-              <ClipboardCheck className="h-4 w-4 mr-2 text-teal" />{g}
-            </h3>
-            <div className="space-y-2.5">
-              {ITEMS.filter(i => i.group === g).map(i => (
-                <label
-                  key={i.id}
-                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-cream/60 cursor-pointer transition-colors"
-                >
-                  <input
-                    type="checkbox" checked={!!checked[i.id]} onChange={() => toggle(i.id)}
-                    className="mt-0.5 h-5 w-5 accent-teal shrink-0"
-                  />
-                  <span>
-                    <span className={`block text-sm leading-snug ${checked[i.id] ? 'text-gray line-through' : 'text-slate-700'}`}>{i.text}</span>
-                    {!checked[i.id] && (
-                      <span className="block text-[11px] text-amber-700 mt-0.5">Prevents {i.risk}</span>
-                    )}
-                  </span>
-                </label>
-              ))}
-            </div>
-          </div>
-        ))}
+    <div className="space-y-6">
+      {/* Top Action Toolbar */}
+      <div className="bg-white rounded-2xl border border-gray/15 p-4 flex flex-wrap items-center justify-between gap-3 shadow-sm print:hidden">
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={selectAll}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal/10 text-teal hover:bg-teal hover:text-white transition-colors"
+          >
+            <CheckSquare className="h-3.5 w-3.5" /> Check All 14 Controls
+          </button>
+          <button
+            type="button"
+            onClick={resetAll}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-gray/10 text-gray hover:bg-navy hover:text-white transition-colors"
+          >
+            <RotateCcw className="h-3.5 w-3.5" /> Reset
+          </button>
+        </div>
+        <button
+          type="button"
+          onClick={() => window.print()}
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-gray hover:text-navy border border-gray/20 hover:border-navy transition-colors"
+        >
+          <Printer className="h-3.5 w-3.5" /> Print / Save Scorecard PDF
+        </button>
       </div>
 
-      {/* Score panel */}
-      <div className="lg:sticky lg:top-28">
-        <div className="bg-navy rounded-2xl p-7 text-white">
-          <p className="text-sm text-gray">Clean-claim readiness</p>
-          <p className={`text-6xl font-bold ${band.color}`}>{score}<span className="text-2xl text-gray">/100</span></p>
-          <p className={`text-sm font-semibold ${band.color} mb-4`}>{band.label}</p>
-          <div className="h-2.5 w-full bg-white/10 rounded-full overflow-hidden mb-5">
-            <div className={`h-full ${band.bar} transition-all duration-300`} style={{ width: `${score}%` }} />
-          </div>
-
-          {gaps.length > 0 ? (
-            <div className="bg-white/5 border border-white/10 rounded-xl p-4 mb-5">
-              <p className="text-xs font-bold text-amber-300 uppercase tracking-widest mb-2 flex items-center">
-                <AlertTriangle className="h-3.5 w-3.5 mr-1.5" />{gaps.length} open gap{gaps.length > 1 ? 's' : ''}
-              </p>
-              <ul className="space-y-1.5 max-h-44 overflow-y-auto">
-                {gaps.map(gp => (
-                  <li key={gp.id} className="text-xs text-gray leading-snug">• {gp.text}</li>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        {/* Checklist */}
+        <div className="lg:col-span-2 space-y-6">
+          {GROUPS.map(g => (
+            <div key={g} className="bg-white rounded-2xl border border-gray/15 p-6">
+              <h3 className="text-sm font-bold text-navy uppercase tracking-widest mb-4 flex items-center">
+                <ClipboardCheck className="h-4 w-4 mr-2 text-teal" />{g}
+              </h3>
+              <div className="space-y-2.5">
+                {ITEMS.filter(i => i.group === g).map(i => (
+                  <label
+                    key={i.id}
+                    className="flex items-start gap-3 p-3 rounded-lg hover:bg-cream/60 cursor-pointer transition-colors"
+                  >
+                    <input
+                      type="checkbox" checked={!!checked[i.id]} onChange={() => toggle(i.id)}
+                      className="mt-0.5 h-5 w-5 accent-teal shrink-0"
+                    />
+                    <span>
+                      <span className={`block text-sm leading-snug ${checked[i.id] ? 'text-gray line-through' : 'text-slate-700 font-medium'}`}>{i.text}</span>
+                      {!checked[i.id] && (
+                        <span className="flex flex-wrap items-center gap-2 text-[11px] text-amber-700 mt-1">
+                          <span>Prevents {i.risk}</span>
+                          {i.toolHref && (
+                            <Link
+                              prefetch={false}
+                              href={i.toolHref}
+                              onClick={e => e.stopPropagation()}
+                              className="text-teal hover:text-navy font-bold underline ml-1"
+                            >
+                              [{i.toolLabel} &rarr;]
+                            </Link>
+                          )}
+                        </span>
+                      )}
+                    </span>
+                  </label>
                 ))}
-              </ul>
+              </div>
             </div>
+          ))}
+        </div>
+
+        {/* Score panel */}
+        <div className="lg:sticky lg:top-28">
+          <div className="bg-navy rounded-2xl p-7 text-white">
+            <p className="text-sm text-gray">Clean-claim readiness</p>
+            <p className={`text-6xl font-bold ${band.color}`}>{score}<span className="text-2xl text-gray">/100</span></p>
+            <p className={`text-sm font-semibold ${band.color} mb-4`}>{band.label}</p>
+            <div className="h-2.5 w-full bg-white/10 rounded-full overflow-hidden mb-5">
+              <div className={`h-full ${band.bar} transition-all duration-300`} style={{ width: `${score}%` }} />
+            </div>
+
+            {gaps.length > 0 ? (
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 mb-5">
+                <p className="text-xs font-bold text-amber-300 uppercase tracking-widest mb-2 flex items-center">
+                  <AlertTriangle className="h-3.5 w-3.5 mr-1.5" />{gaps.length} open gap{gaps.length > 1 ? 's' : ''}
+                </p>
+                <ul className="space-y-2 max-h-52 overflow-y-auto pr-1">
+                  {gaps.map(gp => (
+                    <li key={gp.id} className="text-xs text-cream/80 leading-snug pb-1 border-b border-white/5 last:border-0">
+                      <p>&bull; {gp.text}</p>
+                      {gp.toolHref && (
+                        <Link
+                          prefetch={false}
+                          href={gp.toolHref}
+                          className="text-[11px] text-mint hover:underline font-semibold block mt-0.5"
+                        >
+                          Resolve with {gp.toolLabel} &rarr;
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
           ) : (
             <div className="bg-mint/20 border border-mint/40 rounded-xl p-4 mb-5 flex items-start gap-2">
               <CheckCircle2 className="h-5 w-5 text-mint shrink-0" />
@@ -166,5 +229,6 @@ export default function CleanClaimScorecard() {
         </div>
       </div>
     </div>
+  </div>
   );
 }

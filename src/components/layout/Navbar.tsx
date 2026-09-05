@@ -38,6 +38,7 @@ const whyAethera = [
   { name: 'Security & Compliance', href: '/compliance/security', desc: 'How we protect PHI, offshore and in the US' },
   { name: 'Compare Options', href: '/compare', desc: 'Outsourced vs. in-house, and how to choose' },
   { name: 'Blog & Articles', href: '/blog', desc: 'Healthcare RCM insights & payer guides' },
+  { name: 'RCM & Billing Glossary', href: '/glossary', desc: 'Authoritative dictionary of EDI, NCCI, and denial terms' },
   { name: 'State of Denials Report', href: '/state-of-denials', desc: 'Free benchmark report by specialty' },
   { name: 'Guides & Playbooks', href: '/decks', desc: 'Specialty one-pagers & revenue playbooks' },
 ];

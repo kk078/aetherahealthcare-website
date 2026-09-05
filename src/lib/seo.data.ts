@@ -168,6 +168,150 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Can you bill a well-child and sick visit on the same day?', a: 'Yes — when documentation supports it, we apply modifier 25 to the problem-oriented E/M so both the preventive and sick visit are paid.' },
     ],
   },
+  {
+    slug: 'neurology',
+    name: 'Neurology',
+    noun: 'neurology and neurophysiology practices',
+    cpt: '95810–95822, 95886–95913, 99202–99215, 64615',
+    blurb:
+      'Electrodiagnostic testing, complex chronic neurological care, and infusion therapies where technical/professional split billing and prior authorization rules dominate cash flow.',
+    painPoints: [
+      'EMG and nerve conduction study (NCS) units are capped and frequently audited by Medicare MACs without strict medical necessity documentation',
+      'Botox chemodenervation (CPT 64615) for chronic migraine triggers high-dollar claim denials when drug wastage (JW/JZ modifiers) is misreported',
+      'EEG and ambulatory sleep study interpretation versus technical component split (26/TC) requires rigorous billing separation',
+      'Infusion billing for MS and neuropathy biologics requires flawless J-code NDC pairing and prior authorization',
+    ],
+    faqs: [
+      { q: 'How do you prevent denials on electrodiagnostic testing (EMG/NCS)?', a: 'We verify documented clinical indications against local Medicare MAC LCDs (Local Coverage Determinations) and ensure specific motor/sensory nerve counts match the billed CPT codes before submission.' },
+      { q: 'How do you handle Botox wastage and J-code reporting?', a: 'We apply the required JW or JZ modifier with exact units administered and units discarded according to CMS regulations, preventing drug clawback audits.' },
+    ],
+  },
+  {
+    slug: 'pain-management',
+    name: 'Pain Management & Spine',
+    noun: 'interventional pain and spine practices',
+    cpt: '62321–62323, 64483–64484, 64490–64495, 64635–64636',
+    blurb:
+      'High-acuity interventional procedures where imaging guidance bundling, bilateral modifiers, and frequency-of-injection limits determine practice solvency.',
+    painPoints: [
+      'Fluoroscopic and ultrasound guidance (77003, 76942) are bundled under NCCI PTP edits for modern injection codes and cannot be separately unbundled',
+      'Payer frequency limitations on epidural steroid injections (e.g. max 3–4 per 12-month rolling period) cause hard non-covered rejections',
+      'Bilateral spinal injections require nuanced modifier rules (Mod 50 vs. LT/RT vs. 59) depending on whether the payer is Medicare or a commercial PPO',
+      'Pre-authorization expiration dates on multi-tier radiofrequency ablation (RFA) lead to massive retro-denials',
+    ],
+    faqs: [
+      { q: 'How do you stop imaging guidance bundling denials in pain management?', a: 'We stay aligned with current CMS NCCI edits where fluoroscopic guidance is integral to spine injections (e.g., 64483), preventing unbundling penalties while capturing separately billable services like sedation when documented.' },
+      { q: 'How do you manage bilateral injection billing?', a: 'We maintain payer-specific modifier matrices that automatically switch between Modifier 50 (150% allowable) and LT/RT single-line billing to match each payer\'s specific clearinghouse logic.' },
+    ],
+  },
+  {
+    slug: 'obgyn',
+    name: 'Obstetrics & Gynecology (OB/GYN)',
+    noun: 'OB/GYN practices and women\'s health clinics',
+    cpt: '59400, 59510, 57454, 58300, 76801–76817',
+    blurb:
+      'Global maternity delivery packages, split antepartum/postpartum transitions, and in-office surgical procedures with dedicated device and drug reimbursement.',
+    painPoints: [
+      'Global maternity package unbundling when patients change insurance mid-pregnancy or deliver at an out-of-network facility (CPT 59425, 59426, 59430)',
+      'LARC device acquisition reimbursement (Mirena, Paragard, Nexplanon) requires exact HCPCS J-codes and invoice reconciliation',
+      'Same-day E/M (99213/99214) with in-office colposcopy or endometrial biopsy requires bulletproof Modifier 25 documentation',
+      'High-risk fetal ultrasound (76811/76812) is frequently denied without clear maternal-fetal medical necessity ICD-10 indication',
+    ],
+    faqs: [
+      { q: 'How do you handle patients who switch payers mid-pregnancy?', a: 'We split global maternity packages into itemized antepartum care (59425 for 4–6 visits, 59426 for 7+ visits), delivery-only, and postpartum-only codes so your practice captures 100% of earned revenue.' },
+      { q: 'How do you ensure full payment on expensive contraceptive devices?', a: 'We track buy-and-bill LARC inventory, verify pre-auth before insertion, and pair J-codes with insertion codes (58300/11981) to guarantee positive practice margins.' },
+    ],
+  },
+  {
+    slug: 'ophthalmology',
+    name: 'Ophthalmology & Optometry',
+    noun: 'ophthalmology surgical centers and eye clinics',
+    cpt: '66984, 66982, 67028, 92004–92014, 92134',
+    blurb:
+      'High-volume surgical and retina billing balancing Medicare 90-day global periods, high-cost anti-VEGF injectables, and Eye Codes vs. E/M optimization.',
+    painPoints: [
+      'Intravitreal injections (CPT 67028) paired with high-cost biologics (Eylea, Lucentis, Vabysmo) carry six-figure monthly financial risk if pre-auth or NDC is off',
+      'Complex cataract surgery (66982) downcoded to standard (66984) when operative notes fail to substantiate pupil expansion devices or iris hooks',
+      'Post-operative co-management modifier rules (Modifier 54 surgical care vs. Modifier 55 post-op management) with optometrists',
+      'Retinal diagnostic testing (OCT 92134, Fluorescein 92235) bundled or denied for excessive frequency under commercial LCD policies',
+    ],
+    faqs: [
+      { q: 'How do you optimize Eye Codes (92004/92014) vs Evaluation & Management (99202–99215)?', a: 'Our ophthalmic coders cross-evaluate medical decision making against vision exam elements to submit whichever code set yields the compliant maximum reimbursement for the visit.' },
+      { q: 'How do you protect cash flow on anti-VEGF drug injections?', a: 'We maintain automated clearinghouse pre-validation for every single vial, verifying active authorization, NDC batch codes, and bilateral modifiers before claims leave our scrubber.' },
+    ],
+  },
+  {
+    slug: 'urology',
+    name: 'Urology',
+    noun: 'urology groups and surgery centers',
+    cpt: '52000, 52601, 55700, 51726–51729',
+    blurb:
+      'Complex surgical urology, office cystoscopy, multi-channel urodynamics, and advanced prostate oncology therapies.',
+    painPoints: [
+      'Cystoscopy bundled into therapeutic procedures (e.g. ureteral stent placement 52332) without appropriate distinct procedural modifiers',
+      'Urodynamic study component billing (technical vs professional, pressure flow, electromyography 51784) triggering duplicate claim rejections',
+      'Prostate biopsy (55700) and ultrasound guidance (76942) documentation scrutiny by commercial health plans',
+      'Part B buy-and-bill oncology injections (Eligard, Lupron, Firmagon) requiring NDC conversion and prompt payment posting',
+    ],
+    faqs: [
+      { q: 'How do you handle cystoscopy and stent placement bundling?', a: 'We apply NCCI PTP edits and only apply Modifier 59 or XS when the cystoscopy was diagnostic and distinct, protecting your practice from audit clawbacks while maximizing legitimate reimbursement.' },
+      { q: 'Do you bill multi-component urodynamic evaluations?', a: 'Yes — we itemize cystometrograms, pressure studies, and sphincter electromyography with accurate modifier 26/TC splits so every aspect of testing is fully paid.' },
+    ],
+  },
+  {
+    slug: 'radiology',
+    name: 'Radiology & Diagnostic Imaging',
+    noun: 'radiology groups and imaging centers',
+    cpt: '71046, 74177, 70553, 77067',
+    blurb:
+      'High-volume imaging center and teleradiology billing requiring instant 26/TC component split, CDS/AUC compliance, and rapid turnaround.',
+    painPoints: [
+      'Split billing: Ensuring professional component (Mod 26) and technical facility component (Mod TC) are cleanly separated',
+      'Clinical Decision Support (CDS/AUC) consultation requirement documentation for advanced diagnostic imaging',
+      'Multiple-imaging payment reduction (MPPR) rules across same-day CT, MRI, and ultrasound procedures',
+      'Screening vs. diagnostic mammography conversion rules (77067 vs 77065/77066) triggering patient copay balance disputes',
+    ],
+    faqs: [
+      { q: 'How do you manage professional and technical component billing (26/TC)?', a: 'Our billing engine automatically handles global, professional-only, or technical-only claim generation depending on whether services occurred in an IDTF, hospital, or physician office.' },
+      { q: 'How do you handle multiple-imaging payment reduction (MPPR)?', a: 'We sequence imaging modalities to optimize reimbursement under CMS and commercial MPPR rules, ensuring full payment on primary scans.' },
+    ],
+  },
+  {
+    slug: 'physical-therapy',
+    name: 'Physical Therapy & Rehabilitation',
+    noun: 'physical and occupational therapy practices',
+    cpt: '97110, 97140, 97112, 97161–97163',
+    blurb:
+      'Time-based modal therapy billing governed by Medicare\'s 8-minute rule, therapy caps, KX modifier tracking, and plan-of-care certifications.',
+    painPoints: [
+      'Medicare 8-Minute Rule calculation errors resulting in over-billing or under-billing of timed units',
+      'Therapy threshold cap tracking: Failure to append Modifier KX when claims exceed Medicare\'s annual threshold results in automatic rejection',
+      'Missing physician signatures on the 90-day Plan of Care (POC) recertification halting payment entirely',
+      'Manual therapy (97140) bundled with physical therapy evaluation (97161–97163) under NCCI edits unless Modifier 59 is justified',
+    ],
+    faqs: [
+      { q: 'How do you calculate Medicare 8-minute rule units?', a: 'Our claim scrubbing system audits total timed minutes against Medicare\'s table (e.g., 8–22 mins = 1 unit, 23–37 mins = 2 units) to prevent audit recoupments.' },
+      { q: 'How do you track the Medicare therapy cap and KX modifier?', a: 'We continuously track cumulative therapy expenditures per patient and automatically apply Modifier KX when reaching the annual limit, while alerting your staff when targeted medical review thresholds approach.' },
+    ],
+  },
+  {
+    slug: 'oncology',
+    name: 'Medical Oncology & Hematology',
+    noun: 'medical oncology practices and cancer centers',
+    cpt: '96413, 96415, 96372, J9000–J9999',
+    blurb:
+      'High-value drug buy-and-bill administration, hydration sequencing, biosimilar interchangeability, and strict clinical trial modifier management.',
+    painPoints: [
+      'Chemotherapy infusion administration sequencing: First hour (96413) vs sequential (96417) vs concurrent (96416) errors cause immediate denials',
+      'High-cost J-code drug clawbacks due to missing NDC 11-digit format, exact dose calculations, or missing JW/JZ waste reporting',
+      'Hydration infusion (96360/96361) bundled as integral when administered solely as a carrier for chemotherapy',
+      'Pre-authorization delays for new line-of-treatment oncology drugs leading to massive uncompensated hospital and clinic costs',
+    ],
+    faqs: [
+      { q: 'How do you handle chemotherapy drug wastage reporting?', a: 'We strictly audit every single dose against vial sizes and automatically append Modifier JW (discarded drug) or JZ (zero waste) with exact multi-decimal units, meeting CMS oncology compliance.' },
+      { q: 'How do you code complex multi-drug infusion sequences?', a: 'Our certified oncology coders follow hierarchy guidelines: primary chemotherapy always takes precedence over sequential infusions, hydration, and therapeutic pushes.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

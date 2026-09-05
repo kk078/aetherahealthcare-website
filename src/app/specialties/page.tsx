@@ -1,9 +1,38 @@
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SpecialtyBadge from '@/components/ui/SpecialtyBadge';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
+
+const specialtyLinks: Record<string, string> = {
+  'Family Medicine': '/medical-billing/family-medicine',
+  'Internal Medicine': '/medical-billing/internal-medicine',
+  'Pediatrics': '/medical-billing/pediatrics',
+  'Cardiology': '/medical-billing/cardiology',
+  'Dermatology': '/medical-billing/dermatology',
+  'Endocrinology': '/medical-billing/internal-medicine',
+  'Gastroenterology': '/medical-billing/gastroenterology',
+  'Neurology': '/medical-billing/neurology',
+  'Pulmonology': '/medical-billing/internal-medicine',
+  'Rheumatology': '/medical-billing/internal-medicine',
+  'Pain Management & Spine': '/medical-billing/pain-management',
+  'Obstetrics & Gynecology (OB/GYN)': '/medical-billing/obgyn',
+  'Ophthalmology & Optometry': '/medical-billing/ophthalmology',
+  'Medical Oncology & Hematology': '/medical-billing/oncology',
+  'General Surgery': '/medical-billing/orthopedics',
+  'Orthopedic Surgery': '/medical-billing/orthopedics',
+  'Plastic Surgery': '/medical-billing/dermatology',
+  'Urology': '/medical-billing/urology',
+  'Radiology': '/medical-billing/radiology',
+  'Physical Therapy & Rehabilitation': '/medical-billing/physical-therapy',
+  'Pathology': '/services/compliance-auditing',
+  'Anesthesiology': '/medical-billing/pain-management',
+  'Pharmacy Services': '/services/pharmacy-billing',
+  'Dental': '/services/dental-billing',
+  "Workers' Compensation": '/services/workers-compensation-billing',
+};
 
 const specialties = [
   {
@@ -73,6 +102,30 @@ const specialties = [
         description: 'Diagnosis and management of autoimmune and inflammatory conditions affecting joints and connective tissues.',
         cptCodes: '99201-99215, 99231-99233, 20600-20610',
         challenges: 'Injections and infusions, chronic care management, and complex medication billing.'
+      },
+      {
+        name: 'Pain Management & Spine',
+        description: 'Interventional spinal injections, nerve blocks, fluoroscopy guidance, and radiofrequency ablation.',
+        cptCodes: '62321-62323, 64483-64484, 64490-64495, 64635',
+        challenges: 'Fluoroscopy bundling under NCCI PTP edits, rolling 12-month injection frequency caps, and bilateral modifier compliance.'
+      },
+      {
+        name: 'Obstetrics & Gynecology (OB/GYN)',
+        description: 'Global maternity delivery packages, split antepartum/postpartum care, and in-office surgical procedures.',
+        cptCodes: '59400, 59510, 57454, 58300, 76801-76817',
+        challenges: 'Mid-pregnancy payer switches requiring global package unbundling, buy-and-bill LARC reimbursement, and modifier 25 documentation.'
+      },
+      {
+        name: 'Ophthalmology & Optometry',
+        description: 'Complex cataract surgery, retina intravitreal injections, diagnostic OCT imaging, and surgical co-management.',
+        cptCodes: '66984, 66982, 67028, 92004-92014, 92134',
+        challenges: 'High-cost anti-VEGF drug pre-authorization, complex cataract substantiation, and modifier 54/55 surgical co-management tracking.'
+      },
+      {
+        name: 'Medical Oncology & Hematology',
+        description: 'Chemotherapy infusion administration sequencing, high-cost immunotherapy J-codes, and clinical trial modifiers.',
+        cptCodes: '96413, 96415, 96372, J9000-J9999',
+        challenges: 'Multi-drug infusion hierarchy rules, mandatory JW/JZ drug wastage tracking, and pre-authorization denials for target biotherapies.'
       }
     ]
   },
@@ -125,6 +178,12 @@ const specialties = [
         description: 'Pain management and anesthetic services for surgical and non-surgical procedures.',
         cptCodes: '00100-01999, 99100-99140, 64400-64530',
         challenges: 'Time-based billing, modifier usage, and pain management procedure coding.'
+      },
+      {
+        name: 'Physical Therapy & Rehabilitation',
+        description: 'Outpatient rehabilitation, physical and occupational therapy, therapeutic exercises, and neuromuscular re-education.',
+        cptCodes: '97110, 97140, 97112, 97161-97163',
+        challenges: 'Medicare 8-minute rule calculation, annual therapy cap threshold tracking with Modifier KX, and Plan of Care recertification.'
       }
     ]
   },
@@ -243,6 +302,18 @@ export default function Specialties() {
                         <p className="text-sm font-medium text-teal mb-1">Typical Billing Challenges:</p>
                         <p className="text-sm text-gray">{specialty.challenges}</p>
                       </div>
+                      {specialtyLinks[specialty.name] && (
+                        <div className="mt-5 pt-4 border-t border-gray/10 flex items-center justify-between">
+                          <span className="text-xs text-gray font-medium">Dedicated Specialty Playbook</span>
+                          <Link
+                            prefetch={false}
+                            href={specialtyLinks[specialty.name]}
+                            className="inline-flex items-center text-xs font-bold text-teal hover:text-navy group transition-colors"
+                          >
+                            Explore Playbook <ArrowRight className="h-3.5 w-3.5 ml-1 transition-transform group-hover:translate-x-1" />
+                          </Link>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>

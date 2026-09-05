@@ -1,7 +1,8 @@
 'use client';
 
 import { useMemo, useState, useEffect, type FormEvent } from 'react';
-import { Search, ChevronDown, Mail, CheckCircle2, ShieldAlert, Star } from 'lucide-react';
+import Link from 'next/link';
+import { Search, ChevronDown, Mail, CheckCircle2, ShieldAlert, Star, ArrowRight, FileText } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
 import {
   type DenialCode,
@@ -53,10 +54,11 @@ export default function DenialCodeLookup({
       requestAnimationFrame(() => {
         setQ(codeParam);
         const clean = codeParam.trim().replace(/^(CARC|RARC|CO|PR|OA|PI|CR)[-\s]?/i, '');
-        setOpenCode(clean);
+        const isGuided = codes.some(c => c.code.toLowerCase() === clean.toLowerCase());
+        setOpenCode(isGuided ? `g-${clean}` : `r-CARC-${clean}`);
       });
     }
-  }, []);
+  }, [codes]);
 
   const terms = useMemo(() => q.toLowerCase().split(/\s+/).filter(Boolean), [q]);
 
@@ -131,7 +133,7 @@ export default function DenialCodeLookup({
       {guided.length > 0 && (
         <div className="space-y-3 mb-3">
           {guided.map(d => {
-            const open = openCode === `g-${d.code}`;
+            const open = openCode === `g-${d.code}` || openCode === d.code;
             return (
               <div key={`g-${d.code}`} className="border border-teal/30 rounded-xl bg-white overflow-hidden">
                 <button
@@ -166,6 +168,43 @@ export default function DenialCodeLookup({
                     <div>
                       <p className="text-xs font-bold text-navy uppercase tracking-widest mb-1">How to prevent it</p>
                       <p className="text-sm text-slate-700 leading-relaxed">{d.prevent}</p>
+                    </div>
+                    <div className="pt-3 border-t border-gray/10 flex flex-wrap items-center justify-between gap-3">
+                      <span className="text-xs text-gray font-medium">Overturn &amp; Resolution Actions:</span>
+                      <div className="flex flex-wrap gap-2">
+                        <Link
+                          prefetch={false}
+                          href="/tools/appeal-letter-generator"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-navy text-white hover:bg-teal rounded-lg text-xs font-bold transition-colors"
+                        >
+                          <FileText className="h-3.5 w-3.5" /> Draft Appeal Letter <ArrowRight className="h-3 w-3" />
+                        </Link>
+                        {(d.code === '97' || d.code === '4') && (
+                          <Link
+                            prefetch={false}
+                            href="/tools/ncci-claim-scrubber"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-teal/10 text-teal hover:bg-teal hover:text-white rounded-lg text-xs font-bold transition-colors"
+                          >
+                            Validate NCCI Edits &rarr;
+                          </Link>
+                        )}
+                        {d.code === '29' && (
+                          <Link
+                            prefetch={false}
+                            href="/tools/timely-filing-matrix"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-teal/10 text-teal hover:bg-teal hover:text-white rounded-lg text-xs font-bold transition-colors"
+                          >
+                            Check Payer Filing Limits &rarr;
+                          </Link>
+                        )}
+                        <Link
+                          prefetch={false}
+                          href="/tools/era-835-decoder"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cream text-navy hover:bg-teal/10 border border-gray/10 rounded-lg text-xs font-bold transition-colors"
+                        >
+                          Decode 835 Remittance
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -229,6 +268,25 @@ export default function DenialCodeLookup({
                         <p className="text-sm text-slate-700 leading-relaxed">{r.handle}</p>
                       </div>
                     )}
+                    <div className="pt-3 border-t border-gray/10 flex flex-wrap items-center justify-between gap-3">
+                      <span className="text-xs text-gray font-medium">Overturn &amp; Resolution Actions:</span>
+                      <div className="flex flex-wrap gap-2">
+                        <Link
+                          prefetch={false}
+                          href="/tools/appeal-letter-generator"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-navy text-white hover:bg-teal rounded-lg text-xs font-bold transition-colors"
+                        >
+                          <FileText className="h-3.5 w-3.5" /> Appeal Generator <ArrowRight className="h-3 w-3" />
+                        </Link>
+                        <Link
+                          prefetch={false}
+                          href="/tools/era-835-decoder"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cream text-navy hover:bg-teal/10 border border-gray/10 rounded-lg text-xs font-bold transition-colors"
+                        >
+                          Decode 835 Remittance
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

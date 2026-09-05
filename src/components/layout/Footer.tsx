@@ -29,7 +29,9 @@ const company = [
 ];
 
 const resources = [
-  { name: 'Free AR Tools', href: '/tools' },
+  { name: '14 Free RCM Tools', href: '/tools' },
+  { name: 'RCM & Billing Glossary', href: '/glossary' },
+  { name: 'Live Provider Portal', href: '/portal#live-portal-sandbox' },
   { name: 'Denial Code Lookup', href: '/tools/denial-code-lookup' },
   { name: 'State of Denials Report', href: '/state-of-denials' },
   { name: 'Payer Directory', href: '/payers/directory' },

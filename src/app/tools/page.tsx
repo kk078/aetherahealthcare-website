@@ -126,6 +126,13 @@ const tools = [
     desc: 'Jump straight to provider manuals, medical/payment policies, credentialing, and eligibility pages for 200+ payers, Medicaid programs, and Medicare MACs.',
     tag: 'Reference',
   },
+  {
+    href: '/glossary',
+    icon: BookOpen,
+    name: 'Healthcare RCM & Billing Glossary',
+    desc: 'Authoritative clinical and financial dictionary covering 30+ core terms: EDI 837/835, NCCI PTP edits, CARC/RARC denial codes, and RVU benchmarks.',
+    tag: 'Knowledge Base',
+  },
 ];
 
 export default function ToolsHub() {
@@ -139,7 +146,7 @@ export default function ToolsHub() {
         subtitle="Practical tools our own RCM team uses every day — open to anyone working denials, clean claims, timely filing, and A/R."
         primary={{ href: '#tools', label: 'Browse the Tools' }}
         secondary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
-        chips={['14 free tools', 'No login', 'Built by billers']}
+        chips={['15 free tools & guides', 'No login', 'Built by billers']}
       />
 
       <section id="tools" className="py-14 md:py-20 bg-cream flex-1 scroll-mt-24">

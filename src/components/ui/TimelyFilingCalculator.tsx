@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import Link from 'next/link';
 import { CalendarClock, AlertTriangle, CheckCircle2, Clock } from 'lucide-react';
 
 const PRESETS = [
@@ -97,6 +98,25 @@ export default function TimelyFilingCalculator() {
                 ? 'Prioritize this claim today — it’s inside the final two weeks of the filing window. Missing the limit triggers CARC 29 (time limit for filing expired).'
                 : 'You’re within the window. Submit clean to avoid rework that eats into the remaining days.'}
             </p>
+
+            <div className="mt-5 pt-4 border-t border-gray/15 flex flex-col sm:flex-row gap-2">
+              <Link
+                prefetch={false}
+                href="/tools/timely-filing-matrix"
+                className="inline-flex items-center justify-center text-xs font-bold text-teal hover:text-navy bg-white/80 hover:bg-white px-3 py-2 rounded-lg border border-gray/20 transition-colors text-center"
+              >
+                Look up 50-State Payer Limits &rarr;
+              </Link>
+              {result.status === 'past' && (
+                <Link
+                  prefetch={false}
+                  href="/tools/appeal-letter-generator"
+                  className="inline-flex items-center justify-center text-xs font-bold text-white bg-red-600 hover:bg-red-700 px-3 py-2 rounded-lg transition-colors text-center"
+                >
+                  Draft CARC 29 Timely Appeal &rarr;
+                </Link>
+              )}
+            </div>
           </>
         ) : (
           <p className="text-gray text-sm">Enter a valid date of service to see the deadline.</p>
