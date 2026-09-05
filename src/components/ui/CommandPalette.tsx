@@ -27,7 +27,7 @@ const CATEGORIES: { key: SearchCategory; label: string }[] = [
   { key: 'all', label: 'All Results' },
   { key: 'payers', label: 'Payers (10,600+)' },
   { key: 'denials', label: 'Denial Codes' },
-  { key: 'tools', label: 'Free Tools (21)' },
+  { key: 'tools', label: 'Free Tools (23)' },
   { key: 'specialties', label: 'Specialties' },
   { key: 'services', label: 'RCM Services' },
 ];

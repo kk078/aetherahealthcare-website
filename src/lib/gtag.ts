@@ -17,6 +17,7 @@ export const GADS_LABELS: Record<string, string> = {
   meeting: process.env.NEXT_PUBLIC_GADS_LABEL_MEETING || '',
   booking: process.env.NEXT_PUBLIC_GADS_LABEL_BOOKING || '',
   calculator: process.env.NEXT_PUBLIC_GADS_LABEL_CALCULATOR || '',
+  pilot: process.env.NEXT_PUBLIC_GADS_LABEL_PILOT || '',
 };
 
 type ConversionKind = keyof typeof GADS_LABELS;

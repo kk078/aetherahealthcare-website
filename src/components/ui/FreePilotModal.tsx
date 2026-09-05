@@ -15,6 +15,7 @@ import {
   AlertCircle,
 } from 'lucide-react';
 import { PRIMARY_EXPERT_EMAIL, sendLeadToKiran } from '@/lib/worker';
+import { trackConversion } from '@/lib/gtag';
 
 export default function FreePilotModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -98,6 +99,7 @@ export default function FreePilotModal() {
 
       if (ok) {
         setStatus('success');
+        trackConversion('pilot');
       } else {
         setStatus('error');
         setErrorMessage('Unable to submit your pilot request right now. Please call us directly at +1 (813) 519-4640.');

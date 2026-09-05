@@ -25,6 +25,7 @@ import {
   Award,
   ExternalLink,
   ShieldAlert,
+  Activity,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -38,6 +39,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/anesthesia-calculator',
+    icon: Calculator,
+    name: 'Anesthesia ASA Unit & Reimbursement Calculator',
+    desc: 'Calculate total ASA anesthesia units (Base + 15-Min Time + Physical Modifiers + Qualifying Circumstances) and model CMS medical direction concurrency splits (AA, QZ, QK, QX).',
+    category: 'calculators',
+    tag: 'Anesthesia RVG',
+    badge: 'New',
+  },
+  {
+    href: '/tools/platform-telemetry',
+    icon: Activity,
+    name: 'Platform Telemetry & Clearinghouse SLA Dashboard',
+    desc: 'Transparent live telemetry inspecting direct clearinghouse throughput, global edge network distribution, sub-millisecond EDI relays, and zero-persistence HIPAA data isolation.',
+    category: 'assessments',
+    tag: 'Telemetry',
+    badge: 'New',
+  },
   {
     href: '/tools/good-faith-estimate-generator',
     icon: ShieldAlert,
@@ -296,7 +315,7 @@ export default function ToolsDirectory() {
               type="search"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search 21 free tools & engines…"
+              placeholder="Search 23 free tools & engines…"
               className="w-full pl-9 pr-3 py-1.5 border border-gray/25 rounded-xl text-xs text-navy focus:outline-none focus:ring-2 focus:ring-teal"
             />
           </div>

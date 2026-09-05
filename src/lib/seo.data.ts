@@ -312,6 +312,60 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How do you code complex multi-drug infusion sequences?', a: 'Our certified oncology coders follow hierarchy guidelines: primary chemotherapy always takes precedence over sequential infusions, hydration, and therapeutic pushes.' },
     ],
   },
+  {
+    slug: 'podiatry',
+    name: 'Podiatry & Advanced Wound Care',
+    noun: 'podiatry practices and wound care clinics',
+    cpt: '11042–11047, 97597–97598, 11720–11721, Q4100–Q4280, 29580',
+    blurb:
+      'High-volume excisional debridement, cellular skin substitute grafts, and diabetic foot care requiring rigorous LCD wound documentation and Q-modifier precision.',
+    painPoints: [
+      'Surgical excisional debridement (11042–11047) requires precise depth documentation (dermis vs subcutaneous vs bone) or faces aggressive post-payment recoupment',
+      'Biological cellular tissue grafts (Q-codes) trigger bundling denials without separate JW/JZ wastage billing and manufacturer invoice matching',
+      'Routine foot care and mycotic nail debridement (11720/11721) require documented systemic disease class findings (Q7, Q8, Q9 modifiers)',
+      'Unna boot compression strapping (29580/29581) billed with E/M visits faces frequent medical necessity rejections without ulcer staging',
+    ],
+    faqs: [
+      { q: 'How do you prevent debridement depth recoupments?', a: 'We ensure clinical notes explicitly record instrument type (scalpel/curette), wound dimensions (length × width × depth in cm²), tissue type removed, and post-procedure bleeding to meet strict Medicare LCD criteria.' },
+      { q: 'How are cellular skin substitute grafts billed without unbundling denials?', a: 'We coordinate pre-authorization, match manufacturer invoice pricing, append appropriate application CPTs (15271–15278), and report exact square-centimeter units plus wastage via JW modifier.' },
+    ],
+  },
+  {
+    slug: 'anesthesia',
+    name: 'Anesthesiology & Interventional Sedation',
+    noun: 'anesthesiology practices, CRNA groups, and pain clinics',
+    cpt: '00100–01999, 99100–99140, 01967–01968',
+    blurb:
+      'Complex time-increment arithmetic, ASA base unit valuations, physical status modifiers, and medical direction concurrency audit defense.',
+    painPoints: [
+      'Concurrency management: when an anesthesiologist directs >4 rooms or is interrupted by emergency services, direction drops to medical supervision, cutting allowable reimbursement by 50%',
+      'Time unit calculation discrepancies (15-minute standard increments vs exact minute rounding rules between Medicare and commercial plans)',
+      'Physical status modifiers (P1–P6) and qualifying circumstances (extreme age 99100, emergency 99140) routinely downcoded without appeal',
+      'Discontinuous anesthesia times and PACU handoff tracking creating compliance vulnerabilities during payer audits',
+    ],
+    faqs: [
+      { q: 'How do you safeguard medical direction concurrency?', a: 'We integrate real-time electronic anesthesia record (AIMS) timestamps to guarantee the 7 CMS medical direction criteria are met and prevent concurrency drops from QK/QX to non-covered supervision.' },
+      { q: 'How are 15-minute time increments calculated across commercial payers?', a: 'We map payer-specific contract terms for fractional time rounding (e.g. Medicare exact fractional minutes vs commercial 15-minute blocks) to maximize allowable cash capture.' },
+    ],
+  },
+  {
+    slug: 'asc',
+    name: 'Ambulatory Surgery Centers (ASC)',
+    noun: 'ambulatory surgery centers and outpatient surgical suites',
+    cpt: 'UB-04 Rev Codes 0490, 0360, 0278; CPT 29881, 45380, 66984',
+    blurb:
+      'Dual facility (UB-04 / 837I) and professional (CMS-1500 / 837P) claim coordination, device-intensive implant packaging, and OPPS fee schedule optimization.',
+    painPoints: [
+      'Device-intensive procedures lose implant pass-through revenue when HCPCS C-codes are omitted from Revenue Code 0278',
+      'Multiple procedure discounting rules (50% reduction on secondary surgical procedures) miscalculated or underpaid by commercial payers',
+      'ASC facility fee packaging differs significantly from hospital outpatient department (HOPD) APC rates, causing under-billing',
+      'Discontinued surgery modifier rules (Modifier 73 prior to anesthesia vs Modifier 74 after surgical initiation) frequently challenged',
+    ],
+    faqs: [
+      { q: 'How do you capture high-cost surgical implant pass-through revenue?', a: 'Our surgical coders audit operative reports against vendor device invoices to ensure all C-codes and L-codes are accounted for under Revenue Code 0278 before UB-04 release.' },
+      { q: 'How do you handle dual facility and physician billing?', a: 'We run parallel claim scrubbers for both the facility (837I) and the surgeon professional fee (837P) to synchronize diagnosis coding, procedure dates, and modifier consistency across both entities.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
