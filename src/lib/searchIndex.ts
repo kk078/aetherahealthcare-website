@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 79 Interactive Tools
+// 81 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -929,6 +929,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'amber',
     keywords: ['cerebrovascular bypass', 'ec-ic bypass', 'sta-mca', '61711', 'high flow bypass', 'vein graft', '35500', 'radial artery', '35600', 'orbitozygomatic approach', '61592', 'skull base craniotomy', 'operating microscope', '69990', 'aneurysm', 'giant aneurysm', 'modifier 62', 'co-surgeon', 'moyamoya'],
   },
+  {
+    id: 'tool-pediatric-mibg',
+    category: 'tools',
+    title: 'Pediatric Targeted MIBG & Radiopharmaceutical Scrubber',
+    subtitle: 'I-131 MIBG therapy (79445), A9508 isotope pass-through, medical physics (+77336) & stem cell rescue (+38240)',
+    description: 'Audit therapeutic I-131 MIBG administration (79445), HCPCS A9508 isotope invoice pass-through, medical physics consultation (+77336), and autologous stem cell rescue (+38240).',
+    href: '/tools/pediatric-mibg-radiopharmaceutical-scrubber',
+    badge: 'Nuclear Oncology',
+    badgeVariant: 'teal',
+    keywords: ['pediatric mibg', 'i-131 mibg', 'iobenguane', '79445', 'a9508', 'medical physics', '77336', 'radiation dosimetry', '78830', '77300', 'stem cell rescue', '38240', 'neuroblastoma', 'pheochromocytoma', 'radiation isolation', 'radionuclide therapy'],
+  },
+  {
+    id: 'tool-complex-robotic-hernia-tar',
+    category: 'tools',
+    title: 'Complex Robotic Hernia & TAR Component Separation Scrubber',
+    subtitle: 'CPT 2023+ ventral hernia (49591–49618), transversus abdominis release (TAR +49622) & mesh (+49623)',
+    description: 'Audit modern CPT 2023+ anterior abdominal wall hernia repairs (49591–49618), transversus abdominis release (TAR add-on +49622), and retrorectus mesh placement (+49623).',
+    href: '/tools/complex-robotic-hernia-tar-scrubber',
+    badge: 'Robotic Surgery',
+    badgeVariant: 'amber',
+    keywords: ['complex hernia', 'robotic hernia', 'ventral hernia', 'incisional hernia', '49591', '49593', '49595', '49592', '49594', '49596', '49613', '49615', '49617', '49614', '49616', '49618', 'tar', 'transversus abdominis release', '49622', 'mesh add-on', '49623', 'component separation', 'abdominal wall reconstruction', 'non-contiguous defects', 'modifier 59'],
+  },
 ];
 
 // Specialties
@@ -1704,14 +1726,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['cerebrovascular bypass', 'skull base bypass', 'ec-ic bypass', 'sta-mca', '61711', 'vein graft harvest', '35500', 'radial artery', '35600', 'orbitozygomatic craniotomy', '61592', 'aneurysm', 'giant aneurysm', 'operating microscope', '69990', 'modifier 62', 'co-surgery', 'neurosurgery'],
   },
   {
+    id: 'spec-pediatric-mibg-radiopharmaceutical',
+    category: 'specialties',
+    title: 'Pediatric Targeted Radioiodine & MIBG Therapy Billing',
+    subtitle: 'Therapeutic I-131 MIBG (79445), HCPCS A9508 pass-through, medical physics & stem cell rescue',
+    href: '/medical-billing/pediatric-mibg-radiopharmaceutical',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric mibg', 'i-131 mibg', 'iobenguane', '79445', 'a9508', 'neuroblastoma', 'medical physics', '77336', 'spect ct dosimetry', '78830', 'stem cell rescue', '38240', 'nuclear oncology', 'radiopharmaceutical'],
+  },
+  {
+    id: 'spec-complex-robotic-hernia-reconstruction',
+    category: 'specialties',
+    title: 'Multi-Compartment Complex Robotic & Laparoscopic Hernia Reconstruction Billing',
+    subtitle: 'CPT 2023+ anterior hernia (49591–49618), TAR component separation (+49622) & mesh (+49623)',
+    href: '/medical-billing/complex-robotic-hernia-reconstruction',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['complex hernia', 'robotic hernia', 'abdominal wall reconstruction', 'tar', 'transversus abdominis release', '49622', '49623', '49591', '49593', '49595', '49613', '49615', '49617', 'mesh placement', 'ventral hernia', 'incisional hernia'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 74+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 76+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass', 'pediatric mibg', 'neuroblastoma', 'robotic hernia', 'tar component separation'],
   },
 ];
 

@@ -1356,6 +1356,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Can the operating microscope (+69990) be billed with EC-IC microvascular bypass (61711)?', a: 'Yes. Under CMS NCCI Chapter VIII guidelines, CPT 61711 does not intrinsically include the operating microscope. Operating microscope add-on code +69990 is fully reimbursable when microvascular suturing of donor-to-recipient vessels (such as 1mm STA branch to cortical M4 vessel with 10-0 nylon) is documented in the operative narrative.' },
     ],
   },
+  {
+    slug: 'pediatric-mibg-radiopharmaceutical',
+    name: 'Pediatric Targeted Radioiodine & MIBG Therapy for Neuroblastoma',
+    noun: 'pediatric nuclear medicine oncologists, radiation oncologists, pediatric hematologist-oncologists, and tertiary pediatric cancer centers',
+    cpt: '79445, 79101, 78804, 78830, 77300, 77336, 38240, A9508, 99223, 99233',
+    blurb:
+      'High-dose targeted radionuclide therapy for high-risk refractory neuroblastoma and pheochromocytoma: therapeutic Iodine-131 metaiodobenzylguanidine (I-131 MIBG 79445), radiation dosimetry calculations (78804/78830), medical radiation physics (+77336), lead-lined isolation room inpatient admissions, stem cell rescue support (+38240), and radioisotope pass-through invoice recovery (HCPCS A9508).',
+    painPoints: [
+      'Radiopharmaceutical pass-through invoice (A9508) disallowance: Payers refusing to reimburse $35,000–$60,000 high-dose I-131 MIBG isotope costs under generic DRG carve-out rules',
+      'Radiation physics consultation (+77336) and dosimetry bundling: Commercial payers rejecting mandatory medical physicist dose calculations and radiation protection protocols',
+      'Lead-lined radiation isolation inpatient stay downcoding: Denial of specialized inpatient safety isolation room per diem charges during prolonged radioactive clearance',
+      'Autologous hematopoietic stem cell rescue (+38240) denial: Clearinghouse disputes when post-MIBG myelosuppression necessitates delayed stem cell reinfusion',
+    ],
+    faqs: [
+      { q: 'How is therapeutic high-dose I-131 MIBG administration reported for pediatric neuroblastoma?', a: 'Therapeutic administration of radiopharmaceuticals for non-thyroid malignancy (specifically I-131 MIBG for neuroblastoma) is coded using CPT 79445 (radiopharmaceutical therapy, by intravenous infusion). The therapeutic radionuclide itself is separately billed using HCPCS A9508 (iodine I-131 iobenguane, therapeutic, per millicurie) with itemized pharmacy invoices and exact millicurie dose administered. Concurrent medical physicist radiation protection and continuous survey monitoring is reported using CPT +77336.' },
+      { q: 'Can radiation dosimetry and physics consultation (+77336) be billed during inpatient MIBG therapy?', a: 'Yes. Due to extreme radiation exposure hazards associated with therapeutic I-131 activities (often exceeding 12–18 mCi/kg in pediatric patients), continuous medical physics oversight is a statutory Nuclear Regulatory Commission (NRC) mandate. CPT 77336 (continuing medical physics consultation, including radiation dose verification) and CPT 78830 (whole body SPECT/CT radiopharmaceutical localization and clearance dosimetry) are separately reimbursable with appropriate clinical physicist reports.' },
+    ],
+  },
+  {
+    slug: 'complex-robotic-hernia-reconstruction',
+    name: 'Multi-Compartment Complex Robotic & Laparoscopic Hernia Reconstruction',
+    noun: 'complex abdominal wall reconstruction (AWR) surgeons, robotic hernia specialists, minimally invasive general surgeons, and tertiary hernia centers',
+    cpt: '49591, 49592, 49593, 49594, 49595, 49596, 49613, 49614, 49615, 49616, 49622, 49623',
+    blurb:
+      'Modern CPT 2023+ anterior abdominal wall hernia repairs: robotic/laparoscopic repair of initial or recurrent ventral, incisional, epigastric, and umbilical hernias (49591–49618), posterior component separation with transversus abdominis release (TAR add-on +49622), retrorectus prosthetic mesh reinforcement (+49623), non-contiguous defect stratification, and incarcerated/strangulated repair justification.',
+    painPoints: [
+      'Transversus abdominis release (TAR +49622) bundling denials: Clearinghouses improperly bundling posterior component separation into primary hernia closure codes',
+      'Mesh placement add-on (+49623) unbundling clawbacks: Payers rejecting prosthetic or biologic mesh placement add-on (+49623) under legacy pre-2023 coding assumptions',
+      'Multi-defect sizing and non-contiguous total defect area disputes: Downcoding complex multi-orifice hernia repairs from >10cm tiers to smaller initial categories',
+      'Incarcerated/strangulated surgical urgency downcoding: Payers denying higher-valued incarcerated hernia tiers (e.g. 49594 vs 49593) without detailed bowel viability dictation',
+    ],
+    faqs: [
+      { q: 'How are anterior abdominal wall hernias reported under the CPT 2023+ hernia restructuring?', a: 'Effective 2023, CPT eliminated the historical distinctions between open vs laparoscopic/robotic ventral, incisional, epigastric, and umbilical hernias. Repairs are now reported under unified codes (49591–49618) categorized exclusively by initial vs recurrent, reducible vs incarcerated/strangulated, and total defect size: less than 3 cm (49591/49592), 3 cm to 10 cm (49593/49594), or greater than 10 cm (49595/49596). When multiple non-contiguous defects are repaired, the sizes are not summed; the largest defect determines the primary code, while additional non-contiguous defects are reported if distinct fascial closures are performed.' },
+      { q: 'Can posterior component separation (TAR add-on +49622) and mesh (+49623) be billed together?', a: 'Yes. Transversus abdominis release (TAR) or posterior component separation is explicitly reported using add-on code +49622 when transversus abdominis muscle release is performed to gain retrorectus fascial medial mobilization. In addition, prosthetic mesh reinforcement placed in the retrorectus (sublay) position is separately reported using add-on code +49623. Both add-on codes are exempt from Modifier -51 multi-procedure fee reductions.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

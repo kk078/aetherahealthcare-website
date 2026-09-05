@@ -79,6 +79,12 @@ const specialtyLinks: Record<string, string> = {
   'Thoracoabdominal Aortic Aneurysm (TAAA) Repair & Branched/Fenestrated EVAR (FEVAR)': '/medical-billing/taaa-fenestrated-evar',
   'Pediatric Vascular Malformations, Hemangiomas & Sclerotherapy': '/medical-billing/pediatric-vascular-malformations',
   'Complex Orthopedic Oncology & Limb Salvage Reconstruction': '/medical-billing/orthopedic-oncology-limb-salvage',
+  'Pediatric Deep Brain Stimulation & Neuromodulation': '/medical-billing/pediatric-dbs-neuromodulation',
+  'Open Craniofacial Fracture & Panfacial Trauma Reconstruction': '/medical-billing/panfacial-trauma-reconstruction',
+  'Pediatric Inborn Errors of Metabolism & Biochemical Genetics': '/medical-billing/pediatric-biochemical-genetics',
+  'Complex Skull Base Cerebrovascular Bypass & Microvascular EC-IC Anastomosis': '/medical-billing/skull-base-cerebrovascular-bypass',
+  'Pediatric Targeted Radioiodine & MIBG Therapy for Neuroblastoma': '/medical-billing/pediatric-mibg-radiopharmaceutical',
+  'Multi-Compartment Complex Robotic & Laparoscopic Hernia Reconstruction': '/medical-billing/complex-robotic-hernia-reconstruction',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -557,6 +563,18 @@ const specialties = [
         description: 'Extracranial-to-intracranial (EC-IC) arterial bypass (STA-MCA 61711), high-flow saphenous vein or radial artery interposition grafting (35500/35600), complex giant aneurysm trapping (61697), skull base orbitozygomatic craniotomy (61592), and operating microscope (+69990).',
         cptCodes: '61711, 61697, 61698, 61700, 61702, 61592, 61600, 69990, 15756, 35500, 95940',
         challenges: 'Skull base craniotomy approach unbundling, autologous vein/artery graft harvest bundling into 61711, operating microscope (+69990) unbundling denials, and dual-surgeon Modifier -62 matching rejections.'
+      },
+      {
+        name: 'Pediatric Targeted Radioiodine & MIBG Therapy for Neuroblastoma',
+        description: 'High-dose targeted radionuclide therapy for neuroblastoma: therapeutic I-131 MIBG administration (79445), radiation dosimetry (78830), medical physics consultation (+77336), stem cell rescue (+38240), and HCPCS A9508 isotope invoice pass-through recovery.',
+        cptCodes: '79445, 79101, 78804, 78830, 77300, 77336, 38240, A9508, 99223, 99233',
+        challenges: 'Radiopharmaceutical invoice pass-through (A9508) disallowances, medical physics consultation (+77336) bundling denials, lead-lined isolation room per diem downcoding, and stem cell rescue (+38240) coverage disputes.'
+      },
+      {
+        name: 'Multi-Compartment Complex Robotic & Laparoscopic Hernia Reconstruction',
+        description: 'Modern CPT 2023+ anterior abdominal wall hernia repairs: robotic/laparoscopic repair (49591–49618), posterior component separation with transversus abdominis release (TAR add-on +49622), retrorectus prosthetic mesh (+49623), and incarcerated/strangulated repair justification.',
+        cptCodes: '49591, 49592, 49593, 49594, 49595, 49596, 49613, 49614, 49615, 49616, 49622, 49623',
+        challenges: 'Transversus abdominis release (TAR +49622) bundling denials, mesh placement add-on (+49623) unbundling clawbacks, multi-defect sizing disputes, and incarcerated hernia tier downcoding.'
       }
     ]
   }
@@ -564,13 +582,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 74+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 76+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 74+ specialties — Pediatric Biochemical Genetics, Skull Base Cerebrovascular Bypass, Pediatric Deep Brain Stimulation, Panfacial Trauma Reconstruction, and more.',
+    description: 'Expert medical billing across 76+ specialties — Pediatric Targeted Radioiodine & MIBG Therapy, Complex Robotic Hernia TAR Reconstruction, Pediatric Biochemical Genetics, Skull Base Cerebrovascular Bypass, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -581,7 +599,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 74 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 76 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -602,10 +620,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 74+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 76+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['74+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['76+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

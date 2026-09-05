@@ -59,6 +59,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/pediatric-mibg-radiopharmaceutical-scrubber',
+    icon: Radiation,
+    name: 'Pediatric Targeted MIBG & Radiopharmaceutical Scrubber',
+    desc: 'Audit therapeutic I-131 MIBG administration (79445), HCPCS A9508 isotope invoice pass-through, medical physics consultation (+77336), and autologous stem cell rescue (+38240).',
+    category: 'scrubbers',
+    tag: 'Pediatric Oncology & Radiopharmaceuticals',
+    badge: 'New',
+  },
+  {
+    href: '/tools/complex-robotic-hernia-tar-scrubber',
+    icon: Scissors,
+    name: 'Complex Robotic Hernia & TAR Component Separation Scrubber',
+    desc: 'Audit modern CPT 2023+ anterior abdominal wall hernia repairs (49591–49618), transversus abdominis release (TAR add-on +49622), and retrorectus mesh placement (+49623).',
+    category: 'scrubbers',
+    tag: 'Abdominal Wall Reconstruction & Robotic Surgery',
+    badge: 'New',
+  },
+  {
     href: '/tools/pediatric-biochemical-genetics-scrubber',
     icon: FlaskConical,
     name: 'Pediatric Biochemical Genetics & Metabolic Formula Scrubber',
