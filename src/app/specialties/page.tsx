@@ -87,6 +87,8 @@ const specialtyLinks: Record<string, string> = {
   'Multi-Compartment Complex Robotic & Laparoscopic Hernia Reconstruction': '/medical-billing/complex-robotic-hernia-reconstruction',
   'Pediatric Total Pancreatectomy with Islet Autotransplantation (TPIAT)': '/medical-billing/pediatric-tpiat-islet-transplant',
   'Endoscopic Transnasal Odontoid & Pituitary Skull Base Resection': '/medical-billing/endoscopic-pituitary-odontoid-resection',
+  'Pediatric Single-Ventricle Congenital Heart Disease Palliation (Norwood / Glenn / Fontan)': '/medical-billing/pediatric-single-ventricle-palliation',
+  'Multi-Level Minimally Invasive Adult Spinal Deformity & Lateral Interbody Fusion (LLIF/XLIF)': '/medical-billing/minimally-invasive-adult-spine-deformity',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -589,6 +591,18 @@ const specialties = [
         description: 'Expanded endonasal skull base surgery (EEA): transnasal odontoidectomy for basilar invagination (61575), transsphenoidal hypophysectomy (61548/62165), vascularized Hadad nasoseptal flap (+15730/+30520), neuronavigation (+61782), and ENT/Neurosurgery co-surgery (Modifier -62).',
         cptCodes: '61548, 61575, 62165, 31290, 31291, 30520, 15730, 61782, 62272, 69990',
         challenges: 'Vascularized nasoseptal flap (+15730) bundling into approach, transnasal odontoidectomy (61575) downcoding to simple pituitary excision, and dual-surgeon Modifier -62 matching discrepancies.'
+      },
+      {
+        name: 'Pediatric Single-Ventricle Congenital Heart Disease Palliation (Norwood / Glenn / Fontan)',
+        description: 'Hypoplastic left heart syndrome (HLHS) multi-stage surgical pathway: Stage 1 Norwood neo-aorta reconstruction and Sano/BT shunt (33619/33688/33750), Stage 2 bidirectional Glenn (33767), Stage 3 Fontan (33737), delayed sternal closure (+33530), and ECMO support (+33946).',
+        cptCodes: '33619, 33688, 33750, 33766, 33767, 33737, 33530, 33946, 33947, 99291, 99292',
+        challenges: 'Multi-stage surgical global period clawbacks absent Modifier -58, branch pulmonary artery patch angioplasty (+33688) bundling into Norwood neo-aorta, and delayed sternal closure unbundling denials.'
+      },
+      {
+        name: 'Multi-Level Minimally Invasive Adult Spinal Deformity & Lateral Interbody Fusion (LLIF/XLIF)',
+        description: 'Adult degenerative scoliosis and sagittal imbalance reconstruction: multi-level lateral lumbar interbody fusion (22558, each additional interspace +22552), anterior longitudinal ligament release (ALLR), percutaneous posterior fixation (+22842–+22844), spinopelvic screws (+22848), and 3D navigation (+61783).',
+        cptCodes: '22558, 22552, 22842, 22843, 22844, 22848, 22853, 61783, 95940, 95941, 77002, 20930',
+        challenges: 'Multi-level interbody fusion add-on (+22552) bundling clawbacks, anterior longitudinal ligament release unbundling disputes, and continuous intraoperative neuromonitoring (+95940) medical necessity denials.'
       }
     ]
   }
@@ -596,13 +610,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 78+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 80+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 78+ specialties — Pediatric TPIAT Islet Autotransplant, Endoscopic Skull Base Odontoid Resection, Pediatric Targeted MIBG Therapy, and more.',
+    description: 'Expert medical billing across 80+ specialties — Pediatric Single-Ventricle Palliation, Minimally Invasive Adult Spine Deformity, Pediatric TPIAT Islet Autotransplant, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -613,7 +627,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 78 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 80 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -634,10 +648,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 78+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 80+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['78+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['80+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

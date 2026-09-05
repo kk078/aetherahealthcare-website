@@ -1428,6 +1428,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Can a vascularized nasoseptal flap (15730 / 30520) be billed separately from endoscopic skull base tumor excision?', a: 'Yes. Reconstruction of high-flow cerebrospinal fluid (CSF) fistulae using a pedicled Hadad-Bassagasteguy nasoseptal flap requires microvascular branch preservation of the posterior septal artery. Flap harvesting, mobilization, and multilayer skull base repair is coded using CPT 15730 (or +30520 depending on payer local coverage determination) and is not bundled into endoscopic sinus approaches when substantiated by dural defect size and CSF leak grade.' },
     ],
   },
+  {
+    slug: 'pediatric-single-ventricle-palliation',
+    name: 'Pediatric Single-Ventricle Congenital Heart Disease Palliation (Norwood / Glenn / Fontan)',
+    noun: 'pediatric congenital heart surgeons, pediatric cardiothoracic surgical specialists, pediatric cardiac intensivists, and congenital heart centers',
+    cpt: '33619, 33688, 33750, 33766, 33767, 33737, 33530, 33946, 33947, 99291, 99292',
+    blurb:
+      'Multi-stage surgical reconstruction for hypoplastic left heart syndrome (HLHS) and single ventricle anomalies: Stage 1 Norwood neo-aorta reconstruction and Sano/BT systemic-to-pulmonary shunt (33619/33688/33750), Stage 2 bidirectional cavopulmonary Glenn shunt (33767), Stage 3 extracardiac conduit Fontan completion (33737), delayed sternal closure (+33530), and temporary ECMO/ECLS circulatory support (+33946/+33947).',
+    painPoints: [
+      'Multi-stage global surgery clawbacks: Payers improperly denying Stage 2 Glenn or Stage 3 Fontan claims within the 90-day global surgical window of prior palliation absent Modifier -58',
+      'Concomitant pulmonary artery reconstruction (+33688) bundling: Clearinghouses bundling complex branch pulmonary artery patch angioplasty into primary Norwood neo-aorta repair',
+      'Delayed sternal closure (+33530) unbundling audits during open-chest postoperative hemodynamic recovery',
+      'Neonatal cardiac critical care (99291/99292) downcoding during high-risk post-Norwood physiology',
+    ],
+    faqs: [
+      { q: 'How is Stage 1 Norwood reconstruction coded under CPT guidelines?', a: 'Stage 1 Norwood reconstruction for hypoplastic left heart syndrome is reported using CPT 33619 (repair of single ventricle with aortic arch reconstruction). Systemic-to-pulmonary blood flow establishment using a modified Blalock-Taussig shunt (33750) or right ventricle-to-pulmonary artery conduit (Sano shunt 33766) is separately billable depending on the specific surgical strategy. Extensive branch pulmonary artery reconstruction is reported using add-on code +33688.' },
+      { q: 'Can delayed sternal closure (+33530) be billed separately following pediatric cardiac surgery?', a: 'Yes. When extreme myocardial edema or tenuous neonatal hemodynamics prevent primary sternal closure, delayed sternal closure performed on postoperative Day 2 to 5 is separately reimbursable using CPT +33530 (delayed sternal closure) with Modifier -58 when properly documented in the staged surgical plan.' },
+    ],
+  },
+  {
+    slug: 'minimally-invasive-adult-spine-deformity',
+    name: 'Multi-Level Minimally Invasive Adult Spinal Deformity & Lateral Interbody Fusion (LLIF/XLIF)',
+    noun: 'adult spinal deformity surgeons, minimally invasive spine specialists, orthopedic spine surgeons, neurosurgeons, and comprehensive spine institutes',
+    cpt: '22558, 22552, 22842, 22843, 22844, 22848, 22853, 61783, 95940, 95941, 77002, 20930',
+    blurb:
+      'Advanced minimally invasive surgical correction for adult degenerative scoliosis and sagittal imbalance: multi-level lateral lumbar interbody fusion (LLIF/XLIF: 22558, each additional interspace +22552), anterior longitudinal ligament release (ALLR), percutaneous posterior multi-segment instrumentation (+22842–+22844), spinopelvic iliac fixation (+22848), stereotactic 3D navigation (+61783), and interbody cages (+22853).',
+    painPoints: [
+      'Multi-level interbody fusion add-on (+22552) bundling edits on contiguous lateral disk spaces',
+      'Anterior longitudinal ligament release (ALLR) non-coverage and unbundling disputes during hyperlordotic cage placement',
+      'Stereotactic spinal neuronavigation (+61783) and fluoroscopic guidance (+77002) downcoding',
+      'Real-time continuous intraoperative neurophysiological monitoring (IONM +95940/+95941) medical necessity audits',
+    ],
+    faqs: [
+      { q: 'How are multi-level lateral lumbar interbody fusions (LLIF / XLIF) reported under CPT?', a: 'Lateral lumbar interbody fusion is coded using primary CPT 22558 (arthrodesis, anterior interbody technique; lumbar) for the first level (e.g. L3-L4), and add-on CPT +22552 for each additional contiguous intervertebral space (e.g. L2-L3, L4-L5). Biomechanical interbody cages are reported per interspace using CPT +22853. None of the add-on codes are subject to Modifier -51 multi-procedure fee reductions.' },
+      { q: 'Can stereotactic neuronavigation (+61783) and percutaneous instrumentation be billed together?', a: 'Yes. Intraoperative stereotactic computer-assisted spinal navigation is coded using CPT +61783 and is fully reimbursable when 3D navigation is utilized to guide percutaneous pedicle screw placement (+22842–+22844) and verify lateral corridor trajectories relative to the lumbar plexus.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

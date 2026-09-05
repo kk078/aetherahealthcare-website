@@ -45,6 +45,7 @@ import {
   Brain,
   Bot,
   FlaskConical,
+  Compass,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -58,6 +59,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/pediatric-single-ventricle-norwood-scrubber',
+    icon: Heart,
+    name: 'Pediatric Single-Ventricle Norwood & Glenn Scrubber',
+    desc: 'Audit Stage 1 Norwood arch reconstruction (33619), Sano/BT shunts (33766/33750), branch pulmonary artery angioplasty (+33688), and staged Modifier -58 defenses.',
+    category: 'scrubbers',
+    tag: 'Pediatric Congenital Cardiac Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/adult-spine-deformity-llif-scrubber',
+    icon: Compass,
+    name: 'Adult Spine Deformity & Multi-Level LLIF Scrubber',
+    desc: 'Audit multi-level lateral lumbar interbody fusion (22558, +22552), anterior longitudinal ligament release (ALLR +Mod 22), percutaneous instrumentation (+22842–+22843), and S2AI screws (+22848).',
+    category: 'scrubbers',
+    tag: 'Minimally Invasive Spine Deformity',
+    badge: 'New',
+  },
   {
     href: '/tools/pediatric-tpiat-islet-transplant-scrubber',
     icon: FlaskConical,

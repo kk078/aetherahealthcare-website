@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 83 Interactive Tools
+// 85 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -973,6 +973,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'amber',
     keywords: ['endoscopic skull base', 'odontoidectomy', '61575', 'pituitary tumor', 'hypophysectomy', '61548', 'chordoma', '61600', 'nasoseptal flap', 'hadad flap', '15730', 'neuronavigation', '61782', 'lumbar drain', '62272', 'modifier 62', 'co-surgeon', 'rhinology', 'neurosurgery'],
   },
+  {
+    id: 'tool-pediatric-single-ventricle-norwood',
+    category: 'tools',
+    title: 'Pediatric Single-Ventricle Norwood & Glenn Scrubber',
+    subtitle: 'Norwood arch reconstruction (33619), Sano/BT shunts (33766/33750) & PA angioplasty (+33688)',
+    description: 'Audit Stage 1 Norwood neo-aorta reconstruction, Sano shunts, branch pulmonary artery reconstruction, and staged Modifier -58 defenses.',
+    href: '/tools/pediatric-single-ventricle-norwood-scrubber',
+    badge: 'Single Ventricle',
+    badgeVariant: 'teal',
+    keywords: ['pediatric cardiac', 'norwood', '33619', 'sano shunt', '33766', 'blalock taussig', '33750', 'glenn', '33767', 'fontan', '33737', 'pulmonary artery reconstruction', '33688', 'delayed sternal closure', '33530', 'hlhs', 'single ventricle', 'modifier 58', 'ecmo', '33946'],
+  },
+  {
+    id: 'tool-adult-spine-deformity-llif',
+    category: 'tools',
+    title: 'Adult Spine Deformity & Multi-Level LLIF Scrubber',
+    subtitle: 'LLIF arthrodesis (22558/+22552), ALLR release (+Mod 22), percutaneous screws (+22842) & S2AI (+22848)',
+    description: 'Audit multi-level lateral lumbar interbody fusion (LLIF/XLIF), anterior longitudinal ligament release (ALLR), percutaneous posterior instrumentation, and spinopelvic fixation.',
+    href: '/tools/adult-spine-deformity-llif-scrubber',
+    badge: 'Spine Deformity',
+    badgeVariant: 'amber',
+    keywords: ['adult spine deformity', 'llif', 'xlif', 'lateral interbody fusion', '22558', '22552', 'allr', 'anterior longitudinal ligament release', 'modifier 22', 'percutaneous pedicle screws', '22842', '22843', 'pelvic fixation', 's2ai', '22848', 'interbody cage', '22853', 'neuronavigation', '61783', 'ionm', '95940'],
+  },
 ];
 
 // Specialties
@@ -1788,14 +1810,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['endoscopic skull base', 'transnasal odontoidectomy', '61575', 'pituitary adenoma', '61548', 'nasoseptal flap', '15730', 'neuronavigation', '61782', 'modifier 62', 'co-surgery', 'rhinology', 'neurosurgery'],
   },
   {
+    id: 'spec-pediatric-single-ventricle-palliation',
+    category: 'specialties',
+    title: 'Pediatric Single-Ventricle Congenital Heart Disease Palliation Billing',
+    subtitle: 'Stage 1 Norwood (33619), Sano/BT shunt, Glenn (33767), Fontan (33737) & delayed sternal closure (+33530)',
+    href: '/medical-billing/pediatric-single-ventricle-palliation',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric single ventricle', 'norwood', '33619', 'sano shunt', '33766', 'blalock taussig', '33750', 'glenn', '33767', 'fontan', '33737', 'hlhs', 'pulmonary artery reconstruction', '33688', 'delayed sternal closure', '33530', 'modifier 58', 'congenital heart surgery'],
+  },
+  {
+    id: 'spec-minimally-invasive-adult-spine-deformity',
+    category: 'specialties',
+    title: 'Multi-Level Minimally Invasive Adult Spinal Deformity & Lateral Interbody Fusion Billing',
+    subtitle: 'LLIF/XLIF (22558/+22552), ALLR anterior release (+Mod 22), percutaneous instrumentation & S2AI (+22848)',
+    href: '/medical-billing/minimally-invasive-adult-spine-deformity',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['adult spinal deformity', 'llif', 'xlif', 'lateral lumbar interbody fusion', '22558', '22552', 'allr', 'modifier 22', 'percutaneous instrumentation', '22842', '22843', 'spinopelvic fixation', '22848', 'biomechanical cages', '22853', 'neuronavigation', '61783', 'ionm', '95940'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 78+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 80+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass', 'pediatric mibg', 'neuroblastoma', 'robotic hernia', 'tar component separation', 'pediatric tpiat', 'islet transplant', 'endoscopic skull base', 'odontoidectomy'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass', 'pediatric mibg', 'neuroblastoma', 'robotic hernia', 'tar component separation', 'pediatric tpiat', 'islet transplant', 'endoscopic skull base', 'odontoidectomy', 'single ventricle', 'norwood', 'glenn', 'fontan', 'adult spine deformity', 'llif', 'xlif'],
   },
 ];
 
