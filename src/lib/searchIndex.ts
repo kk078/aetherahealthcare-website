@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 47 Interactive Tools
+// 49 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -577,6 +577,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'teal',
     keywords: ['vascular surgery', 'endovascular', 'pad', 'revascularization', '37224', '37225', '37226', '37227', '37228', 'atherectomy', 'stent', 'angioplasty', 'ivus', '37252', '75710'],
   },
+  {
+    id: 'tool-spine-arthrodesis',
+    category: 'tools',
+    title: 'Spine Arthrodesis & Multi-Level Instrumentation Scrubber',
+    subtitle: 'TLIF/PLIF 22633, ACDF 22551, NCCI canal decompression bundling & Modifier 62 co-surgery',
+    description: 'Audit complex spinal fusions, test NCCI laminectomy bundling edits (63047), audit Modifier -62 co-surgery rules, and eliminate instrumentation (+22842/+22845) and bone graft clawbacks.',
+    href: '/tools/spine-arthrodesis-scrubber',
+    badge: 'Spine Surgery',
+    badgeVariant: 'purple',
+    keywords: ['spine surgery', 'arthrodesis', 'tlif', 'plif', 'acdf', 'alif', '22633', '22551', '22558', '63047', 'modifier 62', 'instrumentation', '22842', '22845', '22853', '20930', '20936'],
+  },
+  {
+    id: 'tool-urogynecology',
+    category: 'tools',
+    title: 'Urogynecology & Pelvic Floor Reconstruction Bundling Scrubber',
+    subtitle: 'Sacrocolpopexy (57425), mid-urethral sling (57288), cystoscopy (52000) bundling & UDS',
+    description: 'Evaluate sacrocolpopexy and mid-urethral sling bundling, resolve routine cystoscopy (52000) unbundling clawbacks, validate POP-Q prolapse medical necessity, and stack multi-channel urodynamics.',
+    href: '/tools/urogynecology-scrubber',
+    badge: 'Urogynecology',
+    badgeVariant: 'teal',
+    keywords: ['urogynecology', 'fpmrs', 'sacrocolpopexy', '57425', 'sling', '57288', 'cystoscopy', '52000', 'colporrhaphy', '57260', 'pop-q', 'urodynamics', '51729', '51784', '51797'],
+  },
 ];
 
 // Specialties
@@ -1032,14 +1054,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['vascular surgery', 'endovascular', 'pad', 'revascularization', 'evar', 'tevar', '34701', '37224', '37226', 'av fistula', '36821', 'thrombectomy', 'obl'],
   },
   {
+    id: 'spec-spine-surgery',
+    category: 'specialties',
+    title: 'Orthopedic Spine Surgery & Complex Arthrodesis Billing',
+    subtitle: 'ACDF (22551), TLIF/PLIF (22633), segmental instrumentation, Modifier 62 co-surgery & neuromonitoring',
+    href: '/medical-billing/spine-surgery',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['spine surgery', 'orthopedic spine', 'neurosurgery', 'arthrodesis', 'tlif', 'plif', 'acdf', 'alif', '22633', '22551', '22842', '22845', '20930', '20936', 'modifier 62'],
+  },
+  {
+    id: 'spec-urogynecology',
+    category: 'specialties',
+    title: 'Gynecologic Minimally Invasive Surgery & Urogynecology Billing',
+    subtitle: 'Sacrocolpopexy (57425), mid-urethral sling (57288), multi-channel urodynamics & prolapse repair',
+    href: '/medical-billing/urogynecology',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['urogynecology', 'fpmrs', 'sacrocolpopexy', '57425', 'sling', '57288', 'urodynamics', '51729', 'colporrhaphy', '57260', 'pop-q', 'cystoscopy', '52000'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 42+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 44+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology'],
   },
 ];
 

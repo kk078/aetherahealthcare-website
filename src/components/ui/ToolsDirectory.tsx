@@ -37,6 +37,7 @@ import {
   HeartPulse,
   Eye,
   GitBranch,
+  Bone,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -50,6 +51,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/spine-arthrodesis-scrubber',
+    icon: Bone,
+    name: 'Spine Arthrodesis & Multi-Level Instrumentation Scrubber',
+    desc: 'Audit complex spinal fusions (TLIF 22633, ACDF 22551, ALIF 22558), detect NCCI laminectomy bundling (63047), audit Modifier -62 co-surgery rules, and validate instrumentation & bone graft add-ons.',
+    category: 'scrubbers',
+    tag: 'Spine Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/urogynecology-scrubber',
+    icon: Activity,
+    name: 'Urogynecology & Pelvic Floor Reconstruction Scrubber',
+    desc: 'Audit sacrocolpopexy (57425) and mid-urethral sling (57288) bundling, prevent routine cystoscopy (52000) unbundling clawbacks, validate POP-Q prolapse staging, and stack multi-channel urodynamics (UDS).',
+    category: 'scrubbers',
+    tag: 'Urogynecology',
+    badge: 'New',
+  },
   {
     href: '/tools/retina-injection-scrubber',
     icon: Eye,

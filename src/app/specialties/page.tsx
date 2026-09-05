@@ -51,6 +51,8 @@ const specialtyLinks: Record<string, string> = {
   'Cardiac Electrophysiology & Catheter Ablation': '/medical-billing/cardiac-electrophysiology',
   'Ophthalmology & Vitreoretinal Surgery': '/medical-billing/retina-vitreous',
   'Vascular Surgery & Endovascular Interventions': '/medical-billing/vascular-surgery',
+  'Orthopedic Spine Surgery & Complex Arthrodesis': '/medical-billing/spine-surgery',
+  'Gynecologic Minimally Invasive Surgery & Urogynecology': '/medical-billing/urogynecology',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -207,6 +209,18 @@ const specialties = [
         description: 'Complex radical pelvic resections, retroperitoneal lymphadenectomies, HIPEC perfusion, and co-surgeon Modifier 62 coordination.',
         cptCodes: '58210, 58548, 38571-38572, 49220, 96560',
         challenges: 'Radical vs simple hysterectomy downcoding audits, lymph node dissection bundling, and multi-surgeon co-surgery documentation.'
+      },
+      {
+        name: 'Orthopedic Spine Surgery & Complex Arthrodesis',
+        description: 'Anterior cervical discectomy & fusion (ACDF), lumbar interbody fusion (TLIF/PLIF), segmental instrumentation, co-surgeon modifier -62 compliance, and neuromonitoring appeals.',
+        cptCodes: '22551, 22552, 22633, 22634, 22840–22845, 20930, 20936, 61783, 95940, 95941',
+        challenges: 'Decompression unbundling denials (63047 into 22633), co-surgeon Modifier 62 matching discrepancies, and multi-level instrumentation prior auth.'
+      },
+      {
+        name: 'Gynecologic Minimally Invasive Surgery & Urogynecology',
+        description: 'Laparoscopic sacrocolpopexy, mid-urethral sling procedures, multi-component urodynamics testing, pelvic organ prolapse repair, and diagnostic cystoscopy audit defense.',
+        cptCodes: '57425, 57288, 51726–51729, 51741, 51797, 52000, 57240, 57250, 57260, 57282',
+        challenges: 'Cystoscopy (52000) bundling post-sling, urodynamics technical/professional component unbundling, and POP-Q prolapse staging denials.'
       }
     ]
   },
@@ -344,13 +358,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 42+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 44+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 42+ specialties — Cardiology, Electrophysiology, Plastic Surgery, Retina & Ophthalmology, Vascular Surgery, NICU/PICU, Radiation Oncology, FQHC, Sleep Medicine, Addiction Medicine, Home Health & Hospice, Wound Care, and more.',
+    description: 'Expert medical billing across 44+ specialties — Spine Surgery, Urogynecology, Cardiology, Electrophysiology, Plastic Surgery, Retina & Ophthalmology, Vascular Surgery, NICU/PICU, Radiation Oncology, FQHC, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -361,7 +375,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 42 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 44 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -382,10 +396,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 42+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 44+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['42+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['44+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

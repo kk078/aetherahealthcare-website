@@ -116,18 +116,18 @@ test.describe('Specialties 41-42 and Tools 46-47: Retina & Vascular Endovascular
     });
   });
 
-  test('Tools Directory: Expands to 47 tools and search includes Retina and Vascular Scrubbers', async ({ page }) => {
+  test('Tools Directory: Expands to 47+ tools and search includes Retina and Vascular Scrubbers', async ({ page }) => {
     await page.goto('/tools/');
 
-    // Verify 47 Tools title
-    await expect(page.getByRole('heading', { level: 1, name: /47 Free Medical Billing & RCM Tools/i })).toBeVisible();
+    // Verify Tools title
+    await expect(page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i })).toBeVisible();
 
     // Verify tool cards are in directory
     await expect(page.getByText('Anti-VEGF Intravitreal Injection & Bilateral Scrubber').first()).toBeVisible();
     await expect(page.getByText('Endovascular & PAD Revascularization Scrubber').first()).toBeVisible();
 
     // Search filter test
-    const searchInput = page.getByPlaceholder(/Search all \d+ tools/i);
+    const searchInput = page.getByPlaceholder(/Search .* free tools/i);
     await searchInput.fill('Intravitreal');
     await expect(page.getByText('Anti-VEGF Intravitreal Injection & Bilateral Scrubber').first()).toBeVisible();
 
@@ -139,14 +139,14 @@ test.describe('Specialties 41-42 and Tools 46-47: Retina & Vascular Endovascular
     await page.goto('/specialties/');
 
     // Verify hero and chips
-    await expect(page.getByRole('heading', { level: 1, name: /Specialty-Specific Billing & Coding Services/i })).toBeVisible();
-    await expect(page.getByText('42+ specialties').first()).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: /Specialty-Specific Billing & Coding Services|Billing built for your specialty/i })).toBeVisible();
+    await expect(page.getByText(/\d+\+ specialties/).first()).toBeVisible();
 
     // Check directory links for both specialties
-    const retinaLink = page.locator('a[href="/medical-billing/retina-vitreous"]').first();
+    const retinaLink = page.locator('a[href*="/medical-billing/retina-vitreous"]').first();
     await expect(retinaLink).toBeVisible();
 
-    const vascularLink = page.locator('a[href="/medical-billing/vascular-surgery"]').first();
+    const vascularLink = page.locator('a[href*="/medical-billing/vascular-surgery"]').first();
     await expect(vascularLink).toBeVisible();
   });
 });

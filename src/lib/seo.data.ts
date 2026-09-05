@@ -780,6 +780,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Can diagnostic angiography be billed with an endovascular intervention?', a: 'Diagnostic angiography (e.g. 75710) may only be billed with an intervention if there was no prior catheter-based diagnostic study, the study was medically necessary to decide upon intervention, and it is reported with Modifier 59 or XU.' },
     ],
   },
+  {
+    slug: 'spine-surgery',
+    name: 'Orthopedic Spine Surgery & Complex Arthrodesis',
+    noun: 'orthopedic spine surgeons, neurosurgical spine practices, and comprehensive spine institutes',
+    cpt: '22551, 22552, 22633, 22634, 22840–22845, 20930, 20936, 61783, 95940, 95941',
+    blurb:
+      'Anterior cervical discectomy & fusion (ACDF), lumbar interbody fusion (TLIF/PLIF), segmental instrumentation, co-surgeon modifier -62 compliance, and neuromonitoring appeals.',
+    painPoints: [
+      'Decompression unbundling denials: Payers rejecting CPT 63047 (laminectomy/facetectomy) when billed with 22633 (TLIF/PLIF) because posterior interbody fusion includes canal decompression at the same level per NCCI edits',
+      'Modifier -62 co-surgeon matching discrepancies: Denials when neurosurgeon/orthopedic surgeon and access surgeon submit differing primary diagnosis codes or when modifier -62 is mistakenly billed on add-on instrumentation (+22845)',
+      'Multi-level instrumentation add-on denials: Commercial health plans disallowing +22840, +22842, or +22845 due to lack of separate prior authorization or failing to specify exact spinal segments in operative logs',
+      'Bone graft bundling and supply exclusions: Payer downcoding of local morselized autograft (+20936) and allograft (+20930) or denials for recombinant BMP-2 biologic products',
+    ],
+    faqs: [
+      { q: 'Can you bill posterior decompression (CPT 63047) with a TLIF/PLIF (CPT 22633)?', a: 'Under CMS NCCI edits, decompression of spinal stenosis at the operative fusion interspace is considered integral to CPT 22633 and cannot be separately unbundled. CPT 63047 can only be billed if performed at a separate, non-fusion vertebral level with Modifier 59 or XS.' },
+      { q: 'How does Modifier -62 apply to anterior spine surgeries like ACDF or ALIF?', a: 'When an approach/access surgeon performs the anterior spinal exposure and an orthopedic or neurosurgeon performs the arthrodesis, both surgeons must append Modifier 62 to the primary arthrodesis code (e.g., 22551 or 22558) and submit their own detailed operative notes. Add-on instrumentation codes (e.g., 22845) do NOT permit Modifier 62 and must be billed by a single surgeon.' },
+    ],
+  },
+  {
+    slug: 'urogynecology',
+    name: 'Gynecologic Minimally Invasive Surgery & Urogynecology',
+    noun: 'urogynecologists, female pelvic medicine & reconstructive surgeons (FPMRS), and pelvic health centers',
+    cpt: '57425, 57288, 51726–51729, 51741, 51797, 52000, 57240, 57250, 57260, 57282',
+    blurb:
+      'Laparoscopic sacrocolpopexy, mid-urethral sling procedures, multi-component urodynamics testing, pelvic organ prolapse repair, and diagnostic cystoscopy audit defense.',
+    painPoints: [
+      'Cystoscopy bundling post-sling or prolapse repair: Routine claim rejections of CPT 52000 when performed to verify ureteral patency and bladder integrity following pelvic floor surgery per NCCI bundling edits',
+      'Multi-channel urodynamics component unbundling: Commercial payers denying complex cystometrograms (51726–51729) or voiding pressure studies (+51797) due to missing technical/professional split modifiers (-TC/-26)',
+      'Pelvic organ prolapse (POP-Q) medical necessity rejections: Prior authorization and claim denials for CPT 57425 or 57260 lacking documented Stage II–IV prolapse measurements and failed conservative pessary trials',
+      'Simultaneous sling and vaginal reconstruction denials: Arbitrary payer reduction or denial of mid-urethral sling (57288) when billed alongside anterior/posterior colporrhaphy (57260)',
+    ],
+    faqs: [
+      { q: 'Can diagnostic cystoscopy (CPT 52000) be billed alongside mid-urethral sling (CPT 57288)?', a: 'According to ACOG and CMS NCCI guidelines, cystourethroscopy performed solely to verify ureteral patency or bladder integrity during a pelvic floor reconstruction is considered a standard quality-of-care verification and is bundled into the surgical procedure. It cannot be separately unbundled unless performed for an independent diagnostic indication.' },
+      { q: 'What documentation is required to support complex urodynamics billing (CPT 51728 + 51797)?', a: 'The medical record must include calibrated printed or digital tracing graphs showing intravesical and intra-abdominal pressures, simultaneous EMG recordings (51784), documented post-void residual (PVR), and a formal signed physician interpretation detailing detrusor overactivity, bladder compliance, and leak point pressures.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

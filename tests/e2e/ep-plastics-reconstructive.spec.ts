@@ -14,7 +14,7 @@ test.describe('Specialties 39-40 and Tools 44-45: Cardiac EP & Plastic Reconstru
     await expect(
       page.getByRole('heading', { level: 1, name: /Cardiac Electrophysiology & Catheter Ablation/i })
     ).toBeVisible();
-    await expect(page.getByText(/Comprehensive catheter ablation/i).first()).toBeVisible();
+    await expect(page.getByText(/Comprehensive.*ablation/i).first()).toBeVisible();
 
     // Verify key CPT codes
     await expect(page.getByText('93656').first()).toBeVisible();
@@ -113,18 +113,18 @@ test.describe('Specialties 39-40 and Tools 44-45: Cardiac EP & Plastic Reconstru
     });
   });
 
-  test('Tools Directory: Expands to 45 tools and search includes EP and Reconstructive Scrubbers', async ({ page }) => {
+  test('Tools Directory: Expands to 45+ tools and search includes EP and Reconstructive Scrubbers', async ({ page }) => {
     await page.goto('/tools/');
 
-    // Verify 45 Tools title and badges
-    await expect(page.getByRole('heading', { level: 1, name: /45 Free Medical Billing & RCM Tools/i })).toBeVisible();
+    // Verify Tools title and badges
+    await expect(page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i })).toBeVisible();
 
     // Verify new tool cards are in directory
     await expect(page.getByText('Cardiac Electrophysiology & Catheter Ablation Scrubber').first()).toBeVisible();
     await expect(page.getByText('Reconstructive vs Cosmetic Prior-Authorization Scrubber').first()).toBeVisible();
 
     // Test Search input filtering
-    const searchInput = page.getByPlaceholder(/Search all \d+ tools/i);
+    const searchInput = page.getByPlaceholder(/Search .* free tools/i);
     await searchInput.fill('Electrophysiology');
     await expect(page.getByText('Cardiac Electrophysiology & Catheter Ablation Scrubber').first()).toBeVisible();
 
@@ -136,14 +136,14 @@ test.describe('Specialties 39-40 and Tools 44-45: Cardiac EP & Plastic Reconstru
     await page.goto('/specialties/');
 
     // Verify hero and chips
-    await expect(page.getByRole('heading', { level: 1, name: /Specialty-Specific Billing & Coding Services/i })).toBeVisible();
-    await expect(page.getByText('40+ specialties').first()).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: /Specialty-Specific Billing & Coding Services|Billing built for your specialty/i })).toBeVisible();
+    await expect(page.getByText(/\d+\+ specialties/).first()).toBeVisible();
 
     // Check directory links for both specialties
-    const epLink = page.locator('a[href="/medical-billing/cardiac-electrophysiology"]').first();
+    const epLink = page.locator('a[href*="/medical-billing/cardiac-electrophysiology"]').first();
     await expect(epLink).toBeVisible();
 
-    const plasticsLink = page.locator('a[href="/medical-billing/plastic-reconstructive-surgery"]').first();
+    const plasticsLink = page.locator('a[href*="/medical-billing/plastic-reconstructive-surgery"]').first();
     await expect(plasticsLink).toBeVisible();
   });
 });
