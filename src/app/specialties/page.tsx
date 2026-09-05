@@ -73,6 +73,8 @@ const specialtyLinks: Record<string, string> = {
   'Pediatric Complex Facial Reanimation & Free Gracilis Transfer': '/medical-billing/pediatric-facial-reanimation',
   'Complex Pediatric Spine Surgery & Early-Onset Scoliosis (EOS)': '/medical-billing/pediatric-spine-eos',
   'Cytoreductive Surgery & Hyperthermic Intraperitoneal Chemotherapy (HIPEC)': '/medical-billing/hipec-surgical-oncology',
+  'Pediatric Craniosynostosis & Cranial Vault Remodeling': '/medical-billing/pediatric-craniosynostosis',
+  'Cytoreductive Prostatectomy & High-Risk Robotic Urologic Oncology': '/medical-billing/robotic-urologic-oncology',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -491,6 +493,18 @@ const specialties = [
         description: 'Multivisceral cytoreductive surgery (CRS) and 90-minute closed-circuit heated intraperitoneal chemoperfusion (HIPEC), peritonectomy, visceral resections, perfusion monitoring, and multi-specialty co-surgery.',
         cptCodes: '49203, 49204, 49205, 49220, 96560, 77600, 44140, 44150, 44160, 38100, 47120, 49000, 99291',
         challenges: 'Chemotherapy perfusion administration (+96560) experimental denials, multivisceral peritonectomy downcoding, and bowel resection unbundling clawbacks.'
+      },
+      {
+        name: 'Pediatric Craniosynostosis & Cranial Vault Remodeling',
+        description: 'Single and multi-suture synostosis (sagittal, coronal, metopic, lambdoid), endoscopic strip craniectomy with cranial molding helmet therapy, open fronto-orbital advancement (FOA) and total cranial vault remodeling (CVR), co-surgeon Modifier -62 (pediatric neurosurgery & pediatric craniofacial plastic surgery), resorbable fixation hardware, and autologous blood salvage.',
+        cptCodes: '21175, 21179, 21180, 61550, 61556, 61557, 61558, 21141, 21142, 69990, 99214, 99223',
+        challenges: 'Co-surgeon Modifier -62 matching discrepancies between neurosurgery and plastic surgery, bilateral fronto-orbital advancement unbundling, endoscopic strip craniectomy orthotic helmet DME denials, and resorbable fixation bundling.'
+      },
+      {
+        name: 'Cytoreductive Prostatectomy & High-Risk Robotic Urologic Oncology',
+        description: 'Robot-assisted radical prostatectomy (RARP) with extended pelvic lymph node dissection (ePLND), retroperitoneal robotic partial nephrectomy with warm ischemia preservation, and robot-assisted radical cystectomy (RARC) with intracorporeal urinary diversion (neobladder/ileal conduit).',
+        cptCodes: '55866, 38571, 38572, 50543, 50545, 51596, 50825, 49320, 50845, 99214, 99223',
+        challenges: 'Extended pelvic lymphadenectomy (+38571/+38572) unbundling denials, robotic instrumentation S-code denials (S2900), intracorporeal urinary diversion bundling in radical cystectomy, and complex renal tumor Modifier -22 justification.'
       }
     ]
   }
@@ -498,13 +512,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 64+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 66+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 64+ specialties — Pediatric Spine & EOS, Cytoreductive Surgery & HIPEC, Adult Congenital Heart Disease, Pediatric Facial Reanimation, Skull Base Surgery, and more.',
+    description: 'Expert medical billing across 66+ specialties — Pediatric Craniosynostosis, Robotic Urologic Oncology, Pediatric Spine & EOS, Cytoreductive Surgery & HIPEC, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -515,7 +529,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 64 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 66 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -536,10 +550,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 64+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 66+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['64+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['66+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

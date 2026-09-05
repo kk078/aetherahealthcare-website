@@ -1173,7 +1173,43 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
     ],
     faqs: [
       { q: 'How should hyperthermic intraperitoneal chemotherapy (HIPEC) perfusion be coded?', a: 'HIPEC perfusion is commonly reported using CPT code 96560 (intraperitoneal chemotherapy administration, including preparation and monitoring) or unlisted chemotherapy administration (96549), often paired with CPT 77600/77605 (hyperthermia treatment) depending on payer-specific medical policies. Operative notes must detail chemotherapeutic agent (mitomycin-C or cisplatin), target temperature (41-43°C), 90-minute perfusion duration, and closed-circuit inflow/outflow catheter placement.' },
-      { q: 'Are bowel resections separately reportable with cytoreductive peritonectomy?', a: 'Yes. Under CMS NCCI guidelines, bowel resections (such as segmental colectomy 44140 or low anterior resection 44145) performed for direct oncologic tumor clearance are separately billable with Modifier -51 or -59 from cytoreductive debulking of peritoneal implants (49203-49205), provided the operative dictation clearly describes distinct visceral mesenteric resection.' },
+      { q: 'Are bowel resections separately reportable with cytoreductive peritonectomy?', a: 'Under CMS NCCI guidelines, bowel resections (such as segmental colectomy 44140 or low anterior resection 44145) performed for direct oncologic tumor clearance are separately billable with Modifier -51 or -59 from cytoreductive debulking of peritoneal implants (49203-49205), provided the operative dictation clearly describes distinct visceral mesenteric resection.' },
+    ],
+  },
+  {
+    slug: 'pediatric-craniosynostosis',
+    name: 'Pediatric Craniosynostosis & Cranial Vault Remodeling',
+    noun: 'pediatric neurosurgeons, pediatric craniofacial plastic surgeons, craniosynostosis programs, and children\'s hospital surgery centers',
+    cpt: '21175, 21179, 21180, 61550, 61556, 61557, 61558, 21141, 21142, 69990, 99214, 99223',
+    blurb:
+      'Comprehensive surgical management for single and multi-suture craniosynostosis (sagittal, coronal, metopic, lambdoid): endoscopic strip craniectomy with post-op cranial molding helmet therapy, open fronto-orbital advancement (FOA) and total cranial vault remodeling (CVR), co-surgeon Modifier -62 neuro/plastic coordination, resorbable plating, and autologous blood salvage autotransfusion.',
+    painPoints: [
+      'Co-surgeon Modifier -62 matching discrepancies: Pediatric neurosurgery (bone removal/dural release) and craniofacial plastic surgery (cranial vault osteotomy/orbital advancement) claims denied due to unaligned CPT coding or lack of distinct operative notes',
+      'Bilateral fronto-orbital advancement (21175/21179) unbundling clawbacks: Commercial payers bundling forehead remodeling and supraorbital bar advancement into simple craniectomy codes (61556-61558)',
+      'Endoscopic strip craniectomy (61550) vs open remodeling coding confusion: Payers rejecting minimally invasive strip craniectomy when billed with endoscopic guidance or denying concurrent cranial molding orthotic helmet DME (L0112)',
+      'Resorbable fixation hardware and autologous bone graft bundling: Invalidation of bone grafting add-ons (+20900) and cranial fixation hardware documentation during extensive multi-piece remodeling',
+    ],
+    faqs: [
+      { q: 'How should dual-attending co-surgery (Modifier -62) be billed between pediatric neurosurgery and craniofacial plastic surgery for open cranial vault remodeling?', a: 'For open cranial vault remodeling with fronto-orbital advancement (CPT 21175, 21179, or 21180) or extensive craniectomy with cranial remodeling (CPT 61558), both the pediatric neurosurgeon and the pediatric craniofacial plastic surgeon bill the identical primary CPT code appended with Modifier -62. Each surgeon must dictate an independent, detailed operative note: the neurosurgeon detailing craniotomy, dura separation, and brain protection, and the plastic surgeon detailing bone reshaping, orbital bandeau advancement, and resorbable plate fixation.' },
+      { q: 'Can cranial molding orthosis helmet therapy (L0112) be reimbursed following endoscopic strip craniectomy (61550)?', a: 'Yes. Endoscopic strip craniectomy requires postoperative cranial molding orthosis (HCPCS L0112) for 6 to 12 months to guide dynamic skull reshaping. Payer approval requires pre-authorization submission documenting suture synostosis confirmed by high-resolution 3D CT reconstructions, cephalic index measurements, and pediatric neurosurgical documentation demonstrating that molding helmet therapy is an integral component of the surgical reconstructive protocol.' },
+    ],
+  },
+  {
+    slug: 'robotic-urologic-oncology',
+    name: 'Cytoreductive Prostatectomy & High-Risk Robotic Urologic Oncology',
+    noun: 'urologic oncologists, robotic urologic surgeons, minimally invasive pelvic reconstructive teams, and comprehensive cancer centers',
+    cpt: '55866, 38571, 38572, 50543, 50545, 51596, 50825, 49320, 50845, 99214, 99223',
+    blurb:
+      'Robot-assisted radical prostatectomy (RARP) with extended pelvic lymph node dissection (ePLND), retroperitoneal robotic partial nephrectomy with warm ischemia preservation, and robot-assisted radical cystectomy (RARC) with intracorporeal urinary diversion (neobladder/ileal conduit): robotic assistance defense, extended lymphadenectomy unbundling, and complex reconstructive coding.',
+    painPoints: [
+      'Extended pelvic lymphadenectomy (+38571/+38572) unbundling denials: Payers bundling extensive bilateral pelvic lymph node dissection into robotic radical prostatectomy (55866) despite retroperitoneal nodal clearance above the bifurcation of the common iliac vessels',
+      'Robotic instrumentation S-code denials (S2900): Commercial payers rejecting robotic surgical technique add-on codes or downcoding robotic partial nephrectomy (50543) based on software/hardware supply bundling',
+      'Intracorporeal urinary diversion bundling in robotic radical cystectomy (51596): Payers rejecting robot-assisted complete intracorporeal orthotopic neobladder or ileal conduit diversion (50825) as inclusive to cystectomy',
+      'Renal hypothermia and complex hilar reconstruction clawbacks: Disallowing Modifier -22 for prolonged warm ischemia control, tumor enucleoresection, and renorrhaphy in endophytic complex renal tumors (PADUA/RENAL score >10)',
+    ],
+    faqs: [
+      { q: 'When is pelvic lymphadenectomy (38571/38572) separately billable with robotic radical prostatectomy (55866)?', a: 'Under CPT coding definitions, CPT 55866 includes standard staging pelvic lymphadenectomy limited to obturator nodes. When an extended pelvic lymph node dissection (ePLND) is performed for high-risk or locally advanced prostate cancer—extending to the external iliac, hypogastric, and common iliac nodal packets up to the aortic bifurcation—CPT 38572 (laparoscopy, surgical; with bilateral total pelvic lymphadenectomy and periaortic lymph node sampling) is separately billable with Modifier -59 or -XU, supported by pathology logs demonstrating separate nodal packets.' },
+      { q: 'How should surgical teams document Modifier -22 on complex robotic partial nephrectomy (50543)?', a: 'When an endophytic, central, or hilar renal tumor requires prolonged warm ischemia, multiple intraoperative ultrasound assessments, complex vascular control, and double-layer renorrhaphy, Modifier -22 (increased procedural services) should be appended to CPT 50543. The operative note must include a dedicated "Modifier 22 Justification" paragraph documenting specific percentage increases in operative time, blood loss, and technical complexity beyond standard partial nephrectomy.' },
     ],
   },
 ];

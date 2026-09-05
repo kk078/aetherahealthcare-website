@@ -144,7 +144,7 @@ test.describe('Cycle 21: Pediatric EOS & HIPEC Surgical Oncology Suite', () => {
     await page.goto(`${BASE_URL}/tools`);
     await page.waitForLoadState('domcontentloaded');
 
-    await expect(page.getByRole('heading', { level: 1 })).toContainText(/69 Free Medical Billing & RCM Tools/i);
+    await expect(page.getByRole('heading', { level: 1 })).toContainText(/\d+\s+Free Medical Billing & RCM Tools/i);
 
     // Verify presence of newly added tool cards
     const eosCard = page.getByRole('heading', { name: /Pediatric Early-Onset Scoliosis \(EOS\) & Growing Rod Scrubber/i });

@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 69 Interactive Tools
+// 71 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -819,6 +819,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'amber',
     keywords: ['hipec', 'cytoreductive surgery', 'crs', 'peritonectomy', '49205', '49204', 'hyperthermic intraperitoneal chemotherapy', '96560', 'co-surgery', 'modifier 62', 'colectomy', '44140', 'splenectomy', '38100', 'critical care', '99291', 'modifier 24', 'modifier 51', 'modifier 59'],
   },
+  {
+    id: 'tool-pediatric-craniosynostosis',
+    category: 'tools',
+    title: 'Pediatric Cranial Vault Remodeling & Synostosis Scrubber',
+    subtitle: 'FOA (21175), complex CVR (21180), Co-Surgeon Mod 62, bone graft (20900-59) & helmet DME (L0112)',
+    description: 'Audit open fronto-orbital advancement (21175), complex cranial vault remodeling (21180), co-surgeon Modifier -62 coordination, split-calvarial bone grafts (20900-59), and helmet DME (L0112).',
+    href: '/tools/pediatric-craniosynostosis-scrubber',
+    badge: 'Pediatric Craniofacial',
+    badgeVariant: 'blue',
+    keywords: ['pediatric craniosynostosis', 'cranial vault remodeling', 'cvr', 'fronto-orbital advancement', 'foa', '21175', '21180', 'craniectomy', '61558', 'endoscopic strip craniectomy', '61550', 'co-surgeon', 'modifier 62', 'cranial molding helmet', 'l0112', 'bone graft', '20900', 'modifier 59', 'operating microscope', '69990', 'arterial line', '36620'],
+  },
+  {
+    id: 'tool-robotic-urologic-oncology',
+    category: 'tools',
+    title: 'Robotic Urologic Oncology & Complex Reconstructive Scrubber',
+    subtitle: 'RARP (55866), extended pelvic LND (+38572-59), partial nephrectomy (50543), neobladder & Mod 22',
+    description: 'Audit robot-assisted radical prostatectomy (55866), defend extended pelvic lymphadenectomy (+38572-59), robotic partial nephrectomy (50543), intracorporeal urinary diversions, and Modifier -22.',
+    href: '/tools/robotic-urologic-oncology-scrubber',
+    badge: 'Robotic Urologic Oncology',
+    badgeVariant: 'teal',
+    keywords: ['robotic urologic oncology', 'rarp', 'prostatectomy', '55866', 'extended pelvic lymphadenectomy', '38572', 'partial nephrectomy', '50543', 'radical cystectomy', '51595', '51596', 'neobladder', 'ileal conduit', 'modifier 22', 'modifier 59', 's-code', 's2900', 'ureteral stent', '50947', 'modifier 51'],
+  },
 ];
 
 // Specialties
@@ -1494,14 +1516,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['hipec', 'cytoreductive surgery', 'crs', 'peritonectomy', '49205', '49204', 'hyperthermic chemoperfusion', '96560', 'co-surgery', 'modifier 62', 'colectomy', '44140', 'splenectomy', '38100', 'critical care', '99291', 'modifier 24'],
   },
   {
+    id: 'spec-pediatric-craniosynostosis',
+    category: 'specialties',
+    title: 'Pediatric Craniosynostosis & Cranial Vault Remodeling Billing',
+    subtitle: 'FOA (21175), complex CVR (21180), co-surgeon Mod 62 matching, bone graft (20900) & helmet DME',
+    href: '/medical-billing/pediatric-craniosynostosis',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric craniosynostosis', 'cranial vault remodeling', 'fronto-orbital advancement', 'foa', '21175', '21180', 'craniectomy', '61558', 'strip craniectomy', '61550', 'co-surgeon', 'modifier 62', 'cranial molding orthosis', 'helmet dme', 'l0112', 'bone graft', '20900', 'pediatric neurosurgery', 'craniofacial plastics'],
+  },
+  {
+    id: 'spec-robotic-urologic-oncology',
+    category: 'specialties',
+    title: 'Cytoreductive Prostatectomy & High-Risk Robotic Urologic Oncology Billing',
+    subtitle: 'RARP (55866), extended pelvic LND (+38572), partial nephrectomy (50543) & neobladder (51596)',
+    href: '/medical-billing/robotic-urologic-oncology',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['robotic urology', 'urologic oncology', 'rarp', 'prostatectomy', '55866', 'extended lymphadenectomy', '38572', 'partial nephrectomy', '50543', 'radical cystectomy', '51596', 'neobladder', 'ileal conduit', 'modifier 22', 'modifier 59', 's2900'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 64+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 66+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology'],
   },
 ];
 

@@ -43,6 +43,7 @@ import {
   Stethoscope,
   Smile,
   Brain,
+  Bot,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -56,6 +57,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/pediatric-craniosynostosis-scrubber',
+    icon: Bone,
+    name: 'Pediatric Cranial Vault Remodeling & Synostosis Scrubber',
+    desc: 'Audit fronto-orbital advancement (21175), complex multi-suture CVR (21180), co-surgeon Modifier -62 coordination, split-calvarial bone grafts (20900-59), and helmet DME (L0112).',
+    category: 'scrubbers',
+    tag: 'Pediatric Craniofacial & Neurosurgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/robotic-urologic-oncology-scrubber',
+    icon: Bot,
+    name: 'Robotic Urologic Oncology & Complex Reconstructive Scrubber',
+    desc: 'Audit robot-assisted radical prostatectomy (55866), defend extended pelvic lymphadenectomy (+38572-59), robotic partial nephrectomy (50543), intracorporeal urinary diversions, and Modifier -22.',
+    category: 'scrubbers',
+    tag: 'Robotic Urologic Oncology',
+    badge: 'New',
+  },
   {
     href: '/tools/pediatric-eos-scrubber',
     icon: Bone,
