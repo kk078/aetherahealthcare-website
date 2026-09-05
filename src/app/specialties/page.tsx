@@ -77,6 +77,8 @@ const specialtyLinks: Record<string, string> = {
   'Cytoreductive Prostatectomy & High-Risk Robotic Urologic Oncology': '/medical-billing/robotic-urologic-oncology',
   'Pediatric Congenital Diaphragmatic Hernia (CDH) & ECMO Surgical Repair': '/medical-billing/pediatric-cdh-ecmo',
   'Thoracoabdominal Aortic Aneurysm (TAAA) Repair & Branched/Fenestrated EVAR (FEVAR)': '/medical-billing/taaa-fenestrated-evar',
+  'Pediatric Vascular Malformations, Hemangiomas & Sclerotherapy': '/medical-billing/pediatric-vascular-malformations',
+  'Complex Orthopedic Oncology & Limb Salvage Reconstruction': '/medical-billing/orthopedic-oncology-limb-salvage',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -519,6 +521,18 @@ const specialties = [
         description: 'Crawford Extent I–IV open thoracoabdominal aortic replacement (33877), fenestrated/branched EVAR with visceral vessel branches (34841-34848: celiac, SMA, renals), and spinal cord protective CSF drainage (62272).',
         cptCodes: '33877, 34841, 34842, 34843, 34844, 34845, 34846, 34847, 34848, 62272, 36245, 37236, 99291, 99223',
         challenges: 'Visceral vessel branch tier unbundling denials (34841-34848), prophylactic spinal cord lumbar CSF drain (62272) bundling, and dual vascular/cardiac co-surgeon Modifier -62 coordination.'
+      },
+      {
+        name: 'Pediatric Vascular Malformations, Hemangiomas & Sclerotherapy',
+        description: 'Image-guided percutaneous sclerotherapy for low-flow venous and lymphatic malformations (LM/VM), transcatheter embolization for high-flow arteriovenous malformations (AVM), fluoroscopic/ultrasound guidance (+76937/+77002), off-label sclerosant J-code compliance (bleomycin, doxycycline), and staged session Modifier -58.',
+        cptCodes: '37241, 49185, 37242, 36245, 36224, 76937, 77002, 99214, 99223, J0800, J9040',
+        challenges: 'Sclerosant J-code denials, percutaneous sclerotherapy downcoding, ultrasound/fluoroscopy guidance bundling, and staged procedure Modifier -58 global clawbacks.'
+      },
+      {
+        name: 'Complex Orthopedic Oncology & Limb Salvage Reconstruction',
+        description: 'Radical en-bloc resection for primary malignant bone tumors (osteosarcoma, Ewing sarcoma, chondrosarcoma), modular endoprosthetic mega-prosthesis arthroplasty (distal femur, proximal tibia, hemipelvectomy), soft-tissue coverage with rotational gastrocnemius muscle flap (15734), and catastrophic implant carve-out recovery.',
+        cptCodes: '27075, 27076, 27645, 27646, 27225, 27745, 15734, 15756, 20900, 20930, 99223',
+        challenges: 'Mega-prosthesis reconstruction downcoding to standard arthroplasty, rotational muscle flap (15734) unbundling denials, custom modular implant invoice pass-through disallowance, and multi-surgeon Modifier -62 audits.'
       }
     ]
   }
@@ -526,13 +540,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 68+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 70+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 68+ specialties — Pediatric CDH & ECMO, Thoracoabdominal Aortic Aneurysm (TAAA) & FEVAR, Pediatric Craniosynostosis, Robotic Urologic Oncology, and more.',
+    description: 'Expert medical billing across 70+ specialties — Pediatric Vascular Malformations, Orthopedic Oncology Limb Salvage, Pediatric CDH & ECMO, Thoracoabdominal Aortic Aneurysm (TAAA) & FEVAR, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -543,7 +557,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 68 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 70 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -564,10 +578,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 68+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 70+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['68+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['70+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

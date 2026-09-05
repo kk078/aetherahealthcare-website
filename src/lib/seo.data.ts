@@ -1248,6 +1248,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Is prophylactic lumbar CSF drainage (62272) separately billable during thoracoabdominal aneurysm repair?', a: 'Yes. Prophylactic spinal cord protection via lumbar cerebrospinal fluid catheter placement (CPT 62272) to monitor and maintain spinal cord perfusion pressure (mitigating paraplegia risk) is performed prior to aortic cross-clamping or endograft deployment. Under CMS NCCI guidelines, CPT 62272 is separately billable with Modifier -59 or -XU, documented with pre-incision catheter placement and distinct physiological monitoring rationale.' },
     ],
   },
+  {
+    slug: 'pediatric-vascular-malformations',
+    name: 'Pediatric Vascular Malformations, Hemangiomas & Sclerotherapy',
+    noun: 'pediatric interventional radiologists, pediatric vascular anomaly specialists, plastic surgeons, and multidisciplinary vascular anomaly centers',
+    cpt: '37241, 49185, 37242, 36245, 36224, 76937, 77002, 99214, 99223, J0800, J9040',
+    blurb:
+      'Image-guided percutaneous sclerotherapy for low-flow venous and lymphatic malformations (LM/VM), transcatheter embolization for high-flow arteriovenous malformations (AVM), fluoroscopic/ultrasound guidance (+76937/+77002), off-label sclerosant J-code compliance (bleomycin, doxycycline, sodium tetradecyl sulfate), staged session Modifier -58, and general anesthesia concurrency.',
+    painPoints: [
+      'Sclerosant drug J-code denials: Commercial payers rejecting unclassified or off-label sclerosing agents (e.g. bleomycin J9040, doxycycline J3490, sodium tetradecyl sulfate J3490) citing investigational non-coverage policies',
+      'Percutaneous sclerotherapy (37241/49185) downcoding: Inappropriate downcoding of complex multi-cystic vascular malformation ablation to simple soft tissue aspiration or cyst injection',
+      'Ultrasound and fluoroscopic guidance bundling: Denials of imaging guidance codes (+76937-26 and +77002-26) as inclusive to vascular embolization or sclerotherapy',
+      'Staged sclerotherapy session global recoupments: Frequent denials of second- and third-stage sclerotherapy treatments scheduled within 90-day surgical global periods absent Modifier -58',
+    ],
+    faqs: [
+      { q: 'What is the proper coding for percutaneous sclerotherapy of pediatric venous and lymphatic malformations?', a: 'Under CPT coding guidelines, percutaneous sclerotherapy of vascular malformations is reported using CPT 37241 (vascular embolization or occlusion, venous) or CPT 49185 (sclerotherapy, fluid collection, percutaneous). Concomitant ultrasound guidance (CPT +76937-26) and fluoroscopic guidance (CPT +77002-26) are separately reportable when distinct permanent hardcopy images and written interpretation are documented. The sclerosing agent is billed separately with appropriate HCPCS J-codes and NDC numbers.' },
+      { q: 'How should planned staged sclerotherapy sessions be coded during the postoperative period?', a: 'Because complex vascular anomalies typically require 2 to 4 sequential treatment sessions spaced 6 to 8 weeks apart to achieve vessel obliteration without tissue necrosis, subsequent sessions within the 90-day global period of the initial procedure must be appended with Modifier -58 (staged procedure). The initial operative report and pre-procedure clinical consultation must explicitly outline the staged treatment plan.' },
+    ],
+  },
+  {
+    slug: 'orthopedic-oncology-limb-salvage',
+    name: 'Complex Orthopedic Oncology & Limb Salvage Reconstruction',
+    noun: 'musculoskeletal orthopedic oncologists, sarcoma surgical teams, limb preservation specialists, and comprehensive cancer centers',
+    cpt: '27075, 27076, 27645, 27646, 27225, 27745, 15734, 15756, 20900, 20930, 99223',
+    blurb:
+      'Radical en-bloc resection for primary malignant bone tumors (osteosarcoma, Ewing sarcoma, chondrosarcoma), modular endoprosthetic mega-prosthesis arthroplasty (distal femur, proximal tibia, hemipelvectomy), soft-tissue coverage with rotational gastrocnemius muscle flap (15734), microvascular free tissue transfer, co-surgeon Modifier -62 coordination, and catastrophic implant carve-out recovery.',
+    painPoints: [
+      'Mega-prosthesis reconstruction downcoding: Commercial payers arbitrarily downgrading radical oncologic endoprosthetic joint replacement to standard primary knee or hip arthroplasty (27447/27130) slashing over 40 RVUs',
+      'Concurrent soft-tissue muscle flap (15734/15756) unbundling denials: Denials of gastrocnemius rotational flaps or free flap wound coverage performed concomitantly with mega-prosthesis reconstruction',
+      'Custom oncologic implant invoice pass-through disallowance: Payer refusal to reimburse $40,000–$90,000 expandable or 3D-printed custom titanium mega-implants under standard DRG or fee-schedule carve-outs',
+      'Co-surgeon Modifier -62 audits between orthopedic oncology and reconstructive plastic surgery: Payment delays due to non-aligned operative dictations on complex limb salvage resections',
+    ],
+    faqs: [
+      { q: 'How is radical bone resection with mega-prosthetic endoprosthetic reconstruction coded?', a: 'Radical bone tumor resection is reported using bone-specific radical resection codes (e.g. CPT 27075 for radical resection of pelvis, 27076 for total ischiectomy, 27645 for radical resection of tibia). Reconstruction using modular oncologic mega-prosthesis arthroplasty is reported using complex reconstruction or unlisted arthroplasty codes (e.g. CPT 27599 or 27299) benchmarked to revision arthroplasty (27487/27138) with Modifier -22 when documented by extensive cortical bone loss, reconstruction length (>15cm), and muscle reattachment.' },
+      { q: 'Can a rotational gastrocnemius muscle flap (15734) be billed with distal femur or proximal tibia tumor resection?', a: 'Yes. Coverage of modular metal mega-prostheses requires vascularized soft tissue transposition—most commonly a rotational medial gastrocnemius muscle flap (CPT 15734)—to prevent deep prosthetic infection and skin breakdown. Under CMS NCCI guidelines, CPT 15734 is separately billable with Modifier -59 or -XU, supported by independent operative documentation describing distinct incision, pedicle dissection, muscle transposition, and tension-free inset over the prosthetic hardware.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 73 Interactive Tools
+// 75 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -863,6 +863,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'amber',
     keywords: ['fevar', 'bevar', 'taaa', 'thoracoabdominal aortic aneurysm', '34844', '34843', '34842', 'crawford repair', '33877', 'csf drain', 'lumbar drain', '62272', 'bridging stent', '37236', 'modifier 59', 'modifier 62', 'co-surgeon', 'modifier 51', 'modifier 25', 'vascular critical care', '99291'],
   },
+  {
+    id: 'tool-pediatric-vascular',
+    category: 'tools',
+    title: 'Pediatric Vascular Malformations & Sclerotherapy Scrubber',
+    subtitle: 'Image-guided sclerotherapy (37241/49185), Bleomycin J9040, dual imaging & Mod 58',
+    description: 'Audit image-guided sclerotherapy (37241/49185), high-flow AVM embolization (37242), off-label Bleomycin (J9040) appeals, dual imaging (+76937/+77002), and Modifier -58 staging.',
+    href: '/tools/pediatric-vascular-malformations-scrubber',
+    badge: 'Pediatric IR',
+    badgeVariant: 'teal',
+    keywords: ['pediatric vascular malformations', 'sclerotherapy', 'venous malformation', 'lymphatic malformation', 'avm', '37241', '49185', '37242', 'bleomycin', 'j9040', 'sotradecol', 'j3490', 'ultrasound guidance', '76937', 'fluoroscopy', '77002', 'modifier 58', 'staged session'],
+  },
+  {
+    id: 'tool-orthopedic-oncology',
+    category: 'tools',
+    title: 'Orthopedic Oncology & Limb Salvage Mega-Prosthesis Scrubber',
+    subtitle: 'Radical bone resection (27075/27645), modular mega-prosthesis (27599-22) & gastrocnemius flap (15734)',
+    description: 'Audit radical bone tumor resections (27075/27645), defend modular oncologic mega-prostheses (27599/27299-22), unbundle rotational muscle flaps (15734-59), and recover catastrophic implant invoices.',
+    href: '/tools/orthopedic-oncology-limb-salvage-scrubber',
+    badge: 'Orthopedic Oncology',
+    badgeVariant: 'amber',
+    keywords: ['orthopedic oncology', 'sarcoma', 'bone tumor', 'osteosarcoma', 'ewing sarcoma', 'limb salvage', 'mega-prosthesis', 'endoprosthesis', 'radical resection', '27075', '27645', '27077', '27599', '27299', 'modifier 22', 'gastrocnemius flap', '15734', 'free flap', '15756', 'modifier 62', 'implant carve-out', 'l8699'],
+  },
 ];
 
 // Specialties
@@ -1578,14 +1600,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['taaa', 'fevar', 'bevar', 'thoracoabdominal aneurysm', 'crawford repair', '33877', '34844', '34843', '34842', 'lumbar csf drain', '62272', 'visceral branches', 'bridging stent', '37236', 'modifier 62', 'co-surgeon', 'vascular surgery', 'aortic surgery'],
   },
   {
+    id: 'spec-pediatric-vascular-malformations',
+    category: 'specialties',
+    title: 'Pediatric Vascular Malformations, Hemangiomas & Sclerotherapy Billing',
+    subtitle: 'Image-guided sclerotherapy (37241/49185), Bleomycin J9040, dual imaging & Mod 58',
+    href: '/medical-billing/pediatric-vascular-malformations',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric vascular malformations', 'hemangiomas', 'sclerotherapy', 'venous malformation', 'lymphatic malformation', 'avm', '37241', '49185', '37242', 'bleomycin', 'j9040', 'sotradecol', '76937', '77002', 'modifier 58', 'interventional radiology', 'pediatric ir'],
+  },
+  {
+    id: 'spec-orthopedic-oncology-limb-salvage',
+    category: 'specialties',
+    title: 'Complex Orthopedic Oncology & Limb Salvage Reconstruction Billing',
+    subtitle: 'Radical bone resection (27075/27645), modular mega-prosthesis (27599-22) & rotational flaps',
+    href: '/medical-billing/orthopedic-oncology-limb-salvage',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['orthopedic oncology', 'sarcoma', 'bone cancer', 'osteosarcoma', 'limb salvage', 'mega-prosthesis', '27075', '27645', '27077', '27599', '27299', 'modifier 22', 'rotational muscle flap', 'gastrocnemius flap', '15734', 'free flap', '15756', 'modifier 62', 'co-surgery', 'surgical oncology'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 68+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 70+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis'],
   },
 ];
 

@@ -58,6 +58,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/pediatric-vascular-malformations-scrubber',
+    icon: Activity,
+    name: 'Pediatric Vascular Malformations & Sclerotherapy Scrubber',
+    desc: 'Audit image-guided sclerotherapy (37241/49185), high-flow AVM embolization (37242), off-label Bleomycin (J9040) appeals, dual imaging (+76937/+77002), and Modifier -58 staging.',
+    category: 'scrubbers',
+    tag: 'Pediatric IR & Vascular Anomalies',
+    badge: 'New',
+  },
+  {
+    href: '/tools/orthopedic-oncology-limb-salvage-scrubber',
+    icon: Bone,
+    name: 'Orthopedic Oncology & Limb Salvage Mega-Prosthesis Scrubber',
+    desc: 'Audit radical bone tumor resections (27075/27645), defend modular oncologic mega-prostheses (27599/27299-22), unbundle rotational muscle flaps (15734-59), and recover catastrophic implant invoices.',
+    category: 'scrubbers',
+    tag: 'Orthopedic Oncology & Sarcoma',
+    badge: 'New',
+  },
+  {
     href: '/tools/pediatric-cdh-ecmo-scrubber',
     icon: Baby,
     name: 'Pediatric CDH & Neonatal ECMO Repair Scrubber',
