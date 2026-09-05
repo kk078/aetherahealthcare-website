@@ -93,6 +93,8 @@ const specialtyLinks: Record<string, string> = {
   'Complex Adult Retroperitoneal Sarcoma & Multivisceral Compartment Resection': '/medical-billing/adult-retroperitoneal-sarcoma',
   'Pediatric Tracheoesophageal Fistula & Esophageal Atresia (TEF/EA) Repair': '/medical-billing/pediatric-tef-esophageal-atresia',
   'Complex Adult Reconstructive Microsurgery & Autologous DIEP Flap Breast Reconstruction': '/medical-billing/diep-flap-breast-reconstruction',
+  'Pediatric Hirschsprung Disease & Transanal Endorectal Pull-Through (TERPT / Soave / Duhamel)': '/medical-billing/pediatric-hirschsprung-pull-through',
+  'Complex Adult Head & Neck Microvascular Free Flap Reconstruction (Fibula / ALT Free Flap)': '/medical-billing/head-and-neck-free-flap-reconstruction',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -631,6 +633,18 @@ const specialties = [
         description: 'Autologous microvascular free deep inferior epigastric perforator (DIEP) flap breast reconstruction (19364), operating microscope add-on (+69990), indocyanine green (ICG) laser fluorescence angiography (+15860), and secondary venous outflow rescue (+35201).',
         cptCodes: '19364, 15756, 15757, 19357, 15860, 69990, 35201, 35206, 99223, 99233',
         challenges: 'Bilateral DIEP flap (19364-50) fee reduction and downcoding, operating microscope (+69990) unbundling denials, indocyanine green (ICG) angiography (+15860) payer coverage disputes, and second venous anastomotic rescue (+35201) clawbacks.'
+      },
+      {
+        name: 'Pediatric Hirschsprung Disease & Transanal Endorectal Pull-Through (TERPT / Soave / Duhamel)',
+        description: 'Transanal endorectal pull-through (45120/45112/44145) for congenital aganglionic megacolon, multi-level seromuscular mapping biopsies (+44150/+45110), laparoscopic assistance (49320), and staged diversion reversal.',
+        cptCodes: '44145, 44146, 44147, 44150, 44151, 45110, 45112, 45120, 49320, 88305',
+        challenges: 'Diagnostic leveling biopsy bundling into primary proctectomy, laparoscopic assistance unbundling denials, and staged pull-through clawbacks absent Modifier -58.'
+      },
+      {
+        name: 'Complex Adult Head & Neck Microvascular Free Flap Reconstruction (Fibula / ALT Free Flap)',
+        description: 'Microvascular composite osseous fibula free flap (20955/21247) and ALT perforator free flap (15756) for mandibular/maxillary defect reconstruction, operating microscope (+69990), and neck dissection co-surgery (Modifier -62).',
+        cptCodes: '20955, 20956, 15756, 15757, 15758, 21247, 31600, 38724, 69990, 15860',
+        challenges: 'Cross-specialty ENT ablative and plastic reconstructive Modifier -62 conflicts, operating microscope unbundling rejections, and vascularized bone downcoding to simple soft tissue transfer.'
       }
     ]
   }
@@ -638,13 +652,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 84+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 86+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 84+ specialties — Pediatric TEF/EA Repair, DIEP Flap Breast Reconstruction, Pediatric Sacrococcygeal Teratoma, and more.',
+    description: 'Expert medical billing across 86+ specialties — Pediatric Hirschsprung Pull-Through, Head & Neck Microvascular Free Flap, Pediatric TEF/EA, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -655,7 +669,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 84 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 86 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -676,10 +690,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 84+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 86+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['84+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['86+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

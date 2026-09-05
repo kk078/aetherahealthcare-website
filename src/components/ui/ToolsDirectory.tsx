@@ -61,6 +61,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/pediatric-hirschsprung-pull-through-scrubber',
+    icon: Baby,
+    name: 'Pediatric Hirschsprung Pull-Through Scrubber',
+    desc: 'Audit aganglionic megacolon pull-through procedures (45120/45112), intraoperative leveling biopsies (+44150-59), laparoscopic mobilization (49320-59), and staged diversion (Mod -58).',
+    category: 'scrubbers',
+    tag: 'Pediatric Surgery & Colorectal',
+    badge: 'New',
+  },
+  {
+    href: '/tools/head-and-neck-free-flap-scrubber',
+    icon: Microscope,
+    name: 'Head & Neck Free Flap Reconstruction Scrubber',
+    desc: 'Audit microvascular fibula (20955) and ALT free flaps (15756), mandibular plating (+21247-59), operating microscope (+69990), neck dissection (+38724-59), and dual-surgeon co-surgery.',
+    category: 'scrubbers',
+    tag: 'Head & Neck Oncologic Reconstruction',
+    badge: 'New',
+  },
+  {
     href: '/tools/pediatric-tef-ea-scrubber',
     icon: Baby,
     name: 'Pediatric TEF & Esophageal Atresia Scrubber',

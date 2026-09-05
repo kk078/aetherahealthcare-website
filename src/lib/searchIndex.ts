@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 89 Interactive Tools
+// 91 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -1039,6 +1039,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'purple',
     keywords: ['diep flap', 'breast reconstruction', 'autologous free flap', '19364', 'modifier 50', 'bilateral diep', 'operating microscope', '69990', 'icg angiography', '15860', 'venous rescue', '35201', 'whcra', 'plastic surgery', 'microsurgery'],
   },
+  {
+    id: 'tool-pediatric-hirschsprung-pull-through',
+    category: 'tools',
+    title: 'Pediatric Hirschsprung Pull-Through Scrubber',
+    subtitle: 'Aganglionic pull-through (45120/45112), leveling biopsies (+44150-59) & lap mobilization (49320)',
+    description: 'Audit pediatric Hirschsprung pull-through procedures, defend multi-level intraoperative frozen section leveling biopsies, laparoscopic assistance, and staged post-colostomy pull-throughs.',
+    href: '/tools/pediatric-hirschsprung-pull-through-scrubber',
+    badge: 'Pediatric Colorectal',
+    badgeVariant: 'teal',
+    keywords: ['pediatric hirschsprung', 'pull through', 'soave', 'terpt', 'duhamel', 'swenson', 'aganglionic megacolon', '45120', '45112', '44145', 'leveling biopsies', '44150', 'laparoscopy', '49320', 'modifier 58', 'staged colostomy', '44620', 'modifier 22', 'neonatal surgery'],
+  },
+  {
+    id: 'tool-head-and-neck-free-flap',
+    category: 'tools',
+    title: 'Head & Neck Free Flap Reconstruction Scrubber',
+    subtitle: 'Vascularized fibula (20955), ALT (15756), plating (+21247-59), microscope (+69990) & tracheostomy (+31600)',
+    description: 'Audit complex microvascular head and neck oncologic reconstructions, defend rigid fixation plating unbundling, operating microscope magnification, and dual-attending ENT/plastic co-surgery billing.',
+    href: '/tools/head-and-neck-free-flap-scrubber',
+    badge: 'Head & Neck Flap',
+    badgeVariant: 'purple',
+    keywords: ['head and neck free flap', 'fibula free flap', '20955', 'alt flap', '15756', 'radial forearm', '15757', 'mandibular plating', '21247', 'operating microscope', '69990', 'neck dissection', '38724', 'tracheostomy', '31600', 'modifier 62', 'co-surgeon', 'microvascular reconstruction'],
+  },
 ];
 
 // Specialties
@@ -1914,14 +1936,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['diep flap', 'breast reconstruction', 'autologous microsurgery', '19364', 'modifier 50', 'bilateral flap', 'operating microscope', '69990', 'icg angiography', '15860', 'second vein anastomosis', '35201', 'whcra', 'plastic reconstructive surgery'],
   },
   {
+    id: 'spec-pediatric-hirschsprung-pull-through',
+    category: 'specialties',
+    title: 'Pediatric Hirschsprung Disease & Transanal Endorectal Pull-Through (TERPT / Soave / Duhamel) Billing',
+    subtitle: 'Pull-through proctectomy (45120/45112), leveling biopsies (+44150-59) & staged diversion (Mod -58)',
+    href: '/medical-billing/pediatric-hirschsprung-pull-through',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric hirschsprung', 'pull through', 'soave', 'terpt', 'duhamel', 'swenson', 'aganglionic megacolon', '45120', '45112', 'leveling biopsies', '44150', 'laparoscopy', '49320', 'modifier 58', 'staged colostomy', '44620', 'neonatal colorectal surgery'],
+  },
+  {
+    id: 'spec-head-and-neck-free-flap-reconstruction',
+    category: 'specialties',
+    title: 'Complex Adult Head & Neck Microvascular Free Flap Reconstruction (Fibula / ALT Free Flap) Billing',
+    subtitle: 'Composite fibula (20955), ALT (15756), rigid plating (+21247-59), microscope (+69990) & tracheostomy (+31600-59)',
+    href: '/medical-billing/head-and-neck-free-flap-reconstruction',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['head and neck free flap', 'fibula free flap', '20955', 'alt free flap', '15756', 'mandibular plating', '21247', 'microscope', '69990', 'neck dissection', '38724', 'tracheostomy', '31600', 'modifier 62', 'co-surgery', 'microvascular reconstruction'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 84+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 86+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass', 'pediatric mibg', 'neuroblastoma', 'robotic hernia', 'tar component separation', 'pediatric tpiat', 'islet transplant', 'endoscopic skull base', 'odontoidectomy', 'single ventricle', 'norwood', 'glenn', 'fontan', 'adult spine deformity', 'llif', 'xlif', 'pediatric sct', 'sacrococcygeal teratoma', 'retroperitoneal sarcoma', 'pediatric tef', 'esophageal atresia', 'diep flap', 'breast reconstruction'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort', 'biochemical genetics', 'metabolic disorders', 'skull base bypass', 'ec-ic bypass', 'pediatric mibg', 'neuroblastoma', 'robotic hernia', 'tar component separation', 'pediatric tpiat', 'islet transplant', 'endoscopic skull base', 'odontoidectomy', 'single ventricle', 'norwood', 'glenn', 'fontan', 'adult spine deformity', 'llif', 'xlif', 'pediatric sct', 'sacrococcygeal teratoma', 'retroperitoneal sarcoma', 'pediatric tef', 'esophageal atresia', 'diep flap', 'breast reconstruction', 'pediatric hirschsprung', 'head and neck free flap'],
   },
 ];
 

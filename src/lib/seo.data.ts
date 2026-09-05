@@ -1536,6 +1536,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Is the operating microscope (+69990) separately billable with free flap breast reconstruction (CPT 19364)?', a: 'Yes. Under CMS NCCI Chapter VIII guidelines, CPT 19364 does not include the operating microscope. Add-on code +69990 is fully reportable when the operating microscope is utilized for microvascular dissection and micro-arterial/venous anastomoses (e.g. 9-0 or 10-0 nylon sutures under 10x–16x magnification), distinct from surgical loupes.' },
     ],
   },
+  {
+    slug: 'pediatric-hirschsprung-pull-through',
+    name: 'Pediatric Hirschsprung Disease & Transanal Endorectal Pull-Through (TERPT / Soave / Duhamel)',
+    noun: 'pediatric general surgeons, pediatric colorectal centers, neonatal surgeons, and specialized pediatric gastroenterology institutes',
+    cpt: '44145, 44146, 44147, 44150, 44151, 45110, 45112, 45120, 49320, 88305',
+    blurb:
+      'Surgical management of congenital aganglionic megacolon: primary transanal endorectal pull-through (TERPT), laparoscopic-assisted Soave/Duhamel pull-through, multi-level seromuscular mapping biopsies (+44150/+45110/88305), colonic leveling, and staged diversion reversal.',
+    painPoints: [
+      'Diagnostic leveling biopsy bundling: Payers bundling multiple intraoperative frozen section seromuscular leveling biopsies into primary proctectomy',
+      'Laparoscopic assistance unbundling denials: Disallowance of diagnostic/interventional laparoscopy (49320) during transanal endorectal mobilization',
+      'Staged diversion reversal global period clawbacks: Denials of subsequent pull-through following neonatal leveling colostomy absent Modifier -58',
+      'Pelvic muscular cuff dissection downcoding: Rejection of complex dissection modifiers on muscular sleeve cuff creation in ultra-low rectal aganglionosis',
+    ],
+    faqs: [
+      { q: 'How is a transanal endorectal pull-through (TERPT / Soave) coded in pediatric patients?', a: 'Transanal endorectal pull-through for Hirschsprung disease is commonly reported with CPT 45120 (proctectomy, complete (for congenital conditions, eg, Hirschsprung disease or meconium ileus); combined abdominal and perineal approach) or CPT 45112 (proctectomy, combined abdominoperineal, pull-through procedure; eg, colo-anal-anastomosis) or CPT 44145/44146 depending on the exact approach. When diagnostic laparoscopy is utilized to mobilize the splenic flexure or take leveling biopsies, CPT 49320 or 44204 is reported with appropriate unbundling documentation.' },
+      { q: 'Can intraoperative leveling biopsies be separately billed during Hirschsprung surgery?', a: 'Multiple leveling seromuscular full-thickness biopsies performed to establish normal ganglion cell presence at the proximal resection margin are separately billable with Modifier -59 or -XU when taken at distinctly documented colonic locations prior to selecting the transection site.' },
+    ],
+  },
+  {
+    slug: 'head-and-neck-free-flap-reconstruction',
+    name: 'Complex Adult Head & Neck Microvascular Free Flap Reconstruction (Fibula / ALT Free Flap)',
+    noun: 'head and neck oncologic reconstructive surgeons, microvascular plastic surgeons, otolaryngologists, and comprehensive cancer institutes',
+    cpt: '20955, 20956, 15756, 15757, 15758, 21247, 31600, 38724, 69990, 15860',
+    blurb:
+      'Advanced microvascular head and neck defect reconstruction: composite osteocutaneous vascularized fibula free flap with computer-assisted surgical planning (CPT 20955/21247) or anterolateral thigh (ALT) perforator free flap (CPT 15756), neck recipient vessel anastomosis, operating microscope (+69990), intraoperative ICG fluoroscopy (+15860), and ablative/reconstructive dual-attending co-surgery (Modifier -62).',
+    painPoints: [
+      'Dual-team ablative/reconstructive Modifier -62 conflicts: Cross-specialty ENT oncologic resection and plastic microsurgical reconstruction denial when payers misapply co-surgeon rules to separate procedures',
+      'Operating microscope (+69990) bundled into microvascular free flaps: Automated payer rejection of microsurgical magnification during 1.5mm neck vessel anastomoses',
+      'Vascularized bone graft (20955) downcoded to simple free flap (15756): Payers ignoring complex mandibular osteotomies, plating, and osseous vascular pedicles',
+      'Contemporaneous neck dissection (38724) bundling clawbacks: Denial of elective or therapeutic neck lymphadenectomy performed simultaneously with recipient vessel preparation',
+    ],
+    faqs: [
+      { q: 'How should dual-surgeon teams code for head and neck oncologic ablation and microvascular free flap reconstruction?', a: 'When an ENT surgical oncologist performs tumor resection and bilateral neck dissection (e.g. CPT 42845 and 38724) while a plastic/microvascular surgeon harvests and insets a fibula osteocutaneous free flap (CPT 20955 and 21247), each surgeon must report their distinct primary codes without Modifier -62, as they are performing separate and distinct surgical operations rather than co-performing the same code.' },
+      { q: 'Is the operating microscope (+69990) billable with vascularized bone graft (CPT 20955) or free tissue transfer (CPT 15756)?', a: 'Yes. Under CMS NCCI Chapter VIII guidelines, microvascular free tissue transfer (15756, 15757, 15758) and bone graft with microvascular anastomosis (20955, 20956) do not bundle the operating microscope. Add-on code +69990 is fully reimbursable when microvascular anastomoses under 10x–16x magnification are documented.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
