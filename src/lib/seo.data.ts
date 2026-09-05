@@ -960,6 +960,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Can stereotactic navigation (+61781) and ventriculostomy (61107) be billed with craniotomy for infratentorial tumor (61520)?', a: 'Yes. CPT +61781 (cranial computer-assisted navigation, infratentorial) is an designated add-on code that cannot be discounted under multiple procedure reductions. When acute intracranial pressure requires placement of a pre-craniotomy external ventricular drain (61107) through a separate twist drill/burr hole, Modifier 59 (or XS) is required with explicit operative documentation demonstrating distinct site access prior to prone positioning.' },
     ],
   },
+  {
+    slug: 'pancreatic-surgery',
+    name: 'Complex Pancreatic Surgery & Whipple Resection',
+    noun: 'pancreaticobiliary surgeons, surgical oncologists, abdominal transplant surgeons, and HPB clinical groups',
+    cpt: '48150, 48153, 48154, 48155, 48140, 48548, 48554, 35221, 38747, 47760, 44010, 99223',
+    blurb:
+      'Pancreaticoduodenectomy (classic and pylorus-preserving Whipple), total and distal subtotal pancreatectomy, superior mesenteric vein (SMV) resection and vascular reconstruction, pancreaticojejunostomy, and intraoperative feeding jejunostomy.',
+    painPoints: [
+      'Pylorus-preserving vs classic Whipple downcoding: Commercial payers arbitrarily bundling antrectomy or downcoding CPT 48150 (classic Whipple with partial gastrectomy) to 48153 (pylorus-preserving) without operative verification',
+      'Vascular resection and reconstruction add-on bundling: Clearinghouse denials of mesenteric/portal vein reconstruction (+35221 / +35251) performed for vascular tumor abutment clearance',
+      'Feeding jejunostomy (CPT 44010) bundling rejections: Denial of enteral feeding tube placement during Whipple reconstructions as unbundled integral surgical access',
+      'Co-surgeon Modifier -62 audits: Multi-surgeon pancreatic cases (e.g. surgical oncologist + vascular surgeon) suspended for paired dictation discrepancy review',
+    ],
+    faqs: [
+      { q: 'What is the coding difference between classic Whipple (CPT 48150) and pylorus-preserving Whipple (CPT 48153)?', a: 'CPT 48150 includes pancreatectomy, duodenectomy, choledochoenterostomy, gastrojejunostomy, and partial gastrectomy (antrectomy). CPT 48153 preserves the gastric antrum and pylorus, anastomosing the duodenum to the jejunum (duodenojejunostomy). Coders must scrutinize pathology margins and surgical operative dictation to ensure stomach resection is documented when billing 48150 to prevent severe payer downcoding clawbacks.' },
+      { q: 'Can vascular repair (+35221) and enteral feeding access (44010) be separately billed during a Whipple procedure?', a: 'Yes. CPT +35221 (repair blood vessel with vein graft) is a designated add-on code reportable when tumor infiltration of the portal vein or superior mesenteric vein requires venous resection and reconstruction. CPT 44010 (enteral access, feeding tube placement) is permitted under NCCI guidelines when documented through a separate transabdominal tract for postoperative nutritional support with distinct operative dictation.' },
+    ],
+  },
+  {
+    slug: 'pediatric-craniofacial',
+    name: 'Pediatric Craniofacial & Cleft Palate Surgery',
+    noun: 'pediatric plastic surgeons, pediatric craniofacial specialists, oral-maxillofacial surgeons, and cleft palate teams',
+    cpt: '21141, 21142, 21145, 21155, 21175, 42200, 42205, 42210, 21210, 21244, 30460, 99214',
+    blurb:
+      'Cleft lip and palate repair (palatoplasty, cheiloplasty), alveolar ridge bone grafting, LeFort osteotomies for midface hypoplasia, cranial vault remodeling for craniosynostosis, and mandibular distraction osteogenesis.',
+    painPoints: [
+      'Cleft palatoplasty unbundling rejections: Clearinghouses improperly bundling alveolar bone grafting (42210) and iliac crest bone marrow harvest (21210) into primary palatal repair (42200)',
+      'Congenital cosmetic exclusion denials: Commercial payers rejecting complex midface advancement (21141-21155) under blanket cosmetic or orthodontic surgery exclusion policies',
+      'Staged cranial vault remodeling bundling: Payer denial of staged fronto-orbital advancement (21175) due to missing Modifier 58 (staged or related procedure during postop global period)',
+      'Bone graft donor site disallowance: Rejection of separate donor harvest codes when autologous cranial or rib graft is used for pediatric orbital reconstruction',
+    ],
+    faqs: [
+      { q: 'Can bone grafting to the alveolar ridge (CPT 42210) be billed with autologous graft harvest (CPT 21210)?', a: 'CPT 42210 describes palatoplasty for cleft palate with alveolar ridge bone graft and includes obtainment of the bone graft when harvested from the immediate regional operative site. However, if bone is harvested from a distinct anatomical donor site (such as iliac crest or tibia), CPT 20900 (bone graft, any donor area) or CPT 21210 may be reportable with Modifier 59/XS, provided that separate incision, operative time, and closure dictation are thoroughly documented.' },
+      { q: 'How can pediatric craniofacial practices overturn commercial cosmetic exclusions for LeFort osteotomies (CPT 21141-21155)?', a: 'Appeals must document functional impairment under ICD-10 congenital malformation codes (e.g. Q87.0 Crouzon/Apert syndrome, Q35.9 cleft palate). Required evidence includes cephalometric radiographic tracings proving severe Class III malocclusion, pediatric sleep study (polysomnography) demonstrating obstructive sleep apnea due to midface retrusion, speech-language pathology nasometry documenting velopharyngeal insufficiency, and multidisciplinary ACPA (American Cleft Palate-Craniofacial Association) team records.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

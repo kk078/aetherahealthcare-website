@@ -61,6 +61,8 @@ const specialtyLinks: Record<string, string> = {
   'Pediatric Hematology-Oncology & Cellular Therapy': '/medical-billing/pediatric-heme-onc',
   'Colorectal Surgery & Complex Pelvic Exenteration': '/medical-billing/colorectal-surgery',
   'Pediatric Neuro-Oncology & Posterior Fossa Surgery': '/medical-billing/pediatric-neuro-oncology',
+  'Complex Pancreatic Surgery & Whipple Resection': '/medical-billing/pancreatic-surgery',
+  'Pediatric Craniofacial & Cleft Palate Surgery': '/medical-billing/pediatric-craniofacial',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -407,6 +409,18 @@ const specialties = [
         description: 'Posterior fossa craniotomy for medulloblastoma and ependymoma, continuous intraoperative neurophysiological monitoring (IONM), stereotactic neuronavigation, ventriculoperitoneal shunt placement, and brainstem mapping.',
         cptCodes: '61518, 61520, 61545, 62223, 62230, 95940, 95941, 61781, 61783',
         challenges: 'Posterior fossa craniotomy downcoding to supratentorial, IONM remote monitoring denials, and same-day external ventricular drain / VP shunt bundling.'
+      },
+      {
+        name: 'Complex Pancreatic Surgery & Whipple Resection',
+        description: 'Pancreaticoduodenectomy (Whipple with/without antrectomy), distal subtotal pancreatectomy, superior mesenteric vein reconstruction, pancreaticojejunostomy, and intraoperative feeding jejunostomy.',
+        cptCodes: '48150, 48153, 48154, 48155, 48140, 48548, 35221, 38747, 44010',
+        challenges: 'Pylorus-preserving vs classic Whipple downcoding clawbacks, mesenteric vascular reconstruction add-on bundling denials, and enteral feeding tube bundling.'
+      },
+      {
+        name: 'Pediatric Craniofacial & Cleft Palate Surgery',
+        description: 'Cleft lip and palate repair (palatoplasty, cheiloplasty), alveolar ridge bone grafting, LeFort osteotomies for midface hypoplasia, cranial vault remodeling for craniosynostosis, and distraction osteogenesis.',
+        cptCodes: '21141, 21142, 21145, 21155, 21175, 42200, 42205, 42210, 21210',
+        challenges: 'Alveolar bone grafting unbundling into primary palatoplasty, commercial cosmetic/orthodontic exclusion rejections on midface osteotomies, and donor site bundling.'
       }
     ]
   }
@@ -414,13 +428,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 52+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 54+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 52+ specialties — Colorectal Surgery, Pediatric Neuro-Oncology, Hepatobiliary, Pediatric Heme-Onc, Trauma Surgery, Pediatric Pulmonology, Cardiothoracic, Pediatric Orthopedics, Spine Surgery, Urogynecology, and more.',
+    description: 'Expert medical billing across 54+ specialties — Pancreatic Surgery, Pediatric Craniofacial, Colorectal Surgery, Pediatric Neuro-Oncology, Hepatobiliary, Pediatric Heme-Onc, Trauma Surgery, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -431,7 +445,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 52 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 54 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -452,10 +466,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 52+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 54+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['52+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['54+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

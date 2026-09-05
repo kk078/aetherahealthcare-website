@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 57 Interactive Tools
+// 59 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -687,6 +687,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'purple',
     keywords: ['pediatric neurosurgery', 'brain tumor', 'posterior fossa', 'medulloblastoma', 'ependymoma', 'craniotomy', '61518', '61520', '61510', 'ionm', '95940', '95941', '95938', 'evd', '61107', 'vp shunt', '62223', 'neuronavigation', '61781'],
   },
+  {
+    id: 'tool-whipple-resection',
+    category: 'tools',
+    title: 'Whipple Procedure & Pancreatic Resection Scrubber',
+    subtitle: 'Classic (48150) vs PPPD (48153), SMV vein reconstruction (+35221), jejunostomy (44010) & Mod 62',
+    description: 'Model classic and pylorus-preserving Whipple pancreaticoduodenectomy, mesenteric/portal vein reconstruction add-ons (+35221), regional lymphadenectomy (+38747), and feeding jejunostomies (44010). Defend against aggressive commercial antrectomy downcoding and co-surgeon Modifier -62 audits.',
+    href: '/tools/whipple-resection-scrubber',
+    badge: 'Pancreatic Surgery',
+    badgeVariant: 'amber',
+    keywords: ['pancreatic surgery', 'whipple procedure', 'pancreaticoduodenectomy', '48150', '48153', '48154', '48155', '48140', 'pancreaticojejunostomy', 'vascular reconstruction', 'smv graft', 'portal vein', '35221', 'feeding jejunostomy', '44010', 'lymphadenectomy', '38747', 'modifier 62', 'co-surgery'],
+  },
+  {
+    id: 'tool-pediatric-craniofacial',
+    category: 'tools',
+    title: 'Pediatric Craniofacial & Cleft Palate Staging Scrubber',
+    subtitle: 'Palatoplasty (42200-42210), LeFort I (21141), cranial vault (21175), bone harvest unbundling & Mod 58',
+    description: 'Audit complex pediatric cleft palatoplasty (42200-42210), midface LeFort osteotomies (21141), and cranial vault remodeling (21175). Defend against illegal bone graft harvest unbundling (20900), commercial cosmetic surgery exclusion denials, and missing staged procedure Modifier -58 penalties.',
+    href: '/tools/pediatric-craniofacial-scrubber',
+    badge: 'Pediatric Craniofacial',
+    badgeVariant: 'teal',
+    keywords: ['pediatric craniofacial', 'cleft palate', 'cleft lip', 'palatoplasty', '42200', '42205', '42210', '42215', 'alveolar bone graft', 'lefort osteotomy', '21141', 'cranial vault remodeling', 'craniosynostosis', '21175', 'modifier 58', 'modifier 62', 'vpi', 'velopharyngeal insufficiency', 'speech pathology', 'rhinoplasty', '30460'],
+  },
 ];
 
 // Specialties
@@ -1242,14 +1264,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['pediatric neurosurgery', 'pediatric neuro-oncology', 'posterior fossa', 'medulloblastoma', 'ependymoma', 'craniotomy', '61518', '61520', 'ionm', '95940', '95941', 'evd', '61107', 'vp shunt', '62223'],
   },
   {
+    id: 'spec-pancreatic-surgery',
+    category: 'specialties',
+    title: 'Complex Pancreatic Surgery & Whipple Resection Billing',
+    subtitle: 'Whipple pancreaticoduodenectomy (48150/48153), mesenteric vein reconstruction (+35221), and co-surgery',
+    href: '/medical-billing/pancreatic-surgery',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pancreatic surgery', 'whipple', 'pancreaticoduodenectomy', '48150', '48153', '48154', '48155', '48140', '48548', 'vascular reconstruction', '35221', 'lymphadenectomy', '38747', 'jejunostomy', '44010', 'modifier 62', 'surgical oncology', 'hpb'],
+  },
+  {
+    id: 'spec-pediatric-craniofacial',
+    category: 'specialties',
+    title: 'Pediatric Craniofacial & Cleft Palate Surgery Billing',
+    subtitle: 'Cleft palatoplasty (42200-42210), midface LeFort I (21141), cranial vault (21175) & Mod 58',
+    href: '/medical-billing/pediatric-craniofacial',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric craniofacial', 'cleft palate', 'palatoplasty', '42200', '42205', '42210', 'alveolar bone graft', 'midface lefort', '21141', 'cranial vault remodeling', '21175', 'craniosynostosis', 'modifier 58', 'vpi', 'velopharyngeal insufficiency', 'pediatric plastic surgery'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 52+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 54+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate'],
   },
 ];
 

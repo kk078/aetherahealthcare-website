@@ -41,6 +41,7 @@ import {
   Heart,
   Crosshair,
   Stethoscope,
+  Smile,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -54,6 +55,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/whipple-resection-scrubber',
+    icon: Scissors,
+    name: 'Whipple Procedure & Pancreatic Resection Scrubber',
+    desc: 'Audit classic (48150) vs pylorus-preserving (48153) pancreaticoduodenectomy, defend mesenteric vein reconstruction (+35221), feeding jejunostomies (44010), and Modifier -62 co-surgeons.',
+    category: 'scrubbers',
+    tag: 'Pancreatic Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/pediatric-craniofacial-scrubber',
+    icon: Smile,
+    name: 'Pediatric Craniofacial & Cleft Palate Scrubber',
+    desc: 'Audit cleft palatoplasty (42200-42210), midface LeFort I osteotomy (21141), defend bone graft inclusivity, enforce Modifier -58 staged sequencing, and overturn cosmetic denials.',
+    category: 'scrubbers',
+    tag: 'Pediatric Craniofacial',
+    badge: 'New',
+  },
   {
     href: '/tools/colorectal-exenteration-scrubber',
     icon: Scissors,
