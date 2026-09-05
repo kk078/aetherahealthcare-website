@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import {
   Phone,
   Mail,
@@ -15,13 +15,16 @@ import {
   TrendingUp,
   Clock,
   ArrowRight,
-  UserCheck
+  UserCheck,
+  RotateCcw,
 } from 'lucide-react';
 import { submitToWorker, sendLeadToKiran, PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
 import { askAiAgent, type AssistantMessage, type AgentAction } from '@/lib/aiAgent';
 
 const INITIAL_GREETING =
   "Hi! I'm Aethera's AI Revenue Cycle & Practice Specialist. Ask me anything about payer timely filing limits, denial codes (CO-45, PR-204, CO-16), specialty medical billing, or our 3.5%–5.0% performance pricing. You can also connect directly with Kiran for a practice audit.";
+
+const IDLE_TIMEOUT_MS = 5 * 60 * 1000; // 5 minutes inactivity session timeout
 
 const SUGGESTIONS = [
   'How to overturn CO-45 & PR-204?',
@@ -76,6 +79,138 @@ export default function CallbackButton() {
   });
   const [callbackStatus, setCallbackStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
+  // Inactivity tracking timestamp
+  const lastActivityRef = useRef<number>(Date.now());
+
+  // Record active user interaction
+  const recordActivity = useCallback(() => {
+    lastActivityRef.current = Date.now();
+  }, []);
+
+  // Complete session reset / refresh
+  const handleResetSession = useCallback(() => {
+    setMessages([
+      {
+        id: `msg-init-${Date.now()}`,
+        role: 'assistant',
+        content: INITIAL_GREETING,
+        timestamp: 'Now',
+      },
+    ]);
+    setInput('');
+    setIsThinking(false);
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      specialty: '',
+      bestTime: '',
+      notes: '',
+      hp_field: '',
+    });
+    setCallbackStatus('idle');
+    setActiveTab('chat');
+    lastActivityRef.current = Date.now();
+  }, []);
+
+  // Zero session persistence guarantee: Never save any session in localStorage or sessionStorage.
+  // Proactively purge any residual storage keys on mount.
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined') {
+        window.sessionStorage?.removeItem('aethera_expert_session');
+        window.sessionStorage?.removeItem('aethera_chat_history');
+        window.localStorage?.removeItem('aethera_expert_session');
+        window.localStorage?.removeItem('aethera_chat_history');
+      }
+    } catch {
+      // Safe no-op in restricted storage environments
+    }
+  }, []);
+
+  // Inactivity monitor: Clear sessions if idle for more than 5 minutes
+  useEffect(() => {
+    const checkIdle = () => {
+      const now = Date.now();
+      if (now - lastActivityRef.current >= IDLE_TIMEOUT_MS) {
+        setMessages(prev => {
+          if (prev.length > 1 || prev[0]?.content !== INITIAL_GREETING) {
+            return [
+              {
+                id: `msg-init-${Date.now()}`,
+                role: 'assistant',
+                content: INITIAL_GREETING,
+                timestamp: 'Now',
+              },
+            ];
+          }
+          return prev;
+        });
+        setFormData(prev => {
+          if (prev.name || prev.phone || prev.email || prev.notes) {
+            return {
+              name: '',
+              phone: '',
+              email: '',
+              specialty: '',
+              bestTime: '',
+              notes: '',
+              hp_field: '',
+            };
+          }
+          return prev;
+        });
+        setInput('');
+        setIsThinking(false);
+        setCallbackStatus(prev => (prev === 'success' || prev === 'error' ? 'idle' : prev));
+        lastActivityRef.current = now;
+      }
+    };
+
+    const interval = setInterval(checkIdle, 10000); // Check every 10 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  // Visibility and focus change listener: clear if returning after >5 min idle
+  useEffect(() => {
+    const handleVisibilityOrFocus = () => {
+      if (typeof document !== 'undefined' && document.visibilityState === 'visible') {
+        const now = Date.now();
+        if (now - lastActivityRef.current >= IDLE_TIMEOUT_MS) {
+          handleResetSession();
+        }
+      }
+    };
+
+    window.addEventListener('visibilitychange', handleVisibilityOrFocus);
+    window.addEventListener('focus', handleVisibilityOrFocus);
+    return () => {
+      window.removeEventListener('visibilitychange', handleVisibilityOrFocus);
+      window.removeEventListener('focus', handleVisibilityOrFocus);
+    };
+  }, [handleResetSession]);
+
+  // Track user activity when drawer is open
+  useEffect(() => {
+    if (!open) return;
+
+    const onActiveEvent = () => {
+      lastActivityRef.current = Date.now();
+    };
+
+    window.addEventListener('mousemove', onActiveEvent, { passive: true });
+    window.addEventListener('keydown', onActiveEvent, { passive: true });
+    window.addEventListener('touchstart', onActiveEvent, { passive: true });
+    window.addEventListener('scroll', onActiveEvent, { passive: true });
+
+    return () => {
+      window.removeEventListener('mousemove', onActiveEvent);
+      window.removeEventListener('keydown', onActiveEvent);
+      window.removeEventListener('touchstart', onActiveEvent);
+      window.removeEventListener('scroll', onActiveEvent);
+    };
+  }, [open]);
+
   // Auto-scroll chat on updates
   useEffect(() => {
     if (activeTab === 'chat' && chatScrollRef.current) {
@@ -83,8 +218,34 @@ export default function CallbackButton() {
     }
   }, [messages, isThinking, activeTab, open]);
 
+  // Toggle drawer with idle check
+  const handleToggleOpen = () => {
+    if (!open) {
+      const now = Date.now();
+      if (now - lastActivityRef.current >= IDLE_TIMEOUT_MS) {
+        handleResetSession();
+      } else {
+        lastActivityRef.current = now;
+      }
+      setOpen(true);
+    } else {
+      if (callbackStatus === 'success') {
+        handleResetSession();
+      }
+      setOpen(false);
+    }
+  };
+
+  const handleClose = () => {
+    if (callbackStatus === 'success') {
+      handleResetSession();
+    }
+    setOpen(false);
+  };
+
   // Handle sending message to AI Agent
   const handleSendMessage = async (textToSend?: string) => {
+    recordActivity();
     const query = (textToSend ?? input).trim();
     if (!query || isThinking) return;
 
@@ -119,6 +280,7 @@ export default function CallbackButton() {
       ]);
     } finally {
       setIsThinking(false);
+      recordActivity();
     }
   };
 
@@ -131,6 +293,12 @@ export default function CallbackButton() {
   useEffect(() => {
     const handleOpenEvent = (e: Event) => {
       const custom = e as CustomEvent<{ mode?: TabMode; initialQuery?: string }>;
+      const now = Date.now();
+      if (now - lastActivityRef.current >= IDLE_TIMEOUT_MS) {
+        handleResetSession();
+      } else {
+        lastActivityRef.current = now;
+      }
       setOpen(true);
       if (custom.detail?.mode) {
         setActiveTab(custom.detail.mode);
@@ -142,10 +310,11 @@ export default function CallbackButton() {
 
     window.addEventListener('open-expert-modal', handleOpenEvent);
     return () => window.removeEventListener('open-expert-modal', handleOpenEvent);
-  }, []);
+  }, [handleResetSession]);
 
   // Switch to callback tab with pre-filled context
   const handleEscalateToCallback = (contextNote?: string) => {
+    recordActivity();
     setActiveTab('callback');
     if (contextNote) {
       setFormData(prev => ({
@@ -172,6 +341,7 @@ export default function CallbackButton() {
   const canSubmit = Boolean(formData.name.trim() && formData.phone.trim() && emailValid);
 
   const handleRequestCallback = async () => {
+    recordActivity();
     if (!canSubmit) return;
     // Honeypot check
     if (formData.hp_field) {
@@ -204,8 +374,9 @@ export default function CallbackButton() {
 
     setCallbackStatus('success');
     setFormData({ name: '', phone: '', email: '', specialty: '', bestTime: '', notes: '', hp_field: '' });
+    // Automatically refresh session after completion
     setTimeout(() => {
-      setCallbackStatus('idle');
+      handleResetSession();
       setOpen(false);
     }, 4000);
   };
@@ -314,10 +485,10 @@ export default function CallbackButton() {
           <p className="text-slate-600 text-[11px] mt-0.5"><strong>Appeals:</strong> {String(p.appeal)}</p>
           <div className="flex flex-wrap gap-1.5 mt-2">
             <a
-              href="/tools/timely-filing"
+              href="/payers/directory"
               className="inline-flex items-center gap-1 px-2.5 py-1 bg-white border border-teal/30 text-teal hover:bg-teal hover:text-white rounded-lg font-semibold transition-colors text-[11px]"
             >
-              View 229+ Payer Directory <ExternalLink className="h-3 w-3" />
+              View 10,600+ Payer Directory <ExternalLink className="h-3 w-3" />
             </a>
           </div>
         </div>
@@ -400,16 +571,31 @@ export default function CallbackButton() {
                       Agentic AI
                     </span>
                   </div>
-                  <p className="text-white/70 text-[11px] mt-1">Live RCM Answers · Routed to Kiran</p>
+                  <p className="text-white/70 text-[11px] mt-1">Live RCM Answers · Routed to Kiran · Ephemeral 5m Session</p>
                 </div>
               </div>
-              <button
-                onClick={() => setOpen(false)}
-                className="text-white/70 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors"
-                aria-label="Close"
-              >
-                <X className="h-5 w-5" />
-              </button>
+              <div className="flex items-center gap-1.5">
+                {(messages.length > 1 || formData.name || formData.phone || formData.notes || callbackStatus === 'success') && (
+                  <button
+                    type="button"
+                    onClick={handleResetSession}
+                    className="text-white/80 hover:text-white px-2 py-1 rounded-lg hover:bg-white/10 transition-colors text-[11px] font-semibold flex items-center gap-1 border border-white/20"
+                    title="Clear and refresh session"
+                    aria-label="Refresh and start new session"
+                  >
+                    <RotateCcw className="h-3 w-3" />
+                    <span>New Session</span>
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={handleClose}
+                  className="text-white/70 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors"
+                  aria-label="Close"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
             </div>
 
             {/* Navigation Tabs */}
@@ -502,7 +688,10 @@ export default function CallbackButton() {
                 >
                   <input
                     value={input}
-                    onChange={e => setInput(e.target.value)}
+                    onChange={e => {
+                      setInput(e.target.value);
+                      recordActivity();
+                    }}
                     placeholder="Ask about denial codes, payers, fees…"
                     aria-label="Message Aethera Expert AI"
                     className="flex-1 px-3 py-2 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal"
@@ -518,14 +707,26 @@ export default function CallbackButton() {
                 </form>
                 <div className="flex items-center justify-between text-[10px] text-slate-500 mt-1.5 px-0.5">
                   <span className="flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Grounded in 229+ Payers &amp; CARCs
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Grounded in 10,600+ Payers &amp; CARCs
                   </span>
-                  <button
-                    onClick={() => handleEscalateToCallback()}
-                    className="text-teal hover:text-navy font-semibold underline underline-offset-2"
-                  >
-                    Speak to Kiran
-                  </button>
+                  <div className="flex items-center gap-2">
+                    {messages.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={handleResetSession}
+                        className="text-slate-400 hover:text-navy transition-colors flex items-center gap-0.5 font-medium"
+                        title="Clear conversation and start fresh"
+                      >
+                        <RotateCcw className="h-2.5 w-2.5" /> New Session
+                      </button>
+                    )}
+                    <button
+                      onClick={() => handleEscalateToCallback()}
+                      className="text-teal hover:text-navy font-semibold underline underline-offset-2"
+                    >
+                      Speak to Kiran
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -544,6 +745,15 @@ export default function CallbackButton() {
                     Thank you! Your request and inquiry notes have been routed directly to Kiran (
                     <strong className="text-navy">{PRIMARY_EXPERT_EMAIL}</strong>). Expect a follow-up or call within 2 business hours.
                   </p>
+                  <div className="pt-2">
+                    <button
+                      type="button"
+                      onClick={handleResetSession}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-navy hover:bg-teal text-white rounded-lg font-semibold text-xs transition-colors shadow-xs"
+                    >
+                      <RotateCcw className="h-3.5 w-3.5" /> Start New Session
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <div className="space-y-4">
@@ -683,7 +893,7 @@ export default function CallbackButton() {
 
       {/* Main trigger button pinned bottom-right */}
       <button
-        onClick={() => setOpen(!open)}
+        onClick={handleToggleOpen}
         className={`flex items-center gap-2.5 ${
           open ? 'bg-navy' : 'bg-teal hover:bg-navy'
         } text-white font-bold p-3 sm:py-3 sm:px-5 rounded-full shadow-2xl transition-all duration-300 group hover:shadow-teal/25 hover:shadow-lg relative`}

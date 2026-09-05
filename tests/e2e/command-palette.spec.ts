@@ -16,7 +16,7 @@ test.describe('Global Command Palette & Quick Search (Cmd+K)', () => {
     await expect(dialog).toBeVisible();
 
     // Input should be focused
-    const searchInput = page.getByPlaceholder(/Search 229\+ payers/i);
+    const searchInput = page.getByPlaceholder(/Search 10,600\+ payers/i);
     await expect(searchInput).toBeVisible();
     await expect(searchInput).toBeFocused();
 
@@ -38,7 +38,7 @@ test.describe('Global Command Palette & Quick Search (Cmd+K)', () => {
 
   test('searches payers and displays timely filing rules', async ({ page }) => {
     await page.keyboard.press('Control+KeyK');
-    const input = page.getByPlaceholder(/Search 229\+ payers/i);
+    const input = page.getByPlaceholder(/Search 10,600\+ payers/i);
     await input.fill('Aetna');
 
     // Aetna result item should be present
@@ -51,7 +51,7 @@ test.describe('Global Command Palette & Quick Search (Cmd+K)', () => {
 
   test('searches denial codes and inspects root-cause playbook', async ({ page }) => {
     await page.keyboard.press('Control+KeyK');
-    const input = page.getByPlaceholder(/Search 229\+ payers/i);
+    const input = page.getByPlaceholder(/Search 10,600\+ payers/i);
     await input.fill('16');
 
     // Should show CARC 16

@@ -64,7 +64,7 @@ const TOOL_ITEMS: SearchItem[] = [
     id: 'tool-timely-filing',
     category: 'tools',
     title: 'Timely Filing & Appeal Calculator',
-    subtitle: 'Payer deadlines & appeal windows across 229+ plans',
+    subtitle: 'Payer deadlines, clearinghouse routing & appeal windows across 10,600+ plans',
     description: 'Calculate exact submission deadlines and appeal cutoffs for commercial, Medicare, and Medicaid payers.',
     href: '/tools/timely-filing-calculator',
     badge: 'Compliance Tool',
@@ -672,7 +672,7 @@ export function getPayerSearchItems(): SearchItem[] {
     title: p.name,
     subtitle: [
       p.type ? `${p.type} Plan` : '',
-      p.clearinghouseId ? `EDI ID: ${p.clearinghouseId}` : p.payerId ? `Payer ID: ${p.payerId}` : '',
+      p.payerId ? `Payer ID: ${p.payerId}` : p.clearinghouseId ? `EDI ID: ${p.clearinghouseId}` : '',
       p.parStatus ? `Status: ${p.parStatus}` : '',
       p.timelyFiling ? `Filing: ${p.timelyFiling.slice(0, 35)}…` : '',
     ]

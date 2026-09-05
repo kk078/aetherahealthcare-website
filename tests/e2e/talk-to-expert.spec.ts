@@ -72,4 +72,53 @@ test.describe('Talk to an Expert - Agentic AI & Email Routing', () => {
     const contactEmailLinks = page.locator('a[href^="mailto:kirkmar078@gmail.com"]');
     expect(await contactEmailLinks.count()).toBeGreaterThanOrEqual(1);
   });
+
+  test('Talk to an Expert displays Grounded in 10,600+ Payers & CARCs badge', async ({ page }) => {
+    await page.goto('/');
+    const triggerBtn = page.getByRole('button', { name: /Talk to an Expert/i });
+    await triggerBtn.click();
+
+    // Verify badge text
+    await expect(page.getByText(/Grounded in 10,600\+ Payers & CARCs/i)).toBeVisible();
+  });
+
+  test('no session data is saved in localStorage or sessionStorage for any user', async ({ page }) => {
+    await page.goto('/');
+    const triggerBtn = page.getByRole('button', { name: /Talk to an Expert/i });
+    await triggerBtn.click();
+
+    await page.getByPlaceholder(/Ask about denial codes/i).fill('Testing privacy');
+
+    const storageCheck = await page.evaluate(() => {
+      const localKeys = Object.keys(localStorage);
+      const sessionKeys = Object.keys(sessionStorage);
+      return {
+        hasLocalSession: localKeys.some(k => k.includes('session') || k.includes('chat') || k.includes('expert')),
+        hasSessionStore: sessionKeys.some(k => k.includes('session') || k.includes('chat') || k.includes('expert')),
+      };
+    });
+
+    expect(storageCheck.hasLocalSession).toBe(false);
+    expect(storageCheck.hasSessionStore).toBe(false);
+  });
+
+  test('New Session button refreshes active conversation back to initial state', async ({ page }) => {
+    await page.goto('/');
+    const triggerBtn = page.getByRole('button', { name: /Talk to an Expert/i });
+    await triggerBtn.click();
+
+    // Click a suggestion to initiate conversation
+    await page.getByRole('button', { name: /What is UHC & Medicare timely filing/i }).click();
+    await expect(page.getByText(/proof of timely filing|filing deadline/i).first()).toBeVisible({ timeout: 15000 });
+
+    // Verify "New Session" button appears in header
+    const newSessionBtn = page.getByRole('button', { name: /New Session/i }).first();
+    await expect(newSessionBtn).toBeVisible();
+
+    // Click New Session to refresh
+    await newSessionBtn.click();
+
+    // Verify suggestions are visible again (session refreshed)
+    await expect(page.getByRole('button', { name: /How to overturn CO-45 & PR-204/i })).toBeVisible();
+  });
 });

@@ -4,7 +4,7 @@
  * Multi-tier intelligent architecture:
  * 1. Direct LLM REST API (when NEXT_PUBLIC_AI_API_KEY is configured)
  * 2. Cloudflare Worker Assistant proxy (https://aethera-forms.aetherahealthcare.workers.dev/api/assistant)
- * 3. Grounded Deterministic RCM Knowledge Engine (instant lookup across 229+ payers and CARC/RARC denial codes)
+ * 3. Grounded Deterministic RCM Knowledge Engine (instant lookup across 10,600+ clearinghouse payers, 229 curated playbooks, and CARC/RARC denial codes)
  *
  * Also extracts structured agentic actions (denial resolution, timely filing, ROI recovery, and human escalation to Kiran).
  */
@@ -27,7 +27,7 @@ export interface AssistantMessage {
 }
 
 const FORMS_URL = process.env.NEXT_PUBLIC_FORMS_URL || 'https://aethera-forms.aetherahealthcare.workers.dev';
-const API_KEY = process.env.NEXT_PUBLIC_AI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY || '';
+const API_KEY = process.env.NEXT_PUBLIC_AI_API_KEY || '';
 
 const SYSTEM_PROMPT = `You are Aethera's Senior AI Revenue Cycle & Practice Management Specialist, pairing with Kiran and the senior billing leadership team at Aethera Healthcare Solutions.
 

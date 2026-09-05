@@ -25,7 +25,7 @@ import {
 
 const CATEGORIES: { key: SearchCategory; label: string }[] = [
   { key: 'all', label: 'All Results' },
-  { key: 'payers', label: 'Payers (229+)' },
+  { key: 'payers', label: 'Payers (10,600+)' },
   { key: 'denials', label: 'Denial Codes' },
   { key: 'tools', label: 'Free Tools (15)' },
   { key: 'specialties', label: 'Specialties' },
@@ -234,7 +234,7 @@ export default function CommandPalette() {
             value={query}
             onChange={handleQueryChange}
             onKeyDown={handleInputKeyDown}
-            placeholder="Search 229+ payers, 1,283+ denial codes, calculators, specialties…"
+            placeholder="Search 10,600+ payers, 1,283+ denial codes, calculators, specialties…"
             className="w-full bg-transparent border-none text-slate-900 placeholder:text-slate-400 text-base sm:text-lg focus:outline-none"
             aria-label="Search across Aethera Healthcare"
           />
