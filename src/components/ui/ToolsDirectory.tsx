@@ -58,6 +58,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/pediatric-dbs-neuromodulation-scrubber',
+    icon: Brain,
+    name: 'Pediatric DBS & Cranial Neuromodulation Scrubber',
+    desc: 'Audit stereotactic lead placement with microelectrode recording (61867/+61868 vs 61863), suppress headframe bundling (20660), defend dual-channel IPGs (61886-59/58), and capture intraoperative neuroprogramming (95983).',
+    category: 'scrubbers',
+    tag: 'Pediatric Neurosurgery & Neuromodulation',
+    badge: 'New',
+  },
+  {
+    href: '/tools/panfacial-trauma-reconstruction-scrubber',
+    icon: Crosshair,
+    name: 'Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber',
+    desc: 'Audit complex midface Le Fort I/II/III repairs (21422–21435), ZMC fractures (21365), mandibular plating (21462), intermaxillary fixation bundling (21110-59), and orbital blowout reconstructive implants (21390).',
+    category: 'scrubbers',
+    tag: 'Craniofacial Trauma & OMFS',
+    badge: 'New',
+  },
+  {
     href: '/tools/pediatric-vascular-malformations-scrubber',
     icon: Activity,
     name: 'Pediatric Vascular Malformations & Sclerotherapy Scrubber',

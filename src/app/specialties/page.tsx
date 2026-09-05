@@ -533,6 +533,18 @@ const specialties = [
         description: 'Radical en-bloc resection for primary malignant bone tumors (osteosarcoma, Ewing sarcoma, chondrosarcoma), modular endoprosthetic mega-prosthesis arthroplasty (distal femur, proximal tibia, hemipelvectomy), soft-tissue coverage with rotational gastrocnemius muscle flap (15734), and catastrophic implant carve-out recovery.',
         cptCodes: '27075, 27076, 27645, 27646, 27225, 27745, 15734, 15756, 20900, 20930, 99223',
         challenges: 'Mega-prosthesis reconstruction downcoding to standard arthroplasty, rotational muscle flap (15734) unbundling denials, custom modular implant invoice pass-through disallowance, and multi-surgeon Modifier -62 audits.'
+      },
+      {
+        name: 'Pediatric Deep Brain Stimulation & Neuromodulation',
+        description: 'Stereotactic placement of cranial neurostimulator electrode arrays (61863/61867) with microelectrode recording (MER), implantable pulse generator (IPG) insertion (61885/61886), intraoperative fluoroscopy (+77003), cranial frame fixation unbundling, and multi-lead programming.',
+        cptCodes: '61863, 61864, 61867, 61868, 61885, 61886, 20660, 77003, 95970, 95983',
+        challenges: 'Stereotactic frame placement (20660) bundling denials, microelectrode recording (MER 61867 vs 61863) downcoding, dual-channel IPG unbundling clawbacks, and post-implant programming global denials.'
+      },
+      {
+        name: 'Open Craniofacial Fracture & Panfacial Trauma Reconstruction',
+        description: 'Complex multi-level facial skeleton trauma repair: Le Fort I/II/III midface fractures (21422–21436), open reduction internal fixation (ORIF) of zygomaticomaxillary complex (ZMC 21360/21365), mandibular angle/symphysis fractures (21461/21462), intermaxillary fixation (IMF 21110), and orbital floor blow-out reconstruction (21385–21395).',
+        cptCodes: '21422, 21423, 21435, 21436, 21360, 21365, 21461, 21462, 21110, 21385, 21390, 20900',
+        challenges: 'Intermaxillary fixation (IMF 21110) unbundling denials, Le Fort midface and ZMC fracture multi-procedure fee reductions, orbital blow-out autogenous bone graft (+20900) disallowance, and multi-surgeon co-management denials.'
       }
     ]
   }
@@ -540,13 +552,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 70+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 72+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 70+ specialties — Pediatric Vascular Malformations, Orthopedic Oncology Limb Salvage, Pediatric CDH & ECMO, Thoracoabdominal Aortic Aneurysm (TAAA) & FEVAR, and more.',
+    description: 'Expert medical billing across 72+ specialties — Pediatric Deep Brain Stimulation, Panfacial Trauma Reconstruction, Pediatric Vascular Malformations, Orthopedic Oncology Limb Salvage, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -557,7 +569,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 70 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 72 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -578,10 +590,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 70+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 72+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['70+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['72+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

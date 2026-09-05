@@ -1284,6 +1284,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Can a rotational gastrocnemius muscle flap (15734) be billed with distal femur or proximal tibia tumor resection?', a: 'Yes. Coverage of modular metal mega-prostheses requires vascularized soft tissue transposition—most commonly a rotational medial gastrocnemius muscle flap (CPT 15734)—to prevent deep prosthetic infection and skin breakdown. Under CMS NCCI guidelines, CPT 15734 is separately billable with Modifier -59 or -XU, supported by independent operative documentation describing distinct incision, pedicle dissection, muscle transposition, and tension-free inset over the prosthetic hardware.' },
     ],
   },
+  {
+    slug: 'pediatric-dbs-neuromodulation',
+    name: 'Pediatric Deep Brain Stimulation & Neuromodulation',
+    noun: 'pediatric neurosurgeons, pediatric movement disorder neurologists, pediatric neuromodulation teams, and academic children\'s hospitals',
+    cpt: '61863, 61864, 61867, 61868, 61885, 61886, 20660, 77003, 95970, 95983',
+    blurb:
+      'Stereotactic placement of cranial neurostimulator electrode arrays (61863/61867) with microelectrode recording (MER), implantable pulse generator (IPG) insertion (61885/61886), intraoperative fluoroscopy (+77003), cranial frame fixation unbundling, multi-lead programming (95970/95983), and pediatric dystonia/epilepsy prior-authorization defense.',
+    painPoints: [
+      'Stereotactic frame placement (20660) bundling denials: Clearinghouses bundling headframe application into primary stereotactic lead insertion despite distinct procedural phase',
+      'Microelectrode recording (MER 61867 vs 61863) downcoding: Payers denying higher-complexity intraoperative neurophysiological mapping codes (+61867/+61868) during target localization',
+      'Dual-channel IPG generator (61886) unbundling clawbacks: Downcoding dual-lead implantable pulse generators (IPGs) to single-array units or denying second cranial lead extensions (+61868)',
+      'Post-implant intraoperative and outpatient programming (95970/95983) denials: Global surgical period rejections on electronic neurostimulator parameter optimization',
+    ],
+    faqs: [
+      { q: 'How do CPT 61863 and CPT 61867 differ for pediatric deep brain stimulation?', a: 'CPT 61863 describes stereotactic lead implantation into subcortical targets without intraoperative microelectrode recording (MER), whereas CPT 61867 includes intraoperative MER guidance and cellular mapping. Because pediatric dystonia targets (such as the internal globus pallidus / GPi) require submillimeter electrophysiological localization under general anesthesia, CPT 61867 is the standard code. Subsequent cranial target trajectories during the same session are reported using add-on code +61868.' },
+      { q: 'Can stereotactic head frame application (CPT 20660) be billed separately with cranial DBS implantation?', a: 'Under CMS NCCI edits, stereotactic head frame placement (CPT 20660) is considered an integral component of stereotactic guidance and is bundled into CPT 61863/61867; however, when frameless stereotactic fiducial arrays or robotic trajectory guides are placed in a distinct operative session or prior to MRI planning, distinct institutional protocol documentation is required. Modifier -59 is only appropriate when head frame fixation serves an unrelated diagnostic stereotactic biopsy.' },
+    ],
+  },
+  {
+    slug: 'panfacial-trauma-reconstruction',
+    name: 'Open Craniofacial Fracture & Panfacial Trauma Reconstruction',
+    noun: 'craniofacial trauma surgeons, oral and maxillofacial surgeons (OMFS), facial plastic surgeons, and Level 1 trauma centers',
+    cpt: '21422, 21423, 21435, 21436, 21360, 21365, 21461, 21462, 21110, 21385, 21390, 20900',
+    blurb:
+      'Complex multi-level facial skeleton trauma repair: Le Fort I/II/III midface fractures (21422–21436), open reduction internal fixation (ORIF) of zygomaticomaxillary complex (ZMC 21360/21365), mandibular angle/symphysis fractures (21461/21462), intermaxillary fixation (IMF 21110), orbital floor blow-out reconstruction (21385–21395) with autogenous bone grafts (+20900), and multi-procedure Modifier -59/XS fee defense.',
+    painPoints: [
+      'Intermaxillary fixation (IMF 21110) unbundling denials: Payers routinely bundling arch bar application into mandibular or maxillary fracture repair despite independent dental occlusion stabilization',
+      'Le Fort midface and ZMC fracture multi-procedure fee reductions: Drastic secondary and tertiary procedure bundling discounting multi-level panfacial crash reconstructions',
+      'Orbital blow-out reconstruction graft (+20900) disallowance: Payer denial of split-calvarial or autogenous bone graft harvesting when reconstructing comminuted orbital floors',
+      'Multi-surgeon co-management (Mod 62/80) denials: Denials during Level 1 trauma resuscitation when plastic surgery, neurosurgery, and OMFS concurrently repair complex panfacial injuries',
+    ],
+    faqs: [
+      { q: 'When is intermaxillary fixation (CPT 21110) separately reportable with mandibular or maxillary fracture repair?', a: 'Under CPT and AAOMS guidelines, CPT 21110 (application of intermaxillary fixation) is bundled into open reduction of mandibular fractures with internal fixation (21461/21462) if the arch bars are used solely for temporary intraoperative reduction and removed at the conclusion of the case. However, when arch bars or intermaxillary traction screws remain in place postoperatively for continuous elastic or wire immobilization and skeletal maintenance, CPT 21110 is separately billable with Modifier -59 or -XU, supported by clear operative documentation describing the therapeutic postoperative fixation duration.' },
+      { q: 'How are multi-level panfacial fractures (Le Fort, ZMC, and mandible) coded on the same operative date?', a: 'Panfacial trauma requires reporting the highest-valued open reconstruction as the primary procedure (e.g. CPT 21435/21436 for Le Fort III open reduction or 21462 for complicated mandibular ORIF), followed by secondary anatomical repairs (such as CPT 21365 for complicated ZMC fracture repair with bone grafting and CPT 21390 for orbital floor periorbital reconstruction) appended with Modifier -51 (multiple procedures) or Modifier -59/-XS (distinct procedural service) based on payer specific NCCI PTP edit tables.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

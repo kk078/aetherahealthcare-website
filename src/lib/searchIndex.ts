@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 75 Interactive Tools
+// 77 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -885,6 +885,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'amber',
     keywords: ['orthopedic oncology', 'sarcoma', 'bone tumor', 'osteosarcoma', 'ewing sarcoma', 'limb salvage', 'mega-prosthesis', 'endoprosthesis', 'radical resection', '27075', '27645', '27077', '27599', '27299', 'modifier 22', 'gastrocnemius flap', '15734', 'free flap', '15756', 'modifier 62', 'implant carve-out', 'l8699'],
   },
+  {
+    id: 'tool-pediatric-dbs',
+    category: 'tools',
+    title: 'Pediatric DBS & Cranial Neuromodulation Scrubber',
+    subtitle: 'Stereotactic lead with MER (61867/+61868), headframe bundling (20660) & IPG (61886)',
+    description: 'Audit stereotactic lead placement with microelectrode recording (61867/+61868 vs 61863), suppress headframe bundling (20660), defend dual-channel IPGs (61886-59/58), and capture intraoperative neuroprogramming (95983).',
+    href: '/tools/pediatric-dbs-neuromodulation-scrubber',
+    badge: 'Pediatric Neurosurgery',
+    badgeVariant: 'teal',
+    keywords: ['pediatric dbs', 'deep brain stimulation', 'neuromodulation', '61867', '61868', '61863', '61864', 'mer', 'microelectrode recording', 'headframe', '20660', 'ipg', '61886', '61885', 'pulse generator', 'dystonia', 'epilepsy', '95983', 'fluoroscopy', '77003'],
+  },
+  {
+    id: 'tool-panfacial-trauma',
+    category: 'tools',
+    title: 'Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber',
+    subtitle: 'Midface Le Fort (21422–21435), ZMC (21365), mandibular plating (21462) & IMF (21110)',
+    description: 'Audit complex midface Le Fort I/II/III repairs (21422–21435), ZMC fractures (21365), mandibular plating (21462), intermaxillary fixation bundling (21110-59), and orbital blowout reconstructive implants (21390).',
+    href: '/tools/panfacial-trauma-reconstruction-scrubber',
+    badge: 'Trauma & OMFS',
+    badgeVariant: 'amber',
+    keywords: ['panfacial trauma', 'facial fractures', 'le fort', 'le fort iii', '21435', 'le fort ii', '21423', 'le fort i', '21422', 'zmc', 'malar fracture', '21365', 'mandibular fracture', '21462', '21461', 'imf', 'arch bars', '21110', 'orbital floor blowout', '21390', '21385', 'bone graft', '20900', 'modifier xs', 'modifier 51', 'modifier 59'],
+  },
 ];
 
 // Specialties
@@ -1620,14 +1642,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['orthopedic oncology', 'sarcoma', 'bone cancer', 'osteosarcoma', 'limb salvage', 'mega-prosthesis', '27075', '27645', '27077', '27599', '27299', 'modifier 22', 'rotational muscle flap', 'gastrocnemius flap', '15734', 'free flap', '15756', 'modifier 62', 'co-surgery', 'surgical oncology'],
   },
   {
+    id: 'spec-pediatric-dbs-neuromodulation',
+    category: 'specialties',
+    title: 'Pediatric Deep Brain Stimulation & Neuromodulation Billing',
+    subtitle: 'Stereotactic lead with MER (61867/+61868), headframe bundling & dual-channel IPGs',
+    href: '/medical-billing/pediatric-dbs-neuromodulation',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric dbs', 'deep brain stimulation', 'neuromodulation', 'pediatric neurosurgery', 'dystonia', 'epilepsy', '61867', '61868', '61863', 'microelectrode recording', 'mer mapping', 'ipg generator', '61886', '61885', 'headframe', '20660', 'modifier 59', 'modifier 58', 'fluoroscopy', '77003'],
+  },
+  {
+    id: 'spec-panfacial-trauma-reconstruction',
+    category: 'specialties',
+    title: 'Open Craniofacial Fracture & Panfacial Trauma Reconstruction Billing',
+    subtitle: 'Le Fort I/II/III (21422–21436), ZMC (21360/21365), mandibular plating & IMF',
+    href: '/medical-billing/panfacial-trauma-reconstruction',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['panfacial trauma', 'craniofacial fracture', 'le fort iii', '21435', '21436', 'le fort ii', '21423', 'le fort i', '21422', 'zmc fracture', '21365', 'mandibular fracture', '21462', 'imf', 'intermaxillary fixation', '21110', 'orbital blowout', '21390', 'bone graft', '20900', 'omfs', 'facial trauma', 'level 1 trauma'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 70+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 72+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis', 'hepatobiliary surgery', 'liver resection', 'pediatric hematology', 'pediatric cellular therapy', 'colorectal surgery', 'pelvic exenteration', 'pediatric neurosurgery', 'posterior fossa surgery', 'pancreatic surgery', 'whipple resection', 'pediatric craniofacial', 'cleft palate', 'spine deformity', 'vertebral column resection', 'pediatric transplant', 'step enteroplasty', 'cardiac reoperation', 'lvad', 'pediatric epilepsy', 'hemispherotomy', 'skull base surgery', 'acoustic neuroma', 'pediatric airway', 'laryngotracheal reconstruction', 'adult congenital heart disease', 'fontan conversion', 'pediatric facial reanimation', 'free gracilis', 'pediatric spine', 'early-onset scoliosis', 'growing rods', 'mcgr', 'hipec', 'cytoreductive surgery', 'pediatric craniosynostosis', 'cranial vault remodeling', 'robotic urology', 'robotic oncology', 'pediatric cdh', 'congenital diaphragmatic hernia', 'ecmo', 'taaa', 'fevar', 'aortic aneurysm', 'pediatric vascular malformations', 'sclerotherapy', 'orthopedic oncology', 'limb salvage', 'mega-prosthesis', 'pediatric dbs', 'deep brain stimulation', 'panfacial trauma', 'facial fractures', 'le fort'],
   },
 ];
 
