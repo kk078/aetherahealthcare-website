@@ -852,6 +852,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'Is pelvic fixation (+22848) separately reportable with segmental scoliosis instrumentation (+22842–+22844)?', a: 'Yes. CPT +22848 (pelvic fixation other than sacrum) is an approved add-on code reportable in addition to posterior segmental instrumentation (+22842–+22844) when fixation anchors extend into the ilium or S2 alar-iliac bone to stabilize high-degree lumbosacral curves. It is exempt from Modifier 51.' },
     ],
   },
+  {
+    slug: 'trauma-critical-care',
+    name: 'Surgical Critical Care & Trauma Surgery',
+    noun: 'acute care surgeons, trauma surgical groups, and surgical intensive care specialists',
+    cpt: '49000, 49002, 13160, 11044, 32100, 32110, 36556, 36620, 99291, 99292, 31600',
+    blurb:
+      'Damage control laparotomy (staged re-exploration), temporary open abdomen closure with NPWT, emergency resuscitative thoracotomy, bedside vascular access, and trauma intensive care time coding.',
+    painPoints: [
+      'Damage control staged re-exploration denials: Payers rejecting CPT 49002 (re-opening of recent laparotomy) as bundled into initial damage control laparotomy (49000) when Modifier 58 (staged procedure) is omitted',
+      'Critical care time unbundling vs bedside procedures: Downcoding of initial critical care (99291) when billed on the same trauma resuscitation date as emergency arterial lines (36620) or central venous catheterization (36556)',
+      'Open abdomen temporary closure downcoding: Commercial payers denying secondary abdominal wall closure (13160) or NPWT negative pressure wound therapy dressing changes (11044) during the acute damage control phase',
+      'Resuscitative thoracotomy global period denials: Denials of emergency room or OR resuscitative thoracotomy (32100/32110) during multi-system polytrauma cases lacking trauma team modifier coordination',
+    ],
+    faqs: [
+      { q: 'How do you differentiate Modifier 58 from Modifier 78 during staged trauma laparotomies?', a: 'When a trauma surgeon leaves the abdomen open (damage control laparotomy, CPT 49000) with a temporary closure device intending to return within 24 to 72 hours for formal abdominal wash-out, pack removal, or bowel anastomosis, the subsequent re-exploration (CPT 49002) is a planned, staged procedure and must be reported with Modifier 58. Modifier 78 applies only to unplanned returns to the OR for acute postoperative complications (such as unexpected refractory secondary hemorrhage). Modifier 58 pays at 100% and resets the surgical global period.' },
+      { q: 'Can bedside vascular access procedures (36556, 36620) be billed alongside critical care (99291)?', a: 'Yes. Unlike adult medical critical care where certain routine diagnostic services are bundled, arterial line placement (36620), non-tunneled central venous catheter insertion (36556), and emergency endotracheal intubation (31500) are separately reportable surgical procedures when performed by the critical care surgeon. However, the time dedicated to performing these bedside procedures cannot be counted toward the 30–74 minute threshold required for CPT 99291; operative time must be explicitly carved out in clinical notes.' },
+    ],
+  },
+  {
+    slug: 'pediatric-pulmonology',
+    name: 'Pediatric Allergy, Pulmonology & Cystic Fibrosis',
+    noun: 'pediatric pulmonologists, pediatric asthma & allergy centers, and accredited cystic fibrosis care clinics',
+    cpt: '94010, 94060, 94726, 82435, 94640, 95004, 94621, J7605, J7626, J7613, 99214',
+    blurb:
+      'Pediatric spirometry and plethysmography, pre/post bronchodilator responsiveness, quantitative sweat chloride iontophoresis, high-cost CFTR modulator prior-authorizations, and aerosolized antibiotic infusions.',
+    painPoints: [
+      'PFT component unbundling rejections: Commercial payers denying pre/post bronchodilator spirometry (94060) when billed alongside routine baseline spirometry (94010) or diagnostic plethysmography (94726)',
+      'Sweat chloride test (82435) medical necessity denials: Rejection of pilocarpine iontophoresis diagnostic sweat testing due to missing positive newborn screening (IRT) documentation or failure to thrive ICD-10 links',
+      'CFTR modulator (Trikafta/Kalydeco) prior authorization clawbacks: Commercial payers rejecting high-cost CFTR triple combination therapy due to rigid F508del mutation lab verification and adherence telemetry documentation',
+      'Inhalation treatment administration bundling: Downcoding of multi-drug aerosolized inhalation treatments (CPT 94640) administered in-office during acute pediatric asthma exacerbations',
+    ],
+    faqs: [
+      { q: 'Can pre- and post-bronchodilator spirometry (CPT 94060) be billed with baseline spirometry (CPT 94010)?', a: 'No. CPT 94060 (bronchodilator responsiveness evaluation) encompasses both the pre-bronchodilator baseline spirometry and the post-bronchodilator repeat testing. Billed together on the same date of service, CPT 94010 is an NCCI column 2 code to 94060 and cannot be unbundled with any modifier.' },
+      { q: 'What documentation is required to overturn CFTR modulator prior authorization rejections?', a: 'Appeals must include certified CLIA molecular genetic sequencing demonstrating at least one F508del mutation (or FDA-approved responsive CFTR variant), baseline percent predicted FEV1 spirometry curves, comprehensive liver function panels, sweat chloride quantitative baseline concentration (>= 60 mmol/L), and an attestation of CF Foundation accredited center multidisciplinary oversight.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

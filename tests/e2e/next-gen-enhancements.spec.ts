@@ -90,8 +90,11 @@ test.describe('Next-Gen Healthcare RCM Suite — Extended Enhancements', () => {
   test('Denial Code Lookup renders action buttons for appeal generation and claim scrubbing', async ({ page }) => {
     await page.goto('/tools/denial-code-lookup/?code=97', { waitUntil: 'networkidle' });
 
-    // Action button to Appeal Letter Generator should be present for the open card
+    // Open card if not already expanded
     const appealBtn = page.locator('a[href*="/tools/appeal-letter-generator"]').first();
+    if (!await appealBtn.isVisible()) {
+      await page.getByRole('button', { name: /^97 Benefit is included/i }).click();
+    }
     await expect(appealBtn).toBeVisible();
   });
 

@@ -55,6 +55,8 @@ const specialtyLinks: Record<string, string> = {
   'Gynecologic Minimally Invasive Surgery & Urogynecology': '/medical-billing/urogynecology',
   'Cardiothoracic Surgery & Extracorporeal Membrane Oxygenation (ECMO)': '/medical-billing/cardiothoracic-surgery',
   'Pediatric Orthopedics & Scoliosis Deformity Correction': '/medical-billing/pediatric-orthopedics',
+  'Surgical Critical Care & Trauma Surgery': '/medical-billing/trauma-critical-care',
+  'Pediatric Allergy, Pulmonology & Cystic Fibrosis': '/medical-billing/pediatric-pulmonology',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -235,6 +237,12 @@ const specialties = [
         description: 'Spinal deformity arthrodesis for adolescent idiopathic scoliosis (AIS), multi-rod segmental instrumentation, pelvic fixation (S2AI/iliac screws), Ponseti serial casting for congenital clubfoot, and pelvic/femoral osteotomies for DDH.',
         cptCodes: '22800, 22802, 22804, 22842–22844, 22848, 22210, 22214, 20930, 20936, 29450, 27146, 27151',
         challenges: 'Scoliosis fusion segment tier downcoding (22800–22804), pelvic fixation (+22848) bundling denials, and Ponseti clubfoot casting global unbundling.'
+      },
+      {
+        name: 'Surgical Critical Care & Trauma Surgery',
+        description: 'Damage control laparotomy (staged re-exploration), temporary open abdomen closure with NPWT, emergency resuscitative thoracotomy, bedside vascular access, and trauma intensive care time coding.',
+        cptCodes: '49000, 49002, 13160, 11044, 32100, 32110, 36556, 36620, 99291, 99292',
+        challenges: 'Damage control staged re-exploration denials (Modifier 58 vs 78), critical care time unbundling, and NPWT temporary abdominal closure downcoding.'
       }
     ]
   },
@@ -365,6 +373,12 @@ const specialties = [
         description: 'Endovascular aneurysm repair (EVAR/TEVAR), lower extremity revascularization (PAD hierarchy), dialysis vascular access creation & salvage, and venous ablation.',
         cptCodes: '34701–34716, 37220–37235, 36475, 36478, 36821, 36830, 36901–36909, 36245–36248, 37252',
         challenges: 'Vascular territory unbundling rejections, selective catheter placement NCCI bundling edits, dialysis access thrombectomy downcodings, and OBL facility fee disputes.'
+      },
+      {
+        name: 'Pediatric Allergy, Pulmonology & Cystic Fibrosis',
+        description: 'Pediatric spirometry and plethysmography, pre/post bronchodilator responsiveness, quantitative sweat chloride iontophoresis, high-cost CFTR modulator prior-authorizations, and aerosolized antibiotic infusions.',
+        cptCodes: '94010, 94060, 94726, 82435, 94640, 95004, J7605, J7626, J7613',
+        challenges: 'Pre/post bronchodilator unbundling (94060 into 94010), sweat chloride test medical necessity denials, and CFTR modulator prior-auth appeals.'
       }
     ]
   }
@@ -372,13 +386,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 46+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 48+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 46+ specialties — Cardiothoracic Surgery, Pediatric Orthopedics, Spine Surgery, Urogynecology, Cardiology, Electrophysiology, Plastic Surgery, Retina & Ophthalmology, Vascular Surgery, NICU/PICU, Radiation Oncology, FQHC, and more.',
+    description: 'Expert medical billing across 48+ specialties — Trauma Surgery, Pediatric Pulmonology, Cardiothoracic, Pediatric Orthopedics, Spine Surgery, Urogynecology, Cardiology, Electrophysiology, Plastic Surgery, Retina, Vascular, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -389,7 +403,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 46 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 48 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -410,10 +424,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 46+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 48+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['46+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['48+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

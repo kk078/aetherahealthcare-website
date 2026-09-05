@@ -39,6 +39,8 @@ import {
   GitBranch,
   Bone,
   Heart,
+  Crosshair,
+  Stethoscope,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -52,6 +54,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/trauma-damage-control-scrubber',
+    icon: Crosshair,
+    name: 'Trauma & Open Abdomen Damage Control Scrubber',
+    desc: 'Audit staged damage control laparotomy (49000, 49002), secondary fascial closure (13160), bedside vascular access unbundling, and enforce Modifier 58 vs 78 compliance.',
+    category: 'scrubbers',
+    tag: 'Trauma Surgery',
+    badge: 'New',
+  },
+  {
+    href: '/tools/pediatric-pulmonary-estimator',
+    icon: Stethoscope,
+    name: 'Pediatric Pulmonology, Allergy & CFTR Estimator',
+    desc: 'Audit pediatric pulmonary spirometry and plethysmography (94010/94060/94726), prevent unbundling clawbacks, sweat chloride testing (82435), and verify CFTR targeted modulator prior authorizations.',
+    category: 'scrubbers',
+    tag: 'Pediatric Pulmonology',
+    badge: 'New',
+  },
   {
     href: '/tools/cardiothoracic-cannulation-scrubber',
     icon: Heart,

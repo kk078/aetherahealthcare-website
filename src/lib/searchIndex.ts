@@ -36,7 +36,7 @@ export interface SearchItem {
   };
 }
 
-// 51 Interactive Tools
+// 53 Interactive Tools
 const TOOL_ITEMS: SearchItem[] = [
   {
     id: 'tool-denial-lookup',
@@ -621,6 +621,28 @@ const TOOL_ITEMS: SearchItem[] = [
     badgeVariant: 'teal',
     keywords: ['pediatric orthopedics', 'scoliosis', 'spinal deformity', 'arthrodesis', '22800', '22802', '22804', '22842', '22844', '22848', 's2ai', 'ponte osteotomy', '22210', '22214', 'cobb angle', 'ais'],
   },
+  {
+    id: 'tool-trauma-damage-control',
+    category: 'tools',
+    title: 'Trauma & Open Abdomen Damage Control Scrubber',
+    subtitle: 'Damage control laparotomy (49000/49002), modifier 58 vs 78 & critical care carve-outs',
+    description: 'Audit staged damage control laparotomy, open abdomen temporary closure, NPWT fascial traction, bedside vascular access unbundling, and enforce Modifier 58 vs 78 compliance.',
+    href: '/tools/trauma-damage-control-scrubber',
+    badge: 'Trauma Surgery',
+    badgeVariant: 'purple',
+    keywords: ['trauma', 'critical care', 'damage control', 'laparotomy', '49000', '49002', '13160', '11044', 'wound vac', 'barker vac', 'modifier 58', 'modifier 78', '99291', '99292', 'central line', '36556', 'a-line', '36620'],
+  },
+  {
+    id: 'tool-pediatric-pulmonary',
+    category: 'tools',
+    title: 'Pediatric Pulmonology, Allergy & CFTR Estimator',
+    subtitle: 'Pediatric spirometry unbundling audit (94010 vs 94060), sweat test & CFTR prior auth engine',
+    description: 'Audit pediatric spirometry and plethysmography unbundling traps, quantitative sweat chloride testing (82435), allergy prick batteries (95004), and verify CFTR targeted modulator prior authorizations.',
+    href: '/tools/pediatric-pulmonary-estimator',
+    badge: 'Pediatric Pulmonology',
+    badgeVariant: 'teal',
+    keywords: ['pediatric pulmonology', 'cystic fibrosis', 'cftr', 'trikafta', 'kalydeco', 'spirometry', 'pft', '94010', '94060', '94726', 'sweat chloride', '82435', 'allergy prick', '95004', 'aerosol', '94640'],
+  },
 ];
 
 // Specialties
@@ -1116,14 +1138,34 @@ const SPECIALTY_ITEMS: SearchItem[] = [
     keywords: ['pediatric orthopedics', 'scoliosis', 'spinal deformity', 'arthrodesis', '22800', '22802', '22804', '22844', '22848', 's2ai', 'ponte osteotomy', '22210', 'ponseti', 'clubfoot', 'ddh'],
   },
   {
+    id: 'spec-trauma-critical-care',
+    category: 'specialties',
+    title: 'Surgical Critical Care & Trauma Surgery Billing',
+    subtitle: 'Damage control laparotomy (49000/49002), modifier 58 vs 78 & critical care time carve-outs',
+    href: '/medical-billing/trauma-critical-care',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['trauma surgery', 'surgical critical care', 'acute care surgery', 'damage control laparotomy', '49000', '49002', '13160', '11044', '32100', '32110', 'wound vac', 'barker vac', 'modifier 58', 'modifier 78', '99291', '99292', 'central line', '36556', 'a-line', '36620'],
+  },
+  {
+    id: 'spec-pediatric-pulmonology',
+    category: 'specialties',
+    title: 'Pediatric Allergy, Pulmonology & Cystic Fibrosis Billing',
+    subtitle: 'Pediatric spirometry unbundling defense (94010 vs 94060), sweat test & CFTR prior authorization',
+    href: '/medical-billing/pediatric-pulmonology',
+    badge: 'Specialty',
+    badgeVariant: 'blue',
+    keywords: ['pediatric pulmonology', 'pediatric allergy', 'cystic fibrosis', 'cftr', 'trikafta', 'kalydeco', 'spirometry', 'pft', '94010', '94060', '94726', 'sweat chloride', '82435', 'allergy prick', '95004', 'aerosol', '94640'],
+  },
+  {
     id: 'spec-all',
     category: 'specialties',
     title: 'All Billing Specialties Overview',
-    subtitle: 'Tailored workflows across 46+ medical and surgical specialties',
+    subtitle: 'Tailored workflows across 48+ medical and surgical specialties',
     href: '/specialties',
     badge: 'All Specialties',
     badgeVariant: 'teal',
-    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics'],
+    keywords: ['specialties', 'all', 'pediatrics', 'neurology', 'gastroenterology', 'urology', 'oncology', 'radiology', 'pain management', 'podiatry', 'anesthesia', 'asc', 'oral surgery', 'interventional radiology', 'addiction medicine', 'gynecologic oncology', 'home health', 'hospice', 'wound care', 'fqhc', 'sleep medicine', 'nicu', 'picu', 'radiation oncology', 'cardiac electrophysiology', 'plastic surgery', 'retina', 'ophthalmology', 'vascular surgery', 'spine surgery', 'urogynecology', 'cardiothoracic surgery', 'pediatric orthopedics', 'trauma surgery', 'surgical critical care', 'pediatric pulmonology', 'cystic fibrosis'],
   },
 ];
 

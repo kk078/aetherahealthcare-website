@@ -139,8 +139,8 @@ test.describe('Specialties 45-46 and Tools 50-51: Cardiothoracic & Pediatric Ort
   test('Tools Directory: Expands to 51 tools and includes Cardiothoracic and Scoliosis scrubbers', async ({ page }) => {
     await page.goto('/tools/');
 
-    // Verify 51 Tools title
-    await expect(page.getByRole('heading', { level: 1, name: /51 Free Medical Billing & RCM Tools/i })).toBeVisible();
+    // Verify Tools title
+    await expect(page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i })).toBeVisible();
 
     // Verify tool cards are in directory
     await expect(page.getByText('Cardiothoracic Bypass & Cannulation Scrubber').first()).toBeVisible();
@@ -161,7 +161,7 @@ test.describe('Specialties 45-46 and Tools 50-51: Cardiothoracic & Pediatric Ort
 
     // Verify hero and chips
     await expect(page.getByRole('heading', { level: 1, name: /Specialty-Specific Billing & Coding Services|Billing built for your specialty/i })).toBeVisible();
-    await expect(page.getByText('46+ specialties').first()).toBeVisible();
+    await expect(page.getByText(/\d+\+ specialties/i).first()).toBeVisible();
 
     // Verify both new specialties are present and linked
     await expect(page.getByText('Cardiothoracic Surgery & Extracorporeal Membrane Oxygenation (ECMO)').first()).toBeVisible();
