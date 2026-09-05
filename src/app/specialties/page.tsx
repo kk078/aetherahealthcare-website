@@ -31,6 +31,8 @@ const specialtyLinks: Record<string, string> = {
   'Anesthesiology': '/medical-billing/anesthesia',
   'Podiatry & Wound Care': '/medical-billing/podiatry',
   'Ambulatory Surgery Centers (ASC)': '/medical-billing/asc',
+  'Emergency Medicine': '/medical-billing/emergency-medicine',
+  'Urgent Care': '/medical-billing/urgent-care',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -57,6 +59,12 @@ const specialties = [
         description: 'Comprehensive healthcare for infants, children, and adolescents with focus on growth, development, and preventive care.',
         cptCodes: '99201-99215, 99381-99384, 99391-99394',
         challenges: 'Growth and development tracking, vaccine compliance, and family-centered care approaches.'
+      },
+      {
+        name: 'Urgent Care',
+        description: 'Walk-in acute injury and illness care, minor procedures, CLIA-waived diagnostic testing, and occupational health billing.',
+        cptCodes: '99202-99214, S9088, 12001-12004, 71045',
+        challenges: 'Facility add-on S9088 reimbursement denials, high self-pay patient volume, and upfront eligibility verification.'
       }
     ]
   },
@@ -186,6 +194,12 @@ const specialties = [
         description: 'Outpatient rehabilitation, physical and occupational therapy, therapeutic exercises, and neuromuscular re-education.',
         cptCodes: '97110, 97140, 97112, 97161-97163',
         challenges: 'Medicare 8-minute rule calculation, annual therapy cap threshold tracking with Modifier KX, and Plan of Care recertification.'
+      },
+      {
+        name: 'Emergency Medicine',
+        description: 'Hospital-based emergency department staffing and independent physician groups managing high-acuity adult and pediatric encounters.',
+        cptCodes: '99281-99285, 99291-99292, 99221-99223',
+        challenges: 'Level 5 (99285) downcoding audits, Critical Care time documentation, and No Surprises Act Qualified Payment Amount (QPA) disputes.'
       }
     ]
   },

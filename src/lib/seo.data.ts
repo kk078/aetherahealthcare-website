@@ -384,6 +384,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How are surgical pathology specimen levels and special stains properly billed?', a: 'Our certified pathology coders audit accession logs to verify each distinct anatomical specimen container is billed with its exact surgical pathology level (e.g., 88305 per container) and correct IHC add-on units.' },
     ],
   },
+  {
+    slug: 'emergency-medicine',
+    name: 'Emergency Medicine & Hospitalists',
+    noun: 'emergency physician groups, freestanding EDs, and hospitalist services',
+    cpt: '99281–99285, 99291–99292, 99221–99223, 99231–99233',
+    blurb:
+      'High-acuity emergency department coding, critical care time documentation, trauma team activation charges, and No Surprises Act Qualified Payment Amount (QPA) dispute arbitration.',
+    painPoints: [
+      'Payer downcoding of Level 5 ED visits (99285) to Level 4 (99284) using automated algorithms without regard to high-risk diagnostic testing or MDM complexity',
+      'Critical care time (99291 for first 30–74 minutes, 99292 for each additional 30 minutes) documentation clawbacks due to missing bedside time logs or non-continuous care intervals',
+      'No Surprises Act out-of-network underpayments: Commercial payers reimbursing below median in-network rates without initiating Open Negotiation or Federal IDR dispute resolution',
+      'Concurrent hospitalist and emergency physician admission day billing (99285 on same date as 99223) triggering duplicate service CARC 18/97 rejections',
+    ],
+    faqs: [
+      { q: 'How do you prevent algorithmic downcoding on CPT 99285?', a: 'Our certified emergency coders substantiate Medical Decision Making (MDM) using 2023 AMA guidelines, explicitly auditing high risk of morbidity, prescription drug management, and parenterally administered medications before claim dispatch.' },
+      { q: 'How do you handle No Surprises Act Qualified Payment Amount (QPA) disputes?', a: 'We track the 30-business-day Open Negotiation period for out-of-network emergency claims and file certified Federal IDR arbitration requests to capture fair-market contracted reimbursement.' },
+    ],
+  },
+  {
+    slug: 'urgent-care',
+    name: 'Urgent Care & Walk-In Clinics',
+    noun: 'urgent care centers, occupational health clinics, and walk-in suites',
+    cpt: '99202–99214, S9088, S9083, 87880, 87804, 12001–12004',
+    blurb:
+      'High-throughput episodic care, urgent care facility add-on codes (S9088), rapid point-of-care CLIA waived testing, and point-of-service patient financial clearance.',
+    painPoints: [
+      'Commercial payer non-recognition of urgent care add-on code S9088 or bundling it into primary E/M without separate contractual reimbursement',
+      'Point-of-care CLIA-waived diagnostic testing (Strep 87880, COVID 87811, Flu 87804) denied without Modifier QW and active CLIA number in Box 23',
+      'Minor surgical procedures (simple laceration repair, foreign body removal, I&D) billed without Modifier 25 on same-day E/M causing complete visit write-offs',
+      'High patient liability bad debt: Uncollected high-deductible copays and coinsurance at the walk-in front desk resulting in 18%+ bad debt write-offs',
+    ],
+    faqs: [
+      { q: 'How do you ensure full payment on urgent care facility code S9088?', a: 'We map each payer contract to verify whether S9088, S9083, or global per-visit flat-rate case rates apply, ensuring claims are routed to trigger contractual facility add-on payments.' },
+      { q: 'How are rapid point-of-care laboratory tests paid without rejections?', a: 'We automatically append Modifier QW to CLIA-waived testing CPTs and populate the provider clinic\'s active CLIA ID across Loop 2300 (REF*X4) on all 837P electronic files.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {

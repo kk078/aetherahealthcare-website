@@ -41,6 +41,24 @@ interface ToolItem {
 
 const TOOLS_LIST: ToolItem[] = [
   {
+    href: '/tools/underpayment-analyzer',
+    icon: DollarSign,
+    name: 'Payer Contract Underpayment & Variance Analyzer',
+    desc: 'Calculate silent PPO fee schedule downcoding, compare contracted allowable vs actual paid rates, and compute state prompt-pay statutory interest penalties.',
+    category: 'calculators',
+    tag: 'Contract Audit',
+    badge: 'New',
+  },
+  {
+    href: '/tools/payer-dispute-directory',
+    icon: FileText,
+    name: 'Payer Dispute & Electronic Appeals Directory',
+    desc: 'Directory of 16+ national commercial, Medicare Advantage, and Medicaid payers with Level 1 & 2 appeal deadlines, electronic dispute portal URLs, and clearinghouse escalation contacts.',
+    category: 'scrubbers',
+    tag: 'Appeals',
+    badge: 'New',
+  },
+  {
     href: '/tools/prior-auth-matrix',
     icon: Scale,
     name: 'Prior-Auth Requirement & Payer Gold-Card Matrix',
@@ -334,7 +352,7 @@ export default function ToolsDirectory() {
               type="search"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search 25 free tools & engines…"
+              placeholder="Search 27 free tools & engines…"
               className="w-full pl-9 pr-3 py-1.5 border border-gray/25 rounded-xl text-xs text-navy focus:outline-none focus:ring-2 focus:ring-teal"
             />
           </div>
