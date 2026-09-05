@@ -34,6 +34,7 @@ import {
   Radiation,
   Droplets,
   Baby,
+  HeartPulse,
 } from 'lucide-react';
 
 interface ToolItem {
@@ -47,6 +48,24 @@ interface ToolItem {
 }
 
 const TOOLS_LIST: ToolItem[] = [
+  {
+    href: '/tools/cardiac-ep-scrubber',
+    icon: HeartPulse,
+    name: 'Cardiac Electrophysiology & Catheter Ablation Scrubber',
+    desc: 'Audit AFib/VT catheter ablation (93656/93653) bundling against diagnostic EP studies (93619/93620), capture 3D mapping and ICE add-ons, and verify remote telemetry 90-day interval cadence.',
+    category: 'scrubbers',
+    tag: 'Cardiac EP',
+    badge: 'New',
+  },
+  {
+    href: '/tools/reconstructive-prior-auth-scrubber',
+    icon: Scissors,
+    name: 'Reconstructive vs Cosmetic Prior-Authorization Scrubber',
+    desc: 'Calculate Schnur sliding scale BSA thresholds for breast reduction (19318), audit blepharoplasty visual field criteria (15823), verify panniculectomy indications (15830), and validate federal WHCRA mandates.',
+    category: 'scrubbers',
+    tag: 'Plastic Surgery',
+    badge: 'New',
+  },
   {
     href: '/tools/nicu-critical-care-scrubber',
     icon: Baby,

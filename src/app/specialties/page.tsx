@@ -23,7 +23,8 @@ const specialtyLinks: Record<string, string> = {
   'Medical Oncology & Hematology': '/medical-billing/oncology',
   'General Surgery': '/medical-billing/orthopedics',
   'Orthopedic Surgery': '/medical-billing/orthopedics',
-  'Plastic Surgery': '/medical-billing/dermatology',
+  'Plastic Surgery': '/medical-billing/plastic-reconstructive-surgery',
+  'Plastic & Reconstructive Surgery': '/medical-billing/plastic-reconstructive-surgery',
   'Urology': '/medical-billing/urology',
   'Radiology': '/medical-billing/radiology',
   'Physical Therapy & Rehabilitation': '/medical-billing/physical-therapy',
@@ -47,6 +48,7 @@ const specialtyLinks: Record<string, string> = {
   'Sleep Medicine & Polysomnography': '/medical-billing/sleep-medicine',
   'Neonatal & Pediatric Intensive Care (NICU/PICU)': '/medical-billing/nicu-picu',
   'Radiation Oncology & Proton Therapy': '/medical-billing/radiation-oncology',
+  'Cardiac Electrophysiology & Catheter Ablation': '/medical-billing/cardiac-electrophysiology',
   'Pharmacy Services': '/services/pharmacy-billing',
   'Dental': '/services/dental-billing',
   "Workers' Compensation": '/services/workers-compensation-billing',
@@ -309,6 +311,18 @@ const specialties = [
         description: 'IMRT treatment planning, stereotactic body radiotherapy (SBRT), medical physics consultations, weekly 5-fraction management, and proton therapy.',
         cptCodes: '77261-77263, 77300, 77301, 77334, 77338, 77385-77386, 77371-77373, 77427, 77520-77525',
         challenges: 'IMRT planning (77301) unbundling NCCI edits, weekly 5-fraction math reconciliations, and commercial proton beam investigational denials.'
+      },
+      {
+        name: 'Cardiac Electrophysiology & Catheter Ablation',
+        description: 'Comprehensive AFib ablation (PVI), 3D electroanatomical mapping, intracardiac echocardiography, lead extraction, and remote pacemaker/ICD monitoring.',
+        cptCodes: '93653, 93656, 93613, 93662, 93655, 93657, 33249, 33235, 93294–93298',
+        challenges: 'Diagnostic EP bundling into 93656, missing documentation for 3D mapping and ICE add-ons, and remote device 90-day interval clawbacks.'
+      },
+      {
+        name: 'Plastic & Reconstructive Surgery',
+        description: 'Functional reconstructive surgery, federal WHCRA post-mastectomy breast reconstruction, blepharoplasty visual field proof, and panniculectomy medical necessity appeals.',
+        cptCodes: '19357-19364, 15823, 15830, 19318, 14000-14061, 15100, 21120',
+        challenges: 'Cosmetic exclusion rejections (CARC CO-24), Schnur sliding scale tissue weight disputes, and commercial WHCRA contralateral symmetry denials.'
       }
     ]
   }
@@ -316,13 +330,13 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 38+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Expert billing and revenue cycle management across 40+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
-    description: 'Expert medical billing across 38+ specialties — Cardiology, Orthopedics, NICU/PICU, Radiation Oncology, FQHC, Sleep Medicine, Addiction Medicine, Home Health & Hospice, Wound Care, and more.',
+    description: 'Expert medical billing across 40+ specialties — Cardiology, Electrophysiology, Plastic Surgery, NICU/PICU, Radiation Oncology, FQHC, Sleep Medicine, Addiction Medicine, Home Health & Hospice, Wound Care, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
@@ -333,7 +347,7 @@ export default function SpecialtiesPage() {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
-    "description": "Expert billing and revenue cycle management for over 38 medical specialties with deep specialty-specific knowledge.",
+    "description": "Expert billing and revenue cycle management for over 40 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {
       "@type": "Organization",
@@ -354,10 +368,10 @@ export default function SpecialtiesPage() {
       <RcmHeroBand
         eyebrow="Specialties"
         title="Billing built for your specialty"
-        subtitle="Expert billing and revenue cycle management across 38+ medical specialties — with coding depth and payer knowledge specific to your field."
+        subtitle="Expert billing and revenue cycle management across 40+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['38+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['40+ specialties', 'Specialty-specific coding', '900+ payers']}
       />
 
       {/* Introduction */}

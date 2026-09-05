@@ -708,6 +708,42 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
       { q: 'How do you calculate weekly radiation treatment management (CPT 77427)?', a: 'CPT 77427 is reported once for every 5 fractions delivered. At the end of treatment, a remaining cluster of 3 or 4 fractions qualifies for an additional 77427 billing; however, 1 or 2 remaining fractions are non-billable standalone under CMS § 100.1.' },
     ],
   },
+  {
+    slug: 'cardiac-electrophysiology',
+    name: 'Cardiac Electrophysiology & Catheter Ablation',
+    noun: 'electrophysiologists, cardiac arrhythmia centers, and hospital EP lab directors',
+    cpt: '93653, 93656, 93613, 93662, 93655, 93657, 33249, 33235, 93294–93298',
+    blurb:
+      'Comprehensive AFib ablation (PVI), 3D electroanatomical mapping, intracardiac echocardiography, transvenous lead extraction, and remote cardiac device telemetry management.',
+    painPoints: [
+      'AFib ablation unbundling denials: Payers rejecting 93619/93620 diagnostic EP studies when billed with 93656 (pulmonary vein isolation), which statutorily includes right atrial/ventricular mapping and pacing',
+      '3D mapping and ICE denials: Medicare MACs demanding distinct documented clinical indications for CPT 93613 (3D mapping) and CPT 93662 (ICE) with specific operative note timestamps',
+      'Remote device interrogation interval clawbacks: Automated denials for CPT 93294/93295/93296 when submitted under 90 days from the prior transmission date',
+      'Complex transvenous lead extraction bundling: Disputes with commercial payers over fluoroscopic guidance (71046) and vascular repair during transvenous pacemaker/ICD lead removals (33234/33235)',
+    ],
+    faqs: [
+      { q: 'Can you bill 3D electroanatomical mapping (CPT 93613) with AFib ablation (CPT 93656)?', a: 'Yes. CPT 93613 is an add-on code designated for 3D mapping that may be reported with 93656 when 3D voltage and activation maps are constructed. However, diagnostic EP study codes 93619 and 93620 are bundled into 93656 and cannot be unbundled.' },
+      { q: 'What are the billing frequency rules for remote cardiac device monitoring (CPT 93294–93298)?', a: 'CPT 93294 (pacemakers) and 93295 (ICDs) are reported once every 90 days for remote interrogation. Submitting claims at 30- or 60-day intervals will trigger CO-16 or CO-96 duplicate/frequency denials. Remote loop recorders (93298) and hemodynamic monitors (93297) have dedicated 30-day reporting windows under CMS guidelines.' },
+    ],
+  },
+  {
+    slug: 'plastic-reconstructive-surgery',
+    name: 'Plastic & Reconstructive Surgery',
+    noun: 'plastic surgeons, craniofacial centers, and reconstructive microsurgery practices',
+    cpt: '19357–19364, 15823, 15830, 19318, 14000–14061, 15100, 21120',
+    blurb:
+      'Functional reconstructive surgery, federal WHCRA breast reconstruction defense, blepharoplasty visual field verification, and panniculectomy medical necessity appeals.',
+    painPoints: [
+      'Cosmetic vs reconstructive denials: Routine commercial payer rejections under cosmetic exclusion clauses (CARC CO-24) for blepharoplasty (15823) and breast reduction (19318) despite severe functional deficits',
+      'Schnur sliding scale tissue weight disputes: Payers refusing reduction mammaplasty prior authorizations when excised grams fall below arbitrary payer thresholds regardless of BSA calculation',
+      'WHCRA statutory compliance violations: Payers unlawfully denying contralateral breast symmetry surgery or nipple reconstruction following mastectomy in violation of the Women\'s Health and Cancer Rights Act',
+      'Panniculectomy clinical documentation rejections: Denials of CPT 15830 due to lack of 3+ months of conservative dermatologic treatment records or missing lateral apron photographs',
+    ],
+    faqs: [
+      { q: 'How do you secure prior authorization for functional upper blepharoplasty (CPT 15823)?', a: 'Payers require taped and untaped visual field tests demonstrating at least a 30% or 12-degree superior field deficit, high-resolution anterior and lateral photographs showing pseudoptosis resting on the eyelashes, and documented physical impairment (e.g. chronic brow fatigue or peripheral vision loss while driving).' },
+      { q: 'Are bilateral procedures covered under the Women\'s Health and Cancer Rights Act (WHCRA)?', a: 'Yes. Under federal law 29 U.S.C. § 1185b, any health plan offering mastectomy coverage must cover all stages of reconstruction on the diseased breast, surgery and reconstruction of the other breast to produce a symmetrical appearance, and prostheses and treatment of physical complications including lymphedema.' },
+    ],
+  },
 ];
 
 export function getSpecialty(slug: string): SeoSpecialty | undefined {
