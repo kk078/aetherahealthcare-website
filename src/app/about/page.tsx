@@ -61,9 +61,8 @@ export default function About() {
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-813-519-4640",
                 "contactType": "customer service",
-                "email": "info@aetherahealthcare.com"
+                "url": "https://aetherahealthcare.com/contact"
               },
               "sameAs": [
                 "https://www.linkedin.com/company/aethera-healthcare-solutions"

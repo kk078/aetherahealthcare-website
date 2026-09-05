@@ -157,7 +157,7 @@ Sincerely,
 __________________________________________
 ${formData.providerName}, Provider NPI: ${formData.providerNpi}
 ${formData.practiceName}
-Phone: (813) 519-4640 | Direct Partner Desk: kirkmar078@gmail.com`;
+Inquiries & Escalations: https://aetherahealthcare.com/contact`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedLetter);

@@ -211,7 +211,7 @@ export default function Home() {
           "url": "https://aetherahealthcare.com",
           "logo": "https://aetherahealthcare.com/logo.png",
           "description": "Aethera Healthcare Solutions is your full-service medical billing partner handling coding, claims, payments, denials, and collections so you can focus on patients.",
-          "contactPoint": { "@type": "ContactPoint", "telephone": "+1-813-519-4640", "contactType": "customer service", "email": "info@aetherahealthcare.com" },
+          "contactPoint": { "@type": "ContactPoint", "contactType": "customer service", "url": "https://aetherahealthcare.com/contact" },
           "sameAs": ["https://www.linkedin.com/company/aethera-healthcare-solutions"],
         }) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({

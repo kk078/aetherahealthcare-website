@@ -949,7 +949,7 @@ export default function PediatricEpilepsyScrubber() {
                 </div>
 
                 <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 text-[11px] text-slate-600">
-                  <span className="font-semibold text-slate-800">HIPAA Zero-PHI Guarantee:</span> Zero patient identifiers are transmitted or stored. Transmits strictly operational billing metrics to <span className="font-mono text-purple-600">kirkmar078@gmail.com</span>.
+                  <span className="font-semibold text-slate-800">HIPAA Zero-PHI Guarantee:</span> Zero patient identifiers are transmitted or stored. Transmits strictly operational billing metrics directly to senior billing leadership.
                 </div>
 
                 <button

@@ -14,9 +14,7 @@ import {
   TrendingDown,
   ArrowRight,
   Receipt,
-  UserCheck,
 } from 'lucide-react';
-import { PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
 
 interface PresetOption {
   name: string;

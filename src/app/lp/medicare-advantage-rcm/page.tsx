@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Phone, Sparkles, ShieldCheck } from 'lucide-react';
+import { Calendar, Sparkles, ShieldCheck } from 'lucide-react';
 import MedicareAdvantageLandingClient from '@/components/ui/MedicareAdvantageLandingClient';
 
 export const metadata: Metadata = {
@@ -25,7 +25,6 @@ export default function MedicareAdvantageLandingPage() {
       '@type': 'Organization',
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
-      telephone: '+1-813-519-4640',
     },
     description:
       'Specialized RCM infrastructure for Medicare Advantage and D-SNP populations, featuring automatic Medicaid secondary crossover claims and prospective v28 MEAT audits.',
@@ -48,13 +47,13 @@ export default function MedicareAdvantageLandingPage() {
           </Link>
 
           <div className="flex items-center gap-3 sm:gap-6">
-            <a
-              href="tel:+18135194640"
+            <Link prefetch={false}
+              href="/schedule"
               className="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition"
             >
-              <Phone className="w-4 h-4 text-teal" />
-              <span>(813) 519-4640</span>
-            </a>
+              <Calendar className="w-4 h-4 text-teal" />
+              <span>Schedule Meeting</span>
+            </Link>
 
             <a
               href="#pilot-form"

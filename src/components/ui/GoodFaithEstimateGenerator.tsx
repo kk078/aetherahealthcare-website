@@ -17,7 +17,6 @@ import {
   Download,
   Building2,
 } from 'lucide-react';
-import { PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
 
 interface ItemizedService {
   id: string;
@@ -151,7 +150,7 @@ export default function GoodFaithEstimateGenerator() {
   const [dateOfService, setDateOfService] = useState('2026-09-22');
   const [practiceName, setPracticeName] = useState('Aethera Medical Practice Network');
   const [practiceNpi, setPracticeNpi] = useState('1942857193');
-  const [practicePhone, setPracticePhone] = useState('(813) 519-4640');
+  const [practicePhone, setPracticePhone] = useState('(555) 234-5678');
   const [items, setItems] = useState<ItemizedService[]>(
     PRESETS.colonoscopy.items.map((item, idx) => ({ ...item, id: `item-${idx + 1}` }))
   );
@@ -546,7 +545,7 @@ export default function GoodFaithEstimateGenerator() {
 
         {/* Footer info */}
         <div className="text-[10px] text-slate-400 text-center pt-4 border-t border-gray/10">
-          Generated via Aethera Healthcare Solutions Compliance Suite · Strictly adheres to 45 CFR § 149.610 · Direct inquiries to {PRIMARY_EXPERT_EMAIL}
+          Generated via Aethera Healthcare Solutions Compliance Suite · Strictly adheres to 45 CFR § 149.610 · Inquiries: https://aetherahealthcare.com/contact
         </div>
       </div>
 
@@ -565,12 +564,12 @@ export default function GoodFaithEstimateGenerator() {
           >
             Get Free Practice Audit
           </Link>
-          <a
-            href={`mailto:${PRIMARY_EXPERT_EMAIL}?subject=No%20Surprises%20Act%20Audit%20Consultation`}
+          <Link
+            href="/schedule"
             className="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-colors text-center border border-white/20"
           >
-            Email Kiran Directly
-          </a>
+            Schedule Consultation
+          </Link>
         </div>
       </div>
     </div>

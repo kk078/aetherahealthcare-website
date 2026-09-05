@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import {
   X,
   Sparkles,
@@ -14,7 +15,7 @@ import {
   Loader2,
   AlertCircle,
 } from 'lucide-react';
-import { PRIMARY_EXPERT_EMAIL, sendLeadToKiran } from '@/lib/worker';
+import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
 
 export default function FreePilotModal() {
@@ -102,11 +103,11 @@ export default function FreePilotModal() {
         trackConversion('pilot');
       } else {
         setStatus('error');
-        setErrorMessage('Unable to submit your pilot request right now. Please call us directly at +1 (813) 519-4640.');
+        setErrorMessage('Unable to submit your pilot request right now. Please submit an inquiry via our contact form or schedule a meeting directly.');
       }
     } catch {
       setStatus('error');
-      setErrorMessage('A network error occurred. Please call Kiran directly at +1 (813) 519-4640.');
+      setErrorMessage('A network error occurred. Please submit an inquiry via our contact form or schedule a meeting directly.');
     }
   };
 
@@ -184,17 +185,22 @@ export default function FreePilotModal() {
               </div>
 
               <div className="pt-2 text-xs text-slate-500 dark:text-slate-400">
-                Need immediate coordination? Contact Kiran directly at{' '}
-                <a
-                  href={`mailto:${PRIMARY_EXPERT_EMAIL}?subject=Urgent:%20Free%2050-Claim%20Pilot%20Intake`}
+                Need immediate coordination?{' '}
+                <Link
+                  href="/schedule"
+                  onClick={closeModal}
                   className="font-bold text-teal dark:text-mint underline underline-offset-2"
                 >
-                  info@aetherahealthcare.com
-                </a>{' '}
-                or call{' '}
-                <a href="tel:+18135194640" className="font-bold text-navy dark:text-white underline">
-                  +1 (813) 519-4640
-                </a>.
+                  Schedule a meeting with Kiran
+                </Link>{' '}
+                or{' '}
+                <Link
+                  href="/contact"
+                  onClick={closeModal}
+                  className="font-bold text-navy dark:text-white underline underline-offset-2"
+                >
+                  submit an email request
+                </Link>.
               </div>
 
               <button

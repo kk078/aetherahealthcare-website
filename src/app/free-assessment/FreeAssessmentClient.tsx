@@ -4,7 +4,7 @@ import { useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import {
   ArrowRight, CheckCircle, Phone, Download, AlertCircle, TrendingUp,
-  ShieldCheck, FileText, UploadCloud, Lock, FileSpreadsheet, X,
+  ShieldCheck, FileText, UploadCloud, Lock, FileSpreadsheet, X, Calendar,
 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -251,7 +251,7 @@ export default function FreeAssessmentClient() {
         },
     });
     if (!ok) {
-      setStatus('error'); setErrorMsg('Something went wrong sending your report. Please call us at +1 (813) 519-4640.');
+      setStatus('error'); setErrorMsg('Something went wrong sending your report. Please submit an inquiry via our contact form or schedule a consultation directly.');
       return;
     }
     trackConversion('assessment');
@@ -602,7 +602,7 @@ export default function FreeAssessmentClient() {
 
                 <p className="text-[11px] text-gray/70 mt-6 leading-relaxed">
                   Figures derived from {metrics.source === 'upload' ? 'your uploaded aging report' : 'the values you entered'}; items marked “est.” use {specLabel.toLowerCase()} benchmarks and are confirmed against your live data during intake.
-                  © {new Date().getFullYear()} Aethera Healthcare Solutions · +1 (813) 519-4640 · support@aetherahealthcare.com
+                  © {new Date().getFullYear()} Aethera Healthcare Solutions · Confidential Practice Audit
                 </p>
               </div>
             </div>
@@ -639,9 +639,9 @@ export default function FreeAssessmentClient() {
           <section className="no-print py-12 bg-cream">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-white rounded-2xl px-6 py-5 border border-gray/10 shadow-sm">
-                <div className="flex items-center text-navy"><Phone className="h-5 w-5 text-teal mr-2" /><span className="font-bold">Prefer to talk it through?</span></div>
-                <a href="tel:+18135194640" className="text-teal font-semibold hover:text-navy transition-colors">+1 (813) 519-4640</a>
-                <span className="text-gray text-sm">Mon–Fri, 9 AM–6 PM EST</span>
+                <div className="flex items-center text-navy"><Calendar className="h-5 w-5 text-teal mr-2" /><span className="font-bold">Prefer to talk it through?</span></div>
+                <Link href="/schedule" className="text-teal font-semibold hover:text-navy transition-colors">Schedule a Consultation</Link>
+                <span className="text-gray text-sm">Review your live audit with Kiran</span>
               </div>
             </div>
           </section>

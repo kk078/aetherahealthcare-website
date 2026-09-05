@@ -14,7 +14,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI
     ? [['github'], ['html', { outputFolder: 'playwright-report', open: 'never' }]]
-    : [['list'], ['html', { outputFolder: 'playwright-report', open: 'on-failure' }]],
+    : [['list'], ['html', { outputFolder: 'playwright-report', open: 'never' }]],
 
   use: {
     baseURL: process.env.BASE_URL || 'https://aetherahealthcare.com',

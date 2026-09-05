@@ -121,7 +121,7 @@ COMPLIANCE ACTION RECOMMENDATIONS:
 1. Ensure 75% data completeness across all six selected quality measures.
 2. Complete and document the annual HIPAA Security Risk Assessment before Dec 31 to prevent immediate PI category disqualification.
 3. Attest to 2 high-weighted or 4 medium-weighted Improvement Activities maintained continuously for 90 days.
-4. Schedule a comprehensive MIPS audit with Aethera Healthcare Solutions: info@aetherahealthcare.com`;
+4. Schedule a comprehensive MIPS audit with Aethera Healthcare Solutions: https://aetherahealthcare.com/contact`;
 
     navigator.clipboard.writeText(reportText);
     setCopied(true);

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import {
   Sparkles,
   ShieldCheck,
@@ -8,7 +9,7 @@ import {
   DollarSign,
   TrendingUp,
   Clock,
-  Phone,
+  Calendar,
   ArrowRight,
   Loader2,
   Check,
@@ -72,11 +73,11 @@ export default function DenialPilotLandingClient() {
         trackConversion('pilot');
       } else {
         setStatus('error');
-        setErrorMsg('Unable to submit your request. Please call us directly at +1 (813) 519-4640.');
+        setErrorMsg('Unable to submit your request. Please submit an email request at /contact or schedule a consultation at /schedule.');
       }
     } catch {
       setStatus('error');
-      setErrorMsg('Network error. Please call Kiran directly at +1 (813) 519-4640.');
+      setErrorMsg('Network error. Please submit an inquiry at /contact or schedule a consultation at /schedule.');
     }
   };
 
@@ -416,13 +417,13 @@ export default function DenialPilotLandingClient() {
 
       {/* Sticky Mobile Conversion Bar */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 p-3 px-4 flex items-center justify-between gap-3">
-        <a
-          href="tel:+18135194640"
+        <Link
+          href="/schedule"
           className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-slate-800 text-slate-200 text-xs font-bold border border-slate-700"
         >
-          <Phone className="w-3.5 h-3.5 text-teal" />
-          <span>Call (813) 519-4640</span>
-        </a>
+          <Calendar className="w-3.5 h-3.5 text-teal" />
+          <span>Schedule Meeting</span>
+        </Link>
 
         <a
           href="#pilot-form"

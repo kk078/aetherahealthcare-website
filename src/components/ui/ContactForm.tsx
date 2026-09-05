@@ -66,7 +66,7 @@ export default function ContactForm() {
       messageForm.reset();
     } catch (e: unknown) {
       setStatus('error');
-      const err = e instanceof Error ? e.message : 'Something went wrong. Please try again or call us directly.';
+      const err = e instanceof Error ? e.message : 'Something went wrong. Please try again or refresh the page.';
       setErrorMsg(err);
     }
   };
@@ -84,7 +84,7 @@ export default function ContactForm() {
       scheduleForm.reset();
     } catch (e: unknown) {
       setStatus('error');
-      const err = e instanceof Error ? e.message : 'Something went wrong. Please try again or call us directly.';
+      const err = e instanceof Error ? e.message : 'Something went wrong. Please try again or refresh the page.';
       setErrorMsg(err);
     }
   };

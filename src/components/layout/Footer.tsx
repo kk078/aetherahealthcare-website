@@ -171,7 +171,7 @@ export default function Footer() {
           <div className="mt-6 pt-6 border-t border-gray/20 text-gray/70 text-xs leading-relaxed text-center md:text-left">
             <p>Aethera Healthcare Solutions Private Limited &middot; CIN U82990TN2026PTC189331</p>
             <p>1373, Balasundram, I.A.S. Salai, Royappa Ngr, Chennai - 600048, Tamil Nadu, India</p>
-            <p>US contact: +1 (813) 519-4640 &middot; <a href="mailto:kirkmar078@gmail.com?subject=Aethera%20Healthcare%20Inquiry" className="hover:text-white transition-colors underline underline-offset-2">info@aetherahealthcare.com</a></p>
+            <p>US Inquiries: <Link href="/contact" className="hover:text-white transition-colors underline underline-offset-2">Submit an Email Request</Link> &middot; <Link href="/schedule" className="hover:text-white transition-colors underline underline-offset-2">Schedule a Meeting</Link></p>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Phone, Building2, ShieldCheck } from 'lucide-react';
+import { Calendar, Building2, ShieldCheck } from 'lucide-react';
 import FqhcRhcLandingClient from '@/components/ui/FqhcRhcLandingClient';
 
 export const metadata: Metadata = {
@@ -25,7 +25,6 @@ export default function FqhcRhcBillingPage() {
       '@type': 'Organization',
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
-      telephone: '+1-813-519-4640',
     },
     description:
       'Specialized RCM for Section 330 FQHCs, Look-Alikes, and certified Rural Health Clinics. Optimizing PPS qualifying encounters, same-day mental health splits with Modifier 59/XE, and Medicaid supplemental wrap reconciliations.',
@@ -48,13 +47,13 @@ export default function FqhcRhcBillingPage() {
           </Link>
 
           <div className="flex items-center gap-3 sm:gap-6">
-            <a
-              href="tel:+18135194640"
+            <Link prefetch={false}
+              href="/schedule"
               className="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition"
             >
-              <Phone className="w-4 h-4 text-emerald-400" />
-              <span>(813) 519-4640</span>
-            </a>
+              <Calendar className="w-4 h-4 text-emerald-400" />
+              <span>Schedule Meeting</span>
+            </Link>
 
             <a
               href="#audit-form"

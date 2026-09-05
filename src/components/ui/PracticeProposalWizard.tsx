@@ -10,7 +10,7 @@ import {
   Send,
   Loader2,
 } from 'lucide-react';
-import { submitToWorker, PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
+import { submitToWorker } from '@/lib/worker';
 
 export default function PracticeProposalWizard() {
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
@@ -391,7 +391,7 @@ export default function PracticeProposalWizard() {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
-                  <span>Dedicated escalation line to Kiran ({PRIMARY_EXPERT_EMAIL})</span>
+                  <span>Dedicated partner escalation directly to Kiran &amp; senior leadership</span>
                 </div>
               </div>
             </div>

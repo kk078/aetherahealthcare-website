@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useId } from 'react';
+import Link from 'next/link';
 import {
   ShieldCheck,
   TrendingUp,
@@ -61,8 +62,8 @@ export default function HomeHealthLandingClient() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
     setErrorMsg('');
+    setSubmitting(true);
 
     try {
       const payload = {
@@ -70,8 +71,8 @@ export default function HomeHealthLandingClient() {
         email,
         phone,
         practice: agencyName,
-        service: 'Home Health & Hospice RCM & PDGM Audit',
-        notes: `[Campaign: Home Health & Hospice Billing LP] Role: ${titleRole} | Structure: ${agencyStructure} | EHR: ${currentEhr} | Episodes: ${episodeCount}/mo | Mode: ${careType} | Risk %: ${leakageRate}% | Est Recaptured: $${recoveredCashFlow.toLocaleString()} | Details: ${notes || 'None provided'}`,
+        service: careType === 'home_health' ? 'Home Health PDGM RCM Audit' : 'Hospice Cap & NOA Audit',
+        notes: `[Campaign: Home Health/Hospice LP] Care Type: ${careType} | Census: ${episodeCount}/mo | Modeled Leak: $${Math.round(annualLeakage).toLocaleString()} (${leakageRate}%) | Notes: ${notes || 'None provided'}`,
         source: 'Landing Page: /lp/home-health-hospice-billing',
       };
 
@@ -79,10 +80,10 @@ export default function HomeHealthLandingClient() {
       if (ok) {
         setSubmitted(true);
       } else {
-        setErrorMsg('There was an issue submitting your request. Please call (813) 519-4640 directly.');
+        setErrorMsg('There was an issue submitting your request. Please submit an email inquiry at /contact or schedule a meeting at /schedule.');
       }
     } catch {
-      setErrorMsg('A network error occurred. Please call us directly at (813) 519-4640.');
+      setErrorMsg('A network error occurred. Please submit an inquiry at /contact or schedule a meeting.');
     } finally {
       setSubmitting(false);
     }
@@ -320,12 +321,12 @@ export default function HomeHealthLandingClient() {
                   practice details have been routed directly to Kiran. We will reach out within 4 business hours to set up your secure pilot portal.
                 </p>
                 <div className="pt-2">
-                  <a
-                    href="tel:+18135194640"
+                  <Link
+                    href="/schedule"
                     className="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300"
                   >
-                    <PhoneCall className="w-4 h-4" /> Need immediate urgency? Call (813) 519-4640
-                  </a>
+                    <Calendar className="w-4 h-4" /> Want to sync immediately? Schedule a meeting with Kiran
+                  </Link>
                 </div>
               </div>
             ) : (

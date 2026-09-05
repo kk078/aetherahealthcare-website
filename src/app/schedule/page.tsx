@@ -46,8 +46,8 @@ export default function SchedulePage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <BookingEmbed />
           <p className="text-center text-sm text-gray mt-6">
-            Prefer email? Reach us at{' '}
-            <a href="mailto:info@aetherahealthcare.com" className="text-teal font-semibold hover:text-navy">info@aetherahealthcare.com</a>{' '}
+            Prefer an email request?{' '}
+            <Link prefetch={false} href="/contact" className="text-teal font-semibold hover:text-navy">Submit an inquiry via our contact form</Link>{' '}
             or start with a{' '}
             <Link prefetch={false} href="/free-assessment" className="text-teal font-semibold hover:text-navy">free revenue assessment</Link>.
           </p>

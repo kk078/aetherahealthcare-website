@@ -1,4 +1,5 @@
-import { Phone, Mail, Clock } from 'lucide-react';
+import Link from 'next/link';
+import { Calendar, Mail, Clock, CheckCircle2 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
@@ -8,7 +9,7 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   title: { absolute: "Contact Us | Free Consultation | Aethera Healthcare Solutions" },
-  description: "Get in touch with Aethera Healthcare Solutions for a free consultation. Contact us by phone at +1 (813) 519-4640 or email at info@aetherahealthcare.com.",
+  description: "Get in touch with Aethera Healthcare Solutions for a free consultation. Submit an email inquiry or schedule a meeting directly with our team.",
 };
 
 export default function Contact() {
@@ -23,7 +24,7 @@ export default function Contact() {
               "@context": "https://schema.org",
               "@type": "ContactPage",
               "name": "Contact Aethera Healthcare Solutions",
-              "description": "Get in touch with Aethera Healthcare Solutions for a free consultation. Contact us by phone at +1 (813) 519-4640 or email at info@aetherahealthcare.com.",
+              "description": "Get in touch with Aethera Healthcare Solutions for a free consultation. Submit an email inquiry or schedule a meeting directly with our team.",
               "url": "https://aetherahealthcare.com/contact",
               "publisher": {
                 "@type": "Organization",
@@ -45,18 +46,10 @@ export default function Contact() {
               "logo": "https://aetherahealthcare.com/logo.png",
               "contactPoint": [{
                 "@type": "ContactPoint",
-                "telephone": "+1-813-519-4640",
                 "contactType": "customer service",
-                "email": "info@aetherahealthcare.com",
-                "availableLanguage": "English",
-                "contactOption": "TollFree"
-              }, {
-                "@type": "ContactPoint",
-                "email": "support@aetherahealthcare.com",
-                "contactType": "technical support"
-              }],
-              "email": "info@aetherahealthcare.com",
-              "telephone": "+1-813-519-4640"
+                "url": "https://aetherahealthcare.com/contact",
+                "availableLanguage": "English"
+              }]
             })
           }}
         />
@@ -66,7 +59,7 @@ export default function Contact() {
       <RcmHeroBand
         eyebrow="Contact"
         title="Let's maximize your revenue"
-        subtitle="Ready to maximize your revenue and minimize your burden? Get in touch with our team today — by phone at +1 (813) 519-4640 or email info@aetherahealthcare.com."
+        subtitle="Ready to maximize your revenue and minimize your burden? Submit an email inquiry or schedule a direct consultation with our revenue cycle leadership."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         chips={['Free consultation', '5-day turnaround', 'No obligation']}
       />
@@ -82,46 +75,64 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
             <FadeIn>
-              <div className="bg-cream rounded-2xl p-8 h-full">
-                <h3 className="text-2xl font-bold text-navy mb-6">Contact Information</h3>
+              <div className="bg-cream rounded-2xl p-8 h-full flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-navy mb-6">Ways to Connect</h3>
 
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="bg-teal text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-6 w-6" />
+                  <div className="space-y-6">
+                    <div className="flex items-start">
+                      <div className="bg-teal text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <Calendar className="h-6 w-6" />
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="font-bold text-navy">Schedule a Meeting</h4>
+                        <p className="text-gray text-sm mt-1">
+                          Book a 1-on-1 video or phone consultation directly with Kiran at a time that works best for your schedule.
+                        </p>
+                        <Link
+                          prefetch={false}
+                          href="/schedule"
+                          className="inline-flex items-center gap-1.5 mt-2.5 px-4 py-1.5 bg-navy hover:bg-teal text-white text-xs font-bold rounded-lg transition-colors shadow-xs"
+                        >
+                          Pick a Time on Calendar &rarr;
+                        </Link>
+                      </div>
                     </div>
-                    <div className="ml-4">
-                      <h4 className="font-bold text-navy">Phone</h4>
-                      <p className="text-gray">+1 (813) 519-4640</p>
-                      <p className="text-gray text-sm">Monday-Friday, 9:00 AM - 6:00 PM EST</p>
+
+                    <div className="flex items-start">
+                      <div className="bg-teal text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <Mail className="h-6 w-6" />
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="font-bold text-navy">Online Email Request</h4>
+                        <p className="text-gray text-sm mt-1">
+                          Submit your practice details or billing questions using our form. Kiran and our senior billing team personally review every submission.
+                        </p>
+                        <p className="text-teal font-semibold text-xs mt-1.5 flex items-center gap-1">
+                          <CheckCircle2 className="h-3.5 w-3.5" /> Direct response guaranteed within 1 business day
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="bg-teal text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <Clock className="h-6 w-6" />
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="font-bold text-navy">Operating Hours</h4>
+                        <p className="text-gray text-sm">Monday &ndash; Friday: 9:00 AM &ndash; 6:00 PM EST</p>
+                        <p className="text-gray text-xs mt-0.5">Weekend urgent inquiries triaged on-demand</p>
+                      </div>
                     </div>
                   </div>
+                </div>
 
-                  <div className="flex items-start">
-                    <div className="bg-teal text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-6 w-6" />
-                    </div>
-                    <div className="ml-4">
-                      <h4 className="font-bold text-navy">Email</h4>
-                      <p className="text-gray">
-                        <a href="mailto:kirkmar078@gmail.com?subject=Aethera%20Healthcare%20Inquiry" className="hover:text-teal transition-colors">info@aetherahealthcare.com</a>
-                      </p>
-                      <p className="text-gray">
-                        <a href="mailto:kirkmar078@gmail.com?subject=Aethera%20Healthcare%20Support%20Inquiry" className="hover:text-teal transition-colors">support@aetherahealthcare.com</a>
-                      </p>
-                      <p className="text-gray">aetherahealthcare.com</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start">
-                    <div className="bg-teal text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      <Clock className="h-6 w-6" />
-                    </div>
-                    <div className="ml-4">
-                      <h4 className="font-bold text-navy">Business Hours</h4>
-                      <p className="text-gray">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
-                      <p className="text-gray">Saturday - Sunday: Closed</p>
-                    </div>
+                <div className="mt-8 pt-6 border-t border-gray/15">
+                  <div className="bg-white rounded-xl p-4 border border-teal/20 flex items-center gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-teal shrink-0" />
+                    <p className="text-xs text-navy leading-snug">
+                      <strong>Zero Sales Spam:</strong> You will interface directly with revenue cycle specialists and practice leadership.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -168,7 +179,7 @@ export default function Contact() {
             <FadeIn delay={0.3}>
               <div className="bg-cream rounded-xl p-6">
                 <h3 className="text-lg font-bold text-navy mb-2">What&apos;s the best way to reach you?</h3>
-                <p className="text-gray">Call us at +1 (813) 519-4640 during business hours, or email info@aetherahealthcare.com anytime. We&apos;ll get back to you within one business day.</p>
+                <p className="text-gray">Submit an email inquiry through our contact form or book a consultation via our meeting scheduler. Kiran and our senior billing team respond within one business day.</p>
               </div>
             </FadeIn>
           </div>

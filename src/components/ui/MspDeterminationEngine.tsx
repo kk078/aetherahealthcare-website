@@ -257,7 +257,7 @@ ${determination.guidance}
 AETHERA MSP DEFENSE:
 1. Retain signed CMS MSP Questionnaire for 10 years to defend against RAC and MAC post-payment recoupments.
 2. Automate Loop 2320 CAS cross-coding to eliminate CO-22 Coordination of Benefits denials.
-3. Schedule an MSP audit with Aethera Healthcare Solutions: info@aetherahealthcare.com`;
+3. Schedule an MSP audit with Aethera Healthcare Solutions: https://aetherahealthcare.com/contact`;
 
     navigator.clipboard.writeText(reportText);
     setCopied(true);

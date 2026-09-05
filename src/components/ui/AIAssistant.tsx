@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Sparkles, X, Send, Loader2 } from 'lucide-react';
 import { askAiAgent, type AssistantMessage } from '@/lib/aiAgent';
-import { PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
 
 const GREETING =
   "Hi! I'm Aethera's AI billing assistant. Ask me about timely-filing limits, payer IDs, our services, pricing, or onboarding.";
@@ -14,33 +13,23 @@ const SUGGESTIONS = [
   'Do you bill for cardiology?',
 ];
 
-let aiMsgCounter = 0;
 function makeAiMsg(role: 'user' | 'assistant', content: string): AssistantMessage {
-  aiMsgCounter += 1;
   const d = new Date();
   const h = d.getHours().toString().padStart(2, '0');
   const m = d.getMinutes().toString().padStart(2, '0');
   return {
-    id: `ai-${aiMsgCounter}`,
+    id: `ai-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
     role,
     content,
     timestamp: `${h}:${m}`,
   };
 }
 
-/** Turn internal paths, phone, and email in an answer into clickable links. */
+/** Turn internal paths in an answer into clickable links. */
 function render(text: string) {
-  const parts = text.split(/(\/[a-z][a-z0-9-]*(?:\/[a-z0-9-]+)*|\(813\) 519-4640|kirkmar078@gmail\.com|support@aetherahealthcare\.com)/g);
+  const parts = text.split(/(\/[a-z][a-z0-9-]*(?:\/[a-z0-9-]+)*)/g);
   return parts.map((p, i) => {
     if (/^\/[a-z]/.test(p)) return <a key={i} href={p} className="text-teal underline hover:text-navy">{p}</a>;
-    if (p === '(813) 519-4640') return <a key={i} href="tel:+18135194640" className="text-teal underline">{p}</a>;
-    if (p === PRIMARY_EXPERT_EMAIL || p === 'support@aetherahealthcare.com') {
-      return (
-        <a key={i} href={`mailto:${PRIMARY_EXPERT_EMAIL}?subject=Aethera%20Healthcare%20Inquiry`} className="text-teal underline">
-          {p}
-        </a>
-      );
-    }
     return <span key={i}>{p}</span>;
   });
 }
@@ -81,7 +70,7 @@ export default function AIAssistant() {
     } catch {
       setMsgs(m => [
         ...m,
-        makeAiMsg('assistant', `I'm having trouble connecting. Call (813) 519-4640 or contact Kiran at ${PRIMARY_EXPERT_EMAIL}.`),
+        makeAiMsg('assistant', "I'm having trouble connecting. Please submit an inquiry at /contact or schedule a consultation at /schedule."),
       ]);
     } finally {
       setBusy(false);
@@ -135,7 +124,7 @@ export default function AIAssistant() {
               <Send className="h-4 w-4" />
             </button>
           </form>
-          <p className="text-[11px] text-slate-500 text-center pb-2 px-3 bg-white">Powered by Aethera AI · Routed to {PRIMARY_EXPERT_EMAIL}</p>
+          <p className="text-[11px] text-slate-500 text-center pb-2 px-3 bg-white">Powered by Aethera AI · Grounded in 10,600+ Payers</p>
         </div>
       )}
 

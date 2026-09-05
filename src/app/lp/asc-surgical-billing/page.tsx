@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Phone, Scissors, ShieldCheck } from 'lucide-react';
+import { Calendar, Scissors, ShieldCheck } from 'lucide-react';
 import AscSurgicalLandingClient from '@/components/ui/AscSurgicalLandingClient';
 
 export const metadata: Metadata = {
@@ -25,7 +25,6 @@ export default function AscSurgicalBillingPage() {
       '@type': 'Organization',
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
-      telephone: '+1-813-519-4640',
     },
     description:
       'Turnkey revenue cycle management and billing services engineered specifically for Ambulatory Surgery Centers (ASCs) and Office-Based Surgical Suites, recovering implant carve-outs and eliminating MPPR underpayments.',
@@ -48,13 +47,13 @@ export default function AscSurgicalBillingPage() {
           </Link>
 
           <div className="flex items-center gap-3 sm:gap-6">
-            <a
-              href="tel:+18135194640"
+            <Link prefetch={false}
+              href="/schedule"
               className="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition"
             >
-              <Phone className="w-4 h-4 text-cyan-400" />
-              <span>(813) 519-4640</span>
-            </a>
+              <Calendar className="w-4 h-4 text-cyan-400" />
+              <span>Schedule Meeting</span>
+            </Link>
 
             <a
               href="#asc-pilot-form"

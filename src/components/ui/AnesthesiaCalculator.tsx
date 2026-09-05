@@ -16,7 +16,7 @@ import {
   Activity,
   Award,
 } from 'lucide-react';
-import { PRIMARY_EXPERT_EMAIL, sendLeadToKiran } from '@/lib/worker';
+import { sendLeadToKiran } from '@/lib/worker';
 
 interface AnesthesiaPreset {
   name: string;

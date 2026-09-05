@@ -356,7 +356,7 @@ AETHERA REVENUE CYCLE REMEDIATION PLAN:
 1. Recertify chronic manifestations annually under strict MEAT criteria (Monitor, Evaluate, Assess, Treat).
 2. Code diabetic end-organ complications (neuropathy, nephropathy, microalbuminuria) rather than uncomplicated codes.
 3. Bridge eGFR drops to stage 4 CKD promptly with lab confirmation.
-4. Schedule a 50-chart clinical risk adjustment gap audit with Aethera Healthcare Solutions: info@aetherahealthcare.com`;
+4. Schedule a 50-chart clinical risk adjustment gap audit with Aethera Healthcare Solutions: https://aetherahealthcare.com/contact`;
 
     navigator.clipboard.writeText(reportText);
     setCopied(true);

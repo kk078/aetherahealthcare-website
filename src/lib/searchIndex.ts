@@ -2291,7 +2291,7 @@ const ACTION_ITEMS: SearchItem[] = [
     id: 'act-contact',
     category: 'actions',
     title: 'Contact Billing Desk & Support',
-    subtitle: 'Phone: (813) 519-4640 | Direct Partner: kirkmar078@gmail.com',
+    subtitle: 'Online Email Request | Schedule Consultation directly with Kiran',
     href: '/contact',
     badge: 'Support',
     badgeVariant: 'slate',

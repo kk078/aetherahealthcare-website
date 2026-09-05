@@ -64,7 +64,7 @@ function BookCard({ url }: { url: string }) {
       <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-gray">
         <span className="flex items-center gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 text-teal" /> 30- or 15-minute options</span>
         <span className="flex items-center gap-1.5"><Video className="h-3.5 w-3.5 text-teal" /> Google Meet included</span>
-        <span className="flex items-center gap-1.5"><Phone className="h-3.5 w-3.5 text-teal" /> Or call (813) 519-4640</span>
+        <span className="flex items-center gap-1.5"><CalendarClock className="h-3.5 w-3.5 text-teal" /> Direct partner review</span>
       </div>
       <div className="mt-6 pt-5 border-t border-gray/10">
         <p className="text-xs text-gray mb-3">Prefer we reach out to you instead? Send a request and we&rsquo;ll confirm a time.</p>
@@ -115,8 +115,8 @@ function MeetingRequestForm({ compact = false }: { compact?: boolean }) {
         <CheckCircle2 className="h-9 w-9 text-teal mx-auto mb-2" />
         <p className="font-bold text-navy">Your meeting request is in.</p>
         <p className="text-gray text-sm mt-1">
-          We&rsquo;ll reach out within one business day to confirm a time. Prefer to talk now? Call{' '}
-          <a href="tel:+18135194640" className="text-teal font-semibold hover:text-navy">(813) 519-4640</a>.
+          We&rsquo;ll reach out within one business day to confirm a time. Prefer to share more practice details upfront?{' '}
+          <Link prefetch={false} href="/contact" className="text-teal font-semibold hover:text-navy">Submit an email request</Link>.
         </p>
       </div>
     );
@@ -176,8 +176,8 @@ function MeetingRequestForm({ compact = false }: { compact?: boolean }) {
       </button>
       {status === 'error' && (
         <p className="text-center text-sm text-red-600 mt-3">
-          Something went wrong. Please call <a href="tel:+18135194640" className="underline">(813) 519-4640</a> or{' '}
-          <Link prefetch={false} href="/contact" className="underline">contact us</Link>.
+          Something went wrong. Please submit an inquiry through our{' '}
+          <Link prefetch={false} href="/contact" className="underline">contact form</Link> directly.
         </p>
       )}
     </form>

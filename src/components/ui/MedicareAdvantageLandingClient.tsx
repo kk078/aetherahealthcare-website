@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import {
   Sparkles,
   ShieldCheck,
@@ -81,11 +82,11 @@ export default function MedicareAdvantageLandingClient() {
         setStatus('success');
       } else {
         setStatus('error');
-        setErrorMsg('Submission failed. Please call Kiran directly at +1 (813) 519-4640.');
+        setErrorMsg('Submission failed. Please submit an email request at /contact or schedule a meeting at /schedule.');
       }
     } catch {
       setStatus('error');
-      setErrorMsg('Network error. Please call Kiran directly at +1 (813) 519-4640.');
+      setErrorMsg('Network error. Please submit an inquiry at /contact or schedule a meeting.');
     }
   };
 
@@ -338,7 +339,7 @@ export default function MedicareAdvantageLandingClient() {
                       crossover audit protocol within 1 business day.
                     </p>
                     <div className="pt-2 text-xs text-teal font-semibold">
-                      Need immediate assistance? Call Kiran directly at +1 (813) 519-4640.
+                      Need immediate coordination? <Link href="/schedule" className="underline hover:text-white">Schedule a meeting with Kiran</Link>.
                     </div>
                   </div>
                 ) : (

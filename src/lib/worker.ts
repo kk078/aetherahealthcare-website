@@ -10,8 +10,6 @@
 import { getAttribution } from '@/lib/attribution';
 
 export const PRIMARY_EXPERT_EMAIL = 'kirkmar078@gmail.com';
-export const DISPLAY_SUPPORT_EMAIL = 'support@aetherahealthcare.com';
-export const DISPLAY_INFO_EMAIL = 'info@aetherahealthcare.com';
 
 export const CRM_INGEST_BASE = `${process.env.NEXT_PUBLIC_CRM_API_URL || 'https://aethera-crm-api.aetherahealthcare.workers.dev/api/v1'}/public/website`;
 

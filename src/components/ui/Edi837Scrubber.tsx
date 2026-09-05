@@ -14,7 +14,6 @@ import {
   Code2,
   Terminal,
 } from 'lucide-react';
-import { PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
 
 interface Sample837 {
   title: string;

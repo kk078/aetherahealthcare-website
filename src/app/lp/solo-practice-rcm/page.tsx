@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Phone, Sparkles, ShieldCheck } from 'lucide-react';
+import { Calendar, Sparkles, ShieldCheck } from 'lucide-react';
 import SoloPracticeLandingClient from '@/components/ui/SoloPracticeLandingClient';
 
 export const metadata: Metadata = {
@@ -25,7 +25,6 @@ export default function SoloPracticeLandingPage() {
       '@type': 'Organization',
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
-      telephone: '+1-813-519-4640',
     },
     description:
       'Turnkey RCM and medical billing services designed for independent 1–5 provider clinics, eliminating biller turnover and reducing overhead to 4.5%.',
@@ -48,13 +47,13 @@ export default function SoloPracticeLandingPage() {
           </Link>
 
           <div className="flex items-center gap-3 sm:gap-6">
-            <a
-              href="tel:+18135194640"
+            <Link prefetch={false}
+              href="/schedule"
               className="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition"
             >
-              <Phone className="w-4 h-4 text-teal" />
-              <span>(813) 519-4640</span>
-            </a>
+              <Calendar className="w-4 h-4 text-teal" />
+              <span>Schedule Meeting</span>
+            </Link>
 
             <a
               href="#pilot-form"

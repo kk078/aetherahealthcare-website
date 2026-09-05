@@ -38,13 +38,13 @@ Key Aethera Facts:
 - Core Services: Full-service Revenue Cycle Management (RCM), credentialing, charge capture & scrubbing, certified coding (AAPC/AHIMA), EDI 837 claim submission, 835 ERA auto-posting, denial recovery & appeals, patient billing & statements, monthly KPI analytics.
 - Pricing: Performance-based, transparent fee between 3.5% and 5.0% of net collections based on monthly volume and specialty. Zero upfront setup fee, zero onboarding fee, no long-term restrictive contracts.
 - Performance: 98.7% first-pass clean claim rate, average 15-20% revenue collection lift, Days in A/R under 32 days (industry average is 45-50+ days).
-- Direct Senior Partner: Kiran (kirkmar078@gmail.com) and the senior billing team review every practice profile directly.
-- Phone: +1 (813) 519-4640.
+- Direct Senior Partner: Kiran and the senior billing team review every practice profile directly.
+- Direct Contact & Meetings: Connect via our online email request form at /contact or schedule a consultation directly at /schedule.
 
 Guidance Rules:
 - If asked about denial codes (e.g., CO-45, PR-204, CO-16, CO-18, CO-97), explain the CARC/RARC root cause, difference between contractual adjustment and patient balance, and step-by-step appeal/resubmission strategy.
 - If asked about timely filing limits, quote standard payer rules (e.g. Medicare 365 days, Texas Medicaid 95 days, UHC/Aetna/Cigna 90 days commercial) and mention proving timely filing via 277CA / 999 EDI confirmations.
-- Always offer escalation to Kiran (kirkmar078@gmail.com) or booking a free practice assessment at /free-assessment for a deep audit of their specific billing claims and aging A/R.
+- Always offer escalation to Kiran via /contact or scheduling a meeting at /schedule, or booking a free practice assessment at /free-assessment for a deep audit of their specific billing claims and aging A/R.
 - Be concise, professional, empathetic, and organized with clear bullet points.`;
 
 /**
@@ -139,9 +139,8 @@ export function extractAgentActions(userPrompt: string, assistantResponse: strin
       type: 'escalate_kiran',
       title: 'Connect with Kiran (Senior RCM Partner)',
       data: {
-        email: 'kirkmar078@gmail.com',
-        phone: '(813) 519-4640',
-        note: 'Direct review of your practice billing & free claim audit.',
+        url: '/schedule',
+        note: 'Direct review of your practice billing & free claim audit via meeting or email request.',
       },
     });
   }
@@ -212,7 +211,7 @@ We operate on a transparent, **100% performance-aligned model**:
 - **Contract Terms:** No restrictive multi-year lock-ins. We earn your business every month through results.
 - **Included Services:** Full demographic entry, eligibility checks, certified AAPC/AHIMA medical coding, electronic claim submission, 835 ERA posting, aggressive denial appeals within 48 hours, patient billing inquiries, and monthly executive KPI dashboards.
 
-Would you like a customized fee proposal for your practice? Feel free to request a callback or connect directly with Kiran at kirkmar078@gmail.com.`;
+Would you like a customized fee proposal for your practice? Feel free to submit an email inquiry or schedule a meeting directly with Kiran.`;
   }
 
   // Specialties
@@ -251,7 +250,7 @@ Our certified coders ensure accurate LCD/NCD coverage determination before claim
 - **Specialty Medical Billing** (Hospitalists, Cardiology, Primary Care, Orthopedics, Mental Health)
 - **Aethera's Services & Transparent 3.5%–5.0% Pricing**
 
-How can I help your practice today? You can also request a callback from Kiran and our senior billing team anytime!`;
+How can I help your practice today? You can submit an email request or schedule a consultation with Kiran and our senior billing team anytime!`;
 }
 
 /**

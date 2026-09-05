@@ -13,7 +13,6 @@ import {
   ShieldCheck,
   Sparkles,
 } from 'lucide-react';
-import { PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
 
 export interface CaseStudyItem {
   id: string;
@@ -402,12 +401,12 @@ export default function CaseStudiesDirectory() {
           >
             Get Free Practice Audit
           </Link>
-          <a
-            href={`mailto:${PRIMARY_EXPERT_EMAIL}?subject=Specialty%20Case%20Study%20Consultation`}
+          <Link
+            href="/schedule"
             className="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-colors text-center border border-white/20"
           >
-            Email Kiran Directly
-          </a>
+            Schedule Consultation
+          </Link>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import {
   ShieldCheck,
   CheckCircle2,
-  Phone,
+  Calendar,
   ArrowRight,
   TrendingUp,
   Clock,
@@ -41,7 +41,6 @@ export default function DenialRecoveryLandingPage() {
       '@type': 'Organization',
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
-      telephone: '+1-813-519-4640',
     },
   };
 
@@ -62,13 +61,13 @@ export default function DenialRecoveryLandingPage() {
           </Link>
 
           <div className="flex items-center gap-3 sm:gap-6">
-            <a
-              href="tel:+18135194640"
+            <Link prefetch={false}
+              href="/schedule"
               className="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition"
             >
-              <Phone className="w-4 h-4 text-teal" />
-              <span>(813) 519-4640</span>
-            </a>
+              <Calendar className="w-4 h-4 text-teal" />
+              <span>Schedule Meeting</span>
+            </Link>
 
             <a
               href="#pilot-form"
@@ -171,7 +170,7 @@ export default function DenialRecoveryLandingPage() {
             <span className="flex items-center gap-1.5"><Lock className="w-4 h-4 text-teal" /> 256-Bit TLS In-Memory Security</span>
             <span className="flex items-center gap-1.5"><FileCheck className="w-4 h-4 text-teal" /> AAPC-Certified Coders</span>
           </div>
-          <p>© {new Date().getFullYear()} Aethera Healthcare Solutions. All rights reserved. Direct inquiries: kirkmar078@gmail.com</p>
+          <p>© {new Date().getFullYear()} Aethera Healthcare Solutions. All rights reserved. Direct inquiries: <Link prefetch={false} href="/contact" className="hover:text-white underline">Contact Kiran</Link> &middot; <Link prefetch={false} href="/schedule" className="hover:text-white underline">Schedule Meeting</Link></p>
         </div>
       </footer>
     </div>

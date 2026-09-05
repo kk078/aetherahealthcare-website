@@ -12,9 +12,7 @@ import {
   ShieldCheck,
   RotateCcw,
   Copy,
-  Info,
 } from 'lucide-react';
-import { PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
 
 interface Sample271 {
   title: string;

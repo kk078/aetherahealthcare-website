@@ -212,7 +212,7 @@ AETHERA COVERAGE ANALYSIS PROTOCOL:
 1. Ensure 8-digit NCT number is populated in Field 19 (CMS-1500) or Loop 2300 REF*P4 on 837P.
 2. Link secondary diagnosis ICD-10 Z00.6 to all routine service lines.
 3. Verify that the clinical trial agreement (CTA) confirms the sponsor does not provide free routine items.
-4. Schedule an Institutional Clinical Trial Billing Audit with Aethera: info@aetherahealthcare.com`;
+4. Schedule an Institutional Clinical Trial Billing Audit with Aethera: https://aetherahealthcare.com/contact`;
 
     navigator.clipboard.writeText(reportText);
     setCopied(true);

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useId } from 'react';
+import Link from 'next/link';
 import {
   ShieldCheck,
   TrendingUp,
@@ -86,10 +87,10 @@ export default function FqhcRhcLandingClient() {
       if (ok) {
         setSubmitted(true);
       } else {
-        setErrorMsg('There was an issue submitting your request. Please call (813) 519-4640 directly.');
+        setErrorMsg('There was an issue submitting your request. Please submit an email inquiry at /contact or schedule a meeting at /schedule.');
       }
     } catch {
-      setErrorMsg('A network error occurred. Please call us directly at (813) 519-4640.');
+      setErrorMsg('A network error occurred. Please submit an inquiry at /contact or schedule a meeting.');
     } finally {
       setSubmitting(false);
     }
@@ -424,8 +425,10 @@ export default function FqhcRhcLandingClient() {
                 Thank you, {contactName || 'Healthcare Leader'}. Our FQHC &amp; Rural Health RCM Director will review
                 your health center profile and contact you within 4 business hours to establish secure BAA file transfer.
               </p>
-              <div className="pt-2 text-xs text-emerald-400 font-medium">
-                Direct Line: (813) 519-4640 · kirkmar078@gmail.com
+              <div className="pt-2 text-xs text-emerald-400 font-medium flex items-center justify-center gap-3">
+                <Link href="/schedule" className="underline hover:text-white">Schedule Meeting with Kiran</Link>
+                <span>·</span>
+                <Link href="/contact" className="underline hover:text-white">Email Request</Link>
               </div>
             </div>
           ) : (
@@ -575,9 +578,9 @@ export default function FqhcRhcLandingClient() {
                 <span className="flex items-center gap-1">
                   <Clock className="w-3.5 h-3.5 text-teal-400" /> 4-Hour Response
                 </span>
-                <span className="flex items-center gap-1">
-                  <PhoneCall className="w-3.5 h-3.5 text-cyan-400" /> (813) 519-4640
-                </span>
+                <Link href="/schedule" className="flex items-center gap-1 hover:text-slate-300">
+                  <Calendar className="w-3.5 h-3.5 text-cyan-400" /> Schedule Meeting
+                </Link>
               </div>
             </form>
           )}

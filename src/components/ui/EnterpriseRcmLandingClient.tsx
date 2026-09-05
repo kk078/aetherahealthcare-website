@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import {
   Sparkles,
   ShieldCheck,
@@ -8,7 +9,7 @@ import {
   DollarSign,
   TrendingUp,
   Clock,
-  Phone,
+  Calendar,
   ArrowRight,
   Loader2,
   Check,
@@ -85,11 +86,11 @@ export default function EnterpriseRcmLandingClient() {
         trackConversion('pilot');
       } else {
         setStatus('error');
-        setErrorMsg('Unable to submit inquiry. Please call Kiran directly at +1 (813) 519-4640.');
+        setErrorMsg('Unable to submit inquiry. Please submit an email request at /contact or schedule a meeting at /schedule.');
       }
     } catch {
       setStatus('error');
-      setErrorMsg('Network error. Please call Kiran directly at +1 (813) 519-4640.');
+      setErrorMsg('Network error. Please submit an inquiry at /contact or schedule a meeting.');
     }
   };
 
@@ -305,7 +306,7 @@ export default function EnterpriseRcmLandingClient() {
                       </div>
                       <p>1. We draft a tailored Centralized CBO Blueprint tailored to your {currentEhrMix} environment.</p>
                       <p>2. We prepare an NDA / BAA for clinical data exchange.</p>
-                      <p>3. Direct phone contact with Kiran: <a href="tel:+18135194640" className="text-teal underline font-bold">+1 (813) 519-4640</a>.</p>
+                      <p>3. Direct meeting booking: <Link href="/schedule" className="text-teal underline font-bold">Schedule Consultation with Kiran</Link>.</p>
                     </div>
                     <button
                       onClick={() => setStatus('idle')}
@@ -567,13 +568,13 @@ export default function EnterpriseRcmLandingClient() {
             >
               Submit Enterprise RFP
             </a>
-            <a
-              href="tel:+18135194640"
+            <Link
+              href="/schedule"
               className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-sm font-bold border border-slate-700 flex items-center gap-2 transition"
             >
-              <Phone className="w-4 h-4 text-teal" />
-              <span>Call (813) 519-4640</span>
-            </a>
+              <Calendar className="w-4 h-4 text-teal" />
+              <span>Schedule a Meeting</span>
+            </Link>
           </div>
         </div>
       </section>

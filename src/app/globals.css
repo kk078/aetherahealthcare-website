@@ -385,7 +385,7 @@ html.dark .border-amber-200 {
 
   /* Executive Confidentiality Footer */
   body::after {
-    content: "Aethera Healthcare Solutions • (813) 519-4640 • support@aetherahealthcare.com • https://aetherahealthcare.com • Confidential Medical Practice Analysis";
+    content: "Aethera Healthcare Solutions • https://aetherahealthcare.com • Confidential Medical Practice Analysis";
     display: block;
     text-align: center;
     font-size: 7.5pt;

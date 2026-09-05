@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { X, TrendingDown, Loader2, CheckCircle } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
 
@@ -133,7 +134,9 @@ export default function ExitIntentCTA() {
               </button>
               {status === 'error' && (
                 <p className="text-center text-xs text-red-500">
-                  Something went wrong — please call <a href="tel:+18135194640" className="underline">(813) 519-4640</a> or email <a href="mailto:kirkmar078@gmail.com?subject=Aethera%20Healthcare%20Inquiry" className="underline">support@aetherahealthcare.com</a>.
+                  Something went wrong — please submit an inquiry at{' '}
+                  <Link prefetch={false} href="/contact" className="underline font-semibold">our contact page</Link> or{' '}
+                  <Link prefetch={false} href="/schedule" className="underline font-semibold">schedule a meeting</Link>.
                 </p>
               )}
               <p className="text-center text-xs text-slate-400">

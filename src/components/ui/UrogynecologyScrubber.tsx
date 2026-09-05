@@ -354,7 +354,7 @@ export default function UrogynecologyScrubber() {
         setLeadSuccess(false);
       }, 3000);
     } catch {
-      alert('Error delivering audit packet. Please email kirkmar078@gmail.com directly.');
+      alert('Error delivering audit packet. Please submit an inquiry via our contact form or schedule a consultation directly.');
     } finally {
       setIsSubmitting(false);
     }
@@ -947,7 +947,7 @@ export default function UrogynecologyScrubber() {
                     )}
                   </button>
                   <p className="text-[10px] text-slate-400 text-center mt-2">
-                    Direct confidential transmission to Kiran (kirkmar078@gmail.com). Zero PHI retention.
+                    Direct confidential transmission to Kiran &amp; senior billing leadership. Zero PHI retention.
                   </p>
                 </div>
               </form>

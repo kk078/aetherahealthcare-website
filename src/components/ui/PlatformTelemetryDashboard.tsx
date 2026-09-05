@@ -86,7 +86,7 @@ Security Tier: HIPAA Compliant, Zero-Knowledge In-Memory Architecture
 Client TTFB: ${liveTtfb ?? 28}ms | DNS Lookup: ${liveDns ?? 12}ms | DOM Interactive: ${liveDomReady ?? 164}ms
 Clearinghouse Sync: 837 Scrub (<4m batch) | 835 Remit (<60s auto-post) | 270/271 Real-Time (<800ms)
 Payer Network Connections: 229+ Direct Gateways Active
-Lead & Audit Routing: Direct Dispatch to Kiran (kirkmar078@gmail.com)`;
+Lead & Audit Routing: Direct Dispatch to Kiran & Senior Leadership (Encrypted Webhook)`;
 
     navigator.clipboard.writeText(reportText);
     setCopiedAudit(true);

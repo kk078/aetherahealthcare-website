@@ -35,10 +35,11 @@ test.describe('Talk to an Expert - Agentic AI & Email Routing', () => {
     // Wait for the agentic intelligence to render in the chat
     await expect(page.getByText(/proof of timely filing|filing deadline/i).first()).toBeVisible({ timeout: 15000 });
     await expect(page.getByText(/Direct Partner Escalation/i)).toBeVisible();
-    await expect(page.getByRole('link', { name: /Email Kiran/i })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Schedule Call', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Email Request', exact: true })).toBeVisible();
   });
 
-  test('Callback tab routes emails directly to kirkmar078@gmail.com', async ({ page }) => {
+  test('Callback tab allows scheduling meetings and submitting email inquiries', async ({ page }) => {
     await page.goto('/');
 
     const triggerBtn = page.getByRole('button', { name: /Talk to an Expert/i });
@@ -47,10 +48,10 @@ test.describe('Talk to an Expert - Agentic AI & Email Routing', () => {
     // Switch to Request Callback tab
     await page.getByRole('button', { name: /Request Callback/i }).click();
 
-    // Verify email link points to kirkmar078@gmail.com
-    const emailLink = page.locator('a[href*="mailto:kirkmar078@gmail.com"]');
-    await expect(emailLink.first()).toBeVisible();
-    await expect(page.getByText('kirkmar078@gmail.com').first()).toBeVisible();
+    // Verify Schedule Meeting and Send Email Request links inside the modal
+    const callbackTab = page.locator('form, div').filter({ hasText: /Confidential direct review/i });
+    await expect(callbackTab.getByRole('link', { name: /Schedule Meeting/i })).toBeVisible();
+    await expect(callbackTab.getByRole('link', { name: /Send Email Request/i })).toBeVisible();
 
     // Verify callback form fields
     await expect(page.getByPlaceholder('Your name *')).toBeVisible();
@@ -58,19 +59,22 @@ test.describe('Talk to an Expert - Agentic AI & Email Routing', () => {
     await expect(page.getByPlaceholder('Email address *')).toBeVisible();
   });
 
-  test('Global contact links route mailto to kirkmar078@gmail.com', async ({ page }) => {
+  test('Global contact links route to /contact and /schedule without exposing personal info', async ({ page }) => {
     await page.goto('/');
 
-    // Top contact bar mailto check
-    const topBarEmail = page.locator('div').locator('a[href^="mailto:kirkmar078@gmail.com"]').first();
-    await expect(topBarEmail).toBeVisible();
-    const topBarHref = await topBarEmail.getAttribute('href');
-    expect(topBarHref).toContain('kirkmar078@gmail.com');
+    // Top contact bar check
+    const emailInquiryLink = page.locator('header, div').getByRole('link', { name: /Email Inquiry/i }).first();
+    await expect(emailInquiryLink).toBeVisible();
+    await expect(emailInquiryLink).toHaveAttribute('href', /\/contact\/?/);
+
+    const scheduleMeetingLink = page.locator('header, div').getByRole('link', { name: /Schedule Meeting/i }).first();
+    await expect(scheduleMeetingLink).toBeVisible();
+    await expect(scheduleMeetingLink).toHaveAttribute('href', /\/schedule\/?/);
 
     // Contact page check
     await page.goto('/contact/');
-    const contactEmailLinks = page.locator('a[href^="mailto:kirkmar078@gmail.com"]');
-    expect(await contactEmailLinks.count()).toBeGreaterThanOrEqual(1);
+    await expect(page.getByRole('heading', { name: /Ways to Connect/i })).toBeVisible();
+    await expect(page.getByRole('link', { name: /Schedule a Meeting/i }).first()).toHaveAttribute('href', /\/schedule\/?/);
   });
 
   test('Talk to an Expert displays Grounded in 10,600+ Payers & CARCs badge', async ({ page }) => {

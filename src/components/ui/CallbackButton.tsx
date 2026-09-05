@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import {
   Phone,
   Mail,
+  Calendar,
   X,
   MessageSquare,
   Sparkles,
@@ -268,12 +269,12 @@ export default function CallbackButton() {
         ...prev,
         makeMsg(
           'assistant',
-          "I encountered a temporary connection issue. You can reach our senior billing desk directly at (813) 519-4640 or request a callback with Kiran.",
+          "I encountered a temporary connection issue. You can schedule a meeting directly or submit an email request.",
           [
             {
               type: 'escalate_kiran',
-              title: 'Connect with Kiran Directly',
-              data: { email: PRIMARY_EXPERT_EMAIL, phone: '(813) 519-4640' },
+              title: 'Schedule Consultation with Kiran',
+              data: { url: '/schedule' },
             },
           ]
         ),
@@ -407,7 +408,7 @@ export default function CallbackButton() {
 
   const renderFormattedInline = (line: string) => {
     // Replace markdown bold, links, code, and direct routes
-    const parts = line.split(/(\*\*.*?\*\*|`.*?`|\/[a-z0-9-]+|kirkmar078@gmail\.com|support@aetherahealthcare\.com|\(813\) 519-4640)/g);
+    const parts = line.split(/(\*\*.*?\*\*|`.*?`|\/[a-z0-9-]+)/g);
     return parts.map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {
         return <strong key={i} className="font-semibold text-slate-900">{part.slice(2, -2)}</strong>;
@@ -418,24 +419,6 @@ export default function CallbackButton() {
       if (/^\/[a-z]/.test(part)) {
         return (
           <a key={i} href={part} className="text-teal font-medium underline hover:text-navy transition-colors">
-            {part}
-          </a>
-        );
-      }
-      if (part === PRIMARY_EXPERT_EMAIL || part === 'support@aetherahealthcare.com') {
-        return (
-          <a
-            key={i}
-            href={`mailto:${PRIMARY_EXPERT_EMAIL}?subject=Aethera%20Healthcare%20Inquiry%20from%20Expert%20Chat`}
-            className="text-teal font-medium underline hover:text-navy transition-colors"
-          >
-            {part}
-          </a>
-        );
-      }
-      if (part === '(813) 519-4640') {
-        return (
-          <a key={i} href="tel:+18135194640" className="text-teal font-medium underline hover:text-navy transition-colors">
             {part}
           </a>
         );
@@ -532,17 +515,17 @@ export default function CallbackButton() {
             Kiran &amp; senior billing leadership personally review practice audits and answer complex billing questions.
           </p>
           <div className="grid grid-cols-2 gap-1.5">
-            <button
-              onClick={() => handleEscalateToCallback()}
+            <a
+              href="/schedule"
               className="inline-flex items-center justify-center gap-1 px-2.5 py-1.5 bg-navy hover:bg-teal text-white rounded-lg font-semibold transition-colors text-[11px]"
             >
-              Request Callback
-            </button>
+              <Calendar className="h-3 w-3" /> Schedule Call
+            </a>
             <a
-              href={`mailto:${PRIMARY_EXPERT_EMAIL}?subject=Aethera%20Healthcare%20Inquiry%20from%20Website&body=Hi%20Kiran,%20I'd%20like%20to%20discuss%20our%20practice%20billing...`}
+              href="/contact"
               className="inline-flex items-center justify-center gap-1 px-2.5 py-1.5 bg-white border border-slate-300 hover:border-teal text-slate-700 hover:text-teal rounded-lg font-semibold transition-colors text-[11px]"
             >
-              <Mail className="h-3 w-3" /> Email Kiran
+              <Mail className="h-3 w-3" /> Email Request
             </a>
           </div>
         </div>
@@ -742,8 +725,7 @@ export default function CallbackButton() {
                   </div>
                   <h4 className="text-lg font-bold text-navy">Callback Request Dispatched!</h4>
                   <p className="text-xs text-slate-600 max-w-xs mx-auto leading-relaxed">
-                    Thank you! Your request and inquiry notes have been routed directly to Kiran (
-                    <strong className="text-navy">{PRIMARY_EXPERT_EMAIL}</strong>). Expect a follow-up or call within 2 business hours.
+                    Thank you! Your request and inquiry notes have been routed directly to Kiran &amp; our senior billing team. Expect a follow-up or confirmation within 2 business hours.
                   </p>
                   <div className="pt-2">
                     <button
@@ -760,21 +742,21 @@ export default function CallbackButton() {
                   {/* Quick Connect Bar */}
                   <div className="grid grid-cols-2 gap-2">
                     <a
-                      href="tel:+18135194640"
+                      href="/schedule"
                       className="flex items-center justify-center gap-1.5 bg-teal hover:bg-navy text-white font-semibold py-2 px-3 rounded-xl transition-colors text-xs text-center"
                     >
-                      <Phone className="h-3.5 w-3.5" /> Call (813) 519-4640
+                      <Calendar className="h-3.5 w-3.5" /> Schedule Meeting
                     </a>
                     <a
-                      href={`mailto:${PRIMARY_EXPERT_EMAIL}?subject=Talk%20to%20an%20Expert%20-%20Aethera%20Healthcare&body=Hello%20Kiran,%0A%0AI%20am%20interested%20in%20discussing%20our%20practice%20billing...`}
+                      href="/contact"
                       className="flex items-center justify-center gap-1.5 border border-teal text-teal hover:bg-teal hover:text-white font-semibold py-2 px-3 rounded-xl transition-colors text-xs text-center"
                     >
-                      <Mail className="h-3.5 w-3.5" /> Email Kiran Directly
+                      <Mail className="h-3.5 w-3.5" /> Send Email Request
                     </a>
                   </div>
 
                   <p className="text-center text-[11px] text-slate-500">
-                    Direct lead routing: <strong>{PRIMARY_EXPERT_EMAIL}</strong>
+                    Confidential direct review &middot; 1 business day response
                   </p>
 
                   <div className="flex items-center gap-2">
@@ -866,7 +848,7 @@ export default function CallbackButton() {
 
                     {callbackStatus === 'error' && (
                       <p className="text-red-500 text-[11px]">
-                        Something went wrong. Please call directly at (813) 519-4640 or email {PRIMARY_EXPERT_EMAIL}.
+                        Something went wrong. Please submit your request via our <a href="/contact" className="underline font-semibold">contact form</a> or <a href="/schedule" className="underline font-semibold">schedule a meeting</a>.
                       </p>
                     )}
 

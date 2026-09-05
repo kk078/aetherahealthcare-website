@@ -876,7 +876,7 @@ IEA*1*000000103~`;
                     )}
                   </button>
                   <p className="text-[10px] text-slate-400 text-center mt-2">
-                    Direct confidential transmission to Kiran (kirkmar078@gmail.com). Zero PHI retention.
+                    Direct confidential transmission to Kiran &amp; senior billing leadership. Zero PHI retention.
                   </p>
                 </div>
               </form>

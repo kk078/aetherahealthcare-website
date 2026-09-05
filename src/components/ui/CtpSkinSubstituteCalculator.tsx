@@ -176,11 +176,11 @@ export default function CtpSkinSubstituteCalculator() {
         trackConversion('assessment');
       } else {
         setFormStatus('error');
-        setFormError('Submission issue. Please email us directly at support@aetherahealthcare.com');
+        setFormError('Submission issue. Please submit an inquiry via our contact form or schedule a consultation directly.');
       }
     } catch {
       setFormStatus('error');
-      setFormError('Network error. Please call (813) 519-4640.');
+      setFormError('Network error. Please submit an inquiry via our contact form or schedule a consultation directly.');
     }
   };
 

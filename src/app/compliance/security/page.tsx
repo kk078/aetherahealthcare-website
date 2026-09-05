@@ -87,10 +87,10 @@ export default function SecurityCompliance() {
                 certification roadmap — for your compliance or legal review.
               </p>
               <Link prefetch={false}
-                href="mailto:info@aetherahealthcare.com?subject=Security%20One-Pager%20and%20Offshore%20FAQ%20Request"
+                href="/contact"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >
-                Email info@aetherahealthcare.com
+                Request via Contact Form
               </Link>
             </FadeIn>
           </div>

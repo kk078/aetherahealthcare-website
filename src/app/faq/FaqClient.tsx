@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import {
   ChevronDown,
@@ -350,18 +351,18 @@ export default function FaqClient() {
                 Our team is ready to provide personalized answers and assistance.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <a
-                  href="mailto:support@aetherahealthcare.com"
+                <Link
+                  href="/contact"
                   className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >
-                  Email Support
-                </a>
-                <a
-                  href="/contact"
+                  Send Email Request
+                </Link>
+                <Link
+                  href="/schedule"
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >
-                  Contact Us
-                </a>
+                  Schedule Consultation
+                </Link>
               </div>
             </FadeIn>
           </div>

@@ -92,8 +92,8 @@ test.describe('Free 50-Claim Pilot Interactive Modal', () => {
     await expect(page.getByRole('heading', { name: '50-Claim Pilot Slot Reserved!' })).toBeVisible();
     await expect(page.getByText('Dr. Robert Vance')).toBeVisible();
     await expect(page.getByText('Vance Cardiology Associates')).toBeVisible();
-    await expect(page.getByText('What happens next within 2 business hours:')).toBeVisible();
-    await expect(page.getByRole('dialog').getByRole('link', { name: '+1 (813) 519-4640' })).toBeVisible();
+    await expect(page.getByRole('dialog').getByRole('link', { name: /Schedule a meeting with Kiran/i })).toBeVisible();
+    await expect(page.getByRole('dialog').getByRole('link', { name: /submit an email request/i })).toBeVisible();
 
     await page.screenshot({ path: `${ARTIFACT_DIR}/free_pilot_modal_success.png`, fullPage: false });
 
