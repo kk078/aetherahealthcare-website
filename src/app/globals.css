@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --navy: #0B2545;
   --ink: #001529;         /* deepest navy — RCM hero background */
@@ -238,17 +240,30 @@ html.dark .text-\[\#003087\] {
   color: #60A5FA !important;
 }
 
+/* Universal Form Input High-Contrast Legibility */
+input,
+select,
+textarea {
+  background-color: #FFFFFF;
+  color: #0F172A;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94A3B8;
+}
+
 html.dark input,
 html.dark select,
 html.dark textarea {
-  background-color: #0A1525 !important;
-  color: #F8FAFC !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
+  background-color: #071526 !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
 }
 
 html.dark input::placeholder,
 html.dark textarea::placeholder {
-  color: #64748B !important;
+  color: #94A3B8 !important;
 }
 
 html.dark .hover\:bg-\[\#F0F4FB\]:hover {

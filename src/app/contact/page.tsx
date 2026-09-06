@@ -75,9 +75,9 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
             <FadeIn>
-              <div className="bg-cream rounded-2xl p-8 h-full flex flex-col justify-between">
+              <div className="bg-cream dark:bg-[#0c1f38] rounded-2xl p-8 h-full flex flex-col justify-between border border-slate-200/60 dark:border-slate-700/80 transition-colors">
                 <div>
-                  <h3 className="text-2xl font-bold text-navy mb-6">Ways to Connect</h3>
+                  <h3 className="text-2xl font-bold text-navy dark:text-white mb-6">Ways to Connect</h3>
 
                   <div className="space-y-6">
                     <div className="flex items-start">
@@ -85,14 +85,14 @@ export default function Contact() {
                         <Calendar className="h-6 w-6" />
                       </div>
                       <div className="ml-4">
-                        <h4 className="font-bold text-navy">Schedule a Meeting</h4>
-                        <p className="text-gray text-sm mt-1">
+                        <h4 className="font-bold text-navy dark:text-white">Schedule a Meeting</h4>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm mt-1">
                           Book a 1-on-1 video or phone consultation directly with Kiran at a time that works best for your schedule.
                         </p>
                         <Link
                           prefetch={false}
                           href="/schedule"
-                          className="inline-flex items-center gap-1.5 mt-2.5 px-4 py-1.5 bg-navy hover:bg-teal text-white text-xs font-bold rounded-lg transition-colors shadow-xs"
+                          className="inline-flex items-center gap-1.5 mt-2.5 px-4 py-1.5 bg-navy dark:bg-mint hover:bg-teal dark:hover:bg-emerald-400 text-white dark:text-navy text-xs font-bold rounded-lg transition-colors shadow-xs"
                         >
                           Pick a Time on Calendar &rarr;
                         </Link>
@@ -104,11 +104,11 @@ export default function Contact() {
                         <Mail className="h-6 w-6" />
                       </div>
                       <div className="ml-4">
-                        <h4 className="font-bold text-navy">Online Email Request</h4>
-                        <p className="text-gray text-sm mt-1">
+                        <h4 className="font-bold text-navy dark:text-white">Online Email Request</h4>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm mt-1">
                           Submit your practice details or billing questions using our form. Kiran and our senior billing team personally review every submission.
                         </p>
-                        <p className="text-teal font-semibold text-xs mt-1.5 flex items-center gap-1">
+                        <p className="text-teal dark:text-mint font-semibold text-xs mt-1.5 flex items-center gap-1">
                           <CheckCircle2 className="h-3.5 w-3.5" /> Direct response guaranteed within 1 business day
                         </p>
                       </div>
@@ -119,18 +119,18 @@ export default function Contact() {
                         <Clock className="h-6 w-6" />
                       </div>
                       <div className="ml-4">
-                        <h4 className="font-bold text-navy">Operating Hours</h4>
-                        <p className="text-gray text-sm">Monday &ndash; Friday: 9:00 AM &ndash; 6:00 PM EST</p>
-                        <p className="text-gray text-xs mt-0.5">Weekend urgent inquiries triaged on-demand</p>
+                        <h4 className="font-bold text-navy dark:text-white">Operating Hours</h4>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm">Monday &ndash; Friday: 9:00 AM &ndash; 6:00 PM EST</p>
+                        <p className="text-slate-500 dark:text-slate-400 text-xs mt-0.5">Weekend urgent inquiries triaged on-demand</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-gray/15">
-                  <div className="bg-white rounded-xl p-4 border border-teal/20 flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-teal shrink-0" />
-                    <p className="text-xs text-navy leading-snug">
+                <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700/80">
+                  <div className="bg-white dark:bg-[#071322] rounded-xl p-4 border border-teal/20 dark:border-teal/40 flex items-center gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-teal dark:text-mint shrink-0" />
+                    <p className="text-xs text-navy dark:text-slate-200 leading-snug">
                       <strong>Zero Sales Spam:</strong> You will interface directly with revenue cycle specialists and practice leadership.
                     </p>
                   </div>
