@@ -99,9 +99,9 @@ export default function Portal() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            label="PORTAL PREVIEW"
-            title="A Closer Look at Your Dashboard"
-            description="Representative view of the Aethera Provider Portal. Your actual dashboard reflects your live data."
+            label="LIVE CLIENT SANDBOX"
+            title="Interactive Provider Portal Experience"
+            description="Test-drive Aethera's 24/7 revenue command center. Switch between clinical specialties, inspect EDI 837P/835 transaction loops, simulate real-time remittances, and trigger AI appeal packages."
           />
           <FadeIn delay={0.2}>
             <div className="mt-12">

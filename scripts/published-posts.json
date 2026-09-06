@@ -52,5 +52,14 @@
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7502220741518675968",
     "mediaUrn": "urn:li:document:D5610AQEZ1-YF_fOmyg",
     "publishedAt": "2026-09-06T04:26:49.690Z"
+  },
+  {
+    "id": "payer_ai_arms_race",
+    "title": "Commercial Payers Are Denying Claims With AI. Why US Providers Cant Win with Manual Billing.",
+    "format": "text",
+    "postUrn": "urn:li:share:7502221260819648512",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:share:7502221260819648512",
+    "mediaUrn": null,
+    "publishedAt": "2026-09-06T04:28:53.375Z"
   }
 ]
