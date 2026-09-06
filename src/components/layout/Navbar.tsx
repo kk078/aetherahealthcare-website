@@ -54,45 +54,64 @@ const solutions = [
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<'services' | 'solutions' | 'why' | null>(null);
+  const [lockedDropdown, setLockedDropdown] = useState<'services' | 'solutions' | 'why' | null>(null);
+  const [hoverDropdown, setHoverDropdown] = useState<'services' | 'solutions' | 'why' | null>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const navRef = useRef<HTMLElement | null>(null);
 
-  const openDropdown = (name: 'services' | 'solutions' | 'why') => {
+  const activeDropdown = lockedDropdown || hoverDropdown;
+
+  const openHover = (name: 'services' | 'solutions' | 'why') => {
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
       closeTimeoutRef.current = null;
     }
-    setActiveDropdown(name);
+    if (!lockedDropdown) {
+      setHoverDropdown(name);
+    }
   };
 
-  const closeDropdown = () => {
+  const closeHover = () => {
+    // If the user clicked to open, NEVER close on mouseleave!
+    if (lockedDropdown) return;
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
     }
     closeTimeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 220); // 220ms grace window ensures smooth diagonal cursor movement without accidental closing
+      setHoverDropdown(null);
+    }, 600);
   };
 
-  const toggleDropdown = (name: 'services' | 'solutions' | 'why') => {
+  const toggleClick = (name: 'services' | 'solutions' | 'why') => {
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
       closeTimeoutRef.current = null;
     }
-    setActiveDropdown((prev) => (prev === name ? null : name));
+    setHoverDropdown(null);
+    setLockedDropdown((prev) => (prev === name ? null : name));
+  };
+
+  const closeAll = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setLockedDropdown(null);
+    setHoverDropdown(null);
   };
 
   // Close dropdown when clicking outside or pressing Escape
   useEffect(() => {
-    const handlePointerDown = (e: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        setActiveDropdown(null);
+    const handlePointerDown = (e: MouseEvent | PointerEvent) => {
+      const target = e.target as HTMLElement | null;
+      // Close dropdown if click is outside any nav dropdown container
+      if (!target?.closest?.('[data-nav-dropdown]')) {
+        closeAll();
       }
     };
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        setActiveDropdown(null);
+        closeAll();
       }
     };
     document.addEventListener('pointerdown', handlePointerDown);
@@ -144,13 +163,14 @@ export default function Navbar() {
 
               {/* Services Dropdown */}
               <div
+                data-nav-dropdown="services"
                 className="relative py-2"
-                onMouseEnter={() => openDropdown('services')}
-                onMouseLeave={closeDropdown}
+                onMouseEnter={() => openHover('services')}
+                onMouseLeave={closeHover}
               >
                 <button
                   type="button"
-                  onClick={() => toggleDropdown('services')}
+                  onClick={() => toggleClick('services')}
                   aria-expanded={activeDropdown === 'services'}
                   aria-haspopup="true"
                   className={`inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium transition-colors cursor-pointer py-1 px-1.5 rounded-md ${
@@ -170,11 +190,17 @@ export default function Navbar() {
 
                 {/* Dropdown Menu Container with top padding for seamless hover bridge */}
                 <div
-                  className={`absolute left-0 top-full pt-1.5 w-[520px] z-50 transition-all duration-200 before:absolute before:-top-3 before:left-0 before:w-full before:h-4 before:content-[''] ${
+                  className={`absolute left-0 top-full pt-1.5 w-[520px] z-50 transition-all duration-200 before:absolute before:-top-4 before:left-0 before:w-full before:h-6 before:content-[''] ${
                     activeDropdown === 'services'
                       ? 'opacity-100 visible translate-y-0 pointer-events-auto'
                       : 'opacity-0 invisible -translate-y-1 pointer-events-none'
                   }`}
+                  onMouseEnter={() => openHover('services')}
+                  onMouseLeave={closeHover}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setLockedDropdown('services');
+                  }}
                 >
                   <div className="p-5 bg-white rounded-xl shadow-2xl border border-[#003087]/15">
                     <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest mb-3">All RCM Services</p>
@@ -184,7 +210,7 @@ export default function Navbar() {
                           prefetch={false}
                           key={service.name}
                           href={service.href}
-                          onClick={() => setActiveDropdown(null)}
+                          onClick={closeAll}
                           className="text-[#334155] hover:text-[#003087] hover:bg-[#F0F4FB] px-2 py-1 rounded transition-colors text-sm"
                         >
                           {service.name}
@@ -199,7 +225,7 @@ export default function Navbar() {
                             prefetch={false}
                             key={s.name}
                             href={s.href}
-                            onClick={() => setActiveDropdown(null)}
+                            onClick={closeAll}
                             className="text-[#003087] hover:text-[#001A52] hover:bg-[#F0F4FB] px-2 py-1 rounded transition-colors text-sm font-medium"
                           >
                             {s.name}
@@ -213,13 +239,14 @@ export default function Navbar() {
 
               {/* Solutions Dropdown */}
               <div
+                data-nav-dropdown="solutions"
                 className="relative py-2"
-                onMouseEnter={() => openDropdown('solutions')}
-                onMouseLeave={closeDropdown}
+                onMouseEnter={() => openHover('solutions')}
+                onMouseLeave={closeHover}
               >
                 <button
                   type="button"
-                  onClick={() => toggleDropdown('solutions')}
+                  onClick={() => toggleClick('solutions')}
                   aria-expanded={activeDropdown === 'solutions'}
                   aria-haspopup="true"
                   className={`inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium transition-colors cursor-pointer py-1 px-1.5 rounded-md ${
@@ -238,11 +265,17 @@ export default function Navbar() {
                 </button>
 
                 <div
-                  className={`absolute left-0 top-full pt-1.5 w-80 z-50 transition-all duration-200 before:absolute before:-top-3 before:left-0 before:w-full before:h-4 before:content-[''] ${
+                  className={`absolute left-0 top-full pt-1.5 w-80 z-50 transition-all duration-200 before:absolute before:-top-4 before:left-0 before:w-full before:h-6 before:content-[''] ${
                     activeDropdown === 'solutions'
                       ? 'opacity-100 visible translate-y-0 pointer-events-auto'
                       : 'opacity-0 invisible -translate-y-1 pointer-events-none'
                   }`}
+                  onMouseEnter={() => openHover('solutions')}
+                  onMouseLeave={closeHover}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setLockedDropdown('solutions');
+                  }}
                 >
                   <div className="p-4 space-y-1 bg-white rounded-xl shadow-2xl border border-[#003087]/15">
                     {solutions.map((item) => (
@@ -250,7 +283,7 @@ export default function Navbar() {
                         prefetch={false}
                         key={item.name}
                         href={item.href}
-                        onClick={() => setActiveDropdown(null)}
+                        onClick={closeAll}
                         className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-[#F0F4FB] transition-colors"
                       >
                         <span className="text-sm font-semibold text-[#001A52]">{item.name}</span>
@@ -270,13 +303,14 @@ export default function Navbar() {
 
               {/* Why Aethera Dropdown */}
               <div
+                data-nav-dropdown="why"
                 className="relative py-2"
-                onMouseEnter={() => openDropdown('why')}
-                onMouseLeave={closeDropdown}
+                onMouseEnter={() => openHover('why')}
+                onMouseLeave={closeHover}
               >
                 <button
                   type="button"
-                  onClick={() => toggleDropdown('why')}
+                  onClick={() => toggleClick('why')}
                   aria-expanded={activeDropdown === 'why'}
                   aria-haspopup="true"
                   className={`inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium transition-colors cursor-pointer py-1 px-1.5 rounded-md ${
@@ -295,11 +329,17 @@ export default function Navbar() {
                 </button>
 
                 <div
-                  className={`absolute left-0 top-full pt-1.5 w-80 z-50 transition-all duration-200 before:absolute before:-top-3 before:left-0 before:w-full before:h-4 before:content-[''] ${
+                  className={`absolute left-0 top-full pt-1.5 w-80 z-50 transition-all duration-200 before:absolute before:-top-4 before:left-0 before:w-full before:h-6 before:content-[''] ${
                     activeDropdown === 'why'
                       ? 'opacity-100 visible translate-y-0 pointer-events-auto'
                       : 'opacity-0 invisible -translate-y-1 pointer-events-none'
                   }`}
+                  onMouseEnter={() => openHover('why')}
+                  onMouseLeave={closeHover}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setLockedDropdown('why');
+                  }}
                 >
                   <div className="p-4 space-y-1 bg-white rounded-xl shadow-2xl border border-[#003087]/15">
                     {whyAethera.map((item) => (
@@ -307,7 +347,7 @@ export default function Navbar() {
                         prefetch={false}
                         key={item.name}
                         href={item.href}
-                        onClick={() => setActiveDropdown(null)}
+                        onClick={closeAll}
                         className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-[#F0F4FB] transition-colors"
                       >
                         <span className="text-sm font-semibold text-[#001A52]">{item.name}</span>
