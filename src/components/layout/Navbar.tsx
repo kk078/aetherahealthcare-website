@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, Search } from 'lucide-react';
+import { Menu, X, Search, ChevronDown } from 'lucide-react';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 
 const services = [
@@ -54,6 +54,54 @@ const solutions = [
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<'services' | 'solutions' | 'why' | null>(null);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const navRef = useRef<HTMLElement | null>(null);
+
+  const openDropdown = (name: 'services' | 'solutions' | 'why') => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setActiveDropdown(name);
+  };
+
+  const closeDropdown = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+    }
+    closeTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 220); // 220ms grace window ensures smooth diagonal cursor movement without accidental closing
+  };
+
+  const toggleDropdown = (name: 'services' | 'solutions' | 'why') => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setActiveDropdown((prev) => (prev === name ? null : name));
+  };
+
+  // Close dropdown when clicking outside or pressing Escape
+  useEffect(() => {
+    const handlePointerDown = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener('pointerdown', handlePointerDown);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -91,20 +139,54 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:block">
+          <nav ref={navRef} className="hidden lg:block">
             <div className="ml-4 xl:ml-6 flex items-center space-x-4 xl:space-x-6">
 
               {/* Services Dropdown */}
-              <div className="relative group">
-                <button className="inline-flex items-center gap-1 whitespace-nowrap text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                  Services <span aria-hidden>▾</span>
+              <div
+                className="relative py-2"
+                onMouseEnter={() => openDropdown('services')}
+                onMouseLeave={closeDropdown}
+              >
+                <button
+                  type="button"
+                  onClick={() => toggleDropdown('services')}
+                  aria-expanded={activeDropdown === 'services'}
+                  aria-haspopup="true"
+                  className={`inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium transition-colors cursor-pointer py-1 px-1.5 rounded-md ${
+                    activeDropdown === 'services'
+                      ? 'text-[#003087] font-semibold bg-[#003087]/5'
+                      : 'text-[#334155] hover:text-[#003087]'
+                  }`}
+                >
+                  Services
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                      activeDropdown === 'services' ? 'rotate-180 text-[#003087]' : 'text-slate-400'
+                    }`}
+                    aria-hidden="true"
+                  />
                 </button>
-                <div className="absolute left-0 mt-2 w-[520px] bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-[#003087]/10">
-                  <div className="p-5">
+
+                {/* Dropdown Menu Container with top padding for seamless hover bridge */}
+                <div
+                  className={`absolute left-0 top-full pt-1.5 w-[520px] z-50 transition-all duration-200 before:absolute before:-top-3 before:left-0 before:w-full before:h-4 before:content-[''] ${
+                    activeDropdown === 'services'
+                      ? 'opacity-100 visible translate-y-0 pointer-events-auto'
+                      : 'opacity-0 invisible -translate-y-1 pointer-events-none'
+                  }`}
+                >
+                  <div className="p-5 bg-white rounded-xl shadow-2xl border border-[#003087]/15">
                     <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest mb-3">All RCM Services</p>
                     <div className="grid grid-cols-2 gap-x-6 gap-y-2 mb-4">
                       {services.map((service) => (
-                        <Link prefetch={false} key={service.name} href={service.href} className="text-[#334155] hover:text-[#003087] transition-colors text-sm py-0.5">
+                        <Link
+                          prefetch={false}
+                          key={service.name}
+                          href={service.href}
+                          onClick={() => setActiveDropdown(null)}
+                          className="text-[#334155] hover:text-[#003087] hover:bg-[#F0F4FB] px-2 py-1 rounded transition-colors text-sm"
+                        >
                           {service.name}
                         </Link>
                       ))}
@@ -113,7 +195,13 @@ export default function Navbar() {
                       <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest mb-2">By Specialty</p>
                       <div className="grid grid-cols-2 gap-x-6 gap-y-1">
                         {specialtyServices.map((s) => (
-                          <Link prefetch={false} key={s.name} href={s.href} className="text-[#003087] hover:text-[#001A52] transition-colors text-sm py-0.5 font-medium">
+                          <Link
+                            prefetch={false}
+                            key={s.name}
+                            href={s.href}
+                            onClick={() => setActiveDropdown(null)}
+                            className="text-[#003087] hover:text-[#001A52] hover:bg-[#F0F4FB] px-2 py-1 rounded transition-colors text-sm font-medium"
+                          >
                             {s.name}
                           </Link>
                         ))}
@@ -124,14 +212,47 @@ export default function Navbar() {
               </div>
 
               {/* Solutions Dropdown */}
-              <div className="relative group">
-                <button className="inline-flex items-center gap-1 whitespace-nowrap text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                  Solutions <span aria-hidden>▾</span>
+              <div
+                className="relative py-2"
+                onMouseEnter={() => openDropdown('solutions')}
+                onMouseLeave={closeDropdown}
+              >
+                <button
+                  type="button"
+                  onClick={() => toggleDropdown('solutions')}
+                  aria-expanded={activeDropdown === 'solutions'}
+                  aria-haspopup="true"
+                  className={`inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium transition-colors cursor-pointer py-1 px-1.5 rounded-md ${
+                    activeDropdown === 'solutions'
+                      ? 'text-[#003087] font-semibold bg-[#003087]/5'
+                      : 'text-[#334155] hover:text-[#003087]'
+                  }`}
+                >
+                  Solutions
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                      activeDropdown === 'solutions' ? 'rotate-180 text-[#003087]' : 'text-slate-400'
+                    }`}
+                    aria-hidden="true"
+                  />
                 </button>
-                <div className="absolute left-0 mt-2 w-80 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-[#003087]/10">
-                  <div className="p-4 space-y-1">
+
+                <div
+                  className={`absolute left-0 top-full pt-1.5 w-80 z-50 transition-all duration-200 before:absolute before:-top-3 before:left-0 before:w-full before:h-4 before:content-[''] ${
+                    activeDropdown === 'solutions'
+                      ? 'opacity-100 visible translate-y-0 pointer-events-auto'
+                      : 'opacity-0 invisible -translate-y-1 pointer-events-none'
+                  }`}
+                >
+                  <div className="p-4 space-y-1 bg-white rounded-xl shadow-2xl border border-[#003087]/15">
                     {solutions.map((item) => (
-                      <Link prefetch={false} key={item.name} href={item.href} className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-[#F0F4FB] transition-colors">
+                      <Link
+                        prefetch={false}
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setActiveDropdown(null)}
+                        className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-[#F0F4FB] transition-colors"
+                      >
                         <span className="text-sm font-semibold text-[#001A52]">{item.name}</span>
                         <span className="text-xs text-[#64748B] mt-0.5">{item.desc}</span>
                       </Link>
@@ -148,14 +269,47 @@ export default function Navbar() {
               </Link>
 
               {/* Why Aethera Dropdown */}
-              <div className="relative group">
-                <button className="inline-flex items-center gap-1 whitespace-nowrap text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium">
-                  Why Aethera <span aria-hidden>▾</span>
+              <div
+                className="relative py-2"
+                onMouseEnter={() => openDropdown('why')}
+                onMouseLeave={closeDropdown}
+              >
+                <button
+                  type="button"
+                  onClick={() => toggleDropdown('why')}
+                  aria-expanded={activeDropdown === 'why'}
+                  aria-haspopup="true"
+                  className={`inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium transition-colors cursor-pointer py-1 px-1.5 rounded-md ${
+                    activeDropdown === 'why'
+                      ? 'text-[#003087] font-semibold bg-[#003087]/5'
+                      : 'text-[#334155] hover:text-[#003087]'
+                  }`}
+                >
+                  Why Aethera
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                      activeDropdown === 'why' ? 'rotate-180 text-[#003087]' : 'text-slate-400'
+                    }`}
+                    aria-hidden="true"
+                  />
                 </button>
-                <div className="absolute left-0 mt-2 w-80 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-[#003087]/10">
-                  <div className="p-4 space-y-1">
+
+                <div
+                  className={`absolute left-0 top-full pt-1.5 w-80 z-50 transition-all duration-200 before:absolute before:-top-3 before:left-0 before:w-full before:h-4 before:content-[''] ${
+                    activeDropdown === 'why'
+                      ? 'opacity-100 visible translate-y-0 pointer-events-auto'
+                      : 'opacity-0 invisible -translate-y-1 pointer-events-none'
+                  }`}
+                >
+                  <div className="p-4 space-y-1 bg-white rounded-xl shadow-2xl border border-[#003087]/15">
                     {whyAethera.map((item) => (
-                      <Link prefetch={false} key={item.name} href={item.href} className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-[#F0F4FB] transition-colors">
+                      <Link
+                        prefetch={false}
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setActiveDropdown(null)}
+                        className="flex flex-col px-3 py-2.5 rounded-lg hover:bg-[#F0F4FB] transition-colors"
+                      >
                         <span className="text-sm font-semibold text-[#001A52]">{item.name}</span>
                         <span className="text-xs text-[#64748B] mt-0.5">{item.desc}</span>
                       </Link>
