@@ -159,7 +159,7 @@ async function publishViaLinkedInApi(campaign, isDryRun) {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${token}`,
-      'LinkedIn-Version': '202401',
+      'LinkedIn-Version': '202601',
       'X-Restli-Protocol-Version': '2.0.0',
       'Content-Type': 'application/json',
     },
@@ -202,7 +202,7 @@ async function publishViaLinkedInApi(campaign, isDryRun) {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${token}`,
-      'LinkedIn-Version': '202401',
+      'LinkedIn-Version': '202601',
       'X-Restli-Protocol-Version': '2.0.0',
       'Content-Type': 'application/json',
     },

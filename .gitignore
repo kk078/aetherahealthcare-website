@@ -37,6 +37,9 @@ yarn-error.log*
 .env*
 !.env.example
 
+# LinkedIn publish logs & screenshots
+public/brand/carousel/publish_logs/
+
 # vercel
 .vercel
 
