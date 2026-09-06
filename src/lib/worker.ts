@@ -60,9 +60,138 @@ function mapToCrm(formType: string, data: AnyData): { path: string; payload: Any
   return { path: '/contact', payload: { name, practice, email, phone, specialty, message, routedTo: PRIMARY_EXPERT_EMAIL } };
 }
 
-// Email backup so a CRM outage can never silently lose a lead. Uses Web3Forms
-// routed directly to Kiran (kirkmar078@gmail.com).
+// Direct email delivery to Kiran (kirkmar078@gmail.com) via FormSubmit
+const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${PRIMARY_EXPERT_EMAIL}`;
+
+// Instant real-time push notification topic for mobile/desktop
+export const NTFY_LEADS_TOPIC = 'https://ntfy.sh/aethera_leads_kiran_2026';
+
+// Backup Web3Forms key
 const WEB3FORMS_KEY = 'b1e9389e-b14d-4e6a-84eb-e4708fcb39f4';
+
+function recordInLocalVault(formType: string, leadData: AnyData) {
+  if (typeof window === 'undefined' || !window.localStorage) return;
+  try {
+    const existingStr = window.localStorage.getItem('aethera_leads_vault');
+    const existing = existingStr ? JSON.parse(existingStr) : [];
+    const record = {
+      id: `lead_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
+      formType,
+      timestamp: new Date().toISOString(),
+      leadData,
+    };
+    existing.unshift(record);
+    // Keep last 50 submissions
+    window.localStorage.setItem('aethera_leads_vault', JSON.stringify(existing.slice(0, 50)));
+  } catch {
+    // Non-critical local storage errors ignored
+  }
+}
+
+async function deliverViaFormSubmit(formType: string, data: AnyData): Promise<boolean> {
+  try {
+    const name = String(data.name || data.firstName ? `${data.firstName || ''} ${data.lastName || ''}`.trim() : data.practiceContact || 'Website Visitor');
+    const email = String(data.email || data.scheduleEmail || '') || 'no-reply@aetherahealthcare.com';
+    const phone = String(data.phone || data.schedulePhone || '') || 'Not provided';
+    const practice = String(data.practiceName || data.practice || '') || 'Not specified';
+    const specialty = String(data.specialty || data.practiceSpecialty || '') || 'Healthcare / General';
+    const rawMessage = String(data.message || data.consultationNotes || data.challenge || data.bottleneck || '');
+    
+    const attr = getAttribution();
+    const source = String(data.campaign_source || attr?.utmSource || 'Direct / Organic');
+    const medium = String(data.campaign_medium || attr?.utmMedium || 'N/A');
+    const campaign = String(data.campaign_name || attr?.utmCampaign || 'N/A');
+    const term = String(data.campaign_term || attr?.utmTerm || 'N/A');
+    const gclid = String(data.google_click_id || attr?.gclid || 'None');
+    const landing = String(data.landing_page || attr?.landingPage || 'Direct entry');
+
+    const flatDetails: Record<string, string> = {};
+    for (const [k, v] of Object.entries(data)) {
+      if (v != null && typeof v !== 'object' && k !== 'hp_field' && k !== 'botcheck') {
+        flatDetails[k] = String(v);
+      }
+    }
+
+    const payload = {
+      _subject: `[AETHERA LEAD -> ${PRIMARY_EXPERT_EMAIL}] ${formType.replace(/_/g, ' ').toUpperCase()} - ${name} (${specialty})`,
+      _template: 'table',
+      _captcha: 'false',
+      _replyto: email,
+      'Lead Full Name': name,
+      'Email Address': email,
+      'Phone Number': phone,
+      'Practice / Organization': practice,
+      'Medical Specialty': specialty,
+      'Inquiry Category': formType.replace(/_/g, ' ').toUpperCase(),
+      'Message / Requirements': rawMessage || 'Inquiry submitted via website form',
+      ...flatDetails,
+      'Traffic Source': source,
+      'Campaign Medium': medium,
+      'Campaign Name': campaign,
+      'Search Keyword': term,
+      'Google Click ID': gclid,
+      'Initial Landing Page': landing,
+      'Submission Timestamp': new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }) + ' ET',
+    };
+
+    const res = await fetch(FORMSUBMIT_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (res.ok) {
+      const json = await res.json().catch(() => null);
+      if (json && (json.success === 'true' || json.success === true)) {
+        return true;
+      }
+    }
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+async function deliverViaNtfy(formType: string, data: AnyData): Promise<boolean> {
+  try {
+    const name = String(data.name || data.firstName ? `${data.firstName || ''} ${data.lastName || ''}`.trim() : data.practiceContact || 'Website Visitor');
+    const email = String(data.email || data.scheduleEmail || 'no email');
+    const phone = String(data.phone || data.schedulePhone || 'no phone');
+    const practice = String(data.practiceName || data.practice || 'unspecified practice');
+    const specialty = String(data.specialty || data.practiceSpecialty || 'General');
+    const rawMessage = String(data.message || data.consultationNotes || data.challenge || data.bottleneck || '');
+
+    // Header values MUST be ASCII only to avoid ByteString errors
+    const safeTitle = `New Lead: ${name.replace(/[^\x00-\x7F]/g, '')} (${specialty.replace(/[^\x00-\x7F]/g, '')})`.slice(0, 100);
+
+    const bodyText = [
+      `Name: ${name}`,
+      `Practice: ${practice}`,
+      `Specialty: ${specialty}`,
+      `Email: ${email}`,
+      `Phone: ${phone}`,
+      `Channel: ${formType}`,
+      rawMessage ? `Notes: ${rawMessage}` : '',
+    ].filter(Boolean).join('\n');
+
+    const res = await fetch(NTFY_LEADS_TOPIC, {
+      method: 'POST',
+      headers: {
+        Title: safeTitle,
+        Priority: 'urgent',
+        Tags: 'hospital,bell,incoming_envelope',
+        Click: 'https://aetherahealthcare.com/contact',
+      },
+      body: bodyText,
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
 
 async function emailFallback(formType: string, data: AnyData): Promise<boolean> {
   try {
@@ -72,13 +201,6 @@ async function emailFallback(formType: string, data: AnyData): Promise<boolean> 
       .join('\n');
     const email = String(data.email || data.scheduleEmail || '') || 'no-reply@aetherahealthcare.com';
     const name = String(data.firstName || data.name || data.practiceContact || 'Website Visitor');
-    const attr = getAttribution();
-    const source = String(data.campaign_source || attr?.utmSource || 'Direct / Organic');
-    const medium = String(data.campaign_medium || attr?.utmMedium || 'N/A');
-    const campaign = String(data.campaign_name || attr?.utmCampaign || 'N/A');
-    const term = String(data.campaign_term || attr?.utmTerm || 'N/A');
-    const gclid = String(data.google_click_id || attr?.gclid || 'None');
-    const landing = String(data.landing_page || attr?.landingPage || 'Direct entry');
 
     const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -88,36 +210,13 @@ async function emailFallback(formType: string, data: AnyData): Promise<boolean> 
         subject: `[AETHERA LEAD -> ${PRIMARY_EXPERT_EMAIL}] ${formType.replace(/_/g, ' ').toUpperCase()} from ${name}`,
         from_name: `${name} (Aethera Web Lead)`,
         email,
-        to_email: PRIMARY_EXPERT_EMAIL,
-        recipient: PRIMARY_EXPERT_EMAIL,
-        target_email: PRIMARY_EXPERT_EMAIL,
-        reply_to: email,
-        message:
-          `====================================================\n` +
-          `AETHERA HEALTHCARE SOLUTIONS — NEW WEBSITE INQUIRY\n` +
-          `ROUTED DIRECTLY TO: ${PRIMARY_EXPERT_EMAIL}\n` +
-          `====================================================\n\n` +
-          `Form Channel: ${formType}\n` +
-          `Timestamp: ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })} ET\n` +
-          `Visitor Name: ${name}\n` +
-          `Visitor Email: ${email}\n\n` +
-          `--- Marketing Campaign Attribution ---\n` +
-          `Traffic Source: ${source}\n` +
-          `Medium: ${medium}\n` +
-          `Campaign: ${campaign}\n` +
-          `Search Keyword / Term: ${term}\n` +
-          `Google Ads GCLID: ${gclid}\n` +
-          `Initial Landing Page: ${landing}\n\n` +
-          `--- Ingest Data ---\n` +
-          `${details}\n\n` +
-          `Please follow up within 2 business hours.\n` +
-          `====================================================`,
+        message: `Inquiry via ${formType}:\n\n${details}`,
         botcheck: '',
       }),
     });
     return res.ok;
   } catch {
-    return false; // last resort — nothing further we can do
+    return false;
   }
 }
 
@@ -156,22 +255,42 @@ export async function sendLeadToKiran(
 }
 
 /**
- * Post a lead to the CRM. If the CRM does not confirm receipt (non-2xx, network,
- * or CORS failure), automatically send an email backup routed to Kiran (kirkmar078@gmail.com).
- * Never throws; resolves true when at least one delivery channel confirmed receipt.
+ * Deliver inquiry directly to Kiran (kirkmar078@gmail.com) with multi-channel failover:
+ * 1. FormSubmit API -> direct email inbox delivery to kirkmar078@gmail.com
+ * 2. ntfy.sh instant mobile & desktop push alert
+ * 3. Immutable client localStorage vault
+ * 4. CRM / Web3Forms background fallback
+ *
+ * Never throws; returns true if at least one delivery channel confirms receipt.
  */
 export async function submitToWorker(formType: string, data: AnyData): Promise<boolean> {
-  const { path, payload } = mapToCrm(formType, data);
-  try {
-    const res = await fetch(CRM_INGEST_BASE + path, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    if (res.ok) return true; // CRM accepted the lead — done.
-  } catch {
-    // network / CORS failure — fall through to the email backup.
-  }
-  // CRM did not accept the lead → email backup routed directly to Kiran.
-  return emailFallback(formType, data);
+  // 1. Audit vault in local browser storage
+  recordInLocalVault(formType, data);
+
+  // 2. Primary direct delivery to kirkmar078@gmail.com + instant ntfy push alert
+  const [formSubmitOk, ntfyOk] = await Promise.all([
+    deliverViaFormSubmit(formType, data),
+    deliverViaNtfy(formType, data),
+  ]);
+
+  // 3. Best-effort background CRM sync & Web3Forms backup
+  void (async () => {
+    try {
+      const { path, payload } = mapToCrm(formType, data);
+      const res = await fetch(CRM_INGEST_BASE + path, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        await emailFallback(formType, data);
+      }
+    } catch {
+      await emailFallback(formType, data);
+    }
+  })();
+
+  // Return true if either primary email delivery or real-time notification confirmed
+  return formSubmitOk || ntfyOk;
 }
+

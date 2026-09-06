@@ -6,8 +6,6 @@ import { CheckCircle, AlertCircle, Loader2, Calendar, MessageSquare } from 'luci
 import { submitToWorker } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
 
-const WEB3FORMS_KEY = 'b1e9389e-b14d-4e6a-84eb-e4708fcb39f4';
-
 const specialties = [
   'Primary Care', 'Cardiology', 'Dermatology', 'Endocrinology',
   'Gastroenterology', 'Neurology', 'Orthopedics', 'Pediatrics',
@@ -33,34 +31,19 @@ export default function ContactForm() {
   const messageForm = useForm();
   const scheduleForm = useForm();
 
-  async function submitToWeb3Forms(data: Record<string, unknown>, subject: string) {
-    const payload = {
-      access_key: WEB3FORMS_KEY,
-      subject: `[Aethera Inquiry -> kirkmar078@gmail.com] ${subject}`,
-      to_email: 'kirkmar078@gmail.com',
-      recipient: 'kirkmar078@gmail.com',
-      reply_to: (data.email as string) || (data.scheduleEmail as string),
-      from_name: (data.name as string) || (data.practiceContact as string) || 'Website Visitor',
-      botcheck: '',
-      ...data,
-    };
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    const result = await res.json();
-    if (!result.success) throw new Error(result.message || 'Submission failed');
-  }
-
   const onMessageSubmit = async (data: FieldValues) => {
     // Honeypot: silently succeed if bot filled the hidden field
     if (data.hp_field) { setStatus('success'); messageForm.reset(); return; }
     setStatus('submitting');
     setErrorMsg('');
     try {
-      await submitToWeb3Forms(data, `New Contact Inquiry – ${data.name} (${data.specialty})`);
-      submitToWorker('contact_message', data);
+      const ok = await submitToWorker('contact_message', {
+        ...data,
+        subject: `New Contact Inquiry – ${data.name || 'Visitor'} (${data.specialty || 'General'})`,
+      });
+      if (!ok) {
+        throw new Error('Unable to send message right now. Please call us directly at (813) 519-4640.');
+      }
       trackConversion('contact');
       setStatus('success');
       messageForm.reset();
@@ -77,8 +60,13 @@ export default function ContactForm() {
     setStatus('submitting');
     setErrorMsg('');
     try {
-      await submitToWeb3Forms(data, `Consultation Request – ${data.practiceContact} (${data.practiceSpecialty})`);
-      submitToWorker('consultation_request', data);
+      const ok = await submitToWorker('consultation_request', {
+        ...data,
+        subject: `Consultation Request – ${data.practiceContact || 'Visitor'} (${data.practiceSpecialty || 'General'})`,
+      });
+      if (!ok) {
+        throw new Error('Unable to book consultation right now. Please call us directly at (813) 519-4640.');
+      }
       trackConversion('contact');
       setStatus('success');
       scheduleForm.reset();
