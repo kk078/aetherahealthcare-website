@@ -63,8 +63,9 @@ function mapToCrm(formType: string, data: AnyData): { path: string; payload: Any
 // Direct email delivery to Kiran (kirkmar078@gmail.com) via FormSubmit
 const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${PRIMARY_EXPERT_EMAIL}`;
 
-// Instant real-time push notification topic for mobile/desktop
+// Instant real-time push notification topic for mobile/desktop (both underscore and hyphen variants)
 export const NTFY_LEADS_TOPIC = 'https://ntfy.sh/aethera_leads_kiran_2026';
+export const NTFY_LEADS_TOPIC_ALT = 'https://ntfy.sh/aethera-leads-kiran-2026';
 
 // Backup Web3Forms key
 const WEB3FORMS_KEY = 'b1e9389e-b14d-4e6a-84eb-e4708fcb39f4';
@@ -177,17 +178,19 @@ async function deliverViaNtfy(formType: string, data: AnyData): Promise<boolean>
       rawMessage ? `Notes: ${rawMessage}` : '',
     ].filter(Boolean).join('\n');
 
-    const res = await fetch(NTFY_LEADS_TOPIC, {
-      method: 'POST',
-      headers: {
-        Title: safeTitle,
-        Priority: 'urgent',
-        Tags: 'hospital,bell,incoming_envelope',
-        Click: 'https://aetherahealthcare.com/contact',
-      },
-      body: bodyText,
-    });
-    return res.ok;
+    const headers = {
+      Title: safeTitle,
+      Priority: 'urgent',
+      Tags: 'hospital,bell,incoming_envelope',
+      Click: 'https://aetherahealthcare.com/contact',
+    };
+
+    const results = await Promise.allSettled([
+      fetch(NTFY_LEADS_TOPIC, { method: 'POST', headers, body: bodyText }),
+      fetch(NTFY_LEADS_TOPIC_ALT, { method: 'POST', headers, body: bodyText }),
+    ]);
+
+    return results.some(r => r.status === 'fulfilled' && r.value.ok);
   } catch {
     return false;
   }
