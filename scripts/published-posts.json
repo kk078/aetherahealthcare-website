@@ -1,0 +1,29 @@
+[
+  {
+    "id": "clean_claim",
+    "title": "The Anatomy of a Clean Claim in 2026",
+    "type": "document",
+    "postUrn": "urn:li:ugcPost:7502182966614343680",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7502182966614343680",
+    "mediaUrn": "urn:li:document:D5610AQGgskn5AVwvaw",
+    "publishedAt": "2026-09-06T02:00:00.000Z"
+  },
+  {
+    "id": "india_ai",
+    "title": "How US Billing Companies Scale With India + AI Economics",
+    "type": "document",
+    "postUrn": "urn:li:ugcPost:7502184865220415488",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7502184865220415488",
+    "mediaUrn": "urn:li:document:D5610AQGUUP1c43_dQg",
+    "publishedAt": "2026-09-06T02:04:16.000Z"
+  },
+  {
+    "id": "ai_integration_stack",
+    "title": "How US Medical Billing Companies Integrate AI & Global Delivery",
+    "format": "image",
+    "postUrn": "urn:li:share:7502185447364890624",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:share:7502185447364890624",
+    "mediaUrn": "urn:li:image:D5610AQG2UoIfK3nqRQ",
+    "publishedAt": "2026-09-06T02:06:34.878Z"
+  }
+]
