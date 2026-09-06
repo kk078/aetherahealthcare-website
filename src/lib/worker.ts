@@ -270,11 +270,8 @@ export async function submitToWorker(formType: string, data: AnyData): Promise<b
   // 1. Audit vault in local browser storage
   recordInLocalVault(formType, data);
 
-  // 2. Primary direct delivery to kirkmar078@gmail.com + instant ntfy push alert
-  const [formSubmitOk, ntfyOk] = await Promise.all([
-    deliverViaFormSubmit(formType, data),
-    deliverViaNtfy(formType, data),
-  ]);
+  // 2. Best-effort background push alerts (non-blocking)
+  void deliverViaNtfy(formType, data);
 
   // 3. Best-effort background CRM sync & Web3Forms backup
   void (async () => {
@@ -293,7 +290,8 @@ export async function submitToWorker(formType: string, data: AnyData): Promise<b
     }
   })();
 
-  // Return true if either primary email delivery or real-time notification confirmed
-  return formSubmitOk || ntfyOk;
+  // 4. Primary direct email delivery to kirkmar078@gmail.com
+  const ok = await deliverViaFormSubmit(formType, data);
+  return ok;
 }
 
