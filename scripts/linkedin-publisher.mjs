@@ -232,8 +232,10 @@ async function publishViaLinkedInApi(campaign, isDryRun) {
   }
 
   const postUrn = postRes.headers.get('x-restli-id') || 'published';
-  console.log(`[LinkedIn REST API] Post successfully published! Post URN: ${postUrn}`);
-  return { success: true, postUrn, documentUrn };
+  const postUrl = `https://www.linkedin.com/feed/update/${postUrn}`;
+  console.log(`[LinkedIn REST API] Post successfully published!`);
+  console.log(`[LinkedIn REST API] Live Post URL: ${postUrl}`);
+  return { success: true, postUrn, postUrl, documentUrn };
 }
 
 /**
