@@ -395,7 +395,7 @@ export default function Navbar() {
               href="/schedule"
               className="text-[#1d1d1f] hover:text-[#003087] font-medium py-2 px-3 xl:px-4 rounded-full text-sm transition-colors duration-200 whitespace-nowrap"
             >
-              Book a Call
+              Schedule Meeting
             </Link>
             <button
               type="button"
@@ -462,7 +462,7 @@ export default function Navbar() {
                 className="flex items-center justify-center border-2 border-[#003087] text-[#003087] font-semibold py-2.5 px-3 rounded-xl text-sm text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Book a Call
+                Schedule Meeting
               </Link>
               <button
                 type="button"
