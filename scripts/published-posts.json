@@ -43,5 +43,14 @@
     "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7502220422847881216",
     "mediaUrn": "urn:li:document:D5610AQGprNWyZyGXWw",
     "publishedAt": "2026-09-06T04:25:33.714Z"
+  },
+  {
+    "id": "biller_departure",
+    "title": "The Solo Biller Departure Playbook",
+    "format": "document",
+    "postUrn": "urn:li:ugcPost:7502220741518675968",
+    "postUrl": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7502220741518675968",
+    "mediaUrn": "urn:li:document:D5610AQEZ1-YF_fOmyg",
+    "publishedAt": "2026-09-06T04:26:49.690Z"
   }
 ]
