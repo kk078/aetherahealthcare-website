@@ -2,9 +2,10 @@
 /**
  * Automated LinkedIn Publisher for Aethera Healthcare Solutions.
  *
- * Supports two execution engines:
- *   1. Official LinkedIn REST API (requires LINKEDIN_ACCESS_TOKEN & LINKEDIN_AUTHOR_URN)
- *   2. Headless Playwright Browser Engine (requires LINKEDIN_LI_AT cookie or browser session)
+ * Supports three execution methods:
+ *   1. Official LinkedIn REST API (LINKEDIN_ACCESS_TOKEN & LINKEDIN_AUTHOR_URN)
+ *   2. Session Cookie Engine (LINKEDIN_LI_AT)
+ *   3. Automated Credentials Login (LINKEDIN_EMAIL & LINKEDIN_PASSWORD) with session caching
  *
  * Usage:
  *   node scripts/linkedin-publisher.mjs --list
@@ -24,6 +25,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = resolve(__dirname, '..');
 const CAROUSEL_DIR = resolve(ROOT_DIR, 'public', 'brand', 'carousel');
 const LOGS_DIR = resolve(CAROUSEL_DIR, 'publish_logs');
+const SESSION_CACHE = resolve(LOGS_DIR, 'linkedin_auth_state.json');
 
 // Load environment variables from .env / .env.local if present
 function loadEnv() {
@@ -48,15 +50,12 @@ function loadEnv() {
             }
           }
         }
-      } catch (err) {
-        // Ignore read errors
-      }
+      } catch (err) {}
     }
   }
 }
 loadEnv();
 
-// Catalog of publication-ready carousel campaigns
 export const CAMPAIGNS = {
   clean_claim: {
     id: 'clean_claim',
@@ -144,7 +143,7 @@ Have you ever experienced sudden billing staff turnover? How did your practice h
  */
 async function publishViaLinkedInApi(campaign, isDryRun) {
   const token = process.env.LINKEDIN_ACCESS_TOKEN;
-  const authorUrn = process.env.LINKEDIN_AUTHOR_URN; // e.g. urn:li:person:XXXXX or urn:li:organization:XXXXX
+  const authorUrn = process.env.LINKEDIN_AUTHOR_URN;
 
   if (!token || !authorUrn) {
     throw new Error('Missing LINKEDIN_ACCESS_TOKEN or LINKEDIN_AUTHOR_URN in environment / .env.local');
@@ -156,7 +155,6 @@ async function publishViaLinkedInApi(campaign, isDryRun) {
     return { success: true, simulated: true, authorUrn, campaignId: campaign.id };
   }
 
-  // 1. Initialize Document Upload
   const initRes = await fetch('https://api.linkedin.com/rest/documents?action=initializeUpload', {
     method: 'POST',
     headers: {
@@ -180,9 +178,8 @@ async function publishViaLinkedInApi(campaign, isDryRun) {
   const initData = await initRes.json();
   const uploadUrl = initData.value.uploadUrl;
   const documentUrn = initData.value.document;
-  console.log(`[LinkedIn REST API] Document upload URL obtained. Document URN: ${documentUrn}`);
+  console.log(`[LinkedIn REST API] Document URN: ${documentUrn}`);
 
-  // 2. Upload PDF binary
   const fileBytes = await readFile(campaign.pdfPath);
   console.log(`[LinkedIn REST API] Uploading ${fileBytes.byteLength} bytes to uploadUrl...`);
   const uploadRes = await fetch(uploadUrl, {
@@ -200,7 +197,6 @@ async function publishViaLinkedInApi(campaign, isDryRun) {
   }
   console.log('[LinkedIn REST API] Binary upload succeeded.');
 
-  // 3. Create Feed Post with Document Media
   console.log('[LinkedIn REST API] Creating feed post...');
   const postRes = await fetch('https://api.linkedin.com/rest/posts', {
     method: 'POST',
@@ -241,73 +237,110 @@ async function publishViaLinkedInApi(campaign, isDryRun) {
 }
 
 /**
- * Execute upload using Playwright Headless Browser Session
+ * Execute upload using Playwright Browser Engine
  */
 async function publishViaPlaywright(campaign, isDryRun) {
-  const liAtCookie = process.env.LINKEDIN_LI_AT;
-  if (!liAtCookie) {
-    throw new Error(
-      'Missing LINKEDIN_LI_AT session cookie. Please set LINKEDIN_LI_AT in .env.local.\n' +
-      'To obtain: Log into linkedin.com in your browser -> Open DevTools (F12) -> Application -> Cookies -> Copy value of "li_at".'
-    );
-  }
-
   await mkdir(LOGS_DIR, { recursive: true });
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
   const sessionLogPrefix = join(LOGS_DIR, `${campaign.id}_${timestamp}`);
 
-  console.log(`[Playwright Engine] Launching headless browser with authenticated session...`);
+  const liAtCookie = process.env.LINKEDIN_LI_AT;
+  const email = process.env.LINKEDIN_EMAIL;
+  const password = process.env.LINKEDIN_PASSWORD;
+
+  console.log('[Playwright Engine] Launching Chromium browser...');
   const browser = await chromium.launch({
     headless: true,
-    executablePath: process.env.CI ? undefined : '/usr/bin/google-chrome',
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+    executablePath: '/usr/bin/google-chrome',
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-blink-features=AutomationControlled',
+    ],
   });
 
-  const context = await browser.newContext({
-    viewport: { width: 1440, height: 900 },
-    userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
-  });
+  let context;
+  if (existsSync(SESSION_CACHE)) {
+    try {
+      console.log('[Playwright Engine] Loading saved session cache from', SESSION_CACHE);
+      context = await browser.newContext({
+        storageState: SESSION_CACHE,
+        viewport: { width: 1440, height: 900 },
+      });
+    } catch (e) {
+      console.log('[Playwright Engine] Failed to load session cache, creating fresh context.');
+      context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+    }
+  } else {
+    context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  }
 
-  // Inject session cookie
-  await context.addCookies([
-    {
-      name: 'li_at',
-      value: liAtCookie,
-      domain: '.linkedin.com',
-      path: '/',
-      httpOnly: true,
-      secure: true,
-    },
-  ]);
+  if (liAtCookie) {
+    await context.addCookies([
+      { name: 'li_at', value: liAtCookie, domain: '.linkedin.com', path: '/', secure: true, httpOnly: true },
+      { name: 'li_at', value: liAtCookie, domain: '.www.linkedin.com', path: '/', secure: true, httpOnly: true },
+    ]);
+  }
 
   const page = await context.newPage();
 
   try {
-    console.log('[Playwright Engine] Navigating to LinkedIn feed...');
+    console.log('[Playwright Engine] Navigating to LinkedIn...');
     await page.goto('https://www.linkedin.com/feed/', { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await page.waitForTimeout(4000);
 
-    // Verify session
-    const currentUrl = page.url();
-    if (currentUrl.includes('/login') || currentUrl.includes('/authwall') || currentUrl.includes('/checkpoint')) {
-      await page.screenshot({ path: `${sessionLogPrefix}_auth_failed.png` });
-      throw new Error(`LinkedIn session rejected or requires checkpoint verification. Saved screenshot: ${sessionLogPrefix}_auth_failed.png`);
+    let currentUrl = page.url();
+
+    // If redirected to login and credentials provided, perform automated login
+    if (currentUrl.includes('/login') || currentUrl.includes('/authwall') || currentUrl.includes('/hp')) {
+      if (email && password) {
+        console.log(`[Playwright Engine] Session requires authentication. Logging in as ${email}...`);
+        await page.goto('https://www.linkedin.com/login', { waitUntil: 'domcontentloaded', timeout: 30000 });
+        
+        await page.fill('#username, input[name="session_key"]', email);
+        await page.fill('#password, input[name="session_password"]', password);
+        await page.click('button[type="submit"], button:has-text("Sign in")');
+        
+        await page.waitForTimeout(6000);
+        currentUrl = page.url();
+
+        if (currentUrl.includes('/checkpoint')) {
+          const checkpointShot = `${sessionLogPrefix}_checkpoint.png`;
+          await page.screenshot({ path: checkpointShot });
+          throw new Error(`LinkedIn security checkpoint triggered (2FA / email PIN required). See screenshot: ${checkpointShot}`);
+        }
+
+        // Save session state for future runs
+        await context.storageState({ path: SESSION_CACHE });
+        console.log('[Playwright Engine] Login successful! Saved authenticated session to', SESSION_CACHE);
+      } else {
+        const authFailedShot = `${sessionLogPrefix}_login_required.png`;
+        await page.screenshot({ path: authFailedShot });
+        throw new Error(
+          `LinkedIn session is not currently authenticated. Screen saved to: ${authFailedShot}\n` +
+          'To authenticate:\n' +
+          '  1. Provide LINKEDIN_EMAIL and LINKEDIN_PASSWORD in .env.local, OR\n' +
+          '  2. Update LINKEDIN_LI_AT with an active cookie from your browser, OR\n' +
+          '  3. Use LINKEDIN_ACCESS_TOKEN for the official API.'
+        );
+      }
     }
-    console.log('[Playwright Engine] Authenticated session confirmed on LinkedIn feed.');
 
-    // Click "Start a post"
-    console.log('[Playwright Engine] Opening post composer modal...');
-    const startPostBtn = page.locator('button:has-text("Start a post"), .share-box-feed-entry__trigger').first();
-    await startPostBtn.waitFor({ state: 'visible', timeout: 10000 });
+    console.log('[Playwright Engine] Authenticated successfully on feed URL:', currentUrl);
+
+    // Open post composer
+    console.log('[Playwright Engine] Locating "Start a post" button...');
+    const startPostBtn = page.locator('button:has-text("Start a post"), .share-box-feed-entry__trigger, button[aria-label*="start a post" i]').first();
+    await startPostBtn.waitFor({ state: 'visible', timeout: 15000 });
     await startPostBtn.click();
 
-    // Wait for post modal
     const modal = page.locator('div[role="dialog"]').first();
     await modal.waitFor({ state: 'visible', timeout: 10000 });
 
-    // Upload document
+    // Document attachment
     console.log(`[Playwright Engine] Attaching PDF document: ${campaign.pdfPath}...`);
-    // LinkedIn document upload can be triggered via file input or document button
-    const fileChooserPromise = page.waitForEvent('filechooser', { timeout: 10000 }).catch(() => null);
+    const fileChooserPromise = page.waitForEvent('filechooser', { timeout: 8000 }).catch(() => null);
     const docBtn = modal.locator('button[aria-label*="document" i], button:has-text("Document")').first();
 
     if (await docBtn.isVisible()) {
@@ -318,7 +351,6 @@ async function publishViaPlaywright(campaign, isDryRun) {
     if (fileChooser) {
       await fileChooser.setFiles(campaign.pdfPath);
     } else {
-      // Fallback: look for hidden file input
       const fileInput = page.locator('input[type="file"]').first();
       await fileInput.setInputFiles(campaign.pdfPath);
     }
@@ -329,33 +361,29 @@ async function publishViaPlaywright(campaign, isDryRun) {
     await titleInput.waitFor({ state: 'visible', timeout: 15000 });
     await titleInput.fill(campaign.documentTitle);
 
-    // Click "Done" / "Next" in document attachment modal
     const doneBtn = page.locator('button:has-text("Done"), button:has-text("Next")').first();
     await doneBtn.click();
 
-    // Fill commentary caption
-    console.log('[Playwright Engine] Entering post caption commentary...');
+    // Set commentary caption
+    console.log('[Playwright Engine] Entering post caption...');
     const editor = modal.locator('div[role="textbox"][contenteditable="true"]').first();
     await editor.waitFor({ state: 'visible', timeout: 10000 });
     await editor.click();
     await editor.fill(campaign.caption);
 
-    // Take pre-post screenshot
     const previewScreenshot = `${sessionLogPrefix}_pre_post_preview.png`;
     await page.screenshot({ path: previewScreenshot });
     console.log(`[Playwright Engine] Pre-post verification screenshot captured: ${previewScreenshot}`);
 
     if (isDryRun) {
-      console.log('[Playwright Engine] Dry run active: Post not published. Closing browser.');
+      console.log('[Playwright Engine] Dry run active: Post ready, not submitted.');
       return { success: true, dryRun: true, previewScreenshot };
     }
 
-    // Click Post
     console.log('[Playwright Engine] Publishing post...');
     const postBtn = modal.locator('button:has-text("Post"), .share-actions__primary-action').first();
     await postBtn.click();
 
-    // Wait for modal to close and toast/feed confirmation
     await modal.waitFor({ state: 'hidden', timeout: 20000 });
     await page.waitForTimeout(3000);
 
@@ -369,9 +397,6 @@ async function publishViaPlaywright(campaign, isDryRun) {
   }
 }
 
-/**
- * Main Controller
- */
 async function main() {
   const args = process.argv.slice(2);
   const isList = args.includes('--list');
@@ -396,8 +421,8 @@ async function main() {
     }
     console.log('Configuration Status:');
     console.log(`• LINKEDIN_ACCESS_TOKEN: ${process.env.LINKEDIN_ACCESS_TOKEN ? 'CONFIGURED' : 'NOT SET'}`);
-    console.log(`• LINKEDIN_AUTHOR_URN:   ${process.env.LINKEDIN_AUTHOR_URN ? 'CONFIGURED' : 'NOT SET'}`);
     console.log(`• LINKEDIN_LI_AT:        ${process.env.LINKEDIN_LI_AT ? 'CONFIGURED' : 'NOT SET'}`);
+    console.log(`• LINKEDIN_EMAIL:        ${process.env.LINKEDIN_EMAIL ? 'CONFIGURED' : 'NOT SET'}`);
     console.log('\nQuick Commands:');
     console.log('  node scripts/linkedin-publisher.mjs --carousel clean_claim --dry-run');
     console.log('  node scripts/linkedin-publisher.mjs --carousel clean_claim --publish');
@@ -411,7 +436,7 @@ async function main() {
   }
 
   if (!existsSync(campaign.pdfPath)) {
-    console.error(`Error: PDF document not found at ${campaign.pdfPath}. Run 'python3 scripts/generate_linkedin_carousel.py' first.`);
+    console.error(`Error: PDF document not found at ${campaign.pdfPath}.`);
     process.exit(1);
   }
 
@@ -420,39 +445,15 @@ async function main() {
   console.log(`Mode:            ${isDryRun ? 'DRY RUN (Preview Only)' : 'LIVE PUBLISHING'}`);
   console.log('------------------------------------------------------');
 
-  // Choose engine
   const hasApi = process.env.LINKEDIN_ACCESS_TOKEN && process.env.LINKEDIN_AUTHOR_URN;
-  const hasCookie = !!process.env.LINKEDIN_LI_AT;
-
   if (hasApi) {
     console.log('Using Engine: Official LinkedIn REST API');
     const result = await publishViaLinkedInApi(campaign, isDryRun);
     console.log('\nResult:', JSON.stringify(result, null, 2));
-  } else if (hasCookie) {
-    console.log('Using Engine: Playwright Headless Browser Session');
+  } else {
+    console.log('Using Engine: Playwright Browser Session');
     const result = await publishViaPlaywright(campaign, isDryRun);
     console.log('\nResult:', JSON.stringify(result, null, 2));
-  } else {
-    console.log('\n[NOTICE] No LinkedIn credentials found in environment or .env.local.');
-    console.log('\nTo automate uploads, configure ONE of the following options:\n');
-    console.log('--- Option A: Browser Session Cookie (Quickest - 30 seconds) ---');
-    console.log('1. Log into linkedin.com in Google Chrome');
-    console.log('2. Open Chrome DevTools (Press F12) -> Click "Application" tab -> "Cookies" -> "https://www.linkedin.com"');
-    console.log('3. Copy the value of the "li_at" cookie');
-    console.log('4. Create a .env.local file in this repository with:');
-    console.log('   LINKEDIN_LI_AT=your_li_at_cookie_here\n');
-    console.log('--- Option B: Official Developer API Token ---');
-    console.log('1. Go to https://www.linkedin.com/developers and create an App with "Share on LinkedIn" product');
-    console.log('2. Generate an OAuth2 token with "w_member_social"');
-    console.log('3. Add to .env.local:');
-    console.log('   LINKEDIN_ACCESS_TOKEN=your_token_here');
-    console.log('   LINKEDIN_AUTHOR_URN=urn:li:person:YOUR_ID or urn:li:organization:YOUR_PAGE_ID\n');
-    console.log('Simulation Preview for this Carousel:');
-    console.log('------------------------------------------------------');
-    console.log(`Document Title: ${campaign.documentTitle}`);
-    console.log(`Destination:    ${campaign.targetUrl}`);
-    console.log(`Caption:\n${campaign.caption}\n`);
-    console.log('------------------------------------------------------');
   }
 }
 
