@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
+import BillingPartnerRoiCalculator from '@/components/ui/BillingPartnerRoiCalculator';
 
 export const metadata = {
   title: 'For Billing Companies | White-Label RCM Back Office | Aethera Healthcare',
@@ -85,6 +86,9 @@ export default function ForBillingCompanies() {
           </div>
         </div>
       </section>
+
+      {/* Interactive Margin Calculator */}
+      <BillingPartnerRoiCalculator />
 
       {/* Pilot CTA */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-ink via-navy to-[#06304f] relative overflow-hidden">

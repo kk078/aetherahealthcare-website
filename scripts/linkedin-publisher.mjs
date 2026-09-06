@@ -168,6 +168,33 @@ How is your billing operation handling the explosion of payer denial algorithms 
 #MedicalBilling #RevenueCycleManagement #HealthcareRCM #HealthTech #MedicalCoding #HealthcareAI #HealthAdministration #HospitalCFO`,
   },
 
+  rcm_self_audit: {
+    id: 'rcm_self_audit',
+    format: 'document',
+    title: 'The 2026 RCM Self-Diagnostic Matrix for US Billing Leaders',
+    subtitle: 'Find where your medical billing operation is leaking margin in 90 seconds',
+    pdfPath: resolve(CAROUSEL_DIR, 'rcm_self_audit_interactive_2026.pdf'),
+    documentTitle: 'The 2026 RCM Self-Diagnostic Matrix | Aethera Healthcare Solutions',
+    targetUrl: 'https://aetherahealthcare.com/for-billing-companies?utm_source=linkedin&utm_medium=document_post&utm_campaign=rcm_self_audit#interactive-calculator',
+    caption: `Where is your medical billing agency or clinic leaking margin in 2026?
+
+We built a 90-second self-diagnostic matrix to help US revenue cycle executives, billing company founders, and practice administrators identify their exact vulnerability vector.
+
+Swipe through the interactive slides below to benchmark:
+📌 Level 1: Where your claim scrubbing actually happens (and why clearinghouse-only edits cost $43.84 on every rework)
+📌 Level 2: The true labor unit economics ($88,400 US FTE vs. $32,000 legacy BPO vs. $29,500 India + AI hybrid delivery)
+📌 Level 3: The autonomous decision tree that routes 90% of routine claims to clearinghouses in <250ms and reserves AAPC-certified specialists for the complex 10%
+
+Want to calculate your exact EBITDA unlock right now?
+👉 Test our live interactive margin calculator: https://aetherahealthcare.com/for-billing-companies?utm_source=linkedin&utm_medium=document_post&utm_campaign=rcm_self_audit#interactive-calculator
+👉 Run our free clean-claim scorecard: https://aetherahealthcare.com/tools/clean-claim-scorecard?utm_source=linkedin&utm_medium=document_post&utm_campaign=rcm_self_audit
+👉 Claim your Complimentary 50-Claim Back-Office Pilot: https://aetherahealthcare.com/free-assessment?utm_source=linkedin&utm_medium=document_post&utm_campaign=rcm_self_audit
+
+Drop "AUDIT" in the comments below, and our team will send you the complete 2026 RCM Diagnostic Checklist PDF directly.
+
+#MedicalBilling #RevenueCycleManagement #HealthcareRCM #HealthTech #MedicalCoding #HealthcareFinance #PracticeManagement #HealthAdministration`,
+  },
+
   payer_ai_arms_race: {
     id: 'payer_ai_arms_race',
     format: 'text',
