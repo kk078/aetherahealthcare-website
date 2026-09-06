@@ -20,6 +20,7 @@ export interface CampaignAttribution {
   wbraid?: string;
   fbclid?: string;
   msclkid?: string;
+  li_fat_id?: string;
   referrer?: string;
   landingPage?: string;
   landingTime?: string;
@@ -53,9 +54,10 @@ export function captureAttribution(): CampaignAttribution | null {
     const wbraid = params.get('wbraid') || undefined;
     const fbclid = params.get('fbclid') || undefined;
     const msclkid = params.get('msclkid') || undefined;
+    const liFatId = params.get('li_fat_id') || undefined;
 
     const hasCampaignData = Boolean(
-      utmSource || utmMedium || utmCampaign || gclid || fbclid || msclkid
+      utmSource || utmMedium || utmCampaign || gclid || fbclid || msclkid || liFatId
     );
 
     const attribution: CampaignAttribution = {
@@ -69,6 +71,7 @@ export function captureAttribution(): CampaignAttribution | null {
       wbraid,
       fbclid,
       msclkid,
+      li_fat_id: liFatId,
       referrer: document.referrer ? new URL(document.referrer, window.location.origin).hostname : 'direct',
       landingPage: window.location.pathname,
       landingTime: new Date().toISOString(),
