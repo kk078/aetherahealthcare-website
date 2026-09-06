@@ -11,7 +11,7 @@ import { trackConversion } from '@/lib/gtag';
 // When blank, the page shows a meeting-request form that still captures the
 // lead and notifies the team.
 const BOOKING_URL =
-  process.env.NEXT_PUBLIC_BOOKING_URL || 'https://cal.com/aethera-healthcare-solutions-ribxep';
+  process.env.NEXT_PUBLIC_BOOKING_URL || 'https://cal.com/kiran-kumar-pedapudi-qh822e/30min';
 
 export default function BookingEmbed() {
   if (BOOKING_URL) return <BookCard url={BOOKING_URL} />;
