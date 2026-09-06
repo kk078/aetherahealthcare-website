@@ -409,7 +409,7 @@ export default function SoloPracticeLandingClient() {
                             id="solo-phone"
                             type="tel"
                             required
-                            placeholder="(813) 555-0144"
+                            placeholder="(555) 000-0000"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
                             className="w-full px-3.5 py-2 rounded-lg bg-slate-950 border border-slate-800 text-slate-200 text-sm focus:outline-none focus:border-teal placeholder:text-slate-600"

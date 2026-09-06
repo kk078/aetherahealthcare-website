@@ -173,7 +173,7 @@ export default function AnesthesiaConcurrencyAuditor() {
         trackConversion('assessment');
       } else {
         setFormStatus('error');
-        setFormError('Transmission failed. Please retry or call us directly.');
+        setFormError('Transmission failed. Please retry or reach out directly via /contact.');
       }
     } catch {
       setFormStatus('error');

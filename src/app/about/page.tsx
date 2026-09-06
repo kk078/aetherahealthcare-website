@@ -161,8 +161,8 @@ export default function About() {
           <FadeIn>
             <h2 className="text-3xl font-bold text-white font-jakarta mb-6">Where we are</h2>
             <p className="text-cream/85 text-lg leading-relaxed">
-              Registered in India (Chennai, Tamil Nadu), serving US clients on US hours through our +1 813 number.
-              Founder-led: when you call, you get the person who signs the quality bar.
+              Registered in India (Chennai, Tamil Nadu), serving US healthcare practices nationwide on US operational hours.
+              Founder-led: direct partner access with Kiran and the senior billing leadership team who oversee your revenue cycle.
             </p>
           </FadeIn>
         </div>

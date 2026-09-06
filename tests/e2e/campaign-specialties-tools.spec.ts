@@ -26,7 +26,7 @@ test.describe('PPC Landing Page, Attribution, Radiology & Pathology, and 25-Tool
     await page.getByPlaceholder('Dr. Jane Smith').fill('Dr. Robert Vance');
     await page.getByPlaceholder('Metro Heart & Vascular').fill('Vance Radiology Group');
     await page.getByPlaceholder('billing@practice.com').fill('rvance@vancerad.com');
-    await page.getByPlaceholder('(813) 555-0199').fill('(813) 555-9090');
+    await page.getByPlaceholder('(555) 000-0000').fill('(555) 000-9090');
 
     // Take screenshot artifact
     await page.screenshot({ path: `${ARTIFACT_DIR}/ppc_denial_pilot_landing.png`, fullPage: false });

@@ -42,7 +42,7 @@ export default function ContactForm() {
         subject: `New Contact Inquiry – ${data.name || 'Visitor'} (${data.specialty || 'General'})`,
       });
       if (!ok) {
-        throw new Error('Unable to send message right now. Please call us directly at (813) 519-4640.');
+        throw new Error('Unable to send message right now. Please retry or email us directly at kirkmar078@gmail.com.');
       }
       trackConversion('contact');
       setStatus('success');
@@ -65,7 +65,7 @@ export default function ContactForm() {
         subject: `Consultation Request – ${data.practiceContact || 'Visitor'} (${data.practiceSpecialty || 'General'})`,
       });
       if (!ok) {
-        throw new Error('Unable to book consultation right now. Please call us directly at (813) 519-4640.');
+        throw new Error('Unable to book consultation right now. Please retry or email us directly at kirkmar078@gmail.com.');
       }
       trackConversion('contact');
       setStatus('success');

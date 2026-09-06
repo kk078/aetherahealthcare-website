@@ -451,7 +451,7 @@ export default function PracticeProposalWizard() {
                       type="tel"
                       value={contactPhone}
                       onChange={(e) => setContactPhone(e.target.value)}
-                      placeholder="(813) 555-0192"
+                      placeholder="(555) 000-0000"
                       className="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs text-navy focus:outline-none focus:ring-2 focus:ring-teal"
                     />
                   </div>

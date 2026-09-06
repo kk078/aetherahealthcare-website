@@ -20,7 +20,7 @@ import {
   RotateCcw,
 } from 'lucide-react';
 import { submitToWorker, sendLeadToKiran, PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
-import { askAiAgent, type AssistantMessage, type AgentAction } from '@/lib/aiAgent';
+import { askAiAgent, eradicatePhoneNumbers, type AssistantMessage, type AgentAction } from '@/lib/aiAgent';
 
 const INITIAL_GREETING =
   "Hi! I'm Aethera's AI Revenue Cycle & Practice Specialist. Ask me anything about payer timely filing limits, denial codes (CO-45, PR-204, CO-16), specialty medical billing, or our 3.5%–5.0% performance pricing. You can also connect directly with Kiran for a practice audit.";
@@ -45,7 +45,7 @@ function makeMsg(role: 'user' | 'assistant', content: string, actions?: AgentAct
   return {
     id: `msg-${msgCounter}`,
     role,
-    content,
+    content: role === 'assistant' ? eradicatePhoneNumbers(content) : content,
     actions,
     timestamp: `${h}:${m}`,
   };
@@ -384,7 +384,7 @@ export default function CallbackButton() {
 
   // Render markdown-like text with bold, bullet points, and links
   const renderMessageContent = (text: string) => {
-    const lines = text.split('\n');
+    const lines = eradicatePhoneNumbers(text).split('\n');
     return (
       <div className="space-y-1.5 text-xs sm:text-sm leading-relaxed">
         {lines.map((line, idx) => {

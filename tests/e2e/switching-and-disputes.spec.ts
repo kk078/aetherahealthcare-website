@@ -27,7 +27,7 @@ test.describe('Switching Campaign Funnel, Emergency & Urgent Care Specialties, a
     await page.getByPlaceholder('Dr. Sarah Jenkins').fill('Dr. Marcus Welby');
     await page.getByPlaceholder('Bay Area Spine & Ortho').fill('Evergreen Emergency Associates');
     await page.getByPlaceholder('sarah@bayareaspline.com').fill('mwelby@evergreenmed.org');
-    await page.getByPlaceholder('(813) 555-0199').fill('(813) 555-4422');
+    await page.getByPlaceholder('(555) 000-0000').fill('(555) 000-4422');
 
     // Screenshot artifact
     await page.screenshot({ path: `${ARTIFACT_DIR}/switching_campaign_landing.png`, fullPage: false });

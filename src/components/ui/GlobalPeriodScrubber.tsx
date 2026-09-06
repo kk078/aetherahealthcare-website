@@ -335,7 +335,7 @@ export default function GlobalPeriodScrubber() {
         trackConversion('assessment');
       } else {
         setFormStatus('error');
-        setFormError('Failed to transmit request. Please try again or call us directly.');
+        setFormError('Failed to transmit request. Please try again or reach out directly via /contact.');
       }
     } catch {
       setFormStatus('error');

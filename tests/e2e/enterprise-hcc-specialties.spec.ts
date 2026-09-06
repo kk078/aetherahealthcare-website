@@ -20,7 +20,7 @@ test.describe('Enterprise RCM Funnel, Rheumatology & Pulmonology Specialties, an
     await page.getByPlaceholder('David Sterling').fill('Marcus Sterling');
     await page.getByPlaceholder('dsterling@summithealth.org').fill('msterling@summithealthsystem.org');
     await page.getByPlaceholder('Summit Regional Health Partners').fill('Summit Regional Health System');
-    await page.getByPlaceholder('(813) 555-0188').fill('(813) 555-8833');
+    await page.getByPlaceholder('(555) 000-0000').fill('(555) 000-8833');
 
     // Screenshot artifact
     await page.screenshot({ path: `${ARTIFACT_DIR}/enterprise_rcm_campaign_landing.png`, fullPage: false });

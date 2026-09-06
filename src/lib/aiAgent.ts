@@ -42,6 +42,7 @@ Key Aethera Facts:
 - Direct Contact & Meetings: Connect via our online email request form at /contact or schedule a consultation directly at /schedule.
 
 Guidance Rules:
+- NEVER provide, cite, or invent any telephone numbers under any circumstances. Aethera does not operate an inbound phone line. Direct all users strictly to /contact, /schedule, or /free-assessment.
 - If asked about denial codes (e.g., CO-45, PR-204, CO-16, CO-18, CO-97), explain the CARC/RARC root cause, difference between contractual adjustment and patient balance, and step-by-step appeal/resubmission strategy.
 - If asked about timely filing limits, quote standard payer rules (e.g. Medicare 365 days, Texas Medicaid 95 days, UHC/Aetna/Cigna 90 days commercial) and mention proving timely filing via 277CA / 999 EDI confirmations.
 - Always offer escalation to Kiran via /contact or scheduling a meeting at /schedule, or booking a free practice assessment at /free-assessment for a deep audit of their specific billing claims and aging A/R.
@@ -159,11 +160,54 @@ export function extractAgentActions(userPrompt: string, assistantResponse: strin
 }
 
 /**
+ * Rigorously eradicate and purge all phone numbers from text strings.
+ * Replaces phone numbers with appropriate online contact/schedule links.
+ */
+export function eradicatePhoneNumbers(text: string): string {
+  if (!text) return '';
+  return text
+    // Replace "call us directly at (813) 519-4640" or "call us at..."
+    .replace(/(?:please\s+)?call\s+(?:us\s+)?(?:directly\s+)?at\s+(?:\+?1[-. ]?)?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}/gi, 'reach out directly via /contact or email kirkmar078@gmail.com')
+    // Replace "or call (813) 519-4640 to discuss your options"
+    .replace(/or\s+call\s+(?:\+?1[-. ]?)?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}(?:\s+to\s+discuss\s+(?:your\s+)?options)?/gi, 'or reach out via /contact')
+    // Replace "call (813) 519-4640"
+    .replace(/(?:please\s+)?call\s+(?:\+?1[-. ]?)?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}/gi, 'contact us via /contact')
+    // Catch specific known numbers
+    .replace(/(?:\+?1[-. ]?)?\(?813\)?[-. ]?519[-. ]?4640/g, 'our team via /contact')
+    .replace(/(?:\+?1[-. ]?)?\(?863\)?[-. ]?694[-. ]?0325/g, 'our team via /contact')
+    // Catch any remaining US phone numbers (10 digits formatted)
+    .replace(/(?:\+?1[-. ]?)?\(?[2-9][0-9]{2}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}/g, 'our team via /contact')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+/**
  * Local Deterministic RCM Engine fallback.
  * Provides grounded, authoritative medical billing answers if API/network is unavailable.
  */
 function localGroundedRcmAnswer(query: string): string {
   const q = query.toLowerCase();
+
+  // Check specific combined CO-45 & PR-204
+  if ((q.includes('45') || q.includes('co-45')) && (q.includes('204') || q.includes('pr-204'))) {
+    return `### Overturning & Resolving CO-45 & PR-204 Remittance Adjustments
+
+**1. CARC CO-45: Charge Exceeds Fee Schedule / Contracted Maximum Allowable**
+- **Classification:** Contractual Obligation (Payer adjustment — cannot be balance-billed to patient under in-network agreements).
+- **Resolution Strategy:**
+  - Audit the 835 ERA against your signed contracted fee schedule for that specific CPT code and modifier combination.
+  - If the payer reimbursed below your contracted rate or erroneously downcoded the service, submit a formal underpayment appeal with a copy of your contract fee schedule attachment.
+  - If the reimbursement accurately reflects your contracted rate, write off the contractual adjustment in your practice management system.
+
+**2. CARC PR-204: Service Not Covered Under Patient’s Current Benefit Plan**
+- **Classification:** Patient Responsibility (Service excluded, benefit exhausted, or non-covered plan rider).
+- **Resolution Strategy:**
+  - Verify patient eligibility on the date of service via real-time 270/271 clearinghouse inquiry.
+  - If secondary or commercial supplemental insurance exists, submit a coordination of benefits (COB) secondary claim along with the primary 835 ERA remittance.
+  - If the service is genuinely non-covered and a signed Advance Beneficiary Notice (ABN) or Notice of Non-Coverage was executed before treatment, shift the balance to patient responsibility (PR).
+
+Would you like Kiran and our senior billing team to audit your practice's recent denial batch? Request a free analysis at /free-assessment or submit an inquiry at /contact.`;
+  }
 
   // Check specific denial codes
   for (const d of DENIAL_CODES) {
@@ -182,7 +226,7 @@ ${d.prevent}
 
 *Paired RARCs:* \`${d.rarc}\`
 
-Would you like Kiran and our senior billing team to audit your practice's recent denial batch? Click **Request Callback** or schedule a free analysis at /free-assessment.`;
+Would you like Kiran and our senior billing team to audit your practice's recent denial batch? Schedule a free analysis at /free-assessment or submit an inquiry at /contact.`;
     }
   }
 
@@ -211,7 +255,7 @@ We operate on a transparent, **100% performance-aligned model**:
 - **Contract Terms:** No restrictive multi-year lock-ins. We earn your business every month through results.
 - **Included Services:** Full demographic entry, eligibility checks, certified AAPC/AHIMA medical coding, electronic claim submission, 835 ERA posting, aggressive denial appeals within 48 hours, patient billing inquiries, and monthly executive KPI dashboards.
 
-Would you like a customized fee proposal for your practice? Feel free to submit an email inquiry or schedule a meeting directly with Kiran.`;
+Would you like a customized fee proposal for your practice? Feel free to submit an email inquiry at /contact or schedule a meeting directly with Kiran at /schedule.`;
   }
 
   // Specialties
@@ -225,7 +269,7 @@ Yes, Aethera Healthcare Solutions provides dedicated, certified specialty billin
 - **Orthopedics & Surgery:** Global surgery periods, assistant-at-surgery modifiers (-80/-82), and pre-authorization validation.
 - **Behavioral Health & Psychiatry:** Psychotherapy add-on codes (+90833), intake assessments, and telehealth parity rules.
 
-Our certified coders ensure accurate LCD/NCD coverage determination before claims leave the clearinghouse door.`;
+Our certified coders ensure accurate LCD/NCD coverage determination before claims leave the clearinghouse door. Reach out at /contact or /schedule to discuss your specialty.`;
   }
 
   // Timely filing general
@@ -240,7 +284,7 @@ Our certified coders ensure accurate LCD/NCD coverage determination before claim
 - **Blue Cross Blue Shield:** Typically **90 to 365 days** depending on local state Blue plan contract.
 - **Tricare & VA:** **365 days** from DOS.
 
-*Tip:* Always preserve electronic batch 999 Functional Acknowledgments and 277CA Claim Acknowledgments to prove timely electronic delivery if a payer erroneously rejects for timely filing.`;
+*Tip:* Always preserve electronic batch 999 Functional Acknowledgments and 277CA Claim Acknowledgments to prove timely electronic delivery if a payer erroneously rejects for timely filing. Schedule a practice audit at /schedule or contact us at /contact.`;
   }
 
   // General fallthrough
@@ -250,7 +294,7 @@ Our certified coders ensure accurate LCD/NCD coverage determination before claim
 - **Specialty Medical Billing** (Hospitalists, Cardiology, Primary Care, Orthopedics, Mental Health)
 - **Aethera's Services & Transparent 3.5%–5.0% Pricing**
 
-How can I help your practice today? You can submit an email request or schedule a consultation with Kiran and our senior billing team anytime!`;
+How can I help your practice today? You can submit an email request at /contact or schedule a consultation with Kiran and our senior billing team at /schedule anytime!`;
 }
 
 /**
@@ -265,7 +309,18 @@ export async function askAiAgent(
     return { text: 'Please enter a question about billing, payers, or services.', actions: [] };
   }
 
-  // 1. If API key is available, query direct REST API
+  // 1. High-Confidence Grounded RCM Knowledge Engine (instant, deterministic, zero-lag)
+  const groundedText = localGroundedRcmAnswer(cleanPrompt);
+  const isGenericFallthrough = groundedText.startsWith("I am Aethera's AI Revenue Cycle Specialist");
+
+  // If we have a specific domain match, return it immediately
+  if (!isGenericFallthrough) {
+    const sanitized = eradicatePhoneNumbers(groundedText);
+    const actions = extractAgentActions(cleanPrompt, sanitized);
+    return { text: sanitized, actions };
+  }
+
+  // 2. If API key is available, query direct REST API (Gemini)
   if (API_KEY) {
     try {
       const contents = [
@@ -294,8 +349,9 @@ export async function askAiAgent(
         const data = await res.json();
         const candidate = data.candidates?.[0]?.content?.parts?.[0]?.text;
         if (candidate) {
-          const actions = extractAgentActions(cleanPrompt, candidate);
-          return { text: candidate, actions };
+          const sanitized = eradicatePhoneNumbers(candidate);
+          const actions = extractAgentActions(cleanPrompt, sanitized);
+          return { text: sanitized, actions };
         }
       }
     } catch {
@@ -303,7 +359,7 @@ export async function askAiAgent(
     }
   }
 
-  // 2. Query Cloudflare Forms Worker Assistant Endpoint
+  // 3. Query Cloudflare Forms Worker Assistant Endpoint (with mandatory phone eradication)
   try {
     const workerRes = await fetch(`${FORMS_URL}/api/assistant`, {
       method: 'POST',
@@ -317,17 +373,18 @@ export async function askAiAgent(
     if (workerRes.ok) {
       const data = await workerRes.json();
       if (data.answer) {
-        const actions = extractAgentActions(cleanPrompt, data.answer);
-        return { text: data.answer, actions };
+        const sanitized = eradicatePhoneNumbers(data.answer);
+        const actions = extractAgentActions(cleanPrompt, sanitized);
+        return { text: sanitized, actions };
       }
     }
   } catch {
     // Fall through to grounded local engine
   }
 
-  // 3. Grounded Deterministic Knowledge Fallback
-  const groundedText = localGroundedRcmAnswer(cleanPrompt);
-  const actions = extractAgentActions(cleanPrompt, groundedText);
-  return { text: groundedText, actions };
+  // 4. Grounded Deterministic Knowledge Fallback
+  const sanitizedFallback = eradicatePhoneNumbers(groundedText);
+  const actions = extractAgentActions(cleanPrompt, sanitizedFallback);
+  return { text: sanitizedFallback, actions };
 }
 

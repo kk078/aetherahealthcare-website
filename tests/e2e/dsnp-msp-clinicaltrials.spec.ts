@@ -21,7 +21,7 @@ test.describe('D-SNP & Medicare Advantage Funnel, ID & Allergy Specialties, and 
     await page.getByPlaceholder('Clinic Director / MD').fill('VP of Managed Care');
     await page.getByPlaceholder('Sunrise Senior Care').fill('Suncoast Senior Health Alliance');
     await page.getByPlaceholder('eramos@sunrisecare.org').fill('rvance@suncoastsenior.org');
-    await page.getByPlaceholder('(813) 555-0199').fill('(813) 555-7722');
+    await page.getByPlaceholder('(555) 000-0000').fill('(555) 000-7722');
 
     // Screenshot artifact
     await page.screenshot({ path: `${ARTIFACT_DIR}/dsnp_medicare_advantage_landing.png`, fullPage: false });

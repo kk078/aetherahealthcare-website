@@ -83,7 +83,7 @@ test.describe('Free 50-Claim Pilot Interactive Modal', () => {
     await page.getByPlaceholder(/Dr. Jane Smith/i).fill('Dr. Robert Vance');
     await page.getByPlaceholder(/Metro Specialty Clinic/i).fill('Vance Cardiology Associates');
     await page.getByPlaceholder('doctor@practice.com').fill('rvance@vancecardiology.com');
-    await page.getByPlaceholder('(555) 000-0000').fill('(813) 555-1212');
+    await page.getByPlaceholder('(555) 000-0000').fill('(555) 000-1212');
 
     // Submit
     await page.getByRole('button', { name: /Activate 50-Claim Free Pilot/i }).click();

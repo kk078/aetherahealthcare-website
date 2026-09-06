@@ -26,6 +26,34 @@ export interface DenialCode {
 
 export const DENIAL_CODES: DenialCode[] = [
   {
+    code: '45',
+    label: 'Charge exceeds fee schedule/maximum allowable or contracted fee arrangement',
+    rarc: 'N517, N657',
+    category: 'Contractual Obligation',
+    difficulty: 'correctable',
+    rootCause:
+      'The provider billed an amount exceeding the contracted payer allowable fee schedule (CO-45), or the fee was discounted per participation contract.',
+    workIt:
+      'Audit against the negotiated payer fee schedule. If the payer underpaid the contracted rate or processed under an incorrect fee schedule tier, file a formal underpayment appeal. If the contractual adjustment matches your agreement, write off the variance — do not balance-bill the patient.',
+    prevent:
+      'Scrub claim lines against fee schedules pre-submission and run contract variance checks on 835 ERAs.',
+    aliases: ['45', 'co-45', 'fee schedule', 'maximum allowable', 'contractual adjustment', 'over allowable'],
+  },
+  {
+    code: '204',
+    label: 'Service/equipment/drug is not covered under the patient’s current benefit plan',
+    rarc: 'N130, N386',
+    category: 'Benefit Exclusion / Non-Covered',
+    difficulty: 'hard',
+    rootCause:
+      'The service is explicitly excluded from the patient’s insurance policy, benefit frequency is exhausted, or the plan has a non-covered rider (commonly PR-204).',
+    workIt:
+      'Confirm 270/271 eligibility on date of service. If secondary coverage or commercial rider exists, submit COB claim with primary EOB. If the service is genuinely non-covered and a signed Advance Beneficiary Notice (ABN) or financial consent is on file, bill patient responsibility.',
+    prevent:
+      'Perform mandatory real-time eligibility (270/271) verification and secure signed financial waivers for non-covered procedures prior to treatment.',
+    aliases: ['204', 'pr-204', 'benefit exhaustion', 'non-covered', 'patient responsibility 204'],
+  },
+  {
     code: '16',
     label: 'Claim/service lacks information needed for adjudication',
     rarc: 'N290, N257, MA27, M51, N382',

@@ -409,7 +409,7 @@ export default function MedicareAdvantageLandingClient() {
                         <input
                           type="tel"
                           required
-                          placeholder="(813) 555-0199"
+                          placeholder="(555) 000-0000"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           className="w-full px-4 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-teal"

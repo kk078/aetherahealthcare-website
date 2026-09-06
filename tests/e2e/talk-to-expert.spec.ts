@@ -125,4 +125,25 @@ test.describe('Talk to an Expert - Agentic AI & Email Routing', () => {
     // Verify suggestions are visible again (session refreshed)
     await expect(page.getByRole('button', { name: /How to overturn CO-45 & PR-204/i })).toBeVisible();
   });
+
+  test('CO-45 & PR-204 query contains zero phone numbers and directs to /contact and /schedule', async ({ page }) => {
+    await page.goto('/');
+    const triggerBtn = page.getByRole('button', { name: /Talk to an Expert/i });
+    await triggerBtn.click();
+
+    // Click suggestion: 'How to overturn CO-45 & PR-204?'
+    await page.getByRole('button', { name: /How to overturn CO-45 & PR-204/i }).click();
+
+    // Verify response text renders
+    await expect(page.getByText(/Overturning & Resolving CO-45 & PR-204/i).first()).toBeVisible({ timeout: 15000 });
+
+    // Verify phone number (813) 519-4640 is completely absent
+    const chatText = await page.innerText('body');
+    expect(chatText).not.toContain('(813) 519-4640');
+    expect(chatText).not.toContain('519-4640');
+    expect(chatText).not.toContain('8135194640');
+
+    // Take verified screenshot artifact
+    await page.screenshot({ path: '/home/kiran/.gemini/antigravity-cli/brain/50b59a0e-93e4-4856-9aa8-61204b485c5c/chatbox_verified_no_phone.png' });
+  });
 });

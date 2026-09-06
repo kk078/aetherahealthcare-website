@@ -329,7 +329,7 @@ export default function DenialPilotLandingClient() {
                           required
                           value={phone}
                           onChange={e => setPhone(e.target.value)}
-                          placeholder="(813) 555-0199"
+                          placeholder="(555) 000-0000"
                           className="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal"
                         />
                       </div>

@@ -21,7 +21,7 @@ test.describe('Solo Practice Funnel, Nephrology & ENT Specialties, and 29-Tool S
     await page.getByPlaceholder('Dr. David Miller').fill('Dr. Laura Chen');
     await page.getByPlaceholder('Miller Family Health').fill('Chen Internal Medicine & Nephrology');
     await page.getByPlaceholder('drdavid@millerhealth.com').fill('lchen@cheninternalmed.com');
-    await page.getByPlaceholder('(813) 555-0144').fill('(813) 555-8833');
+    await page.getByPlaceholder('(555) 000-0000').fill('(555) 000-8833');
 
     // Screenshot artifact
     await page.screenshot({ path: `${ARTIFACT_DIR}/solo_practice_campaign_landing.png`, fullPage: false });
