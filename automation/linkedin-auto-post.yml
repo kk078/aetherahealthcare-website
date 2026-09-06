@@ -1,29 +1,35 @@
 name: LinkedIn Auto-Publisher
 
-# Automatically publishes Document Carousels to LinkedIn.
-# Runs weekly on Tuesdays at 13:30 UTC (~9:30 AM ET) or on-demand via workflow_dispatch.
+# Automatically publishes Carousels, Infographics, and Thought-Leadership to LinkedIn.
+# Runs on schedule or on-demand via workflow_dispatch.
 
 on:
   schedule:
-    - cron: '30 13 * * 2' # Tuesdays at 9:30 AM ET
+    - cron: '0 14 * * 2,4' # Tuesdays and Thursdays at 9:00 AM ET (14:00 UTC)
   workflow_dispatch:
     inputs:
-      carousel:
-        description: 'Select Carousel to publish'
+      campaign:
+        description: 'Select Campaign to publish (or choose "next_in_queue")'
         required: true
         type: choice
-        default: 'clean_claim'
+        default: 'next_in_queue'
         options:
+          - 'next_in_queue'
           - 'clean_claim'
+          - 'india_ai'
+          - 'ai_integration_stack'
+          - 'payer_ai_arms_race'
+          - 'death_of_manual_bpo'
           - 'hcc_v28'
           - 'biller_departure'
+          - 'fifty_claim_challenge'
       dry_run:
         description: 'Perform dry-run simulation only (preview without posting)'
         type: boolean
         default: false
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: linkedin-publisher
@@ -45,45 +51,30 @@ jobs:
       - name: Install dependencies
         run: npm ci || npm install
 
-      - name: Install Playwright Browsers
-        run: npx playwright install chromium --with-deps
-
-      - name: Determine Campaign
-        id: select_campaign
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "carousel=${{ github.event.inputs.carousel }}" >> $GITHUB_OUTPUT
-            if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
-              echo "flags=--dry-run" >> $GITHUB_OUTPUT
-            else
-              echo "flags=--publish" >> $GITHUB_OUTPUT
-            fi
-          else
-            # Scheduled rotation: Week 1, 2, 3 based on week of year
-            WEEK_NUM=$(date +%V)
-            REMAINDER=$((WEEK_NUM % 3))
-            if [ "$REMAINDER" -eq 0 ]; then
-              echo "carousel=clean_claim" >> $GITHUB_OUTPUT
-            elif [ "$REMAINDER" -eq 1 ]; then
-              echo "carousel=hcc_v28" >> $GITHUB_OUTPUT
-            else
-              echo "carousel=biller_departure" >> $GITHUB_OUTPUT
-            fi
-            echo "flags=--publish" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Run LinkedIn Auto-Publisher
+      - name: Execute Campaign Publisher
         env:
-          LINKEDIN_LI_AT: ${{ secrets.LINKEDIN_LI_AT }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
         run: |
-          node scripts/linkedin-publisher.mjs --carousel "${{ steps.select_campaign.outputs.carousel }}" ${{ steps.select_campaign.outputs.flags }}
+          FLAGS=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            FLAGS="--dry-run"
+          else
+            FLAGS="--publish"
+          fi
 
-      - name: Upload Logs & Verification Artifacts
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: linkedin-publish-logs
-          path: public/brand/carousel/publish_logs/
-          if-no-files-found: ignore
+          if [ "${{ github.event.inputs.campaign }}" = "next_in_queue" ] || [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "Publishing next queued campaign..."
+            node scripts/linkedin-publisher.mjs --publish-next $FLAGS
+          else
+            echo "Publishing selected campaign: ${{ github.event.inputs.campaign }}"
+            node scripts/linkedin-publisher.mjs --campaign "${{ github.event.inputs.campaign }}" $FLAGS
+          fi
+
+      - name: Commit Updated Ledger
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/published-posts.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(marketing): update published campaigns ledger [skip ci]" && git push)
