@@ -519,7 +519,7 @@ export default function CallbackButton() {
               href="/schedule"
               className="inline-flex items-center justify-center gap-1 px-2.5 py-1.5 bg-navy hover:bg-teal text-white rounded-lg font-semibold transition-colors text-[11px]"
             >
-              <Calendar className="h-3 w-3" /> Schedule Call
+              <Calendar className="h-3 w-3" /> Schedule Meeting
             </a>
             <a
               href="/contact"

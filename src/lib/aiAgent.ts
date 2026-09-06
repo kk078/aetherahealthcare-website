@@ -166,11 +166,13 @@ export function extractAgentActions(userPrompt: string, assistantResponse: strin
 export function eradicatePhoneNumbers(text: string): string {
   if (!text) return '';
   return text
-    // Replace "call us directly at (813) 519-4640" or "call us at..."
-    .replace(/(?:please\s+)?call\s+(?:us\s+)?(?:directly\s+)?at\s+(?:\+?1[-. ]?)?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}/gi, 'reach out directly via /contact or email kirkmar078@gmail.com')
-    // Replace "or call (813) 519-4640 to discuss your options"
+    // "or call us at (813) 519-4640 to speak with..." -> "or reach out via /contact to connect with..."
+    .replace(/or\s+(?:please\s+)?call\s+(?:us\s+)?(?:directly\s+)?(?:at\s+)?(?:\+?1[-. ]?)?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}(?:\s+to\s+speak\s+with)?/gi, 'or reach out via /contact to connect with')
+    // "call us directly at (813) 519-4640"
+    .replace(/(?:please\s+)?call\s+(?:us\s+)?(?:directly\s+)?at\s+(?:\+?1[-. ]?)?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}/gi, 'reach out directly via /contact')
+    // "or call (813) 519-4640 to discuss..."
     .replace(/or\s+call\s+(?:\+?1[-. ]?)?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}(?:\s+to\s+discuss\s+(?:your\s+)?options)?/gi, 'or reach out via /contact')
-    // Replace "call (813) 519-4640"
+    // "call (813) 519-4640"
     .replace(/(?:please\s+)?call\s+(?:\+?1[-. ]?)?\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}/gi, 'contact us via /contact')
     // Catch specific known numbers
     .replace(/(?:\+?1[-. ]?)?\(?813\)?[-. ]?519[-. ]?4640/g, 'our team via /contact')
