@@ -136,6 +136,38 @@ Have you ever experienced sudden billing staff turnover? How did your practice h
 
 #PracticeManagement #MedicalPractice #HealthcareAdministration #MedicalBilling #RCM #HealthcareLeadership`,
   },
+  india_ai: {
+    id: 'india_ai',
+    title: 'How US Billing Companies Scale With India + AI Economics',
+    subtitle: 'Why legacy manual offshore BPOs fail and how AI-augmented certified hubs unlock 40%+ margins',
+    pdfPath: resolve(CAROUSEL_DIR, 'india_ai_global_rcm_2026.pdf'),
+    documentTitle: 'How US Medical Billing Companies Scale With India + AI Economics | Aethera',
+    targetUrl: 'https://aetherahealthcare.com/for-billing-companies?utm_source=linkedin&utm_medium=document_post&utm_campaign=india_ai_delivery_model',
+    caption: `US medical billing companies and RCM agencies are facing an unprecedented operating squeeze:
+
+Certified AAPC coders and AR specialists in the US now command $38 to $52/hour ($75,000 to $95,000 fully loaded annual cost). With a 38% annual churn rate, agency owners spend more time recruiting and retraining than closing new provider accounts.
+
+Meanwhile, pure software startups promise "fully automated AI billing" that falls flat on complex surgical operative notes and payer LCD rules. And legacy offshore BPOs in India sold manual keyboard work that led to 15%+ error rates and endless rework.
+
+Pure AI fails on complex claims. Pure offshore manual labor fails on quality.
+The winning model in 2026 is India + AI:
+
+Swipe through the carousel below to see:
+📌 The True Math: Why staffing an internal US billing pod caps agency profit margins at 18%
+📌 The Failure Modes: Why black-box AI and traditional copy-paste BPOs both fall short
+📌 The Hybrid Engine: How autonomous pre-submission scrubbing paired with AAPC-certified specialists in India delivers a 99.1% clean claim rate
+📌 The White-Label Architecture: How Aethera operates directly inside your Athena, Epic, eClinicalWorks, or AdvancedMD system without disrupting your provider clients
+
+We are opening up a Complimentary 50-Claim Back-Office Pilot for US billing agencies: send us 50 of your denied or aging claims, and our team will scrub them and prove cash recovery within 14 days. Zero cost, zero commitment.
+
+👉 Explore our white-label partner program: https://aetherahealthcare.com/for-billing-companies?utm_source=linkedin&utm_medium=document_post&utm_campaign=india_ai_delivery_model
+👉 Book an executive partner strategy call: https://aetherahealthcare.com/schedule?utm_source=linkedin&utm_medium=document_post&utm_campaign=india_ai_delivery_model
+👉 Claim your 50-claim pilot audit: https://aetherahealthcare.com/free-assessment?utm_source=linkedin&utm_medium=document_post&utm_campaign=india_ai_delivery_model
+
+For US billing company owners and RCM directors: What is your biggest operational headache right now—recruiting experienced coders or working stubborn commercial denials?
+
+#MedicalBilling #RevenueCycleManagement #HealthcareRCM #MedicalCoding #HealthcareAI #HealthTech #PracticeManagement #HealthAdmin`,
+  },
 };
 
 /**
