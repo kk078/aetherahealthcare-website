@@ -79,6 +79,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Retention.com / RB2B Person-Level Deanonymization Engine */}
+        <script
+          async
+          data-cfasync="false"
+          src="https://ddwl4m2hdecbv.cloudfront.net/b/DNXY8HJJYVO0/DNXY8HJJYVO0.js.gz"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
