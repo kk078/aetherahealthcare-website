@@ -12,25 +12,16 @@
  * and safely no-ops with zero runtime overhead if unset.
  */
 export default function B2BVisitorTracker() {
-  const rb2bKey = process.env.NEXT_PUBLIC_RB2B_KEY || 'DNXY8HJJYVO0';
   const apolloId = process.env.NEXT_PUBLIC_APOLLO_ID || '';
   const leadfeederId = process.env.NEXT_PUBLIC_LEADFEEDER_ID || '';
   const snitcherId = process.env.NEXT_PUBLIC_SNITCHER_ID || '';
 
-  if (!rb2bKey && !apolloId && !leadfeederId && !snitcherId) {
+  if (!apolloId && !leadfeederId && !snitcherId) {
     return null;
   }
 
   return (
     <>
-      {/* RB2B: Person-level LinkedIn profile & business email resolution */}
-      {rb2bKey && (
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `!function(key){if(window.reb2b)return;window.reb2b={loaded:!0};var s=document.createElement("script");s.async=!0;s.src="https://ddwl4m2hdecbv.cloudfront.net/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0])}("${rb2bKey}");`,
-          }}
-        />
-      )}
 
       {/* Apollo.io: Website Visitor Intelligence */}
       {apolloId && (

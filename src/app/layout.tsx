@@ -91,6 +91,11 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `!function(key){if(window.reb2b)return;window.reb2b={loaded:!0};var s=document.createElement("script");s.async=!0;s.src="https://ddwl4m2hdecbv.cloudfront.net/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0])}("DNXY8HJJYVO0");`,
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-cream text-dark">
         <TopContactBar />
