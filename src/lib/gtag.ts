@@ -7,7 +7,7 @@
  * LABEL into the matching env var below. Everything is inlined at build time and
  * no-ops safely when unset, so this is safe to ship before the IDs exist.
  */
-export const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID || '';
+export const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID || 'G-898JNZJ6LJ';
 export const GADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18295729018';
 
 // Conversion action labels (the part after the "/" in a gtag send_to for Google Ads).

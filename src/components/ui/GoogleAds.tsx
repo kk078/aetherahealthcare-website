@@ -12,7 +12,7 @@
  * Conversions are fired via trackConversion() in src/lib/gtag.ts.
  */
 export default function GoogleAds() {
-  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID || '';
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID || 'G-898JNZJ6LJ';
   const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18295729018';
   const primaryId = gaId || adsId;
 
