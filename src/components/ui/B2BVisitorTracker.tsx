@@ -12,7 +12,7 @@
  * and safely no-ops with zero runtime overhead if unset.
  */
 export default function B2BVisitorTracker() {
-  const rb2bKey = process.env.NEXT_PUBLIC_RB2B_KEY || '';
+  const rb2bKey = process.env.NEXT_PUBLIC_RB2B_KEY || 'DNXY8HJJYVO0';
   const apolloId = process.env.NEXT_PUBLIC_APOLLO_ID || '';
   const leadfeederId = process.env.NEXT_PUBLIC_LEADFEEDER_ID || '';
   const snitcherId = process.env.NEXT_PUBLIC_SNITCHER_ID || '';
@@ -27,7 +27,7 @@ export default function B2BVisitorTracker() {
       {rb2bKey && (
         <script
           dangerouslySetInnerHTML={{
-            __html: `!function(){var reb2b=window.reb2b=window.reb2b||[];if(reb2b.invoked)return;reb2b.invoked=!0;reb2b.methods=["identify","collect"];reb2b.factory=function(method){return function(){var args=Array.prototype.slice.call(arguments);args.unshift(method);reb2b.push(args);return reb2b}};for(var i=0;i<reb2b.methods.length;i++){var key=reb2b.methods[i];reb2b[key]=reb2b.factory(key)}reb2b.load=function(key){var script=document.createElement("script");script.type="text/javascript";script.async=!0;script.src="https://s3-us-west-2.amazonaws.com/b2bjsstore/b/"+key+"/reb2b.js.gz";var first=document.getElementsByTagName("script")[0];first.parentNode.insertBefore(script,first)};reb2b.SNIPPET_VERSION="1.0.1";reb2b.load("${rb2bKey}");}();`,
+            __html: `!function(key){if(window.reb2b)return;window.reb2b={loaded:!0};var s=document.createElement("script");s.async=!0;s.src="https://ddwl4m2hdecbv.cloudfront.net/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0])}("${rb2bKey}");`,
           }}
         />
       )}
