@@ -65,6 +65,7 @@ import ExitIntentCTA from '@/components/ui/ExitIntentCTA';
 import RetargetingPixels from '@/components/ui/RetargetingPixels';
 import FreePilotModal from '@/components/ui/FreePilotModal';
 import AttributionTracker from '@/components/ui/AttributionTracker';
+import B2BVisitorTracker from '@/components/ui/B2BVisitorTracker';
 
 export default function RootLayout({
   children,
@@ -104,6 +105,7 @@ export default function RootLayout({
         <CloudflareAnalytics />
         <GoogleAds />
         <RetargetingPixels />
+        <B2BVisitorTracker />
       </body>
     </html>
   );
