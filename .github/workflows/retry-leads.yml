@@ -14,5 +14,11 @@ jobs:
         run: |
           test -n "$LEAD_RETRY_SECRET"
           curl --fail-with-body --silent --show-error --max-time 120 \
-            -X POST -H "Authorization: Bearer $LEAD_RETRY_SECRET" \
+            -X POST \
+            -H "Authorization: Bearer $LEAD_RETRY_SECRET" \
+            -H "Accept: application/json" \
+            -H "Origin: https://aetherahealthcare.com" \
+            -H "Referer: https://aetherahealthcare.com/" \
+            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" \
             https://aetherahealthcare.com/api/retry-leads
+
