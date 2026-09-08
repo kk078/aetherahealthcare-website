@@ -3,22 +3,19 @@ on:
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
-permissions: {}
+permissions:
+  contents: read
 jobs:
   retry:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Dispatch pending leads
         env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           LEAD_RETRY_SECRET: ${{ secrets.LEAD_RETRY_SECRET }}
-        run: |
-          test -n "$LEAD_RETRY_SECRET"
-          curl --fail-with-body --silent --show-error --max-time 120 \
-            -X POST \
-            -H "Authorization: Bearer $LEAD_RETRY_SECRET" \
-            -H "Accept: application/json" \
-            -H "Origin: https://aetherahealthcare.com" \
-            -H "Referer: https://aetherahealthcare.com/" \
-            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" \
-            https://aetherahealthcare.com/api/retry-leads
-
+        run: node scripts/retry-leads.mjs
