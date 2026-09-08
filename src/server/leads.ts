@@ -1,5 +1,5 @@
 import type { D1Database } from '@cloudflare/workers-types';
-import { SITE } from '../lib/siteConfig';
+import { CONTACT_EMAIL } from '../lib/business';
 
 export interface LeadEnv {
   LEADS_DB?: D1Database;
@@ -64,7 +64,7 @@ export function mapToCrm(lead: LeadEnvelope) {
   const { data, formType } = lead;
   const s = (key: string) => data[key] == null ? '' : String(data[key]);
   const name = s('name') || s('contactName') || [s('firstName'), s('lastName')].filter(Boolean).join(' ') || s('practiceContact') || 'Website Visitor';
-  const shared = { submissionId: lead.submissionId, source: formType, routedTo: SITE.contactEmail, attribution: lead.attribution ?? {} };
+  const shared = { submissionId: lead.submissionId, source: formType, routedTo: CONTACT_EMAIL, attribution: lead.attribution ?? {} };
   if (['gap', 'gap_analysis', 'free_assessment'].includes(formType)) {
     return { path: formType === 'free_assessment' ? '/assessments' : '/gap-analyses', payload: { ...data, ...shared } };
   }
