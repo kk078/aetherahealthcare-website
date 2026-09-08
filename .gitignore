@@ -80,3 +80,6 @@ rebuild-website.bat
 .dev.vars
 
 /public/workers/
+
+# Generated deployment binding; Pages requires a root config path.
+/wrangler.jsonc

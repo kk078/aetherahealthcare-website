@@ -30,7 +30,7 @@ Use GitHub repository variables for the optional `NEXT_PUBLIC_*` tracking IDs an
 
 `Verify and release website` runs lint (including warnings), typechecking, unit tests, dependency audit, production build, Functions compilation, desktop E2E and focused mobile E2E. Deployment depends on that job and downloads the exact verified static artifact. The old independent deployment workflow and auto-blog deployment path have been removed.
 
-The deploy job runs `scripts/prepare-deploy.mjs`, which creates or finds the `aethera-website-leads` D1 database and puts the two server secrets into the Pages project. It generates `.wrangler/deploy.json` with the `LEADS_DB` binding and reads the project’s configured production branch instead of assuming `main`. Wrangler applies the SQL migrations and deploys the verified site plus Functions. Provisioning fails before deployment if prerequisites are missing; it does not print credentials.
+The deploy job runs `scripts/prepare-deploy.mjs`, which creates or finds the `aethera-website-leads` D1 database and puts the two server secrets into the Pages project. It generates `wrangler.jsonc` with the `LEADS_DB` binding and reads the project’s configured production branch instead of assuming `main`. Wrangler applies the SQL migrations and deploys the verified site plus Functions. Provisioning fails before deployment if prerequisites are missing; it does not print credentials.
 
 For a manual release, first run every check above, then run the same prepare/migrate/deploy commands from `.github/workflows/ci.yml`. Do not deploy `out/` without the Functions and D1 binding: the lead endpoint deliberately returns 503 instead of losing or broadcasting personal information.
 

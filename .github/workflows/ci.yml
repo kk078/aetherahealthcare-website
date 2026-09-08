@@ -81,5 +81,5 @@ jobs:
           LEAD_RETRY_SECRET: ${{ secrets.LEAD_RETRY_SECRET }}
         run: |
           node scripts/prepare-deploy.mjs
-          npx wrangler d1 migrations apply aethera-website-leads --remote --config .wrangler/deploy.json
-          npx wrangler pages deploy out --project-name=aetherahealthcare-website --branch="$(cat .wrangler/production-branch)" --config .wrangler/deploy.json
+          npx wrangler d1 migrations apply aethera-website-leads --remote --config wrangler.jsonc
+          npx wrangler pages deploy out --project-name=aetherahealthcare-website --branch="$(cat .wrangler/production-branch)"

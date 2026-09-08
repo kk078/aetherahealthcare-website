@@ -26,8 +26,8 @@ for (const [name, value] of [['RATE_LIMIT_SECRET', rateSecret], ['LEAD_RETRY_SEC
 }
 await mkdir('.wrangler', { recursive: true });
 await writeFile('.wrangler/production-branch', projectInfo.production_branch);
-await writeFile('.wrangler/deploy.json', JSON.stringify({
+await writeFile('wrangler.jsonc', JSON.stringify({
   name: project, pages_build_output_dir: resolve('out'), compatibility_date: '2026-09-07',
   d1_databases: [{ binding: 'LEADS_DB', database_name: name, database_id: database.uuid, migrations_dir: resolve('migrations') }],
 }, null, 2));
-console.log('Durable lead binding prepared. Apply migrations and deploy the tested artifact with .wrangler/deploy.json.');
+console.log('Durable lead binding prepared. Apply migrations and deploy the tested artifact with wrangler.jsonc.');
