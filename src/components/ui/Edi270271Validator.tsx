@@ -7,10 +7,7 @@ import {
   CheckCircle2,
   XCircle,
   AlertTriangle,
-  Sparkles,
   ArrowRight,
-  ShieldCheck,
-  RotateCcw,
   Copy,
 } from 'lucide-react';
 

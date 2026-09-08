@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, AlertCircle, TrendingUp, Shield, DollarSign, FileText, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -6,7 +7,8 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: 'Family Medicine Billing | RCM for Family Physicians | Aethera Healthcare',
+  alternates: { canonical: canonicalUrl('/services/family-medicine-billing') },
+  title: { absolute: 'Family Medicine Billing | RCM for Family Physicians | Aethera Healthcare' },
   description: 'Complete family medicine billing for preventive care, chronic disease management, annual wellness visits, E&M coding, and care management. 96.5% clean claim rate.',
 };
 

@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Calendar, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -78,6 +79,7 @@ const relatedServices = [
 ];
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services/prior-authorization') },
   title: "Prior Authorization Services & Tracking",
   description: "Streamlined prior authorization submission, tracking, and follow-up that prevents auth-related denials and speeds care. Prior auth management from Aethera.",
 };

@@ -12,7 +12,6 @@ import {
   FileCode,
   ShieldCheck,
   Zap,
-  Info,
   Layers,
   Sparkles,
   Scissors,
@@ -494,7 +493,7 @@ export default function AchdReoperationScrubber() {
         auditNotes,
       };
 
-      await sendLeadToKiran('achd_reoperation_rcm_audit', payload);
+      if (!(await sendLeadToKiran('achd_reoperation_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('calculator', scrubberResult.penaltyAtRisk);
 
       setLeadSuccess(true);
@@ -781,7 +780,7 @@ export default function AchdReoperationScrubber() {
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setMazeCryoablation(item.id as any)}
+                    onClick={() => setMazeCryoablation(item.id as typeof mazeCryoablation)}
                     className={`p-3 text-left rounded-xl border transition-all ${
                       mazeCryoablation === item.id
                         ? 'border-amber-500 bg-amber-50/50 text-slate-900 font-semibold shadow-sm'
@@ -882,7 +881,7 @@ export default function AchdReoperationScrubber() {
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setFenestrationStrategy(item.id as any)}
+                    onClick={() => setFenestrationStrategy(item.id as typeof fenestrationStrategy)}
                     className={`p-3 text-left rounded-xl border transition-all ${
                       fenestrationStrategy === item.id
                         ? 'border-sky-500 bg-sky-50/50 text-slate-900 font-semibold shadow-sm'

@@ -34,11 +34,11 @@ export default function DenialsReport() {
     e.preventDefault();
     if (!email || status === 'sending') return;
     setStatus('sending');
-    await submitToWorker('denials_report', {
+    if (!(await submitToWorker('denials_report', {
       email,
       specialty: b.name,
       message: `Unlocked the ${b.name} State of Denials benchmark report. Requested the full PDF + a free denial-mix review for their practice.`,
-    });
+    }))) {  return; }
     setUnlocked(true);
     setStatus('idle');
   }

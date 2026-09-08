@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -8,6 +9,7 @@ import RvuCalculator from '@/components/ui/RvuCalculator';
 import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/rvu-calculator') },
   title: { absolute: 'RVU Payment Calculator — Medicare Fee Schedule Estimate | Aethera Healthcare Solutions' },
   description:
     'Free RVU calculator: enter work, practice-expense, and malpractice RVUs with GPCI and the Medicare conversion factor to estimate the allowed amount for a CPT/HCPCS code.',

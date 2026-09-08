@@ -1,4 +1,6 @@
-# aetherahealthcare.com — Full Functionality Audit
+# Historical functionality audit — August 3, 2026
+
+This is a historical snapshot, not the current release status. See CODEBASE_ENHANCEMENT_REVIEW.md and DEPLOY.md for the subsequent review and release requirements.
 
 > **Remediation status (2026-08-03):** every in-repo defect below has been fixed on this branch — the six user-visible breakages (except "Client Login", excluded by request), the lead-wiring gaps, stale tests/CI, dead code, and data/copy issues. Two things remain that only the site owner can do:
 > 1. **Rotate the `CLOUDFLARE_API_TOKEN` GitHub Actions secret.** The token was invalidated on 2026-07-17 (auto-blog deploys fail with Cloudflare auth errors 10000/9109). Until it's rotated, **no deploy — including this branch's fixes and the 5 stranded blog posts — can reach production.** See DEPLOY.md §3 for steps.

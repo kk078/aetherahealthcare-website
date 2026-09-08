@@ -654,7 +654,7 @@ export const metadata = {
   title: "Medical Billing Specialties We Serve",
   description: "Expert billing and revenue cycle management across 86+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
   alternates: {
-    canonical: 'https://aetherahealthcare.com/specialties',
+    canonical: 'https://aetherahealthcare.com/specialties/',
   },
   openGraph: {
     title: 'Medical Billing Specialties | Aethera Healthcare Solutions',

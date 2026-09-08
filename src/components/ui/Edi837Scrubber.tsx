@@ -3,14 +3,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import {
-  FileText,
   CheckCircle2,
   XCircle,
   AlertTriangle,
   Copy,
-  Sparkles,
-  ArrowRight,
-  ShieldAlert,
   Code2,
   Terminal,
 } from 'lucide-react';

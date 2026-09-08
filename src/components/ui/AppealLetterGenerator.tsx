@@ -1,5 +1,7 @@
 'use client';
 
+import { requestOverlay } from '@/lib/overlayStore';
+
 import { useState } from 'react';
 import Link from 'next/link';
 import {
@@ -321,7 +323,7 @@ Inquiries & Escalations: https://aetherahealthcare.com/contact`;
             <button
               type="button"
               onClick={() => {
-                window.dispatchEvent(
+                requestOverlay(
                   new CustomEvent('open-expert-modal', {
                     detail: {
                       mode: 'chat',

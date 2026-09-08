@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -7,8 +8,9 @@ import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 import { ArrowLeft } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/denial-overturn-predictor') },
   title: {
-    absolute: 'Claim Denial Overturn Probability & Strategy Predictor | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Denial Appeal Readiness & Review Checklist | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
     'Predict medical claim denial overturn probability across CARC codes (CO-50, CO-197, CO-97, CO-16, CO-29, CO-22). Compute statutory appeal deadline countdowns, clinical evidence checklists, and legal citations.',
@@ -18,7 +20,7 @@ export default function DenialOverturnPredictorPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: 'Claim Denial Overturn Probability & Strategy Predictor',
+    name: 'Denial Appeal Readiness & Review Checklist',
     url: 'https://aetherahealthcare.com/tools/denial-overturn-predictor',
     applicationCategory: 'HealthApplication',
     operatingSystem: 'All',
@@ -42,12 +44,12 @@ export default function DenialOverturnPredictorPage() {
           </Link>
           <FadeIn>
             <h1 className="text-3xl md:text-5xl font-extrabold text-white font-jakarta mb-4">
-              Claim Denial Overturn Probability &amp; Strategy Predictor
+              Denial Appeal Readiness &amp; Review Checklist
             </h1>
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-lg md:text-xl text-cream/90 max-w-3xl leading-relaxed">
-              Nearly 65% of denied medical claims are never appealed because staff assume the denial is permanent. Calculate your statistical likelihood of winning on Level 1 appeal, track your statutory filing window, and copy legal appeal rationales.
+              Check your appeal documentation and reference timeframes. The score describes checklist completion and does not predict appeal success. Verify your payer’s actual policy and deadline.
             </p>
           </FadeIn>
         </div>

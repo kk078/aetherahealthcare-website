@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import {
   FileText,
@@ -19,6 +20,7 @@ import ServiceCard from '@/components/ui/ServiceCard';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services') },
   title: "RCM Services | Medical Billing, Coding, Denial Management",
   description: "Discover Aethera Healthcare Solutions' comprehensive revenue cycle management services including medical coding, claims processing, payment posting, denial management, and more for healthcare providers.",
 };

@@ -1,11 +1,13 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Edi270271Validator from '@/components/ui/Edi270271Validator';
-import { FileCode2, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { FileCode2, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'ANSI X12 270/271 Real-Time Eligibility & Benefit Validator | Aethera Healthcare',
+  alternates: { canonical: canonicalUrl('/tools/edi-270-271-validator') },
+  title: { absolute: 'ANSI X12 270/271 Real-Time Eligibility & Benefit Validator | Aethera Healthcare' },
   description:
     'Free online ANSI X12 270/271 EDI eligibility parser. Decode raw 271 transactions into clear copays, deductibles, coinsurance, and active coverage verification.',
 };

@@ -1,20 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import {
-  TrendingUp,
   Award,
-  AlertTriangle,
   CheckCircle2,
   Printer,
-  Sparkles,
   ArrowRight,
-  ShieldCheck,
-  Building,
-  DollarSign,
-  Clock,
-  Percent,
 } from 'lucide-react';
 import { PRIMARY_EXPERT_EMAIL, sendLeadToKiran } from '@/lib/worker';
 
@@ -192,9 +183,9 @@ export default function PracticeBenchmarkScorecard() {
       routeTo: PRIMARY_EXPERT_EMAIL,
     };
 
-    await sendLeadToKiran('scorecard_consultation', payload, [
+    if (!(await sendLeadToKiran('scorecard_consultation', payload, [
       { role: 'user', content: `Scorecard Audit: ${specialty} (${providerCount} providers), Health Score ${overallScore}/100 (${grade}), Annual Cash Lift $${totalAnnualCashLift.toLocaleString()}` },
-    ]);
+    ]))) { setIsSubmitting(false); return; }
 
     setIsSubmitting(false);
     setSubmitSuccess(true);

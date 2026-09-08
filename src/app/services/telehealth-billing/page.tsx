@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Zap, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -78,6 +79,7 @@ const relatedServices = [
 ];
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services/telehealth-billing') },
   title: "Telehealth Billing & Virtual Care RCM",
   description: "Specialized telehealth billing and coding — correct modifiers, POS codes, and payer rules for virtual care so every visit gets paid. Telehealth RCM from Aethera.",
 };

@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -8,6 +9,7 @@ import { AlertTriangle, ArrowLeft } from 'lucide-react';
 import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/denial-code-lookup') },
   title: { absolute: 'Denial Code Lookup — Full CARC & RARC Reason Code List | Aethera Healthcare Solutions' },
   description:
     'Free searchable lookup of 1,200+ CARC and RARC denial codes for billing and AR teams. Get the official reason for any code, plus how to work and prevent the most common denials.',

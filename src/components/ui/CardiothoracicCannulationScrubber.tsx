@@ -12,9 +12,6 @@ import {
   Loader2,
   FileCode,
   ShieldCheck,
-  Zap,
-  Info,
-  Layers,
   Sparkles,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -492,7 +489,7 @@ IEA*1*000000101~`;
         },
       };
 
-      await sendLeadToKiran('cardiothoracic_rcm_audit', payload);
+      if (!(await sendLeadToKiran('cardiothoracic_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('cardiothoracic_rcm_audit_submit');
       setLeadSuccess(true);
     } catch {

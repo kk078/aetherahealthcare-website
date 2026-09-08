@@ -3,21 +3,13 @@
 import React, { useState, useMemo } from 'react';
 import {
   Scissors,
-  AlertTriangle,
   CheckCircle2,
   Copy,
   Check,
-  Send,
   Loader2,
   FileCode,
   ShieldCheck,
-  Calculator,
   ChevronRight,
-  TrendingDown,
-  Info,
-  DollarSign,
-  Activity,
-  Layers,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';

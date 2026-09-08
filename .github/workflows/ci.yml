@@ -1,84 +1,85 @@
-name: CI — Pull Request Checks
-
+name: Verify and release website
 on:
   pull_request:
   push:
     branches: [master, main]
-  workflow_dispatch: {}
-
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: website-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+env:
+  NEXT_PUBLIC_GOOGLE_ADS_ID: ${{ vars.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18295729018' }}
+  NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ vars.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-898JNZJ6LJ' }}
+  NEXT_PUBLIC_GADS_LABEL_ASSESSMENT: ${{ vars.NEXT_PUBLIC_GADS_LABEL_ASSESSMENT }}
+  NEXT_PUBLIC_GADS_LABEL_CONTACT: ${{ vars.NEXT_PUBLIC_GADS_LABEL_CONTACT }}
+  NEXT_PUBLIC_GADS_LABEL_MEETING: ${{ vars.NEXT_PUBLIC_GADS_LABEL_MEETING }}
+  NEXT_PUBLIC_GADS_LABEL_BOOKING: ${{ vars.NEXT_PUBLIC_GADS_LABEL_BOOKING }}
+  NEXT_PUBLIC_GADS_LABEL_PILOT: ${{ vars.NEXT_PUBLIC_GADS_LABEL_PILOT }}
+  NEXT_PUBLIC_GADS_LABEL_CALCULATOR: ${{ vars.NEXT_PUBLIC_GADS_LABEL_CALCULATOR }}
+  NEXT_PUBLIC_LINKEDIN_PARTNER_ID: ${{ vars.NEXT_PUBLIC_LINKEDIN_PARTNER_ID }}
+  NEXT_PUBLIC_META_PIXEL_ID: ${{ vars.NEXT_PUBLIC_META_PIXEL_ID }}
+  NEXT_PUBLIC_RB2B_KEY: ${{ vars.NEXT_PUBLIC_RB2B_KEY }}
+  NEXT_PUBLIC_APOLLO_ID: ${{ vars.NEXT_PUBLIC_APOLLO_ID }}
+  NEXT_PUBLIC_LEADFEEDER_ID: ${{ vars.NEXT_PUBLIC_LEADFEEDER_ID }}
+  NEXT_PUBLIC_SNITCHER_ID: ${{ vars.NEXT_PUBLIC_SNITCHER_ID }}
+  NEXT_PUBLIC_CF_BEACON_TOKEN: ${{ vars.NEXT_PUBLIC_CF_BEACON_TOKEN }}
 jobs:
-  # ── 1. Next.js build + type check ─────────────────────────────────────────
-  build:
-    name: Next.js Build & Type Check
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build Next.js site (includes TypeScript check)
-        run: npm run build
-        env:
-          NEXT_PUBLIC_GOOGLE_ADS_ID: AW-18295729018
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm audit --audit-level=high
+      - run: npm run build
+      - run: npx wrangler pages functions build functions --outdir /tmp/aethera-functions
+      - run: npx playwright install chromium --with-deps
+      - run: npm run test:e2e
+      - run: npx playwright test tests/e2e/enhancement-regressions.spec.ts --project=mobile-chrome
+      - uses: actions/upload-artifact@v4
         with:
-          name: nextjs-out
+          name: verified-site
           path: out/
-          retention-days: 1
-
-  # ── 2. Playwright E2E ─────────────────────────────────────────────────────
-  # Page tests run against the PR's own build served locally; header and API
-  # tests run read-only against production. No test POSTs live form data
-  # (the contact-form live-submit test self-skips without E2E_LIVE_SUBMIT=1).
-  e2e:
-    name: E2E Tests
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: browser-evidence
+          path: |
+            /tmp/aethera-playwright-report/
+            /tmp/aethera-e2e-results/
+  deploy:
+    needs: verify
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
-    needs: [build]
+    environment: aetherahealthcare-website (Production)
+    permissions:
+      contents: read
+      deployments: write
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@v4
         with:
-          name: nextjs-out
+          name: verified-site
           path: out
-
-      - name: Install Playwright browser
-        run: npx playwright install chromium --with-deps
-
-      - name: Serve the built site
-        run: python3 -m http.server 3000 --directory out &
-
-      - name: Page tests (against this build)
-        run: npx playwright test tests/e2e/smoke.spec.ts tests/e2e/contact-form.spec.ts tests/e2e/gap-analysis-redirect.spec.ts --project=chromium
+      - name: Prepare database, migrate and deploy verified artifact
         env:
-          BASE_URL: http://localhost:3000
-
-      - name: Security-header & API tests (against production, read-only)
-        run: npx playwright test tests/e2e/security-headers.spec.ts tests/e2e/crm-api.spec.ts --project=chromium
-
-      - name: Upload Playwright report
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report-ci
-          path: playwright-report/
-          retention-days: 7
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          RATE_LIMIT_SECRET: ${{ secrets.RATE_LIMIT_SECRET }}
+          LEAD_RETRY_SECRET: ${{ secrets.LEAD_RETRY_SECRET }}
+        run: |
+          node scripts/prepare-deploy.mjs
+          npx wrangler d1 migrations apply aethera-website-leads --remote --config .wrangler/deploy.json
+          npx wrangler pages deploy out --project-name=aetherahealthcare-website --branch="$(cat .wrangler/production-branch)" --config .wrangler/deploy.json

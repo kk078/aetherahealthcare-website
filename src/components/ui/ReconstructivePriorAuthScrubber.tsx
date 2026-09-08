@@ -13,11 +13,9 @@ import {
   ShieldCheck,
   Scale,
   FileText,
-  Info,
   Layers,
   Sparkles,
   Eye,
-  Activity,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -165,27 +163,13 @@ export default function ReconstructivePriorAuthScrubber() {
       deficiencies,
       allowedEst: 3250.0,
     };
-  }, [
-    procedure,
-    mrd1Mm,
-    visualFieldDefectPct,
-    photosShowRedundantSkin,
-    tapedVsUntapedComparison,
-    schnurMetrics,
-    conservativeTherapyMonths,
-    shoulderGroovingDocumented,
-    pannusGrade,
-    intertrigoFailureMonths,
-    stableWeightMonths,
-    includesDiastasisRepair,
-    mastectomyHistory,
-  ]);
+  }, [procedure, mastectomyHistory, mrd1Mm, visualFieldDefectPct, photosShowRedundantSkin, tapedVsUntapedComparison, schnurMetrics.meetsSchnur, schnurMetrics.schnurThresholdGrams, conservativeTherapyMonths, shoulderGroovingDocumented, plannedResectionPerBreast, pannusGrade, intertrigoFailureMonths, stableWeightMonths, includesDiastasisRepair]);
 
   // ANSI X12 837P EDI Simulation
   const ediSnippet = useMemo(() => {
     const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
     let dx = 'N62'; // Breast hypertrophy
-    let cpt = complianceAssessment.cpt;
+    const cpt = complianceAssessment.cpt;
 
     if (procedure === 'blepharoplasty') dx = 'H02.831'; // Dermatochalasis
     else if (procedure === 'panniculectomy') dx = 'L98.7'; // Excessive skin fold / intertrigo
@@ -336,7 +320,7 @@ Denial of this prior authorization request constitutes a direct violation of fed
     };
 
     try {
-      await sendLeadToKiran('reconstructive_prior_auth_scrubber_audit', payload);
+      if (!(await sendLeadToKiran('reconstructive_prior_auth_scrubber_audit', payload))) { setSubmitting(false); return; }
       trackConversion('assessment', complianceAssessment.allowedEst);
       setSubmitted(true);
     } catch (err) {

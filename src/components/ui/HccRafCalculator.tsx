@@ -11,15 +11,11 @@ import {
   Copy,
   CheckCircle2,
   Check,
-  Send,
   Loader2,
   ArrowRight,
   ShieldCheck,
   Sparkles,
   Info,
-  DollarSign,
-  Layers,
-  HelpCircle,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
@@ -369,7 +365,7 @@ AETHERA REVENUE CYCLE REMEDIATION PLAN:
     setLeadLoading(true);
 
     try {
-      await sendLeadToKiran('hcc_risk_adjustment_audit_request', {
+      if (!(await sendLeadToKiran('hcc_risk_adjustment_audit_request', {
         source: 'HCC RAF Score Calculator & Audit Tool',
         name: leadName || 'Risk Adjustment Director',
         email: leadEmail,
@@ -382,7 +378,7 @@ v28 RAF: ${scores.v28Total.toFixed(3)} ($${scores.v28AnnualRev.toLocaleString()}
 Blended RAF: ${scores.blendedTotal.toFixed(3)} ($${scores.blendedAnnualRev.toLocaleString()}/yr)
 Net Delta: ${scores.deltaRaf >= 0 ? '+' : ''}${scores.deltaRaf.toFixed(3)} ($${scores.deltaRev.toLocaleString()}/yr, ${scores.pctChange}%)
 Selected HCCs: ${activeConditions.map((c) => c.id).join(', ')}`,
-      });
+      }))) {  return; }
       setLeadSubmitted(true);
     } catch {
       setLeadSubmitted(true);

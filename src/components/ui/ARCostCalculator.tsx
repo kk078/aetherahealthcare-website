@@ -48,14 +48,14 @@ export default function ARCostCalculator() {
     e.preventDefault();
     if (!email || leadStatus === 'sending') return;
     setLeadStatus('sending');
-    await submitToWorker('ar_calculator_lead', {
+    if (!(await submitToWorker('ar_calculator_lead', {
       email,
       claimVolume: '',
       message:
         `A/R cost calculator lead — ${fmt(annualRevenue)} annual revenue, ${currentArDays} current A/R days → ` +
         `${targetArDays} target. Excess A/R tied up ${fmt(r.cashFreed)}; est. annual carrying cost ${fmt(r.annualCarryingCost)} ` +
         `at ${costOfCapital}% cost of capital. Requested a free A/R acceleration analysis.`,
-    });
+    }))) {  return; }
     setLeadStatus('sent');
   }
 

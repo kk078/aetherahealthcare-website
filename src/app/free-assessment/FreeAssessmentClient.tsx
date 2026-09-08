@@ -1,9 +1,11 @@
 'use client';
 
-import { useMemo, useRef, useState } from 'react';
+import { requestOverlay } from '@/lib/overlayStore';
+
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import {
-  ArrowRight, CheckCircle, Phone, Download, AlertCircle, TrendingUp,
+  ArrowRight, CheckCircle, Download, AlertCircle, TrendingUp,
   ShieldCheck, FileText, UploadCloud, Lock, FileSpreadsheet, X, Calendar,
 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -13,9 +15,10 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import AgingReport from '@/components/ui/AgingReport';
 import AgingVisualizer, { type AgingBuckets } from '@/components/ui/AgingVisualizer';
 import { submitToWorker } from '@/lib/worker';
+import { UPLOAD_LIMITS, validateUpload } from '@/lib/uploadLimits';
 import { trackConversion } from '@/lib/gtag';
 import {
-  decodeBuffer, parseDelimited, rowsToAggregates, computeMetrics,
+  computeMetrics,
   type ParsedAggregates, type ManualOverrides,
 } from '@/lib/agingAnalysis';
 
@@ -43,73 +46,6 @@ interface Profile {
   firstName: string; lastName: string; practiceName: string; specialty: string;
   providerCount: string; claimVolume: string; billingSituation: string; ehr: string;
   phone: string; email: string; challenge: string;
-}
-
-interface PdfTextItem {
-  str: string;
-  transform: number[];
-}
-
-interface PdfJsNamespace {
-  GlobalWorkerOptions: { workerSrc: string };
-  getDocument: (source: { data: ArrayBuffer }) => {
-    promise: Promise<{
-      numPages: number;
-      getPage: (pg: number) => Promise<{
-        getTextContent: () => Promise<{ items: PdfTextItem[] }>;
-      }>;
-    }>;
-  };
-}
-
-interface XlsxNamespace {
-  read: (data: ArrayBuffer, opts: { type: string }) => {
-    SheetNames: string[];
-    Sheets: Record<string, unknown>;
-  };
-  utils: {
-    sheet_to_json: (sheet: unknown, opts: Record<string, unknown>) => string[][];
-  };
-}
-
-// Best-effort PDF -> rows (text reconstruction). Returns [] on any failure.
-async function parsePdfToRows(file: File): Promise<string[][]> {
-  try {
-    const pdfjs = (await import('pdfjs-dist')) as unknown as PdfJsNamespace;
-    try {
-      pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url).toString();
-    } catch { /* fall through; pdfjs may use a fake worker */ }
-    const data = await file.arrayBuffer();
-    const doc = await pdfjs.getDocument({ data }).promise;
-    const rows: string[][] = [];
-    for (let pg = 1; pg <= doc.numPages; pg++) {
-      const page = await doc.getPage(pg);
-      const content = await page.getTextContent();
-      const byLine = new Map<number, { x: number; s: string }[]>();
-      for (const it of content.items) {
-        const y = Math.round(it.transform[5]);
-        const x = it.transform[4];
-        if (!byLine.has(y)) byLine.set(y, []);
-        byLine.get(y)!.push({ x, s: it.str });
-      }
-      const ys = Array.from(byLine.keys()).sort((a, b) => b - a);
-      for (const y of ys) {
-        const parts = byLine.get(y)!.sort((a, b) => a.x - b.x);
-        const cells: string[] = [];
-        let prevX = -1;
-        for (const p of parts) {
-          if (prevX >= 0 && p.x - prevX > 24) cells.push(p.s);
-          else if (cells.length) cells[cells.length - 1] += ' ' + p.s;
-          else cells.push(p.s);
-          prevX = p.x;
-        }
-        if (cells.length) rows.push(cells.map((c) => c.trim()));
-      }
-    }
-    return rows;
-  } catch {
-    return [];
-  }
 }
 
 export default function FreeAssessmentClient() {
@@ -144,35 +80,38 @@ export default function FreeAssessmentClient() {
     setB({ b30: 520000, b60: 290000, b90: 170000, b120: 110000, bOv: 110000 });
   };
 
+  const parserRef = useRef<Worker | null>(null);
+  const cancelParseRef = useRef<(() => void) | null>(null);
+  useEffect(() => () => cancelParseRef.current?.(), []);
+
   function clearUpload() {
+    cancelParseRef.current?.();
+
     setAgg(null); setFileName(''); setUploadState('idle'); setUploadErr('');
     if (fileRef.current) fileRef.current.value = '';
   }
 
   async function handleFile(file: File) {
-    setUploadState('parsing'); setFileName(file.name); setUploadErr('');
+    cancelParseRef.current?.();
+    let worker: Worker | null = null;
     try {
-      const ext = (file.name.toLowerCase().split('.').pop() || '');
-      let rows: string[][] = [];
-      if (ext === 'xlsx' || ext === 'xls') {
-        const XLSX = (await import('xlsx')) as unknown as XlsxNamespace;
-        const wb = XLSX.read(await file.arrayBuffer(), { type: 'array' });
-        const ws = wb.Sheets[wb.SheetNames[0]];
-        rows = XLSX.utils.sheet_to_json(ws, { header: 1, raw: false, defval: '' });
-      } else if (ext === 'pdf') {
-        rows = await parsePdfToRows(file);
-      } else {
-        const text = decodeBuffer(await file.arrayBuffer());
-        rows = parseDelimited(text);
-      }
-      const clean = rows.map((r) => (r || []).map((c) => String(c ?? '')));
-      const a = rowsToAggregates(clean);
-      if (!a.ok) {
-        setUploadState('error');
-        setUploadErr('We couldn’t detect aging columns in that file. Try a CSV or Excel export of your A/R aging — or enter your buckets manually below.');
-        setAgg(null);
-        return;
-      }
+      validateUpload(file);
+      setUploadState('parsing'); setFileName(file.name); setUploadErr('');
+      worker = new Worker('/workers/aging-parser.js', { type: 'module' });
+      parserRef.current = worker;
+      const a = await new Promise<ParsedAggregates>((resolve, reject) => {
+        const timeout = setTimeout(() => { worker?.terminate(); reject(new Error('Parsing timed out. Export a smaller file or enter totals manually.')); }, UPLOAD_LIMITS.timeoutMs);
+        const finish = () => clearTimeout(timeout);
+        cancelParseRef.current = () => { finish(); worker?.terminate(); reject(new DOMException('Cancelled', 'AbortError')); };
+        worker!.onmessage = (event: MessageEvent<{ aggregates?: ParsedAggregates; error?: string }>) => {
+          finish();
+          if (event.data.aggregates) resolve(event.data.aggregates);
+          else reject(new Error(event.data.error || 'Unable to parse file.'));
+        };
+        worker!.onerror = () => { finish(); reject(new Error('Unable to read this file. Try a CSV export.')); };
+        worker!.postMessage(file);
+      });
+      if (parserRef.current !== worker) return;
       setAgg(a);
       setB({
         b30: Math.max(0, Math.round(a.buckets.b30)), b60: Math.max(0, Math.round(a.buckets.b60)),
@@ -180,10 +119,14 @@ export default function FreeAssessmentClient() {
         bOv: Math.max(0, Math.round(a.buckets.bOv)),
       });
       setUploadState('done');
-    } catch {
+    } catch (error) {
+      if (error instanceof DOMException && error.name === 'AbortError') return;
       setUploadState('error');
-      setUploadErr('We couldn’t read that file. Please try a CSV or Excel export, or enter your numbers manually.');
+      setUploadErr(error instanceof Error ? error.message : 'Unable to read this file.');
       setAgg(null);
+    } finally {
+      worker?.terminate();
+      if (parserRef.current === worker) { parserRef.current = null; cancelParseRef.current = null; }
     }
   }
 
@@ -246,8 +189,7 @@ export default function FreeAssessmentClient() {
           recoverable: Math.round(metrics.recoverable), arHealthScore: r.health,
           currentDSO: r.currDSO, targetDSO: r.targDSO,
           providerCount: p.providerCount, claimVolume: p.claimVolume, billingSituation: p.billingSituation,
-          ehr: p.ehr, challenge: p.challenge, agingSource: metrics.source, fileName,
-          metrics, // full de-identified analysis (no PHI)
+          ehr: p.ehr, agingSource: metrics.source, // Only aggregate totals are sent; file names and row-level data stay local.
         },
     });
     if (!ok) {
@@ -274,6 +216,8 @@ export default function FreeAssessmentClient() {
       `}</style>
 
       <div className="no-print"><Navbar /></div>
+      {uploadState === 'parsing' && <div role="status" className="surface-card px-6 py-3">Reading report… <button className="underline font-semibold" onClick={clearUpload}>Cancel parsing</button></div>}
+
 
       {/* Hero */}
       <section className="no-print pt-8 pb-10 md:pt-12 md:pb-14 bg-gradient-to-br from-navy to-teal relative overflow-hidden">
@@ -301,7 +245,7 @@ export default function FreeAssessmentClient() {
               <span>Looking to test Aethera on live claims instead of uploading an aging report?</span>
               <button
                 type="button"
-                onClick={() => window.dispatchEvent(new CustomEvent('open-free-pilot-modal'))}
+                onClick={() => requestOverlay(new CustomEvent('open-free-pilot-modal'))}
                 className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-mint text-navy font-bold hover:bg-white transition-colors cursor-pointer shadow-xs"
               >
                 Activate Free 50-Claim Pilot <ArrowRight className="h-3.5 w-3.5" />
@@ -530,7 +474,7 @@ export default function FreeAssessmentClient() {
                 {errorMsg && <p className="text-center text-red-600 text-sm mt-3">{errorMsg}</p>}
                 <p className="text-xs text-gray text-center mt-3">
                   Your report appears on-screen instantly — download or print it below. By submitting you agree to our{' '}
-                  <Link prefetch={false} href="/compliance/privacy-policy" className="text-teal hover:underline">Privacy Policy</Link>. We never share your data.
+                  <Link prefetch={false} href="/compliance/privacy-policy" className="text-teal hover:underline">Privacy Policy</Link>. Contact details and aggregate totals are sent to our team only when you submit. Do not include patient identifiers.
                 </p>
               </div>
             </div>

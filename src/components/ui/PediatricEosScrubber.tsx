@@ -12,12 +12,10 @@ import {
   FileCode,
   ShieldCheck,
   Zap,
-  Info,
   Layers,
   Sparkles,
   Scissors,
   Activity,
-  GitBranch,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -466,7 +464,7 @@ export default function PediatricEosScrubber() {
         auditNotes,
       };
 
-      await sendLeadToKiran('pediatric_eos_rcm_audit', payload);
+      if (!(await sendLeadToKiran('pediatric_eos_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('calculator', scrubberResult.penaltyAtRisk);
 
       setLeadSuccess(true);
@@ -622,7 +620,7 @@ export default function PediatricEosScrubber() {
                       type="radio"
                       name="constructType"
                       checked={constructType === item.id}
-                      onChange={() => setConstructType(item.id as any)}
+                      onChange={() => setConstructType(item.id as typeof constructType)}
                       className="mt-1 text-emerald-600 focus:ring-emerald-500"
                     />
                     <div>

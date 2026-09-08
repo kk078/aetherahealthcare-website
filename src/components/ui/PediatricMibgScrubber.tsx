@@ -6,13 +6,9 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
   Activity,
   Send,
-  Sparkles,
-  HelpCircle,
   Radiation,
-  ChevronRight,
   Layers,
   Copy,
   Zap,
@@ -37,7 +33,7 @@ export default function PediatricMibgScrubber() {
   const [includeDosimetrySpect, setIncludeDosimetrySpect] = useState<boolean>(true);
   const [includeMedicalPhysics, setIncludeMedicalPhysics] = useState<boolean>(true);
   const [includeStemCellRescue, setIncludeStemCellRescue] = useState<boolean>(true);
-  const [includeInpatientIsolation, setIncludeInpatientIsolation] = useState<boolean>(true);
+  const [includeInpatientIsolation] = useState<boolean>(true);
   const [thyroidBlockadeDocumented, setThyroidBlockadeDocumented] = useState<boolean>(true);
 
   // Lead capture state
@@ -185,17 +181,7 @@ export default function PediatricMibgScrubber() {
       grossValue,
       atRiskValue,
     };
-  }, [
-    oncologyIndication,
-    patientWeightKg,
-    targetDoseMciPerKg,
-    totalMci,
-    includeDosimetrySpect,
-    includeMedicalPhysics,
-    includeStemCellRescue,
-    includeInpatientIsolation,
-    thyroidBlockadeDocumented,
-  ]);
+  }, [totalMci, includeDosimetrySpect, includeMedicalPhysics, includeStemCellRescue, includeInpatientIsolation, thyroidBlockadeDocumented]);
 
   // Lead submission
   const handleSubmitLead = async (e: React.FormEvent) => {
@@ -204,7 +190,7 @@ export default function PediatricMibgScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('pediatric_mibg_rcm_audit', {
+      if (!(await sendLeadToKiran('pediatric_mibg_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -218,7 +204,7 @@ export default function PediatricMibgScrubber() {
         includeStemCellRescue,
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Submission failed', err);
@@ -292,7 +278,7 @@ ${auditResult.warnings.map((w, i) => `! WARNING ${i + 1}: ${w}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setOncologyIndication(item.id as any)}
+                    onClick={() => setOncologyIndication(item.id as typeof oncologyIndication)}
                     className={`px-3 py-2 text-xs font-medium rounded-xl border text-center transition-all ${
                       oncologyIndication === item.id
                         ? 'bg-navy text-white border-navy shadow-sm'

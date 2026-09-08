@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -8,6 +9,7 @@ import DenialCostCalculator from '@/components/ui/DenialCostCalculator';
 import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/denial-cost-calculator') },
   title: { absolute: 'Denial Cost Calculator — Revenue Lost & Rework Cost | Aethera Healthcare Solutions' },
   description:
     'Free denial cost calculator: estimate the reimbursement you lose to denied claims plus the cost of reworking them, per week, month, and year.',

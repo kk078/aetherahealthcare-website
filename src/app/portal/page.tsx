@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { BarChart3, Shield, Smartphone, TrendingUp, Eye, Bell, Lock, Users, CheckCircle, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -8,7 +9,9 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import InteractivePortalDemo from '@/components/ui/InteractivePortalDemo';
 
 export const metadata = {
-  title: 'Provider Portal | Real-Time Billing Dashboard | Aethera Healthcare',
+  alternates: { canonical: canonicalUrl('/portal') },
+  robots: { index: false, follow: true },
+  title: { absolute: 'Provider Portal | Real-Time Billing Dashboard | Aethera Healthcare' },
   description: 'The Aethera Provider Portal gives you 24/7 real-time visibility into every claim, payment, denial, and KPI — from any device. See a live demo.',
 };
 
@@ -99,7 +102,7 @@ export default function Portal() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            label="LIVE CLIENT SANDBOX"
+            label="ILLUSTRATIVE PORTAL DEMO"
             title="Interactive Provider Portal Experience"
             description="Test-drive Aethera's 24/7 revenue command center. Switch between clinical specialties, inspect EDI 837P/835 transaction loops, simulate real-time remittances, and trigger AI appeal packages."
           />

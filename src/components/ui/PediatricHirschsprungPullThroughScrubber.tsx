@@ -6,19 +6,11 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
-  Activity,
   Send,
   Sparkles,
-  HelpCircle,
   Baby,
-  Layers,
   Copy,
   Sliders,
-  Scissors,
-  Flame,
-  Stethoscope,
-  Microscope,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
@@ -82,7 +74,7 @@ export default function PediatricHirschsprungPullThroughScrubber() {
       primaryFee = 3400;
     }
 
-    let primaryModifier = stagedProcedure ? '58' : longSegmentAganglionosis ? '22' : '';
+    const primaryModifier = stagedProcedure ? '58' : longSegmentAganglionosis ? '22' : '';
     if (primaryModifier === '22') {
       primaryFee = Math.round(primaryFee * 1.25);
       primaryRvu = Number((primaryRvu * 1.25).toFixed(1));
@@ -222,7 +214,7 @@ export default function PediatricHirschsprungPullThroughScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('pediatric_hirschsprung_scrubber', {
+      if (!(await sendLeadToKiran('pediatric_hirschsprung_scrubber', {
         contactName,
         contactEmail,
         contactPractice,
@@ -237,7 +229,7 @@ export default function PediatricHirschsprungPullThroughScrubber() {
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
         totalRvu: auditResult.totalRvu,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Lead submission error:', err);
@@ -273,7 +265,7 @@ export default function PediatricHirschsprungPullThroughScrubber() {
             </label>
             <select
               value={surgicalTechnique}
-              onChange={(e) => setSurgicalTechnique(e.target.value as any)}
+              onChange={(e) => setSurgicalTechnique(e.target.value as typeof surgicalTechnique)}
               className="w-full bg-white border border-gray/20 rounded-lg px-3 py-2 text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal font-medium"
             >
               <option value="soave">Soave Endorectal Pull-Through (Mucosal Dissection)</option>
@@ -292,7 +284,7 @@ export default function PediatricHirschsprungPullThroughScrubber() {
             </label>
             <select
               value={approach}
-              onChange={(e) => setApproach(e.target.value as any)}
+              onChange={(e) => setApproach(e.target.value as typeof approach)}
               className="w-full bg-white border border-gray/20 rounded-lg px-3 py-2 text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal font-medium"
             >
               <option value="laparoscopic">Laparoscopic-Assisted Pull-Through (49320-59)</option>

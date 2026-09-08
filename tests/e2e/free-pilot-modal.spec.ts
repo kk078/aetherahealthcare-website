@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
-const ARTIFACT_DIR = '/home/kiran/.gemini/antigravity-cli/brain/50b59a0e-93e4-4856-9aa8-61204b485c5c';
+const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('Free 50-Claim Pilot Interactive Modal', () => {
 
@@ -67,11 +67,11 @@ test.describe('Free 50-Claim Pilot Interactive Modal', () => {
 
   test('Modal Form: Validates required fields and displays confirmation upon submission', async ({ page }) => {
     // Intercept CRM API requests to mock success
-    await page.route('**/public/website/**', async route => {
+    await page.route('**/api/leads', async route => {
       await route.fulfill({
         status: 200,
         contentType: 'application/json',
-        body: JSON.stringify({ success: true, message: 'Lead received' }),
+        body: JSON.stringify({ accepted: true, submissionId: route.request().postDataJSON().submissionId }),
       });
     });
 

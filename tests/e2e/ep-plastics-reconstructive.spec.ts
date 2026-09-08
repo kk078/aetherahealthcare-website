@@ -1,9 +1,9 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 import path from 'path';
 
 const ARTIFACT_DIR = path.resolve(
   process.env.ARTIFACT_DIR ||
-  '/home/kiran/.gemini/antigravity-cli/brain/50b59a0e-93e4-4856-9aa8-61204b485c5c'
+  '/tmp/aethera-e2e'
 );
 
 test.describe('Specialties 39-40 and Tools 44-45: Cardiac EP & Plastic Reconstructive Suites', () => {

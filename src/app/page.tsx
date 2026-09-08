@@ -1,9 +1,9 @@
-'use client';
-
-import { useEffect, useRef, useState } from 'react';
+import { canonicalUrl } from '@/lib/siteConfig';
+export const metadata = { alternates: { canonical: canonicalUrl('/') } };
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import AnimatedCounter from '@/components/ui/AnimatedCounter';
+import TargetCard from '@/components/ui/TargetCard';
+import PilotTrigger from '@/components/ui/PilotTrigger';
+import BillingFlowIsland from '@/components/ui/BillingFlowIsland';
 import {
   CheckCircle,
   DollarSign,
@@ -32,13 +32,6 @@ import ServiceCard from '@/components/ui/ServiceCard';
 import CTABanner from '@/components/ui/CTABanner';
 import ROICalculator from '@/components/ui/ROICalculator';
 
-// Client-only animated illustration of the medical-billing revenue cycle
-// (coding → scrub → submit → denial → appeal → paid). Lightweight SVG/CSS,
-// kept off SSR so the static export stays clean.
-const RCMBillingFlow = dynamic(() => import('@/components/ui/RCMBillingFlow'), {
-  ssr: false,
-  loading: () => null,
-});
 
 const services = [
   { icon: <FileText className="h-8 w-8" />, title: 'Medical Coding', description: 'Accurate ICD-10, CPT, and HCPCS coding for maximum reimbursement.', href: '/services/medical-coding' },
@@ -94,68 +87,6 @@ const targets: TargetItem[] = [
   },
 ];
 
-function TargetCard({ t, index }: { t: TargetItem; index: number }) {
-  const [inView, setInView] = useState<boolean>(() => {
-    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return true;
-    }
-    return false;
-  });
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (inView) return;
-
-    const el = ref.current;
-    if (!el) {
-      const fallbackTimer = setTimeout(() => setInView(true), 0);
-      return () => clearTimeout(fallbackTimer);
-    }
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          obs.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [inView]);
-
-  return (
-    <div
-      ref={ref}
-      className="bg-white rounded-2xl p-7 border border-gray/15 shadow-sm hover:shadow-xl hover:-translate-y-1.5 hover:border-mint/40 transition-all duration-300 h-full flex flex-col justify-between"
-    >
-      <div>
-        <span className={`inline-flex items-center justify-center h-11 w-11 rounded-xl mb-6 ${t.iconWrap}`}>
-          {t.icon}
-        </span>
-        <div className="font-jakarta font-extrabold text-navy text-4xl tracking-tight mb-1">
-          <AnimatedCounter
-            to={t.targetNumber}
-            prefix={t.prefix}
-            suffix={t.suffix}
-            duration={1100 + index * 150}
-          />
-        </div>
-        <div className="text-xs font-bold tracking-[0.12em] text-gray uppercase mb-4">{t.label}</div>
-        <div className="w-full bg-gray/10 h-1.5 rounded-full overflow-hidden">
-          <div
-            className={`h-full rounded-full ${t.barClass}`}
-            style={{
-              width: inView ? t.barWidth : '0%',
-              transition: `width 1s cubic-bezier(0.16, 1, 0.3, 1) ${0.2 + index * 0.1}s`,
-            }}
-          />
-        </div>
-      </div>
-      <p className="mt-5 text-sm text-gray italic">Contractual target</p>
-    </div>
-  );
-}
 
 const difference = [
   {
@@ -270,13 +201,13 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={0.3}>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <button
+                  <PilotTrigger
                     type="button"
-                    onClick={() => window.dispatchEvent(new CustomEvent('open-free-pilot-modal'))}
+
                     className="btn-shimmer inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-7 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20 cursor-pointer"
                   >
                     Start the Free 50-Claim Pilot <ArrowRight className="h-4 w-4" />
-                  </button>
+                  </PilotTrigger>
                   <Link prefetch={false} href="#aethera-difference"
                     className="inline-flex items-center justify-center border border-white/35 text-white hover:bg-white/10 font-semibold py-3.5 px-7 rounded-xl transition-colors duration-200">
                     How our AI works
@@ -295,7 +226,7 @@ export default function Home() {
 
             {/* Right — animated medical-billing revenue cycle */}
             <div className="relative h-[360px] sm:h-[460px] lg:h-[560px] w-full lg:w-[112%] lg:-mr-[12%]">
-              <RCMBillingFlow />
+              <BillingFlowIsland />
             </div>
           </div>
         </div>
@@ -388,13 +319,13 @@ export default function Home() {
               </FadeIn>
             ))}
           </div>
-          <button
+          <PilotTrigger
             type="button"
-            onClick={() => window.dispatchEvent(new CustomEvent('open-free-pilot-modal'))}
+
             className="btn-shimmer inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-8 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20 cursor-pointer"
           >
             Claim your pilot slot <ArrowRight className="h-4 w-4" />
-          </button>
+          </PilotTrigger>
         </div>
       </section>
 

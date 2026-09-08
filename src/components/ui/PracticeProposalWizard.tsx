@@ -41,7 +41,7 @@ export default function PracticeProposalWizard() {
     setSubmitting(true);
 
     try {
-      await submitToWorker('proposal_request', {
+      if (!(await submitToWorker('proposal_request', {
         name: contactName,
         email: contactEmail,
         phone: contactPhone,
@@ -52,7 +52,7 @@ export default function PracticeProposalWizard() {
         primaryPain,
         projectedLift: `$${estimatedAnnualLift.toLocaleString()}`,
         message: `Custom Proposal Generated via Wizard: ${specialty} (${providerCount} providers), Monthly Collections: $${monthlyCollections.toLocaleString()}, EHR: ${ehrPlatform}, Pain: ${primaryPain}.`,
-      });
+      }))) { setSubmitting(false); return; }
       setSubmitted(true);
     } catch {
       setSubmitted(true);

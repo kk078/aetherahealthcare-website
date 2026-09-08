@@ -1,11 +1,13 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import CredentialingTimelineEstimator from '@/components/ui/CredentialingTimelineEstimator';
-import { CalendarClock, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { CalendarClock, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Provider Credentialing & Payer Enrollment Timeline Estimator | Aethera Healthcare',
+  alternates: { canonical: canonicalUrl('/tools/credentialing-timeline-estimator') },
+  title: { absolute: 'Provider Credentialing & Payer Enrollment Timeline Estimator | Aethera Healthcare' },
   description:
     'Free medical credentialing calculator. Calculate CAQH, Medicare PECOS, Medicaid, and commercial payer enrollment timelines to prevent billing freezes for new physicians.',
 };

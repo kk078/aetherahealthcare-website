@@ -1,5 +1,4 @@
-'use client';
-
+import { jsonLd as serializeJsonLd } from '@/lib/jsonLd';
 import Link from 'next/link';
 import { Calendar, Clock, Tag, User, ArrowLeft, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -9,6 +8,7 @@ import ScrollProgress from '@/components/ui/ScrollProgress';
 
 interface Related { slug: string; title: string; image: string; }
 interface PostProp {
+  review?: { reviewer: string; reviewedAt: string; sources: string[] };
   slug: string; title: string; date: string; author: string; readTime: string;
   category: string; image: string; excerpt: string; content: string; relatedPosts: Related[];
 }
@@ -27,15 +27,15 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
     '@context': 'https://schema.org', '@type': 'BlogPosting',
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${base}/blog/${post.slug}` },
     headline: post.title, description: post.excerpt, datePublished: post.date, dateModified: post.date,
-    author: { '@type': 'Person', name: post.author },
+    author: { '@type': 'Organization', name: 'Aethera Editorial Team' },
     publisher: { '@type': 'Organization', name: 'Aethera Healthcare Solutions', logo: { '@type': 'ImageObject', url: `${base}/logo.png` } },
     image: post.image, keywords: post.category,
   };
 
   return (
     <div className="min-h-screen flex flex-col">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(blogPostSchema) }} />
       <Navbar />
       <ScrollProgress />
 
@@ -57,7 +57,7 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-navy font-jakarta mb-6 leading-tight">{post.title}</h1>
               <div className="flex flex-wrap items-center justify-center gap-5 text-gray text-sm">
-                <span className="flex items-center"><User className="h-4 w-4 mr-1.5" />{post.author}</span>
+                <span className="flex items-center"><User className="h-4 w-4 mr-1.5" />Aethera Editorial Team</span>
                 <span className="flex items-center"><Calendar className="h-4 w-4 mr-1.5" /><time dateTime={post.date}>{new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time></span>
                 <span className="flex items-center"><Clock className="h-4 w-4 mr-1.5" />{post.readTime}</span>
               </div>
@@ -68,7 +68,9 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
               <img src={post.image} alt={post.title} className="w-full h-80 object-cover rounded-2xl" />
             </div>
 
+            <p className="text-sm text-gray mb-5">{post.review ? `Reviewed by ${post.review.reviewer} on ${post.review.reviewedAt}.` : 'Editorial reference. A current specialist review record is not available.'} Confirm current payer policies before acting. <Link href="/blog/editorial-policy/" className="underline">Our editorial policy</Link></p>
             <p className="text-lg text-navy font-medium leading-relaxed mb-6 border-l-4 border-teal pl-4">{post.excerpt}</p>
+            {post.review && <ul className="text-sm mb-5">{post.review.sources.map(url => <li key={url}><a className="underline" href={url} rel="noopener noreferrer" target="_blank">{new URL(url).hostname} — source reference</a></li>)}</ul>}
             <div className="max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
 
             {/* inline CTA */}

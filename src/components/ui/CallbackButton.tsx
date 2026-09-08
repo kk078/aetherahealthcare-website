@@ -1,4 +1,6 @@
 'use client';
+import Link from 'next/link';
+import AccessibleDialog from './AccessibleDialog';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import {
@@ -19,7 +21,7 @@ import {
   UserCheck,
   RotateCcw,
 } from 'lucide-react';
-import { submitToWorker, sendLeadToKiran, PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
+import { sendLeadToKiran, PRIMARY_EXPERT_EMAIL } from '@/lib/worker';
 import { askAiAgent, eradicatePhoneNumbers, type AssistantMessage, type AgentAction } from '@/lib/aiAgent';
 
 const INITIAL_GREETING =
@@ -51,9 +53,9 @@ function makeMsg(role: 'user' | 'assistant', content: string, actions?: AgentAct
   };
 }
 
-export default function CallbackButton() {
-  const [open, setOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<TabMode>('chat');
+export default function CallbackButton({ initialMode = 'chat', initialQuery = '' }: { initialMode?: TabMode; initialQuery?: string }) {
+  const [open, setOpen] = useState(true);
+  const [activeTab, setActiveTab] = useState<TabMode>(initialMode);
 
   // AI Chat state
   const [messages, setMessages] = useState<AssistantMessage[]>(() => [
@@ -64,7 +66,7 @@ export default function CallbackButton() {
       timestamp: 'Now',
     },
   ]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState(initialQuery);
   const [isThinking, setIsThinking] = useState(false);
   const chatScrollRef = useRef<HTMLDivElement>(null);
 
@@ -81,7 +83,7 @@ export default function CallbackButton() {
   const [callbackStatus, setCallbackStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   // Inactivity tracking timestamp
-  const lastActivityRef = useRef<number>(Date.now());
+  const lastActivityRef = useRef<number>(0);
 
   // Record active user interaction
   const recordActivity = useCallback(() => {
@@ -131,6 +133,7 @@ export default function CallbackButton() {
 
   // Inactivity monitor: Clear sessions if idle for more than 5 minutes
   useEffect(() => {
+    lastActivityRef.current = Date.now();
     const checkIdle = () => {
       const now = Date.now();
       if (now - lastActivityRef.current >= IDLE_TIMEOUT_MS) {
@@ -290,6 +293,12 @@ export default function CallbackButton() {
     handleSendMessageRef.current = handleSendMessage;
   });
 
+  useEffect(() => {
+    if (!initialQuery) return;
+    const timer = setTimeout(() => { void handleSendMessageRef.current(initialQuery); }, 0);
+    return () => clearTimeout(timer);
+  }, [initialQuery]);
+
   // Listen for external open-expert-modal triggers (e.g. from Command Palette or Navbar)
   useEffect(() => {
     const handleOpenEvent = (e: Event) => {
@@ -369,8 +378,8 @@ export default function CallbackButton() {
     const ok = await sendLeadToKiran('callback_request', leadPayload, historyForLead);
 
     if (!ok) {
-      // Fallback direct attempt
-      await submitToWorker('callback_request', leadPayload);
+      setCallbackStatus('error');
+      return;
     }
 
     setCallbackStatus('success');
@@ -408,13 +417,16 @@ export default function CallbackButton() {
 
   const renderFormattedInline = (line: string) => {
     // Replace markdown bold, links, code, and direct routes
-    const parts = line.split(/(\*\*.*?\*\*|`.*?`|\/[a-z0-9-]+)/g);
+    const parts = line.split(/(https?:\/\/[^\s<>]+|\*\*.*?\*\*|`.*?`|(?<![\w/:])\/[a-z0-9-]+(?:\/[a-z0-9-]+)*\/?)/g);
     return parts.map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {
         return <strong key={i} className="font-semibold text-slate-900">{part.slice(2, -2)}</strong>;
       }
       if (part.startsWith('`') && part.endsWith('`')) {
         return <code key={i} className="px-1 py-0.5 bg-slate-100 rounded text-teal font-mono text-[11px]">{part.slice(1, -1)}</code>;
+      }
+      if (/^https?:\/\//.test(part)) {
+        return <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="text-teal underline break-all">{part}</a>;
       }
       if (/^\/[a-z]/.test(part)) {
         return (
@@ -467,12 +479,12 @@ export default function CallbackButton() {
           <p className="text-slate-700"><strong>Deadline:</strong> {String(p.timelyFiling)}</p>
           <p className="text-slate-600 text-[11px] mt-0.5"><strong>Appeals:</strong> {String(p.appeal)}</p>
           <div className="flex flex-wrap gap-1.5 mt-2">
-            <a
+            <Link
               href="/payers/directory"
               className="inline-flex items-center gap-1 px-2.5 py-1 bg-white border border-teal/30 text-teal hover:bg-teal hover:text-white rounded-lg font-semibold transition-colors text-[11px]"
             >
               View 10,600+ Payer Directory <ExternalLink className="h-3 w-3" />
-            </a>
+            </Link>
           </div>
         </div>
       );
@@ -490,7 +502,7 @@ export default function CallbackButton() {
             Estimated Annual Cash Recovery Lift: <strong className="text-navy text-sm font-bold">${Number(r.annualLift).toLocaleString()}</strong>
           </p>
           <p className="text-slate-500 text-[11px] mt-0.5">
-            Based on average 8% unbilled collection recovery and reducing A/R to {String(r.targetDaysInAr)}.
+            Illustrative scenario assuming 8% additional collections and reducing A/R to {String(r.targetDaysInAr)}.
           </p>
           <div className="mt-2">
             <button
@@ -538,7 +550,7 @@ export default function CallbackButton() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {open && (
-        <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-[24rem] sm:w-[26rem] max-w-[calc(100vw-2rem)] overflow-hidden flex flex-col animate-in slide-in-from-bottom-4 duration-200" style={{ height: '36rem', maxHeight: 'calc(100vh - 5.5rem)' }}>
+        <AccessibleDialog open={open} onClose={handleClose} title="Talk to an Expert" className="fixed bottom-24 right-4 z-[100] bg-white rounded-2xl shadow-2xl border border-slate-200 w-[24rem] sm:w-[26rem] max-w-[calc(100vw-2rem)] overflow-hidden flex flex-col h-[36rem] max-h-[calc(100dvh-7rem)]">
           {/* Header */}
           <div className="bg-gradient-to-r from-navy via-navy to-teal p-3.5 sm:p-4 text-white shrink-0">
             <div className="flex items-center justify-between">
@@ -870,7 +882,7 @@ export default function CallbackButton() {
               )}
             </div>
           )}
-        </div>
+        </AccessibleDialog>
       )}
 
       {/* Main trigger button pinned bottom-right */}

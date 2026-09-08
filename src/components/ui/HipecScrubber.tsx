@@ -12,7 +12,6 @@ import {
   FileCode,
   ShieldCheck,
   Zap,
-  Info,
   Layers,
   Sparkles,
   Scissors,
@@ -427,7 +426,7 @@ export default function HipecScrubber() {
         auditNotes,
       };
 
-      await sendLeadToKiran('hipec_rcm_audit', payload);
+      if (!(await sendLeadToKiran('hipec_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('calculator', scrubberResult.penaltyAtRisk);
 
       setLeadSuccess(true);
@@ -578,7 +577,7 @@ export default function HipecScrubber() {
                       type="radio"
                       name="cytoreductionScope"
                       checked={cytoreductionScope === item.id}
-                      onChange={() => setCytoreductionScope(item.id as any)}
+                      onChange={() => setCytoreductionScope(item.id as typeof cytoreductionScope)}
                       className="mt-1 text-amber-600 focus:ring-amber-500"
                     />
                     <div>
@@ -762,7 +761,7 @@ export default function HipecScrubber() {
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setCoSurgeonMode(item.id as any)}
+                    onClick={() => setCoSurgeonMode(item.id as typeof coSurgeonMode)}
                     className={`p-3 text-left rounded-xl border transition-all ${
                       coSurgeonMode === item.id
                         ? 'border-purple-500 bg-purple-50/50 text-slate-900 font-semibold shadow-sm ring-1 ring-purple-500/20'

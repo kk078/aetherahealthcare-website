@@ -1,8 +1,9 @@
 'use client';
+import { SITE } from '@/lib/siteConfig';
 
-import { useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 import Link from 'next/link';
-import { Calendar, CalendarClock, CheckCircle2, Loader2, Phone, Video, ArrowUpRight, Globe } from 'lucide-react';
+import { Calendar, CalendarClock, CheckCircle2, Loader2, Video, ArrowUpRight, Globe } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
 
@@ -10,8 +11,7 @@ import { trackConversion } from '@/lib/gtag';
 // Cal.com page; NEXT_PUBLIC_BOOKING_URL can override it without a code change.
 // When blank, the page shows a meeting-request form that still captures the
 // lead and notifies the team.
-const BOOKING_URL =
-  process.env.NEXT_PUBLIC_BOOKING_URL || 'https://cal.com/kiran-kumar-pedapudi-qh822e/30min';
+const BOOKING_URL = SITE.bookingUrl;
 
 export default function BookingEmbed() {
   if (BOOKING_URL) return <BookCard url={BOOKING_URL} />;
@@ -25,16 +25,13 @@ export default function BookingEmbed() {
  * live availability, Google Meet link, and invites are handled by the calendar.
  */
 function BookCard({ url }: { url: string }) {
-  const [tz] = useState<string>(() => {
-    if (typeof Intl !== 'undefined' && Intl.DateTimeFormat) {
-      try {
-        return Intl.DateTimeFormat().resolvedOptions().timeZone.replace(/_/g, ' ');
-      } catch {
-        return '';
-      }
-    }
-    return '';
-  });
+  const [tz, setTz] = useState('');
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      try { setTz(Intl.DateTimeFormat().resolvedOptions().timeZone.replaceAll('_', ' ')); } catch { /* Timezone unavailable. */ }
+    }, 0);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="rounded-2xl border border-gray/15 bg-white shadow-sm p-7 md:p-9 text-center">

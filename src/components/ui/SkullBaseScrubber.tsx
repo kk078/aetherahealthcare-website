@@ -15,9 +15,7 @@ import {
   Info,
   Layers,
   Sparkles,
-  Scissors,
   Activity,
-  Eye,
   Crosshair,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -29,7 +27,7 @@ export default function SkullBaseScrubber() {
     'translabyrinthine' | 'retrosigmoid' | 'middle_fossa'
   >('translabyrinthine');
 
-  const [tumorComplexity, setTumorComplexity] = useState<
+  const [tumorComplexity] = useState<
     'large_cpa_compression' | 'medium_iac_cpa' | 'intracanalicular_small'
   >('large_cpa_compression');
 
@@ -98,7 +96,6 @@ export default function SkullBaseScrubber() {
     const isCoSurgeon = coSurgeonMode === 'compliant_matching_62';
     const isMismatched = coSurgeonMode === 'mismatched_codes';
     const isMissing62 = coSurgeonMode === 'missing_mod62';
-    const isSolo = coSurgeonMode === 'solo_surgeon';
 
     const coSurgeonMultiplier = isCoSurgeon ? 0.625 : 1.0;
 
@@ -386,20 +383,7 @@ export default function SkullBaseScrubber() {
       expectedReimbursement: Number(expectedReimbursement.toFixed(2)),
       penaltyAtRisk: Number(penaltyAtRisk.toFixed(2)),
     };
-  }, [
-    approachType,
-    tumorComplexity,
-    coSurgeonMode,
-    surgeonRole,
-    hasMicroscopeAddon,
-    microdissectionDocumented,
-    hasCranialNerveMonitoring,
-    dedicatedNeurophysiologist,
-    hasFatGraftHarvest,
-    distinctIncisionDocumented,
-    hasStagedReexploration,
-    hasModifier58or78,
-  ]);
+  }, [approachType, coSurgeonMode, surgeonRole, hasMicroscopeAddon, microdissectionDocumented, hasCranialNerveMonitoring, dedicatedNeurophysiologist, hasFatGraftHarvest, distinctIncisionDocumented, hasStagedReexploration, hasModifier58or78]);
 
   // ANSI 837P EDI Generator
   const generateEdiClaim = () => {
@@ -454,7 +438,7 @@ export default function SkullBaseScrubber() {
         auditNotes,
       };
 
-      await sendLeadToKiran('skull_base_rcm_audit', payload);
+      if (!(await sendLeadToKiran('skull_base_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('calculator', scrubberResult.penaltyAtRisk);
 
       setLeadSuccess(true);
@@ -629,7 +613,7 @@ export default function SkullBaseScrubber() {
               </label>
               <select
                 value={coSurgeonMode}
-                onChange={(e) => setCoSurgeonMode(e.target.value as any)}
+                onChange={(e) => setCoSurgeonMode(e.target.value as typeof coSurgeonMode)}
                 className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-indigo-500"
               >
                 <option value="compliant_matching_62">

@@ -3,21 +3,15 @@
 import React, { useState, useMemo } from 'react';
 import {
   Clock,
-  AlertTriangle,
   CheckCircle2,
   Copy,
   Check,
-  Send,
   Loader2,
   FileCode,
   Sparkles,
-  Info,
   Stethoscope,
-  Activity,
   ShieldCheck,
   ArrowRight,
-  HelpCircle,
-  Scissors,
   FileText,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -43,7 +37,7 @@ export default function CriticalCareScrubber() {
   // Time inputs
   const [totalBedsideMinutes, setTotalBedsideMinutes] = useState<number>(85);
   const [selectedProcedures, setSelectedProcedures] = useState<string[]>(['intubation']);
-  const [deductProcedureTimeAutomatically, setDeductProcedureTimeAutomatically] = useState<boolean>(true);
+  const [deductProcedureTimeAutomatically] = useState<boolean>(true);
 
   // Split/Shared
   const [isSplitShared, setIsSplitShared] = useState<boolean>(false);
@@ -77,7 +71,6 @@ export default function CriticalCareScrubber() {
 
   // Scrubber Calculation Logic
   const scrubResult = useMemo(() => {
-    const issues: string[] = [];
 
     // Less than 30 minutes rule
     if (netCriticalMinutes < 30) {

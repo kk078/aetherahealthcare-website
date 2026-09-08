@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
@@ -6,6 +7,7 @@ import GuideCard from '@/components/ui/GuideCard';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/decks') },
   title: { absolute: 'Specialty Billing Guides | Aethera Healthcare Solutions' },
   description: 'Download Aethera\'s specialty-specific revenue cycle and billing overview guides — covering coding, denials, reimbursement, and compliance for 18 specialties.',
 };

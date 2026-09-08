@@ -6,15 +6,11 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
   Activity,
   Send,
-  Sparkles,
-  HelpCircle,
   Brain,
   Layers,
   Copy,
-  Sliders,
   Crosshair,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -193,7 +189,7 @@ export default function EndoscopicPituitaryOdontoidScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('endoscopic_skull_base_rcm_audit', {
+      if (!(await sendLeadToKiran('endoscopic_skull_base_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -205,7 +201,7 @@ export default function EndoscopicPituitaryOdontoidScrubber() {
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
         primaryCode: auditResult.primaryCode,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Submission failed', err);
@@ -277,7 +273,7 @@ ${auditResult.warnings.map((w, i) => `! WARNING ${i + 1}: ${w}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setProcedureType(item.id as any)}
+                    onClick={() => setProcedureType(item.id as typeof procedureType)}
                     className={`px-3 py-2 text-xs font-medium rounded-xl border text-center transition-all ${
                       procedureType === item.id
                         ? 'bg-navy text-white border-navy shadow-sm'

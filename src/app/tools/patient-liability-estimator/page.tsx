@@ -1,11 +1,13 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import PatientLiabilityEstimator from '@/components/ui/PatientLiabilityEstimator';
-import { Calculator, DollarSign, CheckCircle2, ShieldAlert } from 'lucide-react';
+import { Calculator, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Patient Out-of-Pocket Liability & Deductible Estimator | Aethera Healthcare',
+  alternates: { canonical: canonicalUrl('/tools/patient-liability-estimator') },
+  title: { absolute: 'Patient Out-of-Pocket Liability & Deductible Estimator | Aethera Healthcare' },
   description:
     'Free medical billing calculator to estimate patient out-of-pocket responsibility at point of service. Calculates deductible, coinsurance, copays, and out-of-pocket maximum caps.',
 };

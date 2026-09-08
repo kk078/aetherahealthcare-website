@@ -1,18 +1,17 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, Sparkles, ShieldCheck } from 'lucide-react';
 import SoloPracticeLandingClient from '@/components/ui/SoloPracticeLandingClient';
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl('/lp/solo-practice-rcm') },
+  robots: { index: false, follow: true },
   title: {
     absolute: 'Medical Billing for Solo & Small Practices (1–5 Providers) | Aethera Healthcare Solutions',
   },
   description:
     'Tailored medical billing and RCM services built for independent solo doctors and 1–5 provider clinics. 4.5% all-inclusive rate, dedicated US pod, zero biller turnover.',
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function SoloPracticeLandingPage() {
@@ -77,10 +76,10 @@ export default function SoloPracticeLandingPage() {
             <span>Aethera Healthcare Solutions · HIPAA Compliant · Month-to-Month Contracts</span>
           </div>
           <div className="flex items-center gap-6">
-            <Link prefetch={false} href="/privacy" className="hover:text-slate-200 transition">
+            <Link prefetch={false} href="/compliance/privacy-policy/" className="hover:text-slate-200 transition">
               Privacy Policy
             </Link>
-            <Link prefetch={false} href="/terms" className="hover:text-slate-200 transition">
+            <Link prefetch={false} href="/compliance/terms-of-service/" className="hover:text-slate-200 transition">
               Terms of Service
             </Link>
             <Link prefetch={false} href="/contact" className="hover:text-slate-200 transition">

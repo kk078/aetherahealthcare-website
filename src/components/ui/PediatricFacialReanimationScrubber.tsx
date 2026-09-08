@@ -12,7 +12,6 @@ import {
   FileCode,
   ShieldCheck,
   Zap,
-  Info,
   Layers,
   Sparkles,
   Scissors,
@@ -425,7 +424,7 @@ export default function PediatricFacialReanimationScrubber() {
         auditNotes,
       };
 
-      await sendLeadToKiran('pediatric_facial_rcm_audit', payload);
+      if (!(await sendLeadToKiran('pediatric_facial_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('calculator', scrubberResult.penaltyAtRisk);
 
       setLeadSuccess(true);
@@ -566,7 +565,7 @@ export default function PediatricFacialReanimationScrubber() {
                 <button
                   key={strat.id}
                   type="button"
-                  onClick={() => setReanimationStrategy(strat.id as any)}
+                  onClick={() => setReanimationStrategy(strat.id as typeof reanimationStrategy)}
                   className={`p-3.5 text-left rounded-xl border transition-all ${
                     reanimationStrategy === strat.id
                       ? 'border-fuchsia-500 bg-fuchsia-50/60 text-slate-900 font-semibold shadow-sm ring-1 ring-fuchsia-500/20'

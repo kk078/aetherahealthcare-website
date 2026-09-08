@@ -1,33 +1,25 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import {
   ShieldCheck,
   CheckCircle2,
   Calendar,
-  ArrowRight,
-  TrendingUp,
-  Clock,
-  DollarSign,
   AlertCircle,
   FileCheck,
-  Building2,
   Lock,
   Sparkles,
-  Zap,
 } from 'lucide-react';
 import DenialPilotLandingClient from '@/components/ui/DenialPilotLandingClient';
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl('/lp/denial-recovery-pilot') },
+  robots: { index: false, follow: true },
   title: {
     absolute: 'Free 50-Claim Denial Recovery Pilot | Aethera Healthcare Solutions',
   },
   description:
     'Test Aethera AAPC-certified revenue cycle teams on 50 of your active denials or pending claims. 14-day zero-risk trial with guaranteed under-48-hour findings. No credit card required.',
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function DenialRecoveryLandingPage() {

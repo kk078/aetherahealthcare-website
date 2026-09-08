@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, Shield, Settings, ArrowRight, Zap } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -8,6 +9,7 @@ import EhrLogo from '@/components/ui/EhrLogo';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/integrations') },
   title: { absolute: 'EHR & Practice Management Integrations | Aethera Healthcare Solutions' },
   description: 'Aethera integrates with Epic, Cerner, athenahealth, Kareo, eClinicalWorks, and 50+ EHR systems. No workflow disruption — setup in 1–4 weeks.',
 };

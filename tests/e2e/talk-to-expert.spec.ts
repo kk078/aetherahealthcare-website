@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 test.describe('Talk to an Expert - Agentic AI & Email Routing', () => {
   test('Talk to an Expert floating button is visible and opens dual-mode modal', async ({ page }) => {
@@ -33,10 +33,9 @@ test.describe('Talk to an Expert - Agentic AI & Email Routing', () => {
     await page.getByRole('button', { name: /What is UHC & Medicare timely filing/i }).click();
 
     // Wait for the agentic intelligence to render in the chat
-    await expect(page.getByText(/proof of timely filing|filing deadline/i).first()).toBeVisible({ timeout: 15000 });
-    await expect(page.getByText(/Direct Partner Escalation/i)).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Schedule Call', exact: true })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Email Request', exact: true })).toBeVisible();
+    await expect(page.getByText(/Timely Filing Limit|Standard US Healthcare Timely Filing Benchmarks/i).first()).toBeVisible({ timeout: 15000 });
+    await expect(page.getByRole('heading', { name: 'Payer Profile: Medica', exact: true })).toHaveCount(0);
+    await expect(page.getByRole('link', { name: 'View 10,600+ Payer Directory' })).toBeVisible();
   });
 
   test('Callback tab allows scheduling meetings and submitting email inquiries', async ({ page }) => {
@@ -113,7 +112,7 @@ test.describe('Talk to an Expert - Agentic AI & Email Routing', () => {
 
     // Click a suggestion to initiate conversation
     await page.getByRole('button', { name: /What is UHC & Medicare timely filing/i }).click();
-    await expect(page.getByText(/proof of timely filing|filing deadline/i).first()).toBeVisible({ timeout: 15000 });
+    await expect(page.getByText(/Timely Filing Limit|Standard US Healthcare Timely Filing Benchmarks/i).first()).toBeVisible({ timeout: 15000 });
 
     // Verify "New Session" button appears in header
     const newSessionBtn = page.getByRole('button', { name: /New Session/i }).first();
@@ -144,6 +143,6 @@ test.describe('Talk to an Expert - Agentic AI & Email Routing', () => {
     expect(chatText).not.toContain('8135194640');
 
     // Take verified screenshot artifact
-    await page.screenshot({ path: '/home/kiran/.gemini/antigravity-cli/brain/50b59a0e-93e4-4856-9aa8-61204b485c5c/chatbox_verified_no_phone.png' });
+    await page.screenshot({ path: '/tmp/aethera-e2e/talk-to-expert.png' });
   });
 });

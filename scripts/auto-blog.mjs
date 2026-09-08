@@ -9,7 +9,7 @@
  *   4. Asks an LLM to write ONE fresh, accurate RCM article in our JSON schema,
  *      targeting that keyword and including required internal links
  *   5. Enforces internal links + a CTA (safety net), normalizes, dedupes the slug
- *   6. Inserts it at the top, rewrites blogPosts.ts, and advances the keyword queue
+ *   6. Saves an unpublished draft for human review; leaves live posts and the queue untouched
  *
  * LLM provider (auto-detected):
  *   OLLAMA_API_KEY    -> Ollama Cloud, OpenAI-compatible /v1/chat/completions  (preferred)
@@ -17,9 +17,9 @@
  *     OLLAMA_MODEL      optional (default gpt-oss:120b)
  *   ANTHROPIC_API_KEY -> Anthropic Messages API (fallback)
  *     ANTHROPIC_MODEL   optional (default claude-sonnet-4-6)
- *   AUTO_BLOG_MOCK=1  -> skip the API, insert a deterministic sample (for tests)
+ *   AUTO_BLOG_MOCK=1  -> skip the API, draft a deterministic sample (for tests)
  */
-import { readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
@@ -41,7 +41,6 @@ const CATEGORIES = [
   'Regulatory & Policy', 'Medicare & Medicaid', 'Value-Based Care', 'Clinical Documentation',
   'Technology & AI', 'Specialty Billing',
 ];
-const AUTHORS = ['Jennifer Walsh', 'Michael Torres', 'Sarah Kim', 'David Chen', 'Amanda Rodriguez', 'Robert Johnson', 'Lisa Thompson', 'Mark Wilson'];
 const imgUrl = (cat) => `/images/blog/${slugify(cat)}.svg`;
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 70);
 const wordCount = (post) => post.sections.reduce((n, s) => n + (s.h ? 3 : 0) + (s.sub ? 3 : 0) + (s.p || []).join(' ').split(/\s+/).length + (s.ul || []).join(' ').split(/\s+/).length, 0);
@@ -55,10 +54,6 @@ async function loadQueue() {
     if (!Array.isArray(raw.done)) raw.done = [];
     return raw;
   } catch { return null; }
-}
-
-async function saveQueue(queue) {
-  await writeFile(QUEUE_FILE, JSON.stringify(queue, null, 2).replace(/\r\n/g, '\n') + '\n', 'utf8');
 }
 
 async function loadPosts() {
@@ -218,7 +213,7 @@ function normalize(raw, posts) {
   if (!sections.length) throw new Error('no usable sections');
   const post = {
     slug, title: String(raw.title), category,
-    author: AUTHORS[Math.floor(Math.random() * AUTHORS.length)],
+    author: 'Aethera Editorial Team',
     date: new Date().toISOString().slice(0, 10),
     readTime: '', image: imgUrl(category),
     excerpt: String(raw.excerpt || raw.title), sections,
@@ -228,7 +223,7 @@ function normalize(raw, posts) {
 }
 
 async function main() {
-  const { header, footer, posts } = await loadPosts();
+  const { posts } = await loadPosts();
   const existingSlugs = new Set(posts.map((p) => p.slug));
   const queue = await loadQueue();
   const target = queue && queue.pending.length ? queue.pending[0] : null;
@@ -246,20 +241,15 @@ async function main() {
 
   enforceInternalLinks(post, target);
   post.readTime = `${Math.max(1, Math.min(14, Math.round(wordCount(post) / 200)))} min read`;
-  posts.unshift(post);
-  const outContent = (header + JSON.stringify(posts, null, 2) + footer).replace(/\r\n/g, '\n');
-  await writeFile(POSTS_FILE, outContent, 'utf8');
-
-  // Advance the keyword queue: move the consumed target from pending -> done.
-  if (queue && target) {
-    queue.pending.shift();
-    queue.done.push({ ...target, slug: post.slug, publishedAt: post.date });
-    await saveQueue(queue);
-    console.log(`Queue advanced: ${queue.pending.length} keywords remaining.`);
-  }
-
+  const directory = resolve(__dirname, '..', 'content', 'drafts');
+  await mkdir(directory, { recursive: true });
+  await writeFile(resolve(directory, `${post.slug}.json`), JSON.stringify({
+    status: 'draft', post, targetKeyword: target?.keyword ?? null,
+    review: { reviewer: null, reviewedAt: null, sources: [], notes: 'Verify every billing, legal and numerical claim against primary sources before publication.' },
+  }, null, 2) + '\n');
   console.log(`AUTO_BLOG_NEW_SLUG=${post.slug}`);
-  console.log(`Added: "${post.title}" (${post.category}) — total ${posts.length} posts.`);
+  console.log(`Draft created: "${post.title}". No live content or keyword queue was changed.`);
+
 }
 
 main().catch((e) => { console.error('auto-blog failed:', e.message); process.exit(1); });

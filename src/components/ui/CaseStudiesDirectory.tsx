@@ -3,18 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import {
-  TrendingUp,
   ArrowRight,
   Search,
-  CheckCircle2,
-  Building2,
-  Clock,
-  DollarSign,
-  ShieldCheck,
-  Sparkles,
 } from 'lucide-react';
 
 export interface CaseStudyItem {
+  evidence?: { sourceUrl: string; reviewedBy: string; reviewedAt: string; quoteApproved: boolean };
   id: string;
   specialty: string;
   category: 'primary' | 'surgical' | 'diagnostic' | 'behavioral';
@@ -265,6 +259,7 @@ export default function CaseStudiesDirectory() {
 
   return (
     <div className="space-y-12">
+<p className="surface-card border rounded-xl p-5 text-sm">The scenarios below illustrate billing problems and possible improvements. They are not verified customer results or promises of performance. An actual case study requires documented source data, a reporting period and approval to publish.</p>
       {/* Category Filter & Search Bar */}
       <div className="bg-white rounded-2xl p-6 border border-gray/20 shadow-sm space-y-4">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -321,7 +316,7 @@ export default function CaseStudiesDirectory() {
                 <span className="bg-teal text-white px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                   {cs.tag}
                 </span>
-                <span className="text-slate-600 text-xs font-semibold">{cs.practice} · {cs.location}</span>
+                <span className="text-slate-600 text-xs font-semibold">{cs.evidence ? `${cs.practice} · ${cs.location}` : `${cs.specialty} practice — illustrative scenario`}</span>
               </div>
               <Link
                 href={`/medical-billing/${cs.id}`}
@@ -361,11 +356,12 @@ export default function CaseStudiesDirectory() {
               </div>
             </div>
 
-            {/* Verified Testimonial Quote */}
+            {/* Display testimonials only when publication permission is documented. */}
+            {cs.evidence?.quoteApproved && (
             <div className="border-l-4 border-teal pl-4 py-1 italic text-xs sm:text-sm text-slate-700 bg-cream/50 rounded-r-xl p-3">
               <p>{cs.quote}</p>
               <p className="not-italic text-[11px] font-bold text-navy mt-1">— {cs.quoteAttrib}</p>
-            </div>
+            </div>)}
           </div>
         ))}
 

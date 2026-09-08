@@ -1,26 +1,22 @@
 'use client';
 
-import React, { useState, useId } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import {
   ShieldCheck,
   TrendingUp,
   AlertCircle,
   FileCheck2,
-  PhoneCall,
-  Clock,
   Award,
   ChevronRight,
   Calculator,
   Activity,
   Calendar,
-  Home,
   HeartHandshake,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
 export default function HomeHealthLandingClient() {
-  const formId = useId();
 
   // Calculator State
   const [episodeCount, setEpisodeCount] = useState<number>(120);
@@ -56,7 +52,6 @@ export default function HomeHealthLandingClient() {
 
   const activeBenchmark = CARE_BENCHMARKS[careType];
   const annualEpisodeVolume = episodeCount * 12;
-  const annualTotalRevenue = annualEpisodeVolume * activeBenchmark.baseRate;
   const annualLeakage = Math.round(annualEpisodeVolume * (leakageRate / 100) * activeBenchmark.lupaLossPerCase);
   const recoveredCashFlow = Math.round(annualLeakage * 0.88);
 
@@ -173,7 +168,7 @@ export default function HomeHealthLandingClient() {
               </label>
               <select
                 value={careType}
-                onChange={(e) => setCareType(e.target.value as any)}
+                onChange={(e) => setCareType(e.target.value as typeof careType)}
                 className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
               >
                 <option value="home_health">Home Health 30-Day Period (PDGM)</option>

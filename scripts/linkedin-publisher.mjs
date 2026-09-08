@@ -18,17 +18,15 @@
  *   node scripts/linkedin-publisher.mjs --publish-next
  */
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, resolve, join } from 'node:path';
-import { chromium } from '@playwright/test';
+import { dirname, resolve } from 'node:path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = resolve(__dirname, '..');
 const CAROUSEL_DIR = resolve(ROOT_DIR, 'public', 'brand', 'carousel');
 const INFOGRAPHICS_DIR = resolve(ROOT_DIR, 'public', 'brand', 'infographics');
-const LOGS_DIR = resolve(CAROUSEL_DIR, 'publish_logs');
 const LEDGER_PATH = resolve(__dirname, 'published-posts.json');
 
 // Load environment variables from .env / .env.local if present
@@ -54,7 +52,7 @@ function loadEnv() {
             }
           }
         }
-      } catch (err) {}
+      } catch {}
     }
   }
 }
@@ -369,7 +367,7 @@ function getLedger() {
   if (!existsSync(LEDGER_PATH)) return [];
   try {
     return JSON.parse(readFileSync(LEDGER_PATH, 'utf8'));
-  } catch (err) {
+  } catch {
     return [];
   }
 }
@@ -568,7 +566,7 @@ async function main() {
 
   if (isPublishNext) {
     // Find first campaign that has not been published yet
-    for (const [key, item] of Object.entries(CAMPAIGNS)) {
+    for (const key of Object.keys(CAMPAIGNS)) {
       if (!publishedIds.has(key)) {
         campaignKey = key;
         break;
@@ -584,7 +582,7 @@ async function main() {
 
   if (isList || (!campaignKey && !isPublish)) {
     console.log('Campaign Catalog & Pipeline Status:\n');
-    for (const [key, item] of Object.entries(CAMPAIGNS)) {
+    for (const key of Object.keys(CAMPAIGNS)) {
       const isPublished = publishedIds.has(key);
       const pubInfo = ledger.find(e => e.id === key);
       const statusTag = isPublished ? '✓ PUBLISHED' : '• QUEUED';

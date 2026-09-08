@@ -11,7 +11,6 @@ import {
   Loader2,
   FileCode,
   ShieldCheck,
-  Zap,
   Layers,
   Sparkles,
   Dna,
@@ -26,10 +25,7 @@ export default function PediatricCellTherapyScrubber() {
   const [simulateMissingRemsDenial, setSimulateMissingRemsDenial] = useState<boolean>(false);
 
   // 2. Prior-Auth Clinical Criteria
-  const [diseaseIndication, setDiseaseIndication] = useState<'relapsed_b_all' | 'neuroblastoma_high_risk' | 'sickle_cell_severe' | 'scid_immunodeficiency'>('relapsed_b_all');
-  const [cd19Confirmed, setCd19Confirmed] = useState<boolean>(true);
-  const [marrowBlastsOverFivePercent, setMarrowBlastsOverFivePercent] = useState<boolean>(true);
-  const [linesOfTherapyFailed, setLinesOfTherapyFailed] = useState<number>(2);
+  const [diseaseIndication] = useState<'relapsed_b_all' | 'neuroblastoma_high_risk' | 'sickle_cell_severe' | 'scid_immunodeficiency'>('relapsed_b_all');
 
   // 3. Concomitant Diagnostic Restaging & CRS Critical Care
   const [includeIntrathecalChemo, setIncludeIntrathecalChemo] = useState<boolean>(true); // CPT 96450
@@ -311,7 +307,7 @@ export default function PediatricCellTherapyScrubber() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('pediatric_cellular_therapy_rcm_audit', {
+      if (!(await sendLeadToKiran('pediatric_cellular_therapy_rcm_audit', {
         contactName,
         contactEmail,
         practiceName,
@@ -320,7 +316,7 @@ export default function PediatricCellTherapyScrubber() {
         diseaseIndication,
         expectedReimbursement: scrubberResult.expectedReimbursement,
         penaltyAtRisk: scrubberResult.penaltyAtRisk,
-      });
+      }))) { setIsSubmitting(false); return; }
       trackConversion('pediatric_cell_therapy_audit_submit');
       setLeadSuccess(true);
     } catch {
@@ -708,7 +704,7 @@ export default function PediatricCellTherapyScrubber() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 mb-1">Children's Hospital / Program</label>
+                  <label className="block text-xs font-semibold text-slate-700 mb-1">Children&apos;s Hospital / Program</label>
                   <input
                     type="text"
                     required

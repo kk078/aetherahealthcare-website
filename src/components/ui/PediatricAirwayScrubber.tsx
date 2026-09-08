@@ -17,7 +17,6 @@ import {
   Sparkles,
   Scissors,
   Activity,
-  Stethoscope,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -393,7 +392,7 @@ export default function PediatricAirwayScrubber() {
         auditNotes,
       };
 
-      await sendLeadToKiran('pediatric_airway_rcm_audit', payload);
+      if (!(await sendLeadToKiran('pediatric_airway_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('calculator', scrubberResult.penaltyAtRisk);
 
       setLeadSuccess(true);
@@ -912,7 +911,7 @@ export default function PediatricAirwayScrubber() {
 
                 <div>
                   <label className="block text-xs font-bold text-slate-700 uppercase mb-1">
-                    Children's Hospital / Specialty Center Name
+                    Children&apos;s Hospital / Specialty Center Name
                   </label>
                   <input
                     type="text"

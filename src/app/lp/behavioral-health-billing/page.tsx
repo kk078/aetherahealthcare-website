@@ -1,18 +1,17 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Calendar, Brain, ShieldCheck } from 'lucide-react';
+import { Calendar, ShieldCheck } from 'lucide-react';
 import BehavioralHealthLandingClient from '@/components/ui/BehavioralHealthLandingClient';
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl('/lp/behavioral-health-billing') },
+  robots: { index: false, follow: true },
   title: {
     absolute: 'Behavioral Health & Addiction Treatment RCM Services | Aethera Healthcare',
   },
   description:
     'Dedicated behavioral health billing, UR peer reviews, and SUD revenue cycle management for residential detox, PHP, IOP, and outpatient mental health clinics.',
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function BehavioralHealthBillingPage() {
@@ -78,13 +77,13 @@ export default function BehavioralHealthBillingPage() {
             <span>Aethera Healthcare Solutions &copy; {new Date().getFullYear()}. All Rights Reserved.</span>
           </div>
           <div className="flex items-center gap-4 text-slate-500">
-            <Link prefetch={false} href="/privacy" className="hover:text-slate-400 transition">
+            <Link prefetch={false} href="/compliance/privacy-policy/" className="hover:text-slate-400 transition">
               Privacy Policy
             </Link>
-            <Link prefetch={false} href="/terms" className="hover:text-slate-400 transition">
+            <Link prefetch={false} href="/compliance/terms-of-service/" className="hover:text-slate-400 transition">
               Terms of Service
             </Link>
-            <Link prefetch={false} href="/security" className="hover:text-slate-400 transition">
+            <Link prefetch={false} href="/compliance/security/" className="hover:text-slate-400 transition">
               42 CFR Part 2 Safeguards
             </Link>
           </div>

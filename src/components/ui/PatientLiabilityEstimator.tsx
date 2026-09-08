@@ -3,16 +3,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import {
-  Calculator,
-  DollarSign,
-  ShieldCheck,
   AlertTriangle,
   Printer,
-  Sparkles,
-  RotateCcw,
   CheckCircle2,
-  TrendingDown,
-  ArrowRight,
   Receipt,
 } from 'lucide-react';
 

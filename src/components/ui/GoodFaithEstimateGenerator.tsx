@@ -5,17 +5,9 @@ import Link from 'next/link';
 import {
   ShieldAlert,
   Printer,
-  Sparkles,
   Plus,
   Trash2,
-  CheckCircle2,
-  FileText,
   AlertCircle,
-  HelpCircle,
-  ArrowRight,
-  RotateCcw,
-  Download,
-  Building2,
 } from 'lucide-react';
 
 interface ItemizedService {

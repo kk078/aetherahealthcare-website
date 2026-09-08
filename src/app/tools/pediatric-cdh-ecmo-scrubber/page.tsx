@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -7,6 +8,7 @@ import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 import { ArrowLeft } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/pediatric-cdh-ecmo-scrubber') },
   title: {
     absolute: 'Pediatric CDH & Neonatal ECMO Repair Scrubber | Free RCM Tool | Aethera Healthcare',
   },

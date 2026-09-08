@@ -1,5 +1,7 @@
 'use client';
 
+import { requestOverlay } from '@/lib/overlayStore';
+
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -158,8 +160,8 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav ref={navRef} className="hidden lg:block">
-            <div className="ml-4 xl:ml-6 flex items-center space-x-4 xl:space-x-6">
+          <nav ref={navRef} className="hidden xl:block">
+            <div className="ml-4 xl:ml-6 flex items-center space-x-3 xl:space-x-4">
 
               {/* Services Dropdown */}
               <div
@@ -365,31 +367,9 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop Search + CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
-            {/* Desktop Command Palette Trigger */}
-            <button
-              type="button"
-              onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
-              className="hidden xl:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 bg-slate-50/90 hover:bg-white hover:border-[#003087]/40 text-xs text-slate-500 hover:text-[#003087] transition-all shadow-xs mr-1"
-              aria-label="Search payers, denial codes, and tools (⌘K)"
-            >
-              <Search className="w-3.5 h-3.5 text-slate-400" />
-              <span className="font-medium text-[13px]">Search payers, codes, tools…</span>
-              <kbd className="inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] font-semibold text-slate-500 bg-white rounded border border-slate-200 shadow-xs">
-                <span>⌘</span>K
-              </kbd>
-            </button>
-            <button
-              type="button"
-              onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
-              className="hidden lg:inline-flex xl:hidden p-2 rounded-full text-[#334155] hover:text-[#003087] hover:bg-slate-100 transition-colors"
-              aria-label="Search payers, denial codes, and tools (⌘K)"
-            >
-              <Search className="w-4 h-4" />
-            </button>
-
-            <ThemeToggle variant="pill" className="hidden xl:inline-flex" />
-            <ThemeToggle variant="compact" className="hidden lg:inline-flex xl:hidden" />
+          <div className="hidden xl:flex items-center gap-1 xl:gap-2 shrink-0">
+            <button type="button" onClick={() => requestOverlay(new Event('open-command-palette'))} className="inline-flex p-2 rounded-full hover:bg-slate-100" aria-label="Search payers, denial codes, and tools (⌘K)"><Search className="w-5 h-5" /></button>
+            <ThemeToggle variant="compact" />
 
             <Link prefetch={false}
               href="/schedule"
@@ -399,7 +379,7 @@ export default function Navbar() {
             </Link>
             <button
               type="button"
-              onClick={() => window.dispatchEvent(new CustomEvent('open-free-pilot-modal'))}
+              onClick={() => requestOverlay(new CustomEvent('open-free-pilot-modal'))}
               className="bg-[#003087] hover:bg-[#001A52] text-white font-semibold py-2 px-4 xl:px-5 rounded-full transition-all duration-200 text-sm shadow-sm hover:shadow-md whitespace-nowrap cursor-pointer"
             >
               Start Free Pilot
@@ -407,11 +387,11 @@ export default function Navbar() {
           </div>
 
           {/* Mobile search + theme + menu button */}
-          <div className="lg:hidden flex items-center gap-1">
+          <div className="xl:hidden flex items-center gap-1">
             <ThemeToggle variant="compact" />
             <button
               type="button"
-              onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
+              onClick={() => requestOverlay(new CustomEvent('open-command-palette'))}
               className="p-2 text-[#334155] hover:text-[#003087] hover:bg-slate-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
               aria-label="Search payers, codes, and tools"
             >
@@ -430,14 +410,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white shadow-2xl h-[calc(100vh-6rem)] overflow-y-auto border-t border-[#003087]/10">
+        <div className="xl:hidden bg-white shadow-2xl h-[calc(100vh-6rem)] overflow-y-auto border-t border-[#003087]/10">
           <div className="px-4 pt-4 pb-8 space-y-4">
             {/* Mobile Quick Search Bar */}
             <button
               type="button"
               onClick={() => {
                 setIsMenuOpen(false);
-                window.dispatchEvent(new CustomEvent('open-command-palette'));
+                requestOverlay(new CustomEvent('open-command-palette'));
               }}
               className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white text-sm text-slate-600 font-medium"
               aria-label="Search payers, codes, and tools"
@@ -468,7 +448,7 @@ export default function Navbar() {
                 type="button"
                 onClick={() => {
                   setIsMenuOpen(false);
-                  window.dispatchEvent(new CustomEvent('open-free-pilot-modal'));
+                  requestOverlay(new CustomEvent('open-free-pilot-modal'));
                 }}
                 className="flex items-center justify-center bg-[#003087] hover:bg-[#001A52] text-white font-bold py-2.5 px-3 rounded-xl text-sm text-center shadow-sm cursor-pointer"
               >

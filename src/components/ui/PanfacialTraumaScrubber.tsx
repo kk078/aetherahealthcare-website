@@ -4,20 +4,13 @@ import React, { useState, useMemo } from 'react';
 import {
   ShieldAlert,
   CheckCircle2,
-  AlertTriangle,
   FileText,
-  DollarSign,
-  Activity,
   Send,
   Sparkles,
-  HelpCircle,
-  Stethoscope,
-  ChevronRight,
   Layers,
   Copy,
   Crosshair,
 } from 'lucide-react';
-import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 import { sendLeadToKiran } from '@/lib/worker';
 
 interface LineItem {
@@ -252,7 +245,7 @@ export default function PanfacialTraumaScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('panfacial_trauma_rcm_audit', {
+      if (!(await sendLeadToKiran('panfacial_trauma_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -265,7 +258,7 @@ export default function PanfacialTraumaScrubber() {
         includeBoneGraft,
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Submission failed', err);
@@ -339,7 +332,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setMidfaceType(item.id as any)}
+                    onClick={() => setMidfaceType(item.id as typeof midfaceType)}
                     className={`p-2.5 rounded-xl border text-xs font-semibold transition-all ${
                       midfaceType === item.id
                         ? 'border-teal bg-teal/10 text-teal'
@@ -367,7 +360,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => setZmcType(item.id as any)}
+                      onClick={() => setZmcType(item.id as typeof zmcType)}
                       className={`w-full p-2.5 rounded-xl border text-xs font-semibold transition-all text-left ${
                         zmcType === item.id
                           ? 'border-teal bg-teal/10 text-teal'
@@ -393,7 +386,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => setMandibleType(item.id as any)}
+                      onClick={() => setMandibleType(item.id as typeof mandibleType)}
                       className={`w-full p-2.5 rounded-xl border text-xs font-semibold transition-all text-left ${
                         mandibleType === item.id
                           ? 'border-teal bg-teal/10 text-teal'
@@ -429,7 +422,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setImfStrategy(item.id as any)}
+                    onClick={() => setImfStrategy(item.id as typeof imfStrategy)}
                     className={`p-2.5 rounded-xl border text-xs font-semibold transition-all ${
                       imfStrategy === item.id
                         ? item.id === 'intraop_temporary'
@@ -458,7 +451,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setOrbitalType(item.id as any)}
+                    onClick={() => setOrbitalType(item.id as typeof orbitalType)}
                     className={`p-2.5 rounded-xl border text-xs font-semibold transition-all ${
                       orbitalType === item.id
                         ? 'border-teal bg-teal/10 text-teal'

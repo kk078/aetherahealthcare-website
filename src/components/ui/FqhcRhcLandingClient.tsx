@@ -4,10 +4,8 @@ import React, { useState, useId } from 'react';
 import Link from 'next/link';
 import {
   ShieldCheck,
-  TrendingUp,
   AlertCircle,
   FileCheck2,
-  PhoneCall,
   Clock,
   Award,
   ChevronRight,
@@ -15,7 +13,6 @@ import {
   Activity,
   Calendar,
   Building2,
-  Users,
   CheckCircle2,
   Coins,
 } from 'lucide-react';
@@ -35,7 +32,7 @@ export default function FqhcRhcLandingClient() {
   const [contactName, setContactName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [titleRole, setTitleRole] = useState('');
+  const [titleRole] = useState('');
   const [facilityCategory, setFacilityCategory] = useState('Section 330 Grantee FQHC');
   const [currentEhr, setCurrentEhr] = useState('eClinicalWorks (eCW)');
   const [notes, setNotes] = useState('');

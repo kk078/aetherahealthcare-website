@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -8,6 +9,7 @@ import EligibilityChecklist from '@/components/ui/EligibilityChecklist';
 import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/eligibility-checklist') },
   title: { absolute: 'Eligibility & Prior-Auth Readiness Checklist | Aethera Healthcare Solutions' },
   description:
     'Free pre-visit eligibility and prior-authorization checklist. Score your front-desk verification against the checks that prevent CO-27, CO-197, and eligibility denials.',

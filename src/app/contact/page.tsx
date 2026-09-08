@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Calendar, Mail, Clock, CheckCircle2 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -8,6 +9,7 @@ import ContactTabs from '@/components/ui/ContactTabs';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/contact') },
   title: { absolute: "Contact Us | Free Consultation | Aethera Healthcare Solutions" },
   description: "Get in touch with Aethera Healthcare Solutions for a free consultation. Submit an email inquiry or schedule a meeting directly with our team.",
 };

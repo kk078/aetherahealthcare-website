@@ -1,3 +1,4 @@
+import { escapeHtml, sanitizeArticle } from './safeHtml';
 /**
  * Shared blog content for The Aethera Pulse.
  * Single source of truth for both the index (/blog) and article pages (/blog/[slug]).
@@ -5,6 +6,7 @@
  */
 export interface BlogSection { h?: string; sub?: string; p?: string[]; ul?: string[]; }
 export interface BlogPost {
+  review?: { reviewer: string; reviewedAt: string; sources: string[] };
   slug: string; title: string; category: string; author: string; date: string;
   readTime: string; image: string; excerpt: string; sections: BlogSection[];
 }
@@ -4148,10 +4150,10 @@ export function getRelated(post: BlogPost, n = 3): BlogPost[] {
 export function postHtml(post: BlogPost): string {
   let h = '';
   for (const sec of post.sections) {
-    if (sec.h) h += `<h2 class="text-2xl font-bold text-navy mt-8 mb-4 font-jakarta">${sec.h}</h2>`;
-    if (sec.sub) h += `<h3 class="text-xl font-bold text-navy mt-6 mb-3">${sec.sub}</h3>`;
+    if (sec.h) h += `<h2 class="text-2xl font-bold text-navy mt-8 mb-4 font-jakarta">${escapeHtml(sec.h)}</h2>`;
+    if (sec.sub) h += `<h3 class="text-xl font-bold text-navy mt-6 mb-3">${escapeHtml(sec.sub)}</h3>`;
     if (sec.p) for (const para of sec.p) h += `<p class="text-gray leading-relaxed mb-4">${para}</p>`;
     if (sec.ul && sec.ul.length) h += `<ul class="list-disc pl-6 space-y-2 mb-4 text-gray">` + sec.ul.map((li) => `<li>${li}</li>`).join('') + `</ul>`;
   }
-  return h;
+  return sanitizeArticle(h);
 }

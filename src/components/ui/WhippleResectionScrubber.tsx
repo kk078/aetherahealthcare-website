@@ -2,7 +2,6 @@
 
 import React, { useState, useMemo } from 'react';
 import {
-  Activity,
   AlertTriangle,
   CheckCircle2,
   Copy,
@@ -14,9 +13,7 @@ import {
   Zap,
   Info,
   Layers,
-  Sparkles,
   Scissors,
-  Eye,
   GitBranch,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -370,7 +367,7 @@ export default function WhippleResectionScrubber() {
     };
 
     try {
-      await sendLeadToKiran('whipple_surgery_rcm_audit', payload);
+      if (!(await sendLeadToKiran('whipple_surgery_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('whipple_rcm_audit_submit');
       setLeadSuccess(true);
       setTimeout(() => {
@@ -430,7 +427,7 @@ export default function WhippleResectionScrubber() {
                     <button
                       key={res.id}
                       type="button"
-                      onClick={() => setResectionType(res.id as any)}
+                      onClick={() => setResectionType(res.id as typeof resectionType)}
                       className={`text-left p-3 rounded-lg border transition-all ${
                         resectionType === res.id
                           ? 'border-amber-600 bg-amber-50/70 text-navy ring-1 ring-amber-500'
@@ -489,7 +486,7 @@ export default function WhippleResectionScrubber() {
                     <button
                       key={vasc.id}
                       type="button"
-                      onClick={() => setVascularReconstruction(vasc.id as any)}
+                      onClick={() => setVascularReconstruction(vasc.id as typeof vascularReconstruction)}
                       className={`p-2.5 rounded-lg border text-left text-xs transition-all ${
                         vascularReconstruction === vasc.id
                           ? 'border-amber-600 bg-amber-50 text-navy font-semibold ring-1 ring-amber-500'
@@ -544,7 +541,7 @@ export default function WhippleResectionScrubber() {
                     <button
                       key={c.id}
                       type="button"
-                      onClick={() => setCoSurgeonMode(c.id as any)}
+                      onClick={() => setCoSurgeonMode(c.id as typeof coSurgeonMode)}
                       className={`p-2.5 rounded-lg border text-left text-xs transition-all ${
                         coSurgeonMode === c.id
                           ? 'border-amber-600 bg-amber-50 text-navy font-semibold ring-1 ring-amber-500'
@@ -873,7 +870,7 @@ export default function WhippleResectionScrubber() {
                     )}
                   </button>
                   <p className="text-[10px] text-slate-400 text-center mt-2">
-                    Zero-PHI compliance. Protected by Aethera's enterprise data governance standard.
+                    Zero-PHI compliance. Protected by Aethera&apos;s enterprise data governance standard.
                   </p>
                 </div>
               </form>

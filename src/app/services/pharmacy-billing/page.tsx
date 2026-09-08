@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, TrendingUp, Shield, Clock, DollarSign, FileText, AlertCircle, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -6,6 +7,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services/pharmacy-billing') },
   title: "Pharmacy Billing & RCM Services | Retail, Specialty & LTC Pharmacy",
   description: "Pharmacy revenue cycle management for retail, specialty, compounding, and long-term care pharmacies. We handle NCPDP claims, PBM adjudication, DIR fee reconciliation, 340B, prior authorizations, and copay assistance. 98.2% clean claim rate.",
 };

@@ -4,7 +4,6 @@ import React, { useState, useMemo } from 'react';
 import {
   Baby,
   Bone,
-  Activity,
   AlertTriangle,
   CheckCircle2,
   Copy,
@@ -13,11 +12,8 @@ import {
   Loader2,
   FileCode,
   ShieldCheck,
-  Zap,
-  Info,
   Layers,
   Sparkles,
-  Scissors,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -400,7 +396,7 @@ IEA*1*000000102~`;
         },
       };
 
-      await sendLeadToKiran('scoliosis_rcm_audit', payload);
+      if (!(await sendLeadToKiran('scoliosis_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('scoliosis_rcm_audit_submit');
       setLeadSuccess(true);
     } catch {

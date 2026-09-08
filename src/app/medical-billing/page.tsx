@@ -10,7 +10,7 @@ export const metadata = {
   title: { absolute: 'Medical Billing Services by Specialty | Aethera Healthcare Solutions' },
   description:
     'Nationwide specialty medical billing and revenue cycle management for U.S. practices. Find billing built for your specialty — coding, claims, denials, and A/R handled end to end.',
-  alternates: { canonical: 'https://aetherahealthcare.com/medical-billing' },
+  alternates: { canonical: 'https://aetherahealthcare.com/medical-billing/' },
 };
 
 export default function MedicalBillingHub() {

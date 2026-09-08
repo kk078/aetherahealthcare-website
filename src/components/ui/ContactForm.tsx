@@ -88,7 +88,7 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="text-center py-12">
+      <div role="status" aria-live="polite" className="text-center py-12">
         <CheckCircle className="h-16 w-16 text-teal dark:text-mint mx-auto mb-4" />
         <h3 className="text-2xl font-bold text-navy dark:text-white mb-3">
           {activeTab === 'message' ? 'Message Sent!' : 'Consultation Request Received!'}
@@ -111,9 +111,10 @@ export default function ContactForm() {
   return (
     <div>
       {/* Tab switcher */}
-      <div className="flex rounded-xl border border-slate-200 dark:border-slate-700/80 p-1 mb-8 bg-slate-100/90 dark:bg-[#061220] transition-colors">
+      <div role="tablist" aria-label="Contact options" onKeyDown={e => { if (['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) { e.preventDefault(); const tab = activeTab === 'message' ? 'schedule' : 'message'; setActiveTab(tab); document.getElementById(`contact-tab-${tab}`)?.focus(); } }} className="flex rounded-xl border border-slate-200 dark:border-slate-700/80 p-1 mb-8 bg-slate-100/90 dark:bg-[#061220] transition-colors">
         <button
           type="button"
+          role="tab" id="contact-tab-message" aria-controls="contact-panel-message" aria-selected={activeTab === 'message'} tabIndex={activeTab === 'message' ? 0 : -1} disabled={status === 'submitting'}
           onClick={() => { setActiveTab('message'); setStatus('idle'); }}
           className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg font-semibold text-sm transition-all duration-200 ${
             activeTab === 'message'
@@ -125,6 +126,7 @@ export default function ContactForm() {
         </button>
         <button
           type="button"
+          role="tab" id="contact-tab-schedule" aria-controls="contact-panel-schedule" aria-selected={activeTab === 'schedule'} tabIndex={activeTab === 'schedule' ? 0 : -1} disabled={status === 'submitting'}
           onClick={() => { setActiveTab('schedule'); setStatus('idle'); }}
           className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg font-semibold text-sm transition-all duration-200 ${
             activeTab === 'schedule'
@@ -138,7 +140,8 @@ export default function ContactForm() {
 
       {/* SEND MESSAGE FORM */}
       {activeTab === 'message' && (
-        <form onSubmit={messageForm.handleSubmit(onMessageSubmit)} className="space-y-5">
+        <form id="contact-panel-message" aria-labelledby="contact-tab-message" role="tabpanel" onSubmit={messageForm.handleSubmit(onMessageSubmit)} className="space-y-5">
+          <p className="text-sm text-slate-600">Please share practice information only; do not include patient identifiers.</p>
           {/* Honeypot — hidden from humans, filled by bots */}
           <div style={{ position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
             <input type="text" aria-hidden="true" aria-label="Leave empty" tabIndex={-1} autoComplete="off" {...messageForm.register('hp_field')} />
@@ -146,35 +149,35 @@ export default function ContactForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className={labelClass}>Full Name *</label>
-              <input
+              <label htmlFor="contact-name" className={labelClass}>Full Name *</label>
+              <input id="contact-name" aria-invalid={!!messageForm.formState.errors.name} aria-describedby={messageForm.formState.errors.name ? "contact-name-error" : undefined}
                 aria-label="Full Name"
                 {...messageForm.register('name', { required: 'Name is required' })}
                 className={inputClass(!!messageForm.formState.errors.name)}
                 placeholder="Dr. Jane Smith"
               />
               {messageForm.formState.errors.name && (
-                <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.name.message as string}</p>
+                <p id="contact-name-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.name.message as string}</p>
               )}
             </div>
             <div>
-              <label className={labelClass}>Practice / Organization *</label>
-              <input
+              <label htmlFor="contact-practice" className={labelClass}>Practice / Organization *</label>
+              <input id="contact-practice" aria-invalid={!!messageForm.formState.errors.practice} aria-describedby={messageForm.formState.errors.practice ? "contact-practice-error" : undefined}
                 aria-label="Practice or Organization"
                 {...messageForm.register('practice', { required: 'Practice is required' })}
                 className={inputClass(!!messageForm.formState.errors.practice)}
                 placeholder="Smith Medical Associates"
               />
               {messageForm.formState.errors.practice && (
-                <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.practice.message as string}</p>
+                <p id="contact-practice-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.practice.message as string}</p>
               )}
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className={labelClass}>Email Address *</label>
-              <input
+              <label htmlFor="contact-email" className={labelClass}>Email Address *</label>
+              <input id="contact-email" aria-invalid={!!messageForm.formState.errors.email} aria-describedby={messageForm.formState.errors.email ? "contact-email-error" : undefined}
                 type="email"
                 aria-label="Email Address"
                 {...messageForm.register('email', {
@@ -185,29 +188,29 @@ export default function ContactForm() {
                 placeholder="dr.smith@example.com"
               />
               {messageForm.formState.errors.email && (
-                <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.email.message as string}</p>
+                <p id="contact-email-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.email.message as string}</p>
               )}
             </div>
             <div>
-              <label className={labelClass}>Phone Number *</label>
-              <input
+              <label htmlFor="contact-phone" className={labelClass}>Phone Number (optional)</label>
+              <input id="contact-phone" aria-invalid={!!messageForm.formState.errors.phone} aria-describedby={messageForm.formState.errors.phone ? "contact-phone-error" : undefined}
                 type="tel"
                 aria-label="Phone Number"
-                {...messageForm.register('phone', { required: 'Phone is required' })}
+                {...messageForm.register('phone')}
                 className={inputClass(!!messageForm.formState.errors.phone)}
                 placeholder="(555) 123-4567"
               />
               {messageForm.formState.errors.phone && (
-                <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.phone.message as string}</p>
+                <p id="contact-phone-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.phone.message as string}</p>
               )}
             </div>
           </div>
 
           <div>
-            <label className={labelClass}>Medical Specialty *</label>
-            <select
+            <label htmlFor="contact-specialty" className={labelClass}>Medical Specialty (optional)</label>
+            <select id="contact-specialty" aria-invalid={!!messageForm.formState.errors.specialty} aria-describedby={messageForm.formState.errors.specialty ? "contact-specialty-error" : undefined}
               aria-label="Medical Specialty"
-              {...messageForm.register('specialty', { required: 'Specialty is required' })}
+              {...messageForm.register('specialty')}
               className={inputClass(!!messageForm.formState.errors.specialty)}
             >
               <option value="" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Select your specialty</option>
@@ -218,13 +221,13 @@ export default function ContactForm() {
               ))}
             </select>
             {messageForm.formState.errors.specialty && (
-              <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.specialty.message as string}</p>
+              <p id="contact-specialty-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.specialty.message as string}</p>
             )}
           </div>
 
           <div>
-            <label className={labelClass}>Message *</label>
-            <textarea
+            <label htmlFor="contact-message" className={labelClass}>Message *</label>
+            <textarea id="contact-message" aria-invalid={!!messageForm.formState.errors.message} aria-describedby={messageForm.formState.errors.message ? "contact-message-error" : undefined}
               rows={5}
               aria-label="Message"
               {...messageForm.register('message', { required: 'Message is required' })}
@@ -232,14 +235,14 @@ export default function ContactForm() {
               placeholder="Tell us about your practice and how we can help..."
             />
             {messageForm.formState.errors.message && (
-              <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.message.message as string}</p>
+              <p id="contact-message-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{messageForm.formState.errors.message.message as string}</p>
             )}
           </div>
 
           {status === 'error' && (
             <div className="flex items-start gap-3 bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800/80 rounded-xl p-4">
               <AlertCircle className="h-5 w-5 text-red-500 dark:text-red-400 mt-0.5 shrink-0" />
-              <p className="text-red-700 dark:text-red-200 text-sm">{errorMsg}</p>
+              <p role="alert" className="text-red-700 dark:text-red-200 text-sm">{errorMsg}</p>
             </div>
           )}
 
@@ -257,7 +260,8 @@ export default function ContactForm() {
 
       {/* SCHEDULE CONSULTATION FORM */}
       {activeTab === 'schedule' && (
-        <form onSubmit={scheduleForm.handleSubmit(onScheduleSubmit)} className="space-y-5">
+        <form id="contact-panel-schedule" aria-labelledby="contact-tab-schedule" role="tabpanel" onSubmit={scheduleForm.handleSubmit(onScheduleSubmit)} className="space-y-5">
+          <p className="text-sm text-slate-600">Please share practice information only; do not include patient identifiers.</p>
           {/* Honeypot — hidden from humans, filled by bots */}
           <div style={{ position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
             <input type="text" aria-hidden="true" aria-label="Leave empty" tabIndex={-1} autoComplete="off" {...scheduleForm.register('hp_field')} />
@@ -265,35 +269,35 @@ export default function ContactForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className={labelClass}>Your Name *</label>
-              <input
+              <label htmlFor="contact-practiceContact" className={labelClass}>Your Name *</label>
+              <input id="contact-practiceContact" aria-invalid={!!scheduleForm.formState.errors.practiceContact} aria-describedby={scheduleForm.formState.errors.practiceContact ? "contact-practiceContact-error" : undefined}
                 aria-label="Contact Name"
                 {...scheduleForm.register('practiceContact', { required: 'Name is required' })}
                 className={inputClass(!!scheduleForm.formState.errors.practiceContact)}
                 placeholder="Dr. Jane Smith"
               />
               {scheduleForm.formState.errors.practiceContact && (
-                <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.practiceContact.message as string}</p>
+                <p id="contact-practiceContact-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.practiceContact.message as string}</p>
               )}
             </div>
             <div>
-              <label className={labelClass}>Practice Name *</label>
-              <input
+              <label htmlFor="contact-practiceName" className={labelClass}>Practice Name *</label>
+              <input id="contact-practiceName" aria-invalid={!!scheduleForm.formState.errors.practiceName} aria-describedby={scheduleForm.formState.errors.practiceName ? "contact-practiceName-error" : undefined}
                 aria-label="Practice Name"
                 {...scheduleForm.register('practiceName', { required: 'Practice is required' })}
                 className={inputClass(!!scheduleForm.formState.errors.practiceName)}
                 placeholder="Smith Medical Associates"
               />
               {scheduleForm.formState.errors.practiceName && (
-                <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.practiceName.message as string}</p>
+                <p id="contact-practiceName-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.practiceName.message as string}</p>
               )}
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className={labelClass}>Email Address *</label>
-              <input
+              <label htmlFor="contact-scheduleEmail" className={labelClass}>Email Address *</label>
+              <input id="contact-scheduleEmail" aria-invalid={!!scheduleForm.formState.errors.scheduleEmail} aria-describedby={scheduleForm.formState.errors.scheduleEmail ? "contact-scheduleEmail-error" : undefined}
                 type="email"
                 aria-label="Email Address"
                 {...scheduleForm.register('scheduleEmail', {
@@ -304,30 +308,30 @@ export default function ContactForm() {
                 placeholder="dr.smith@example.com"
               />
               {scheduleForm.formState.errors.scheduleEmail && (
-                <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.scheduleEmail.message as string}</p>
+                <p id="contact-scheduleEmail-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.scheduleEmail.message as string}</p>
               )}
             </div>
             <div>
-              <label className={labelClass}>Phone Number *</label>
-              <input
+              <label htmlFor="contact-schedulePhone" className={labelClass}>Phone Number (optional)</label>
+              <input id="contact-schedulePhone" aria-invalid={!!scheduleForm.formState.errors.schedulePhone} aria-describedby={scheduleForm.formState.errors.schedulePhone ? "contact-schedulePhone-error" : undefined}
                 type="tel"
                 aria-label="Phone Number"
-                {...scheduleForm.register('schedulePhone', { required: 'Phone is required' })}
+                {...scheduleForm.register('schedulePhone')}
                 className={inputClass(!!scheduleForm.formState.errors.schedulePhone)}
                 placeholder="(555) 123-4567"
               />
               {scheduleForm.formState.errors.schedulePhone && (
-                <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.schedulePhone.message as string}</p>
+                <p id="contact-schedulePhone-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.schedulePhone.message as string}</p>
               )}
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className={labelClass}>Medical Specialty *</label>
-              <select
+              <label htmlFor="contact-practiceSpecialty" className={labelClass}>Medical Specialty (optional)</label>
+              <select id="contact-practiceSpecialty" aria-invalid={!!scheduleForm.formState.errors.practiceSpecialty} aria-describedby={scheduleForm.formState.errors.practiceSpecialty ? "contact-practiceSpecialty-error" : undefined}
                 aria-label="Medical Specialty"
-                {...scheduleForm.register('practiceSpecialty', { required: 'Specialty is required' })}
+                {...scheduleForm.register('practiceSpecialty')}
                 className={inputClass(!!scheduleForm.formState.errors.practiceSpecialty)}
               >
                 <option value="" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Select specialty</option>
@@ -338,32 +342,32 @@ export default function ContactForm() {
                 ))}
               </select>
               {scheduleForm.formState.errors.practiceSpecialty && (
-                <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.practiceSpecialty.message as string}</p>
+                <p id="contact-practiceSpecialty-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.practiceSpecialty.message as string}</p>
               )}
             </div>
             <div>
-              <label className={labelClass}>Preferred Time Slot *</label>
-              <select
+              <label htmlFor="contact-preferredTime" className={labelClass}>Preferred Time Slot (Eastern Time) *</label>
+              <select id="contact-preferredTime" aria-invalid={!!scheduleForm.formState.errors.preferredTime} aria-describedby={scheduleForm.formState.errors.preferredTime ? "contact-preferredTime-error" : undefined}
                 aria-label="Preferred Time"
                 {...scheduleForm.register('preferredTime', { required: 'Please select a time' })}
                 className={inputClass(!!scheduleForm.formState.errors.preferredTime)}
               >
                 <option value="" className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Select a time</option>
                 {timeSlots.map(t => (
-                  <option key={t} value={t} className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
-                    {t}
+                  <option key={t} value={`${t} ET`} className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
+                    {t} ET
                   </option>
                 ))}
               </select>
               {scheduleForm.formState.errors.preferredTime && (
-                <p className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.preferredTime.message as string}</p>
+                <p id="contact-preferredTime-error" role="alert" className="text-red-500 dark:text-red-400 text-xs mt-1.5 font-medium">{scheduleForm.formState.errors.preferredTime.message as string}</p>
               )}
             </div>
           </div>
 
           <div>
-            <label className={labelClass}>What would you like to discuss? (optional)</label>
-            <textarea
+            <label htmlFor="contact-consultationNotes" className={labelClass}>What would you like to discuss? (optional)</label>
+            <textarea id="contact-consultationNotes" aria-invalid={!!scheduleForm.formState.errors.consultationNotes} aria-describedby={scheduleForm.formState.errors.consultationNotes ? "contact-consultationNotes-error" : undefined}
               rows={3}
               aria-label="Consultation Notes"
               {...scheduleForm.register('consultationNotes')}
@@ -375,7 +379,7 @@ export default function ContactForm() {
           {status === 'error' && (
             <div className="flex items-start gap-3 bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800/80 rounded-xl p-4">
               <AlertCircle className="h-5 w-5 text-red-500 dark:text-red-400 mt-0.5 shrink-0" />
-              <p className="text-red-700 dark:text-red-200 text-sm">{errorMsg}</p>
+              <p role="alert" className="text-red-700 dark:text-red-200 text-sm">{errorMsg}</p>
             </div>
           )}
 

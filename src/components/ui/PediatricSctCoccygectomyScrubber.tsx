@@ -6,17 +6,12 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
   Activity,
   Send,
-  Sparkles,
-  HelpCircle,
   Baby,
   Layers,
   Copy,
   Sliders,
-  Scissors,
-  Flame,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
@@ -211,7 +206,7 @@ export default function PediatricSctCoccygectomyScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('pediatric_sct_rcm_audit', {
+      if (!(await sendLeadToKiran('pediatric_sct_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -224,7 +219,7 @@ export default function PediatricSctCoccygectomyScrubber() {
         neonatalCriticalCare,
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Lead submission failed', err);
@@ -299,7 +294,7 @@ ${auditResult.warnings.map((w, idx) => `! WARNING ${idx + 1}: ${w}`).join('\n')}
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setAltmanType(item.id as any)}
+                    onClick={() => setAltmanType(item.id as typeof altmanType)}
                     className={`p-3 text-left rounded-xl border transition-all ${
                       altmanType === item.id
                         ? 'bg-navy text-white border-navy shadow-sm'

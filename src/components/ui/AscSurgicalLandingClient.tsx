@@ -5,15 +5,10 @@ import {
   Sparkles,
   ShieldCheck,
   CheckCircle2,
-  DollarSign,
-  TrendingUp,
-  Clock,
-  Phone,
   ArrowRight,
   Loader2,
   Check,
   AlertCircle,
-  Building2,
   Lock,
   Layers,
   Activity,
@@ -406,7 +401,7 @@ export default function AscSurgicalLandingClient() {
               <div className="text-emerald-400 font-mono text-sm font-bold mb-2">PILLAR 03</div>
               <h4 className="text-lg font-bold text-white mb-2">UB-04 & 1500 Reconciliation</h4>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Unified cross-scrubbing between the facility fee bill (UB-04 / 837I) and the attending surgeon's professional fee bill (CMS-1500 / 837P) to eliminate CPT and diagnosis mismatches.
+                Unified cross-scrubbing between the facility fee bill (UB-04 / 837I) and the attending surgeon&apos;s professional fee bill (CMS-1500 / 837P) to eliminate CPT and diagnosis mismatches.
               </p>
             </div>
 

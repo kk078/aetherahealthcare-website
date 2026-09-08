@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
-const ARTIFACT_DIR = '/home/kiran/.gemini/antigravity-cli/brain/50b59a0e-93e4-4856-9aa8-61204b485c5c';
+const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('Next-Gen Healthcare RCM Suite & Tools', () => {
 
@@ -11,15 +11,15 @@ test.describe('Next-Gen Healthcare RCM Suite & Tools', () => {
     await expect(sandbox).toBeVisible();
 
     await expect(page.getByText('portal.aetherahealthcare.com')).toBeVisible();
-    await expect(page.getByText(/Live Client Sandbox/i)).toBeVisible();
+    await expect(page.getByText(/Illustrative Portal Demo/i).first()).toBeVisible();
     await expect(page.getByText('98.6%')).toBeVisible();
-    await expect(page.getByText('Days in AR').first()).toBeVisible();
+    await expect(page.getByText('Days in A/R (DSO)').first()).toBeVisible();
     await expect(page.getByText('Accounts Receivable (A/R) Aging Bucket Breakdown')).toBeVisible();
 
     await sandbox.screenshot({ path: `${ARTIFACT_DIR}/portal_sandbox_kpi.png` });
 
     // Switch tab to Denials
-    await page.getByRole('button', { name: /Denial Resolution Center/i }).click();
+    await page.getByRole('button', { name: /Denial Recovery Center/i }).click();
     await expect(page.getByText('Active Denial Appeal & Recovery Feed')).toBeVisible();
     await sandbox.screenshot({ path: `${ARTIFACT_DIR}/portal_denials_stream.png` });
   });
@@ -42,7 +42,7 @@ test.describe('Next-Gen Healthcare RCM Suite & Tools', () => {
     const h1 = page.getByRole('heading', { level: 1 });
     await expect(h1).toContainText('CPT Fee Schedule & Reimbursement Gap Benchmarker');
     await expect(page.getByText(/Estimated Annual Commercial Underpayment Gap/i)).toBeVisible();
-    await expect(page.getByRole('columnheader', { name: '2026 Medicare Allowable' })).toBeVisible();
+    await expect(page.getByRole('columnheader', { name: 'Illustrative Base Allowable' })).toBeVisible();
 
     await page.screenshot({ path: `${ARTIFACT_DIR}/fee_schedule_benchmarker.png`, fullPage: false });
   });

@@ -7,17 +7,9 @@ import {
   CheckCircle2,
   Copy,
   Check,
-  Send,
   Loader2,
   FileCode,
-  ShieldCheck,
-  Calculator,
   ChevronRight,
-  Info,
-  Layers,
-  FileText,
-  DollarSign,
-  Activity,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -162,7 +154,7 @@ export default function FqhcPpsScrubber() {
     }
 
     if (secondaryType === 'subsequent_injury') {
-      let secRate = CMS_PPS_BASE_2026 * activeGafObj.gaf;
+      const secRate = CMS_PPS_BASE_2026 * activeGafObj.gaf;
       return {
         isPayable: true,
         rate: Math.round(secRate * 100) / 100,

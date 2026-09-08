@@ -1,18 +1,17 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Calendar, Scissors, ShieldCheck } from 'lucide-react';
+import { Calendar, ShieldCheck } from 'lucide-react';
 import AscSurgicalLandingClient from '@/components/ui/AscSurgicalLandingClient';
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl('/lp/asc-surgical-billing') },
+  robots: { index: false, follow: true },
   title: {
     absolute: 'Ambulatory Surgery Center (ASC) Revenue Cycle Management & Billing | Aethera Healthcare',
   },
   description:
     'Specialized ASC billing service for surgery centers. Recapture 100% of high-cost implant carve-outs, master UB-04 & CMS-1500 dual billing, and compress surgical A/R to under 22 days.',
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function AscSurgicalBillingPage() {
@@ -78,13 +77,13 @@ export default function AscSurgicalBillingPage() {
             <span>Aethera Healthcare Solutions &copy; {new Date().getFullYear()}. All Rights Reserved.</span>
           </div>
           <div className="flex items-center gap-4 text-slate-500">
-            <Link prefetch={false} href="/privacy" className="hover:text-slate-400 transition">
+            <Link prefetch={false} href="/compliance/privacy-policy/" className="hover:text-slate-400 transition">
               Privacy Policy
             </Link>
-            <Link prefetch={false} href="/terms" className="hover:text-slate-400 transition">
+            <Link prefetch={false} href="/compliance/terms-of-service/" className="hover:text-slate-400 transition">
               Terms of Service
             </Link>
-            <Link prefetch={false} href="/security" className="hover:text-slate-400 transition">
+            <Link prefetch={false} href="/compliance/security/" className="hover:text-slate-400 transition">
               HIPAA Safeguards
             </Link>
           </div>

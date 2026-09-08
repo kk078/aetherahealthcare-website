@@ -1,5 +1,5 @@
 {
-  "_comment": "Prioritized keyword queue for the auto-blog. Each run pops pending[0], writes an article targeting that keyword, forces the internal links below, then moves the item to done[]. When pending is empty the generator falls back to free-choice topics. Add new targets to the END of pending[]. Categories MUST match one of the allowed CATEGORIES in blogPosts.ts.",
+  "_comment": "Prioritized keyword queue for the auto-blog. Generation drafts pending[0] without changing this queue. Publishing an approved draft moves its matching item to done[]. When pending is empty the generator falls back to free-choice topics. Add new targets to the END of pending[]. Categories MUST match one of the allowed CATEGORIES in blogPosts.ts.",
   "pending": [],
   "done": [
     {

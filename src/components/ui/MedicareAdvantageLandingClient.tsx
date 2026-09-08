@@ -5,11 +5,9 @@ import Link from 'next/link';
 import {
   Sparkles,
   ShieldCheck,
-  CheckCircle2,
   DollarSign,
   TrendingUp,
   Clock,
-  Phone,
   ArrowRight,
   Loader2,
   Check,
@@ -19,7 +17,6 @@ import {
   Layers,
   FileCheck2,
   Scale,
-  Users,
   AlertTriangle,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -30,7 +27,7 @@ export default function MedicareAdvantageLandingClient() {
   const [monthlyEncounters, setMonthlyEncounters] = useState<number>(650);
   const [crossoverDropRate, setCrossoverDropRate] = useState<number>(14); // 14% unadjudicated crossover claims
   const [avgSecondaryBalance, setAvgSecondaryBalance] = useState<number>(65); // $65 average secondary coinsurance
-  const [maPatientPct, setMaPatientPct] = useState<number>(45); // 45% MA / D-SNP panel
+  const [maPatientPct] = useState<number>(45); // 45% MA / D-SNP panel
 
   // Form state
   const [contactName, setContactName] = useState('');

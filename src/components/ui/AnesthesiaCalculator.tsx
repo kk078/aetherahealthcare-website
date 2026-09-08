@@ -1,20 +1,12 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import Link from 'next/link';
 import {
   Calculator,
-  Clock,
   ShieldAlert,
   CheckCircle2,
   AlertTriangle,
   Printer,
-  Sparkles,
-  ArrowRight,
-  HelpCircle,
-  FileSpreadsheet,
-  Activity,
-  Award,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
@@ -137,14 +129,6 @@ export default function AnesthesiaCalculator() {
     return baseUnits + timeUnits + physicalStatusUnits + qualifyingCircumstanceUnits;
   }, [baseUnits, timeUnits, physicalStatusUnits, qualifyingCircumstanceUnits]);
 
-  // Direction splits
-  const directionMultiplier = useMemo(() => {
-    if (concurrentSuites > 4) {
-      return 0.5; // Dropped to Medical Supervision penalty
-    }
-    return 1.0;
-  }, [concurrentSuites]);
-
   // Total Reimbursements
   const grossMedicareAllowed = totalUnits * medicareCf;
   const grossCommercialAllowed = totalUnits * commercialCf;
@@ -160,7 +144,7 @@ export default function AnesthesiaCalculator() {
   const handleLeadSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!leadEmail) return;
-    await sendLeadToKiran('anesthesia_calculator_audit', {
+    if (!(await sendLeadToKiran('anesthesia_calculator_audit', {
       practiceName: leadPractice,
       email: leadEmail,
       baseUnits,
@@ -170,7 +154,7 @@ export default function AnesthesiaCalculator() {
       directionModel,
       totalUnits,
       expectedCommercial: grossCommercialAllowed,
-    });
+    }))) {  return; }
     setLeadSent(true);
   };
 

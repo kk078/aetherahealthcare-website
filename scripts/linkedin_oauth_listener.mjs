@@ -3,7 +3,7 @@
  * One-click OAuth 2.0 Token Listener for LinkedIn
  */
 import http from 'node:http';
-import { readFile, writeFile } from 'node:fs/promises';
+import { writeFile } from 'node:fs/promises';
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';

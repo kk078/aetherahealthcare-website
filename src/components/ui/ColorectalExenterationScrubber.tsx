@@ -2,7 +2,6 @@
 
 import React, { useState, useMemo } from 'react';
 import {
-  Activity,
   AlertTriangle,
   CheckCircle2,
   Copy,
@@ -14,9 +13,7 @@ import {
   Zap,
   Info,
   Layers,
-  Sparkles,
   Scissors,
-  Eye,
   GitBranch,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -439,7 +436,7 @@ export default function ColorectalExenterationScrubber() {
     };
 
     try {
-      await sendLeadToKiran('colorectal_surgery_rcm_audit', payload);
+      if (!(await sendLeadToKiran('colorectal_surgery_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('colorectal_rcm_audit_submit');
       setLeadSuccess(true);
       setTimeout(() => {
@@ -499,7 +496,7 @@ export default function ColorectalExenterationScrubber() {
                     <button
                       key={res.id}
                       type="button"
-                      onClick={() => setResectionType(res.id as any)}
+                      onClick={() => setResectionType(res.id as typeof resectionType)}
                       className={`text-left p-3 rounded-lg border transition-all ${
                         resectionType === res.id
                           ? 'border-teal-600 bg-teal-50/70 text-navy ring-1 ring-teal-500'
@@ -560,7 +557,7 @@ export default function ColorectalExenterationScrubber() {
                     <button
                       key={stoma.id}
                       type="button"
-                      onClick={() => setStomaType(stoma.id as any)}
+                      onClick={() => setStomaType(stoma.id as typeof stomaType)}
                       className={`p-2.5 rounded-lg border text-left text-xs transition-all ${
                         stomaType === stoma.id
                           ? 'border-teal-600 bg-teal-50 text-navy font-semibold ring-1 ring-teal-500'
@@ -634,7 +631,7 @@ export default function ColorectalExenterationScrubber() {
                     <button
                       key={co.id}
                       type="button"
-                      onClick={() => setCoSurgeonMode(co.id as any)}
+                      onClick={() => setCoSurgeonMode(co.id as typeof coSurgeonMode)}
                       className={`p-2.5 rounded-lg border text-left text-xs transition-all ${
                         coSurgeonMode === co.id
                           ? 'border-teal-600 bg-teal-50 text-navy font-semibold ring-1 ring-teal-500'
@@ -655,7 +652,7 @@ export default function ColorectalExenterationScrubber() {
                   </label>
                   <select
                     value={surgicalApproach}
-                    onChange={(e) => setSurgicalApproach(e.target.value as any)}
+                    onChange={(e) => setSurgicalApproach(e.target.value as typeof surgicalApproach)}
                     className="w-full text-xs font-medium bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-slate-800 focus:ring-1 focus:ring-teal-500"
                   >
                     <option value="open_planned">Planned Open Laparotomy</option>
@@ -670,7 +667,7 @@ export default function ColorectalExenterationScrubber() {
                   </label>
                   <select
                     value={ureteralStenting}
-                    onChange={(e) => setUreteralStenting(e.target.value as any)}
+                    onChange={(e) => setUreteralStenting(e.target.value as typeof ureteralStenting)}
                     className="w-full text-xs font-medium bg-slate-50 border border-slate-200 rounded-lg p-2.5 text-slate-800 focus:ring-1 focus:ring-teal-500"
                   >
                     <option value="separate_urologist">Placed & Billed by Attending Urologist</option>

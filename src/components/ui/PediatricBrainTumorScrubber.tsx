@@ -14,10 +14,6 @@ import {
   Zap,
   Info,
   Layers,
-  Sparkles,
-  Scissors,
-  Eye,
-  GitBranch,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -313,17 +309,7 @@ export default function PediatricBrainTumorScrubber() {
       expectedReimbursement: Number(expectedReimbursement.toFixed(2)),
       penaltyAtRisk: Number(penaltyAtRisk.toFixed(2)),
     };
-  }, [
-    resectionType,
-    simulateDowncode,
-    ionmMode,
-    ionmTimeUnits,
-    ionmIndependentNpi,
-    ionmSupervisionCompliant,
-    csfDiversion,
-    includeNeuronavigation,
-    includeCusa,
-  ]);
+  }, [resectionType, simulateDowncode, ionmMode, ionmTimeUnits, ionmIndependentNpi, ionmSupervisionCompliant, csfDiversion, includeNeuronavigation]);
 
   // ANSI X12 837P Claim Snippet
   const ansi837Snippet = useMemo(() => {
@@ -379,7 +365,7 @@ export default function PediatricBrainTumorScrubber() {
     };
 
     try {
-      await sendLeadToKiran('pediatric_brain_tumor_rcm_audit', payload);
+      if (!(await sendLeadToKiran('pediatric_brain_tumor_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('pediatric_neuro_rcm_audit_submit');
       setLeadSuccess(true);
       setTimeout(() => {
@@ -437,7 +423,7 @@ export default function PediatricBrainTumorScrubber() {
                     <button
                       key={res.id}
                       type="button"
-                      onClick={() => setResectionType(res.id as any)}
+                      onClick={() => setResectionType(res.id as typeof resectionType)}
                       className={`text-left p-3 rounded-lg border transition-all ${
                         resectionType === res.id
                           ? 'border-indigo-600 bg-indigo-50/70 text-navy ring-1 ring-indigo-500'
@@ -498,7 +484,7 @@ export default function PediatricBrainTumorScrubber() {
                     <button
                       key={m.id}
                       type="button"
-                      onClick={() => setIonmMode(m.id as any)}
+                      onClick={() => setIonmMode(m.id as typeof ionmMode)}
                       className={`p-2.5 rounded-lg border text-left text-xs transition-all ${
                         ionmMode === m.id
                           ? 'border-indigo-600 bg-indigo-50 text-navy font-semibold ring-1 ring-indigo-500'
@@ -594,7 +580,7 @@ export default function PediatricBrainTumorScrubber() {
                     <button
                       key={csf.id}
                       type="button"
-                      onClick={() => setCsfDiversion(csf.id as any)}
+                      onClick={() => setCsfDiversion(csf.id as typeof csfDiversion)}
                       className={`p-2.5 rounded-lg border text-left text-xs transition-all ${
                         csfDiversion === csf.id
                           ? 'border-indigo-600 bg-indigo-50 text-navy font-semibold ring-1 ring-indigo-500'
@@ -905,7 +891,7 @@ export default function PediatricBrainTumorScrubber() {
                     )}
                   </button>
                   <p className="text-[10px] text-slate-400 text-center mt-2">
-                    Zero-PHI compliance. Protected by Aethera's enterprise data governance standard.
+                    Zero-PHI compliance. Protected by Aethera&apos;s enterprise data governance standard.
                   </p>
                 </div>
               </form>

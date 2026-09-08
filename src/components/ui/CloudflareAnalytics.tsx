@@ -1,3 +1,5 @@
+import { safeTrackingId } from '@/lib/trackingConfig';
+import Script from 'next/script';
 /**
  * Cloudflare Web Analytics beacon.
  *
@@ -6,22 +8,19 @@
  * time for the static export). With no token set it renders nothing, so this is
  * safe to ship before the token exists.
  *
- * Two ways to turn analytics on:
- *   1. Code path (this component): set NEXT_PUBLIC_CF_BEACON_TOKEN in
- *      .env.production (and Cloudflare Pages env vars), then rebuild/deploy.
- *   2. Dashboard path (no code, no token needed): Cloudflare dashboard →
- *      Analytics & Logs → Web Analytics → enable "Automatic setup" for
- *      aetherahealthcare.com. If you use this path, leave the token unset.
+ * Set NEXT_PUBLIC_CF_BEACON_TOKEN at build time. AnalyticsGate mounts this
+ * component only after consent. Disable dashboard automatic injection and
+ * zone-level tag injection, which would bypass the consent gate.
  *
  * Get a token: Cloudflare dashboard → Web Analytics → Add a site →
  * aetherahealthcare.com → copy the value from the `data-cf-beacon` snippet.
  */
 export default function CloudflareAnalytics() {
-  const token = process.env.NEXT_PUBLIC_CF_BEACON_TOKEN;
+  const token = safeTrackingId(process.env.NEXT_PUBLIC_CF_BEACON_TOKEN);
   if (!token) return null;
 
   return (
-    <script
+    <Script id="aethera-cloudflareanalytics-1" strategy="afterInteractive"
       defer
       src="https://static.cloudflareinsights.com/beacon.min.js"
       data-cf-beacon={`{"token": "${token}"}`}

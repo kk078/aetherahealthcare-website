@@ -1,11 +1,13 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import PayerDirectory from '@/components/ui/PayerDirectory';
 import { getAllPayers, payerTypes, payersMeta } from '@/lib/payers';
-import { AlertTriangle, ShieldCheck, Sparkles, Building2, CheckCircle2, ArrowRight } from 'lucide-react';
+import { AlertTriangle, ShieldCheck, Sparkles } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/payers/directory') },
   title: { absolute: '10,600+ Payer Directory & Clearinghouse EDI Routing | Aethera Healthcare Solutions' },
   description:
     'Comprehensive U.S. insurance payer directory and clearinghouse EDI routing guide. Look up 10,600+ electronic payer IDs, par statuses, pre-enrollment rules, 835 ERA remittance support, and real-time 270/271 eligibility.',

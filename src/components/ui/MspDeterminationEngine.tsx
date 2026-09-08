@@ -3,19 +3,12 @@
 import React, { useState, useMemo } from 'react';
 import {
   Scale,
-  Calculator,
-  ShieldCheck,
   AlertTriangle,
-  FileCheck2,
   Copy,
   Check,
-  Send,
   Loader2,
   ArrowRight,
   Sparkles,
-  Info,
-  DollarSign,
-  HelpCircle,
   FileCode,
   CheckCircle2,
 } from 'lucide-react';
@@ -34,16 +27,16 @@ export default function MspDeterminationEngine() {
   const [hasEgphCoverage, setHasEgphCoverage] = useState<boolean>(true);
 
   // Disability specifics
-  const [isSsdi, setIsSsdi] = useState<boolean>(false);
+  const [isSsdi] = useState<boolean>(false);
 
   // ESRD specifics
-  const [hasEsrd, setHasEsrd] = useState<boolean>(false);
+  const [hasEsrd] = useState<boolean>(false);
   const [dialysisMonths, setDialysisMonths] = useState<number>(14);
 
   // Injury specifics
-  const [isWorkRelated, setIsWorkRelated] = useState<boolean>(false);
-  const [isAutoAccident, setIsAutoAccident] = useState<boolean>(false);
-  const [isLiabilityTort, setIsLiabilityTort] = useState<boolean>(false);
+  const [isWorkRelated] = useState<boolean>(false);
+  const [isAutoAccident] = useState<boolean>(false);
+  const [isLiabilityTort] = useState<boolean>(false);
 
   // UI state
   const [copied, setCopied] = useState<boolean>(false);
@@ -270,7 +263,7 @@ AETHERA MSP DEFENSE:
     setLeadLoading(true);
 
     try {
-      await sendLeadToKiran('msp_determination_audit_request', {
+      if (!(await sendLeadToKiran('msp_determination_audit_request', {
         source: 'MSP Determination Engine & Questionnaire Tool',
         name: leadName || 'Billing Compliance Director',
         email: leadEmail,
@@ -281,7 +274,7 @@ Scenario: ${scenario}
 Determined Primary: ${determination.primaryPayer}
 MSP Type: ${determination.mspType} (${determination.typeLabel})
 Statutory Citation: ${determination.statutoryCitation}`,
-      });
+      }))) {  return; }
       setLeadSubmitted(true);
     } catch {
       setLeadSubmitted(true);
@@ -447,7 +440,7 @@ Statutory Citation: ${determination.statutoryCitation}`,
                           <button
                             key={opt.id}
                             type="button"
-                            onClick={() => setEmployerSize(opt.id as any)}
+                            onClick={() => setEmployerSize(opt.id as typeof employerSize)}
                             className={`p-2.5 rounded-xl border text-xs font-bold ${
                               employerSize === opt.id
                                 ? 'bg-navy text-white border-navy'

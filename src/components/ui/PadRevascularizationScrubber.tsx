@@ -11,10 +11,6 @@ import {
   Loader2,
   FileCode,
   ShieldCheck,
-  Zap,
-  Info,
-  Layers,
-  Sparkles,
   GitBranch,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -95,7 +91,7 @@ export default function PadRevascularizationScrubber() {
   const [billsSeparateAngioplastyInSameVessel, setBillsSeparateAngioplastyInSameVessel] = useState<boolean>(false);
   const [billsSelectiveCatheterPlacement, setBillsSelectiveCatheterPlacement] = useState<boolean>(true); // CPT 36247
   const [billsDiagnosticAngiography, setBillsDiagnosticAngiography] = useState<boolean>(true); // CPT 75710
-  const [diagAngioMeetsExemption, setDiagAngioMeetsExemption] = useState<boolean>(true); // Mod 59/XU defensible
+  const [diagAngioMeetsExemption] = useState<boolean>(true); // Mod 59/XU defensible
   const [includesIvus, setIncludesIvus] = useState<boolean>(true); // CPT 37252
 
   // Lead Form
@@ -226,7 +222,7 @@ IEA*1*000000001~`;
     };
 
     try {
-      await sendLeadToKiran('pad_revascularization_scrubber_audit', payload);
+      if (!(await sendLeadToKiran('pad_revascularization_scrubber_audit', payload))) { setSubmitting(false); return; }
       trackConversion('assessment', calculations.totalAllowed);
       setSubmitted(true);
     } catch (err) {

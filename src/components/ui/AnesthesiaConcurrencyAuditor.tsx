@@ -3,20 +3,14 @@
 import React, { useState, useMemo } from 'react';
 import {
   Activity,
-  AlertTriangle,
   CheckCircle2,
   Copy,
   Check,
-  Send,
   Loader2,
   FileCode,
   Sparkles,
-  Info,
-  DollarSign,
   ShieldCheck,
   ArrowRight,
-  HelpCircle,
-  Clock,
   Layers,
   FileText,
   AlertOctagon,
@@ -53,7 +47,6 @@ export default function AnesthesiaConcurrencyAuditor() {
   const auditResult = useMemo(() => {
     // Broken concurrency if > 4 rooms or TEFRA not met
     const exceedsRatio = concurrentRooms > 4;
-    const isDirectionBroken = exceedsRatio || !tefraCompliant;
 
     if (concurrentRooms === 1 && tefraCompliant) {
       const mdPayment = Math.round(fullCaseAllowable * 0.5);

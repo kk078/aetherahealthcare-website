@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 /**
  * CRM ingest + forms-worker availability tests (read-only).
@@ -8,6 +8,8 @@ import { test, expect } from '@playwright/test';
  * they verify the hosts are alive and that CORS preflight would let browser
  * form submissions succeed, without creating junk leads on every CI run.
  */
+
+test.beforeEach(() => { test.skip(!process.env.E2E_PRODUCTION_CHECKS, 'Production API checks are explicitly opt-in.'); });
 
 const CRM_CONTACT = 'https://aethera-crm-api.aetherahealthcare.workers.dev/api/v1/public/website/contact';
 const FORMS_WORKER = 'https://aethera-forms.aetherahealthcare.workers.dev';

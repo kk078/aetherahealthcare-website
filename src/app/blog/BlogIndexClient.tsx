@@ -10,9 +10,9 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import { submitToWorker } from '@/lib/worker';
-import { POSTS } from '@/lib/blogPosts';
+import type { BlogPost } from '@/lib/blogPosts';
 
-const blogPosts = POSTS;
+type PostSummary = Omit<BlogPost, 'sections'>;
 
 const CAT_COLOR: Record<string, string> = {
   'Denials & Appeals': '#ef4444', 'Revenue Cycle': '#0ea5a4', 'Practice Management': '#0f2a43',
@@ -33,13 +33,13 @@ const PULSE = [
   { icon: <TrendingDown className="h-5 w-5" />, stat: '60%+', label: 'of denials are never reworked or appealed' },
 ];
 
-export default function BlogIndexClient() {
+export default function BlogIndexClient({ blogPosts }: { blogPosts: PostSummary[] }) {
   const [query, setQuery] = useState('');
   const [active, setActive] = useState('All');
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
-  const categories = useMemo(() => ['All', ...Array.from(new Set(blogPosts.map((p) => p.category)))], []);
+  const categories = useMemo(() => ['All', ...Array.from(new Set(blogPosts.map((p) => p.category)))], [blogPosts]);
   const featured = blogPosts[0];
 
   const filtered = useMemo(() => {
@@ -49,7 +49,7 @@ export default function BlogIndexClient() {
       const inQ = !q || p.title.toLowerCase().includes(q) || p.excerpt.toLowerCase().includes(q) || p.category.toLowerCase().includes(q);
       return inCat && inQ;
     });
-  }, [query, active]);
+  }, [query, active, blogPosts]);
 
   const gridPosts = active === 'All' && !query.trim() ? filtered.filter((p) => p.slug !== featured.slug) : filtered;
 

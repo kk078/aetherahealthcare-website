@@ -5,16 +5,11 @@ import {
   Scale,
   Search,
   CheckCircle2,
-  AlertCircle,
-  FileText,
   Copy,
   Check,
   Send,
   Loader2,
   ExternalLink,
-  DollarSign,
-  Calendar,
-  Sparkles,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
@@ -199,7 +194,7 @@ export default function PromptPayMatrix() {
   // Calculator inputs
   const [claimAmount, setClaimAmount] = useState<number>(3200);
   const [daysPastReceipt, setDaysPastReceipt] = useState<number>(75);
-  const [payerName, setPayerName] = useState('UnitedHealthcare / Commercial PPO');
+  const [payerName] = useState('UnitedHealthcare / Commercial PPO');
   const [copiedLetter, setCopiedLetter] = useState(false);
 
   // Lead form

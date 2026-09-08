@@ -1,13 +1,5 @@
-/**
- * Agentic AI Client for Aethera Healthcare Solutions.
- *
- * Multi-tier intelligent architecture:
- * 1. Direct LLM REST API (when NEXT_PUBLIC_AI_API_KEY is configured)
- * 2. Cloudflare Worker Assistant proxy (https://aethera-forms.aetherahealthcare.workers.dev/api/assistant)
- * 3. Grounded Deterministic RCM Knowledge Engine (instant lookup across 10,600+ clearinghouse payers, 229 curated playbooks, and CARC/RARC denial codes)
- *
- * Also extracts structured agentic actions (denial resolution, timely filing, ROI recovery, and human escalation to Kiran).
- */
+/** Same-origin assistant proxy with a local educational reference fallback. */
+import { mentionsEntity } from './entityMatch';
 
 import { DENIAL_CODES } from '@/lib/denialCodes';
 import { getAllPayers } from '@/lib/payers';
@@ -26,27 +18,7 @@ export interface AssistantMessage {
   timestamp: string;
 }
 
-const FORMS_URL = process.env.NEXT_PUBLIC_FORMS_URL || 'https://aethera-forms.aetherahealthcare.workers.dev';
-const API_KEY = process.env.NEXT_PUBLIC_AI_API_KEY || '';
 
-const SYSTEM_PROMPT = `You are Aethera's Senior AI Revenue Cycle & Practice Management Specialist, pairing with Kiran and the senior billing leadership team at Aethera Healthcare Solutions.
-
-Your mission:
-Provide authoritative, actionable, and clinically grounded medical billing guidance for US physicians, hospitalists, clinic owners, and practice managers.
-
-Key Aethera Facts:
-- Core Services: Full-service Revenue Cycle Management (RCM), credentialing, charge capture & scrubbing, certified coding (AAPC/AHIMA), EDI 837 claim submission, 835 ERA auto-posting, denial recovery & appeals, patient billing & statements, monthly KPI analytics.
-- Pricing: Performance-based, transparent fee between 3.5% and 5.0% of net collections based on monthly volume and specialty. Zero upfront setup fee, zero onboarding fee, no long-term restrictive contracts.
-- Performance: 98.7% first-pass clean claim rate, average 15-20% revenue collection lift, Days in A/R under 32 days (industry average is 45-50+ days).
-- Direct Senior Partner: Kiran and the senior billing team review every practice profile directly.
-- Direct Contact & Meetings: Connect via our online email request form at /contact or schedule a consultation directly at /schedule.
-
-Guidance Rules:
-- NEVER provide, cite, or invent any telephone numbers under any circumstances. Aethera does not operate an inbound phone line. Direct all users strictly to /contact, /schedule, or /free-assessment.
-- If asked about denial codes (e.g., CO-45, PR-204, CO-16, CO-18, CO-97), explain the CARC/RARC root cause, difference between contractual adjustment and patient balance, and step-by-step appeal/resubmission strategy.
-- If asked about timely filing limits, quote standard payer rules (e.g. Medicare 365 days, Texas Medicaid 95 days, UHC/Aetna/Cigna 90 days commercial) and mention proving timely filing via 277CA / 999 EDI confirmations.
-- Always offer escalation to Kiran via /contact or scheduling a meeting at /schedule, or booking a free practice assessment at /free-assessment for a deep audit of their specific billing claims and aging A/R.
-- Be concise, professional, empathetic, and organized with clear bullet points.`;
 
 /**
  * Scan message text for RCM entities to synthesize agentic action cards.
@@ -84,7 +56,7 @@ export function extractAgentActions(userPrompt: string, assistantResponse: strin
   const mentionedPayer = payers.find(p => {
     const pName = p.name.toLowerCase();
     const pSlug = p.slug.toLowerCase();
-    return text.includes(pName) || text.includes(pSlug) || (p.aka && p.aka.some(a => text.includes(a.toLowerCase())));
+    return mentionsEntity(userPrompt, pName) || mentionsEntity(userPrompt, pSlug) || (p.aka && p.aka.some(a => mentionsEntity(userPrompt, a)));
   });
 
   if (mentionedPayer && (text.includes('timely') || text.includes('filing') || text.includes('deadline') || text.includes('payer id'))) {
@@ -213,7 +185,7 @@ Would you like Kiran and our senior billing team to audit your practice's recent
 
   // Check specific denial codes
   for (const d of DENIAL_CODES) {
-    if (q.includes(d.code) || d.aliases.some(a => q.includes(a.toLowerCase()))) {
+    if (new RegExp(`\\b(?:co|pr|oa)?[- ]?${d.code}\\b`, 'i').test(q) || d.aliases.some(a => q === a.toLowerCase())) {
       return `### Denial Code CARC ${d.code}: ${d.label}
 **Category:** ${d.category} (${d.difficulty.toUpperCase()})
 
@@ -235,7 +207,7 @@ Would you like Kiran and our senior billing team to audit your practice's recent
   // Check payers
   const payers = getAllPayers();
   for (const p of payers) {
-    if (q.includes(p.slug.toLowerCase()) || q.includes(p.name.toLowerCase()) || (p.aka && p.aka.some(a => q.includes(a.toLowerCase())))) {
+    if (mentionsEntity(q, p.slug) || mentionsEntity(q, p.name) || (p.aka && p.aka.some(a => mentionsEntity(q, a)))) {
       return `### Payer Profile: ${p.name}
 - **Payer ID:** ${p.payerId || 'Varies by state plan (confirm on member ID card)'}
 - **Timely Filing Limit:** ${p.timelyFiling || 'Typically 90 to 365 days from date of service depending on participating provider agreement.'}
@@ -243,7 +215,7 @@ Would you like Kiran and our senior billing team to audit your practice's recent
 - **Clearinghouse EDI:** ${p.clearinghouse || 'Direct Availity / Waystar / Change Healthcare connection'}
 ${p.portalUrl ? `- **Provider Portal:** ${p.portalUrl}` : ''}
 
-*Aethera Healthcare maintains direct electronic claim pipelines with ${p.name} for sub-second verification and clean claims submission.*`;
+*Educational directory reference. Confirm the member plan, current contract and payer policy before using any deadline or routing identifier.*`;
     }
   }
 
@@ -322,48 +294,10 @@ export async function askAiAgent(
     return { text: sanitized, actions };
   }
 
-  // 2. If API key is available, query direct REST API (Gemini)
-  if (API_KEY) {
-    try {
-      const contents = [
-        ...history.slice(-6).map(h => ({
-          role: h.role === 'assistant' ? 'model' : 'user',
-          parts: [{ text: h.content }],
-        })),
-        { role: 'user', parts: [{ text: cleanPrompt }] },
-      ];
-
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
-      const res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-          contents,
-          generationConfig: {
-            temperature: 0.3,
-            maxOutputTokens: 1000,
-          },
-        }),
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        const candidate = data.candidates?.[0]?.content?.parts?.[0]?.text;
-        if (candidate) {
-          const sanitized = eradicatePhoneNumbers(candidate);
-          const actions = extractAgentActions(cleanPrompt, sanitized);
-          return { text: sanitized, actions };
-        }
-      }
-    } catch {
-      // Fall through to forms worker proxy
-    }
-  }
-
   // 3. Query Cloudflare Forms Worker Assistant Endpoint (with mandatory phone eradication)
   try {
-    const workerRes = await fetch(`${FORMS_URL}/api/assistant`, {
+    const workerRes = await fetch('/api/assistant', {
+      signal: AbortSignal.timeout(15000),
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

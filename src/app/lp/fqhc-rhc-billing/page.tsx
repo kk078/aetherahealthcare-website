@@ -1,18 +1,17 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Calendar, Building2, ShieldCheck } from 'lucide-react';
+import { Calendar, ShieldCheck } from 'lucide-react';
 import FqhcRhcLandingClient from '@/components/ui/FqhcRhcLandingClient';
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl('/lp/fqhc-rhc-billing') },
+  robots: { index: false, follow: true },
   title: {
     absolute: 'FQHC & Rural Health Clinic RCM Services | PPS Rate & Wrap Recovery | Aethera',
   },
   description:
     'Comprehensive revenue cycle management for Federally Qualified Health Centers (FQHCs) and Rural Health Clinics (RHCs). Capture unbilled same-day behavioral health visits and eliminate Medicaid wrap delays.',
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function FqhcRhcBillingPage() {

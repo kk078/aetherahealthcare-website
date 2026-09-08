@@ -62,7 +62,7 @@ export default function ROICalculator() {
     e.preventDefault();
     if (!email || leadStatus === 'sending') return;
     setLeadStatus('sending');
-    await submitToWorker('calculator_lead', {
+    if (!(await submitToWorker('calculator_lead', {
       email,
       specialty,
       claimVolume: String(volume),
@@ -70,7 +70,7 @@ export default function ROICalculator() {
         `Revenue calculator lead — ${specialty}, ${fmtNum(volume)} claims/mo at ${fmt(avgClaim)} avg, ` +
         `denial ${denialRate}%, clean ${cleanRate}%. Est. net annual gain ${fmt(results.netAnnualGain)} ` +
         `(ROI ${Math.round(results.roi)}%). Requested full projection + denial-leakage breakdown.`,
-    });
+    }))) {  return; }
     trackConversion('calculator');
     setLeadStatus('sent');
   }

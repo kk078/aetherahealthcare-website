@@ -1,4 +1,5 @@
 'use client';
+import AccessibleDialog from './AccessibleDialog';
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -65,12 +66,7 @@ export default function ExitIntentCTA() {
   };
 
   return (
-    <div
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-navy/60 backdrop-blur-sm p-4 animate-in fade-in duration-200"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Free assessment offer"
-      onClick={close}
+    <AccessibleDialog open={show} onClose={close} title="Free assessment offer" className="fixed inset-0 z-[100] flex items-center justify-center p-4"
     >
       <div
         className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200"
@@ -146,6 +142,6 @@ export default function ExitIntentCTA() {
           </>
         )}
       </div>
-    </div>
+    </AccessibleDialog>
   );
 }

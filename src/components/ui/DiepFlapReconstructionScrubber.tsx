@@ -6,17 +6,10 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
-  Activity,
   Send,
   Sparkles,
-  HelpCircle,
-  Scissors,
-  Layers,
   Copy,
   Sliders,
-  Flame,
-  Eye,
   Microscope,
   Scale,
 } from 'lucide-react';
@@ -224,7 +217,7 @@ export default function DiepFlapReconstructionScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('diep_flap_reconstruction_scrubber', {
+      if (!(await sendLeadToKiran('diep_flap_reconstruction_scrubber', {
         contactName,
         contactEmail,
         contactPractice,
@@ -238,7 +231,7 @@ export default function DiepFlapReconstructionScrubber() {
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
         totalRvu: auditResult.totalRvu,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Lead submission error:', err);
@@ -274,7 +267,7 @@ export default function DiepFlapReconstructionScrubber() {
             </label>
             <select
               value={laterality}
-              onChange={(e) => setLaterality(e.target.value as any)}
+              onChange={(e) => setLaterality(e.target.value as typeof laterality)}
               className="w-full bg-white border border-gray/20 rounded-lg px-3 py-2 text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal font-medium"
             >
               <option value="bilateral">Bilateral Autologous DIEP Free Flaps (19364-50)</option>

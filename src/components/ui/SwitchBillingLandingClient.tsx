@@ -3,10 +3,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import {
-  Sparkles,
   ShieldCheck,
   CheckCircle2,
-  DollarSign,
   TrendingUp,
   Clock,
   Calendar,
@@ -14,12 +12,9 @@ import {
   Loader2,
   Check,
   AlertCircle,
-  Building2,
   Lock,
   RefreshCw,
   Zap,
-  Layers,
-  ArrowDownRight,
   Scale,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -236,7 +231,7 @@ export default function SwitchBillingLandingClient() {
                   <select
                     id="biller-type"
                     value={currentBillerType}
-                    onChange={(e) => setCurrentBillerType(e.target.value as any)}
+                    onChange={(e) => setCurrentBillerType(e.target.value as typeof currentBillerType)}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-200 text-sm focus:outline-none focus:border-teal"
                   >
                     <option value="offshore">Generic Offshore BPO / Agency (High backlog, low communication)</option>

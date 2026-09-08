@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Users, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -78,6 +79,7 @@ const relatedServices = [
 ];
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services/credentialing') },
   title: "Provider Credentialing & Payer Enrollment",
   description: "End-to-end provider credentialing and payer enrollment — CAQH, revalidations, and re-credentialing handled so your providers get in-network and stay paid. Aethera credentialing.",
 };

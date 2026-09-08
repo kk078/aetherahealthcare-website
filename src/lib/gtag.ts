@@ -1,3 +1,4 @@
+import { getConsent } from './consent';
 /**
  * Google Analytics 4 & Google Ads conversion tracking helpers.
  *
@@ -28,8 +29,8 @@ export type ConversionKind = keyof typeof GADS_LABELS;
 const GA4_EVENT_MAP: Record<ConversionKind, string> = {
   assessment: 'generate_lead',
   contact: 'contact_submit',
-  meeting: 'schedule_appointment',
-  booking: 'schedule_appointment',
+  meeting: 'meeting_request',
+  booking: 'calendar_open',
   calculator: 'use_calculator',
   pilot: 'request_pilot',
 };
@@ -39,13 +40,14 @@ const GA4_EVENT_MAP: Record<ConversionKind, string> = {
  * Safe to call anywhere; it no-ops on the server or if gtag hasn't loaded.
  */
 export function trackConversion(kind: ConversionKind, value?: number): void {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || getConsent() !== 'accepted') return;
   const w = window as unknown as { gtag?: (...args: unknown[]) => void };
   if (typeof w.gtag !== 'function') return;
 
   // 1. Google Ads Conversion Event
   const adsLabel = GADS_LABELS[kind];
-  if (GADS_ID && adsLabel) {
+  // Opening an external calendar is engagement, not a confirmed lead or booking.
+  if (kind !== 'booking' && GADS_ID && adsLabel) {
     w.gtag('event', 'conversion', {
       send_to: `${GADS_ID}/${adsLabel}`,
       ...(value != null ? { value, currency: 'USD' } : {}),
@@ -65,9 +67,8 @@ export function trackConversion(kind: ConversionKind, value?: number): void {
  * Dispatch custom events to Google Analytics 4.
  */
 export function trackCustomEvent(eventName: string, params?: Record<string, unknown>): void {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || getConsent() !== 'accepted') return;
   const w = window as unknown as { gtag?: (...args: unknown[]) => void };
   if (typeof w.gtag !== 'function') return;
   w.gtag('event', eventName, params);
 }
-

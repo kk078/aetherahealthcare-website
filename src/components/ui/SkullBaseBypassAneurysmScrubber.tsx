@@ -4,20 +4,14 @@ import React, { useState, useMemo } from 'react';
 import {
   ShieldAlert,
   CheckCircle2,
-  AlertTriangle,
   FileText,
-  DollarSign,
-  Activity,
   Send,
   Sparkles,
-  HelpCircle,
   Brain,
-  ChevronRight,
   Layers,
   Copy,
   GitBranch,
 } from 'lucide-react';
-import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 import { sendLeadToKiran } from '@/lib/worker';
 
 interface LineItem {
@@ -185,7 +179,7 @@ export default function SkullBaseBypassAneurysmScrubber() {
       atRiskValue,
       cleanAllowed: grossValue,
     };
-  }, [pathologyType, bypassType, approachType, useMicroscope, useGraftHarvest, dualSurgeonMod62, includeFlowmetry]);
+  }, [bypassType, approachType, useMicroscope, useGraftHarvest, dualSurgeonMod62, includeFlowmetry]);
 
   // Lead submission
   const handleSubmitLead = async (e: React.FormEvent) => {
@@ -194,7 +188,7 @@ export default function SkullBaseBypassAneurysmScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('skull_base_bypass_rcm_audit', {
+      if (!(await sendLeadToKiran('skull_base_bypass_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -206,7 +200,7 @@ export default function SkullBaseBypassAneurysmScrubber() {
         dualSurgeonMod62,
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Submission failed', err);
@@ -278,7 +272,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setPathologyType(item.id as any)}
+                    onClick={() => setPathologyType(item.id as typeof pathologyType)}
                     className={`p-2.5 rounded-xl border text-xs font-semibold transition-all ${
                       pathologyType === item.id
                         ? 'border-teal bg-teal/10 text-teal'
@@ -305,7 +299,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setBypassType(item.id as any)}
+                    onClick={() => setBypassType(item.id as typeof bypassType)}
                     className={`p-2.5 rounded-xl border text-xs font-semibold transition-all ${
                       bypassType === item.id
                         ? 'border-teal bg-teal/10 text-teal'
@@ -332,7 +326,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setApproachType(item.id as any)}
+                    onClick={() => setApproachType(item.id as typeof approachType)}
                     className={`w-full p-2.5 rounded-xl border text-xs font-semibold transition-all text-left ${
                       approachType === item.id
                         ? item.id === 'standard_craniotomy'

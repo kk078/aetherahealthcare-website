@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -35,6 +36,7 @@ const terms = [
 ];
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/compliance/terms-of-service') },
   title: "Terms of Service",
   description: "The terms governing your use of the Aethera Healthcare Solutions website and medical billing services.",
 };

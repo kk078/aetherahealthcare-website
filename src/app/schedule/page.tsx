@@ -9,7 +9,7 @@ export const metadata = {
   title: 'Schedule a Meeting',
   description:
     'Book a time to talk with Aethera Healthcare Solutions about your medical billing and revenue cycle. Pick a slot that works for you — no obligation.',
-  alternates: { canonical: 'https://aetherahealthcare.com/schedule' },
+  alternates: { canonical: 'https://aetherahealthcare.com/schedule/' },
 };
 
 export default function SchedulePage() {

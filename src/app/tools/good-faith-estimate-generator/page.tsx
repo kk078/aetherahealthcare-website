@@ -1,10 +1,12 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import GoodFaithEstimateGenerator from '@/components/ui/GoodFaithEstimateGenerator';
-import { ShieldCheck, FileCheck, HelpCircle } from 'lucide-react';
+import { ShieldCheck, FileCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl('/tools/good-faith-estimate-generator') },
   title: 'Good Faith Estimate (GFE) Generator | CMS No Surprises Act Compliance',
   description:
     'Generate compliant CMS Good Faith Estimates (GFE) under 45 CFR § 149.610 for uninsured and self-pay patients. Itemize primary procedures, co-provider fees, and statutory dispute disclaimers.',

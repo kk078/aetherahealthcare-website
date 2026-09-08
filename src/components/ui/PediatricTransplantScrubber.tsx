@@ -9,16 +9,12 @@ import {
   Check,
   Send,
   Loader2,
-  FileCode,
   ShieldCheck,
   Zap,
   Info,
   Layers,
-  Sparkles,
   Scissors,
   Baby,
-  Eye,
-  GitBranch,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -382,7 +378,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
     };
 
     try {
-      await sendLeadToKiran('pediatric_transplant_rcm_audit', payload);
+      if (!(await sendLeadToKiran('pediatric_transplant_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('pediatric_transplant_rcm_audit_submit');
       setLeadSuccess(true);
       setTimeout(() => {
@@ -455,7 +451,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => setProcedureType(item.id as any)}
+                      onClick={() => setProcedureType(item.id as typeof procedureType)}
                       className={`text-left p-3.5 rounded-lg border transition-all ${
                         procedureType === item.id
                           ? 'border-emerald-600 bg-emerald-50/50 shadow-sm ring-1 ring-emerald-500'
@@ -543,7 +539,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setOrganAcquisitionMode(item.id as any)}
+                    onClick={() => setOrganAcquisitionMode(item.id as typeof organAcquisitionMode)}
                     className={`text-left p-3 rounded-lg border transition-all ${
                       organAcquisitionMode === item.id
                         ? 'border-emerald-600 bg-emerald-50 text-emerald-950 font-bold ring-1 ring-emerald-500'

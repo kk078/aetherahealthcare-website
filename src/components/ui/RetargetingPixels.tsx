@@ -1,8 +1,10 @@
+import { safeTrackingId } from '@/lib/trackingConfig';
+import Script from 'next/script';
 /**
  * B2B retargeting pixels — LinkedIn Insight Tag and Meta (Facebook) Pixel.
  *
  * Rendered once site-wide from the root layout, so the tags appear in the
- * static HTML of every page (emitted as real <script> tags so each network's
+ * static HTML of every page (emitted as real <Script id="aethera-retargetingpixels-1" strategy="afterInteractive"> tags so each network's
  * tag detector can see them). Each network is gated on its own env var and
  * no-ops safely when unset — safe to ship before the IDs exist.
  *
@@ -13,8 +15,8 @@
  * them), so it is safe to inline them once known.
  */
 export default function RetargetingPixels() {
-  const linkedInId = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID || '';
-  const metaId = process.env.NEXT_PUBLIC_META_PIXEL_ID || '';
+  const linkedInId = safeTrackingId(process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID || '');
+  const metaId = safeTrackingId(process.env.NEXT_PUBLIC_META_PIXEL_ID || '');
 
   if (!linkedInId && !metaId) return null;
 
@@ -23,7 +25,7 @@ export default function RetargetingPixels() {
       {/* ---- LinkedIn Insight Tag ---- */}
       {linkedInId && (
         <>
-          <script
+          <Script id="aethera-retargetingpixels-2" strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html:
                 `_linkedin_partner_id="${linkedInId}";` +
@@ -52,7 +54,7 @@ export default function RetargetingPixels() {
       {/* ---- Meta (Facebook) Pixel ---- */}
       {metaId && (
         <>
-          <script
+          <Script id="aethera-retargetingpixels-3" strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html:
                 `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?` +

@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { FileText, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -6,6 +7,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services/medical-coding') },
   title: "Medical Coding Services | ICD-10, CPT, HCPCS",
   description: "Expert medical coding services including ICD-10, C, and HCPCS coding for healthcare providers. Maximize reimbursement with accurate, compliant coding from certified professionals.",
 };

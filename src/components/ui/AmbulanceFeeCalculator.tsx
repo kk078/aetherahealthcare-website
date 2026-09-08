@@ -7,19 +7,9 @@ import {
   CheckCircle2,
   Copy,
   Check,
-  Send,
   Loader2,
   FileCode,
-  ShieldCheck,
-  Calculator,
   ChevronRight,
-  Info,
-  Layers,
-  FileText,
-  DollarSign,
-  Activity,
-  MapPin,
-  FileSignature,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -113,7 +103,7 @@ export default function AmbulanceFeeCalculator() {
   const [geographicZone, setGeographicZone] = useState<'urban' | 'rural' | 'super_rural'>('urban');
   const [originCode, setOriginCode] = useState<string>('S');
   const [destCode, setDestCode] = useState<string>('H');
-  const [patientWeightLb, setPatientWeightLb] = useState<number>(185);
+  const [patientWeightLb] = useState<number>(185);
 
   // Medical Necessity Checklist
   const [isBedConfined, setIsBedConfined] = useState<boolean>(true);
@@ -291,7 +281,7 @@ export default function AmbulanceFeeCalculator() {
               </label>
               <select
                 value={geographicZone}
-                onChange={(e) => setGeographicZone(e.target.value as any)}
+                onChange={(e) => setGeographicZone(e.target.value as typeof geographicZone)}
                 className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-teal-500"
               >
                 <option value="urban">Urban (Standard Mileage Rate $8.92)</option>

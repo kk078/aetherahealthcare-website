@@ -9,7 +9,7 @@ export const metadata = {
   title: { absolute: 'Compare Medical Billing Options | Aethera Healthcare Solutions' },
   description:
     'Honest comparisons to help you choose: outsourced vs. in-house medical billing, and how to evaluate a medical billing company before you switch.',
-  alternates: { canonical: 'https://aetherahealthcare.com/compare' },
+  alternates: { canonical: 'https://aetherahealthcare.com/compare/' },
 };
 
 const pages = [

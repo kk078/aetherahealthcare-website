@@ -8,10 +8,10 @@ import { GLOSSARY_TERMS } from '@/lib/glossaryData';
 import { ArrowRight, Wrench, ShieldCheck, FileSpreadsheet } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Healthcare RCM & Medical Billing Glossary | Aethera Healthcare Solutions',
+  title: { absolute: 'Healthcare RCM & Medical Billing Glossary | Aethera Healthcare Solutions' },
   description:
     'Authoritative clinical and financial dictionary for U.S. healthcare revenue cycle management. Master EDI 837/835 standards, NCCI PTP edits, CARC/RARC denial codes, and RVU benchmarks.',
-  alternates: { canonical: 'https://aetherahealthcare.com/glossary' },
+  alternates: { canonical: 'https://aetherahealthcare.com/glossary/' },
 };
 
 export default function GlossaryPage() {

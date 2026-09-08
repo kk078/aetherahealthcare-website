@@ -2,23 +2,18 @@
 
 import React, { useState, useMemo } from 'react';
 import {
-  Activity,
   AlertTriangle,
   CheckCircle2,
   Copy,
   Check,
   Send,
   Loader2,
-  FileCode,
-  ShieldCheck,
   Zap,
   Info,
   Layers,
-  Sparkles,
   Scissors,
   Bone,
   Eye,
-  GitBranch,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -391,7 +386,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
     };
 
     try {
-      await sendLeadToKiran('vcr_spine_rcm_audit', payload);
+      if (!(await sendLeadToKiran('vcr_spine_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('vcr_spine_rcm_audit_submit');
       setLeadSuccess(true);
       setTimeout(() => {
@@ -464,7 +459,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => setOsteotomyType(item.id as any)}
+                      onClick={() => setOsteotomyType(item.id as typeof osteotomyType)}
                       className={`text-left p-3.5 rounded-lg border transition-all ${
                         osteotomyType === item.id
                           ? 'border-indigo-600 bg-indigo-50/50 shadow-sm ring-1 ring-indigo-500'
@@ -561,7 +556,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
                     <button
                       key={span.id}
                       type="button"
-                      onClick={() => setInstrumentationLength(span.id as any)}
+                      onClick={() => setInstrumentationLength(span.id as typeof instrumentationLength)}
                       className={`p-2.5 rounded-lg border text-center transition-all ${
                         instrumentationLength === span.id
                           ? 'border-indigo-600 bg-indigo-50 text-indigo-950 font-bold ring-1 ring-indigo-500'
@@ -659,7 +654,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
                 <button
                   key={co.id}
                   type="button"
-                  onClick={() => setCoSurgeonMode(co.id as any)}
+                  onClick={() => setCoSurgeonMode(co.id as typeof coSurgeonMode)}
                   className={`p-3 text-left rounded-lg border transition-all ${
                     coSurgeonMode === co.id
                       ? 'border-indigo-600 bg-indigo-50 text-indigo-900 font-semibold ring-1 ring-indigo-500'

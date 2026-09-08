@@ -3,23 +3,16 @@
 import React, { useState, useMemo } from 'react';
 import {
   ShieldCheck,
-  FileCheck2,
   CheckCircle2,
   AlertTriangle,
   Copy,
   Check,
-  Send,
   Loader2,
   FileCode,
   Sparkles,
-  Info,
   MapPin,
-  Building2,
-  Stethoscope,
   Activity,
-  Award,
   ArrowRight,
-  HelpCircle,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -142,14 +135,14 @@ export default function DmeposValidator() {
   const [formError, setFormError] = useState('');
 
   // Determine Jurisdiction based on state
-  const jurisdictionInfo = useMemo(() => {
+  const jurisdictionInfo = (() => {
     for (const [key, val] of Object.entries(JURISDICTIONS)) {
       if (val.states.includes(selectedState)) {
         return { key, ...val };
       }
     }
     return { key: 'C', ...JURISDICTIONS.C };
-  }, [selectedState]);
+  })();
 
   const activeCategory = useMemo(() => {
     return DME_CATEGORIES.find((c) => c.id === selectedCategory) || DME_CATEGORIES[0];

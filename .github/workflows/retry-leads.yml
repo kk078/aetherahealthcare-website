@@ -1,0 +1,18 @@
+name: Retry pending website leads
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+permissions: {}
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch pending leads
+        env:
+          LEAD_RETRY_SECRET: ${{ secrets.LEAD_RETRY_SECRET }}
+        run: |
+          test -n "$LEAD_RETRY_SECRET"
+          curl --fail-with-body --silent --show-error --max-time 120 \
+            -X POST -H "Authorization: Bearer $LEAD_RETRY_SECRET" \
+            https://aetherahealthcare.com/api/retry-leads

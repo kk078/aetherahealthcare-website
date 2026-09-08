@@ -74,13 +74,13 @@ export default function CleanClaimScorecard() {
     e.preventDefault();
     if (!email || leadStatus === 'sending') return;
     setLeadStatus('sending');
-    await submitToWorker('scorecard_lead', {
+    if (!(await submitToWorker('scorecard_lead', {
       email,
       message:
         `Clean-claim scorecard lead — self-scored ${score}/100 (${band.label}). ` +
         `${gaps.length} gap(s): ${gaps.map(g => g.id).join(', ') || 'none'}. ` +
         'Requested a free clean-claim workflow review.',
-    });
+    }))) {  return; }
     setLeadStatus('sent');
   }
 

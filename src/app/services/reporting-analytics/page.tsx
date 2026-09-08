@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { BarChart3, CheckCircle, Shield } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -78,6 +79,7 @@ const relatedServices = [
 ];
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services/reporting-analytics') },
   title: "Revenue Cycle Reporting & Analytics",
   description: "Clear, real-time revenue cycle reporting and analytics covering collections, denials, A/R days, and KPI benchmarks so you always know your practice's financial health. Aethera reporting.",
 };

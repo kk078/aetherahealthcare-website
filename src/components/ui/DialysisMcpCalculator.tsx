@@ -2,24 +2,14 @@
 
 import React, { useState, useMemo } from 'react';
 import {
-  Activity,
   AlertTriangle,
   CheckCircle2,
   Copy,
   Check,
-  Send,
   Loader2,
   FileCode,
-  ShieldCheck,
-  Calculator,
   ChevronRight,
-  Info,
-  Layers,
-  FileText,
-  DollarSign,
   Droplets,
-  Calendar,
-  Building,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';

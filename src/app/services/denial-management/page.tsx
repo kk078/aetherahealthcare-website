@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Shield, CheckCircle, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -6,6 +7,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services/denial-management') },
   title: "Denial Management & Appeals",
   description: "Expert denial management and appeal services for healthcare providers. Reduce denial rates, maximize recovery, and protect your revenue with our proactive approach.",
 };

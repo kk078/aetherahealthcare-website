@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import {
@@ -80,6 +81,7 @@ const positions = [
 ];
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/careers') },
   title: "Careers — Join Our Medical Billing Team",
   description: "Explore careers at Aethera Healthcare Solutions. Join a mission-driven revenue cycle management team helping healthcare providers get paid what they've earned.",
 };

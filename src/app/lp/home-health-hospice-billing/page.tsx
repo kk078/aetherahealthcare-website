@@ -1,18 +1,17 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Calendar, HeartHandshake, ShieldCheck } from 'lucide-react';
+import { Calendar, ShieldCheck } from 'lucide-react';
 import HomeHealthLandingClient from '@/components/ui/HomeHealthLandingClient';
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl('/lp/home-health-hospice-billing') },
+  robots: { index: false, follow: true },
   title: {
     absolute: 'Home Health & Hospice RCM Services | PDGM & LUPA Defense | Aethera Healthcare',
   },
   description:
     'Full-service revenue cycle management for home health agencies and hospice organizations. Prevent PDGM LUPA cuts, late NOA penalties, and aggregate cap recoupments.',
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function HomeHealthHospiceBillingPage() {

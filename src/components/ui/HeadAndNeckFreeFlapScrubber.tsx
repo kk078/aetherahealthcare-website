@@ -6,18 +6,11 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
-  Activity,
   Send,
   Sparkles,
-  HelpCircle,
-  Scissors,
-  Layers,
   Copy,
   Sliders,
-  Flame,
   Microscope,
-  Bone,
   Users,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -39,7 +32,7 @@ export default function HeadAndNeckFreeFlapScrubber() {
   const [useIcgAngiography, setUseIcgAngiography] = useState<boolean>(true);
   const [neckDissection, setNeckDissection] = useState<boolean>(true);
   const [protectiveTracheostomy, setProtectiveTracheostomy] = useState<boolean>(true);
-  const [dualSurgeonTeam, setDualSurgeonTeam] = useState<boolean>(true);
+  const [dualSurgeonTeam] = useState<boolean>(true);
   const [inpatientFlapMonitoring, setInpatientFlapMonitoring] = useState<boolean>(true);
 
   // Lead capture state
@@ -252,7 +245,7 @@ export default function HeadAndNeckFreeFlapScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('head_neck_free_flap_scrubber', {
+      if (!(await sendLeadToKiran('head_neck_free_flap_scrubber', {
         contactName,
         contactEmail,
         contactPractice,
@@ -267,7 +260,7 @@ export default function HeadAndNeckFreeFlapScrubber() {
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
         totalRvu: auditResult.totalRvu,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Lead submission error:', err);
@@ -303,7 +296,7 @@ export default function HeadAndNeckFreeFlapScrubber() {
             </label>
             <select
               value={flapType}
-              onChange={(e) => setFlapType(e.target.value as any)}
+              onChange={(e) => setFlapType(e.target.value as typeof flapType)}
               className="w-full bg-white border border-gray/20 rounded-lg px-3 py-2 text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal font-medium"
             >
               <option value="fibula">Vascularized Fibula Osteocutaneous Flap (20955)</option>

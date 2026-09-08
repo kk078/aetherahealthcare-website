@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Shield, CheckCircle, Globe, Zap, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -7,6 +8,7 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/payers') },
   title: { absolute: 'Insurance Payer Network | 10,600+ Payers & Clearinghouse Routes | Aethera Healthcare Solutions' },
   description: 'Aethera Healthcare Solutions connects with 10,600+ insurance payers and clearinghouse EDI gateways including Medicare, Medicaid, commercial insurers, and workers comp. Real-time eligibility verification included.',
 };

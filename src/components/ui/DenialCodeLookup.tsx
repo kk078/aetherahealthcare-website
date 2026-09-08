@@ -81,11 +81,11 @@ export default function DenialCodeLookup({
     e.preventDefault();
     if (!email || leadStatus === 'sending') return;
     setLeadStatus('sending');
-    await submitToWorker('denial_guide', {
+    const accepted = await submitToWorker('denial_guide', {
       email,
       message: 'Requested the full CARC/RARC denial playbook from the free denial-code lookup tool.',
     });
-    setLeadStatus('sent');
+    setLeadStatus(accepted ? 'sent' : 'idle');
   }
 
   const tabs: { key: Mode; label: string; count: number }[] = [

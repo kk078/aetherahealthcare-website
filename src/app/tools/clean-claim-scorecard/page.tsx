@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -7,6 +8,7 @@ import { ArrowLeft } from 'lucide-react';
 import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/clean-claim-scorecard') },
   title: { absolute: 'Clean-Claim Scorecard — Rate Your First-Pass Claim Readiness | Aethera Healthcare Solutions' },
   description:
     'Free clean-claim readiness scorecard. Check your front-end, coding, and submission workflow against 14 controls and see which CARC/RARC denials each gap invites.',

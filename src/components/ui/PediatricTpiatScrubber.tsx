@@ -6,15 +6,11 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
   Activity,
   Send,
-  Sparkles,
-  HelpCircle,
   FlaskConical,
   Layers,
   Copy,
-  Sliders,
   Dna,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -36,7 +32,6 @@ export default function PediatricTpiatScrubber() {
   const [isletYieldIeqPerKg, setIsletYieldIeqPerKg] = useState<number>(4500); // IEQ/kg
   const [portalAccessRoute, setPortalAccessRoute] = useState<'mesenteric_cutdown' | 'transhepatic_catheter' | 'umbilical_vein'>('mesenteric_cutdown');
   const [cGmpIsolationReportAttached, setCGmpIsolationReportAttached] = useState<boolean>(true);
-  const [continuousPortalManometry, setContinuousPortalManometry] = useState<boolean>(true);
   const [delayedInfusionMod58, setDelayedInfusionMod58] = useState<boolean>(false);
   const [intensivePostopGlycemicIcu, setIntensivePostopGlycemicIcu] = useState<boolean>(true);
 
@@ -169,16 +164,7 @@ export default function PediatricTpiatScrubber() {
       atRiskValue,
       totalIeq,
     };
-  }, [
-    etiology,
-    patientWeightKg,
-    isletYieldIeqPerKg,
-    portalAccessRoute,
-    cGmpIsolationReportAttached,
-    continuousPortalManometry,
-    delayedInfusionMod58,
-    intensivePostopGlycemicIcu,
-  ]);
+  }, [cGmpIsolationReportAttached, delayedInfusionMod58, portalAccessRoute, intensivePostopGlycemicIcu, isletYieldIeqPerKg, totalIeq]);
 
   // Lead submission
   const handleSubmitLead = async (e: React.FormEvent) => {
@@ -187,7 +173,7 @@ export default function PediatricTpiatScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('pediatric_tpiat_rcm_audit', {
+      if (!(await sendLeadToKiran('pediatric_tpiat_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -199,7 +185,7 @@ export default function PediatricTpiatScrubber() {
         portalAccessRoute,
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Submission failed', err);
@@ -271,7 +257,7 @@ ${auditResult.warnings.map((w, i) => `! WARNING ${i + 1}: ${w}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setEtiology(item.id as any)}
+                    onClick={() => setEtiology(item.id as typeof etiology)}
                     className={`px-3 py-2 text-xs font-medium rounded-xl border text-center transition-all ${
                       etiology === item.id
                         ? 'bg-navy text-white border-navy shadow-sm'
@@ -366,7 +352,7 @@ ${auditResult.warnings.map((w, i) => `! WARNING ${i + 1}: ${w}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setPortalAccessRoute(item.id as any)}
+                    onClick={() => setPortalAccessRoute(item.id as typeof portalAccessRoute)}
                     className={`px-3 py-2 text-xs font-medium rounded-xl border text-center transition-all ${
                       portalAccessRoute === item.id
                         ? 'bg-navy text-white border-navy shadow-sm'

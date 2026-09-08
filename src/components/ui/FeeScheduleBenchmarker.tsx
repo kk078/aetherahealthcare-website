@@ -99,14 +99,13 @@ export default function FeeScheduleBenchmarker() {
       {/* Header Banner */}
       <div className="bg-gradient-to-r from-navy via-[#003087] to-teal p-6 text-white">
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-cream text-xs font-semibold uppercase tracking-wider mb-2">
-          <DollarSign className="h-3.5 w-3.5 text-mint" /> 2026 CMS &amp; Commercial Fee Benchmarker
+          <DollarSign className="h-3.5 w-3.5 text-mint" /> Illustrative Fee Schedule Scenarios
         </span>
         <h2 className="text-2xl sm:text-3xl font-bold font-jakarta">
           CPT Fee Schedule &amp; Reimbursement Gap Calculator
         </h2>
         <p className="text-xs sm:text-sm text-cream/90 max-w-2xl mt-1">
-          Compare your practice’s commercial reimbursement allowances against 2026 Medicare allowable rates and
-          top-quartile commercial PPO contracts to measure underpaid revenue.
+          Explore sample reimbursement scenarios. These preset rates are illustrative, not verified CMS rates or contract benchmarks. Use your actual locality, date of service, facility setting and signed fee schedule to assess payment differences.
         </p>
       </div>
 
@@ -194,7 +193,7 @@ export default function FeeScheduleBenchmarker() {
               <tr>
                 <th className="p-3">CPT Code</th>
                 <th className="p-3">Service Description</th>
-                <th className="p-3">2026 Medicare Allowable</th>
+                <th className="p-3">Illustrative Base Allowable</th>
                 <th className="p-3">Commercial Typical (135%)</th>
                 <th className="p-3 text-right">Top PPO Benchmark (160%)</th>
               </tr>

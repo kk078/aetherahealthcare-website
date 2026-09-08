@@ -4,8 +4,6 @@ import { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
   Search,
-  Clock,
-  Hash,
   ArrowRight,
   Building2,
   CheckCircle2,
@@ -13,10 +11,6 @@ import {
   Copy,
   Check,
   Filter,
-  Layers,
-  Sparkles,
-  ExternalLink,
-  ShieldCheck,
   HelpCircle,
   FileCheck2,
   BookOpen,
@@ -24,7 +18,6 @@ import {
 } from 'lucide-react';
 import type { Payer } from '@/lib/payers';
 import {
-  type ClearinghousePayer,
   type CompactPayerTuple,
   decodePayerTuple,
   CLEARINGHOUSE_TYPES
@@ -55,7 +48,6 @@ const PAGE_SIZE = 24;
 
 export default function PayerDirectory({
   payers,
-  types,
 }: {
   payers: Payer[];
   types: string[];
@@ -187,11 +179,6 @@ export default function PayerDirectory({
     });
   }, [activeDataset, q, type, parFilter, enrollmentFilter, serviceFilter, playbookOnly]);
 
-  // Reset page on filter change
-  useEffect(() => {
-    setPage(1);
-  }, [q, type, parFilter, enrollmentFilter, serviceFilter, playbookOnly]);
-
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE) || 1;
   const paginatedResults = useMemo(() => {
     const start = (page - 1) * PAGE_SIZE;
@@ -233,7 +220,7 @@ export default function PayerDirectory({
           <div className="flex items-center gap-2 self-start md:self-auto">
             <button
               type="button"
-              onClick={() => setPlaybookOnly(!playbookOnly)}
+              onClick={() => { setPage(1); setPlaybookOnly(!playbookOnly); }}
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all border ${
                 playbookOnly
                   ? 'bg-teal text-white border-teal shadow-xs'
@@ -253,14 +240,14 @@ export default function PayerDirectory({
             <input
               type="search"
               value={q}
-              onChange={e => setQ(e.target.value)}
+              onChange={e => { setPage(1); setQ(e.target.value); }}
               placeholder="Search by payer name or electronic ID (e.g. 60054, SHP76, 27516, Aetna)..."
               aria-label="Search payers"
               className="w-full pl-10 pr-4 py-2.5 text-sm border border-gray/25 rounded-xl text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
             />
             {q && (
               <button
-                onClick={() => setQ('')}
+                onClick={() => { setPage(1); setQ(''); }}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray hover:text-navy"
               >
                 Clear
@@ -271,7 +258,7 @@ export default function PayerDirectory({
           <div className="lg:col-span-3">
             <select
               value={type}
-              onChange={e => setType(e.target.value)}
+              onChange={e => { setPage(1); setType(e.target.value); }}
               aria-label="Filter by payer type"
               className="w-full py-2.5 px-3 text-sm border border-gray/25 rounded-xl text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
             >
@@ -287,7 +274,7 @@ export default function PayerDirectory({
           <div className="lg:col-span-2">
             <select
               value={parFilter}
-              onChange={e => setParFilter(e.target.value as any)}
+              onChange={e => { setPage(1); setParFilter(e.target.value as typeof parFilter); }}
               aria-label="Filter by participation status"
               className="w-full py-2.5 px-3 text-sm border border-gray/25 rounded-xl text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
             >
@@ -300,7 +287,7 @@ export default function PayerDirectory({
           <div className="lg:col-span-2">
             <select
               value={enrollmentFilter}
-              onChange={e => setEnrollmentFilter(e.target.value as any)}
+              onChange={e => { setPage(1); setEnrollmentFilter(e.target.value as typeof enrollmentFilter); }}
               aria-label="Filter by enrollment requirement"
               className="w-full py-2.5 px-3 text-sm border border-gray/25 rounded-xl text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
             >
@@ -330,7 +317,7 @@ export default function PayerDirectory({
             <button
               key={chip.key}
               type="button"
-              onClick={() => setServiceFilter(chip.key)}
+              onClick={() => { setPage(1); setServiceFilter(chip.key); }}
               className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition-all ${
                 serviceFilter === chip.key
                   ? 'bg-navy text-white shadow-xs'

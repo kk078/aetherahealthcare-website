@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 test.describe('Global Command Palette & Quick Search (Cmd+K)', () => {
   test.beforeEach(async ({ page }) => {

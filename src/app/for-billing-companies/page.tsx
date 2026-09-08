@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Users, AlertTriangle, TrendingUp, ArrowRight, Laptop, ClipboardList, CalendarClock, Tag } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -7,7 +8,8 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import BillingPartnerRoiCalculator from '@/components/ui/BillingPartnerRoiCalculator';
 
 export const metadata = {
-  title: 'For Billing Companies | White-Label RCM Back Office | Aethera Healthcare',
+  alternates: { canonical: canonicalUrl('/for-billing-companies') },
+  title: { absolute: 'For Billing Companies | White-Label RCM Back Office | Aethera Healthcare' },
   description: 'Own the client relationship and your brand. Aethera runs the eligibility, claims, payment posting, AR follow-up, and denial management behind it — at India+AI economics, with your SLAs. Try the free 50-claim pilot.',
 };
 

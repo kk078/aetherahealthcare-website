@@ -10,7 +10,7 @@ export const metadata = {
   title: { absolute: 'The State of Medical Billing Denials 2026 — Benchmark Report by Specialty | Aethera Healthcare Solutions' },
   description:
     'A free benchmark report on medical billing denials by specialty: typical denial rates, clean-claim rates, days-in-A/R, top denial reasons (CARC), and how much is preventable. Compare your practice.',
-  alternates: { canonical: 'https://aetherahealthcare.com/state-of-denials' },
+  alternates: { canonical: 'https://aetherahealthcare.com/state-of-denials/' },
 };
 
 export default function StateOfDenialsPage() {

@@ -2,24 +2,16 @@
 
 import React, { useState, useMemo } from 'react';
 import {
-  FileCheck2,
-  Calculator,
-  ShieldCheck,
   AlertTriangle,
   Copy,
   Check,
-  Send,
   Loader2,
   ArrowRight,
   Sparkles,
-  Info,
-  DollarSign,
-  HelpCircle,
   FileCode,
   CheckCircle2,
   Beaker,
   Stethoscope,
-  BadgeAlert,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
@@ -225,7 +217,7 @@ AETHERA COVERAGE ANALYSIS PROTOCOL:
     setLeadLoading(true);
 
     try {
-      await sendLeadToKiran('clinical_trial_billing_audit_request', {
+      if (!(await sendLeadToKiran('clinical_trial_billing_audit_request', {
         source: 'Clinical Trial Billing & Coverage Analysis Scrubber',
         name: leadName || 'Clinical Research Director',
         email: leadEmail,
@@ -236,7 +228,7 @@ Trial NCT#: ${nctNumber}
 Study Type: ${studyType}
 Medicare Covered Lines: ${scrubbedResults.medicareCoveredLines}
 Sponsor Invoiced Lines: ${scrubbedResults.sponsorLines}`,
-      });
+      }))) {  return; }
       setLeadSubmitted(true);
     } catch {
       setLeadSubmitted(true);
@@ -353,7 +345,7 @@ Sponsor Invoiced Lines: ${scrubbedResults.sponsorLines}`,
                   <button
                     key={t.id}
                     type="button"
-                    onClick={() => setStudyType(t.id as any)}
+                    onClick={() => setStudyType(t.id as typeof studyType)}
                     className={`w-full p-3 rounded-xl border text-left transition-all ${
                       studyType === t.id
                         ? 'bg-navy text-white border-navy shadow-sm'

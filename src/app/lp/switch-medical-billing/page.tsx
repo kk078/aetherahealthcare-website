@@ -1,18 +1,17 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, Sparkles, ShieldCheck } from 'lucide-react';
 import SwitchBillingLandingClient from '@/components/ui/SwitchBillingLandingClient';
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl('/lp/switch-medical-billing') },
+  robots: { index: false, follow: true },
   title: {
     absolute: 'Switch Medical Billing Companies With Zero Downtime | Aethera Healthcare Solutions',
   },
   description:
     'Switch medical billing services with zero cash flow disruption. Aethera guarantees parallel EDI/ERA cutover, active old AR recovery, and a free 50-claim shadow pilot.',
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function SwitchMedicalBillingLandingPage() {
@@ -77,10 +76,10 @@ export default function SwitchMedicalBillingLandingPage() {
             <span>Aethera Healthcare Solutions · HIPAA Compliant · SOC 2 Type II Partner Protocols</span>
           </div>
           <div className="flex items-center gap-6">
-            <Link prefetch={false} href="/privacy" className="hover:text-slate-200 transition">
+            <Link prefetch={false} href="/compliance/privacy-policy/" className="hover:text-slate-200 transition">
               Privacy Policy
             </Link>
-            <Link prefetch={false} href="/terms" className="hover:text-slate-200 transition">
+            <Link prefetch={false} href="/compliance/terms-of-service/" className="hover:text-slate-200 transition">
               Terms of Service
             </Link>
             <Link prefetch={false} href="/contact" className="hover:text-slate-200 transition">

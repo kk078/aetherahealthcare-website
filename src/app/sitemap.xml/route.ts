@@ -1,93 +1,15 @@
 import { getAllPayers } from '@/lib/payers';
 import { SEO_SPECIALTIES } from '@/lib/seo.data';
 import { POSTS } from '@/lib/blogPosts';
-
-// Make this route static for export
+import { ROUTES } from '@/lib/routes.generated';
+import { canonicalUrl } from '@/lib/siteConfig';
 export const dynamic = 'force-static';
-
 export function GET() {
-  const baseUrl = 'https://aetherahealthcare.com';
-
-  const staticRoutes = [
-    '/', '/about', '/services', '/specialties', '/pricing', '/process', '/contact',
-    '/free-assessment', '/schedule',
-    '/compliance', '/compliance/hipaa', '/compliance/privacy-policy', '/compliance/terms-of-service',
-    '/compliance/baa', '/compliance/security', '/blog', '/faq', '/careers',
-    '/payers', '/payer-services', '/for-billing-companies', '/integrations', '/portal', '/case-studies', '/decks',
-  ];
-
-  const serviceRoutes = [
-    '/services/medical-coding', '/services/claims-billing', '/services/payment-posting',
-    '/services/denial-management', '/services/credentialing', '/services/eligibility-verification',
-    '/services/prior-authorization', '/services/patient-collections', '/services/compliance-auditing',
-    '/services/telehealth-billing', '/services/ar-followup', '/services/reporting-analytics',
-    // specialty service pages
-    '/services/cardiology-billing', '/services/orthopedic-billing', '/services/dermatology-billing',
-    '/services/psychiatry-billing', '/services/family-medicine-billing', '/services/pharmacy-billing',
-    '/services/dental-billing', '/services/workers-compensation-billing',
-  ];
-
-  // Free tools (all live tool pages)
-  const toolRoutes = [
-    '/tools',
-    '/tools/denial-code-lookup', '/tools/clean-claim-scorecard', '/tools/ar-cost-calculator',
-    '/tools/denial-cost-calculator', '/tools/rvu-calculator', '/tools/timely-filing-calculator',
-    '/tools/eligibility-checklist', '/tools/payer-provider-manuals',
-  ];
-
-  // Blog articles (lastmod from each post's publish date)
-  const blogRoutes = POSTS.map((p) => `/blog/${p.slug}`);
-  const blogLastmod = new Map(POSTS.map((p) => [`/blog/${p.slug}`, p.date]));
-
-  // Payer directory
-  const payerRoutes = [
-    '/payers/directory',
-    ...getAllPayers().map(p => `/payers/directory/${p.slug}`),
-  ];
-
-  // Comparison pages + benchmark report
-  const compareRoutes = [
-    '/compare',
-    '/compare/outsourced-vs-in-house-medical-billing',
-    '/compare/how-to-choose-a-medical-billing-company',
-    '/state-of-denials',
-  ];
-
-  // Programmatic specialty × location pages
-  const billingRoutes = [
-    '/medical-billing',
-    ...SEO_SPECIALTIES.map(s => `/medical-billing/${s.slug}`),
-  ];
-
-  const allRoutes = [
-    ...staticRoutes, ...serviceRoutes, ...toolRoutes,
-    ...payerRoutes, ...compareRoutes, ...billingRoutes, ...blogRoutes,
-  ];
-
-  const buildLastmod = new Date().toISOString();
-  const priority = (route: string) => {
-    if (route === '/') return '1.0';
-    if (route === '/free-assessment') return '0.9';
-    if (route.startsWith('/services/') || route.startsWith('/medical-billing/')) return '0.8';
-    if (route.startsWith('/tools') || route.startsWith('/compare') || route.startsWith('/payers/directory')) return '0.7';
-    if (route.startsWith('/blog/')) return '0.6';
-    return '0.6';
-  };
-  // The site exports with trailingSlash: true, so the canonical URL for every
-  // non-root route ends in '/' (the slashless form is a 308 redirect).
-  const loc = (route: string) => (route === '/' ? `${baseUrl}/` : `${baseUrl}${route}/`);
-
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allRoutes.map(route => `  <url>
-    <loc>${loc(route)}</loc>
-    <lastmod>${blogLastmod.get(route) ?? buildLastmod}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${priority(route)}</priority>
-  </url>`).join('\n')}
-</urlset>`;
-
-  return new Response(sitemapXml, {
-    headers: { 'Content-Type': 'application/xml' },
-  });
+  const entries = new Map<string, string | undefined>();
+  for (const route of ROUTES) if (route.indexable) entries.set(route.path, undefined);
+  for (const payer of getAllPayers()) entries.set(`/payers/directory/${payer.slug}`, undefined);
+  for (const specialty of SEO_SPECIALTIES) entries.set(`/medical-billing/${specialty.slug}`, undefined);
+  for (const post of POSTS) entries.set(`/blog/${post.slug}`, post.date);
+  const xml = (value: string) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('"', '&quot;');
+  return new Response(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...entries].map(([path, modified]) => `  <url><loc>${xml(canonicalUrl(path))}</loc>${modified ? `<lastmod>${xml(modified)}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>`, { headers: { 'Content-Type': 'application/xml' } });
 }

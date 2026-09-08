@@ -14,12 +14,9 @@ import {
   Zap,
   Info,
   Layers,
-  Sparkles,
   Scissors,
   Heart,
   HeartPulse,
-  Eye,
-  GitBranch,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -392,7 +389,7 @@ export default function LvadCardiacScrubber() {
         auditNotes,
       };
 
-      await sendLeadToKiran('lvad_cardiac_rcm_audit', payload);
+      if (!(await sendLeadToKiran('lvad_cardiac_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('calculator', scrubberResult.penaltyAtRisk);
 
       setLeadSuccess(true);
@@ -511,7 +508,7 @@ export default function LvadCardiacScrubber() {
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => setProcedureType(item.id as any)}
+                      onClick={() => setProcedureType(item.id as typeof procedureType)}
                       className={`text-left p-3.5 rounded-lg border transition-all ${
                         procedureType === item.id
                           ? 'border-rose-600 bg-rose-50/50 shadow-sm ring-1 ring-rose-500'
@@ -671,7 +668,7 @@ export default function LvadCardiacScrubber() {
                     <button
                       key={mode.id}
                       type="button"
-                      onClick={() => setSurgicalTeamMode(mode.id as any)}
+                      onClick={() => setSurgicalTeamMode(mode.id as typeof surgicalTeamMode)}
                       className={`p-2.5 rounded-lg border text-center transition-all ${
                         surgicalTeamMode === mode.id
                           ? 'border-rose-600 bg-rose-50 text-rose-950 font-bold ring-1 ring-rose-500'

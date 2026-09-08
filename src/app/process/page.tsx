@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, FileText, Settings, Upload, Users, Zap } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -100,6 +101,7 @@ const benefits = [
 ];
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/process') },
   title: "Our Onboarding & Billing Process",
   description: "How Aethera onboards your practice — a structured, low-disruption process that gets your revenue cycle optimized and cash flowing from day one.",
 };

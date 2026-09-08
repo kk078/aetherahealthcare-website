@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 /**
  * /gap-analysis is a client-side redirect to /free-assessment (the A/R Gap

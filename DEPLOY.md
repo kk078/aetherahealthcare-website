@@ -1,102 +1,51 @@
-# Aethera Healthcare — Deployment Quick Reference
+# Website build and release
 
-This repo contains the **website only** (Next.js 16 static export → Cloudflare Pages).
-The forms Worker (`aethera-forms`), CRM API (`aethera-crm-api`), and admin dashboard
-live in their own repositories — deploy them from there, not from here.
+The Next.js site exports static pages to `out/`. Cloudflare Pages Functions in `functions/api/` handle lead ingestion, CRM retries, and assistant proxying. CRM and model-provider internals remain separate services.
 
-## Prerequisites
+## Checks
 
-```bash
-# Set env vars (or use .env file)
-export CLOUDFLARE_API_TOKEN=<token>
-export CLOUDFLARE_ACCOUNT_ID=<account_id>
+Use Node 22 and `npm ci`.
+
+```sh
+npm run check
+npm audit --audit-level=high
+npm run build
+npx wrangler pages functions build functions --outdir /tmp/aethera-functions
+npm run test:e2e
+npx playwright test tests/e2e/enhancement-regressions.spec.ts --project=mobile-chrome
 ```
 
----
+Playwright uses the built export on `http://localhost:3100`. It does not reuse an unrelated server. Page tests mock `/api/leads` and `/api/assistant`. Production API checks require `E2E_PRODUCTION_CHECKS=1`; live form submissions require an additional explicit opt-in. Reports and screenshots are written under `/tmp`.
 
-## 1. Build & Deploy the Site
+## Production prerequisites
 
-Pushes to `master` deploy automatically via `.github/workflows/deploy-cloudflare.yml`.
-Manual deploy:
+Set GitHub repository secrets:
 
-```bash
-npm ci
-npm run build                             # generates ./out/ (includes TypeScript check)
-npx wrangler pages deploy out \
-  --project-name aetherahealthcare-website \
-  --branch main
-```
+- `CLOUDFLARE_API_TOKEN`: permission to edit the Pages project and create/query/migrate D1 databases in this account.
+- `CLOUDFLARE_ACCOUNT_ID`.
+- `RATE_LIMIT_SECRET`: an independently generated random secret of at least 32 bytes for short-lived IP hashes.
+- `LEAD_RETRY_SECRET`: a different random secret of at least 32 bytes; the scheduled retry job authenticates with it.
 
-**Check deployment status:**
-```bash
-npx wrangler pages deployment list --project-name aetherahealthcare-website
-```
+Use GitHub repository variables for the optional `NEXT_PUBLIC_*` tracking IDs and conversion labels listed in `.env.example`. The verify workflow defines build-time configuration once. Blank optional vendor IDs disable their integration.
 
----
+`Verify and release website` runs lint (including warnings), typechecking, unit tests, dependency audit, production build, Functions compilation, desktop E2E and focused mobile E2E. Deployment depends on that job and downloads the exact verified static artifact. The old independent deployment workflow and auto-blog deployment path have been removed.
 
-## 2. CI
+The deploy job runs `scripts/prepare-deploy.mjs`, which creates or finds the `aethera-website-leads` D1 database and puts the two server secrets into the Pages project. It generates `.wrangler/deploy.json` with the `LEADS_DB` binding and reads the project’s configured production branch instead of assuming `main`. Wrangler applies the SQL migrations and deploys the verified site plus Functions. Provisioning fails before deployment if prerequisites are missing; it does not print credentials.
 
-`.github/workflows/ci.yml` runs on every pull request and push to `master`:
-1. **Build & type check** — `npm run build` (fails on TypeScript errors).
-2. **E2E** — Playwright page tests against the PR's own build; security-header
-   and CRM-API tests read-only against production. No CI run submits live form
-   data — the contact-form live-submission test only runs with `E2E_LIVE_SUBMIT=1`.
+For a manual release, first run every check above, then run the same prepare/migrate/deploy commands from `.github/workflows/ci.yml`. Do not deploy `out/` without the Functions and D1 binding: the lead endpoint deliberately returns 503 instead of losing or broadcasting personal information.
 
-Run locally:
-```bash
-npm run typecheck
-npm run test:e2e                                     # against production
-BASE_URL=http://localhost:3000 npm run test:e2e      # against a local build/dev server
-```
+## Lead operations
 
----
+The endpoint validates origin, body size, identity fields and a per-IP hourly rate limit. One submission ID produces one durable database record. The browser keeps only an opaque retry ID and hash; it does not persist submitted fields. D1 acknowledgement is independent of CRM availability. Pending requests are retried by the authenticated scheduled job every 15 minutes. The CRM receives `Idempotency-Key` and `submissionId`; verify that the separately maintained CRM honors that key, since transport timeouts can otherwise cause duplicate CRM records under at-least-once delivery.
 
-## 3. Auto-Blog (The Aethera Pulse)
+The retry endpoint returns only counts. Check persistent pending counts and `last_error` via authorized D1 access, never a public lead listing. A lease protects against simultaneous retries. Delivered payloads are deleted after 30 days by the retry job; request-limit hashes expire after two hours. Investigate pending leads promptly and establish CRM retention with the service owner.
 
-`.github/workflows/auto-blog.yml` generates an article twice a week
-(Tue/Fri 13:00 UTC), commits it with `[skip ci]`, builds, and deploys directly.
-It needs the same `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` secrets plus
-an LLM key (`ANTHROPIC_API_KEY` or `OLLAMA_API_KEY`).
+Optional Pages runtime settings: `CRM_API_URL` (HTTPS, default existing public website ingest base), `CRM_API_TOKEN` (server-only), `ASSISTANT_URL` (HTTPS, default existing assistant Worker). Configure these in Pages; no model credential belongs in `NEXT_PUBLIC_*`.
 
-> **If auto-blog runs fail at the deploy step with "Authentication error
-> [code: 10000]" / "Invalid access token [code: 9109]", the Cloudflare API token
-> has expired or been revoked.** Rotate it: Cloudflare dashboard → My Profile →
-> API Tokens → create a token with *Cloudflare Pages: Edit* on the account, then
-> update the `CLOUDFLARE_API_TOKEN` secret in GitHub → Settings → Secrets →
-> Actions. Committed-but-undeployed posts publish on the next successful deploy.
+Before production rollout, rotate any AI credential previously exposed to browsers; review and retire the old ntfy topics and external form routing. Disable Cloudflare dashboard automatic beacon injection (and any zone-level tag injection) so consent is controlled by this code. These are account settings, not changes a website build can enforce.
 
----
+## Content review
 
-## 4. GitHub Secrets Required for CI/CD
+Auto-blog creates unpublished JSON drafts in `content/drafts/` and opens a draft-content PR. It cannot modify live posts or deploy. A reviewer adds their actual name, review date, primary source URLs and `status: "approved"` after reviewing the content. Run `node scripts/publish-blog-draft.mjs content/drafts/slug.json` to promote it into source; the normal PR/release checks still apply.
 
-Add these in GitHub → Settings → Secrets → Actions:
-
-| Secret | Value |
-|--------|-------|
-| `CLOUDFLARE_API_TOKEN` | From Cloudflare dashboard (Pages: Edit permission) |
-| `CLOUDFLARE_ACCOUNT_ID` | `2c268625d9e6e4c084ff296fcdf5f3bd` |
-| `ANTHROPIC_API_KEY` (or `OLLAMA_API_KEY`) | For auto-blog generation |
-
----
-
-## 5. Live URLs
-
-| Resource | URL |
-|----------|-----|
-| Production site | https://aetherahealthcare.com |
-| Forms worker (AI assistant) | https://aethera-forms.aetherahealthcare.workers.dev |
-| Forms worker health | https://aethera-forms.aetherahealthcare.workers.dev/api/health |
-| CRM ingest API (all site forms) | https://aethera-crm-api.aetherahealthcare.workers.dev/api/v1/public/website |
-| Cloudflare dashboard | https://dash.cloudflare.com |
-
----
-
-## 6. Deployment Checklist
-
-- [ ] `npm run build` succeeds locally (includes type check)
-- [ ] CI green on the PR (build + e2e)
-- [ ] Pages deployment live at aetherahealthcare.com
-- [ ] Security headers present (`curl -sI https://aetherahealthcare.com | grep -i strict`)
-- [ ] Sitemap fresh (`curl -s https://aetherahealthcare.com/sitemap.xml | grep -c "<url>"` matches the build)
-- [ ] Newest blog post reachable (spot-check `/blog/<latest-slug>/`)
-- [ ] Contact form submits successfully (manual test email)
+`src/lib/toolRegistry.ts` is the shared directory/search and evidence registry. Rule review dates remain empty until a qualified reviewer validates applicability. Do not fill dates or reviewer names simply to remove the educational notice. `npm run routes:generate` updates the sitemap route registry. Campaign pages and the telemetry/portal demonstrations are intentionally excluded from indexing.

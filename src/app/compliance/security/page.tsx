@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Database, FileCheck, ShieldCheck, Globe, Bot, Milestone, Mail } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -6,7 +7,8 @@ import FadeIn from '@/components/ui/FadeIn';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
-  title: 'Security & Compliance | Aethera Healthcare Solutions',
+  alternates: { canonical: canonicalUrl('/compliance/security') },
+  title: { absolute: 'Security & Compliance | Aethera Healthcare Solutions' },
   description: "How Aethera protects PHI: US data residency, virtual-desktop-only offshore access, BAAs before any data moves, a written HIPAA program, offshore-restriction screening, and hard boundaries on what our AI is allowed to do.",
 };
 

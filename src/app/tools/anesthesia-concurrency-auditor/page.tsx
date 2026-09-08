@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -7,6 +8,7 @@ import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 import { ArrowLeft } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/anesthesia-concurrency-auditor') },
   title: {
     absolute: 'Anesthesia Concurrency & Medical Direction Auditor | Free RCM Tool | Aethera Healthcare Solutions',
   },
@@ -47,7 +49,7 @@ export default function AnesthesiaConcurrencyAuditorPage() {
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-lg md:text-xl text-cream/90 max-w-3xl leading-relaxed">
-              When an anesthesiologist's concurrent room overlap exceeds the 1:4 statutory limit or misses one of the 7 TEFRA
+              When an anesthesiologist&apos;s concurrent room overlap exceeds the 1:4 statutory limit or misses one of the 7 TEFRA
               conditions, commercial payers recoup 100% of medical direction fees. Audit your OR crossover logs, determine
               exact modifier requirements (QK, QY, QX, QZ, AD), and eliminate retrospective audit clawbacks.
             </p>

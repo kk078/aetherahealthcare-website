@@ -1,5 +1,8 @@
 'use client';
 
+import { requestOverlay } from '@/lib/overlayStore';
+import AccessibleDialog from './AccessibleDialog';
+
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import {
@@ -25,18 +28,18 @@ import {
 
 const CATEGORIES: { key: SearchCategory; label: string }[] = [
   { key: 'all', label: 'All Results' },
-  { key: 'payers', label: 'Payers (10,600+)' },
+  { key: 'payers', label: 'Payers' },
   { key: 'denials', label: 'Denial Codes' },
-  { key: 'tools', label: 'Free Tools (33)' },
+  { key: 'tools', label: 'Free Tools' },
   { key: 'specialties', label: 'Specialties' },
   { key: 'services', label: 'RCM Services' },
 ];
 
-export default function CommandPalette() {
+export default function CommandPalette({ initialQuery = '', initialCategory = 'all' }: { initialQuery?: string; initialCategory?: SearchCategory }) {
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState<SearchCategory>('all');
+  const [isOpen, setIsOpen] = useState(true);
+  const [query, setQuery] = useState(initialQuery);
+  const [activeCategory, setActiveCategory] = useState<SearchCategory>(initialCategory);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [inspectingDenial, setInspectingDenial] = useState<SearchItem['denialDetail'] | null>(null);
 
@@ -52,36 +55,6 @@ export default function CommandPalette() {
   const results = useMemo(() => {
     return searchIndex(query, activeCategory, 30);
   }, [query, activeCategory]);
-
-  // Open / Close keyboard listener
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Toggle palette on Cmd+K or Ctrl+K
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-        e.preventDefault();
-        setIsOpen((prev) => {
-          if (prev) {
-            setInspectingDenial(null);
-            return false;
-          }
-          return true;
-        });
-      }
-
-      // Close on Escape if open
-      if (e.key === 'Escape' && isOpen) {
-        e.preventDefault();
-        if (inspectingDenial) {
-          setInspectingDenial(null);
-        } else {
-          closePalette();
-        }
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, inspectingDenial, closePalette]);
 
   // Custom event listener for external triggers
   useEffect(() => {
@@ -101,20 +74,6 @@ export default function CommandPalette() {
     window.addEventListener('open-command-palette', handleCustomOpen);
     return () => window.removeEventListener('open-command-palette', handleCustomOpen);
   }, []);
-
-  // Focus input & handle body scroll
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      const timer = setTimeout(() => {
-        inputRef.current?.focus();
-        inputRef.current?.select();
-      }, 50);
-      return () => clearTimeout(timer);
-    } else {
-      document.body.style.overflow = '';
-    }
-  }, [isOpen]);
 
   // Scroll active item into view
   useEffect(() => {
@@ -138,7 +97,7 @@ export default function CommandPalette() {
   const handleSelect = useCallback((item: SearchItem) => {
     if (item.actionDetail?.type === 'expert_chat') {
       closePalette();
-      window.dispatchEvent(
+      requestOverlay(
         new CustomEvent('open-expert-modal', {
           detail: { mode: 'chat', initialQuery: query ? `Tell me about ${query}` : undefined },
         })
@@ -174,7 +133,7 @@ export default function CommandPalette() {
 
   const triggerAiExpertWithQuery = useCallback((userQuery: string) => {
     closePalette();
-    window.dispatchEvent(
+    requestOverlay(
       new CustomEvent('open-expert-modal', {
         detail: {
           mode: 'chat',
@@ -209,10 +168,7 @@ export default function CommandPalette() {
   if (!isOpen) return null;
 
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      aria-label="Global Search and RCM Command Palette"
+    <AccessibleDialog open={isOpen} onClose={closePalette} title="Global Search and RCM Command Palette"
       className="fixed inset-0 z-[100] flex items-start justify-center pt-16 sm:pt-24 px-4 pb-6 animate-in fade-in duration-200"
     >
       {/* Backdrop */}
@@ -524,7 +480,7 @@ export default function CommandPalette() {
                   type="button"
                   onClick={() => {
                     closePalette();
-                    window.dispatchEvent(
+                    requestOverlay(
                       new CustomEvent('open-expert-modal', {
                         detail: {
                           mode: 'chat',
@@ -567,6 +523,6 @@ export default function CommandPalette() {
         </div>
 
       </div>
-    </div>
+    </AccessibleDialog>
   );
 }

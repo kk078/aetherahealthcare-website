@@ -11,9 +11,6 @@ import {
   Loader2,
   FileCode,
   ShieldCheck,
-  Zap,
-  Info,
-  Layers,
   Sparkles,
   Scissors,
   Crosshair,
@@ -24,7 +21,7 @@ import { trackConversion } from '@/lib/gtag';
 export default function TraumaDamageControlScrubber() {
   // 1. Index Damage Control Resuscitation (Day 0)
   const [initialProcedure, setInitialProcedure] = useState<'laparotomy' | 'thoracotomy' | 'both'>('laparotomy');
-  const [temporaryClosureType, setTemporaryClosureType] = useState<'npwt' | 'bogota' | 'skin_only'>('npwt');
+  const [temporaryClosureType] = useState<'npwt' | 'bogota' | 'skin_only'>('npwt');
 
   // 2. Staged Re-exploration (Day 1 - 3)
   const [reexplorationType, setReexplorationType] = useState<'washout_packs' | 'definitive_closure' | 'none'>('washout_packs');
@@ -323,18 +320,7 @@ export default function TraumaDamageControlScrubber() {
       expectedReimbursement: Math.round(expectedReimbursement),
       penaltyAtRisk: Math.round(penaltyAtRisk),
     };
-  }, [
-    initialProcedure,
-    temporaryClosureType,
-    reexplorationType,
-    stagedModifierChoice,
-    includeArterialLine,
-    includeCentralLine,
-    includeIntubation,
-    totalTraumaRoomMinutes,
-    procedureCarveOutMinutes,
-    failTimeCarveOut,
-  ]);
+  }, [initialProcedure, reexplorationType, stagedModifierChoice, includeArterialLine, includeCentralLine, includeIntubation, totalTraumaRoomMinutes, procedureCarveOutMinutes, failTimeCarveOut]);
 
   // ANSI X12 837P Claim Preview Generator
   const ediClaimStream = useMemo(() => {
@@ -404,7 +390,7 @@ IEA*1*000000103~`;
         },
       };
 
-      await sendLeadToKiran('trauma_rcm_audit', payload);
+      if (!(await sendLeadToKiran('trauma_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('trauma_rcm_audit_submit');
       setLeadSuccess(true);
     } catch {

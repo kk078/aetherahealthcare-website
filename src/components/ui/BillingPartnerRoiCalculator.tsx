@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { Calculator, TrendingUp, ShieldCheck, CheckCircle2, ArrowRight, Zap, Users, DollarSign } from 'lucide-react';
+import { Calculator, CheckCircle2, ArrowRight, Zap, Users } from 'lucide-react';
 import { trackConversion } from '@/lib/gtag';
 
 function fmt(n: number) {
@@ -56,7 +56,7 @@ export default function BillingPartnerRoiCalculator() {
             <Calculator className="h-3.5 w-3.5" /> Interactive Margin Simulator
           </span>
           <h2 className="font-jakarta font-bold text-3xl sm:text-4xl text-white tracking-tight">
-            Calculate Your Agency's Operating Margin Unlock
+            Calculate Your Agency&apos;s Operating Margin Unlock
           </h2>
           <p className="mt-3 text-slate-300 text-base sm:text-lg">
             See how much EBITDA margin your medical billing agency recaptures by pairing autonomous AI scrubbing with dedicated AAPC-certified pods in India.

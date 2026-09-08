@@ -2,19 +2,16 @@
 
 import React, { useState, useMemo } from 'react';
 import {
-  Activity,
   AlertTriangle,
   CheckCircle2,
   Copy,
   Check,
   Send,
   Loader2,
-  FileCode,
   ShieldCheck,
   Zap,
   Info,
   Layers,
-  Sparkles,
   Scissors,
   Smile,
   Eye,
@@ -40,7 +37,7 @@ export default function PediatricCraniofacialScrubber() {
   const [simulateCosmeticDenial, setSimulateCosmeticDenial] = useState<boolean>(false);
 
   // 4. Staged Global Period Sequencing
-  const [isStagedRevision, setIsStagedRevision] = useState<boolean>(true);
+  const [isStagedRevision] = useState<boolean>(true);
   const [withinGlobalPeriod, setWithinGlobalPeriod] = useState<boolean>(true);
   const [modifier58Applied, setModifier58Applied] = useState<boolean>(true);
 
@@ -153,7 +150,7 @@ export default function PediatricCraniofacialScrubber() {
       totalRvu += rvu;
       expectedReimbursement += fee;
 
-      let mod = coSurgeonMode === 'co_surgeon_compliant' ? '62' : '';
+      const mod = coSurgeonMode === 'co_surgeon_compliant' ? '62' : '';
 
       lines.push({
         code: '21141',
@@ -173,7 +170,7 @@ export default function PediatricCraniofacialScrubber() {
       totalRvu += rvu;
       expectedReimbursement += fee;
 
-      let mod = coSurgeonMode === 'co_surgeon_compliant' ? '62' : '';
+      const mod = coSurgeonMode === 'co_surgeon_compliant' ? '62' : '';
 
       lines.push({
         code: '21175',
@@ -361,7 +358,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
     };
 
     try {
-      await sendLeadToKiran('pediatric_craniofacial_rcm_audit', payload);
+      if (!(await sendLeadToKiran('pediatric_craniofacial_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('pediatric_craniofacial_rcm_audit_submit');
       setLeadSuccess(true);
       setTimeout(() => {
@@ -446,7 +443,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => setProcedureType(item.id as any)}
+                      onClick={() => setProcedureType(item.id as typeof procedureType)}
                       className={`text-left p-3.5 rounded-lg border transition-all ${
                         procedureType === item.id
                           ? 'border-teal-600 bg-teal-50/50 shadow-sm ring-1 ring-teal-500'
@@ -489,7 +486,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
                     <button
                       key={site.id}
                       type="button"
-                      onClick={() => setGraftDonorSite(site.id as any)}
+                      onClick={() => setGraftDonorSite(site.id as typeof graftDonorSite)}
                       className={`py-2 px-3 text-xs font-medium rounded-lg border text-center transition-all ${
                         graftDonorSite === site.id
                           ? 'border-teal-600 bg-teal-50 text-teal-900 font-semibold'
@@ -662,7 +659,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
                 <button
                   key={co.id}
                   type="button"
-                  onClick={() => setCoSurgeonMode(co.id as any)}
+                  onClick={() => setCoSurgeonMode(co.id as typeof coSurgeonMode)}
                   className={`p-3 text-left rounded-lg border transition-all ${
                     coSurgeonMode === co.id
                       ? 'border-teal-600 bg-teal-50 text-teal-900 font-semibold ring-1 ring-teal-500'

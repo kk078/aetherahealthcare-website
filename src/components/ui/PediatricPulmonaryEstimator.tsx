@@ -3,7 +3,6 @@
 import React, { useState, useMemo } from 'react';
 import {
   Baby,
-  Activity,
   AlertTriangle,
   CheckCircle2,
   Copy,
@@ -13,8 +12,6 @@ import {
   FileCode,
   ShieldCheck,
   Zap,
-  Info,
-  Layers,
   Sparkles,
   Droplets,
   Stethoscope,
@@ -34,8 +31,8 @@ export default function PediatricPulmonaryEstimator() {
 
   // 3. CFTR Targeted Modulator Therapy
   const [cftrDrug, setCftrDrug] = useState<'trikafta' | 'kalydeco' | 'orkambi' | 'symdeko' | 'none'>('trikafta');
-  const [geneticMutationConfirmed, setGeneticMutationConfirmed] = useState<boolean>(true); // F508del
-  const [baselineFev1Percent, setBaselineFev1Percent] = useState<number>(62); // % predicted
+  const [geneticMutationConfirmed] = useState<boolean>(true); // F508del
+  const [baselineFev1Percent] = useState<number>(62); // % predicted
   const [sweatChlorideValue, setSweatChlorideValue] = useState<number>(78); // mmol/L
   const [simulateMissingGeneticsDenial, setSimulateMissingGeneticsDenial] = useState<boolean>(false); // Prior Auth trap
 
@@ -315,7 +312,7 @@ IEA*1*000000104~`;
         },
       };
 
-      await sendLeadToKiran('pediatric_pulmonology_rcm_audit', payload);
+      if (!(await sendLeadToKiran('pediatric_pulmonology_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('pediatric_pulmonology_rcm_audit_submit');
       setLeadSuccess(true);
     } catch {

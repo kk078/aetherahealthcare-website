@@ -1,19 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import {
   CalendarClock,
   CheckCircle2,
   AlertTriangle,
-  Clock,
   ArrowRight,
-  ShieldCheck,
-  UserCheck,
-  Building,
-  FileCheck,
-  DollarSign,
-  Printer,
 } from 'lucide-react';
 import { PRIMARY_EXPERT_EMAIL, sendLeadToKiran } from '@/lib/worker';
 
@@ -96,7 +88,9 @@ export default function CredentialingTimelineEstimator() {
     year: 'numeric',
   });
 
-  const isUrgent = deadlineDateObj.getTime() < Date.now();
+  const [today, setToday] = useState<number | null>(null);
+  useEffect(() => { const timer = setTimeout(() => setToday(Date.now()), 0); return () => clearTimeout(timer); }, []);
+  const isUrgent = today !== null && deadlineDateObj.getTime() < today;
 
   // Daily revenue at risk if uncredentialed
   const dailyRevenueRisk = Math.round(monthlyExpectedCollections / 21); // 21 clinical working days
@@ -119,12 +113,12 @@ export default function CredentialingTimelineEstimator() {
       routeTo: PRIMARY_EXPERT_EMAIL,
     };
 
-    await sendLeadToKiran('credentialing_consultation', payload, [
+    if (!(await sendLeadToKiran('credentialing_consultation', payload, [
       {
         role: 'user',
         content: `Credentialing Inquiry: ${providerType} in ${practiceState}, Target Start ${targetStartDate}, Est Lead Time ${leadTimeDays} days, Daily Risk $${dailyRevenueRisk.toLocaleString()}`,
       },
-    ]);
+    ]))) { setIsSubmitting(false); return; }
 
     setIsSubmitting(false);
     setSubmitSuccess(true);

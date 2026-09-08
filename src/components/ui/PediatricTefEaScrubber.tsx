@@ -6,18 +6,11 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
-  Activity,
   Send,
   Sparkles,
-  HelpCircle,
   Baby,
-  Layers,
   Copy,
   Sliders,
-  Scissors,
-  Flame,
-  Stethoscope,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
@@ -215,7 +208,7 @@ export default function PediatricTefEaScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('pediatric_tef_ea_scrubber', {
+      if (!(await sendLeadToKiran('pediatric_tef_ea_scrubber', {
         contactName,
         contactEmail,
         contactPractice,
@@ -230,7 +223,7 @@ export default function PediatricTefEaScrubber() {
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
         totalRvu: auditResult.totalRvu,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Lead submission error:', err);
@@ -266,7 +259,7 @@ export default function PediatricTefEaScrubber() {
             </label>
             <select
               value={grossType}
-              onChange={(e) => setGrossType(e.target.value as any)}
+              onChange={(e) => setGrossType(e.target.value as typeof grossType)}
               className="w-full bg-white border border-gray/20 rounded-lg px-3 py-2 text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal font-medium"
             >
               <option value="typeC">Gross Type C (85%): Atresia with Distal TEF</option>
@@ -286,7 +279,7 @@ export default function PediatricTefEaScrubber() {
             </label>
             <select
               value={surgicalApproach}
-              onChange={(e) => setSurgicalApproach(e.target.value as any)}
+              onChange={(e) => setSurgicalApproach(e.target.value as typeof surgicalApproach)}
               className="w-full bg-white border border-gray/20 rounded-lg px-3 py-2 text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal font-medium"
             >
               <option value="thoracotomy">Right Extrapleural Thoracotomy (Open)</option>

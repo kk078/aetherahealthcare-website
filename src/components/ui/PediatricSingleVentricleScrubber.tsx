@@ -6,15 +6,11 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
   Activity,
   Send,
-  Sparkles,
-  HelpCircle,
   Heart,
   Layers,
   Copy,
-  Sliders,
   GitBranch,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -217,7 +213,7 @@ export default function PediatricSingleVentricleScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('pediatric_single_ventricle_rcm_audit', {
+      if (!(await sendLeadToKiran('pediatric_single_ventricle_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -229,7 +225,7 @@ export default function PediatricSingleVentricleScrubber() {
         includeEcmoStandby,
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Submission failed', err);
@@ -301,7 +297,7 @@ ${auditResult.warnings.map((w, i) => `! WARNING ${i + 1}: ${w}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setSurgicalStage(item.id as any)}
+                    onClick={() => setSurgicalStage(item.id as typeof surgicalStage)}
                     className={`px-3 py-2 text-xs font-medium rounded-xl border text-center transition-all ${
                       surgicalStage === item.id
                         ? 'bg-navy text-white border-navy shadow-sm'
@@ -328,7 +324,7 @@ ${auditResult.warnings.map((w, i) => `! WARNING ${i + 1}: ${w}`).join('\n')}`;
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => setShuntType(item.id as any)}
+                      onClick={() => setShuntType(item.id as typeof shuntType)}
                       className={`px-3 py-2 text-xs font-medium rounded-xl border text-center transition-all ${
                         shuntType === item.id
                           ? 'bg-navy text-white border-navy shadow-sm'

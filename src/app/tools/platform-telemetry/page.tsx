@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -7,23 +8,25 @@ import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 import { ArrowLeft } from 'lucide-react';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/platform-telemetry') },
+  robots: { index: false, follow: true },
   title: {
-    absolute: 'Platform Telemetry & Clearinghouse SLA Dashboard | Aethera Healthcare Solutions',
+    absolute: 'Browser Performance Measurements | Aethera Healthcare Solutions',
   },
   description:
-    'Live telemetry dashboard inspecting Aethera global edge latency, EDI 837/835 clearinghouse transmission speeds, and HIPAA zero-knowledge ephemeral memory sweeps.',
+    'Inspect measured browser navigation timings for your current page load.',
 };
 
 export default function PlatformTelemetryPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: 'Platform Telemetry & Clearinghouse SLA Dashboard',
+    name: 'Browser Performance Measurements',
     url: 'https://aetherahealthcare.com/tools/platform-telemetry',
     applicationCategory: 'HealthApplication',
     operatingSystem: 'All',
     description:
-      'Real-time infrastructure transparency dashboard displaying healthcare clearinghouse SLAs, client roundtrip performance, and data security compliance.',
+      'Navigation Timing API measurements for the current browser page load.',
   };
 
   return (
@@ -42,12 +45,12 @@ export default function PlatformTelemetryPage() {
           </Link>
           <FadeIn>
             <h1 className="text-3xl md:text-5xl font-extrabold text-white font-jakarta mb-4">
-              Platform Telemetry & System SLAs
+              Browser Performance Measurements
             </h1>
           </FadeIn>
           <FadeIn delay={0.15}>
             <p className="text-lg md:text-xl text-cream/90 max-w-3xl leading-relaxed">
-              Transparent, real-time telemetry inspecting our direct clearinghouse gateway throughput, global edge network distribution, Core Web Vitals speed, and zero-persistence HIPAA data isolation.
+              Inspect your browser’s page-load timings with clear measurement limits.
             </p>
           </FadeIn>
         </div>
@@ -59,7 +62,7 @@ export default function PlatformTelemetryPage() {
 
           <ToolConversionBridge
             toolName="Enterprise Telemetry SLA"
-            contextText="Looking for guaranteed 99.5%+ uptime and under-24-hour denial turnaround backed by strict financial SLAs? Schedule an architecture review with our billing engineering team."
+            contextText="Discuss service targets, reporting requirements, and available evidence with our billing team."
           />
         </div>
       </section>

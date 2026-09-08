@@ -1,4 +1,4 @@
-import { test, expect, type APIRequestContext, type APIResponse } from '@playwright/test';
+import { test, expect, type APIRequestContext, type APIResponse } from './fixtures';
 
 /**
  * Security header tests — verify all required security headers are present on
@@ -69,13 +69,13 @@ test.describe('Security Headers', () => {
     expect(['DENY', 'SAMEORIGIN']).toContain(response!.headers()['x-frame-options']);
   });
 
-  test('CSP allows the CRM API, forms worker, and Cloudflare Insights', async ({ request }) => {
+  test('CSP keeps lead delivery same-origin and allows consent-gated analytics', async ({ request }) => {
     const response = await fetchUnlessChallenged(request, '/');
     test.skip(!response, 'Cloudflare bot challenge intercepted this runner — headers not observable.');
     test.skip(response!.url().includes('localhost') && !response!.headers()['strict-transport-security'], 'Testing on local static HTTP server without Cloudflare edge proxy headers.');
     const csp = response!.headers()['content-security-policy'] ?? '';
-    expect(csp).toContain('aethera-crm-api.aetherahealthcare.workers.dev');
-    expect(csp).toContain('aethera-forms.aetherahealthcare.workers.dev');
+    expect(csp).not.toContain('formsubmit.co');
+    expect(csp).not.toContain("'unsafe-eval'");
     expect(csp).toContain('cloudflareinsights.com');
   });
 });

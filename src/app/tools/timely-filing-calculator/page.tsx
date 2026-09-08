@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -8,6 +9,7 @@ import TimelyFilingCalculator from '@/components/ui/TimelyFilingCalculator';
 import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/timely-filing-calculator') },
   title: { absolute: 'Timely Filing Calculator — Claim Deadline & Days Remaining | Aethera Healthcare Solutions' },
   description:
     'Free timely-filing calculator: enter a date of service and the payer filing limit to get the exact submission deadline, days remaining, and a risk flag for CARC 29.',

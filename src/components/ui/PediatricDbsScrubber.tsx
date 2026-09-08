@@ -4,19 +4,14 @@ import React, { useState, useMemo } from 'react';
 import {
   ShieldAlert,
   CheckCircle2,
-  AlertTriangle,
   FileText,
-  DollarSign,
   Activity,
   Send,
   Sparkles,
-  HelpCircle,
   Brain,
-  ChevronRight,
   Layers,
   Copy,
 } from 'lucide-react';
-import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 import { sendLeadToKiran } from '@/lib/worker';
 
 interface LineItem {
@@ -128,7 +123,7 @@ export default function PediatricDbsScrubber() {
       grossValue += ipgAllowed;
 
       let mod = '';
-      let status: 'compliant' | 'warning' | 'fatal' = 'compliant';
+      const status: 'compliant' | 'warning' | 'fatal' = 'compliant';
       let editReason = '';
 
       if (ipgOption === 'same_day') {
@@ -197,7 +192,7 @@ export default function PediatricDbsScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('pediatric_dbs_rcm_audit', {
+      if (!(await sendLeadToKiran('pediatric_dbs_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -210,7 +205,7 @@ export default function PediatricDbsScrubber() {
         ipgType,
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Submission failed', err);
@@ -281,7 +276,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setIndication(item.id as any)}
+                    onClick={() => setIndication(item.id as typeof indication)}
                     className={`p-2.5 rounded-xl border text-xs font-semibold transition-all ${
                       indication === item.id
                         ? 'border-teal bg-teal/10 text-teal'
@@ -393,7 +388,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setIpgOption(item.id as any)}
+                    onClick={() => setIpgOption(item.id as typeof ipgOption)}
                     className={`p-2.5 rounded-xl border text-xs font-semibold transition-all ${
                       ipgOption === item.id
                         ? 'border-teal bg-teal/10 text-teal'

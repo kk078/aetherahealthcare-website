@@ -74,3 +74,9 @@ rebuild-website.bat
 
 # build/deploy logs (transient)
 *.log
+
+# Local Pages Functions state and generated deploy bindings
+.wrangler/
+.dev.vars
+
+/public/workers/

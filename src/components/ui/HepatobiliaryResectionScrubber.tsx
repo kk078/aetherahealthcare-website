@@ -11,8 +11,6 @@ import {
   Loader2,
   FileCode,
   ShieldCheck,
-  Zap,
-  Info,
   Layers,
   Sparkles,
   Scissors,
@@ -309,7 +307,7 @@ export default function HepatobiliaryResectionScrubber() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('hepatobiliary_rcm_audit', {
+      if (!(await sendLeadToKiran('hepatobiliary_rcm_audit', {
         contactName,
         contactEmail,
         practiceName,
@@ -319,7 +317,7 @@ export default function HepatobiliaryResectionScrubber() {
         includeVascularReconstruction,
         expectedReimbursement: scrubberResult.expectedReimbursement,
         penaltyAtRisk: scrubberResult.penaltyAtRisk,
-      });
+      }))) { setIsSubmitting(false); return; }
       trackConversion('hepatobiliary_rcm_audit_submit');
       setLeadSuccess(true);
     } catch {

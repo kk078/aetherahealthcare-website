@@ -1,18 +1,17 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, Sparkles, ShieldCheck } from 'lucide-react';
 import EnterpriseRcmLandingClient from '@/components/ui/EnterpriseRcmLandingClient';
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl('/lp/enterprise-rcm') },
+  robots: { index: false, follow: true },
   title: {
     absolute: 'Enterprise Revenue Cycle Management for Health Systems & MSOs | Aethera Healthcare',
   },
   description:
     'Multi-site RCM consolidation, central business office (CBO) optimization, and sub-25 day AR performance for health systems, MSOs, and large physician groups.',
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function EnterpriseRcmLandingPage() {
@@ -77,10 +76,10 @@ export default function EnterpriseRcmLandingPage() {
             <span>Aethera Healthcare Solutions · Enterprise SOC 2 Aligned · Dedicated Health System Pods</span>
           </div>
           <div className="flex items-center gap-6">
-            <Link prefetch={false} href="/privacy" className="hover:text-slate-200 transition">
+            <Link prefetch={false} href="/compliance/privacy-policy/" className="hover:text-slate-200 transition">
               Privacy Policy
             </Link>
-            <Link prefetch={false} href="/terms" className="hover:text-slate-200 transition">
+            <Link prefetch={false} href="/compliance/terms-of-service/" className="hover:text-slate-200 transition">
               Terms of Service
             </Link>
             <Link prefetch={false} href="/contact" className="hover:text-slate-200 transition">

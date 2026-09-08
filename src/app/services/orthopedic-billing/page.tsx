@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, AlertCircle, TrendingUp, Shield, DollarSign, FileText, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -6,7 +7,8 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: 'Orthopedic Surgery Billing | RCM for Orthopedists | Aethera Healthcare',
+  alternates: { canonical: canonicalUrl('/services/orthopedic-billing') },
+  title: { absolute: 'Orthopedic Surgery Billing | RCM for Orthopedists | Aethera Healthcare' },
   description: 'Specialized orthopedic billing services covering joint replacement, fracture care, arthroscopy, implant capture, and global period management. 96.8% clean claim rate.',
 };
 

@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { DollarSign, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -6,6 +7,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services/claims-billing') },
   title: "Claims & Billing Services | Clean Claim Submission",
   description: "Professional claims and billing services for healthcare providers. Clean claim submission, denial management, and payment posting to accelerate your revenue cycle.",
 };

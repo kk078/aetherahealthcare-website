@@ -960,7 +960,7 @@ SE*10*9999~`,
             <div className="flex items-center gap-2">
               <span className="text-xs font-bold text-white tracking-wide">portal.aetherahealthcare.com</span>
               <span className="text-[10px] text-teal-400 bg-teal-500/10 px-1.5 py-0.5 rounded border border-teal-500/20 font-semibold">
-                Live Client Sandbox
+                Illustrative Portal Demo
               </span>
             </div>
           </div>

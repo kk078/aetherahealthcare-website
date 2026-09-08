@@ -2,22 +2,14 @@
 
 import React, { useState, useMemo } from 'react';
 import {
-  FileCheck2,
   Clock,
-  ShieldCheck,
   AlertTriangle,
   Search,
   CheckCircle2,
-  HelpCircle,
-  ExternalLink,
   Award,
   Send,
   Loader2,
-  Lock,
-  Building2,
-  Phone,
   Scale,
-  Sparkles,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
@@ -159,14 +151,14 @@ const PROCEDURES: PriorAuthItem[] = [
 export default function PriorAuthMatrix() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [selectedPayerType, setSelectedPayerType] = useState<'medicareAdvantage' | 'commercialPpo' | 'medicaidMco' | 'traditionalMedicare'>('medicareAdvantage');
+  const [selectedPayerType] = useState<'medicareAdvantage' | 'commercialPpo' | 'medicaidMco' | 'traditionalMedicare'>('medicareAdvantage');
   const [activeItem, setActiveItem] = useState<PriorAuthItem>(PROCEDURES[0]);
 
   // Lead escalation form
   const [providerName, setProviderName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [patientPayer, setPatientPayer] = useState('UHC Medicare Advantage');
+  const [patientPayer] = useState('UHC Medicare Advantage');
   const [authUrgency, setAuthUrgency] = useState('Standard (7-day SLA)');
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 

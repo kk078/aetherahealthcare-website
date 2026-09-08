@@ -2,10 +2,8 @@
 
 import React, { useState, useMemo } from 'react';
 import {
-  Building2,
   Search,
   ExternalLink,
-  Clock,
   Phone,
   Mail,
   ShieldCheck,
@@ -13,7 +11,6 @@ import {
   Loader2,
   CheckCircle2,
   FileText,
-  AlertCircle,
   Copy,
   Check,
 } from 'lucide-react';

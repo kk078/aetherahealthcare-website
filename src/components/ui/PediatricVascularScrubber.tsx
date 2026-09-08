@@ -6,13 +6,9 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
-  Activity,
   Send,
   Sparkles,
-  HelpCircle,
   Stethoscope,
-  ChevronRight,
   Layers,
 } from 'lucide-react';
 import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
@@ -36,7 +32,7 @@ export default function PediatricVascularScrubber() {
   const [sclerosantAgent, setSclerosantAgent] = useState<'bleomycin' | 'sotradecol' | 'doxycycline' | 'ethanol'>('bleomycin');
   const [sessionStage, setSessionStage] = useState<'initial' | 'staged_58' | 'unplanned_78'>('staged_58');
   const [angiographyType, setAngiographyType] = useState<'separate_diag' | 'therapeutic_roadmap'>('separate_diag');
-  const [sclerosantUnits, setSclerosantUnits] = useState<number>(15); // e.g. 15 units Bleomycin
+  const [sclerosantUnits] = useState<number>(15); // e.g. 15 units Bleomycin
 
   // Lead capture state
   const [contactName, setContactName] = useState('');
@@ -247,7 +243,7 @@ export default function PediatricVascularScrubber() {
     if (!contactEmail) return;
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('pediatric_vascular_rcm_audit', {
+      if (!(await sendLeadToKiran('pediatric_vascular_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -261,7 +257,7 @@ export default function PediatricVascularScrubber() {
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
         cleanClaimScore: auditResult.cleanClaimScore,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Lead submit error:', err);
@@ -313,7 +309,7 @@ export default function PediatricVascularScrubber() {
                   <button
                     key={t.id}
                     type="button"
-                    onClick={() => setAnomalyType(t.id as any)}
+                    onClick={() => setAnomalyType(t.id as typeof anomalyType)}
                     className={`px-3 py-2.5 rounded-lg text-xs font-bold border transition-all text-left ${
                       anomalyType === t.id
                         ? 'bg-navy text-white border-navy shadow-sm'
@@ -333,7 +329,7 @@ export default function PediatricVascularScrubber() {
               </label>
               <select
                 value={procedureCode}
-                onChange={(e) => setProcedureCode(e.target.value as any)}
+                onChange={(e) => setProcedureCode(e.target.value as typeof procedureCode)}
                 className="w-full bg-white border border-gray/20 rounded-lg p-2.5 text-xs sm:text-sm font-semibold text-navy focus:ring-2 focus:ring-teal focus:border-teal"
               >
                 <option value="37241">CPT 37241 - Percutaneous Venous Embolization / Sclerotherapy</option>
@@ -357,7 +353,7 @@ export default function PediatricVascularScrubber() {
                   <button
                     key={g.id}
                     type="button"
-                    onClick={() => setImagingGuidance(g.id as any)}
+                    onClick={() => setImagingGuidance(g.id as typeof imagingGuidance)}
                     className={`px-3 py-2 rounded-lg text-xs font-bold border transition-all text-left ${
                       imagingGuidance === g.id
                         ? 'bg-teal text-white border-teal shadow-sm'
@@ -385,7 +381,7 @@ export default function PediatricVascularScrubber() {
                   <button
                     key={s.id}
                     type="button"
-                    onClick={() => setSclerosantAgent(s.id as any)}
+                    onClick={() => setSclerosantAgent(s.id as typeof sclerosantAgent)}
                     className={`px-3 py-2 rounded-lg text-xs font-bold border transition-all text-left ${
                       sclerosantAgent === s.id
                         ? 'bg-navy text-white border-navy shadow-sm'
@@ -405,7 +401,7 @@ export default function PediatricVascularScrubber() {
               </label>
               <select
                 value={sessionStage}
-                onChange={(e) => setSessionStage(e.target.value as any)}
+                onChange={(e) => setSessionStage(e.target.value as typeof sessionStage)}
                 className="w-full bg-white border border-gray/20 rounded-lg p-2.5 text-xs sm:text-sm font-semibold text-navy focus:ring-2 focus:ring-teal focus:border-teal"
               >
                 <option value="staged_58">Planned Staged Session (Append Modifier -58)</option>

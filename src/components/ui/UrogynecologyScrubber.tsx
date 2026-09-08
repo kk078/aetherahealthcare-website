@@ -11,7 +11,6 @@ import {
   Loader2,
   FileCode,
   ShieldCheck,
-  Zap,
   Info,
   Layers,
   Sparkles,
@@ -284,26 +283,13 @@ export default function UrogynecologyScrubber() {
       compliantReimbursement,
       riskPreventedAmount,
     };
-  }, [
-    primaryProcedure,
-    performConcurrentSling,
-    cystoscopyType,
-    popqStage,
-    hasFailedConservativeTrial,
-    includeUrodynamics,
-    includeCmgVoiding,
-    includeSphincterEmg,
-    includeAbdominalPressure,
-    includeUroflowmetry,
-    udsModifierType,
-    currentPelvic,
-  ]);
+  }, [performConcurrentSling, cystoscopyType, popqStage, hasFailedConservativeTrial, includeUrodynamics, includeCmgVoiding, includeSphincterEmg, includeAbdominalPressure, includeUroflowmetry, udsModifierType, currentPelvic]);
 
   // ANSI 837P Claim Stream Generation
   const ansi837pLines = useMemo(() => {
     const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
     const dateStr = today;
-    let segs: string[] = [];
+    const segs: string[] = [];
     segs.push(`ISA*00*          *00*          *ZZ*UROGYNCLINIC   *ZZ*MEDICAREPAYER  *${today.slice(2)}*1200*^*00501*000000491*0*P*:~`);
     segs.push(`GS*HC*UROGYNCLINIC*MEDICAREPAYER*${dateStr}*1200*491*X*005010X222A1~`);
     segs.push(`ST*837*0001*005010X222A1~`);
@@ -335,7 +321,7 @@ export default function UrogynecologyScrubber() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('Urogynecology Pelvic Floor Audit Dossier', {
+      if (!(await sendLeadToKiran('urogynecology_pelvic_floor_audit', {
         contactName,
         contactEmail,
         practiceName,
@@ -346,7 +332,7 @@ export default function UrogynecologyScrubber() {
         compliantReimbursement: auditResults.compliantReimbursement,
         riskPreventedAmount: auditResults.riskPreventedAmount,
         notes: auditNotes,
-      });
+      }))) { setIsSubmitting(false); return; }
       trackConversion('lead_submit_urogynecology_scrubber');
       setLeadSuccess(true);
       setTimeout(() => {

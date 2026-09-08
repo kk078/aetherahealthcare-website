@@ -6,7 +6,6 @@ import {
   Sparkles,
   ShieldCheck,
   CheckCircle2,
-  DollarSign,
   TrendingUp,
   Clock,
   Calendar,
@@ -16,8 +15,6 @@ import {
   AlertCircle,
   Building2,
   Lock,
-  Layers,
-  Network,
   BarChart3,
   Cpu,
 } from 'lucide-react';

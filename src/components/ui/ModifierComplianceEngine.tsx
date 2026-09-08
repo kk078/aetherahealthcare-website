@@ -2,17 +2,11 @@
 
 import React, { useState } from 'react';
 import {
-  FileCheck2,
-  ShieldAlert,
   AlertTriangle,
   CheckCircle2,
-  HelpCircle,
   Copy,
   Check,
   Scale,
-  Sparkles,
-  BookOpen,
-  ArrowRight,
   Send,
   Loader2,
 } from 'lucide-react';
@@ -29,7 +23,6 @@ export default function ModifierComplianceEngine() {
 
   // Modifier 59 / X{EPSU} Questions
   const [xDistinctType, setXDistinctType] = useState<'session' | 'structure' | 'practitioner' | 'unusual' | 'none'>('structure');
-  const [q59NcciEditPair, setQ59NcciEditPair] = useState<string>('99214_11102');
 
   // Copy justification state
   const [copiedJustification, setCopiedJustification] = useState(false);
@@ -37,7 +30,7 @@ export default function ModifierComplianceEngine() {
   // Lead request
   const [contactName, setContactName] = useState('');
   const [practiceEmail, setPracticeEmail] = useState('');
-  const [auditNotes, setAuditNotes] = useState('');
+  const [auditNotes] = useState('');
   const [leadStatus, setLeadStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   // Compute Modifier 25 Compliance Status

@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, TrendingUp, Shield, Clock, DollarSign, FileText, AlertCircle, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -6,7 +7,8 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: 'Cardiology Billing Services | RCM for Cardiologists | Aethera Healthcare',
+  alternates: { canonical: canonicalUrl('/services/cardiology-billing') },
+  title: { absolute: 'Cardiology Billing Services | RCM for Cardiologists | Aethera Healthcare' },
   description: 'Expert cardiology billing and revenue cycle management. We handle cardiac cath, stress testing, EP studies, remote monitoring, and all cardiology-specific coding complexities. 97.1% clean claim rate.',
 };
 

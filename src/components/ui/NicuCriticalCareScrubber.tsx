@@ -11,15 +11,8 @@ import {
   Loader2,
   FileCode,
   ShieldCheck,
-  Calculator,
-  ChevronRight,
   Info,
-  Layers,
-  FileText,
-  DollarSign,
   Activity,
-  HeartPulse,
-  Stethoscope,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -330,7 +323,7 @@ IEA*1*000000001~`;
     };
 
     try {
-      await sendLeadToKiran('nicu_scrubber_audit', payload);
+      if (!(await sendLeadToKiran('nicu_scrubber_audit', payload))) { setSubmitting(false); return; }
       trackConversion('assessment', totalProjectedAllowed);
       setSubmitted(true);
     } catch (err) {
@@ -686,7 +679,7 @@ IEA*1*000000001~`;
                 <AlertTriangle className="h-4 w-4 text-amber-700 shrink-0 mt-0.5" />
                 <div>
                   <strong className="font-bold block">Duplicate Per-Day Billing Risk:</strong>
-                  Two neonatologists in the same TIN cannot bill 99468 or 99469 for the same infant on the same date. Combine notes under one physician's record.
+                  Two neonatologists in the same TIN cannot bill 99468 or 99469 for the same infant on the same date. Combine notes under one physician&apos;s record.
                 </div>
               </div>
             )}

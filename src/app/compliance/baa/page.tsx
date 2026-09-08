@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { FileText, Shield, CheckCircle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -42,6 +43,7 @@ const keyProvisions = [
 ];
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/compliance/baa') },
   title: "Business Associate Agreement (BAA)",
   description: "Aethera's HIPAA Business Associate Agreement — how we safeguard protected health information (PHI) as your medical billing partner.",
 };

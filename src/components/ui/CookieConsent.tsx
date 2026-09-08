@@ -1,81 +1,29 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { X, Cookie } from 'lucide-react';
+import { useConsent, setConsent } from '@/lib/consent';
 
 export default function CookieConsent() {
-  const [showConsent, setShowConsent] = useState(false);
-
+  const consent = useConsent();
+  const [editing, setEditing] = useState(false);
   useEffect(() => {
-    // Schedule check to avoid synchronous cascading renders
-    const timer = setTimeout(() => {
-      const consent = localStorage.getItem('cookieConsent');
-      if (!consent) {
-        setShowConsent(true);
-      }
-    }, 150);
-    return () => clearTimeout(timer);
+    // Remove personal information left by older releases, regardless of consent.
+    try { localStorage.removeItem('aethera_leads_vault'); } catch { /* Storage blocked. */ }
+    const open = () => setEditing(true);
+    window.addEventListener('open-cookie-preferences', open);
+    return () => window.removeEventListener('open-cookie-preferences', open);
   }, []);
-
-  const acceptCookies = () => {
-    localStorage.setItem('cookieConsent', 'accepted');
-    setShowConsent(false);
-  };
-
-  const declineCookies = () => {
-    localStorage.setItem('cookieConsent', 'declined');
-    setShowConsent(false);
-  };
-
-  if (!showConsent) {
-    return null;
-  }
-
+  if (consent !== 'unknown' && !editing) return null;
+  const choose = (choice: 'accepted' | 'declined') => { setConsent(choice); setEditing(false); };
   return (
-    <div
-      role="region"
-      aria-label="Cookie consent"
-      className="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:max-w-md bg-white border border-slate-200 shadow-2xl rounded-2xl p-4 sm:p-5 z-[65] animate-in fade-in slide-in-from-bottom-4 duration-300"
-    >
-      <div className="flex items-start justify-between gap-3 mb-2.5">
-        <div className="flex items-center gap-2">
-          <span className="p-1.5 rounded-lg bg-teal/10 text-teal">
-            <Cookie className="h-4 w-4" />
-          </span>
-          <span className="text-xs font-bold uppercase tracking-wider text-navy">Cookie Preferences</span>
-        </div>
-        <button
-          onClick={declineCookies}
-          className="text-slate-400 hover:text-slate-600 transition-colors p-0.5"
-          aria-label="Close cookie banner"
-        >
-          <X className="h-4 w-4" />
-        </button>
+    <section aria-label="Cookie consent" className="fixed bottom-4 left-4 right-4 sm:right-auto sm:max-w-md surface-card border rounded-2xl shadow-2xl p-5 z-[110]">
+      <h2 className="font-bold text-base mb-2">Cookie preferences</h2>
+      <p className="text-sm text-muted mb-4">With your permission, we use analytics and advertising services, including business visitor identification. Essential Only keeps these services off. Read our <Link href="/compliance/privacy-policy/" className="underline">privacy policy</Link>.</p>
+      <div className="flex gap-3">
+        <button onClick={() => choose('accepted')} className="flex-1 rounded-lg bg-teal text-white p-3 text-sm font-semibold">Accept Cookies</button>
+        <button onClick={() => choose('declined')} className="flex-1 rounded-lg border p-3 text-sm font-semibold">Essential Only</button>
       </div>
-
-      <p className="text-slate-600 text-xs leading-relaxed mb-4">
-        We use cookies and telemetry to improve navigation and measure site performance. Read our{' '}
-        <Link prefetch={false} href="/compliance/privacy-policy" className="text-teal hover:underline font-semibold">
-          Privacy Policy
-        </Link>
-        .
-      </p>
-
-      <div className="flex items-center gap-2">
-        <button
-          onClick={acceptCookies}
-          className="flex-1 bg-teal hover:bg-navy text-white font-semibold py-2 px-3 rounded-xl text-xs transition-colors text-center shadow-sm"
-        >
-          Accept Cookies
-        </button>
-        <button
-          onClick={declineCookies}
-          className="flex-1 border border-slate-200 hover:bg-slate-50 text-slate-700 font-medium py-2 px-3 rounded-xl text-xs transition-colors text-center"
-        >
-          Essential Only
-        </button>
-      </div>
-    </div>
+    </section>
   );
 }

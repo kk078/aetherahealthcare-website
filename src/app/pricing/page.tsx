@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -8,6 +9,7 @@ import ROICalculator from '@/components/ui/ROICalculator';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/pricing') },
   title: "Pricing | Transparent Medical Billing Rates",
   description: "Transparent pricing for medical billing services. Choose from percentage-based or per-claim pricing models with no hidden fees. Get a free consultation today.",
 };

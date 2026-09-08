@@ -3,18 +3,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import {
-  Sparkles,
   ShieldCheck,
   CheckCircle2,
-  DollarSign,
   TrendingUp,
-  Clock,
   Calendar,
   ArrowRight,
   Loader2,
   Check,
   AlertCircle,
-  Building2,
   Lock,
   UserCheck,
   PiggyBank,
@@ -249,7 +245,7 @@ export default function SoloPracticeLandingClient() {
                   <select
                     id="current-model-select"
                     value={currentBillingModel}
-                    onChange={(e) => setCurrentBillingModel(e.target.value as any)}
+                    onChange={(e) => setCurrentBillingModel(e.target.value as typeof currentBillingModel)}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-200 text-sm focus:outline-none focus:border-teal"
                   >
                     <option value="in_house_full">1 Full-Time In-House Biller (~$72,000/yr with salary + benefits + software)</option>

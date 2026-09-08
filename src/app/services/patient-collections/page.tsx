@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CreditCard, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -78,6 +79,7 @@ const relatedServices = [
 ];
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services/patient-collections') },
   title: "Patient Collections & Statement Management",
   description: "Professional, compassionate patient collections and statement management that lifts patient payments without hurting satisfaction. Patient A/R handled by Aethera.",
 };

@@ -11,11 +11,9 @@ import {
   Loader2,
   FileCode,
   ShieldCheck,
-  Zap,
   Info,
   Layers,
   Sparkles,
-  Activity,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -434,7 +432,7 @@ export default function SpineArthrodesisScrubber() {
   const ansi837pLines = useMemo(() => {
     const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
     const dateStr = today;
-    let segs: string[] = [];
+    const segs: string[] = [];
     segs.push(`ISA*00*          *00*          *ZZ*SPINECLINIC    *ZZ*MEDICAREPAYER  *${today.slice(2)}*1200*^*00501*000000481*0*P*:~`);
     segs.push(`GS*HC*SPINECLINIC*MEDICAREPAYER*${dateStr}*1200*481*X*005010X222A1~`);
     segs.push(`ST*837*0001*005010X222A1~`);
@@ -466,7 +464,7 @@ export default function SpineArthrodesisScrubber() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('Spine Arthrodesis Scrubber Audit Dossier', {
+      if (!(await sendLeadToKiran('spine_arthrodesis_audit', {
         contactName,
         contactEmail,
         practiceName,
@@ -476,7 +474,7 @@ export default function SpineArthrodesisScrubber() {
         compliantReimbursement: auditResults.compliantReimbursement,
         riskPreventedAmount: auditResults.riskPreventedAmount,
         notes: auditNotes,
-      });
+      }))) { setIsSubmitting(false); return; }
       trackConversion('lead_submit_spine_scrubber');
       setLeadSuccess(true);
       setTimeout(() => {
@@ -726,7 +724,7 @@ export default function SpineArthrodesisScrubber() {
                 </label>
                 <select
                   value={posteriorInstrumentation}
-                  onChange={(e) => setPosteriorInstrumentation(e.target.value as any)}
+                  onChange={(e) => setPosteriorInstrumentation(e.target.value as typeof posteriorInstrumentation)}
                   className="w-full text-xs font-semibold p-2 bg-white border border-slate-300 rounded-md focus:ring-indigo-500"
                 >
                   <option value="none">None</option>

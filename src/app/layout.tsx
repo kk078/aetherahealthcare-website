@@ -1,3 +1,4 @@
+import DeliveryNotice from '@/components/ui/DeliveryNotice';
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
@@ -54,18 +55,11 @@ export const metadata: Metadata = {
   },
 };
 
+import GlobalOverlays from '@/components/ui/GlobalOverlays';
 import TopContactBar from '@/components/ui/TopContactBar';
-import CloudflareAnalytics from '@/components/ui/CloudflareAnalytics';
-import GoogleAds from '@/components/ui/GoogleAds';
+import AnalyticsGate from '@/components/ui/AnalyticsGate';
 import CookieConsent from '@/components/ui/CookieConsent';
 import BackToTop from '@/components/ui/BackToTop';
-import CallbackButton from '@/components/ui/CallbackButton';
-import CommandPalette from '@/components/ui/CommandPalette';
-import ExitIntentCTA from '@/components/ui/ExitIntentCTA';
-import RetargetingPixels from '@/components/ui/RetargetingPixels';
-import FreePilotModal from '@/components/ui/FreePilotModal';
-import AttributionTracker from '@/components/ui/AttributionTracker';
-import B2BVisitorTracker from '@/components/ui/B2BVisitorTracker';
 
 export default function RootLayout({
   children,
@@ -79,12 +73,6 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Retention.com / RB2B Person-Level Deanonymization Engine */}
-        <script
-          async
-          data-cfasync="false"
-          src="https://ddwl4m2hdecbv.cloudfront.net/b/DNXY8HJJYVO0/DNXY8HJJYVO0.js.gz"
-        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -97,27 +85,15 @@ export default function RootLayout({
             `,
           }}
         />
-        <script
-          data-cfasync="false"
-          dangerouslySetInnerHTML={{
-            __html: `!function(key){if(window.reb2b)return;window.reb2b={loaded:!0};var s=document.createElement("script");s.async=!0;s.setAttribute("data-cfasync","false");s.src="https://ddwl4m2hdecbv.cloudfront.net/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0])}("DNXY8HJJYVO0");`,
-          }}
-        />
       </head>
       <body className="min-h-full flex flex-col bg-cream text-dark">
         <TopContactBar />
         {children}
-        <CommandPalette />
+        <GlobalOverlays />
+        <DeliveryNotice />
         <CookieConsent />
+        <AnalyticsGate />
         <BackToTop />
-        <CallbackButton />
-        <ExitIntentCTA />
-        <FreePilotModal />
-        <AttributionTracker />
-        <CloudflareAnalytics />
-        <GoogleAds />
-        <RetargetingPixels />
-        <B2BVisitorTracker />
       </body>
     </html>
   );

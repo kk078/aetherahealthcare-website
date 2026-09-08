@@ -6,13 +6,8 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
-  Activity,
   Send,
-  Sparkles,
-  HelpCircle,
   Stethoscope,
-  ChevronRight,
   Layers,
   Award,
 } from 'lucide-react';
@@ -36,7 +31,7 @@ export default function OrthopedicOncologyScrubber() {
   const [softTissueCoverage, setSoftTissueCoverage] = useState<'gastroc_flap' | 'free_flap' | 'local_flap' | 'primary_closure'>('gastroc_flap');
   const [surgicalTeam, setSurgicalTeam] = useState<'co_surgeons_62' | 'single_attending' | 'assistant_as'>('co_surgeons_62');
   const [implantCarveOut, setImplantCarveOut] = useState<'invoice_attached' | 'standard_flat'>('invoice_attached');
-  const [implantCost, setImplantCost] = useState<number>(58000); // $58,000 mega-prosthesis
+  const [implantCost] = useState<number>(58000); // $58,000 mega-prosthesis
 
   // Lead capture state
   const [contactName, setContactName] = useState('');
@@ -238,7 +233,7 @@ export default function OrthopedicOncologyScrubber() {
     if (!contactEmail) return;
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('orthopedic_oncology_rcm_audit', {
+      if (!(await sendLeadToKiran('orthopedic_oncology_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -252,7 +247,7 @@ export default function OrthopedicOncologyScrubber() {
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
         cleanClaimScore: auditResult.cleanClaimScore,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Lead submit error:', err);
@@ -304,7 +299,7 @@ export default function OrthopedicOncologyScrubber() {
                   <button
                     key={s.id}
                     type="button"
-                    onClick={() => setResectionSite(s.id as any)}
+                    onClick={() => setResectionSite(s.id as typeof resectionSite)}
                     className={`px-3 py-2.5 rounded-lg text-xs font-bold border transition-all text-left ${
                       resectionSite === s.id
                         ? 'bg-navy text-white border-navy shadow-sm'
@@ -324,7 +319,7 @@ export default function OrthopedicOncologyScrubber() {
               </label>
               <select
                 value={reconstructionType}
-                onChange={(e) => setReconstructionType(e.target.value as any)}
+                onChange={(e) => setReconstructionType(e.target.value as typeof reconstructionType)}
                 className="w-full bg-white border border-gray/20 rounded-lg p-2.5 text-xs sm:text-sm font-semibold text-navy focus:ring-2 focus:ring-teal focus:border-teal"
               >
                 <option value="modular_femur">Modular Distal Femoral Mega-Prosthesis (27599 + Mod 22)</option>
@@ -349,7 +344,7 @@ export default function OrthopedicOncologyScrubber() {
                   <button
                     key={f.id}
                     type="button"
-                    onClick={() => setSoftTissueCoverage(f.id as any)}
+                    onClick={() => setSoftTissueCoverage(f.id as typeof softTissueCoverage)}
                     className={`px-3 py-2 rounded-lg text-xs font-bold border transition-all text-left ${
                       softTissueCoverage === f.id
                         ? 'bg-teal text-white border-teal shadow-sm'
@@ -369,7 +364,7 @@ export default function OrthopedicOncologyScrubber() {
               </label>
               <select
                 value={surgicalTeam}
-                onChange={(e) => setSurgicalTeam(e.target.value as any)}
+                onChange={(e) => setSurgicalTeam(e.target.value as typeof surgicalTeam)}
                 className="w-full bg-white border border-gray/20 rounded-lg p-2.5 text-xs sm:text-sm font-semibold text-navy focus:ring-2 focus:ring-teal focus:border-teal"
               >
                 <option value="co_surgeons_62">Co-Surgeons (Mod -62: Orthopedic Oncology + Reconstructive Plastics)</option>

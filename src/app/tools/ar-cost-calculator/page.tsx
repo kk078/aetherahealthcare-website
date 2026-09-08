@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -7,6 +8,7 @@ import { ArrowLeft } from 'lucide-react';
 import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/ar-cost-calculator') },
   title: { absolute: 'A/R Days Cost Calculator — What Slow Accounts Receivable Costs You | Aethera Healthcare Solutions' },
   description:
     'Free A/R days cost calculator. See the cash tied up in slow accounts receivable and the annual carrying cost of staying above your target days-in-A/R.',

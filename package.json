@@ -6,31 +6,46 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "eslint . --max-warnings=0",
     "test:e2e": "playwright test --project=chromium",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:unit": "tsx --test tests/unit/*.test.ts",
+    "routes:generate": "node scripts/generate-routes.mjs",
+    "routes:check": "node scripts/generate-routes.mjs --check",
+    "prebuild": "npm run workers:build && npm run routes:generate",
+    "serve:export": "node scripts/serve-export.mjs",
+    "check": "npm run routes:check && npm run lint && npm run typecheck && npm run test:unit",
+    "workers:build": "node scripts/build-workers.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-dialog": "^1.1.15",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.16.0",
-    "next": "16.2.6",
+    "next": "^16.3.4",
     "pdfjs-dist": "^4.8.69",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-hook-form": "^7.75.0",
-    "xlsx": "^0.18.5"
+    "sanitize-html": "^2.17.7",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@cloudflare/workers-types": "^5.20260907.1",
     "@playwright/test": "^1.60.0",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^22.20.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/sanitize-html": "^2.16.1",
+    "esbuild": "^0.28.2",
     "eslint": "^9",
-    "eslint-config-next": "16.2.6",
+    "eslint-config-next": "^16.3.4",
+    "eslint-plugin-unused-imports": "^4.4.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsx": "^4.23.13",
+    "typescript": "^5",
+    "wrangler": "^4.129.1"
   }
 }

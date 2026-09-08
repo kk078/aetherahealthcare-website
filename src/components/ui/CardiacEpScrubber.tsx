@@ -11,15 +11,7 @@ import {
   Loader2,
   FileCode,
   ShieldCheck,
-  Calculator,
-  ChevronRight,
-  Info,
-  Layers,
-  FileText,
-  DollarSign,
   HeartPulse,
-  Radio,
-  Zap,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -239,7 +231,7 @@ IEA*1*000000001~`;
     };
 
     try {
-      await sendLeadToKiran('cardiac_ep_scrubber_audit', payload);
+      if (!(await sendLeadToKiran('cardiac_ep_scrubber_audit', payload))) { setSubmitting(false); return; }
       trackConversion('assessment', totalAblationAllowed);
       setSubmitted(true);
     } catch (err) {
@@ -447,7 +439,7 @@ IEA*1*000000001~`;
                 <button
                   key={d.id}
                   type="button"
-                  onClick={() => setDeviceType(d.id as any)}
+                  onClick={() => setDeviceType(d.id as typeof deviceType)}
                   className={`py-2 px-3 rounded-xl border text-xs font-bold transition-all ${
                     deviceType === d.id
                       ? 'bg-blue-600 text-white border-blue-600 shadow-xs'

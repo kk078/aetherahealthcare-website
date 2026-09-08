@@ -14,11 +14,8 @@ import {
   Zap,
   Info,
   Layers,
-  Sparkles,
   Scissors,
   Brain,
-  Eye,
-  GitBranch,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -271,7 +268,7 @@ export default function PediatricEpilepsyScrubber() {
     } else if (resectionType === 'laser_interstitial_thermal') {
       const littFee = 4950.0;
       const littRvu = 64.2;
-      let modStr = isStagedWithinGlobal ? (hasModifier58 ? '58' : 'UNBUNDLED (GLOBAL)') : 'None';
+      const modStr = isStagedWithinGlobal ? (hasModifier58 ? '58' : 'UNBUNDLED (GLOBAL)') : 'None';
 
       if (isStagedWithinGlobal && !hasModifier58) {
         penaltyAtRisk += littFee;
@@ -434,7 +431,7 @@ export default function PediatricEpilepsyScrubber() {
         auditNotes,
       };
 
-      await sendLeadToKiran('pediatric_epilepsy_rcm_audit', payload);
+      if (!(await sendLeadToKiran('pediatric_epilepsy_rcm_audit', payload))) { setIsSubmitting(false); return; }
       trackConversion('calculator', scrubberResult.penaltyAtRisk);
 
       setLeadSuccess(true);
@@ -547,7 +544,7 @@ export default function PediatricEpilepsyScrubber() {
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => setMonitoringType(item.id as any)}
+                      onClick={() => setMonitoringType(item.id as typeof monitoringType)}
                       className={`text-left p-3.5 rounded-lg border transition-all ${
                         monitoringType === item.id
                           ? 'border-purple-600 bg-purple-50/50 shadow-sm ring-1 ring-purple-500'
@@ -637,7 +634,7 @@ export default function PediatricEpilepsyScrubber() {
                     <button
                       key={item.id}
                       type="button"
-                      onClick={() => setResectionType(item.id as any)}
+                      onClick={() => setResectionType(item.id as typeof resectionType)}
                       className={`text-left p-3.5 rounded-lg border transition-all ${
                         resectionType === item.id
                           ? 'border-purple-600 bg-purple-50/50 shadow-sm ring-1 ring-purple-500'

@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
-const ARTIFACT_DIR = '/home/kiran/.gemini/antigravity-cli/brain/50b59a0e-93e4-4856-9aa8-61204b485c5c';
+const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('Next-Gen Compliance, EDI & Practice Intelligence Suite', () => {
 
@@ -109,23 +109,23 @@ test.describe('Next-Gen Compliance, EDI & Practice Intelligence Suite', () => {
 
   test('Case Studies Hub: displays 10 specialty case studies with interactive filtering and search', async ({ page }) => {
     await page.goto('/case-studies/');
-    const h1 = page.getByRole('heading', { level: 1, name: /Real practices\. Measurable results\./i });
+    const h1 = page.getByRole('heading', { level: 1, name: /Billing challenges\. Practical scenarios\./i });
     await expect(h1).toBeVisible();
     await expect(page.getByText(/All Specialties \(10\)/i)).toBeVisible();
 
     // Check presence of initial case studies
-    await expect(page.getByText('Midwest Cardiovascular Specialists · Illinois')).toBeVisible();
+    await expect(page.getByText('Cardiology practice — illustrative scenario')).toBeVisible();
 
     // Test search filter
     const searchInput = page.getByPlaceholder('Filter by specialty or clinical code…');
-    await searchInput.fill('NeuroDiagnostic');
-    await expect(page.getByText('NeuroDiagnostic Associates · North Carolina')).toBeVisible();
-    await expect(page.getByText('Midwest Cardiovascular Specialists · Illinois')).not.toBeVisible();
+    await searchInput.fill('Neurology');
+    await expect(page.getByText('Neurology & Sleep Medicine practice — illustrative scenario')).toBeVisible();
+    await expect(page.getByText('Cardiology practice — illustrative scenario')).not.toBeVisible();
 
     // Clear search and test category filter
     await searchInput.clear();
     await page.getByRole('button', { name: /Surgical & Procedural/i }).click();
-    await expect(page.getByText('Apex Orthopedic & Spine Surgery · Florida')).toBeVisible();
+    await expect(page.getByText('Orthopedic Surgery practice — illustrative scenario')).toBeVisible();
 
     await page.screenshot({ path: `${ARTIFACT_DIR}/case_studies_hub.png`, fullPage: false });
   });
@@ -134,11 +134,11 @@ test.describe('Next-Gen Compliance, EDI & Practice Intelligence Suite', () => {
     await page.goto('/tools/');
     const h1 = page.getByRole('heading', { level: 1, name: /\d+ Free Medical Billing & RCM Tools/i });
     await expect(h1).toBeVisible();
-    await expect(page.getByText(/All Tools \(\d+\)/i)).toBeVisible();
+    await expect(page.getByRole('button', { name: /All Tools \(\d+\)/i })).toBeVisible();
 
     // Verify featured sandbox banner
     await expect(page.getByText(/Featured Interactive Simulation/i)).toBeVisible();
-    await expect(page.getByRole('link', { name: /Launch Live Portal Sandbox/i })).toBeVisible();
+    await expect(page.getByRole('link', { name: /Explore Portal Demo/i })).toBeVisible();
 
     // Verify new tools are listed
     await expect(page.getByText('No Surprises Act GFE Generator')).toBeVisible();
@@ -149,7 +149,7 @@ test.describe('Next-Gen Compliance, EDI & Practice Intelligence Suite', () => {
     await expect(page.getByText('Provider Credentialing Timeline Estimator')).toBeVisible();
 
     // Filter by EDI & Interoperability
-    await page.getByRole('button', { name: /EDI & Interoperability/i }).click();
+    await page.getByRole('button', { name: /EDI tools/i }).click();
     await expect(page.getByText('ANSI X12 270/271 Eligibility Validator')).toBeVisible();
     await expect(page.getByText('No Surprises Act GFE Generator')).not.toBeVisible();
 

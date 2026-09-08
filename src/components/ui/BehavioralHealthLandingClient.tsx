@@ -5,15 +5,10 @@ import {
   Sparkles,
   ShieldCheck,
   CheckCircle2,
-  DollarSign,
-  TrendingUp,
-  Clock,
-  Phone,
   ArrowRight,
   Loader2,
   Check,
   AlertCircle,
-  Building2,
   Lock,
   Layers,
   Activity,
@@ -199,7 +194,7 @@ export default function BehavioralHealthLandingClient() {
                 </label>
                 <select
                   value={levelOfCare}
-                  onChange={(e) => setLevelOfCare(e.target.value as any)}
+                  onChange={(e) => setLevelOfCare(e.target.value as typeof levelOfCare)}
                   className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white text-xs sm:text-sm focus:outline-none focus:border-teal-500"
                 >
                   <option value="residential">Residential Detox &amp; RTC ($950/day)</option>

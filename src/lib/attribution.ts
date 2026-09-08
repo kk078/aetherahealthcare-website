@@ -1,3 +1,4 @@
+import { getConsent } from './consent';
 /**
  * Marketing Attribution & Campaign Telemetry Engine.
  *
@@ -6,7 +7,7 @@
  * sessionStorage (with in-memory fallback) across internal client navigations,
  * and attaches them automatically to lead submissions routed to Kiran.
  *
- * Adheres strictly to zero-persistence HIPAA compliance — data is purely session-scoped.
+ * Captured only after optional analytics consent; never a HIPAA compliance guarantee.
  */
 
 export interface CampaignAttribution {
@@ -34,7 +35,7 @@ let inMemoryAttribution: CampaignAttribution | null = null;
  * Only saves if not already captured in the current session.
  */
 export function captureAttribution(): CampaignAttribution | null {
-  if (typeof window === 'undefined') return null;
+  if (typeof window === 'undefined' || getConsent() !== 'accepted') return null;
 
   try {
     // If we already have stored attribution for this session, return it
@@ -55,10 +56,6 @@ export function captureAttribution(): CampaignAttribution | null {
     const fbclid = params.get('fbclid') || undefined;
     const msclkid = params.get('msclkid') || undefined;
     const liFatId = params.get('li_fat_id') || undefined;
-
-    const hasCampaignData = Boolean(
-      utmSource || utmMedium || utmCampaign || gclid || fbclid || msclkid || liFatId
-    );
 
     const attribution: CampaignAttribution = {
       utmSource: utmSource || (document.referrer ? 'organic_or_referral' : 'direct'),
@@ -94,7 +91,7 @@ export function captureAttribution(): CampaignAttribution | null {
  * Retrieves the current session's campaign attribution data.
  */
 export function getAttribution(): CampaignAttribution | null {
-  if (typeof window === 'undefined') return null;
+  if (typeof window === 'undefined' || getConsent() !== 'accepted') return null;
 
   if (inMemoryAttribution) return inMemoryAttribution;
 

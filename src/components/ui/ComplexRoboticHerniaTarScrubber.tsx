@@ -6,12 +6,8 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
   Activity,
   Send,
-  Sparkles,
-  HelpCircle,
-  Stethoscope,
   Layers,
   Copy,
   Sliders,
@@ -243,17 +239,7 @@ export default function ComplexRoboticHerniaTarScrubber() {
       atRiskValue,
       primaryCode,
     };
-  }, [
-    herniaType,
-    acuity,
-    defectSizeCm,
-    sizeCategory,
-    performTar,
-    placeMesh,
-    nonContiguousDefects,
-    extensiveAdhesiolysis,
-    assistantSurgeonMod80,
-  ]);
+  }, [herniaType, acuity, sizeCategory, performTar, placeMesh, nonContiguousDefects, extensiveAdhesiolysis, assistantSurgeonMod80]);
 
   // Lead submission
   const handleSubmitLead = async (e: React.FormEvent) => {
@@ -262,7 +248,7 @@ export default function ComplexRoboticHerniaTarScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('complex_robotic_hernia_rcm_audit', {
+      if (!(await sendLeadToKiran('complex_robotic_hernia_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -276,7 +262,7 @@ export default function ComplexRoboticHerniaTarScrubber() {
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
         primaryCode: auditResult.primaryCode,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Submission failed', err);
@@ -348,7 +334,7 @@ ${auditResult.warnings.map((w, i) => `! WARNING ${i + 1}: ${w}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setHerniaType(item.id as any)}
+                    onClick={() => setHerniaType(item.id as typeof herniaType)}
                     className={`px-3 py-2 text-xs font-medium rounded-xl border text-center transition-all ${
                       herniaType === item.id
                         ? 'bg-navy text-white border-navy shadow-sm'
@@ -374,7 +360,7 @@ ${auditResult.warnings.map((w, i) => `! WARNING ${i + 1}: ${w}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setAcuity(item.id as any)}
+                    onClick={() => setAcuity(item.id as typeof acuity)}
                     className={`px-3 py-2 text-xs font-medium rounded-xl border text-center transition-all ${
                       acuity === item.id
                         ? 'bg-navy text-white border-navy shadow-sm'

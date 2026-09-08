@@ -11,11 +11,7 @@ import {
   Loader2,
   FileCode,
   ShieldCheck,
-  FileText,
-  DollarSign,
-  Layers,
   Sparkles,
-  Zap,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
@@ -260,7 +256,7 @@ IEA*1*000000001~`;
     };
 
     try {
-      await sendLeadToKiran('retina_injection_scrubber_audit', payload);
+      if (!(await sendLeadToKiran('retina_injection_scrubber_audit', payload))) { setSubmitting(false); return; }
       trackConversion('assessment', dosageCalculations.totalAllowed);
       setSubmitted(true);
     } catch (err) {
@@ -369,7 +365,7 @@ IEA*1*000000001~`;
                 <button
                   key={lat.id}
                   type="button"
-                  onClick={() => setEyeLaterality(lat.id as any)}
+                  onClick={() => setEyeLaterality(lat.id as typeof eyeLaterality)}
                   className={`py-2 px-2.5 rounded-xl border text-xs font-bold transition-all text-center ${
                     eyeLaterality === lat.id
                       ? 'bg-navy text-white border-navy shadow-xs'

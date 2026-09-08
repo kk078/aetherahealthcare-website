@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
-const ARTIFACT_DIR = '/home/kiran/.gemini/antigravity-cli/brain/50b59a0e-93e4-4856-9aa8-61204b485c5c';
+const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('New Specialty Workflows, Anesthesia Calculator & Platform Telemetry', () => {
 
@@ -68,36 +68,14 @@ test.describe('New Specialty Workflows, Anesthesia Calculator & Platform Telemet
     await page.screenshot({ path: `${ARTIFACT_DIR}/anesthesia_calculator_tool.png`, fullPage: false });
   });
 
-  test('Platform Telemetry Dashboard displays live edge metrics, EDI throughput and zero-storage HIPAA security', async ({ page }) => {
+  test('Browser telemetry labels measurements and limits honestly', async ({ page }) => {
     await page.goto('/tools/platform-telemetry/');
-
-    await expect(page.getByRole('heading', { level: 1, name: /Platform Telemetry & System SLAs/i })).toBeVisible();
-    await expect(page.getByText(/Client TTFB \(Origin\)/i)).toBeVisible();
-    await expect(page.getByText(/Core Web Vitals LCP/i)).toBeVisible();
-    await expect(page.getByText(/Clean Claim Rate SLA/i)).toBeVisible();
-    await expect(page.getByText(/Session Data Storage/i)).toBeVisible();
-    await expect(page.getByText(/0 Bytes/i)).toBeVisible();
-
-    // Verify Edge PoP list
-    await expect(page.getByText('Ashburn, VA')).toBeVisible();
-    await expect(page.getByText('San Jose, CA')).toBeVisible();
-    await expect(page.getByText('Change Healthcare Direct Gateway')).toBeVisible();
-
-    // Verify EDI SLAs
-    await expect(page.getByText(/EDI 837 Claim Scrub & Dispatch/i)).toBeVisible();
-    await expect(page.getByText(/EDI 835 Remittance Auto-Posting/i)).toBeVisible();
-    await expect(page.getByText(/EDI 270\/271 Real-Time Eligibility/i)).toBeVisible();
-
-    // Verify HIPAA zero-persistence card
-    await expect(page.getByText(/5-Minute Inactivity Memory Sweep for all users/i)).toBeVisible();
-
-    // Click Rerun Diagnostic
-    const rerunBtn = page.getByRole('button', { name: /Rerun Diagnostic/i });
-    await rerunBtn.click();
-    await page.waitForTimeout(700);
-
-    // Capture screenshot
-    await page.screenshot({ path: `${ARTIFACT_DIR}/platform_telemetry_dashboard.png`, fullPage: false });
+    await expect(page.getByRole('heading', { level: 1, name: 'Browser Performance Measurements' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'DNS lookup' })).toBeVisible();
+    await expect(page.getByText(/Infrastructure and clearinghouse measurements are not connected/)).toBeVisible();
+    await expect(page.getByText('Ashburn, VA', { exact: true })).toHaveCount(0);
+    await page.getByRole('button', { name: 'Refresh measurements' }).click();
+    await expect(page.getByRole('status')).toContainText('Last measured:');
   });
 
   test('Tools directory indexes 25 tools and filters new tools properly', async ({ page }) => {
@@ -113,7 +91,7 @@ test.describe('New Specialty Workflows, Anesthesia Calculator & Platform Telemet
 
     // Search for Telemetry
     await searchInput.fill('Telemetry');
-    await expect(page.getByRole('heading', { name: /Platform Telemetry & Clearinghouse SLA Dashboard/i })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Browser Performance & Telemetry Measurements/i })).toBeVisible();
   });
 
 });

@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
-const ARTIFACT_DIR = '/home/kiran/.gemini/antigravity-cli/brain/50b59a0e-93e4-4856-9aa8-61204b485c5c';
+const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('Solo Practice Funnel, Nephrology & ENT Specialties, and 29-Tool Suite', () => {
 
@@ -45,14 +45,14 @@ test.describe('Solo Practice Funnel, Nephrology & ENT Specialties, and 29-Tool S
     await expect(page.getByText(/How do you prevent denials when billing nasal endoscopy \(31231\) with an office visit\?/i)).toBeVisible();
   });
 
-  test('Claim Denial Overturn Probability & Strategy Predictor calculates likelihood and ERISA citations', async ({ page }) => {
+  test('Denial Appeal Readiness & Review Checklist calculates likelihood and ERISA citations', async ({ page }) => {
     await page.goto('/tools/denial-overturn-predictor/');
 
-    await expect(page.getByRole('heading', { level: 1, name: /Claim Denial Overturn Probability & Strategy Predictor/i })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: /Denial Appeal Readiness & Review Checklist/i })).toBeVisible();
 
     // Select CO-50 and verify overturn probability
     await page.selectOption('select#carc-select', 'CO-50');
-    await expect(page.getByText(/Overturn Likelihood on Level 1 Appeal/i)).toBeVisible();
+    await expect(page.getByText(/Document Readiness Score/i)).toBeVisible();
     await expect(page.getByText(/CMS Medicare Claims Processing Manual Pub. 100-04/i)).toBeVisible();
 
     // Switch to CO-197 and verify emergency/EMTALA strategy
@@ -91,13 +91,13 @@ test.describe('Solo Practice Funnel, Nephrology & ENT Specialties, and 29-Tool S
     await expect(page.getByPlaceholder(/Search \d+ free tools & engines/i)).toBeVisible();
 
     // Verify both new tools are present
-    await expect(page.getByRole('heading', { level: 3, name: /Claim Denial Overturn Probability & Strategy Predictor/i })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 3, name: /Denial Appeal Readiness & Review Checklist/i })).toBeVisible();
     await expect(page.getByRole('heading', { level: 3, name: /50-State Prompt-Payment Statute & Penalty Matrix/i })).toBeVisible();
 
     // Test search filter
     const toolSearch = page.getByPlaceholder(/Search \d+ free tools & engines/i);
-    await toolSearch.fill('Overturn');
-    await expect(page.getByRole('heading', { level: 3, name: /Claim Denial Overturn Probability & Strategy Predictor/i })).toBeVisible();
+    await toolSearch.fill('Readiness');
+    await expect(page.getByRole('heading', { level: 3, name: /Denial Appeal Readiness & Review Checklist/i })).toBeVisible();
   });
 
 });

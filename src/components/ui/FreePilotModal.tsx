@@ -1,4 +1,5 @@
 'use client';
+import AccessibleDialog from './AccessibleDialog';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -10,16 +11,14 @@ import {
   FileCheck2,
   Lock,
   ArrowRight,
-  Phone,
-  Building2,
   Loader2,
   AlertCircle,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';
 
-export default function FreePilotModal() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function FreePilotModal({ initialOpen = false }: { initialOpen?: boolean }) {
+  const [isOpen, setIsOpen] = useState(initialOpen);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -44,29 +43,6 @@ export default function FreePilotModal() {
     window.addEventListener('open-free-pilot-modal', handleOpen);
     return () => window.removeEventListener('open-free-pilot-modal', handleOpen);
   }, []);
-
-  // Handle ESC key to close modal
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isOpen) {
-        setIsOpen(false);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen]);
-
-  // Lock body scroll when modal is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
 
   const closeModal = () => {
     setIsOpen(false);
@@ -114,14 +90,8 @@ export default function FreePilotModal() {
   if (!isOpen) return null;
 
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="pilot-modal-title"
+    <AccessibleDialog open={isOpen} onClose={closeModal} title="Free 50-Claim Pilot"
       className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-slate-950/70 backdrop-blur-sm animate-fade-in"
-      onClick={e => {
-        if (e.target === e.currentTarget) closeModal();
-      }}
     >
       <div className="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-gray/20 dark:border-slate-800 overflow-hidden my-8 transition-all">
         {/* Top Header Banner */}
@@ -235,10 +205,10 @@ export default function FreePilotModal() {
               {/* Row 1: Contact Name & Practice Name */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label htmlFor="pilot-field-1" className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                     Contact Name <span className="text-red-500">*</span>
                   </label>
-                  <input
+                  <input id="pilot-field-1"
                     type="text"
                     required
                     placeholder="e.g. Dr. Jane Smith / Practice Admin"
@@ -248,10 +218,10 @@ export default function FreePilotModal() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label htmlFor="pilot-field-2" className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                     Practice / Clinic Name <span className="text-red-500">*</span>
                   </label>
-                  <input
+                  <input id="pilot-field-2"
                     type="text"
                     required
                     placeholder="e.g. Metro Specialty Clinic"
@@ -265,11 +235,11 @@ export default function FreePilotModal() {
               {/* Row 2: Email & Phone */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label htmlFor="pilot-field-3" className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                     Work Email <span className="text-red-500">*</span>
                   </label>
-                  <input
-                    type="email"
+                  <input id="pilot-field-3"
+                    autoComplete="email" type="email"
                     required
                     placeholder="doctor@practice.com"
                     value={email}
@@ -278,11 +248,11 @@ export default function FreePilotModal() {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label htmlFor="pilot-field-4" className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                     Phone Number <span className="text-red-500">*</span>
                   </label>
-                  <input
-                    type="tel"
+                  <input id="pilot-field-4"
+                    autoComplete="tel" type="tel"
                     required
                     placeholder="(555) 000-0000"
                     value={phone}
@@ -295,10 +265,10 @@ export default function FreePilotModal() {
               {/* Row 3: Specialty & Practice Size */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label htmlFor="pilot-field-5" className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                     Primary Clinical Specialty
                   </label>
-                  <select
+                  <select id="pilot-field-5"
                     value={specialty}
                     onChange={e => setSpecialty(e.target.value)}
                     className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-gray/30 dark:border-slate-700 bg-white dark:bg-slate-800 text-navy dark:text-white focus:outline-none focus:ring-2 focus:ring-teal"
@@ -318,10 +288,10 @@ export default function FreePilotModal() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label htmlFor="pilot-field-6" className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                     Number of Clinicians
                   </label>
-                  <select
+                  <select id="pilot-field-6"
                     value={providerCount}
                     onChange={e => setProviderCount(e.target.value)}
                     className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-gray/30 dark:border-slate-700 bg-white dark:bg-slate-800 text-navy dark:text-white focus:outline-none focus:ring-2 focus:ring-teal"
@@ -337,10 +307,10 @@ export default function FreePilotModal() {
               {/* Row 4: EHR System & Monthly Claim Volume */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label htmlFor="pilot-field-7" className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                     Current EHR / Billing Software
                   </label>
-                  <select
+                  <select id="pilot-field-7"
                     value={ehrSystem}
                     onChange={e => setEhrSystem(e.target.value)}
                     className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-gray/30 dark:border-slate-700 bg-white dark:bg-slate-800 text-navy dark:text-white focus:outline-none focus:ring-2 focus:ring-teal"
@@ -358,10 +328,10 @@ export default function FreePilotModal() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  <label htmlFor="pilot-field-8" className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                     Monthly Claims Volume
                   </label>
-                  <select
+                  <select id="pilot-field-8"
                     value={claimVolume}
                     onChange={e => setClaimVolume(e.target.value)}
                     className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-gray/30 dark:border-slate-700 bg-white dark:bg-slate-800 text-navy dark:text-white focus:outline-none focus:ring-2 focus:ring-teal"
@@ -376,10 +346,10 @@ export default function FreePilotModal() {
 
               {/* Optional Bottleneck / Note */}
               <div>
-                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                <label htmlFor="pilot-field-9" className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                   Primary Revenue Bottleneck <span className="text-slate-400 font-normal">(Optional)</span>
                 </label>
-                <textarea
+                <textarea id="pilot-field-9"
                   rows={2}
                   placeholder="e.g. Dealing with high commercial denials, A/R over 45 days, or losing staff..."
                   value={bottleneck}
@@ -425,6 +395,6 @@ export default function FreePilotModal() {
           )}
         </div>
       </div>
-    </div>
+    </AccessibleDialog>
   );
 }

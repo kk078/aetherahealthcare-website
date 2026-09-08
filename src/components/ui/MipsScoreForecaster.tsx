@@ -2,7 +2,6 @@
 
 import React, { useState, useMemo } from 'react';
 import {
-  Award,
   Calculator,
   TrendingDown,
   TrendingUp,
@@ -10,16 +9,11 @@ import {
   CheckCircle2,
   Copy,
   Check,
-  Send,
   Loader2,
   ArrowRight,
   ShieldCheck,
   Sparkles,
-  DollarSign,
-  HelpCircle,
-  FileCheck2,
   Activity,
-  Zap,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
@@ -134,7 +128,7 @@ COMPLIANCE ACTION RECOMMENDATIONS:
     setLeadLoading(true);
 
     try {
-      await sendLeadToKiran('mips_performance_audit_request', {
+      if (!(await sendLeadToKiran('mips_performance_audit_request', {
         source: 'MIPS Score Forecaster & Compliance Tool',
         name: leadName || 'MIPS Quality Director',
         email: leadEmail,
@@ -145,7 +139,7 @@ Medicare Part B Rev: $${medicareRevenue.toLocaleString()} (${clinicianCount} NPI
 MIPS Composite Score: ${results.compositeScore}/100 pts (Status: ${results.status.toUpperCase()})
 Payment Adjustment: ${results.paymentAdjPct >= 0 ? '+' : ''}${results.paymentAdjPct}% (${results.annualDollarImpact >= 0 ? '+' : ''}$${results.annualDollarImpact.toLocaleString()}/yr)
 Category Breakdown: Quality ${qualityScore}%, PI ${piScore}%, IA ${iaScore}%, Cost ${costScore}%`,
-      });
+      }))) {  return; }
       setLeadSubmitted(true);
     } catch {
       setLeadSubmitted(true);

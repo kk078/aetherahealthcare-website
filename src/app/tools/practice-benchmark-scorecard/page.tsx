@@ -1,11 +1,13 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import PracticeBenchmarkScorecard from '@/components/ui/PracticeBenchmarkScorecard';
-import { Award, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Award, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'MGMA Practice Health Index & Specialty Scorecard | Aethera Healthcare',
+  alternates: { canonical: canonicalUrl('/tools/practice-benchmark-scorecard') },
+  title: { absolute: 'MGMA Practice Health Index & Specialty Scorecard | Aethera Healthcare' },
   description:
     'Benchmark your medical practice revenue cycle against national MGMA & HFMA standards. Calculate Days in AR performance, denial rates, and annual recoverable cash lift.',
 };

@@ -4,11 +4,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import {
   Sparkles,
-  ShieldCheck,
   CheckCircle2,
   DollarSign,
-  TrendingUp,
-  Clock,
   Calendar,
   ArrowRight,
   Loader2,
@@ -32,7 +29,7 @@ export default function DenialPilotLandingClient() {
   const [phone, setPhone] = useState('');
   const [specialty, setSpecialty] = useState('Cardiology');
   const [ehrSystem, setEhrSystem] = useState('Epic');
-  const [claimVolume, setClaimVolume] = useState('500–1,500 claims/mo');
+  const [claimVolume] = useState('500–1,500 claims/mo');
   const [hp, setHp] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');

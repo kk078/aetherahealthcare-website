@@ -447,4 +447,13 @@ html.dark .border-amber-200 {
     content: none !important;
   }
 }
-
+
+/* Semantic surfaces for shared controls; new components do not depend on utility overrides. */
+:root { --surface-card: #ffffff; --surface-text: #0f2340; --surface-muted: #475569; --surface-border: #cbd5e1; }
+.dark { --surface-card: #0c1b2d; --surface-text: #f1f5f9; --surface-muted: #cbd5e1; --surface-border: #334155; }
+.surface-card { background-color: var(--surface-card); color: var(--surface-text); border-color: var(--surface-border); }
+.text-muted { color: var(--surface-muted); }
+:focus-visible { outline: 3px solid #0d9488; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}

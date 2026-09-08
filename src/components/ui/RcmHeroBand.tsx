@@ -80,7 +80,7 @@ export default function RcmHeroBand({
             )}
           </div>
 
-          <div className="relative h-[240px] sm:h-[300px] lg:h-[380px] w-full lg:w-[110%] lg:-mr-[10%]">
+          <div className="relative hidden lg:block h-[380px] w-full min-w-0">
             <RCMBillingFlow compact={compact} />
           </div>
         </div>

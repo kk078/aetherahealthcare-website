@@ -1,18 +1,17 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, Sparkles, ShieldCheck } from 'lucide-react';
 import MedicareAdvantageLandingClient from '@/components/ui/MedicareAdvantageLandingClient';
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl('/lp/medicare-advantage-rcm') },
+  robots: { index: false, follow: true },
   title: {
     absolute: 'Medicare Advantage & D-SNP Medical Billing Services | Aethera Healthcare Solutions',
   },
   description:
     'Dedicated Medicare Advantage (MA) and Dual-Eligible Special Needs Plan (D-SNP) revenue cycle management. Eliminate secondary crossover drops, ensure QMB balance billing compliance, and defend CMS-HCC v28 RAF scores.',
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function MedicareAdvantageLandingPage() {

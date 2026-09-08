@@ -1,9 +1,9 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 import path from 'path';
 
 const ARTIFACT_DIR = path.resolve(
   process.env.ARTIFACT_DIR ||
-  '/home/kiran/.gemini/antigravity-cli/brain/50b59a0e-93e4-4856-9aa8-61204b485c5c'
+  '/tmp/aethera-e2e'
 );
 
 test.describe('Specialties 49-50 and Tools 54-55: Hepatobiliary Surgery & Pediatric Cellular Oncology Suites', () => {

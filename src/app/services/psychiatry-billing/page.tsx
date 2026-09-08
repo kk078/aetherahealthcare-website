@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, AlertCircle, TrendingUp, Shield, DollarSign, FileText, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -6,7 +7,8 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
-  title: 'Psychiatry & Behavioral Health Billing | RCM for Psychiatrists | Aethera Healthcare',
+  alternates: { canonical: canonicalUrl('/services/psychiatry-billing') },
+  title: { absolute: 'Psychiatry & Behavioral Health Billing | RCM for Psychiatrists | Aethera Healthcare' },
   description: 'Specialized psychiatry and behavioral health billing: medication management, psychotherapy add-ons, collaborative care, telehealth, and mental health parity compliance. 96.1% clean claim rate.',
 };
 

@@ -8,17 +8,12 @@ import {
   CheckCircle2,
   Copy,
   Check,
-  Send,
   Loader2,
   FileCode,
   Sparkles,
-  Info,
   Clock,
   ShieldAlert,
   ArrowRight,
-  Stethoscope,
-  Building2,
-  HelpCircle,
   FileText,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -421,7 +416,7 @@ export default function GlobalPeriodScrubber() {
                   </label>
                   <select
                     value={globalPeriodDays}
-                    onChange={(e) => setGlobalPeriodDays(e.target.value as any)}
+                    onChange={(e) => setGlobalPeriodDays(e.target.value as typeof globalPeriodDays)}
                     className="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-white text-sm"
                   >
                     <option value="090">090 (Major 90-Day)</option>

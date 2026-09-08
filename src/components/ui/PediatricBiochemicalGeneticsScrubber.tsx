@@ -4,20 +4,13 @@ import React, { useState, useMemo } from 'react';
 import {
   ShieldAlert,
   CheckCircle2,
-  AlertTriangle,
   FileText,
-  DollarSign,
-  Activity,
   Send,
   Sparkles,
-  HelpCircle,
   Dna,
-  ChevronRight,
-  Layers,
   Copy,
   FlaskConical,
 } from 'lucide-react';
-import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 import { sendLeadToKiran } from '@/lib/worker';
 
 interface LineItem {
@@ -205,7 +198,7 @@ export default function PediatricBiochemicalGeneticsScrubber() {
       atRiskValue,
       cleanAllowed: grossValue,
     };
-  }, [metabolicCondition, aminoAcidMethod, includeUrineOrganic, includeCarnitine, visitType, prolongedTimeUnits, medicalFoodOption, ammoniaRescue]);
+  }, [aminoAcidMethod, includeUrineOrganic, includeCarnitine, visitType, prolongedTimeUnits, medicalFoodOption, ammoniaRescue]);
 
   // Lead submission
   const handleSubmitLead = async (e: React.FormEvent) => {
@@ -214,7 +207,7 @@ export default function PediatricBiochemicalGeneticsScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('pediatric_biochemical_genetics_rcm_audit', {
+      if (!(await sendLeadToKiran('pediatric_biochemical_genetics_rcm_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -228,7 +221,7 @@ export default function PediatricBiochemicalGeneticsScrubber() {
         medicalFoodOption,
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Submission failed', err);
@@ -302,7 +295,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setMetabolicCondition(item.id as any)}
+                    onClick={() => setMetabolicCondition(item.id as typeof metabolicCondition)}
                     className={`p-2.5 rounded-xl border text-xs font-semibold transition-all ${
                       metabolicCondition === item.id
                         ? 'border-teal bg-teal/10 text-teal'
@@ -435,7 +428,7 @@ ${auditResult.recommendations.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setMedicalFoodOption(item.id as any)}
+                    onClick={() => setMedicalFoodOption(item.id as typeof medicalFoodOption)}
                     className={`p-2.5 rounded-xl border text-xs font-semibold transition-all ${
                       medicalFoodOption === item.id
                         ? item.id === 'b4157_unauthorized'

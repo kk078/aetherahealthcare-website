@@ -6,17 +6,12 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
   Activity,
   Send,
-  Sparkles,
-  HelpCircle,
   Layers,
   Copy,
   Sliders,
   ShieldCheck,
-  Scissors,
-  Users,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
@@ -193,7 +188,7 @@ export default function AdultRetroperitonealSarcomaScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('adult_retroperitoneal_sarcoma_audit', {
+      if (!(await sendLeadToKiran('adult_retroperitoneal_sarcoma_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -206,7 +201,7 @@ export default function AdultRetroperitonealSarcomaScrubber() {
         coSurgeonMod62,
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Lead submission failed', err);
@@ -280,7 +275,7 @@ ${auditResult.warnings.map((w, idx) => `! WARNING ${idx + 1}: ${w}`).join('\n')}
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setTumorSize(item.id as any)}
+                    onClick={() => setTumorSize(item.id as typeof tumorSize)}
                     className={`py-3 px-2 text-xs font-bold rounded-xl border text-center transition-all ${
                       tumorSize === item.id
                         ? 'bg-navy text-white border-navy shadow-sm'

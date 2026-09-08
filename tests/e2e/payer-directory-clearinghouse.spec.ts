@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 test.describe('National Clearinghouse Payer Directory Integration', () => {
 
@@ -11,7 +11,7 @@ test.describe('National Clearinghouse Payer Directory Integration', () => {
 
     // Verify dataset status indicator updates
     await expect(page.locator('text=Payers Active').first()).toBeVisible({ timeout: 10000 });
-    await page.screenshot({ path: '/home/kiran/.gemini/antigravity-cli/brain/50b59a0e-93e4-4856-9aa8-61204b485c5c/merged_payer_directory.png' });
+    await page.screenshot({ path: '/tmp/aethera-e2e/payer-directory-clearinghouse.png' });
 
     // Test search by specific Electronic Payer ID 'SHP76' (Sharp Health Plan)
     const searchInput = page.getByPlaceholder(/Search by payer name or electronic ID/i);

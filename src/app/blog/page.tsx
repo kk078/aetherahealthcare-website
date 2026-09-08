@@ -1,3 +1,4 @@
+import { POSTS } from '@/lib/blogPosts';
 import type { Metadata } from 'next';
 import BlogIndexClient from './BlogIndexClient';
 
@@ -5,7 +6,7 @@ export const metadata: Metadata = {
   title: { absolute: 'The Aethera Pulse — Revenue Cycle Insights for U.S. Healthcare | Aethera Healthcare Solutions' },
   description:
     'Sharp, practical insights on U.S. healthcare revenue cycle management — denials, prior authorization, coding, compliance, telehealth billing, payer contracts and the data behind getting paid faster.',
-  alternates: { canonical: '/blog' },
+  alternates: { canonical: '/blog/' },
 };
 
 const jsonLd = {
@@ -25,7 +26,7 @@ export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <BlogIndexClient />
+      <BlogIndexClient blogPosts={POSTS.map(({ slug, title, date, category, excerpt, image, readTime }) => ({ slug, title, date, author: 'Aethera Editorial Team', category, excerpt, image, readTime }))} />
     </>
   );
 }

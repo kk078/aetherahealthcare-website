@@ -2,19 +2,12 @@
 
 import React, { useState } from 'react';
 import {
-  DollarSign,
   TrendingDown,
-  AlertTriangle,
-  Scale,
   Copy,
   Check,
   Send,
   Loader2,
   CheckCircle2,
-  FileSpreadsheet,
-  Building2,
-  Sparkles,
-  ArrowRight,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 

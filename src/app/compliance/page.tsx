@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Shield, CheckCircle, FileText, Lock, Users } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -7,6 +8,7 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/compliance') },
   title: "Compliance | HIPAA, Security & Privacy",
   description: "Learn about Aethera Healthcare Solutions' comprehensive compliance program including HIPAA, security practices, and privacy protection for healthcare providers.",
 };

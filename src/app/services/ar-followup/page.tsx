@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Clock, CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -78,6 +79,7 @@ const relatedServices = [
 ];
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services/ar-followup') },
   title: "A/R Follow-Up & Accounts Receivable Recovery",
   description: "Dedicated accounts receivable follow-up that works aging claims, cuts days in A/R, and recovers revenue other billers write off. Systematic payer follow-up from Aethera.",
 };

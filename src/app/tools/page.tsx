@@ -1,3 +1,5 @@
+import { canonicalUrl } from '@/lib/siteConfig';
+import { TOOLS } from '@/lib/toolRegistry';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -7,9 +9,10 @@ import ToolsDirectory from '@/components/ui/ToolsDirectory';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: { absolute: '91 Free Medical Billing, EDI & RCM Tools | Aethera Healthcare' },
+  alternates: { canonical: canonicalUrl('/tools') },
+  title: { absolute: `${TOOLS.length} Free Medical Billing, EDI & RCM Tools | Aethera Healthcare` },
   description:
-    '91 free tools for revenue cycle teams: pediatric Hirschsprung pull-through scrubber, head & neck free flap reconstruction scrubber, pediatric TEF & esophageal atresia scrubber, DIEP flap breast reconstruction scrubber, and EDI parsers. No login required.',
+    'Free educational tools for revenue cycle teams: pediatric Hirschsprung pull-through scrubber, head & neck free flap reconstruction scrubber, pediatric TEF & esophageal atresia scrubber, DIEP flap breast reconstruction scrubber, and EDI parsers. No login required.',
 };
 
 export default function ToolsHub() {
@@ -19,15 +22,20 @@ export default function ToolsHub() {
 
       <RcmHeroBand
         eyebrow="Free · No Login Required"
-        title="91 Free Medical Billing & RCM Tools"
-        subtitle="Clinical scrubbers, federal compliance engines, financial calculators, and EDI diagnostic parsers used daily by our senior billing specialists — open to all healthcare providers."
-        primary={{ href: '#tools', label: 'Explore All 91 Tools' }}
+        title={`${TOOLS.length} Free Medical Billing & RCM Tools`}
+        subtitle="Explore billing checklists, illustrative financial calculators and EDI parsers. Each tool states its review status and requires confirmation against current payer policies."
+        primary={{ href: '#tools', label: `Explore All ${TOOLS.length} Tools` }}
         secondary={{ href: '/free-assessment', label: 'Get a Free Practice Audit' }}
-        chips={['91 Free Tools', 'No Login Required', 'Federal Statutory Compliance', 'Built by AAPC Coders']}
+        chips={[`${TOOLS.length} Free Tools`, 'No Login Required', 'Educational References', 'Review Before Use']}
       />
 
       <section id="tools" className="py-12 md:py-16 flex-1 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <aside className="surface-card border rounded-2xl p-6 mb-8">
+            <h2 className="font-bold text-lg">Featured Interactive Simulation</h2>
+            <p className="text-muted text-sm my-2">Explore the provider portal with illustrative claims and financial data.</p>
+            <Link href="/portal/" className="text-teal font-semibold underline">Explore Portal Demo</Link>
+          </aside>
           <ToolsDirectory />
 
           <div className="mt-14 text-center p-6 rounded-2xl bg-white border border-gray/20 shadow-2xs">

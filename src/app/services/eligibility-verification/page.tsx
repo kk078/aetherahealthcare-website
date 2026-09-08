@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, Shield, BarChart3 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -78,6 +79,7 @@ const relatedServices = [
 ];
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/services/eligibility-verification') },
   title: "Insurance Eligibility & Benefits Verification",
   description: "Real-time insurance eligibility and benefits verification that stops front-end denials before claims go out. Accurate coverage checks from Aethera.",
 };

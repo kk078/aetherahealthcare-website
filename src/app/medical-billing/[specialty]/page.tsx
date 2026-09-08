@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Navbar from '@/components/layout/Navbar';
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   return {
     title: { absolute: `${s.name} Medical Billing Services | Aethera Healthcare Solutions` },
     description: `Nationwide ${s.name.toLowerCase()} medical billing and revenue cycle management for U.S. practices. ${s.blurb} Free assessment — no long-term contract.`,
-    alternates: { canonical: `https://aetherahealthcare.com/medical-billing/${s.slug}` },
+    alternates: { canonical: canonicalUrl(`/medical-billing/${s.slug}`) },
   };
 }
 

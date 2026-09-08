@@ -6,16 +6,12 @@ import {
   CheckCircle2,
   AlertTriangle,
   FileText,
-  DollarSign,
   Activity,
   Send,
-  Sparkles,
-  HelpCircle,
   Layers,
   Copy,
   Sliders,
   Compass,
-  Zap,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 
@@ -225,7 +221,7 @@ export default function AdultSpineDeformityLlifScrubber() {
 
     setIsSubmitting(true);
     try {
-      await sendLeadToKiran('adult_spine_deformity_llif_audit', {
+      if (!(await sendLeadToKiran('adult_spine_deformity_llif_audit', {
         contactName,
         contactEmail,
         contactPractice,
@@ -239,7 +235,7 @@ export default function AdultSpineDeformityLlifScrubber() {
         includeIonm,
         grossValue: auditResult.grossValue,
         atRiskValue: auditResult.atRiskValue,
-      });
+      }))) { setIsSubmitting(false); return; }
       setSubmitSuccess(true);
     } catch (err) {
       console.error('Lead submission failed', err);
@@ -385,7 +381,7 @@ ${auditResult.warnings.map((w, idx) => `! WARNING ${idx + 1}: ${w}`).join('\n')}
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setPosteriorFixation(item.id as any)}
+                    onClick={() => setPosteriorFixation(item.id as typeof posteriorFixation)}
                     className={`px-3 py-2 text-xs font-medium rounded-xl border text-center transition-all ${
                       posteriorFixation === item.id
                         ? 'bg-navy text-white border-navy shadow-sm'

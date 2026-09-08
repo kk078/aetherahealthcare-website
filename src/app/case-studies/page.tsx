@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -5,9 +6,10 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import CaseStudiesDirectory from '@/components/ui/CaseStudiesDirectory';
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonicalUrl('/case-studies') },
   title: { absolute: 'Medical Billing Case Studies by Specialty | Aethera Healthcare' },
   description:
-    'Documented case studies across 10 medical specialties showing measurable 15%–25% revenue lifts, 75%+ denial reductions, and Days in AR compacted under 26 days.',
+    'Illustrative billing scenarios across medical specialties, with clearly stated evidence requirements for verified customer outcomes.',
 };
 
 export default function CaseStudiesPage() {
@@ -17,10 +19,10 @@ export default function CaseStudiesPage() {
 
       <RcmHeroBand
         eyebrow="Clinical & Financial Case Studies"
-        title="Real practices. Measurable results."
-        subtitle="Explore documented financial outcomes across 10 clinical specialties — proving our 98.7% clean claim rate, sub-30 day A/R compaction, and aggressive denial overturns."
+        title="Billing challenges. Practical scenarios."
+        subtitle="Explore educational examples across specialties. Scenario figures are illustrative; request a documented practice review for your own results."
         primary={{ href: '/free-assessment', label: 'Get a Free Practice Audit' }}
-        chips={['+15–25% Collection Lift', 'Denials Cut by 75%', 'Days in A/R Under 28d', 'Zero Setup Fees']}
+        chips={['Specialty workflows', 'Clear assumptions', 'Practice-specific review']}
       />
 
       <main className="flex-1 py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full">

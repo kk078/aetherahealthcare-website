@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -9,6 +10,7 @@ import { getPayerResources } from '@/lib/payerResources';
 import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/tools/payer-provider-manuals') },
   title: { absolute: 'Payer Provider Manual & Policy Finder | Aethera Healthcare Solutions' },
   description:
     'Find provider manuals, medical/reimbursement policies, credentialing, and eligibility pages for major U.S. payers — UnitedHealthcare, Aetna, Cigna, Humana, Florida Blue, Medicare MACs, and more.',

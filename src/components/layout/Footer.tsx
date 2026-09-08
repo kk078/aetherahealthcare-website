@@ -1,3 +1,4 @@
+import CookiePreferencesButton from '@/components/ui/CookiePreferencesButton';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -175,6 +176,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+    <div className="max-w-7xl mx-auto px-4 py-4"><CookiePreferencesButton /></div>
     </footer>
   );
 }

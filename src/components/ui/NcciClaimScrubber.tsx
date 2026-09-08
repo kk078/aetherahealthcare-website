@@ -1,5 +1,7 @@
 'use client';
 
+import { requestOverlay } from '@/lib/overlayStore';
+
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import {
@@ -405,7 +407,7 @@ export default function NcciClaimScrubber() {
               <button
                 type="button"
                 onClick={() => {
-                  window.dispatchEvent(
+                  requestOverlay(
                     new CustomEvent('open-expert-modal', {
                       detail: {
                         mode: 'chat',

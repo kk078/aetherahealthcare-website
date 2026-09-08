@@ -7,17 +7,9 @@ import {
   CheckCircle2,
   Copy,
   Check,
-  Send,
   Loader2,
   FileCode,
-  ShieldCheck,
-  Calculator,
   ChevronRight,
-  Info,
-  Layers,
-  FileText,
-  DollarSign,
-  Activity,
   Zap,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
@@ -132,7 +124,7 @@ export default function RadOncScrubber() {
     let simFee = hasSimulation77295 ? 620 : 0;
     let dosFee = hasBasicDosimetry77300 ? 145 : 0;
     const mlcFee = hasMlcDesign77338 ? 390 : 0;
-    let devFee = hasDevices77334 ? 280 : 0;
+    const devFee = hasDevices77334 ? 280 : 0;
 
     if (hasImrtPlan77301) {
       if (hasSimulation77295) {

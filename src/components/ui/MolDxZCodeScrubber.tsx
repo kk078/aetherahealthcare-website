@@ -7,15 +7,10 @@ import {
   CheckCircle2,
   Copy,
   Check,
-  Send,
   Loader2,
   FileCode,
   ShieldCheck,
-  Building2,
   ChevronRight,
-  Info,
-  Layers,
-  FileText,
 } from 'lucide-react';
 import { sendLeadToKiran } from '@/lib/worker';
 import { trackConversion } from '@/lib/gtag';

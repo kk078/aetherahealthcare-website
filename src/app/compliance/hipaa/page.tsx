@@ -1,3 +1,4 @@
+import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Shield, CheckCircle, Users, FileText } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -6,6 +7,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
+  alternates: { canonical: canonicalUrl('/compliance/hipaa') },
   title: "HIPAA Compliance Program",
   description: "Comprehensive HIPAA compliance program for healthcare providers. Learn about our administrative, physical, and technical safeguards for protecting patient health information.",
 };

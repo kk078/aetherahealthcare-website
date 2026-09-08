@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 /**
  * Contact form E2E tests.
@@ -19,7 +19,7 @@ test.describe('Contact Form', () => {
     await expect(page.getByLabel('Email Address').first()).toBeVisible();
     await expect(page.getByLabel('Phone Number').first()).toBeVisible();
     await expect(page.getByLabel('Medical Specialty').first()).toBeVisible();
-    await expect(page.getByLabel('Message')).toBeVisible();
+    await expect(page.getByLabel('Message', { exact: true })).toBeVisible();
     await expect(page.locator('form').getByRole('button', { name: /send|submit/i })).toBeVisible();
   });
 
@@ -47,7 +47,7 @@ test.describe('Contact Form', () => {
     await page.getByLabel('Email Address').first().fill(TEST_EMAIL);
     await page.getByLabel('Phone Number').first().fill('555-000-0001');
     await page.getByLabel('Medical Specialty').first().selectOption({ index: 1 });
-    await page.getByLabel('Message').fill('Automated E2E test submission — please ignore');
+    await page.getByLabel('Message', { exact: true }).fill('Automated E2E test submission — please ignore');
 
     await page.locator('form').getByRole('button', { name: /send|submit/i }).click();
 

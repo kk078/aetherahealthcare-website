@@ -27,11 +27,11 @@ export default function GuideCard({
     if (status === 'submitting') return;
     if (!hp && email) {
       setStatus('submitting');
-      await submitToWorker('guide_download', {
+      if (!(await submitToWorker('guide_download', {
         email,
         specialty: name,
         message: `Requested the ${name} specialty billing guide from the website.`,
-      });
+      }))) {  return; }
     }
     openPdf();
     setOpen(false);
