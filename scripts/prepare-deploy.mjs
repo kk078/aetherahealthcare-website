@@ -16,6 +16,10 @@ if (!database) database = await api('/d1/database','POST',{ name });
 const project = 'aetherahealthcare-website';
 const projectInfo = await api(`/pages/projects/${project}`);
 if (typeof projectInfo.production_branch !== 'string' || !/^[a-zA-Z0-9_./-]+$/.test(projectInfo.production_branch)) throw new Error('Pages project must have a configured production branch.');
+if (projectInfo.build_config?.web_analytics_tag || projectInfo.build_config?.web_analytics_token) {
+  await api(`/pages/projects/${project}`, 'PATCH', { build_config: { ...projectInfo.build_config, web_analytics_tag: null, web_analytics_token: null } });
+  console.log('Disabled Pages automatic analytics injection so the site consent gate controls loading.');
+}
 for (const [name, value] of [['RATE_LIMIT_SECRET', rateSecret], ['LEAD_RETRY_SECRET', retrySecret]]) {
   // Feed one secret through stdin; never serialize masked existing secrets back to the API.
   execFileSync('npx', ['wrangler', 'pages', 'secret', 'put', name, '--project-name', project], { input: value, stdio: ['pipe', 'pipe', 'pipe'] });
