@@ -24,6 +24,7 @@ import DrugWasteEngine from '@/components/ui/DrugWasteEngine';
 import GmeImeCapOptimizer from '@/components/ui/GmeImeCapOptimizer';
 import Drug340bAuditor from '@/components/ui/Drug340bAuditor';
 import EsrdKccArbiter from '@/components/ui/EsrdKccArbiter';
+import ClfsPamaArbiter from '@/components/ui/ClfsPamaArbiter';
 import AdjudicationBenchmarkArena from '@/components/ui/AdjudicationBenchmarkArena';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
@@ -187,7 +188,10 @@ export default function HumanAutonomyPage() {
         {/* Section 3P: ESRD Prospective Payment System & Kidney Care Choices (KCC) Arbiter */}
         <EsrdKccArbiter />
 
-        {/* Section 3Q: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
+        {/* Section 3Q: Clinical Laboratory Fee Schedule (CLFS) Private Payer Data Reporting & PAMA Market-Based Rate Arbiter */}
+        <ClfsPamaArbiter />
+
+        {/* Section 3R: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
         <AdjudicationBenchmarkArena />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
