@@ -19,6 +19,7 @@ import FederalIdrArbiter from '@/components/ui/FederalIdrArbiter';
 import { FeeScheduleParityHeatmap } from '@/components/ui/FeeScheduleParityHeatmap';
 import ClinicalResearchComplianceAuditor from '@/components/ui/ClinicalResearchComplianceAuditor';
 import HacPoaPenaltySafeguard from '@/components/ui/HacPoaPenaltySafeguard';
+import TwoMidnightRuleArbiter from '@/components/ui/TwoMidnightRuleArbiter';
 import AdjudicationBenchmarkArena from '@/components/ui/AdjudicationBenchmarkArena';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
@@ -167,7 +168,10 @@ export default function HumanAutonomyPage() {
         {/* Section 3K: Hospital-Acquired Condition (HAC) & POA Penalty Safeguard */}
         <HacPoaPenaltySafeguard />
 
-        {/* Section 3L: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
+        {/* Section 3L: CMS-4201-F Two-Midnight Rule & MA Level-of-Care Arbiter */}
+        <TwoMidnightRuleArbiter />
+
+        {/* Section 3M: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
         <AdjudicationBenchmarkArena />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
