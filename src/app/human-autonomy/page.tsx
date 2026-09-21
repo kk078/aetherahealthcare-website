@@ -22,6 +22,7 @@ import HacPoaPenaltySafeguard from '@/components/ui/HacPoaPenaltySafeguard';
 import TwoMidnightRuleArbiter from '@/components/ui/TwoMidnightRuleArbiter';
 import DrugWasteEngine from '@/components/ui/DrugWasteEngine';
 import GmeImeCapOptimizer from '@/components/ui/GmeImeCapOptimizer';
+import Drug340bAuditor from '@/components/ui/Drug340bAuditor';
 import AdjudicationBenchmarkArena from '@/components/ui/AdjudicationBenchmarkArena';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
@@ -179,7 +180,10 @@ export default function HumanAutonomyPage() {
         {/* Section 3N: CMS Teaching Hospital GME/IME Resident Cap & Direct GME Optimizer */}
         <GmeImeCapOptimizer />
 
-        {/* Section 3O: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
+        {/* Section 3O: 340B Covered Entity Eligibility & Split-Billing Compliance Auditor */}
+        <Drug340bAuditor />
+
+        {/* Section 3P: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
         <AdjudicationBenchmarkArena />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
