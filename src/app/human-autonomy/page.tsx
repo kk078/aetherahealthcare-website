@@ -6,6 +6,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import HumanAutonomy3DHero from '@/components/ui/HumanAutonomy3DHero';
 import AutonomyBoundaryMatrix from '@/components/ui/AutonomyBoundaryMatrix';
 import Anatomy3DExplorer from '@/components/ui/Anatomy3DExplorer';
+import SurgicalDepthLayerSlider from '@/components/ui/SurgicalDepthLayerSlider';
 import SpecialtyAutonomyMatrix from '@/components/ui/SpecialtyAutonomyMatrix';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
@@ -114,6 +115,9 @@ export default function HumanAutonomyPage() {
 
         {/* Section 2: 3D Anatomical Atlas & Sovereign Gate Matrix (Rohen 7th Ed.) */}
         <Anatomy3DExplorer />
+
+        {/* Section 2B: Interactive Surgical Depth Layer Slider (Tissue Planes to CPT Mapping) */}
+        <SurgicalDepthLayerSlider />
 
         {/* Section 3: ABMS 20 Core Medical Specialties RCM Directory & Autonomy Matrix */}
         <SpecialtyAutonomyMatrix />
