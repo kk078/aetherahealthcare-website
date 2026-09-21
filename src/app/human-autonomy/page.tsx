@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import HumanAutonomy3DHero from '@/components/ui/HumanAutonomy3DHero';
 import AutonomyBoundaryMatrix from '@/components/ui/AutonomyBoundaryMatrix';
+import Anatomy3DExplorer from '@/components/ui/Anatomy3DExplorer';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
 import InteractiveClaimScrubberSimulator from '@/components/ui/InteractiveClaimScrubberSimulator';
@@ -104,7 +105,10 @@ export default function HumanAutonomyPage() {
           </div>
         </section>
 
-        {/* Section 2: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
+        {/* Section 2: 3D Anatomical Atlas & Sovereign Gate Matrix (Rohen 7th Ed.) */}
+        <Anatomy3DExplorer />
+
+        {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
         <section className="py-16 md:py-24 bg-white border-b border-gray/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <FadeIn>
