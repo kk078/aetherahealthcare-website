@@ -21,6 +21,7 @@ import {
   Syringe,
   GraduationCap,
   Pill,
+  Droplets,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -41,6 +42,7 @@ const NAV_ITEMS = [
   { label: 'Drug Waste Guard', href: '#drug-waste-engine', icon: Syringe },
   { label: 'GME / IME Cap Optimizer', href: '#gme-ime-cap-optimizer', icon: GraduationCap },
   { label: '340B Compliance Guard', href: '#drug-340b-auditor', icon: Pill },
+  { label: 'ESRD / KCC Arbiter', href: '#esrd-kcc-arbiter', icon: Droplets },
   { label: 'AI vs Human Arena', href: '#adjudication-benchmark-arena', icon: Swords },
   { label: 'Scrubber Simulator', href: '#scrubber-simulation', icon: FileCode },
 ];
