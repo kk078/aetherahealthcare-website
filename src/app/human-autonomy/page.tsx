@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import HumanAutonomy3DHero from '@/components/ui/HumanAutonomy3DHero';
+import AutonomySubNav from '@/components/ui/AutonomySubNav';
 import AutonomyBoundaryMatrix from '@/components/ui/AutonomyBoundaryMatrix';
 import Anatomy3DExplorer from '@/components/ui/Anatomy3DExplorer';
 import SurgicalDepthLayerSlider from '@/components/ui/SurgicalDepthLayerSlider';
@@ -91,6 +92,9 @@ export default function HumanAutonomyPage() {
       <main className="flex-1">
         {/* Interactive 3D Spatial Canvas Hero */}
         <HumanAutonomy3DHero />
+
+        {/* Interactive Suite Sticky Navigation Bar */}
+        <AutonomySubNav />
 
         {/* Section 1: Executive Manifesto & Boundary Matrix */}
         <section id="boundary-matrix" className="py-16 md:py-24 bg-cream border-b border-gray/10">
