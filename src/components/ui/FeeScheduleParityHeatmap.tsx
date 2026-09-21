@@ -615,12 +615,12 @@ Aethera Healthcare Sovereign RCM Legal Unit on behalf of Attending Surgical Prov
 
                 <div className="border-t border-slate-800 pt-3">
                   <span className="text-white font-bold block mb-1">I. CONTRACTUAL RATE ENTITLEMENT</span>
-                  The practice performed CPT {activeCpt.cptCode} ({activeCpt.procedureTitle}). The geographic Medicare allowable for {activeMac.primaryState} ({activeMac.jurisdictionCode}) is $${calculatedMacMedicareRate.toFixed(2)}. Based on our contracted rate of {(contractMultiplier * 100).toFixed(0)}% of Medicare, the expected payment is $${expectedContractualAmount.toFixed(2)}. Payer remitted only $${actualPayerPayment.toFixed(2)}, generating a contractual underpayment of $${underpaymentShortfall.toFixed(2)}.
+                  The practice performed CPT {activeCpt.cptCode} ({activeCpt.procedureTitle}). The geographic Medicare allowable for {activeMac.primaryState} ({activeMac.jurisdictionCode}) is ${calculatedMacMedicareRate.toFixed(2)}. Based on our contracted rate of {(contractMultiplier * 100).toFixed(0)}% of Medicare, the expected payment is ${expectedContractualAmount.toFixed(2)}. Payer remitted only ${actualPayerPayment.toFixed(2)}, generating a contractual underpayment of ${underpaymentShortfall.toFixed(2)}.
                 </div>
 
                 <div className="border-t border-slate-800 pt-3">
                   <span className="text-white font-bold block mb-1">II. STATUTORY PROMPT PAY DEFAULT &amp; ACCRUED INTEREST</span>
-                  Clean claim has been pending {daysElapsed} days, exceeding the {promptPayStatute.electronicPaymentWindowDays}-day statutory deadline under {promptPayStatute.statuteCitation}. Pursuant to state law, mandatory interest of {promptPayStatute.statutoryInterestRatePercent.toFixed(1)}% per annum is assessed, yielding $${accruedStatutoryInterest.toFixed(2)} in accrued statutory interest. Total liquidated amount due: $${(underpaymentShortfall + accruedStatutoryInterest).toFixed(2)}.
+                  Clean claim has been pending {daysElapsed} days, exceeding the {promptPayStatute.electronicPaymentWindowDays}-day statutory deadline under {promptPayStatute.statuteCitation}. Pursuant to state law, mandatory interest of {promptPayStatute.statutoryInterestRatePercent.toFixed(1)}% per annum is assessed, yielding ${accruedStatutoryInterest.toFixed(2)} in accrued statutory interest. Total liquidated amount due: ${(underpaymentShortfall + accruedStatutoryInterest).toFixed(2)}.
                 </div>
 
                 <div className="border-t border-slate-800 pt-3">
