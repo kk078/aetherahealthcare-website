@@ -10,6 +10,7 @@ import SurgicalDepthLayerSlider from '@/components/ui/SurgicalDepthLayerSlider';
 import SpecialtyAutonomyMatrix from '@/components/ui/SpecialtyAutonomyMatrix';
 import ClaimDiffViewer from '@/components/ui/ClaimDiffViewer';
 import SpecialtyClawbackCalculator from '@/components/ui/SpecialtyClawbackCalculator';
+import CryptographicAuditLedger from '@/components/ui/CryptographicAuditLedger';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
 import InteractiveClaimScrubberSimulator from '@/components/ui/InteractiveClaimScrubberSimulator';
@@ -129,6 +130,9 @@ export default function HumanAutonomyPage() {
 
         {/* Section 3C: Specialty Clawback & Denial Risk Calculator (Sovereign RCM ROI Modeler) */}
         <SpecialtyClawbackCalculator />
+
+        {/* Section 3D: Cryptographic Audit Trail & Chain of Custody (CMS RAC Defense Engine) */}
+        <CryptographicAuditLedger />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
         <section id="code-anatomy" className="py-16 md:py-24 bg-white border-b border-gray/10">
