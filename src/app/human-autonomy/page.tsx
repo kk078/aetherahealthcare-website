@@ -6,6 +6,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import HumanAutonomy3DHero from '@/components/ui/HumanAutonomy3DHero';
 import AutonomyBoundaryMatrix from '@/components/ui/AutonomyBoundaryMatrix';
 import Anatomy3DExplorer from '@/components/ui/Anatomy3DExplorer';
+import SpecialtyAutonomyMatrix from '@/components/ui/SpecialtyAutonomyMatrix';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
 import InteractiveClaimScrubberSimulator from '@/components/ui/InteractiveClaimScrubberSimulator';
@@ -113,6 +114,9 @@ export default function HumanAutonomyPage() {
 
         {/* Section 2: 3D Anatomical Atlas & Sovereign Gate Matrix (Rohen 7th Ed.) */}
         <Anatomy3DExplorer />
+
+        {/* Section 3: ABMS 20 Core Medical Specialties RCM Directory & Autonomy Matrix */}
+        <SpecialtyAutonomyMatrix />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
         <section id="code-anatomy" className="py-16 md:py-24 bg-white border-b border-gray/10">
