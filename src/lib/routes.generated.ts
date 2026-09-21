@@ -89,6 +89,10 @@ export const ROUTES = [
     "indexable": true
   },
   {
+    "path": "/human-autonomy",
+    "indexable": true
+  },
+  {
     "path": "/integrations",
     "indexable": true
   },

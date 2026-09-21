@@ -43,6 +43,7 @@ const resources = [
 ];
 
 const compliance = [
+  { name: 'Human Autonomy Framework', href: '/human-autonomy' },
   { name: 'HIPAA Compliance', href: '/compliance/hipaa' },
   { name: 'Privacy Policy', href: '/compliance/privacy-policy' },
   { name: 'Terms of Service', href: '/compliance/terms-of-service' },

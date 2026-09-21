@@ -35,6 +35,7 @@ const specialtyServices = [
 ];
 
 const whyAethera = [
+  { name: 'Human Autonomy Framework', href: '/human-autonomy', desc: 'Sovereign human sign-off across CPT, CDT, NDC & Modifiers' },
   { name: 'About Us', href: '/about', desc: 'Our story, founder adjudication roots & team' },
   { name: 'Case Studies', href: '/case-studies', desc: 'Results our process is built to deliver' },
   { name: 'Security & Compliance', href: '/compliance/security', desc: 'How we protect PHI, offshore and in the US' },
@@ -46,6 +47,7 @@ const whyAethera = [
 ];
 
 const solutions = [
+  { name: 'Human-in-the-Loop RCM', href: '/human-autonomy', desc: 'Deterministic AI precision with 100% human sign-off' },
   { name: 'For Billing Companies', href: '/for-billing-companies', desc: 'White-label back-office billing partnership' },
   { name: 'Payer Services', href: '/payer-services', desc: 'Contracting, credentialing & fee schedules' },
   { name: 'EHR Integrations', href: '/integrations', desc: '50+ certified EHR & PM platforms supported' },

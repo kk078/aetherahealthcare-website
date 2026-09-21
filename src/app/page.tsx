@@ -208,9 +208,9 @@ export default function Home() {
                   >
                     Start the Free 50-Claim Pilot <ArrowRight className="h-4 w-4" />
                   </PilotTrigger>
-                  <Link prefetch={false} href="#aethera-difference"
+                  <Link prefetch={false} href="/human-autonomy"
                     className="inline-flex items-center justify-center border border-white/35 text-white hover:bg-white/10 font-semibold py-3.5 px-7 rounded-xl transition-colors duration-200">
-                    How our AI works
+                    Human Autonomy &amp; Codes
                   </Link>
                 </div>
               </FadeIn>
