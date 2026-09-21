@@ -12,7 +12,13 @@ import InteractiveClaimScrubberSimulator from '@/components/ui/InteractiveClaimS
 import ClinicalCaseScenarios from '@/components/ui/ClinicalCaseScenarios';
 import {
   HelpCircle,
-  Sparkles,
+  ShieldCheck,
+  Lock,
+  Fingerprint,
+  FileCheck2,
+  CheckCircle2,
+  Scale,
+  ArrowRight,
 } from 'lucide-react';
 
 export const metadata = {
@@ -81,7 +87,7 @@ export default function HumanAutonomyPage() {
         <HumanAutonomy3DHero />
 
         {/* Section 1: Executive Manifesto & Boundary Matrix */}
-        <section className="py-16 md:py-24 bg-cream border-b border-gray/10">
+        <section id="boundary-matrix" className="py-16 md:py-24 bg-cream border-b border-gray/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <FadeIn>
               <div className="max-w-3xl">
@@ -109,7 +115,7 @@ export default function HumanAutonomyPage() {
         <Anatomy3DExplorer />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
-        <section className="py-16 md:py-24 bg-white border-b border-gray/10">
+        <section id="code-anatomy" className="py-16 md:py-24 bg-white border-b border-gray/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <FadeIn>
               <CodeAnatomyVisualizer />
@@ -118,7 +124,7 @@ export default function HumanAutonomyPage() {
         </section>
 
         {/* Section 3: Interactive Scrubber Simulation */}
-        <section className="py-16 md:py-24 bg-cream border-b border-gray/10">
+        <section id="scrubber-simulation" className="py-16 md:py-24 bg-cream border-b border-gray/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <FadeIn>
               <InteractiveClaimScrubberSimulator />
@@ -127,7 +133,7 @@ export default function HumanAutonomyPage() {
         </section>
 
         {/* Section 4: Comprehensive Searchable Code Systems Directory */}
-        <section className="py-16 md:py-24 bg-white border-b border-gray/10">
+        <section id="code-explorer" className="py-16 md:py-24 bg-white border-b border-gray/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <FadeIn>
               <AutonomyCodeExplorer />
@@ -136,7 +142,7 @@ export default function HumanAutonomyPage() {
         </section>
 
         {/* Section 5: Real-World Clinical Evidence & Case Studies */}
-        <section className="py-16 md:py-24 bg-cream border-b border-gray/10">
+        <section id="case-studies" className="py-16 md:py-24 bg-cream border-b border-gray/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <FadeIn>
               <ClinicalCaseScenarios />
@@ -145,7 +151,7 @@ export default function HumanAutonomyPage() {
         </section>
 
         {/* Section 6: Educational FAQ Section */}
-        <section className="py-16 md:py-24 bg-white border-b border-gray/10">
+        <section id="faqs" className="py-16 md:py-24 bg-white border-b border-gray/10">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="text-xs font-bold uppercase tracking-wider text-teal bg-teal/10 px-3 py-1 rounded-full">
@@ -178,36 +184,115 @@ export default function HumanAutonomyPage() {
           </div>
         </section>
 
-        {/* High-Intent Conversion CTA Section */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-navy via-[#0A2240] to-teal text-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-mint text-xs font-bold uppercase tracking-wider border border-mint/20">
-              <Sparkles className="h-3.5 w-3.5" /> Zero-Obligation Proof
-            </span>
-            <h2 className="font-jakarta text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-              Test Our Human Autonomy Framework on 50 of Your Real Claims
-            </h2>
-            <p className="text-cream/90 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We sign your BAA, analyze 50 of your recent encounters, run our deterministic scrubbers, and have
-              our certified coders provide a 1-page exception scorecard in your actual numbers. Free in 14 days.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-              <Link
-                href="/free-assessment"
-                className="px-8 py-4 rounded-xl bg-mint text-navy font-extrabold text-sm sm:text-base hover:bg-white transition-all shadow-xl shadow-mint/20"
-              >
-                Claim Your Free 50-Claim Pilot Slot
-              </Link>
-              <Link
-                href="/schedule"
-                className="px-8 py-4 rounded-xl bg-white/10 border border-white/20 text-white font-bold text-sm sm:text-base hover:bg-white/20 transition-all"
-              >
-                Schedule Technical Architecture Walkthrough
-              </Link>
+        {/* Section 7: Dedicated Sovereign Human Autonomy Verification Terminal */}
+        <section id="sovereign-terminal" className="py-20 md:py-28 bg-gradient-to-br from-[#021024] via-[#051C33] to-[#0A2E50] text-white relative overflow-hidden border-t border-teal-500/20">
+          {/* Ambient Glow & Grid */}
+          <div className="absolute inset-0 bg-[radial-gradient(#45C4B0_1px,transparent_1px)] [background-size:28px_28px] opacity-10 pointer-events-none" />
+          <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-teal/15 blur-[160px] rounded-full pointer-events-none" />
+
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+            {/* Terminal Header */}
+            <div className="text-center max-w-3xl mx-auto space-y-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal/15 border border-teal/30 text-teal-300 text-xs font-semibold uppercase tracking-wider">
+                <Fingerprint className="h-3.5 w-3.5 text-teal-400" />
+                Sovereign Trust Architecture • Zero Generative Hallucinations
+              </div>
+              <h2 className="font-jakarta text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+                The Sovereign Human Autonomy Verification Terminal
+              </h2>
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                In healthcare revenue cycle management, algorithms evaluate mathematics, but only certified human billing specialists
+                bear statutory liability under the False Claims Act. Every claim released through Aethera contains deterministic validation,
+                certified human attestation, and an immutable SHA-256 cryptographic proof.
+              </p>
             </div>
-            <p className="text-xs text-slate-400 pt-2 font-mono">
-              BAA Signed Before Any Ingestion • Zero Setup Fees • Contractual 95%+ Clean-Claim Guarantee
-            </p>
+
+            {/* 3 Dedicated Functional Compliance Modules */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Module 1: Pre-Claim Compliance Audit */}
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal/40 transition-all space-y-4 backdrop-blur-sm shadow-xl flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-teal-500/20 border border-teal-400/30 flex items-center justify-center text-teal-300">
+                    <FileCheck2 className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white">Sovereign Encounter Audit</h3>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Benchmark your clinical encounters through our deterministic scrubber with AAPC/AHIMA certified coder sign-off.
+                    Identify unbundling vulnerabilities, missing laterality modifiers, and zero-padded NDC format discrepancies before payer submission.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <Link
+                    href="/free-assessment"
+                    className="w-full py-3 px-4 rounded-xl bg-mint text-navy font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 hover:bg-white transition-all shadow-md shadow-mint/20"
+                  >
+                    <span>Request Practice Encounter Audit</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Module 2: SHA-256 Cryptographic Ledger Block Audit */}
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition-all space-y-4 backdrop-blur-sm shadow-xl flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300">
+                    <Lock className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white">Cryptographic Proof Ledger</h3>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Every clinical note excerpt, algorithmic check, modifier rationale, and human coder sign-off is chained into a tamper-evident
+                    cryptographic block. If a CMS RAC, MAC, or commercial payer audits your claim, produce a 1-click legal evidence packet.
+                  </p>
+                </div>
+                <div className="p-2.5 rounded-lg bg-slate-900/90 border border-slate-750 font-mono text-[11px] text-emerald-300 flex items-center justify-between">
+                  <span>Block Hash:</span>
+                  <span className="text-slate-400 truncate max-w-[150px]">7a9f...c41e [Sealed]</span>
+                </div>
+              </div>
+
+              {/* Module 3: Sovereign Regulatory Safe-Harbor Consultation */}
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-amber-500/40 transition-all space-y-4 backdrop-blur-sm shadow-xl flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-amber-300">
+                    <Scale className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white">Regulatory Safe-Harbor Review</h3>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Schedule a technical walkthrough with our certified compliance leadership on False Claims Act (31 U.S.C. § 3729) safe harbors,
+                    HIPAA 5010 837P EDI protocols, and sovereign US cloud data residency protections.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <Link
+                    href="/schedule"
+                    className="w-full py-3 px-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all"
+                  >
+                    <span>Schedule Compliance Consultation</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Regulatory & Sovereign Certification Badges */}
+            <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-400 font-mono">
+              <div className="flex flex-wrap items-center gap-4">
+                <span className="flex items-center gap-1.5 text-emerald-400">
+                  <CheckCircle2 className="w-4 h-4" /> 100% Certified AAPC/AHIMA Human Seal
+                </span>
+                <span>•</span>
+                <span className="flex items-center gap-1.5 text-teal-300">
+                  <ShieldCheck className="w-4 h-4" /> HIPAA EDI 5010 837P / CMS-1500 Standard
+                </span>
+                <span>•</span>
+                <span className="flex items-center gap-1.5 text-amber-300">
+                  <Scale className="w-4 h-4" /> False Claims Act § 3729 Safe Harbor
+                </span>
+              </div>
+              <div>
+                <span>Dedicated Sovereign US Cloud Infrastructure • BAA Executed Prior to Ingestion</span>
+              </div>
+            </div>
           </div>
         </section>
       </main>

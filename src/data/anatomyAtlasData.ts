@@ -4,6 +4,20 @@
  * Purely for Medical Billing, Coding, and Revenue Cycle Management (RCM)
  */
 
+export interface AnatomicalHotspot {
+  id: string;
+  name: string;
+  latinName?: string;
+  x: number; // percentage across 3D image (0-100)
+  y: number; // percentage down 3D image (0-100)
+  structureCategory: 'skeletal' | 'vascular' | 'neural' | 'visceral' | 'muscular' | 'integumentary';
+  associatedCode: string;
+  associatedModifier?: string;
+  clinicalSignificance: string;
+  sovereignGateCheck: string;
+  dissectionDepth: 'superficial' | 'intermediate' | 'deep';
+}
+
 export interface AnatomicalCode {
   code: string;
   system: 'CPT' | 'CDT' | 'HCPCS' | 'ICD-10';
@@ -30,6 +44,7 @@ export interface AnatomicalSystem {
   dissectionFiguresCount: number;
   imagePath: string;
   anatomicalLandmarks: string[];
+  hotspots: AnatomicalHotspot[];
   clinicalOverview: string;
   codes: AnatomicalCode[];
   mandatoryModifiers: AnatomicalModifier[];
@@ -71,6 +86,86 @@ export const ANATOMY_SYSTEMS: AnatomicalSystem[] = [
       'Permanent Dentition & Alveolar Arches (Teeth 1–32)',
       'Carotid Sheath & Cervical Vertebrae (C1–C7)'
     ],
+    hotspots: [
+      {
+            "id": "tmj-condyle",
+            "name": "Temporomandibular Joint & Articular Disc",
+            "latinName": "Articulatio temporomandibularis",
+            "x": 28,
+            "y": 58,
+            "structureCategory": "skeletal",
+            "associatedCode": "21010",
+            "associatedModifier": "-RT / -LT",
+            "clinicalSignificance": "Mandibular condyle articulation with temporal fossa; requires disc manipulation/mobilization.",
+            "sovereignGateCheck": "Operative report must verify direct capsular entry and disc repositioning; diagnostic TMJ arthroscopy (29800) is bundled under NCCI Column 2.",
+            "dissectionDepth": "intermediate"
+      },
+      {
+            "id": "trigeminal-v3",
+            "name": "Trigeminal Nerve (CN V3 Mandibular Division)",
+            "latinName": "Nervus trigeminus (N. mandibularis)",
+            "x": 52,
+            "y": 46,
+            "structureCategory": "neural",
+            "associatedCode": "64400",
+            "associatedModifier": "-59 / -XS",
+            "clinicalSignificance": "Sensory innervation to lower face, mandible, and anterior 2/3 of tongue.",
+            "sovereignGateCheck": "Verify somatic nerve block is independent of general/local anesthesia provided as standard surgical prep. Cannot be unbundled if done for post-op pain by same operating surgeon.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "molar-impaction",
+            "name": "Mandibular Alveolar Ridge & 3rd Molar (#17/#32)",
+            "latinName": "Dens serotinus (Molaris III)",
+            "x": 44,
+            "y": 72,
+            "structureCategory": "skeletal",
+            "associatedCode": "D7240",
+            "associatedModifier": "Tooth #17 or #32",
+            "clinicalSignificance": "Complete bony impaction buried beneath alveolar bone requiring sectioning and ostectomy.",
+            "sovereignGateCheck": "Cross-code to CPT 41899 or CMS-1500 with ICD-10 K01.1 only when severe pathology or trauma requires general anesthesia in ASC/Hospital setting.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "zygomatic-arch",
+            "name": "Zygomatic Arch & Midfacial Osteotomy Plane",
+            "latinName": "Arcus zygomaticus & Os zygomaticum",
+            "x": 36,
+            "y": 38,
+            "structureCategory": "skeletal",
+            "associatedCode": "21141",
+            "associatedModifier": "-22 (if revision)",
+            "clinicalSignificance": "Transverse midface LeFort I fracture reduction and rigid plating.",
+            "sovereignGateCheck": "Operative note must document downfracture of maxilla and rigid fixation plates. CPT 21141 includes harvest of local bone graft; do not unbundle local graft.",
+            "dissectionDepth": "intermediate"
+      },
+      {
+            "id": "pars-plana-vitreous",
+            "name": "Pars Plana & Ocular Vitreous Chamber",
+            "latinName": "Corpus vitreum & Pars plana",
+            "x": 46,
+            "y": 32,
+            "structureCategory": "visceral",
+            "associatedCode": "67028",
+            "associatedModifier": "-RT / -LT, -JW / -JZ",
+            "clinicalSignificance": "Intravitreal pharmacologic injection site for anti-VEGF biologics (bevacizumab/ranibizumab).",
+            "sovereignGateCheck": "Auditor must review biological discard documentation under CMS JW/JZ policy. Billing 10mg J9035 requires split line for administered vs wasted micrograms.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "carotid-bifurcation",
+            "name": "Carotid Sheath & Arterial Bifurcation",
+            "latinName": "Vagina carotica & A. carotis communis",
+            "x": 62,
+            "y": 78,
+            "structureCategory": "vascular",
+            "associatedCode": "35301",
+            "associatedModifier": "-RT / -LT",
+            "clinicalSignificance": "Bifurcation of common carotid into internal and external branches; site of carotid endarterectomy.",
+            "sovereignGateCheck": "Confirm electroencephalographic (EEG) or carotid stump pressure monitoring is documented if seeking complex surgical modifier -22.",
+            "dissectionDepth": "deep"
+      }
+],
     clinicalOverview:
       'Craniofacial surgery and head/neck RCM require surgical precision across bony osteotomies, nerve branch blocks, and dental-to-medical cross-coding. Payers enforce strict documentation standards regarding facial nerve monitoring, bilateral TMJ procedures, and ophthalmic injection waste.',
     codes: [
@@ -194,6 +289,73 @@ export const ANATOMY_SYSTEMS: AnatomicalSystem[] = [
       'Spinal Cord (Conus Medullaris, Cauda Equina)',
       'Anterior Abdominal Wall Musculature & Inguinal Rings'
     ],
+    hotspots: [
+      {
+            "id": "c5-c6-disc",
+            "name": "C5-C6 Intervertebral Disc Space",
+            "latinName": "Discus intervertebralis C5-C6",
+            "x": 50,
+            "y": 22,
+            "structureCategory": "skeletal",
+            "associatedCode": "22551",
+            "associatedModifier": "-59 / -XS",
+            "clinicalSignificance": "Anterior cervical discectomy with interbody fusion (ACDF); single interspace below C2.",
+            "sovereignGateCheck": "Verify operative report substantiates anterior approach; decompression (discectomy) and arthrodesis are bundled into 22551 base code. Add-on +22552 only billable for additional levels.",
+            "dissectionDepth": "intermediate"
+      },
+      {
+            "id": "l4-l5-facet",
+            "name": "L4-L5 Zygapophysial (Facet) Joint Capsule",
+            "latinName": "Articulatio zygapophysialis L4-L5",
+            "x": 48,
+            "y": 64,
+            "structureCategory": "skeletal",
+            "associatedCode": "64493",
+            "associatedModifier": "-50 (Bilateral)",
+            "clinicalSignificance": "Facet joint nerve block / medial branch block of lumbar spine.",
+            "sovereignGateCheck": "Fluoroscopic guidance (77003) is bundled into 64493 under 2024 CPT definitions. Billing 77003 separately triggers immediate CARC 97 denial.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "thecal-sac-cauda",
+            "name": "Conus Medullaris & Lumbar Epidural Space",
+            "latinName": "Conus medullaris & Spatium epidurale",
+            "x": 52,
+            "y": 48,
+            "structureCategory": "neural",
+            "associatedCode": "62323",
+            "associatedModifier": "-59 / -XS",
+            "clinicalSignificance": "Interlaminar epidural steroid injection with imaging guidance.",
+            "sovereignGateCheck": "Fluoroscopy or CT guidance must be explicitly documented in imaging archive. If performed without imaging guidance, code must be downcoded to 62322.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "pedicle-instrumentation",
+            "name": "Lumbar Pedicle & Transverse Process Axis",
+            "latinName": "Pediculus arcus vertebrae",
+            "x": 44,
+            "y": 72,
+            "structureCategory": "skeletal",
+            "associatedCode": "+22845",
+            "associatedModifier": "Add-on (Modifier -51 Exempt)",
+            "clinicalSignificance": "Anterior/posterior spinal fixation instrumentation spanning 2 to 3 vertebral segments.",
+            "sovereignGateCheck": "Verify add-on code is billed alongside primary arthrodesis code (e.g. 22612). Do NOT append modifier -51 to +22845.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "ligamentum-flavum",
+            "name": "Ligamentum Flavum & Interspinous Plane",
+            "latinName": "Ligamentum flavum",
+            "x": 54,
+            "y": 56,
+            "structureCategory": "muscular",
+            "associatedCode": "63047",
+            "associatedModifier": "-59 / -XS",
+            "clinicalSignificance": "Laminectomy, facetectomy, and foraminotomy for spinal canal decompression.",
+            "sovereignGateCheck": "Ensure distinct operative description for decompression vs arthrodesis. Separate incision or interspace required to avoid bundling under CMS NCCI.",
+            "dissectionDepth": "intermediate"
+      }
+],
     clinicalOverview:
       'Spine surgery RCM represents the highest financial risk in orthopedic and neurosurgical billing. Add-on codes for multiple contiguous interspaces, anterior/posterior instrumentation, and interbody cages are heavily audited by Medicare Recovery Audit Contractors (RAC).',
     codes: [
@@ -312,6 +474,73 @@ export const ANATOMY_SYSTEMS: AnatomicalSystem[] = [
       'Bronchial Tree & Bronchopulmonary Segments',
       'Right Lung (3 Lobes) & Left Lung (2 Lobes, Lingula)'
     ],
+    hotspots: [
+      {
+            "id": "lad-artery",
+            "name": "Left Anterior Descending (LAD) Coronary Artery",
+            "latinName": "Ramus interventricularis anterior (A. coronaria sinistra)",
+            "x": 54,
+            "y": 48,
+            "structureCategory": "vascular",
+            "associatedCode": "92928",
+            "associatedModifier": "-LD",
+            "clinicalSignificance": "Primary coronary artery supplying anterior interventricular septum and apex.",
+            "sovereignGateCheck": "Modifier -LD is mandatory. Balloon angioplasty (92920) in the same LAD vessel is bundled into stent 92928 under NCCI Column 2. Diagnostic catheterization (93454) requires staged modifier -59.",
+            "dissectionDepth": "superficial"
+      },
+      {
+            "id": "rca-artery",
+            "name": "Right Coronary Artery (RCA) in AV Sulcus",
+            "latinName": "Arteria coronaria dextra",
+            "x": 36,
+            "y": 56,
+            "structureCategory": "vascular",
+            "associatedCode": "92928",
+            "associatedModifier": "-RC",
+            "clinicalSignificance": "Major coronary vessel traversing right atrioventricular sulcus to posterior descending artery.",
+            "sovereignGateCheck": "If stented during same session as LAD, bill secondary vessel with modifier -RC and check payer guidelines for add-on 92929 vs modifier -59 on 92928.",
+            "dissectionDepth": "superficial"
+      },
+      {
+            "id": "aortic-valve-root",
+            "name": "Aortic Valve Anulus & Sinuses of Valsalva",
+            "latinName": "Valva aortae & Bulbus aortae",
+            "x": 48,
+            "y": 36,
+            "structureCategory": "visceral",
+            "associatedCode": "33405",
+            "associatedModifier": "-22 (if complex)",
+            "clinicalSignificance": "Surgical aortic valve replacement requiring median sternotomy and cardiopulmonary bypass.",
+            "sovereignGateCheck": "Cardiopulmonary bypass (CPB), arterial/venous cannulation, and cardioplegic arrest are bundled into 33405. Prosthetic device invoice must match implant serial number.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "vats-hilum",
+            "name": "Right Pulmonary Hilum & Lobar Bronchus",
+            "latinName": "Hilum pulmonis & Bronchi lobares",
+            "x": 28,
+            "y": 40,
+            "structureCategory": "visceral",
+            "associatedCode": "32663",
+            "associatedModifier": "-RT",
+            "clinicalSignificance": "Video-assisted thoracoscopic surgery (VATS) with anatomical lobectomy.",
+            "sovereignGateCheck": "Diagnostic thoracoscopy (32601) is bundled into surgical resection 32663. Mediastinal lymph node dissection (32674) is a billable add-on code.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "internal-mammary-conduit",
+            "name": "Left Internal Mammary Artery (LIMA) Conduit",
+            "latinName": "Arteria thoracica interna sinistra",
+            "x": 62,
+            "y": 38,
+            "structureCategory": "vascular",
+            "associatedCode": "33533",
+            "associatedModifier": "-59",
+            "clinicalSignificance": "Single arterial coronary artery bypass graft (CABG) utilizing LIMA to LAD anastomosis.",
+            "sovereignGateCheck": "Harvesting of LIMA is bundled into 33533; cannot bill separate arterial harvest. If venous grafts also placed, bill combined arterial/venous series (33517-33523).",
+            "dissectionDepth": "intermediate"
+      }
+],
     clinicalOverview:
       'Cardiovascular and thoracic coding requires precise anatomical vessel tracking. Medicare and commercial payers reject claims that fail to specify exact coronary artery branch modifiers (-LD, -LC, -RC, -LM, -RI) or that improperly unbundle diagnostic angiograms from interventional stent placement.',
     codes: [
@@ -437,6 +666,73 @@ export const ANATOMY_SYSTEMS: AnatomicalSystem[] = [
       'Gallbladder (Fundus, Cystic Duct) & Common Bile Duct',
       'Pancreas (Head, Uncinate Process, Body, Tail)'
     ],
+    hotspots: [
+      {
+            "id": "gallbladder-fundus",
+            "name": "Gallbladder Fundus & Cystic Duct Junction",
+            "latinName": "Vesica biliaris & Ductus cysticus",
+            "x": 38,
+            "y": 44,
+            "structureCategory": "visceral",
+            "associatedCode": "47562",
+            "associatedModifier": "-22 (adhesions)",
+            "clinicalSignificance": "Laparoscopic cholecystectomy for acute cholecystitis / symptomatic cholelithiasis.",
+            "sovereignGateCheck": "If intraoperative cholangiography performed, bill 47563 instead of 47562. Never bill both 47562 and 47563 together (Column 1/2 NCCI denial CARC 97).",
+            "dissectionDepth": "intermediate"
+      },
+      {
+            "id": "common-bile-duct",
+            "name": "Common Bile Duct & Sphincter of Oddi",
+            "latinName": "Ductus choledochus & M. sphincter ampullae",
+            "x": 46,
+            "y": 52,
+            "structureCategory": "visceral",
+            "associatedCode": "43260",
+            "associatedModifier": "-59 / -XS",
+            "clinicalSignificance": "Endoscopic retrograde cholangiopancreatography (ERCP) with stone extraction or sphincterotomy.",
+            "sovereignGateCheck": "Diagnostic ERCP (43260) is bundled into therapeutic ERCP (43264 removal of calculi). Review fluoroscopy report to substantiate stone extraction.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "gastric-antrum",
+            "name": "Gastric Antrum & Incisura Angularis",
+            "latinName": "Antrum pyloricum & Incisura angularis",
+            "x": 60,
+            "y": 38,
+            "structureCategory": "visceral",
+            "associatedCode": "43239",
+            "associatedModifier": "-XS",
+            "clinicalSignificance": "Esophagogastroduodenoscopy (EGD) with cold forceps mucosal biopsy.",
+            "sovereignGateCheck": "Diagnostic EGD (43235) is bundled into 43239. Biopsy specimen count on pathology report must correlate with operative report findings.",
+            "dissectionDepth": "superficial"
+      },
+      {
+            "id": "cecum-ileocecal",
+            "name": "Cecum & Ileocecal Valve Confluence",
+            "latinName": "Caecum & Valva ileocaecalis",
+            "x": 32,
+            "y": 68,
+            "structureCategory": "visceral",
+            "associatedCode": "45385",
+            "associatedModifier": "-XS",
+            "clinicalSignificance": "Colonoscopy with snare polypectomy of ascending colon / cecal lesion.",
+            "sovereignGateCheck": "Operative note must document visualization of cecal landmarks (appendiceal orifice, ileocecal valve). Without landmarks, code with modifier -52 (reduced service).",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "appendix-base",
+            "name": "Vermiform Appendix at Tenia Coli Confluence",
+            "latinName": "Appendix vermiformis",
+            "x": 34,
+            "y": 78,
+            "structureCategory": "visceral",
+            "associatedCode": "44970",
+            "associatedModifier": "-52",
+            "clinicalSignificance": "Laparoscopic appendectomy for acute appendicitis or appendiceal mucocele.",
+            "sovereignGateCheck": "Incidental appendectomy during other major intra-abdominal surgery cannot be billed separately unless documented acute appendicitis pathology is present.",
+            "dissectionDepth": "deep"
+      }
+],
     clinicalOverview:
       'Gastrointestinal RCM demands strict adherence to mucosal lesion management rules. Billing snare polypectomy and biopsy on the same anatomical polyp is an illegal unbundle, while exploratory laparotomies are strictly bundled into major organ resections like the Whipple procedure.',
     codes: [
@@ -547,6 +843,73 @@ export const ANATOMY_SYSTEMS: AnatomicalSystem[] = [
       'Prostate Gland & Seminal Vesicles',
       'Uterus, Fallopian Tubes (Fimbriae, Ampulla) & Ovaries'
     ],
+    hotspots: [
+      {
+            "id": "renal-cortex-vasculature",
+            "name": "Renal Cortex & Segmental Interlobar Arteries",
+            "latinName": "Cortex renalis & Arteriae interlobares",
+            "x": 34,
+            "y": 30,
+            "structureCategory": "visceral",
+            "associatedCode": "50543",
+            "associatedModifier": "-RT / -LT",
+            "clinicalSignificance": "Laparoscopic partial nephrectomy for renal cell carcinoma / angiomyolipoma.",
+            "sovereignGateCheck": "Laterality modifier -RT or -LT mandatory. Tumor size, surgical margin pathology, and warm ischemia clamping time must be verified in operative notes.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "ureterovesical-junction",
+            "name": "Ureterovesical Junction (UVJ) & Distal Ureter",
+            "latinName": "Junctio ureterovesicalis & Ureter",
+            "x": 46,
+            "y": 58,
+            "structureCategory": "visceral",
+            "associatedCode": "52356",
+            "associatedModifier": "-RT / -LT",
+            "clinicalSignificance": "Cystourethroscopy with ureteroscopic laser lithotripsy and indwelling double-J stent insertion.",
+            "sovereignGateCheck": "Ipsilateral stent insertion (52332) is bundled into 52356 under NCCI. Contralateral stent placement is billable only with modifier -59 / -XS and opposite laterality modifier.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "bladder-trigone",
+            "name": "Trigone of Urinary Bladder & Ureteral Orifices",
+            "latinName": "Trigonum vesicae & Ostium ureteris",
+            "x": 50,
+            "y": 66,
+            "structureCategory": "visceral",
+            "associatedCode": "52000",
+            "associatedModifier": "-52",
+            "clinicalSignificance": "Diagnostic cystourethroscopy for hematuria, voiding dysfunction, or staging.",
+            "sovereignGateCheck": "Diagnostic cystoscopy is designated as a \"separate procedure\" in CPT. Bundled when performed alongside any open, laparoscopic, or endoscopic urinary surgery.",
+            "dissectionDepth": "intermediate"
+      },
+      {
+            "id": "prostate-neurovascular",
+            "name": "Prostate Gland & Cavernous Neurovascular Bundle",
+            "latinName": "Prostata & Plexus prostaticus",
+            "x": 50,
+            "y": 78,
+            "structureCategory": "visceral",
+            "associatedCode": "55866",
+            "associatedModifier": "-22 (if salvage)",
+            "clinicalSignificance": "Robotic-assisted laparoscopic radical prostatectomy with bilateral pelvic lymphadenectomy.",
+            "sovereignGateCheck": "Bilateral pelvic lymphadenectomy (38571) is bundled into 55866 under NCCI. Only extended retroperitoneal lymph node dissection can be considered distinct with modifier -59.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "renal-pelvis-calyx",
+            "name": "Renal Pelvis & Major Calyces",
+            "latinName": "Pelvis renalis & Calices renales majores",
+            "x": 38,
+            "y": 38,
+            "structureCategory": "visceral",
+            "associatedCode": "50080",
+            "associatedModifier": "-RT / -LT",
+            "clinicalSignificance": "Percutaneous nephrostolithotomy (PCNL) for staghorn or >2cm renal calculi.",
+            "sovereignGateCheck": "Check stone dimension on pre-operative CT scan: CPT 50080 applies to calculi up to 2 cm; CPT 50081 applies to calculi > 2 cm. Audit tripwire for upcoding.",
+            "dissectionDepth": "deep"
+      }
+],
     clinicalOverview:
       'Urology and Gynecology coding involves complex anatomical staging and specimen weight stratifications. Bladder tumors are billed according to millimeter size tiers, while hysterectomy codes change dramatically if uterine specimen weight exceeds 250 grams.',
     codes: [
@@ -651,6 +1014,73 @@ export const ANATOMY_SYSTEMS: AnatomicalSystem[] = [
       'Carpal Tunnel (Flexor Retinaculum, Carpal Bones, Median Nerve)',
       'Hand Digits: Thumb (I), Index (II), Middle (III), Ring (IV), Little (V)'
     ],
+    hotspots: [
+      {
+            "id": "supraspinatus-insertion",
+            "name": "Supraspinatus Tendon at Greater Tubercle",
+            "latinName": "Tendo m. supraspinati & Tuberculum majus",
+            "x": 28,
+            "y": 26,
+            "structureCategory": "muscular",
+            "associatedCode": "29827",
+            "associatedModifier": "-RT / -LT",
+            "clinicalSignificance": "Shoulder arthroscopy with rotator cuff tendon repair and suture anchor fixation.",
+            "sovereignGateCheck": "Limited debridement (29822) and extensive debridement (29823) in the same shoulder are bundled into 29827. Append modifier -RT or -LT to anchor extremity.",
+            "dissectionDepth": "intermediate"
+      },
+      {
+            "id": "subacromial-space",
+            "name": "Subacromial Space & Coracoacromial Ligament",
+            "latinName": "Spatium subacromiale & Lig. coracoacromiale",
+            "x": 34,
+            "y": 22,
+            "structureCategory": "skeletal",
+            "associatedCode": "+29826",
+            "associatedModifier": "Add-on (Modifier -51 Exempt)",
+            "clinicalSignificance": "Arthroscopic subacromial decompression with acromioplasty.",
+            "sovereignGateCheck": "CPT +29826 is an add-on code. Operative note must explicitly substantiate burring or resection of anterior inferior acromion; ligament release alone is insufficient.",
+            "dissectionDepth": "superficial"
+      },
+      {
+            "id": "carpal-tunnel-median",
+            "name": "Carpal Tunnel & Median Nerve Trunk",
+            "latinName": "Canalis carpi & Nervus medianus",
+            "x": 74,
+            "y": 78,
+            "structureCategory": "neural",
+            "associatedCode": "64721",
+            "associatedModifier": "-RT / -LT",
+            "clinicalSignificance": "Neuroplasty and release of transverse carpal ligament for carpal tunnel syndrome.",
+            "sovereignGateCheck": "Tenolysis of flexor tendons (26145) is bundled into 64721. Endoscopic release must be coded with 29848 instead of open 64721.",
+            "dissectionDepth": "intermediate"
+      },
+      {
+            "id": "distal-radial-rim",
+            "name": "Distal Radial Metaphysis & Volar Rim",
+            "latinName": "Radius (Metaphysis distalis)",
+            "x": 66,
+            "y": 72,
+            "structureCategory": "skeletal",
+            "associatedCode": "25607",
+            "associatedModifier": "-RT / -LT",
+            "clinicalSignificance": "Open reduction and internal fixation (ORIF) of distal radius extra-articular fracture.",
+            "sovereignGateCheck": "If fracture line enters radiocarpal or distal radioulnar joint, code upgrades to intra-articular 25608 (1-2 fragments) or 25609 (3+ fragments). Check post-op x-ray.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "flexor-tendon-sheath",
+            "name": "A1 Pulley & Flexor Digitorum Tendon Sheath",
+            "latinName": "Vagina fibrosa digitorum manus (Anulus A1)",
+            "x": 82,
+            "y": 84,
+            "structureCategory": "muscular",
+            "associatedCode": "26055",
+            "associatedModifier": "-FA to -F9 (Digit Specific)",
+            "clinicalSignificance": "Tendon sheath incision for stenosing tenosynovitis (trigger finger release).",
+            "sovereignGateCheck": "Mandatory digit-specific modifier (-F1 to -F9, -FA) is required on CMS-1500 box 24d. Claims without digit modifier fail EDI front-end clearinghouse edits.",
+            "dissectionDepth": "intermediate"
+      }
+],
     clinicalOverview:
       'Orthopedic upper extremity RCM requires digit-specific modifier reporting (-FA through -F9). Using generic right/left modifiers on finger procedures triggers automated clearinghouse rejections. In shoulder arthroscopy, subacromial decompression is strictly an add-on code (+29826).',
     codes: [
@@ -747,6 +1177,73 @@ export const ANATOMY_SYSTEMS: AnatomicalSystem[] = [
       'Tibia, Fibula & Ankle Joint (Talocrural, Medial/Lateral Malleolus)',
       'Foot Bones (Calcaneus, Talus, Tarsals, Metatarsals) & Toes (Hallux, 2nd–5th Digits)'
     ],
+    hotspots: [
+      {
+            "id": "femoral-head-acetabulum",
+            "name": "Femoral Head & Acetabular Articular Cartilage",
+            "latinName": "Caput femoris & Acetabulum",
+            "x": 44,
+            "y": 28,
+            "structureCategory": "skeletal",
+            "associatedCode": "27130",
+            "associatedModifier": "-RT / -LT",
+            "clinicalSignificance": "Total hip arthroplasty (THA) for severe end-stage osteoarthritis or avascular necrosis.",
+            "sovereignGateCheck": "Bone grafting (20900/20902) into acetabulum is bundled into 27130. Operative notes and implant manufacturer log must be reviewed to match modular cup and femoral stem.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "medial-meniscus-posterior",
+            "name": "Posterior Horn of Medial Meniscus",
+            "latinName": "Cornu posterius menisci medialis",
+            "x": 48,
+            "y": 58,
+            "structureCategory": "skeletal",
+            "associatedCode": "29881",
+            "associatedModifier": "-RT / -LT",
+            "clinicalSignificance": "Knee arthroscopy with partial medial meniscectomy for complex degenerative tear.",
+            "sovereignGateCheck": "Chondroplasty (29877) in the medial compartment is bundled into 29881. If chondroplasty was performed in patellofemoral or lateral compartment, code HCPCS G0289 or -59.",
+            "dissectionDepth": "intermediate"
+      },
+      {
+            "id": "acl-intercondylar",
+            "name": "Anterior Cruciate Ligament (ACL) in Notch",
+            "latinName": "Ligamentum cruciatum anterius (LCA)",
+            "x": 50,
+            "y": 54,
+            "structureCategory": "skeletal",
+            "associatedCode": "29888",
+            "associatedModifier": "-RT / -LT",
+            "clinicalSignificance": "Arthroscopically aided anterior cruciate ligament reconstruction with graft.",
+            "sovereignGateCheck": "Autograft harvesting (patellar tendon, hamstring, quadriceps) from ipsilateral knee is bundled into 29888. Contralateral harvest qualifies for modifier -59 on harvest code.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "tibial-plateau-condyles",
+            "name": "Tibial Plateau Joint Surface & Femoral Condyles",
+            "latinName": "Facies articularis superior tibiae",
+            "x": 52,
+            "y": 62,
+            "structureCategory": "skeletal",
+            "associatedCode": "27447",
+            "associatedModifier": "-RT / -LT, -50 (Bilateral)",
+            "clinicalSignificance": "Total knee arthroplasty (TKA) with prosthetic femoral and tibial components.",
+            "sovereignGateCheck": "Patellar resurfacing, synovectomy, and lateral retinacular release are bundled into 27447. Bilateral TKA on same day requires modifier -50 or separate line with -50.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "first-mtp-bunion",
+            "name": "First Metatarsophalangeal Joint & First Ray",
+            "latinName": "Articulatio metatarsophalangea I",
+            "x": 58,
+            "y": 86,
+            "structureCategory": "skeletal",
+            "associatedCode": "28296",
+            "associatedModifier": "-TA / -T5 (Toe Specific)",
+            "clinicalSignificance": "Hallux valgus correction with metatarsal osteotomy and internal screw fixation (Chevron/Austin).",
+            "sovereignGateCheck": "Capsulotomy, sesamoidectomy, and exostectomy are bundled into 28296. Mandate anatomical toe modifier (-TA for left great toe, -T5 for right great toe).",
+            "dissectionDepth": "superficial"
+      }
+],
     clinicalOverview:
       'Lower extremity RCM features the strictest NCCI compartmental bundling rules in surgery. Within the knee, billing meniscectomy and chondroplasty in the same compartment is an illegal unbundle. In podiatric surgery, toe-specific modifiers (-TA through -T9) are mandatory.',
     codes: [
@@ -857,6 +1354,73 @@ export const ANATOMY_SYSTEMS: AnatomicalSystem[] = [
       'Skeletal Muscle Bundles & Epimysium',
       'Periosteum & Cortical Bone Interface'
     ],
+    hotspots: [
+      {
+            "id": "stratum-corneum-epidermis",
+            "name": "Epidermis & Stratum Corneum / Basale",
+            "latinName": "Epidermis (Stratum basale et corneum)",
+            "x": 50,
+            "y": 16,
+            "structureCategory": "integumentary",
+            "associatedCode": "12001",
+            "associatedModifier": "-59 / -XS",
+            "clinicalSignificance": "Simple repair of superficial epidermal and dermal wounds up to 2.5 cm.",
+            "sovereignGateCheck": "Simple wound closure is bundled into any surgical incision or excisional biopsy (11400-11646). Separate trauma laceration at distinct anatomical site requires modifier -59.",
+            "dissectionDepth": "superficial"
+      },
+      {
+            "id": "reticular-dermis",
+            "name": "Reticular Dermis & Subdermal Vascular Plexus",
+            "latinName": "Dermis (Stratum reticulare)",
+            "x": 50,
+            "y": 28,
+            "structureCategory": "integumentary",
+            "associatedCode": "13132",
+            "associatedModifier": "-59 / -XS",
+            "clinicalSignificance": "Complex wound reconstruction requiring extensive undermining and layered debridement.",
+            "sovereignGateCheck": "Operative narrative must explicitly document layered closure (deep dermal + subcutaneous + subcuticular) and defect dimensions in centimeters to justify complex repair.",
+            "dissectionDepth": "superficial"
+      },
+      {
+            "id": "subcutaneous-adipose",
+            "name": "Subcutaneous Adipose Tissue & Camper's Fascia",
+            "latinName": "Tela subcutanea (Panniculus adiposus)",
+            "x": 50,
+            "y": 44,
+            "structureCategory": "integumentary",
+            "associatedCode": "11042",
+            "associatedModifier": "-XS",
+            "clinicalSignificance": "Surgical excisional debridement of necrotic subcutaneous adipose tissue; first 20 sq cm.",
+            "sovereignGateCheck": "Surface area in sq cm must be documented in chart. If wound extends into muscle or fascia, code ONLY 11043; never bill 11042 + 11043 on the same anatomical ulcer.",
+            "dissectionDepth": "intermediate"
+      },
+      {
+            "id": "deep-investing-fascia",
+            "name": "Deep Investing Fascia & Muscle Epimysium",
+            "latinName": "Fascia profunda & Epimysium",
+            "x": 50,
+            "y": 64,
+            "structureCategory": "muscular",
+            "associatedCode": "11043",
+            "associatedModifier": "-XS",
+            "clinicalSignificance": "Debridement of necrotic muscle and/or fascia; first 20 sq cm.",
+            "sovereignGateCheck": "Pathology confirmation or clear surgical description of non-viable muscle debridement required. CMS RAC auditors actively recover 11043 claims lacking histological depth proof.",
+            "dissectionDepth": "deep"
+      },
+      {
+            "id": "periosteal-cortical-bone",
+            "name": "Periosteum & Cortical Bone Margin",
+            "latinName": "Periosteum & Substantia corticalis",
+            "x": 50,
+            "y": 82,
+            "structureCategory": "skeletal",
+            "associatedCode": "11044",
+            "associatedModifier": "-XS",
+            "clinicalSignificance": "Excisional debridement down to and including cortical/cancellous bone; first 20 sq cm.",
+            "sovereignGateCheck": "Operative note must state bone was curetted, rongeured, or burred until bleeding osseous tissue observed. Radiographic evidence of osteomyelitis should be matched.",
+            "dissectionDepth": "deep"
+      }
+],
     clinicalOverview:
       'Integumentary coding accuracy depends on mathematical excision margins and anatomical depth planes. Upcoding debridement to muscle or bone when only subcutaneous fat was debrided is one of the most common triggers for Department of Justice (DOJ) False Claims Act audits.',
     codes: [
