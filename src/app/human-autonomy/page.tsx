@@ -17,6 +17,7 @@ import MultiPayerDenialMatrix from '@/components/ui/MultiPayerDenialMatrix';
 import PhysicianP2PSimulator from '@/components/ui/PhysicianP2PSimulator';
 import FederalIdrArbiter from '@/components/ui/FederalIdrArbiter';
 import { FeeScheduleParityHeatmap } from '@/components/ui/FeeScheduleParityHeatmap';
+import ClinicalResearchComplianceAuditor from '@/components/ui/ClinicalResearchComplianceAuditor';
 import AdjudicationBenchmarkArena from '@/components/ui/AdjudicationBenchmarkArena';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
@@ -159,7 +160,10 @@ export default function HumanAutonomyPage() {
         {/* Section 3I: Global Commercial vs. Medicare Fee Schedule Parity Heatmap */}
         <FeeScheduleParityHeatmap />
 
-        {/* Section 3J: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
+        {/* Section 3J: CMS NCD 310.1 & Clinical Research IDE/IND Compliance Auditor */}
+        <ClinicalResearchComplianceAuditor />
+
+        {/* Section 3K: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
         <AdjudicationBenchmarkArena />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}

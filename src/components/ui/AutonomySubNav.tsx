@@ -15,6 +15,7 @@ import {
   Gavel,
   FileCode,
   Compass,
+  FlaskConical,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -29,6 +30,7 @@ const NAV_ITEMS = [
   { label: 'P2P Audio Simulator', href: '#physician-p2p-simulator', icon: PhoneCall },
   { label: 'NSA IDR Arbiter', href: '#federal-idr-arbiter', icon: Gavel },
   { label: 'Fee Parity Radar', href: '#fee-schedule-parity', icon: Compass },
+  { label: 'Research Auditor', href: '#clinical-research-auditor', icon: FlaskConical },
   { label: 'AI vs Human Arena', href: '#adjudication-benchmark-arena', icon: Swords },
   { label: 'Scrubber Simulator', href: '#scrubber-simulation', icon: FileCode },
 ];
