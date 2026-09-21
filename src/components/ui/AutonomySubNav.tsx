@@ -9,6 +9,8 @@ import {
   Calculator,
   Fingerprint,
   Scale,
+  ShieldAlert,
+  Swords,
   FileCode,
 } from 'lucide-react';
 
@@ -20,6 +22,8 @@ const NAV_ITEMS = [
   { label: 'Clawback Calculator', href: '#specialty-clawback-calculator', icon: Calculator },
   { label: 'Cryptographic Ledger', href: '#cryptographic-audit-ledger', icon: Fingerprint },
   { label: 'Safe-Harbor Auditor', href: '#federal-safe-harbor-auditor', icon: Scale },
+  { label: 'Denial Defense Matrix', href: '#multi-payer-denial-matrix', icon: ShieldAlert },
+  { label: 'AI vs Human Arena', href: '#adjudication-benchmark-arena', icon: Swords },
   { label: 'Scrubber Simulator', href: '#scrubber-simulation', icon: FileCode },
 ];
 

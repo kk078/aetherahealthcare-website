@@ -13,6 +13,8 @@ import ClaimDiffViewer from '@/components/ui/ClaimDiffViewer';
 import SpecialtyClawbackCalculator from '@/components/ui/SpecialtyClawbackCalculator';
 import CryptographicAuditLedger from '@/components/ui/CryptographicAuditLedger';
 import FederalSafeHarborAuditor from '@/components/ui/FederalSafeHarborAuditor';
+import MultiPayerDenialMatrix from '@/components/ui/MultiPayerDenialMatrix';
+import AdjudicationBenchmarkArena from '@/components/ui/AdjudicationBenchmarkArena';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
 import InteractiveClaimScrubberSimulator from '@/components/ui/InteractiveClaimScrubberSimulator';
@@ -141,6 +143,12 @@ export default function HumanAutonomyPage() {
 
         {/* Section 3E: Federal Safe-Harbor Checklist & FCA Risk Auditor */}
         <FederalSafeHarborAuditor />
+
+        {/* Section 3F: Multi-Payer Prior Authorization & Algorithmic Denial Defense Matrix */}
+        <MultiPayerDenialMatrix />
+
+        {/* Section 3G: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
+        <AdjudicationBenchmarkArena />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
         <section id="code-anatomy" className="py-16 md:py-24 bg-white border-b border-gray/10">
