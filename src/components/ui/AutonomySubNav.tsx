@@ -19,6 +19,7 @@ import {
   Stethoscope,
   Clock,
   Syringe,
+  GraduationCap,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -37,6 +38,7 @@ const NAV_ITEMS = [
   { label: 'HAC / POA Guard', href: '#hac-poa-safeguard', icon: Stethoscope },
   { label: 'Two-Midnight Arbiter', href: '#two-midnight-arbiter', icon: Clock },
   { label: 'Drug Waste Guard', href: '#drug-waste-engine', icon: Syringe },
+  { label: 'GME / IME Cap Optimizer', href: '#gme-ime-cap-optimizer', icon: GraduationCap },
   { label: 'AI vs Human Arena', href: '#adjudication-benchmark-arena', icon: Swords },
   { label: 'Scrubber Simulator', href: '#scrubber-simulation', icon: FileCode },
 ];
