@@ -14,6 +14,7 @@ import SpecialtyClawbackCalculator from '@/components/ui/SpecialtyClawbackCalcul
 import CryptographicAuditLedger from '@/components/ui/CryptographicAuditLedger';
 import FederalSafeHarborAuditor from '@/components/ui/FederalSafeHarborAuditor';
 import MultiPayerDenialMatrix from '@/components/ui/MultiPayerDenialMatrix';
+import PhysicianP2PSimulator from '@/components/ui/PhysicianP2PSimulator';
 import AdjudicationBenchmarkArena from '@/components/ui/AdjudicationBenchmarkArena';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
@@ -147,7 +148,10 @@ export default function HumanAutonomyPage() {
         {/* Section 3F: Multi-Payer Prior Authorization & Algorithmic Denial Defense Matrix */}
         <MultiPayerDenialMatrix />
 
-        {/* Section 3G: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
+        {/* Section 3G: Interactive Physician Peer-to-Peer (P2P) Audio/Script Simulator */}
+        <PhysicianP2PSimulator />
+
+        {/* Section 3H: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
         <AdjudicationBenchmarkArena />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}

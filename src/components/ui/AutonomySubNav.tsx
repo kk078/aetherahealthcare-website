@@ -11,6 +11,7 @@ import {
   Scale,
   ShieldAlert,
   Swords,
+  PhoneCall,
   FileCode,
 } from 'lucide-react';
 
@@ -23,6 +24,7 @@ const NAV_ITEMS = [
   { label: 'Cryptographic Ledger', href: '#cryptographic-audit-ledger', icon: Fingerprint },
   { label: 'Safe-Harbor Auditor', href: '#federal-safe-harbor-auditor', icon: Scale },
   { label: 'Denial Defense Matrix', href: '#multi-payer-denial-matrix', icon: ShieldAlert },
+  { label: 'P2P Audio Simulator', href: '#physician-p2p-simulator', icon: PhoneCall },
   { label: 'AI vs Human Arena', href: '#adjudication-benchmark-arena', icon: Swords },
   { label: 'Scrubber Simulator', href: '#scrubber-simulation', icon: FileCode },
 ];
