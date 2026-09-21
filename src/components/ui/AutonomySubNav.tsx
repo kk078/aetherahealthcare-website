@@ -18,6 +18,7 @@ import {
   FlaskConical,
   Stethoscope,
   Clock,
+  Syringe,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -35,6 +36,7 @@ const NAV_ITEMS = [
   { label: 'Research Auditor', href: '#clinical-research-auditor', icon: FlaskConical },
   { label: 'HAC / POA Guard', href: '#hac-poa-safeguard', icon: Stethoscope },
   { label: 'Two-Midnight Arbiter', href: '#two-midnight-arbiter', icon: Clock },
+  { label: 'Drug Waste Guard', href: '#drug-waste-engine', icon: Syringe },
   { label: 'AI vs Human Arena', href: '#adjudication-benchmark-arena', icon: Swords },
   { label: 'Scrubber Simulator', href: '#scrubber-simulation', icon: FileCode },
 ];

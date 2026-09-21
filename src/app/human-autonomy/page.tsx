@@ -20,6 +20,7 @@ import { FeeScheduleParityHeatmap } from '@/components/ui/FeeScheduleParityHeatm
 import ClinicalResearchComplianceAuditor from '@/components/ui/ClinicalResearchComplianceAuditor';
 import HacPoaPenaltySafeguard from '@/components/ui/HacPoaPenaltySafeguard';
 import TwoMidnightRuleArbiter from '@/components/ui/TwoMidnightRuleArbiter';
+import DrugWasteEngine from '@/components/ui/DrugWasteEngine';
 import AdjudicationBenchmarkArena from '@/components/ui/AdjudicationBenchmarkArena';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
@@ -171,7 +172,10 @@ export default function HumanAutonomyPage() {
         {/* Section 3L: CMS-4201-F Two-Midnight Rule & MA Level-of-Care Arbiter */}
         <TwoMidnightRuleArbiter />
 
-        {/* Section 3M: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
+        {/* Section 3M: CMS Single-Dose Vial Drug Waste Engine (Modifiers -JW / -JZ) */}
+        <DrugWasteEngine />
+
+        {/* Section 3N: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
         <AdjudicationBenchmarkArena />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
