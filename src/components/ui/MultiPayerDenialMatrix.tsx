@@ -71,9 +71,14 @@ Under penalty of perjury pursuant to the False Claims Act (31 U.S.C. § 3729) an
   return (
     <section
       id="multi-payer-denial-matrix"
-      className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80 scroll-mt-20"
+      className="py-20 bg-slate-950 text-white relative overflow-hidden border-t border-slate-800/80 scroll-mt-20"
     >
-      {/* Section Header */}
+      {/* Background ambient lighting */}
+      <div className="absolute top-1/4 left-1/4 w-[800px] h-[500px] bg-rose-500/5 blur-[180px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[800px] h-[500px] bg-teal-500/5 blur-[180px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
       <div className="mb-10 text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-950/60 border border-rose-700/50 text-rose-300 text-xs font-mono uppercase tracking-wider mb-4">
           <ShieldAlert className="w-3.5 h-3.5 text-rose-400" />
@@ -459,6 +464,7 @@ Under penalty of perjury pursuant to the False Claims Act (31 U.S.C. § 3729) an
           </div>
         </div>
       )}
+      </div>
     </section>
   );
 }

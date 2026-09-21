@@ -173,9 +173,14 @@ export default function PhysicianP2PSimulator() {
   return (
     <section
       id="physician-p2p-simulator"
-      className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80 scroll-mt-20"
+      className="py-20 bg-slate-950 text-white relative overflow-hidden border-t border-slate-800/80 scroll-mt-20"
     >
-      {/* Section Header */}
+      {/* Background ambient lighting */}
+      <div className="absolute top-1/4 left-1/4 w-[800px] h-[500px] bg-teal-500/5 blur-[180px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[800px] h-[500px] bg-cyan-500/5 blur-[180px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
       <div className="mb-10 text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-950/60 border border-teal-700/50 text-teal-300 text-xs font-mono uppercase tracking-wider mb-4">
           <PhoneCall className="w-3.5 h-3.5 text-teal-400" />
@@ -627,6 +632,7 @@ export default function PhysicianP2PSimulator() {
           </div>
         </div>
       )}
+      </div>
     </section>
   );
 }
