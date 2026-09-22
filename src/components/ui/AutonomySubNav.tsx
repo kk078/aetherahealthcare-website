@@ -27,6 +27,7 @@ import {
   Accessibility,
   Bed,
   HeartHandshake,
+  Brain,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -53,6 +54,7 @@ const NAV_ITEMS = [
   { label: 'IRF 60% Arbiter', href: '#irf-pps-arbiter', icon: Accessibility },
   { label: 'SNF / PDPM Arbiter', href: '#snf-pdpm-arbiter', icon: Bed },
   { label: 'Hospice Cap Arbiter', href: '#hospice-cap-arbiter', icon: HeartHandshake },
+  { label: 'IPF / ECT Arbiter', href: '#ipf-pps-arbiter', icon: Brain },
   { label: 'AI vs Human Arena', href: '#adjudication-benchmark-arena', icon: Swords },
   { label: 'Scrubber Simulator', href: '#scrubber-simulation', icon: FileCode },
 ];
