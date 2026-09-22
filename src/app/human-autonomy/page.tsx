@@ -25,6 +25,7 @@ import GmeImeCapOptimizer from '@/components/ui/GmeImeCapOptimizer';
 import Drug340bAuditor from '@/components/ui/Drug340bAuditor';
 import EsrdKccArbiter from '@/components/ui/EsrdKccArbiter';
 import ClfsPamaArbiter from '@/components/ui/ClfsPamaArbiter';
+import RhcFqhcArbiter from '@/components/ui/RhcFqhcArbiter';
 import AdjudicationBenchmarkArena from '@/components/ui/AdjudicationBenchmarkArena';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
@@ -191,7 +192,10 @@ export default function HumanAutonomyPage() {
         {/* Section 3Q: Clinical Laboratory Fee Schedule (CLFS) Private Payer Data Reporting & PAMA Market-Based Rate Arbiter */}
         <ClfsPamaArbiter />
 
-        {/* Section 3R: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
+        {/* Section 3R: Rural Health Clinic (RHC) AIR & FQHC PPS Cap Disparity Optimizer */}
+        <RhcFqhcArbiter />
+
+        {/* Section 3S: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
         <AdjudicationBenchmarkArena />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
