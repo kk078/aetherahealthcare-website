@@ -98,4 +98,19 @@ test('real hash detects changed data and the download preserves the failed verif
   expect(json.payload).toBe('DEMO | units: 41');
   expect(json.savedDigest).toBe(createHash('sha256').update(original).digest('hex'));
   expect(json.purpose).toContain('not a legal attestation');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
+});
+
+
+test('payment reference labels stay inside their scroll region on narrow screens', async ({ page }) => {
+  for (const width of [320, 390, 393]) {
+    await page.setViewportSize({ width, height: 844 });
+    await page.evaluate(() => document.fonts.ready);
+    const table = page.getByRole('region', { name: 'Payment references table' });
+    await table.scrollIntoViewIfNeeded();
+    await table.evaluate(el => { el.scrollLeft = el.scrollWidth; });
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
+    await table.evaluate(el => { el.scrollLeft = 0; });
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
+  }
 });
