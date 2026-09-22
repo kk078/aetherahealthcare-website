@@ -41,7 +41,7 @@ jobs:
       - run: npx wrangler pages functions build functions --outdir /tmp/aethera-functions
       - run: npx playwright install chromium --with-deps
       - run: npm run test:e2e
-      - run: npx playwright test tests/e2e/enhancement-regressions.spec.ts --project=mobile-chrome
+      - run: npx playwright test tests/e2e/enhancement-regressions.spec.ts tests/e2e/human-autonomy.spec.ts --project=mobile-chrome
       - uses: actions/upload-artifact@v4
         with:
           name: verified-site
