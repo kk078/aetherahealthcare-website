@@ -28,6 +28,7 @@ import ClfsPamaArbiter from '@/components/ui/ClfsPamaArbiter';
 import RhcFqhcArbiter from '@/components/ui/RhcFqhcArbiter';
 import IrfPpsArbiter from '@/components/ui/IrfPpsArbiter';
 import SnfPdpmArbiter from '@/components/ui/SnfPdpmArbiter';
+import HospiceCapArbiter from '@/components/ui/HospiceCapArbiter';
 import AdjudicationBenchmarkArena from '@/components/ui/AdjudicationBenchmarkArena';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
@@ -203,7 +204,10 @@ export default function HumanAutonomyPage() {
         {/* Section 3T: Skilled Nursing Facility (SNF) PPS & Patient Driven Payment Model (PDPM) Arbiter */}
         <SnfPdpmArbiter />
 
-        {/* Section 3U: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
+        {/* Section 3U: Hospice Prospective Payment System & Aggregate / Inpatient Cap Safeguard Arbiter */}
+        <HospiceCapArbiter />
+
+        {/* Section 3V: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
         <AdjudicationBenchmarkArena />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
