@@ -24,6 +24,7 @@ import {
   Droplets,
   Dna,
   HeartPulse,
+  Accessibility,
 } from 'lucide-react';
 
 const NAV_ITEMS = [
@@ -47,6 +48,7 @@ const NAV_ITEMS = [
   { label: 'ESRD / KCC Arbiter', href: '#esrd-kcc-arbiter', icon: Droplets },
   { label: 'CLFS / PAMA Arbiter', href: '#clfs-pama-arbiter', icon: Dna },
   { label: 'RHC / FQHC Arbiter', href: '#rhc-fqhc-arbiter', icon: HeartPulse },
+  { label: 'IRF 60% Arbiter', href: '#irf-pps-arbiter', icon: Accessibility },
   { label: 'AI vs Human Arena', href: '#adjudication-benchmark-arena', icon: Swords },
   { label: 'Scrubber Simulator', href: '#scrubber-simulation', icon: FileCode },
 ];

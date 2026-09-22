@@ -26,6 +26,7 @@ import Drug340bAuditor from '@/components/ui/Drug340bAuditor';
 import EsrdKccArbiter from '@/components/ui/EsrdKccArbiter';
 import ClfsPamaArbiter from '@/components/ui/ClfsPamaArbiter';
 import RhcFqhcArbiter from '@/components/ui/RhcFqhcArbiter';
+import IrfPpsArbiter from '@/components/ui/IrfPpsArbiter';
 import AdjudicationBenchmarkArena from '@/components/ui/AdjudicationBenchmarkArena';
 import CodeAnatomyVisualizer from '@/components/ui/CodeAnatomyVisualizer';
 import AutonomyCodeExplorer from '@/components/ui/AutonomyCodeExplorer';
@@ -195,7 +196,10 @@ export default function HumanAutonomyPage() {
         {/* Section 3R: Rural Health Clinic (RHC) AIR & FQHC PPS Cap Disparity Optimizer */}
         <RhcFqhcArbiter />
 
-        {/* Section 3S: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
+        {/* Section 3S: Inpatient Rehabilitation Facility (IRF) PPS & 60% Compliance Rule Arbiter */}
+        <IrfPpsArbiter />
+
+        {/* Section 3T: Sovereign Coder vs Autonomous AI Live Adjudication Benchmark Arena */}
         <AdjudicationBenchmarkArena />
 
         {/* Section 3: Interactive Code Anatomy (NDC, CPT, CDT, Modifiers) */}
