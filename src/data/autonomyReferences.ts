@@ -3,7 +3,7 @@ export const AUTONOMY_REVIEW_DATE = '2026-09-22';
 export const SOURCES = {
   fca: { label: '31 U.S.C. § 3729 — False claims', url: 'https://www.law.cornell.edu/uscode/text/31/3729' },
   modifiers: { label: 'CMS — Claims processing: multiple modifiers', url: 'https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/clm104c26.pdf' },
-  ncci: { label: 'CMS — 2026 Medicare NCCI Policy Manual', url: 'https://www.cms.gov/files/document/2026-ncci-medicare-policy-manual-all-chapters.pdf' },
+  ncci: { label: 'CMS — 2026 Medicare NCCI Policy Manual', url: 'https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-policy-manual' },
   drugs: { label: 'CMS — JW and JZ modifier FAQs', url: 'https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospitaloutpatientpps/downloads/jw-modifier-faqs.pdf' },
   avastin: { label: 'DailyMed — Avastin package labeling', url: 'https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=939b5d1f-9fb2-4499-80ef-0607aa6b114e' },
   hipaa: { label: 'HHS — HIPAA and cloud computing', url: 'https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html' },

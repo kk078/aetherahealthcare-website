@@ -121,5 +121,6 @@ export const ATLAS_QUIZ = [
 ];
 
 export function atlasSourceUrl(code: AtlasCode) {
-  return ATLAS_SOURCES[code.source].url + (code.page ? `#page=${code.page}` : '');
+  const url = ATLAS_SOURCES[code.source].url;
+  return url + (code.page && new URL(url).pathname.endsWith('.pdf') ? `#page=${code.page}` : '');
 }
