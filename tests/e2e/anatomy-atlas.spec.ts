@@ -78,3 +78,37 @@ test('devices without WebGL retain the named anatomy and lessons', async ({ page
   await expect(page.getByRole('heading', { name: 'Selected: heart' })).toBeVisible();
   await expect(page.getByRole('heading', { name: '93000–93010', exact: true })).toBeVisible();
 });
+
+test('guided study and cutaway controls preserve truthful scope and keyboard access', async ({ page }) => {
+  test.setTimeout(90000);
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/anatomy-atlas/');
+  await expect(page.getByText(/anatomical structures loaded/)).toBeVisible({ timeout: 60000 });
+  await page.getByLabel('Guided regional study', { exact: true }).selectOption('thorax');
+  await expect(page.getByText('Step 1 of 4', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Next structure', exact: true }).click();
+  await expect(page.getByRole('heading', { name: 'Selected: heart', exact: true })).toBeVisible();
+  await page.getByText('Layers, transparency & cutaway', { exact: true }).click();
+  await page.getByLabel('Show surrounding anatomy', { exact: true }).check();
+  await expect(page.getByTestId('atlas-selection-label')).toContainText('in context');
+  await page.getByLabel('Bones and discs opacity', { exact: true }).fill('40');
+  await page.getByLabel('Surface cutaway', { exact: true }).selectOption('transverse');
+  await page.getByLabel('Cutaway position', { exact: true }).fill('35');
+  await expect(page.getByRole('note')).toContainText('transverse surface cutaway · 35%');
+  await expect(page.getByRole('note')).toContainText('not CT/MRI');
+  await page.getByLabel('Show organs', { exact: true }).uncheck();
+  await expect(page.getByRole('heading', { name: 'Selected: heart', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'heart', exact: true })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Reset study view', exact: true }).click();
+  await expect(page.getByLabel('Surface cutaway', { exact: true })).toHaveValue('off');
+  await expect(page.getByRole('button', { name: 'heart', exact: true })).toBeVisible();
+  await page.getByLabel('Guided regional study', { exact: true }).selectOption('pelvis');
+  await expect(page.getByText(/The book includes female pelvic anatomy, but the current model does not/)).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Coding library coverage', exact: true })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  const audit = await new AxeBuilder({ page }).include('main').analyze();
+  expect(audit.violations).toEqual([]);
+  expect(errors).toEqual([]);
+});

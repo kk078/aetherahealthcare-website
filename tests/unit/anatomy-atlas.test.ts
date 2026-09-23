@@ -57,3 +57,14 @@ test('curated models preserve patient laterality and omit known misleading sourc
     assert.notEqual(structure.id, 'FMA12514', 'right-eye composite has cross-midline outliers');
   }
 });
+
+
+import { STUDY_MODULES } from '../../src/data/anatomyStudy';
+test('every guided learning step resolves to available anatomical geometry', () => {
+  assert.equal(new Set(STUDY_MODULES.map(studyModule => studyModule.id)).size, 8);
+  for (const studyModule of STUDY_MODULES) {
+    assert.ok(REGIONS.some(region => region.id === studyModule.region));
+    assert.ok(studyModule.missing.length > 0);
+    for (const step of studyModule.steps) assert.ok(manifest.structures.some(structure => structure.id === step.structure), `${studyModule.id}: ${step.structure}`);
+  }
+});
