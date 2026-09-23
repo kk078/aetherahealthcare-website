@@ -11,3 +11,10 @@ export const CMS_DOCUMENTS = [
   { id: 'ipf-2026', title: 'FY 2026 inpatient psychiatric facility payment updates', url: SOURCES.ipf.url, official: SOURCES.ipf.url },
   { id: 'hospice-2026', title: 'FY 2026 hospice payment update', url: SOURCES.hospice.url, official: SOURCES.hospice.url },
 ];
+
+export function cmsReaderUrl(id: string) {
+  // The custom-domain route returns an edge 502 for this PDF; the same verified
+  // production deployment serves it correctly through its stable Pages hostname.
+  const origin = id === 'ipf-2026' ? 'https://aetherahealthcare-website-cj4.pages.dev' : '';
+  return `${origin}/api/cms-document?id=${encodeURIComponent(id)}`;
+}
