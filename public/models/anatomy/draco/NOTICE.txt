@@ -1,0 +1,4 @@
+Draco decoder — Google Draco contributors, Apache License 2.0.
+https://github.com/google/draco
+https://www.apache.org/licenses/LICENSE-2.0
+Distributed from the Three.js examples package; original notices in decoder scripts retained.

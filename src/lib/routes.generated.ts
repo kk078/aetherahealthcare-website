@@ -9,6 +9,10 @@ export const ROUTES = [
     "indexable": true
   },
   {
+    "path": "/anatomy-atlas",
+    "indexable": true
+  },
+  {
     "path": "/blog",
     "indexable": true
   },

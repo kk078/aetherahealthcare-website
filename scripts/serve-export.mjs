@@ -5,7 +5,7 @@ const root = resolve('out');
 const policy = await readFile(resolve(root, '_headers'), 'utf8');
 const headers = Object.fromEntries(policy.split('\n').slice(1).filter(line => /^  [\w-]+:/.test(line)).map(line => { const i=line.indexOf(':'); return [line.slice(0,i).trim(),line.slice(i+1).trim()]; }));
 headers['Cache-Control'] = 'no-cache';
-const mime = { '.html':'text/html', '.js':'application/javascript', '.mjs':'application/javascript', '.css':'text/css', '.json':'application/json', '.png':'image/png', '.svg':'image/svg+xml', '.ico':'image/x-icon', '.woff2':'font/woff2', '.xml':'application/xml', '.txt':'text/plain', '.pdf':'application/pdf' };
+const mime = { '.html':'text/html', '.js':'application/javascript', '.mjs':'application/javascript', '.css':'text/css', '.json':'application/json', '.png':'image/png', '.svg':'image/svg+xml', '.ico':'image/x-icon', '.woff2':'font/woff2', '.xml':'application/xml', '.txt':'text/plain', '.pdf':'application/pdf', '.wasm':'application/wasm', '.glb':'model/gltf-binary' };
 createServer(async (request,response) => {
   try {
     const path = decodeURIComponent(new URL(request.url,'http://localhost').pathname);

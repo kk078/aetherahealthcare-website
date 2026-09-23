@@ -1,0 +1,8 @@
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+Source: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html
+License statement: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+
+OBJ to glTF; millimeters to meters; axis conversion; display colors; selected compound structures; shared elements are rendered once. No anatomical sculpting. Omitted incomplete spinal-cord composite (only a short central-canal fragment in the source). Ocular structures are the vitreous bodies; composite right-eye meshes have cross-midline outliers and are not used. Original archive headers retain the historical BY-SA 2.1 text; the publisher’s current license page (updated 2025-02-27) specifies CC BY 4.0. Skull composite limited to its bony elements; eye tissues retained as separate structures. Hand/foot bone groups follow their source elements. Draco compression uses 16-bit position and 10-bit normal quantization; no measurements should be taken from the reduced model.
+
+Adult male reference; no female reproductive or pediatric model. Reduced meshes are educational surfaces, not diagnostic images or measurement tools.

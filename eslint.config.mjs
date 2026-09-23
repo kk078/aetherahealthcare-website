@@ -13,6 +13,7 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "public/workers/**",
+    "public/models/anatomy/draco/**",
     ".wrangler/**",
     "build/**",
     "next-env.d.ts",

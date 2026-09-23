@@ -18,6 +18,7 @@ const services = [
 ];
 
 const company = [
+  { name: '3D Anatomy Atlas', href: '/anatomy-atlas' },
   { name: 'About', href: '/about' },
   { name: 'Pricing', href: '/pricing' },
   { name: 'Process', href: '/process' },

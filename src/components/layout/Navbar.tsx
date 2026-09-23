@@ -35,6 +35,7 @@ const specialtyServices = [
 ];
 
 const whyAethera = [
+  { name: '3D Anatomy Atlas', href: '/anatomy-atlas', desc: 'Interactive anatomy and source-linked billing education' },
   { name: 'Human Autonomy Framework', href: '/human-autonomy', desc: 'Evidence, documentation and human review in healthcare billing' },
   { name: 'About Us', href: '/about', desc: 'Our story, founder adjudication roots & team' },
   { name: 'Case Studies', href: '/case-studies', desc: 'Results our process is built to deliver' },

@@ -1,0 +1,1802 @@
+{
+  "dataset": "BodyParts3D 4.0 PART-OF, 99% polygon reduction archive",
+  "source": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "licenseStatement": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "reviewed": "2026-09-23",
+  "archiveSha256": "9fbc713fffeee924a5a657d9813d84d7eb957bded63adb854931dd5e3eb61c97",
+  "adaptations": "OBJ to glTF; millimeters to meters; axis conversion; display colors; selected compound structures; shared elements are rendered once. No anatomical sculpting. Omitted incomplete spinal-cord composite (only a short central-canal fragment in the source). Ocular structures are the vitreous bodies; composite right-eye meshes have cross-midline outliers and are not used. Original archive headers retain the historical BY-SA 2.1 text; the publisher’s current license page (updated 2025-02-27) specifies CC BY 4.0. Skull composite limited to its bony elements; eye tissues retained as separate structures. Hand/foot bone groups follow their source elements. Draco compression uses 16-bit position and 10-bit normal quantization; no measurements should be taken from the reduced model.",
+  "reference": "Adult male reference; no female reproductive or pediatric model. Reduced meshes are educational surfaces, not diagnostic images or measurement tools.",
+  "structures": [
+    {
+      "id": "FMA46565",
+      "name": "skull",
+      "region": "head",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.0761885,
+          1.4216300000000002,
+          -0.018001
+        ],
+        [
+          0.07485649999999999,
+          1.63627,
+          0.190833
+        ]
+      ],
+      "elementIds": [
+        "FJ3199",
+        "FJ3200",
+        "FJ3263",
+        "FJ3265",
+        "FJ3269",
+        "FJ3272",
+        "FJ3273",
+        "FJ3274",
+        "FJ3281",
+        "FJ3287",
+        "FJ3289",
+        "FJ3309",
+        "FJ3369",
+        "FJ3371",
+        "FJ3375",
+        "FJ3378",
+        "FJ3379",
+        "FJ3380",
+        "FJ3386",
+        "FJ3392",
+        "FJ3394",
+        "FJ3395"
+      ],
+      "triangles": 127094
+    },
+    {
+      "id": "FMA13478",
+      "name": "vertebral column and intervertebral discs",
+      "region": "spine",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.059591200000000004,
+          0.782837,
+          -0.00725375
+        ],
+        [
+          0.0582029,
+          1.48143,
+          0.115991
+        ]
+      ],
+      "elementIds": [
+        "FJ3154",
+        "FJ3155",
+        "FJ3156",
+        "FJ3157",
+        "FJ3158",
+        "FJ3159",
+        "FJ3160",
+        "FJ3161",
+        "FJ3162",
+        "FJ3163",
+        "FJ3164",
+        "FJ3165",
+        "FJ3166",
+        "FJ3167",
+        "FJ3168",
+        "FJ3169",
+        "FJ3170",
+        "FJ3171",
+        "FJ3172",
+        "FJ3173",
+        "FJ3174",
+        "FJ3175",
+        "FJ3176",
+        "FJ3177",
+        "FJ3202",
+        "FJ3203",
+        "FJ3204",
+        "FJ3205",
+        "FJ3206",
+        "FJ3207",
+        "FJ3208",
+        "FJ3209",
+        "FJ3210",
+        "FJ3211",
+        "FJ3212",
+        "FJ3213",
+        "FJ3214",
+        "FJ3215",
+        "FJ3216",
+        "FJ3217",
+        "FJ3218",
+        "FJ3219",
+        "FJ3220",
+        "FJ3221",
+        "FJ3222",
+        "FJ3223",
+        "FJ3224",
+        "FJ3393"
+      ],
+      "triangles": 124220
+    },
+    {
+      "id": "FMA7480",
+      "name": "rib cage",
+      "region": "thorax",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.137085,
+          1.00806,
+          0.00364141
+        ],
+        [
+          0.13577799999999998,
+          1.37048,
+          0.213832
+        ]
+      ],
+      "elementIds": [
+        "FJ3153",
+        "FJ3178",
+        "FJ3225",
+        "FJ3226",
+        "FJ3227",
+        "FJ3228",
+        "FJ3229",
+        "FJ3230",
+        "FJ3231",
+        "FJ3232",
+        "FJ3233",
+        "FJ3234",
+        "FJ3235",
+        "FJ3236",
+        "FJ3239",
+        "FJ3242",
+        "FJ3245",
+        "FJ3248",
+        "FJ3251",
+        "FJ3254",
+        "FJ3255",
+        "FJ3290",
+        "FJ3330",
+        "FJ3331",
+        "FJ3332",
+        "FJ3333",
+        "FJ3334",
+        "FJ3335",
+        "FJ3336",
+        "FJ3337",
+        "FJ3338",
+        "FJ3339",
+        "FJ3340",
+        "FJ3341",
+        "FJ3342",
+        "FJ3343",
+        "FJ3344",
+        "FJ3345",
+        "FJ3346",
+        "FJ3347",
+        "FJ3348"
+      ],
+      "triangles": 194110
+    },
+    {
+      "id": "FMA13322",
+      "name": "right clavicle",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.145277,
+          1.30862,
+          0.0544125
+        ],
+        [
+          -0.009661649999999999,
+          1.35544,
+          0.146948
+        ]
+      ],
+      "elementIds": [
+        "FJ3362"
+      ],
+      "triangles": 1146
+    },
+    {
+      "id": "FMA13323",
+      "name": "left clavicle",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.00837873,
+          1.30853,
+          0.054387500000000005
+        ],
+        [
+          0.14394200000000001,
+          1.35518,
+          0.14707800000000001
+        ]
+      ],
+      "elementIds": [
+        "FJ3237"
+      ],
+      "triangles": 1176
+    },
+    {
+      "id": "FMA13395",
+      "name": "right scapula",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.166464,
+          1.1839600000000001,
+          -0.00508275
+        ],
+        [
+          -0.0570538,
+          1.3498599999999998,
+          0.10285599999999999
+        ]
+      ],
+      "elementIds": [
+        "FJ3384"
+      ],
+      "triangles": 26172
+    },
+    {
+      "id": "FMA13396",
+      "name": "left scapula",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.0570614,
+          1.18395,
+          -0.0050764
+        ],
+        [
+          0.166464,
+          1.3498599999999998,
+          0.10284499999999999
+        ]
+      ],
+      "elementIds": [
+        "FJ3279"
+      ],
+      "triangles": 28106
+    },
+    {
+      "id": "FMA23130",
+      "name": "right humerus",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.240841,
+          1.0292000000000001,
+          0.0510391
+        ],
+        [
+          -0.14009,
+          1.33654,
+          0.10021899999999999
+        ]
+      ],
+      "elementIds": [
+        "FJ3368"
+      ],
+      "triangles": 3784
+    },
+    {
+      "id": "FMA23131",
+      "name": "left humerus",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.140073,
+          1.02921,
+          0.0510559
+        ],
+        [
+          0.24076,
+          1.33652,
+          0.100229
+        ]
+      ],
+      "elementIds": [
+        "FJ3262"
+      ],
+      "triangles": 3844
+    },
+    {
+      "id": "FMA23464",
+      "name": "right radius",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.27953500000000003,
+          0.8058350000000001,
+          0.0611026
+        ],
+        [
+          -0.219833,
+          1.03505,
+          0.126908
+        ]
+      ],
+      "elementIds": [
+        "FJ3349"
+      ],
+      "triangles": 672
+    },
+    {
+      "id": "FMA23465",
+      "name": "left radius",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.219836,
+          0.806163,
+          0.0614693
+        ],
+        [
+          0.279143,
+          1.03501,
+          0.127252
+        ]
+      ],
+      "elementIds": [
+        "FJ3277"
+      ],
+      "triangles": 632
+    },
+    {
+      "id": "FMA23467",
+      "name": "right ulna",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.247179,
+          0.805173,
+          0.0447992
+        ],
+        [
+          -0.196881,
+          1.05245,
+          0.123494
+        ]
+      ],
+      "elementIds": [
+        "FJ3391"
+      ],
+      "triangles": 834
+    },
+    {
+      "id": "FMA23468",
+      "name": "left ulna",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.19689199999999998,
+          0.805016,
+          0.0445523
+        ],
+        [
+          0.24712,
+          1.05247,
+          0.123279
+        ]
+      ],
+      "elementIds": [
+        "FJ3286"
+      ],
+      "triangles": 824
+    },
+    {
+      "id": "FMA16586",
+      "name": "right hip bone",
+      "region": "pelvis",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.144872,
+          0.7521530000000001,
+          0.0011187800000000002
+        ],
+        [
+          -0.0027903,
+          0.9578690000000001,
+          0.139019
+        ]
+      ],
+      "elementIds": [
+        "FJ3152"
+      ],
+      "triangles": 2374
+    },
+    {
+      "id": "FMA16587",
+      "name": "left hip bone",
+      "region": "pelvis",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.0027503099999999997,
+          0.751951,
+          0.00131494
+        ],
+        [
+          0.144754,
+          0.95809,
+          0.139095
+        ]
+      ],
+      "elementIds": [
+        "FJ3288"
+      ],
+      "triangles": 2332
+    },
+    {
+      "id": "FMA24474",
+      "name": "right femur",
+      "region": "lower-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.150134,
+          0.36815,
+          0.0495302
+        ],
+        [
+          -0.0318943,
+          0.834252,
+          0.11219199999999999
+        ]
+      ],
+      "elementIds": [
+        "FJ3365"
+      ],
+      "triangles": 3102
+    },
+    {
+      "id": "FMA24475",
+      "name": "left femur",
+      "region": "lower-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.0319662,
+          0.368056,
+          0.0494822
+        ],
+        [
+          0.15023699999999998,
+          0.8342390000000001,
+          0.112276
+        ]
+      ],
+      "elementIds": [
+        "FJ3259"
+      ],
+      "triangles": 3204
+    },
+    {
+      "id": "FMA24477",
+      "name": "right tibia",
+      "region": "lower-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.10935299999999999,
+          -0.00603716,
+          0.0520729
+        ],
+        [
+          -0.035216000000000004,
+          0.37392000000000003,
+          0.11483499999999999
+        ]
+      ],
+      "elementIds": [
+        "FJ3387"
+      ],
+      "triangles": 1664
+    },
+    {
+      "id": "FMA24478",
+      "name": "left tibia",
+      "region": "lower-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.0350342,
+          -0.0060953299999999995,
+          0.0519821
+        ],
+        [
+          0.109455,
+          0.373862,
+          0.114515
+        ]
+      ],
+      "elementIds": [
+        "FJ3282"
+      ],
+      "triangles": 1692
+    },
+    {
+      "id": "FMA24480",
+      "name": "right fibula",
+      "region": "lower-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.12016500000000001,
+          -0.0252799,
+          0.0484874
+        ],
+        [
+          -0.0843445,
+          0.35914999999999997,
+          0.07816880000000001
+        ]
+      ],
+      "elementIds": [
+        "FJ3366"
+      ],
+      "triangles": 1142
+    },
+    {
+      "id": "FMA24481",
+      "name": "left fibula",
+      "region": "lower-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.08452899999999999,
+          -0.0251906,
+          0.048534
+        ],
+        [
+          0.120108,
+          0.359131,
+          0.078119
+        ]
+      ],
+      "elementIds": [
+        "FJ3260"
+      ],
+      "triangles": 1124
+    },
+    {
+      "id": "FMA24486",
+      "name": "right patella",
+      "region": "lower-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.10228799999999999,
+          0.361486,
+          0.100992
+        ],
+        [
+          -0.0606208,
+          0.400796,
+          0.122727
+        ]
+      ],
+      "elementIds": [
+        "FJ3381"
+      ],
+      "triangles": 306
+    },
+    {
+      "id": "FMA24487",
+      "name": "left patella",
+      "region": "lower-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.0605925,
+          0.361497,
+          0.10090099999999999
+        ],
+        [
+          0.10222400000000001,
+          0.400763,
+          0.122751
+        ]
+      ],
+      "elementIds": [
+        "FJ3275"
+      ],
+      "triangles": 310
+    },
+    {
+      "id": "FMA9713-bones",
+      "name": "right hand bones",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.323914,
+          0.653067,
+          0.11053400000000001
+        ],
+        [
+          -0.218895,
+          0.81179,
+          0.195428
+        ]
+      ],
+      "elementIds": [
+        "FJ3193",
+        "FJ3194",
+        "FJ3196",
+        "FJ3197",
+        "FJ3198",
+        "FJ3292",
+        "FJ3303",
+        "FJ3304",
+        "FJ3306",
+        "FJ3322",
+        "FJ3323",
+        "FJ3325",
+        "FJ3326",
+        "FJ3327",
+        "FJ3350",
+        "FJ3352",
+        "FJ3354",
+        "FJ3356",
+        "FJ3358",
+        "FJ3361",
+        "FJ3367",
+        "FJ3374",
+        "FJ3382",
+        "FJ3383",
+        "FJ3388",
+        "FJ3389",
+        "FJ3390"
+      ],
+      "triangles": 9722
+    },
+    {
+      "id": "FMA9714-bones",
+      "name": "left hand bones",
+      "region": "upper-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.218894,
+          0.6533669999999999,
+          0.11057299999999999
+        ],
+        [
+          0.32393500000000003,
+          0.811682,
+          0.195089
+        ]
+      ],
+      "elementIds": [
+        "FJ3183",
+        "FJ3184",
+        "FJ3186",
+        "FJ3187",
+        "FJ3188",
+        "FJ3240",
+        "FJ3243",
+        "FJ3246",
+        "FJ3249",
+        "FJ3252",
+        "FJ3291",
+        "FJ3296",
+        "FJ3297",
+        "FJ3299",
+        "FJ3313",
+        "FJ3314",
+        "FJ3316",
+        "FJ3317",
+        "FJ3318",
+        "FJ3257",
+        "FJ3261",
+        "FJ3268",
+        "FJ3276",
+        "FJ3278",
+        "FJ3283",
+        "FJ3284",
+        "FJ3285"
+      ],
+      "triangles": 10226
+    },
+    {
+      "id": "FMA11343-bones",
+      "name": "right foot bones",
+      "region": "lower-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          -0.169327,
+          -0.0703923,
+          0.024005099999999998
+        ],
+        [
+          -0.0448758,
+          0.00311093,
+          0.236044
+        ]
+      ],
+      "elementIds": [
+        "FJ3189",
+        "FJ3190",
+        "FJ3191",
+        "FJ3192",
+        "FJ3195",
+        "FJ3300",
+        "FJ3301",
+        "FJ3302",
+        "FJ3305",
+        "FJ3308",
+        "FJ3310",
+        "FJ3319",
+        "FJ3320",
+        "FJ3321",
+        "FJ3324",
+        "FJ3351",
+        "FJ3353",
+        "FJ3355",
+        "FJ3357",
+        "FJ3359",
+        "FJ3360",
+        "FJ3364",
+        "FJ3370",
+        "FJ3373",
+        "FJ3377",
+        "FJ3385"
+      ],
+      "triangles": 14922
+    },
+    {
+      "id": "FMA11344-bones",
+      "name": "left foot bones",
+      "region": "lower-limb",
+      "layer": "skeleton",
+      "bounds": [
+        [
+          0.04501,
+          -0.0704799,
+          0.0242068
+        ],
+        [
+          0.169358,
+          0.0030981100000000003,
+          0.23591900000000002
+        ]
+      ],
+      "elementIds": [
+        "FJ3179",
+        "FJ3180",
+        "FJ3181",
+        "FJ3182",
+        "FJ3185",
+        "FJ3241",
+        "FJ3244",
+        "FJ3247",
+        "FJ3250",
+        "FJ3253",
+        "FJ3256",
+        "FJ3258",
+        "FJ3264",
+        "FJ3267",
+        "FJ3271",
+        "FJ3280",
+        "FJ3293",
+        "FJ3294",
+        "FJ3295",
+        "FJ3298",
+        "FJ3307",
+        "FJ3311",
+        "FJ3312",
+        "FJ3315",
+        "FJ3328",
+        "FJ3329"
+      ],
+      "triangles": 15406
+    },
+    {
+      "id": "FMA7088",
+      "name": "heart",
+      "region": "thorax",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.0363037,
+          1.17492,
+          0.0701704
+        ],
+        [
+          0.0793913,
+          1.2795,
+          0.176517
+        ]
+      ],
+      "elementIds": [
+        "FJ2417",
+        "FJ2418",
+        "FJ2419",
+        "FJ2420",
+        "FJ2421",
+        "FJ2422",
+        "FJ2423",
+        "FJ2424",
+        "FJ2425",
+        "FJ2426",
+        "FJ2427",
+        "FJ2429",
+        "FJ2430",
+        "FJ2431",
+        "FJ2432",
+        "FJ2433",
+        "FJ2434",
+        "FJ2435",
+        "FJ2436",
+        "FJ2437",
+        "FJ2438",
+        "FJ2439",
+        "FJ2631",
+        "FJ2632",
+        "FJ2633",
+        "FJ2634",
+        "FJ2635",
+        "FJ2636",
+        "FJ2637",
+        "FJ2638",
+        "FJ2639",
+        "FJ2640",
+        "FJ2641",
+        "FJ2642",
+        "FJ2643",
+        "FJ2644",
+        "FJ2645",
+        "FJ2646",
+        "FJ2647",
+        "FJ2648",
+        "FJ2649",
+        "FJ2650",
+        "FJ2651",
+        "FJ2652",
+        "FJ2653",
+        "FJ2654",
+        "FJ2655",
+        "FJ2656",
+        "FJ2667",
+        "FJ2668",
+        "FJ2670",
+        "FJ2671",
+        "FJ2672",
+        "FJ2673",
+        "FJ2674",
+        "FJ2675",
+        "FJ2676",
+        "FJ2677",
+        "FJ2692",
+        "FJ2693",
+        "FJ2694",
+        "FJ2695",
+        "FJ2696",
+        "FJ2697",
+        "FJ2698",
+        "FJ2699",
+        "FJ2700",
+        "FJ2714",
+        "FJ2715",
+        "FJ2716",
+        "FJ2717",
+        "FJ2718",
+        "FJ2719",
+        "FJ2720",
+        "FJ2721",
+        "FJ2722",
+        "FJ2723",
+        "FJ2724",
+        "FJ2727",
+        "FJ2728",
+        "FJ2729",
+        "FJ2731",
+        "FJ2737"
+      ],
+      "triangles": 102802
+    },
+    {
+      "id": "FMA7309",
+      "name": "right lung",
+      "region": "thorax",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.11654,
+          1.01459,
+          0.0209425
+        ],
+        [
+          0.00483465,
+          1.34802,
+          0.17381
+        ]
+      ],
+      "elementIds": [
+        "FJ2041",
+        "FJ2044",
+        "FJ2449",
+        "FJ2451",
+        "FJ2452",
+        "FJ2453",
+        "FJ2454",
+        "FJ2455",
+        "FJ2456",
+        "FJ2457",
+        "FJ2458",
+        "FJ2459",
+        "FJ2470",
+        "FJ2481",
+        "FJ2486",
+        "FJ2487",
+        "FJ2488",
+        "FJ2489",
+        "FJ2490",
+        "FJ2491",
+        "FJ2492",
+        "FJ2493",
+        "FJ2494",
+        "FJ2495",
+        "FJ2496",
+        "FJ2497",
+        "FJ2498",
+        "FJ2499",
+        "FJ2500",
+        "FJ2501",
+        "FJ2502",
+        "FJ2503",
+        "FJ2504",
+        "FJ2505",
+        "FJ2506",
+        "FJ2507",
+        "FJ2508",
+        "FJ2509",
+        "FJ2510",
+        "FJ2511",
+        "FJ2512",
+        "FJ2513",
+        "FJ2514",
+        "FJ2515",
+        "FJ2516",
+        "FJ2517",
+        "FJ2518",
+        "FJ2519",
+        "FJ2520",
+        "FJ2521",
+        "FJ2522",
+        "FJ2523",
+        "FJ2524",
+        "FJ2525",
+        "FJ2526",
+        "FJ2967",
+        "FJ2968",
+        "FJ2969",
+        "FJ2970",
+        "FJ2971",
+        "FJ2972",
+        "FJ2973",
+        "FJ2974",
+        "FJ2975",
+        "FJ2976",
+        "FJ2977",
+        "FJ2978",
+        "FJ2979",
+        "FJ2980",
+        "FJ2981",
+        "FJ2982",
+        "FJ2983",
+        "FJ2984",
+        "FJ2985",
+        "FJ2986",
+        "FJ2987",
+        "FJ2988",
+        "FJ2989",
+        "FJ2990",
+        "FJ2991",
+        "FJ2992",
+        "FJ2993",
+        "FJ2994",
+        "FJ2995",
+        "FJ2996",
+        "FJ2997",
+        "FJ2998",
+        "FJ2999",
+        "FJ3000",
+        "FJ3001",
+        "FJ3002",
+        "FJ3003",
+        "FJ3004",
+        "FJ3005",
+        "FJ3006",
+        "FJ3007",
+        "FJ3008",
+        "FJ3009",
+        "FJ3010",
+        "FJ3011",
+        "FJ3012",
+        "FJ3013",
+        "FJ3014",
+        "FJ3015",
+        "FJ3016",
+        "FJ3017",
+        "FJ3018",
+        "FJ3021",
+        "FJ3022",
+        "FJ3023",
+        "FJ3024",
+        "FJ3025",
+        "FJ3026",
+        "FJ3027",
+        "FJ3028",
+        "FJ3029",
+        "FJ3030",
+        "FJ3031",
+        "FJ3032",
+        "FJ3033",
+        "FJ3034",
+        "FJ3035",
+        "FJ3036",
+        "FJ3037",
+        "FJ3038",
+        "FJ3039",
+        "FJ3041",
+        "FJ3042",
+        "FJ3043",
+        "FJ3044",
+        "FJ3045",
+        "FJ3046",
+        "FJ3047",
+        "FJ3048",
+        "FJ3049",
+        "FJ3050",
+        "FJ3051",
+        "FJ3052",
+        "FJ3053",
+        "FJ3054",
+        "FJ3055",
+        "FJ3056",
+        "FJ3057",
+        "FJ3058",
+        "FJ3059",
+        "FJ3060",
+        "FJ3061",
+        "FJ3062",
+        "FJ3063",
+        "FJ3064",
+        "FJ3065",
+        "FJ3066",
+        "FJ3067",
+        "FJ3068",
+        "FJ3069",
+        "FJ3070"
+      ],
+      "triangles": 73312
+    },
+    {
+      "id": "FMA7310",
+      "name": "left lung",
+      "region": "thorax",
+      "layer": "organs",
+      "bounds": [
+        [
+          0.0196494,
+          1.1231099999999998,
+          0.0203139
+        ],
+        [
+          0.12543200000000002,
+          1.3559400000000001,
+          0.177871
+        ]
+      ],
+      "elementIds": [
+        "FJ2441",
+        "FJ2442",
+        "FJ2443",
+        "FJ2444",
+        "FJ2445",
+        "FJ2446",
+        "FJ2447",
+        "FJ2448",
+        "FJ2460",
+        "FJ2461",
+        "FJ2462",
+        "FJ2463",
+        "FJ2464",
+        "FJ2465",
+        "FJ2466",
+        "FJ2467",
+        "FJ2468",
+        "FJ2469",
+        "FJ2471",
+        "FJ2472",
+        "FJ2473",
+        "FJ2474",
+        "FJ2475",
+        "FJ2476",
+        "FJ2477",
+        "FJ2478",
+        "FJ2479",
+        "FJ2480",
+        "FJ2482",
+        "FJ2483",
+        "FJ2484",
+        "FJ2485",
+        "FJ2527",
+        "FJ2528",
+        "FJ2529",
+        "FJ2530",
+        "FJ2531",
+        "FJ2532",
+        "FJ2533",
+        "FJ2534",
+        "FJ2535",
+        "FJ2536",
+        "FJ2537",
+        "FJ2538",
+        "FJ2540",
+        "FJ2881",
+        "FJ2882",
+        "FJ2883",
+        "FJ2884",
+        "FJ2885",
+        "FJ2886",
+        "FJ2887",
+        "FJ2888",
+        "FJ2889",
+        "FJ2890",
+        "FJ2891",
+        "FJ2892",
+        "FJ2893",
+        "FJ2894",
+        "FJ2895",
+        "FJ2896",
+        "FJ2897",
+        "FJ2898",
+        "FJ2899",
+        "FJ2900",
+        "FJ2901",
+        "FJ2902",
+        "FJ2903",
+        "FJ2904",
+        "FJ2905",
+        "FJ2906",
+        "FJ2907",
+        "FJ2908",
+        "FJ2909",
+        "FJ2910",
+        "FJ2911",
+        "FJ2912",
+        "FJ2913",
+        "FJ2914",
+        "FJ2915",
+        "FJ2916",
+        "FJ2917",
+        "FJ2918",
+        "FJ2919",
+        "FJ2920",
+        "FJ2921",
+        "FJ2922",
+        "FJ2923",
+        "FJ2926",
+        "FJ2927",
+        "FJ2928",
+        "FJ2929",
+        "FJ2930",
+        "FJ2931",
+        "FJ2932",
+        "FJ2934",
+        "FJ2935",
+        "FJ2936",
+        "FJ2937",
+        "FJ2938",
+        "FJ2939",
+        "FJ2940",
+        "FJ2941",
+        "FJ2942",
+        "FJ2943",
+        "FJ2945",
+        "FJ2946",
+        "FJ2947",
+        "FJ2948",
+        "FJ2949",
+        "FJ2951",
+        "FJ2952",
+        "FJ2953",
+        "FJ2954",
+        "FJ2956",
+        "FJ2957",
+        "FJ2958",
+        "FJ2959",
+        "FJ2960",
+        "FJ2961",
+        "FJ2962",
+        "FJ2963",
+        "FJ2964",
+        "FJ2965"
+      ],
+      "triangles": 41438
+    },
+    {
+      "id": "FMA7394",
+      "name": "trachea",
+      "region": "thorax",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.0131241,
+          1.2850899999999998,
+          0.077366
+        ],
+        [
+          0.012814500000000001,
+          1.39544,
+          0.110131
+        ]
+      ],
+      "elementIds": [
+        "FJ2541"
+      ],
+      "triangles": 4996
+    },
+    {
+      "id": "FMA7197",
+      "name": "liver",
+      "region": "abdomen",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.115064,
+          1.02794,
+          0.0433287
+        ],
+        [
+          0.0943668,
+          1.18314,
+          0.202413
+        ]
+      ],
+      "elementIds": [
+        "FJ1883",
+        "FJ1893",
+        "FJ1913",
+        "FJ1914",
+        "FJ1916",
+        "FJ2386",
+        "FJ2404",
+        "FJ2405",
+        "FJ2409",
+        "FJ2415",
+        "FJ2416",
+        "FJ2816",
+        "FJ2818",
+        "FJ2819",
+        "FJ2820",
+        "FJ2821",
+        "FJ2822",
+        "FJ2823",
+        "FJ2824",
+        "FJ3071",
+        "FJ3072",
+        "FJ3073",
+        "FJ3074",
+        "FJ3075",
+        "FJ3076",
+        "FJ3077",
+        "FJ3081",
+        "FJ3083",
+        "FJ3086",
+        "FJ3088",
+        "FJ3089",
+        "FJ3090",
+        "FJ3091",
+        "FJ3092",
+        "FJ3093",
+        "FJ3095",
+        "FJ3096",
+        "FJ3102",
+        "FJ3103",
+        "FJ3104",
+        "FJ3105",
+        "FJ3106",
+        "FJ3107",
+        "FJ3108",
+        "FJ3109",
+        "FJ3110",
+        "FJ3111",
+        "FJ3112",
+        "FJ3113",
+        "FJ3114",
+        "FJ3115",
+        "FJ3116",
+        "FJ3117",
+        "FJ3122",
+        "FJ3123",
+        "FJ3124",
+        "FJ3125",
+        "FJ3126",
+        "FJ3127",
+        "FJ3128"
+      ],
+      "triangles": 191622
+    },
+    {
+      "id": "FMA7148",
+      "name": "stomach",
+      "region": "abdomen",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.028951599999999997,
+          1.0398800000000001,
+          0.0814799
+        ],
+        [
+          0.105524,
+          1.1568900000000002,
+          0.19437000000000001
+        ]
+      ],
+      "elementIds": [
+        "FJ2564"
+      ],
+      "triangles": 1810
+    },
+    {
+      "id": "FMA7198",
+      "name": "pancreas",
+      "region": "abdomen",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.0567069,
+          1.00436,
+          0.09541200000000001
+        ],
+        [
+          0.0726744,
+          1.0780999999999998,
+          0.14637899999999998
+        ]
+      ],
+      "elementIds": [
+        "FJ1895",
+        "FJ1896",
+        "FJ2629",
+        "FJ2630"
+      ],
+      "triangles": 16962
+    },
+    {
+      "id": "FMA7202",
+      "name": "gallbladder",
+      "region": "abdomen",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.0632817,
+          1.05107,
+          0.13015100000000002
+        ],
+        [
+          -0.0268404,
+          1.09148,
+          0.17856
+        ]
+      ],
+      "elementIds": [
+        "FJ2817"
+      ],
+      "triangles": 2396
+    },
+    {
+      "id": "FMA7200",
+      "name": "small intestine",
+      "region": "abdomen",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.0870539,
+          0.80529,
+          0.103893
+        ],
+        [
+          0.106621,
+          1.0771099999999998,
+          0.183429
+        ]
+      ],
+      "elementIds": [
+        "FJ2573",
+        "FJ2574",
+        "FJ2575",
+        "FJ2576",
+        "FJ2577",
+        "FJ2578",
+        "FJ2579",
+        "FJ2580",
+        "FJ2581",
+        "FJ2582",
+        "FJ2583",
+        "FJ2584",
+        "FJ2585",
+        "FJ2586",
+        "FJ2587",
+        "FJ2588",
+        "FJ2589",
+        "FJ2590",
+        "FJ2591",
+        "FJ2592",
+        "FJ2593",
+        "FJ2594",
+        "FJ2595",
+        "FJ2596",
+        "FJ2597",
+        "FJ2598",
+        "FJ2599",
+        "FJ2600",
+        "FJ2601",
+        "FJ2602",
+        "FJ2603",
+        "FJ2604",
+        "FJ2605",
+        "FJ2606",
+        "FJ2607",
+        "FJ2608",
+        "FJ2609",
+        "FJ2610",
+        "FJ2611",
+        "FJ2612",
+        "FJ2613",
+        "FJ2614",
+        "FJ2615",
+        "FJ2616",
+        "FJ2617",
+        "FJ2618",
+        "FJ2619",
+        "FJ2620",
+        "FJ2621",
+        "FJ2622",
+        "FJ2623",
+        "FJ2624",
+        "FJ2625",
+        "FJ2626",
+        "FJ2627",
+        "FJ2628"
+      ],
+      "triangles": 16058
+    },
+    {
+      "id": "FMA7201",
+      "name": "large intestine",
+      "region": "abdomen",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.126783,
+          0.757327,
+          0.011280799999999999
+        ],
+        [
+          0.117482,
+          1.06473,
+          0.19693100000000002
+        ]
+      ],
+      "elementIds": [
+        "FJ2566",
+        "FJ2567",
+        "FJ2568",
+        "FJ2569",
+        "FJ2570",
+        "FJ2571",
+        "FJ2572"
+      ],
+      "triangles": 58996
+    },
+    {
+      "id": "FMA7204",
+      "name": "right kidney",
+      "region": "pelvis",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.0875754,
+          0.966812,
+          0.06470010000000001
+        ],
+        [
+          -0.030427600000000003,
+          1.07124,
+          0.11185500000000001
+        ]
+      ],
+      "elementIds": [
+        "FJ3147"
+      ],
+      "triangles": 2310
+    },
+    {
+      "id": "FMA7205",
+      "name": "left kidney",
+      "region": "pelvis",
+      "layer": "organs",
+      "bounds": [
+        [
+          0.0328399,
+          0.984494,
+          0.0595914
+        ],
+        [
+          0.09038299999999999,
+          1.09044,
+          0.100185
+        ]
+      ],
+      "elementIds": [
+        "FJ3145"
+      ],
+      "triangles": 2982
+    },
+    {
+      "id": "FMA15900",
+      "name": "urinary bladder",
+      "region": "pelvis",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.0341466,
+          0.789732,
+          0.0565253
+        ],
+        [
+          0.0326238,
+          0.8299890000000001,
+          0.12824000000000002
+        ]
+      ],
+      "elementIds": [
+        "FJ3149"
+      ],
+      "triangles": 226
+    },
+    {
+      "id": "FMA9600",
+      "name": "prostate",
+      "region": "pelvis",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.0178262,
+          0.772083,
+          0.0645049
+        ],
+        [
+          0.016457799999999998,
+          0.792439,
+          0.0964608
+        ]
+      ],
+      "elementIds": [
+        "FJ3139"
+      ],
+      "triangles": 442
+    },
+    {
+      "id": "FMA58828",
+      "name": "right vitreous body",
+      "region": "head",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.0406511,
+          1.50791,
+          0.141799
+        ],
+        [
+          -0.0202728,
+          1.5282,
+          0.159502
+        ]
+      ],
+      "elementIds": [
+        "FJ1382"
+      ],
+      "triangles": 5436
+    },
+    {
+      "id": "FMA58829",
+      "name": "left vitreous body",
+      "region": "head",
+      "layer": "organs",
+      "bounds": [
+        [
+          0.018965199999999998,
+          1.5079200000000001,
+          0.14179499999999998
+        ],
+        [
+          0.0393467,
+          1.5282200000000001,
+          0.15950999999999999
+        ]
+      ],
+      "elementIds": [
+        "FJ1331"
+      ],
+      "triangles": 5448
+    },
+    {
+      "id": "FMA3734",
+      "name": "aorta",
+      "region": "thorax",
+      "layer": "organs",
+      "bounds": [
+        [
+          -0.00683046,
+          0.946779,
+          0.0450858
+        ],
+        [
+          0.0348378,
+          1.3170899999999999,
+          0.137439
+        ]
+      ],
+      "elementIds": [
+        "FJ1931",
+        "FJ1932",
+        "FJ3411",
+        "FJ3413",
+        "FJ3427"
+      ],
+      "triangles": 10188
+    },
+    {
+      "id": "FMA50801",
+      "name": "brain",
+      "region": "head",
+      "layer": "nervous",
+      "bounds": [
+        [
+          -0.0699404,
+          1.4645,
+          -0.0103293
+        ],
+        [
+          0.0688934,
+          1.63046,
+          0.169677
+        ]
+      ],
+      "elementIds": [
+        "FJ1730",
+        "FJ1731",
+        "FJ1732",
+        "FJ1733",
+        "FJ1738",
+        "FJ1739",
+        "FJ1740",
+        "FJ1743",
+        "FJ1744",
+        "FJ1745",
+        "FJ1746",
+        "FJ1747",
+        "FJ1748",
+        "FJ1749",
+        "FJ1750",
+        "FJ1751",
+        "FJ1758",
+        "FJ1759",
+        "FJ1760",
+        "FJ1762",
+        "FJ1767",
+        "FJ1769",
+        "FJ1770",
+        "FJ1775",
+        "FJ1779",
+        "FJ1780",
+        "FJ1781",
+        "FJ1783",
+        "FJ1784",
+        "FJ1785",
+        "FJ1786",
+        "FJ1787",
+        "FJ1788",
+        "FJ1789",
+        "FJ1790",
+        "FJ1791",
+        "FJ1792",
+        "FJ1795",
+        "FJ1797",
+        "FJ1798",
+        "FJ1800",
+        "FJ1801",
+        "FJ1806",
+        "FJ1807",
+        "FJ1808",
+        "FJ1810",
+        "FJ1814",
+        "FJ1817",
+        "FJ1822",
+        "FJ1826",
+        "FJ1828",
+        "FJ1830",
+        "FJ1831",
+        "FJ1833",
+        "FJ1834",
+        "FJ1835",
+        "FJ1836",
+        "FJ1841",
+        "FJ1842"
+      ],
+      "triangles": 322262
+    },
+    {
+      "id": "FMA7163",
+      "name": "skin",
+      "region": "surface",
+      "layer": "surface",
+      "bounds": [
+        [
+          -0.33411900000000005,
+          -0.07811119999999999,
+          -0.0452476
+        ],
+        [
+          0.332825,
+          1.64136,
+          0.24678299999999997
+        ]
+      ],
+      "elementIds": [
+        "FJ2810"
+      ],
+      "triangles": 203382
+    }
+  ],
+  "files": {
+    "skeleton": {
+      "path": "/models/anatomy/skeleton.glb",
+      "bytes": 1953324,
+      "sha256": "82ab9c2bf1ec16b26ab351e75c7f1f23076303247952451972bbf19e580771a8"
+    },
+    "organs": {
+      "path": "/models/anatomy/organs.glb",
+      "bytes": 1898940,
+      "sha256": "37cc999309898dee592c8b6223e91ee6ca89de6e836e407c46227f0834abb600"
+    },
+    "nervous": {
+      "path": "/models/anatomy/nervous.glb",
+      "bytes": 1077688,
+      "sha256": "e45ce9c25bfe537a0c22f3ad210718e5cef07f98515085ea9bed5c4b8417b59b"
+    },
+    "surface": {
+      "path": "/models/anatomy/surface.glb",
+      "bytes": 558000,
+      "sha256": "dedd6f19dc00c8b92001e5aa6611f450094acb6a07c9d0cc83c1cfc1c02c6304"
+    }
+  }
+}
