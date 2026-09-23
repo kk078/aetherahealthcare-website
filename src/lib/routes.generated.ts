@@ -29,6 +29,10 @@ export const ROUTES = [
     "indexable": true
   },
   {
+    "path": "/cms-references",
+    "indexable": true
+  },
+  {
     "path": "/compare",
     "indexable": true
   },
