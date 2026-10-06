@@ -1,0 +1,93 @@
+{
+  "status": "draft",
+  "post": {
+    "slug": "secondary-insurance-billing-best-practices",
+    "title": "Secondary Insurance Billing Best Practices: Boosting Reimbursements and Reducing Delays",
+    "category": "Revenue Cycle",
+    "author": "Aethera Editorial Team",
+    "date": "2026-10-06",
+    "readTime": "2 min read",
+    "image": "/images/blog/revenue-cycle.svg",
+    "excerpt": "Learn how to streamline secondary payer claims, avoid common pitfalls, and improve cash flow with actionable strategies for U.S. medical practices.",
+    "sections": [
+      {
+        "p": [
+          "Secondary insurance billing can be a hidden revenue source, but many practices miss out due to fragmented processes. By mastering the coordination of benefits and leveraging the right tools, you can capture the payments that belong to you while keeping patients satisfied. Our guide walks you through practical steps, and you can even schedule a <a href=\"/free-assessment\">free revenue assessment</a> to see where your practice stands."
+        ]
+      },
+      {
+        "h": "Know the Secondary Billing Workflow",
+        "p": [
+          "A clear view of each step helps prevent delays and denials. The typical flow looks like this:"
+        ],
+        "ul": [
+          "Collect primary payer EOB",
+          "Enter primary payment details into your RCM system",
+          "Generate and submit a secondary claim with remaining balance",
+          "Track secondary adjudication and post payment"
+        ]
+      },
+      {
+        "h": "Collect Complete Primary Payer Information First",
+        "p": [
+          "Accurate primary data is the foundation for a successful secondary claim."
+        ],
+        "ul": [
+          "Verify patient’s primary insurance ID and group number",
+          "Capture the full Explanation of Benefits (EOB) from the primary payer",
+          "Document patient responsibility (co‑pay, deductible, coinsurance)",
+          "Enter the primary payment amount before initiating the secondary claim"
+        ]
+      },
+      {
+        "h": "Timing and Coordination of Benefits Rules",
+        "p": [
+          "Understanding payer‑specific COB rules can shave days off the cycle."
+        ],
+        "ul": [
+          "Submit secondary claims within the payer’s allowed window (often 30‑90 days after primary payment)",
+          "Check for payer‑specific “secondary filing” requirements in your contract",
+          "Use the correct COB indicator (e.g., “P” for primary, “S” for secondary)",
+          "Avoid double billing by confirming the primary has fully processed"
+        ]
+      },
+      {
+        "h": "Leverage Automation and RCM Technology",
+        "p": [
+          "Modern RCM platforms can automate much of the secondary workflow, reducing manual entry errors."
+        ],
+        "ul": [
+          "Set up rules that automatically trigger a secondary claim when a primary EOB is posted",
+          "Use electronic data interchange (EDI) to transmit secondary claims in real time",
+          "Integrate with clearinghouses that support secondary claim routing",
+          "Employ reporting dashboards to monitor secondary claim aging and denial trends"
+        ]
+      },
+      {
+        "h": "Common Pitfalls and How to Fix Them",
+        "p": [
+          "Even seasoned billers encounter avoidable mistakes. Here’s what to watch for:"
+        ],
+        "ul": [
+          "Missing or incorrect primary EOB details – double‑check before submission",
+          "Submitting secondary claims before the primary has settled – wait for the final EOB",
+          "Using the wrong place of service or modifier – align with primary claim",
+          "Ignoring payer‑specific secondary filing limits – review contracts regularly"
+        ]
+      },
+      {
+        "h": "How Aethera Helps",
+        "p": [
+          "Our team of revenue‑cycle experts can audit your secondary billing process, configure your software for automated secondary claim generation, and provide ongoing monitoring to capture every dollar you’re owed. Ready to close the gap? Schedule your <a href=\"/free-assessment\">free revenue assessment</a> today and discover how our <a href=\"/services\">medical billing &amp; RCM services</a> can transform your practice’s cash flow."
+        ]
+      }
+    ]
+  },
+  "targetKeyword": null,
+  "review": {
+    "reviewer": null,
+    "reviewedAt": null,
+    "sources": [],
+    "notes": "Verify every billing, legal and numerical claim against primary sources before publication."
+  }
+}
