@@ -219,10 +219,10 @@ AETHERA COVERAGE ANALYSIS PROTOCOL:
     try {
       if (!(await sendLeadToKiran('clinical_trial_billing_audit_request', {
         source: 'Clinical Trial Billing & Coverage Analysis Scrubber',
-        name: leadName || 'Clinical Research Director',
+        name: leadName,
         email: leadEmail,
         phone: leadPhone || 'Not provided',
-        organization: leadOrg || 'Research Hospital / Medical Center',
+        organization: leadOrg,
         message: `Requested Clinical Trial Billing & Coverage Analysis (CTCA) Audit.
 Trial NCT#: ${nctNumber}
 Study Type: ${studyType}
@@ -231,7 +231,7 @@ Sponsor Invoiced Lines: ${scrubbedResults.sponsorLines}`,
       }))) {  return; }
       setLeadSubmitted(true);
     } catch {
-      setLeadSubmitted(true);
+      setLeadSubmitted(false);
     } finally {
       setLeadLoading(false);
     }

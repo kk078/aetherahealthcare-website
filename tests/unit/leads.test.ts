@@ -1,3 +1,4 @@
+import { CONTACT_EMAIL } from '../../src/lib/business';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
@@ -16,10 +17,10 @@ function database() {
   }; } } as unknown as D1Database;
   return { db, sqlite };
 }
-const lead = { submissionId: '71c79851-e54c-4dd0-b1a8-802c5a7a7111', formType: 'contact_message', data: { name: 'Test Provider', email: 'test@example.com', practice: 'Test Practice', message: 'Testing' } };
+const lead = { submissionId: '71c79851-e54c-4dd0-b1a8-802c5a7a7111', formType: 'contact_message', data: { name: 'Kiran Kumar Pedapudi', email: CONTACT_EMAIL, practice: 'Aethera Healthcare Solutions', message: 'Testing' } };
 test('maps all name variants and keeps campaign context', () => {
-  for (const data of [{ name: 'A' }, { firstName: 'A', lastName: 'B' }, { contactName: 'A' }, { practiceContact: 'A' }]) {
-    const result = mapToCrm({ ...lead, data: { ...data, email: 'test@example.com' }, attribution: { utmSource: 'test' } });
+  for (const data of [{ name: 'Kiran Kumar Pedapudi' }, { firstName: 'Kiran', lastName: 'Kumar Pedapudi' }, { contactName: 'Kiran Kumar Pedapudi' }, { practiceContact: 'Kiran Kumar Pedapudi' }]) {
+    const result = mapToCrm({ ...lead, data: { ...data, email: CONTACT_EMAIL }, attribution: { utmSource: 'test' } });
     assert.ok('name' in result.payload && result.payload.name);
     assert.ok('message' in result.payload);
     assert.match(String(result.payload.message), /utmSource/);
@@ -35,12 +36,12 @@ test('validates contact and request shape', () => {
   assert.throws(() => validateLead({ ...lead, submissionId: 'bad' }));
 });
 test('specialty tool contact aliases validate and reach CRM identity fields', () => {
-  const valid = validateLead({ ...lead, data: { contactName: 'Test Provider', contactEmail: 'test@example.com', contactPhone: '2025550100', contactPractice: 'Test Practice' } });
+  const valid = validateLead({ ...lead, data: { contactName: 'Kiran Kumar Pedapudi', contactEmail: CONTACT_EMAIL, contactPhone: '', contactPractice: 'Aethera Healthcare Solutions' } });
   const { payload } = mapToCrm(valid);
   assert.ok('email' in payload && 'phone' in payload && 'practice' in payload);
-  assert.equal(payload.email, 'test@example.com');
-  assert.equal(payload.phone, '2025550100');
-  assert.equal(payload.practice, 'Test Practice');
+  assert.equal(payload.email, CONTACT_EMAIL);
+  assert.equal(payload.phone, '');
+  assert.equal(payload.practice, 'Aethera Healthcare Solutions');
 });
 test('durable acknowledgement is independent of CRM, and retries store one lead', async () => {
   const { db, sqlite } = database();
@@ -76,4 +77,11 @@ test('rejects cross-origin and unconfigured requests', async () => {
   assert.equal((await onRequestPost({ request, env: {}, waitUntil: () => {} })).status, 403);
   const same = new Request('https://example.com/api/leads', { method: 'POST', headers: { Origin: 'https://example.com' } });
   assert.equal((await onRequestPost({ request: same, env: {}, waitUntil: () => {} })).status, 503);
+});
+
+test('newsletter requests require explicit versioned consent', () => {
+  const newsletter = { ...lead, formType: 'newsletter_signup', data: { email: CONTACT_EMAIL } };
+  assert.throws(() => validateLead(newsletter), /consent/);
+  assert.throws(() => validateLead({ ...newsletter, data: { ...newsletter.data, marketingConsent: false, consentVersion: 'newsletter-v1' } }), /consent/);
+  assert.equal(validateLead({ ...newsletter, data: { ...newsletter.data, marketingConsent: true, consentVersion: 'newsletter-v1' } }).formType, 'newsletter_signup');
 });

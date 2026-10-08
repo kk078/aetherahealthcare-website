@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { POSTS, getPost, getRelated, postHtml } from '@/lib/blogPosts';
@@ -12,10 +13,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getPost(slug);
   if (!post) return { title: { absolute: 'Article | Aethera Healthcare Solutions' } };
   return {
+    ...marketingMetadata(`/blog/${post.slug}`, post.title, post.excerpt),
     title: { absolute: `${post.title} | Aethera Healthcare Solutions` },
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}/` },
-    openGraph: { title: post.title, description: post.excerpt, images: [`https://aetherahealthcare.com${post.image}`], type: 'article' },
+    openGraph: { title: post.title, description: post.excerpt, images: [`https://aetherahealthcare.com${post.image}`], type: 'article', url: `https://aetherahealthcare.com/blog/${post.slug}/` },
   };
 }
 

@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Calendar, Mail, Clock, CheckCircle2 } from 'lucide-react';
@@ -12,6 +13,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/contact') },
   title: { absolute: "Contact Us | Free Consultation | Aethera Healthcare Solutions" },
   description: "Get in touch with Aethera Healthcare Solutions for a free consultation. Submit an email inquiry or schedule a meeting directly with our team.",
+
+  ...marketingMetadata("/contact", "Contact Us | Free Consultation | Aethera Healthcare Solutions", "Get in touch with Aethera Healthcare Solutions for a free consultation. Submit an email inquiry or schedule a meeting directly with our team."),
 };
 
 export default function Contact() {

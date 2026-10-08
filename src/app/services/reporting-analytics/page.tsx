@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { BarChart3, CheckCircle, Shield } from 'lucide-react';
@@ -33,10 +34,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Report Delivery Time', value: '<24 hours' },
-  { metric: 'Custom Report Availability', value: '<3 days' },
-  { metric: 'Data Accuracy', value: '>99.5%' },
-  { metric: 'User Portal Uptime', value: '>99.9%' },
+  { metric: 'Report Delivery Time', value: 'Agreed in writing' },
+  { metric: 'Custom Report Availability', value: 'Agreed in writing' },
+  { metric: 'Data Accuracy', value: 'Agreed in writing' },
+  { metric: 'User Portal Uptime', value: 'Agreed in writing' },
 ];
 
 const challenges = [
@@ -82,6 +83,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/reporting-analytics') },
   title: "Revenue Cycle Reporting & Analytics",
   description: "Clear, real-time revenue cycle reporting and analytics covering collections, denials, A/R days, and KPI benchmarks so you always know your practice's financial health. Aethera reporting.",
+
+  ...marketingMetadata("/services/reporting-analytics", "Revenue Cycle Reporting & Analytics", "Clear, real-time revenue cycle reporting and analytics covering collections, denials, A/R days, and KPI benchmarks so you always know your practice's financial health. Aethera reporting."),
 };
 
 export default function ReportingAnalytics() {

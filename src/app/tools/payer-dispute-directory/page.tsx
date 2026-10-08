@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Directory of 16+ major commercial, Medicare Advantage, and Medicaid payers with Level 1/2 appeal deadlines, electronic dispute portal URLs, clearinghouse IDs, and escalation fax/phone protocols.',
+
+  ...marketingMetadata("/tools/payer-dispute-directory", 'Payer Dispute & Electronic Appeals Directory | Free RCM Tool | Aethera Healthcare Solutions', 'Directory of 16+ major commercial, Medicare Advantage, and Medicaid payers with Level 1/2 appeal deadlines, electronic dispute portal URLs, clearinghouse IDs, and escalation fax/phone protocols.'),
 };
 
 export default function PayerDisputeDirectoryPage() {

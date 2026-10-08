@@ -1,5 +1,6 @@
 /** Website forms use a same-origin, server-validated durable lead endpoint. */
-import { getAttribution } from './attribution';
+import { captureAttribution } from './attribution';
+import { trackCustomEvent } from './gtag';
 import { SITE } from './siteConfig';
 export const PRIMARY_EXPERT_EMAIL = SITE.contactEmail;
 
@@ -17,8 +18,8 @@ export async function submitToWorker(formType: string, data: LeadData): Promise<
   try {
     if (data.hp_field || data.botcheck) return true;
     // Receipt time is assigned by the server; volatile UI timestamps break retries.
-    data = Object.fromEntries(Object.entries(data).filter(([key]) => !['timestamp', 'submittedAt'].includes(key)));
-    const attribution = getAttribution();
+    data = { ...Object.fromEntries(Object.entries(data).filter(([key]) => !['timestamp', 'submittedAt'].includes(key))), sourcePath: window.location.pathname };
+    const attribution = captureAttribution();
     const payload = { formType, data, attribution };
     const key = await fingerprint(JSON.stringify({ formType, data }));
     const pending = inFlight.get(key);
@@ -41,6 +42,7 @@ export async function submitToWorker(formType: string, data: LeadData): Promise<
         const receipt = await response.json().catch(() => null);
         const accepted = response.ok && receipt?.accepted === true && receipt?.submissionId === submissionId;
         if (!accepted) window.dispatchEvent(new Event('lead-delivery-failed'));
+        else { window.dispatchEvent(new Event('lead-delivery-confirmed')); trackCustomEvent('lead_accepted', { form_type: formType, page_path: window.location.pathname }); }
         return accepted;
       } catch { window.dispatchEvent(new Event('lead-delivery-failed')); return false; }
       finally { inFlight.delete(key); }

@@ -1,18 +1,10 @@
-import { canonicalUrl } from '@/lib/siteConfig';
+import { marketingMetadata } from '@/lib/marketing';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, ShieldCheck } from 'lucide-react';
 import FqhcRhcLandingClient from '@/components/ui/FqhcRhcLandingClient';
 
-export const metadata: Metadata = {
-  alternates: { canonical: canonicalUrl('/lp/fqhc-rhc-billing') },
-  robots: { index: false, follow: true },
-  title: {
-    absolute: 'FQHC & Rural Health Clinic RCM Services | PPS Rate & Wrap Recovery | Aethera',
-  },
-  description:
-    'Comprehensive revenue cycle management for Federally Qualified Health Centers (FQHCs) and Rural Health Clinics (RHCs). Capture unbilled same-day behavioral health visits and eliminate Medicaid wrap delays.',
-};
+export const metadata: Metadata = { ...marketingMetadata('/lp/fqhc-rhc-billing', "FQHC & RHC Billing Review", "Review encounter billing and payer requirements for community health settings, with current policy checked before claims are submitted."), robots: { index: false, follow: true } };
 
 export default function FqhcRhcBillingPage() {
   const jsonLd = {
@@ -25,8 +17,7 @@ export default function FqhcRhcBillingPage() {
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
     },
-    description:
-      'Specialized RCM for Section 330 FQHCs, Look-Alikes, and certified Rural Health Clinics. Optimizing PPS qualifying encounters, same-day mental health splits with Modifier 59/XE, and Medicaid supplemental wrap reconciliations.',
+    description: "Review encounter billing and payer requirements for community health settings, with current policy checked before claims are submitted.",
   };
 
   return (
@@ -78,7 +69,7 @@ export default function FqhcRhcBillingPage() {
           </div>
           <p className="max-w-xl mx-auto text-slate-400">
             Compliant with Section 330 Public Health Service Act, CMS Benefit Policy Manual Chapter 13, and Medicare Claims Processing Manual Chapter 9.
-            HIPAA HITECH SOC-2 certified systems.
+            BAA-first intake, documented access controls and security review. SOC 2 certification is not claimed.
           </p>
           <div className="pt-2 text-slate-400">
             © {new Date().getFullYear()} Aethera Healthcare Solutions. All rights reserved.

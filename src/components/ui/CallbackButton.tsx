@@ -737,7 +737,7 @@ export default function CallbackButton({ initialMode = 'chat', initialQuery = ''
                   </div>
                   <h4 className="text-lg font-bold text-navy">Callback Request Dispatched!</h4>
                   <p className="text-xs text-slate-600 max-w-xs mx-auto leading-relaxed">
-                    Thank you! Your request and inquiry notes have been routed directly to Kiran &amp; our senior billing team. Expect a follow-up or confirmation within 2 business hours.
+                    Thank you! Your request and inquiry notes have been routed directly to Kiran &amp; our senior billing team. Expect a follow-up or confirmation within one business day.
                   </p>
                   <div className="pt-2">
                     <button

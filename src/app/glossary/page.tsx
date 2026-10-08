@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -12,6 +13,8 @@ export const metadata: Metadata = {
   description:
     'Authoritative clinical and financial dictionary for U.S. healthcare revenue cycle management. Master EDI 837/835 standards, NCCI PTP edits, CARC/RARC denial codes, and RVU benchmarks.',
   alternates: { canonical: 'https://aetherahealthcare.com/glossary/' },
+
+  ...marketingMetadata("/glossary", 'Healthcare RCM & Medical Billing Glossary | Aethera Healthcare Solutions', 'Authoritative clinical and financial dictionary for U.S. healthcare revenue cycle management. Master EDI 837/835 standards, NCCI PTP edits, CARC/RARC denial codes, and RVU benchmarks.'),
 };
 
 export default function GlossaryPage() {

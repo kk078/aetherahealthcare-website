@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { FileText, CheckCircle, Shield, BarChart3 } from 'lucide-react';
@@ -10,6 +11,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/medical-coding') },
   title: "Medical Coding Services | ICD-10, CPT, HCPCS",
   description: "Expert medical coding services including ICD-10, C, and HCPCS coding for healthcare providers. Maximize reimbursement with accurate, compliant coding from certified professionals.",
+
+  ...marketingMetadata("/services/medical-coding", "Medical Coding Services | ICD-10, CPT, HCPCS", "Expert medical coding services including ICD-10, C, and HCPCS coding for healthcare providers. Maximize reimbursement with accurate, compliant coding from certified professionals."),
 };
 
 const includedItems = [
@@ -37,10 +40,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Coding Accuracy', value: '>95%' },
-  { metric: 'Turnaround Time', value: '<24 hours' },
-  { metric: 'Denial Rate Due to Coding', value: '<2%' },
-  { metric: 'Audit Compliance', value: '100%' },
+  { metric: 'Coding Accuracy', value: 'Agreed in writing' },
+  { metric: 'Turnaround Time', value: 'Agreed in writing' },
+  { metric: 'Denial Rate Due to Coding', value: 'Agreed in writing' },
+  { metric: 'Audit Compliance', value: 'Agreed in writing' },
 ];
 
 const challenges = [

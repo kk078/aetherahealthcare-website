@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Cardiac EP Billing Scrubber. Audit pulmonary vein isolation (CPT 93656) and SVT ablation edits, validate 3D mapping and ICE guidance add-ons, prevent diagnostic study unbundling denials, and check remote telemetry 90-day intervals.',
+
+  ...marketingMetadata("/tools/cardiac-ep-scrubber", 'Cardiac Electrophysiology & Catheter Ablation Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Cardiac EP Billing Scrubber. Audit pulmonary vein isolation (CPT 93656) and SVT ablation edits, validate 3D mapping and ICE guidance add-ons, prevent diagnostic study unbundling denials, and check remote telemetry 90-day intervals.'),
 };
 
 export default function CardiacEpScrubberPage() {

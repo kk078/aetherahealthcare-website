@@ -23,7 +23,7 @@ const company = [
   { name: 'Pricing', href: '/pricing' },
   { name: 'Process', href: '/process' },
   { name: 'Specialties', href: '/specialties' },
-  { name: 'Billing by Location', href: '/medical-billing' },
+  { name: 'Billing by Specialty', href: '/medical-billing' },
   { name: 'Compare Options', href: '/compare' },
   { name: 'Careers', href: '/careers' },
   { name: 'Blog', href: '/blog' },
@@ -31,9 +31,9 @@ const company = [
 ];
 
 const resources = [
-  { name: '14 Free RCM Tools', href: '/tools' },
+  { name: 'Free RCM Tools', href: '/tools' },
   { name: 'RCM & Billing Glossary', href: '/glossary' },
-  { name: 'Live Provider Portal', href: '/portal#live-portal-sandbox' },
+  { name: 'Provider Portal Demo', href: '/portal#live-portal-sandbox' },
   { name: 'Denial Code Lookup', href: '/tools/denial-code-lookup' },
   { name: 'State of Denials Report', href: '/state-of-denials' },
   { name: 'Payer Directory', href: '/payers/directory' },
@@ -89,6 +89,16 @@ export default function Footer() {
                 Get Free Assessment →
               </Link>
             </div>
+            <a
+              href="https://www.linkedin.com/in/kiran-kumar-pedapudi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-mint hover:text-white text-sm font-semibold transition-colors"
+              aria-label="Connect with Kiran Pedapudi on LinkedIn (opens in a new tab)"
+            >
+              <span aria-hidden="true" className="rounded bg-white/10 px-1.5 py-0.5 font-bold">in</span>
+              Connect with Kiran on LinkedIn
+            </a>
           </div>
 
           {/* Services */}

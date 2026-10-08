@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Total Pancreatectomy with Islet Autotransplantation (TPIAT) Scrubber. Audit total pancreatectomy (48155), cGMP clean-room islet isolation (48805), intraportal autotransplantation (+48554), and portal vein catheterization.',
+
+  ...marketingMetadata("/tools/pediatric-tpiat-islet-transplant-scrubber", 'Pediatric TPIAT & Islet Isolation Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Total Pancreatectomy with Islet Autotransplantation (TPIAT) Scrubber. Audit total pancreatectomy (48155), cGMP clean-room islet isolation (48805), intraportal autotransplantation (+48554), and portal vein catheterization.'),
 };
 
 export default function PediatricTpiatScrubberPage() {

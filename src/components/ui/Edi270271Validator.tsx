@@ -372,7 +372,7 @@ export default function Edi270271Validator() {
         <div className="space-y-1 text-center md:text-left">
           <h3 className="text-lg font-bold">Automate 270/271 Real-Time Eligibility Verification</h3>
           <p className="text-xs sm:text-sm text-white/80 max-w-xl leading-relaxed">
-            Eliminate front-end eligibility denials (CO-27, CO-197, CO-4) forever. Aethera automates real-time 270/271 batch verification sweeps 48 hours and 2 hours prior to every patient visit across 10,600+ payers.
+            Identify front-end eligibility issues (CO-27, CO-197, CO-4) for review. Aethera automates real-time 270/271 batch verification sweeps 48 hours and 2 hours prior to every patient visit across 10,600+ payers.
           </p>
         </div>
         <Link

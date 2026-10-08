@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Database, FileCheck, ShieldCheck, Globe, Bot, Milestone, Mail } from 'lucide-react';
@@ -10,6 +11,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/compliance/security') },
   title: { absolute: 'Security & Compliance | Aethera Healthcare Solutions' },
   description: "How Aethera protects PHI: US data residency, virtual-desktop-only offshore access, BAAs before any data moves, a written HIPAA program, offshore-restriction screening, and hard boundaries on what our AI is allowed to do.",
+
+  ...marketingMetadata("/compliance/security", 'Security & Compliance | Aethera Healthcare Solutions', "How Aethera protects PHI: US data residency, virtual-desktop-only offshore access, BAAs before any data moves, a written HIPAA program, offshore-restriction screening, and hard boundaries on what our AI is allowed to do."),
 };
 
 const sections = [

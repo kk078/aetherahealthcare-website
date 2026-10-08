@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Reconstructive Surgery Prior-Auth Scrubber. Calculate Schnur sliding scale BSA thresholds for breast reduction (CPT 19318), audit blepharoplasty visual field deficits (15823), verify panniculectomy medical necessity (15830), and validate federal WHCRA breast reconstruction mandates.',
+
+  ...marketingMetadata("/tools/reconstructive-prior-auth-scrubber", 'Reconstructive vs Cosmetic Prior-Authorization Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Reconstructive Surgery Prior-Auth Scrubber. Calculate Schnur sliding scale BSA thresholds for breast reduction (CPT 19318), audit blepharoplasty visual field deficits (15823), verify panniculectomy medical necessity (15830), and validate federal WHCRA breast reconstruction mandates.'),
 };
 
 export default function ReconstructivePriorAuthScrubberPage() {

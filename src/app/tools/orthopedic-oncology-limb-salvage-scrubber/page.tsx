@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Orthopedic Oncology Mega-Prosthesis & Limb Salvage Scrubber. Audit radical bone tumor resections (CPT 27075/27645), defend modular oncologic mega-prosthesis arthroplasty (27599/27299 + Mod 22), unbundle rotational gastrocnemius flaps (15734-59), and recover catastrophic custom implant pass-through invoices.',
+
+  ...marketingMetadata("/tools/orthopedic-oncology-limb-salvage-scrubber", 'Orthopedic Oncology & Limb Salvage Mega-Prosthesis Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Orthopedic Oncology Mega-Prosthesis & Limb Salvage Scrubber. Audit radical bone tumor resections (CPT 27075/27645), defend modular oncologic mega-prosthesis arthroplasty (27599/27299 + Mod 22), unbundle rotational gastrocnemius flaps (15734-59), and recover catastrophic custom implant pass-through invoices.'),
 };
 
 export default function OrthopedicOncologyScrubberPage() {

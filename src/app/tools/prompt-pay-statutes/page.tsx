@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Directory of 50 state clean-claim prompt-payment laws, electronic payment deadlines (15–30 days), statutory annual interest penalty rates (12%–18%), and formal demand letters.',
+
+  ...marketingMetadata("/tools/prompt-pay-statutes", '50-State Prompt-Pay Statute & Interest Penalty Matrix | Free RCM Tool | Aethera Healthcare Solutions', 'Directory of 50 state clean-claim prompt-payment laws, electronic payment deadlines (15–30 days), statutory annual interest penalty rates (12%–18%), and formal demand letters.'),
 };
 
 export default function PromptPayStatutesPage() {

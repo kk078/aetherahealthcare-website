@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Cytoreductive Surgery (CRS) & HIPEC Scrubber. Audit multivisceral peritonectomy (CPT 49205), defend 90-minute hyperthermic peritoneal chemoperfusion (+96560), coordinate co-surgeon Modifier -62, and safeguard concomitant bowel resections (44140-51).',
+
+  ...marketingMetadata("/tools/hipec-scrubber", 'Cytoreductive Surgery & HIPEC Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Cytoreductive Surgery (CRS) & HIPEC Scrubber. Audit multivisceral peritonectomy (CPT 49205), defend 90-minute hyperthermic peritoneal chemoperfusion (+96560), coordinate co-surgeon Modifier -62, and safeguard concomitant bowel resections (44140-51).'),
 };
 
 export default function HipecScrubberPage() {

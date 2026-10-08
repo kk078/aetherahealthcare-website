@@ -321,7 +321,7 @@ export default function HepatobiliaryResectionScrubber() {
       trackConversion('hepatobiliary_rcm_audit_submit');
       setLeadSuccess(true);
     } catch {
-      setLeadSuccess(true); // Graceful recovery
+      setLeadSuccess(false); // Graceful recovery
     } finally {
       setIsSubmitting(false);
     }

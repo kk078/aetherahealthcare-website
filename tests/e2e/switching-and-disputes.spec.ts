@@ -4,33 +4,12 @@ const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('Switching Campaign Funnel, Emergency & Urgent Care Specialties, and 27-Tool Suite', () => {
 
-  test('Dedicated Switching Campaign Landing Page (/lp/switch-medical-billing) renders calculator, 4-phase protocol, and pilot form', async ({ page }) => {
+  test('Campaign page explains scope and offers a short intake', async ({ page }) => {
     await page.goto('/lp/switch-medical-billing/?utm_source=linkedin&utm_medium=paid&utm_campaign=switch-medical-billing&gclid=test_switch_gclid');
-
-    // Verify title and hero elements
-    await expect(page.getByRole('heading', { level: 1, name: /Switch Medical Billing Companies Without Pausing Your Cash Flow/i })).toBeVisible();
-    await expect(page.getByText(/Guaranteed Zero-Downtime Parallel Migration Protocol/i)).toBeVisible();
-
-    // Verify Switching Risk Calculator renders
-    await expect(page.getByRole('heading', { level: 3, name: /Switching Downtime & AR Attrition Risk Calculator/i })).toBeVisible();
-    await expect(page.getByText(/Legacy AR Abandonment Risk/i)).toBeVisible();
-    await expect(page.getByText(/Aethera Cutover Lag/i)).toBeVisible();
-
-    // Verify 4-Phase Protocol renders
-    await expect(page.getByRole('heading', { level: 2, name: /The Aethera 4-Phase Parallel Migration Protocol/i })).toBeVisible();
-    await expect(page.getByRole('heading', { level: 3, name: /Parallel EDI\/ERA Enrollment/i })).toBeVisible();
-    await expect(page.getByRole('heading', { level: 3, name: /Dual-Track AR Runoff Rescue/i })).toBeVisible();
-    await expect(page.getByRole('heading', { level: 3, name: /Shadow Batch Scrubbing/i })).toBeVisible();
-    await expect(page.getByRole('heading', { level: 3, name: /Live Seamless Cutover/i })).toBeVisible();
-
-    // Fill form fields
-    await page.getByPlaceholder('Dr. Sarah Jenkins').fill('Dr. Marcus Welby');
-    await page.getByPlaceholder('Bay Area Spine & Ortho').fill('Evergreen Emergency Associates');
-    await page.getByPlaceholder('sarah@bayareaspline.com').fill('mwelby@evergreenmed.org');
-    await page.getByPlaceholder('(555) 000-0000').fill('(555) 000-4422');
-
-    // Screenshot artifact
-    await page.screenshot({ path: `${ARTIFACT_DIR}/switching_campaign_landing.png`, fullPage: false });
+    await expect(page.getByRole('heading', { name: 'Request a scoped review' })).toBeVisible();
+    await expect(page.getByText('What we review', { exact: true })).toBeVisible();
+    await expect(page.getByLabel('Your name *', { exact: true })).toHaveValue('');
+    await expect(page.getByRole('button', { name: 'Request Free 50-Claim Pilot' })).toBeVisible();
   });
 
   test('Emergency Medicine specialty page renders with CPT codes, QPA dispute and FAQs', async ({ page }) => {

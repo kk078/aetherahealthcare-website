@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
   title: { absolute: 'Provider Credentialing & Payer Enrollment Timeline Estimator | Aethera Healthcare' },
   description:
     'Free medical credentialing calculator. Calculate CAQH, Medicare PECOS, Medicaid, and commercial payer enrollment timelines to prevent billing freezes for new physicians.',
+
+  ...marketingMetadata("/tools/credentialing-timeline-estimator", 'Provider Credentialing & Payer Enrollment Timeline Estimator | Aethera Healthcare', 'Free medical credentialing calculator. Calculate CAQH, Medicare PECOS, Medicaid, and commercial payer enrollment timelines to prevent billing freezes for new physicians.'),
 };
 
 export default function CredentialingTimelinePage() {
@@ -25,7 +28,7 @@ export default function CredentialingTimelinePage() {
             Provider Credentialing Timeline Estimator
           </h1>
           <p className="mt-2 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
-            Plan physician and mid-level onboarding lead times. Map CAQH, Medicare PECOS, Medicaid, and commercial payer committee schedules to guarantee on-time billing.
+            Plan physician and mid-level onboarding lead times. Map CAQH, Medicare PECOS, Medicaid, and commercial payer committee schedules to plan billing readiness; payer processing times vary.
           </p>
         </div>
 

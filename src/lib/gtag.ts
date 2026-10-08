@@ -21,6 +21,8 @@ export const GADS_LABELS: Record<string, string> = {
   booking: process.env.NEXT_PUBLIC_GADS_LABEL_BOOKING || '',
   calculator: process.env.NEXT_PUBLIC_GADS_LABEL_CALCULATOR || '',
   pilot: process.env.NEXT_PUBLIC_GADS_LABEL_PILOT || '',
+  newsletter: process.env.NEXT_PUBLIC_GADS_LABEL_NEWSLETTER || '',
+  report: process.env.NEXT_PUBLIC_GADS_LABEL_REPORT || '',
 };
 
 export type ConversionKind = keyof typeof GADS_LABELS;
@@ -33,6 +35,8 @@ const GA4_EVENT_MAP: Record<ConversionKind, string> = {
   booking: 'calendar_open',
   calculator: 'use_calculator',
   pilot: 'request_pilot',
+  newsletter: 'newsletter_request',
+  report: 'report_review_request',
 };
 
 /**

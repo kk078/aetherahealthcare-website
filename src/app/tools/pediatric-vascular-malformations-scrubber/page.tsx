@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Vascular Malformations & Sclerotherapy Scrubber. Audit image-guided percutaneous sclerotherapy (CPT 37241/49185), defend off-label Bleomycin J9040 prior authorizations, unbundle dual ultrasound/fluoroscopy (+76937/+77002), and protect planned staged sessions with Modifier -58.',
+
+  ...marketingMetadata("/tools/pediatric-vascular-malformations-scrubber", 'Pediatric Vascular Malformations & Sclerotherapy Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Vascular Malformations & Sclerotherapy Scrubber. Audit image-guided percutaneous sclerotherapy (CPT 37241/49185), defend off-label Bleomycin J9040 prior authorizations, unbundle dual ultrasound/fluoroscopy (+76937/+77002), and protect planned staged sessions with Modifier -58.'),
 };
 
 export default function PediatricVascularScrubberPage() {

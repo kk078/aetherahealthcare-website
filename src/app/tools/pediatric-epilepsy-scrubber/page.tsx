@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Epilepsy Surgery Scrubber. Audit stereo-EEG (CPT 61760), robotic cranial stereotaxy (+61781), staged hemispherotomy (61543-58), and continuous video-EEG (95724).',
+
+  ...marketingMetadata("/tools/pediatric-epilepsy-scrubber", 'Pediatric Hemispherotomy & Stereo-EEG Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Epilepsy Surgery Scrubber. Audit stereo-EEG (CPT 61760), robotic cranial stereotaxy (+61781), staged hemispherotomy (61543-58), and continuous video-EEG (95724).'),
 };
 
 export default function PediatricEpilepsyScrubberPage() {

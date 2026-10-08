@@ -100,7 +100,7 @@ export default function CredentialingTimelineEstimator() {
     setIsSubmitting(true);
 
     const payload = {
-      practiceName: practiceName || 'Not specified',
+      practiceName: practiceName,
       contactEmail,
       providerType,
       practiceState,

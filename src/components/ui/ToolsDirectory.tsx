@@ -6,8 +6,10 @@ import { TOOLS } from '@/lib/toolRegistry';
 export default function ToolsDirectory() {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('all');
+  const featured = ['/tools/denial-code-lookup', '/tools/ar-cost-calculator', '/tools/clean-claim-scorecard', '/tools/edi-837-scrubber', '/tools/appeal-letter-generator', '/tools/rvu-calculator'];
   const tools = useMemo(() => TOOLS.filter(t => (category === 'all' || t.category === category) && `${t.name} ${t.desc} ${t.tag}`.toLowerCase().includes(query.toLowerCase().trim())), [query, category]);
   return <section className="space-y-6" aria-label="Free tools directory">
+    <aside className="surface-card border rounded-2xl p-5"><h2 className="font-bold text-lg">Start with a common billing task</h2><p className="text-sm text-muted my-2">Educational references and draft checks. Confirm outputs with current payer guidance.</p><div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">{featured.map(href => TOOLS.find(t => t.href === href)).filter(t => !!t).map(tool => <Link key={tool.href} href={tool.href} className="rounded-xl border px-4 py-3 text-teal font-semibold">{tool.name}</Link>)}</div></aside>
     <div className="grid sm:grid-cols-[1fr_auto] gap-4">
       <div><label htmlFor="tool-search" className="block font-semibold mb-2">Search tools</label><div className="relative"><Search className="absolute left-3 top-3.5 w-5 h-5 text-muted" /><input id="tool-search" type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder={`Search ${TOOLS.length} free tools & engines…`} className="surface-card w-full border rounded-xl pl-10 pr-4 py-3" /></div></div>
       <div><label htmlFor="tool-category" className="block font-semibold mb-2">Category</label><select id="tool-category" value={category} onChange={e => setCategory(e.target.value)} className="surface-card border rounded-xl p-3"><option value="all">All Tools ({TOOLS.length})</option><option value="scrubbers">Scrubbers</option><option value="calculators">Calculators</option><option value="edi">EDI tools</option><option value="assessments">Assessments & references</option></select></div>

@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Craniosynostosis & Cranial Vault Remodeling Scrubber. Audit fronto-orbital advancement (CPT 21175), complex multi-suture remodeling (21180), co-surgeon Modifier -62 orchestration, split-calvarial bone grafts (20900-59), and cranial molding orthosis helmet DME (L0112).',
+
+  ...marketingMetadata("/tools/pediatric-craniosynostosis-scrubber", 'Pediatric Cranial Vault Remodeling & Synostosis Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Craniosynostosis & Cranial Vault Remodeling Scrubber. Audit fronto-orbital advancement (CPT 21175), complex multi-suture remodeling (21180), co-surgeon Modifier -62 orchestration, split-calvarial bone grafts (20900-59), and cranial molding orthosis helmet DME (L0112).'),
 };
 
 export default function PediatricCraniosynostosisScrubberPage() {

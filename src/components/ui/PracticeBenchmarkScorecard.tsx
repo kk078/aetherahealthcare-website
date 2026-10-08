@@ -168,7 +168,7 @@ export default function PracticeBenchmarkScorecard() {
     if (!contactEmail || isSubmitting) return;
     setIsSubmitting(true);
     const payload = {
-      practiceName: practiceName || 'Not specified',
+      practiceName: practiceName,
       contactEmail,
       specialty,
       providerCount,
@@ -414,7 +414,7 @@ export default function PracticeBenchmarkScorecard() {
                 <CheckCircle2 className="h-6 w-6 text-mint mx-auto" />
                 <p className="font-bold text-sm">Scorecard Dispatched to Kiran!</p>
                 <p className="text-xs text-white/80">
-                  We will contact you at <strong>{contactEmail}</strong> with an executive audit plan within 2 business hours.
+                  We will contact you at <strong>{contactEmail}</strong> with an executive audit plan within one business day.
                 </p>
               </div>
             ) : (

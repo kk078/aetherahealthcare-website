@@ -55,7 +55,7 @@ export default function PracticeProposalWizard() {
       }))) { setSubmitting(false); return; }
       setSubmitted(true);
     } catch {
-      setSubmitted(true);
+      setSubmitted(false);
     } finally {
       setSubmitting(false);
     }

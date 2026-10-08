@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { FileText, Shield, CheckCircle } from 'lucide-react';
@@ -46,6 +47,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/compliance/baa') },
   title: "Business Associate Agreement (BAA)",
   description: "Aethera's HIPAA Business Associate Agreement — how we safeguard protected health information (PHI) as your medical billing partner.",
+
+  ...marketingMetadata("/compliance/baa", "Business Associate Agreement (BAA)", "Aethera's HIPAA Business Associate Agreement — how we safeguard protected health information (PHI) as your medical billing partner."),
 };
 
 export default function BusinessAssociateAgreement() {

@@ -261,7 +261,7 @@ IEA*1*000000001~`;
       setSubmitted(true);
     } catch (err) {
       console.error('Lead submission error:', err);
-      setSubmitted(true);
+      setSubmitted(false);
     } finally {
       setSubmitting(false);
     }

@@ -4,26 +4,12 @@ const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('Home Health & Hospice Funnel, Specialties 33-34, MolDX Scrubber & CTP Wastage Calculator', () => {
 
-  test('Home Health Landing Page (/lp/home-health-hospice-billing) renders calculator and intake form', async ({ page }) => {
+  test('Campaign page explains scope and offers a short intake', async ({ page }) => {
     await page.goto('/lp/home-health-hospice-billing/?utm_source=google&utm_medium=cpc&utm_campaign=home-health-pdgm&gclid=test_hh_gclid');
-
-    // Verify title and hero elements
-    await expect(page.getByRole('heading', { level: 1, name: /Stop Losing Revenue to PDGM LUPAs/i })).toBeVisible();
-    await expect(page.getByText(/Home Health & Hospice Revenue Cycle Management/i)).toBeVisible();
-
-    // Verify Calculator renders
-    await expect(page.getByRole('heading', { level: 2, name: /PDGM LUPA Risk & Hospice Cap Recoupment Calculator/i })).toBeVisible();
-    await expect(page.getByText(/Annual Revenue at Risk/i)).toBeVisible();
-    await expect(page.getByText(/Aethera Net Recovery/i)).toBeVisible();
-
-    // Verify Form Fields
-    await page.getByPlaceholder('e.g. Guardian Home Health & Hospice').fill('Beacon Point Home Health');
-    await page.getByPlaceholder('e.g. Sarah Jenkins, RN, BSN').fill('Sarah Jenkins, RN');
-    await page.getByPlaceholder('sjenkins@guardianhh.com').fill('sjenkins@beaconpointhh.com');
-    await page.getByPlaceholder('(555) 432-8765').fill('(555) 321-9988');
-
-    // Screenshot artifact
-    await page.screenshot({ path: `${ARTIFACT_DIR}/home_health_hospice_campaign_landing.png`, fullPage: false });
+    await expect(page.getByRole('heading', { name: 'Request a scoped review' })).toBeVisible();
+    await expect(page.getByText('What we review', { exact: true })).toBeVisible();
+    await expect(page.getByLabel('Your name *', { exact: true })).toHaveValue('');
+    await expect(page.getByRole('button', { name: 'Request Free 50-Claim Pilot' })).toBeVisible();
   });
 
   test('Home Health & Hospice Care specialty page renders with CPT/HCPCS codes, PDGM rules and FAQs', async ({ page }) => {

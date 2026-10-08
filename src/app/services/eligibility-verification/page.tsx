@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, Shield, BarChart3 } from 'lucide-react';
@@ -33,10 +34,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Verification Accuracy', value: '>99%' },
-  { metric: 'Response Time', value: '<30 seconds' },
-  { metric: 'Patient Estimate Accuracy', value: '>95%' },
-  { metric: 'Authorization Identification', value: '100%' },
+  { metric: 'Verification Accuracy', value: 'Agreed in writing' },
+  { metric: 'Response Time', value: 'Agreed in writing' },
+  { metric: 'Patient Estimate Accuracy', value: 'Agreed in writing' },
+  { metric: 'Authorization Identification', value: 'Agreed in writing' },
 ];
 
 const challenges = [
@@ -82,6 +83,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/eligibility-verification') },
   title: "Insurance Eligibility & Benefits Verification",
   description: "Real-time insurance eligibility and benefits verification that stops front-end denials before claims go out. Accurate coverage checks from Aethera.",
+
+  ...marketingMetadata("/services/eligibility-verification", "Insurance Eligibility & Benefits Verification", "Real-time insurance eligibility and benefits verification that stops front-end denials before claims go out. Accurate coverage checks from Aethera."),
 };
 
 export default function EligibilityVerification() {

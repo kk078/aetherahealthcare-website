@@ -1,18 +1,10 @@
-import { canonicalUrl } from '@/lib/siteConfig';
+import { marketingMetadata } from '@/lib/marketing';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, Sparkles, ShieldCheck } from 'lucide-react';
 import SwitchBillingLandingClient from '@/components/ui/SwitchBillingLandingClient';
 
-export const metadata: Metadata = {
-  alternates: { canonical: canonicalUrl('/lp/switch-medical-billing') },
-  robots: { index: false, follow: true },
-  title: {
-    absolute: 'Switch Medical Billing Companies With Zero Downtime | Aethera Healthcare Solutions',
-  },
-  description:
-    'Switch medical billing services with zero cash flow disruption. Aethera guarantees parallel EDI/ERA cutover, active old AR recovery, and a free 50-claim shadow pilot.',
-};
+export const metadata: Metadata = { ...marketingMetadata('/lp/switch-medical-billing', "Plan Your Medical Billing Transition", "Compare responsibilities, access and reporting before changing your billing provider. Transition timing depends on your records, systems and agreed scope."), robots: { index: false, follow: true } };
 
 export default function SwitchMedicalBillingLandingPage() {
   const jsonLd = {
@@ -25,8 +17,7 @@ export default function SwitchMedicalBillingLandingPage() {
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
     },
-    description:
-      'Seamless parallel transition protocol for medical practices switching billing companies, eliminating cash flow stoppage and recovering legacy AR.',
+    description: "Compare responsibilities, access and reporting before changing your billing provider. Transition timing depends on your records, systems and agreed scope.",
   };
 
   return (
@@ -73,7 +64,7 @@ export default function SwitchMedicalBillingLandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-teal" />
-            <span>Aethera Healthcare Solutions · HIPAA Compliant · SOC 2 Type II Partner Protocols</span>
+            <span>Aethera Healthcare Solutions · BAA before secure claim intake</span>
           </div>
           <div className="flex items-center gap-6">
             <Link prefetch={false} href="/compliance/privacy-policy/" className="hover:text-slate-200 transition">

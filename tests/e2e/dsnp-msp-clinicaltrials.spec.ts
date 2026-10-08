@@ -4,27 +4,12 @@ const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('D-SNP & Medicare Advantage Funnel, ID & Allergy Specialties, and 33-Tool Suite', () => {
 
-  test('Medicare Advantage Landing Page (/lp/medicare-advantage-rcm) renders CBO calculator and audit form', async ({ page }) => {
+  test('Campaign page explains scope and offers a short intake', async ({ page }) => {
     await page.goto('/lp/medicare-advantage-rcm/?utm_source=google&utm_medium=cpc&utm_campaign=dsnp-crossover-recovery&gclid=test_dsnp_gclid');
-
-    // Verify title and hero elements
-    await expect(page.getByRole('heading', { level: 1, name: /Stop D-SNP Crossover Claim Leakage/i })).toBeVisible();
-    await expect(page.getByText(/Dual-Eligible \(D-SNP\) & Medicare Advantage RCM Pod/i)).toBeVisible();
-
-    // Verify Calculator renders
-    await expect(page.getByRole('heading', { level: 3, name: /Medicare Advantage & D-SNP Revenue Recovery Calculator/i })).toBeVisible();
-    await expect(page.getByText(/Current Annual Loss/i)).toBeVisible();
-    await expect(page.getByText(/Crossover Recovery/i)).toBeVisible();
-
-    // Fill RFP form fields
-    await page.getByPlaceholder('Dr. Elena Ramos').fill('Dr. Raymond Vance');
-    await page.getByPlaceholder('Clinic Director / MD').fill('VP of Managed Care');
-    await page.getByPlaceholder('Sunrise Senior Care').fill('Suncoast Senior Health Alliance');
-    await page.getByPlaceholder('eramos@sunrisecare.org').fill('rvance@suncoastsenior.org');
-    await page.getByPlaceholder('(555) 000-0000').fill('(555) 000-7722');
-
-    // Screenshot artifact
-    await page.screenshot({ path: `${ARTIFACT_DIR}/dsnp_medicare_advantage_landing.png`, fullPage: false });
+    await expect(page.getByRole('heading', { name: 'Request a scoped review' })).toBeVisible();
+    await expect(page.getByText('What we review', { exact: true })).toBeVisible();
+    await expect(page.getByLabel('Your name *', { exact: true })).toHaveValue('');
+    await expect(page.getByRole('button', { name: 'Request Free 50-Claim Pilot' })).toBeVisible();
   });
 
   test('Infectious Disease & OPAT specialty page renders with CPT codes, home infusion and FAQs', async ({ page }) => {

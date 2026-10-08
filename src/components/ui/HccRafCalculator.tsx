@@ -367,10 +367,10 @@ AETHERA REVENUE CYCLE REMEDIATION PLAN:
     try {
       if (!(await sendLeadToKiran('hcc_risk_adjustment_audit_request', {
         source: 'HCC RAF Score Calculator & Audit Tool',
-        name: leadName || 'Risk Adjustment Director',
+        name: leadName,
         email: leadEmail,
         phone: leadPhone || 'Not provided',
-        organization: leadOrg || 'Medical Group / ACO',
+        organization: leadOrg,
         message: `Requested 50-Chart HCC Risk Adjustment Gap Audit.
 Demographic: ${ageGroup} ${gender} (${dualStatus})
 v24 RAF: ${scores.v24Total.toFixed(3)} ($${scores.v24AnnualRev.toLocaleString()}/yr)
@@ -381,7 +381,7 @@ Selected HCCs: ${activeConditions.map((c) => c.id).join(', ')}`,
       }))) {  return; }
       setLeadSubmitted(true);
     } catch {
-      setLeadSubmitted(true);
+      setLeadSubmitted(false);
     } finally {
       setLeadLoading(false);
     }

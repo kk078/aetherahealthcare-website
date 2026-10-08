@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CreditCard, CheckCircle, Shield, BarChart3 } from 'lucide-react';
@@ -33,10 +34,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Collection Rate', value: '>65%' },
-  { metric: 'Patient Payment Plan Enrollment', value: '>40%' },
-  { metric: 'Days in Collection', value: '<45 days' },
-  { metric: 'Compliance Rate', value: '100%' },
+  { metric: 'Collection Rate', value: 'Agreed in writing' },
+  { metric: 'Patient Payment Plan Enrollment', value: 'Agreed in writing' },
+  { metric: 'Days in Collection', value: 'Agreed in writing' },
+  { metric: 'Compliance Rate', value: 'Agreed in writing' },
 ];
 
 const challenges = [
@@ -82,6 +83,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/patient-collections') },
   title: "Patient Collections & Statement Management",
   description: "Professional, compassionate patient collections and statement management that lifts patient payments without hurting satisfaction. Patient A/R handled by Aethera.",
+
+  ...marketingMetadata("/services/patient-collections", "Patient Collections & Statement Management", "Professional, compassionate patient collections and statement management that lifts patient payments without hurting satisfaction. Patient A/R handled by Aethera."),
 };
 
 export default function PatientCollections() {

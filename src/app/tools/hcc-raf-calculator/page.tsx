@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Calculate and model patient risk adjustment factor (RAF) scores comparing CMS-HCC v28 vs v24. Estimate Medicare Advantage capitation revenue changes, uncover disease interaction bonuses, and review MEAT documentation criteria.',
+
+  ...marketingMetadata("/tools/hcc-raf-calculator", 'CMS HCC Risk Adjustment & RAF Score Benchmarker | Free RCM Tool | Aethera Healthcare Solutions', 'Calculate and model patient risk adjustment factor (RAF) scores comparing CMS-HCC v28 vs v24. Estimate Medicare Advantage capitation revenue changes, uncover disease interaction bonuses, and review MEAT documentation criteria.'),
 };
 
 export default function HccRafCalculatorPage() {

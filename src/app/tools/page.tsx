@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import { TOOLS } from '@/lib/toolRegistry';
 import type { Metadata } from 'next';
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools') },
   title: { absolute: `${TOOLS.length} Free Medical Billing, EDI & RCM Tools | Aethera Healthcare` },
   description:
-    'Free educational tools for revenue cycle teams: pediatric Hirschsprung pull-through scrubber, head & neck free flap reconstruction scrubber, pediatric TEF & esophageal atresia scrubber, DIEP flap breast reconstruction scrubber, and EDI parsers. No login required.',
+    'Free educational tools for revenue cycle teams: denial and A/R checklists, scenario calculators, coding references and EDI parsers. No login required.',
+
+  ...marketingMetadata("/tools", `${TOOLS.length} Free Medical Billing, EDI & RCM Tools | Aethera Healthcare`, 'Free educational tools for revenue cycle teams: denial and A/R checklists, scenario calculators, coding references and EDI parsers. No login required.'),
 };
 
 export default function ToolsHub() {
@@ -57,7 +60,7 @@ export default function ToolsHub() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-navy mb-2">Rather Have Us Manage Your Entire Revenue Cycle?</h2>
           <p className="text-slate-600 mb-6 text-sm max-w-2xl mx-auto leading-relaxed">
-            These tools reveal where revenue leaks. Aethera’s end-to-end team plugs the leaks permanently — charge capture, automated scrubbing, certified coding, denial recovery, and sub-30 day A/R compaction.
+            Use these references to frame your questions. Our team can review charge capture, claim submission, denial follow-up and reporting against your own records and agreed scope.
           </p>
           <Link
             prefetch={false}

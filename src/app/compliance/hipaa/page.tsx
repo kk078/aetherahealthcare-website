@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Shield, CheckCircle, Users, FileText } from 'lucide-react';
@@ -10,6 +11,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/compliance/hipaa') },
   title: "HIPAA Compliance Program",
   description: "Comprehensive HIPAA compliance program for healthcare providers. Learn about our administrative, physical, and technical safeguards for protecting patient health information.",
+
+  ...marketingMetadata("/compliance/hipaa", "HIPAA Compliance Program", "Comprehensive HIPAA compliance program for healthcare providers. Learn about our administrative, physical, and technical safeguards for protecting patient health information."),
 };
 
 const administrativeSafeguards = [

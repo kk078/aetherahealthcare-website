@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -10,6 +11,8 @@ export const metadata = {
   description:
     'Honest comparisons to help you choose: outsourced vs. in-house medical billing, and how to evaluate a medical billing company before you switch.',
   alternates: { canonical: 'https://aetherahealthcare.com/compare/' },
+
+  ...marketingMetadata("/compare", 'Compare Medical Billing Options | Aethera Healthcare Solutions', 'Honest comparisons to help you choose: outsourced vs. in-house medical billing, and how to evaluate a medical billing company before you switch.'),
 };
 
 const pages = [

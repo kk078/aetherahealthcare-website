@@ -325,7 +325,7 @@ Denial of this prior authorization request constitutes a direct violation of fed
       setSubmitted(true);
     } catch (err) {
       console.error('Lead submission failed:', err);
-      setSubmitted(true);
+      setSubmitted(false);
     } finally {
       setSubmitting(false);
     }

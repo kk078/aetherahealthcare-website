@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Zap, CheckCircle, Shield, BarChart3 } from 'lucide-react';
@@ -33,10 +34,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Telehealth Clean Claim Rate', value: '>95%' },
-  { metric: 'Telehealth Collection Rate', value: '>90%' },
-  { metric: 'Coding Accuracy', value: '>98%' },
-  { metric: 'Payer Compliance', value: '100%' },
+  { metric: 'Telehealth Clean Claim Rate', value: 'Agreed in writing' },
+  { metric: 'Telehealth Collection Rate', value: 'Agreed in writing' },
+  { metric: 'Coding Accuracy', value: 'Agreed in writing' },
+  { metric: 'Payer Compliance', value: 'Agreed in writing' },
 ];
 
 const challenges = [
@@ -82,6 +83,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/telehealth-billing') },
   title: "Telehealth Billing & Virtual Care RCM",
   description: "Specialized telehealth billing and coding — correct modifiers, POS codes, and payer rules for virtual care so every visit gets paid. Telehealth RCM from Aethera.",
+
+  ...marketingMetadata("/services/telehealth-billing", "Telehealth Billing & Virtual Care RCM", "Specialized telehealth billing and coding — correct modifiers, POS codes, and payer rules for virtual care so every visit gets paid. Telehealth RCM from Aethera."),
 };
 
 export default function TelehealthBilling() {

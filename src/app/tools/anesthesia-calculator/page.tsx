@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Calculate total ASA anesthesia billing units (Base + 15-Min Time + Physical Modifiers + Qualifying Circumstances) and reimbursement across Medicare, Commercial, and CMS Concurrency models.',
+
+  ...marketingMetadata("/tools/anesthesia-calculator", 'Anesthesia ASA Unit & Reimbursement Calculator | Free RCM Tool | Aethera Healthcare Solutions', 'Calculate total ASA anesthesia billing units (Base + 15-Min Time + Physical Modifiers + Qualifying Circumstances) and reimbursement across Medicare, Commercial, and CMS Concurrency models.'),
 };
 
 export default function AnesthesiaCalculatorPage() {

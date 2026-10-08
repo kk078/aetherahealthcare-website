@@ -1,0 +1,1791 @@
+{
+  "tools": [
+    {
+      "href": "/tools/pediatric-hirschsprung-pull-through-scrubber",
+      "name": "Pediatric Hirschsprung Pull-Through Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/head-and-neck-free-flap-scrubber",
+      "name": "Head & Neck Free Flap Reconstruction Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-tef-ea-scrubber",
+      "name": "Pediatric TEF & Esophageal Atresia Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/diep-flap-reconstruction-scrubber",
+      "name": "DIEP Flap Breast Reconstruction Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-sct-coccygectomy-scrubber",
+      "name": "Pediatric SCT & Coccygectomy Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/adult-retroperitoneal-sarcoma-scrubber",
+      "name": "Adult Retroperitoneal Sarcoma & Multivisceral Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-single-ventricle-norwood-scrubber",
+      "name": "Pediatric Single-Ventricle Norwood & Glenn Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/adult-spine-deformity-llif-scrubber",
+      "name": "Adult Spine Deformity & Multi-Level LLIF Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-tpiat-islet-transplant-scrubber",
+      "name": "Pediatric TPIAT & Islet Isolation Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/endoscopic-pituitary-odontoid-scrubber",
+      "name": "Endoscopic Skull Base Pituitary & Odontoid Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-mibg-radiopharmaceutical-scrubber",
+      "name": "Pediatric Targeted MIBG & Radiopharmaceutical Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/complex-robotic-hernia-tar-scrubber",
+      "name": "Complex Robotic Hernia & TAR Component Separation Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-biochemical-genetics-scrubber",
+      "name": "Pediatric Biochemical Genetics & Metabolic Formula Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/skull-base-bypass-aneurysm-scrubber",
+      "name": "Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-dbs-neuromodulation-scrubber",
+      "name": "Pediatric DBS & Cranial Neuromodulation Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/panfacial-trauma-reconstruction-scrubber",
+      "name": "Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-vascular-malformations-scrubber",
+      "name": "Pediatric Vascular Malformations & Sclerotherapy Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/orthopedic-oncology-limb-salvage-scrubber",
+      "name": "Orthopedic Oncology & Limb Salvage Mega-Prosthesis Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-cdh-ecmo-scrubber",
+      "name": "Pediatric CDH & Neonatal ECMO Repair Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/taaa-fevar-scrubber",
+      "name": "Complex Fenestrated/Branched EVAR (FEVAR) & TAAA Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-craniosynostosis-scrubber",
+      "name": "Pediatric Cranial Vault Remodeling & Synostosis Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/robotic-urologic-oncology-scrubber",
+      "name": "Robotic Urologic Oncology & Complex Reconstructive Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-eos-scrubber",
+      "name": "Pediatric Early-Onset Scoliosis (EOS) & Growing Rod Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/hipec-scrubber",
+      "name": "Cytoreductive Surgery & HIPEC Perfusion Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/achd-reoperation-scrubber",
+      "name": "Adult Congenital Heart Disease (ACHD) & Fontan Conversion Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-facial-reanimation-scrubber",
+      "name": "Pediatric Facial Reanimation & Free Gracilis Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/skull-base-scrubber",
+      "name": "Lateral Skull Base & Acoustic Neuroma Co-Surgeon Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-airway-scrubber",
+      "name": "Pediatric Laryngotracheal Reconstruction (LTR) Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/lvad-cardiac-scrubber",
+      "name": "Durable LVAD Implantation & Cardiac Reoperation Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-epilepsy-scrubber",
+      "name": "Pediatric Hemispherotomy & Stereo-EEG Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/vcr-spine-scrubber",
+      "name": "Vertebral Column Resection (VCR) & Spine Deformity Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-transplant-scrubber",
+      "name": "Pediatric Solid Organ Transplant & Intestinal Rehabilitation Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/whipple-resection-scrubber",
+      "name": "Whipple Procedure & Pancreatic Resection Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-craniofacial-scrubber",
+      "name": "Pediatric Craniofacial & Cleft Palate Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/colorectal-exenteration-scrubber",
+      "name": "Colorectal Surgery & Pelvic Exenteration Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-brain-tumor-scrubber",
+      "name": "Pediatric Brain Tumor & Intraoperative Monitoring Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/hepatobiliary-resection-scrubber",
+      "name": "Hepatobiliary Resection & Biliary Reconstruction Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-cell-therapy-scrubber",
+      "name": "Pediatric Stem Cell & CAR-T Cellular Therapy Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/trauma-damage-control-scrubber",
+      "name": "Trauma & Open Abdomen Damage Control Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pediatric-pulmonary-estimator",
+      "name": "Pediatric Pulmonology, Allergy & CFTR Estimator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/cardiothoracic-cannulation-scrubber",
+      "name": "Cardiothoracic Bypass & Cannulation Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/scoliosis-deformity-scrubber",
+      "name": "Pediatric Scoliosis & Multi-Rod Deformity Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/spine-arthrodesis-scrubber",
+      "name": "Spine Arthrodesis & Multi-Level Instrumentation Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/urogynecology-scrubber",
+      "name": "Urogynecology & Pelvic Floor Reconstruction Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/retina-injection-scrubber",
+      "name": "Anti-VEGF Intravitreal Injection & Bilateral Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/pad-revascularization-scrubber",
+      "name": "Endovascular & PAD Revascularization Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/cardiac-ep-scrubber",
+      "name": "Cardiac Electrophysiology & Catheter Ablation Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/reconstructive-prior-auth-scrubber",
+      "name": "Reconstructive vs Cosmetic Prior-Authorization Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/nicu-critical-care-scrubber",
+      "name": "NICU & Pediatric Critical Care Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/rad-onc-scrubber",
+      "name": "Radiation Oncology IMRT Bundling & Fraction Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/dialysis-mcp-calculator",
+      "name": "Dialysis Monthly Capitation Payment (MCP) Tier Calculator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/fqhc-pps-scrubber",
+      "name": "FQHC PPS Encounter Rate & Same-Day Service Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/ambulance-fee-calculator",
+      "name": "Ambulance & EMS Fee Schedule Calculator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/moldx-zcode-scrubber",
+      "name": "Molecular Diagnostics MolDX® Z-Code & LCD Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/ctp-skin-substitute-calculator",
+      "name": "Skin Substitute & CTP Wastage Modifier JW / JZ Calculator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/critical-care-scrubber",
+      "name": "Emergency & Critical Care Time Documentation Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/anesthesia-concurrency-auditor",
+      "name": "Anesthesia Concurrency & Medical Direction Auditor",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/global-period-scrubber",
+      "name": "Surgical Global Period & Post-Op Modifier Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/dmepos-validator",
+      "name": "DMEPOS Medical Necessity & Prior Auth Validator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/msp-determination-engine",
+      "name": "Medicare Secondary Payer (MSP) Determination Engine",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/clinical-trial-billing",
+      "name": "Clinical Trial Billing & Coverage Analysis Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/hcc-raf-calculator",
+      "name": "CMS HCC Risk Adjustment & RAF Score Benchmarker",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/mips-score-forecaster",
+      "name": "CMS MIPS Performance Score & Penalty Forecaster",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/denial-overturn-predictor",
+      "name": "Denial Appeal Readiness & Review Checklist",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/prompt-pay-statutes",
+      "name": "50-State Prompt-Payment Statute & Penalty Matrix",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/underpayment-analyzer",
+      "name": "Payer Contract Underpayment & Variance Analyzer",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/payer-dispute-directory",
+      "name": "Payer Dispute & Electronic Appeals Directory",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://x12.org/codes",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/prior-auth-matrix",
+      "name": "Prior-Auth Requirement & Payer Gold-Card Matrix",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/modifier-compliance-engine",
+      "name": "Modifier 25 & 59 / X{EPSU} Compliance Engine",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/anesthesia-calculator",
+      "name": "Anesthesia ASA Unit & Reimbursement Calculator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/platform-telemetry",
+      "name": "Browser Performance & Telemetry Measurements",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/good-faith-estimate-generator",
+      "name": "No Surprises Act GFE Generator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/patient-liability-estimator",
+      "name": "Patient Out-of-Pocket Liability Estimator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/edi-270-271-validator",
+      "name": "ANSI X12 270/271 Eligibility Validator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://x12.org/codes",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/edi-837-scrubber",
+      "name": "ANSI X12 837 Claim File Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://x12.org/codes",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/practice-benchmark-scorecard",
+      "name": "MGMA Practice Health Index & Scorecard",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/credentialing-timeline-estimator",
+      "name": "Provider Credentialing Timeline Estimator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/ncci-claim-scrubber",
+      "name": "CMS NCCI Claim Scrubber",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/appeal-letter-generator",
+      "name": "Appeal Letter Generator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://x12.org/codes",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/practice-proposal-wizard",
+      "name": "Custom Practice Proposal Wizard",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/fee-schedule-benchmarker",
+      "name": "Fee Schedule Benchmarker",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/era-835-decoder",
+      "name": "835 ERA Remittance Decoder",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://x12.org/codes",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/timely-filing-matrix",
+      "name": "Multi-Payer Timely Filing Matrix",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://x12.org/codes",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/denial-code-lookup",
+      "name": "Denial Code Lookup (1,283+ Codes)",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://x12.org/codes",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/clean-claim-scorecard",
+      "name": "Clean-Claim Scorecard",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/ar-cost-calculator",
+      "name": "A/R Days Cost Calculator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/timely-filing-calculator",
+      "name": "Timely Filing Calculator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/eligibility-checklist",
+      "name": "Eligibility & Prior-Auth Checklist",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/denial-cost-calculator",
+      "name": "Denial Cost Calculator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/rvu-calculator",
+      "name": "RVU Payment Calculator",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://www.cms.gov/medicare/payment/fee-schedules",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/tools/payer-provider-manuals",
+      "name": "Payer Manual & Policy Finder",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://x12.org/codes",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "href": "/glossary",
+      "name": "Healthcare RCM & Billing Glossary",
+      "reviewStatus": "needs-review",
+      "effectiveDate": null,
+      "reviewedAt": null,
+      "reviewer": null,
+      "sourceUrls": [
+        "https://x12.org/codes",
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "path": "/blog/predictive-claim-analytics-spotting-high-risk-claims/",
+      "title": "Predictive Claim Analytics: Spotting High‑Risk Claims Before Submission",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/point-of-service-payment-estimates-boost-collections/",
+      "title": "Point-of-Service Payment Estimates: Boosting Collections and Patient Satisfaction",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/high-deductible-health-plan-patient-payment-strategies/",
+      "title": "High-Deductible Health Plan (HDHP) Payment Strategies: Boosting Collections While Preserving Patient Trust",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/manage-patient-no-shows-revenue-protection/",
+      "title": "Managing Patient No-Shows and Late Cancellations: Revenue Protection Strategies for U.S. Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/out-of-network-referral-management/",
+      "title": "Out-of-Network Referral Management: Turning Referrals into Revenue for U.S. Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/medical-coding-audit-best-practices-guide/",
+      "title": "Medical Coding Audit Best Practices: A Practical Guide for U.S. Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912",
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      ]
+    },
+    {
+      "path": "/blog/reduce-ar-days-practice-strategies/",
+      "title": "How to Reduce Accounts Receivable Days in a Medical Practice: Actionable Steps for Faster Cash Flow",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/no-surprises-act-compliance-practice-checklist/",
+      "title": "No Surprises Act Compliance for Practices: A Practical Checklist for U.S. Medical Offices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/how-to-design-patient-payment-plans-that-get-paid/",
+      "title": "How to Design Patient Payment Plans That Get Paid: A Practical Guide for U.S. Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/prior-authorization-process-guide-for-practices/",
+      "title": "Prior Authorization Process Guide for Practices: Streamlined Steps to Reduce Delays",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/optimizing-provider-credentialing-timeline-caqh/",
+      "title": "Optimizing Your Provider Credentialing Timeline and CAQH Process",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/timely-filing-limits-2026-payer-guide/",
+      "title": "Mastering Timely Filing Limits by Payer 2026: A Practical Guide for U.S. Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/co-16-denial-code-meaning-how-to-fix/",
+      "title": "CO-16 Denial Code Meaning and How to Fix It: A Practical Guide for U.S. Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/co-97-denial-code-meaning-how-to-fix/",
+      "title": "CO-97 Denial Code Meaning and How to Fix It: A Practical Guide for U.S. Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/top-claim-denial-reasons-by-payer-analysis/",
+      "title": "Top Claim Denial Reasons by Payer: A Practical Guide for U.S. Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/true-cost-of-denied-claim/",
+      "title": "The True Cost of a Denied Claim: What Every Practice Should Know",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/family-medicine-billing-guide/",
+      "title": "Family Medicine Billing: E/M Coding, Volume & Denials",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/pediatric-medical-billing-guide/",
+      "title": "Pediatric Billing: Vaccines, Well-Child Visits & Denials",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/internal-medicine-billing-guide/",
+      "title": "Internal Medicine Billing: Chronic Care, E/M & Denials",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/medical-billing-compliance-guide/",
+      "title": "Medical Billing Compliance in 2026: The Complete Guide",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/patient-collections-guide/",
+      "title": "Patient Collections That Don’t Hurt Retention: A Complete Guide",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/dermatology-medical-billing-guide/",
+      "title": "Dermatology Billing: Procedures, Modifiers & Denials",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/behavioral-health-billing-guide/",
+      "title": "Behavioral Health Billing: The Rules That Trip Up Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/orthopedic-medical-billing-guide/",
+      "title": "Orthopedic Billing: Global Periods, Modifiers & Denials",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/gastroenterology-medical-billing-guide/",
+      "title": "Gastroenterology Billing: Screening vs Diagnostic Coding",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/good-clean-claim-rate-benchmark/",
+      "title": "What Is a Good Clean Claim Benchmark? A Practical Guide for U.S. Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/questions-to-ask-medical-billing-company/",
+      "title": "Questions to Ask Before Hiring a Medical Billing Company",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/signs-medical-billing-losing-revenue/",
+      "title": "Signs Your Medical Billing Is Quietly Losing Revenue",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/cardiology-medical-billing-guide/",
+      "title": "Cardiology Medical Billing: Codes, Denials & Best Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/cost-to-outsource-medical-billing/",
+      "title": "How Much Does It Cost to Outsource Medical Billing?",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/medical-billing-for-small-practices/",
+      "title": "Medical Billing for Small & Independent Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/medical-claim-denial-management-guide/",
+      "title": "Medical Claim Denial Management: The Complete Guide",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/post-visit-revenue-optimization/",
+      "title": "Post-Visit Revenue Optimization: Turning Checkout into Cash",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/optimizing-claim-submission-workflow/",
+      "title": "Optimizing Your Claim Submission Workflow: Practical Steps for Faster Payments",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/real-time-revenue-cycle-dashboard/",
+      "title": "Building a Real-Time Revenue Cycle Dashboard: A Practical Guide for Practice Leaders",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/out-of-network-claims-management/",
+      "title": "Out-of-Network Claims Management: Turning a Challenge into Revenue",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/streamlining-eligibility-verification-preauthorization/",
+      "title": "Streamlining Eligibility Verification and Pre‑Authorization: A Front‑End Blueprint for Revenue Assurance",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/continuous-revenue-cycle-training/",
+      "title": "Continuous Revenue Cycle Training: A Blueprint for Practice Staff Development",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/design-patient-payment-plans/",
+      "title": "Designing Effective Patient Payment Plans to Boost Collections and Satisfaction",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/integrate-financial-counseling-into-patient-intake/",
+      "title": "Integrating Financial Counseling into Patient Intake: A Practical Guide for U.S. Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/reduce-claim-denials/",
+      "title": "5 Ways to Reduce Claim Denials in Your Medical Practice",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/revenue-cycle-management/",
+      "title": "Understanding Revenue Cycle Management: A Complete Guide for Providers",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/billing-partner/",
+      "title": "Why Your Practice Needs a Dedicated Medical Billing Partner",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/telehealth-billing/",
+      "title": "Mastering Telehealth Billing: A Guide for Modern Medical Practices",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/patient-collections/",
+      "title": "Effective Patient Collections Strategies That Actually Work",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/credentialing-best-practices/",
+      "title": "Provider Credentialing Best Practices: Avoiding Common Pitfalls",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/hipaa-compliance/",
+      "title": "HIPAA Compliance in 2026: What Healthcare Practices Need to Know",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/coding-audits/",
+      "title": "How to Conduct Effective Medical Coding Audits for Your Practice",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912",
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      ]
+    },
+    {
+      "path": "/blog/prior-authorization/",
+      "title": "Streamlining Prior Authorization: A Guide to Faster Approvals",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/denial-management/",
+      "title": "Advanced Denial Management Strategies for 2026",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/patient-communications/",
+      "title": "Patient Communication Strategies for Better Collections",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/revenue-analytics/",
+      "title": "Using Revenue Analytics to Optimize Your Practice Performance",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/insurance-contracts/",
+      "title": "Negotiating Better Insurance Contracts: A Provider’s Guide",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/no-surprises-act/",
+      "title": "The No Surprises Act: Compliance and Billing After Balance-Billing Reform",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/price-transparency/",
+      "title": "Healthcare Price Transparency: Machine-Readable Files and Patient Estimates",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/medicare-physician-fee-schedule/",
+      "title": "Decoding the Medicare Physician Fee Schedule and the Annual Conversion Factor",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/value-based-care/",
+      "title": "Value-Based Care and Alternative Payment Models: A Revenue-Cycle Playbook",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/mips-macra-quality/",
+      "title": "MIPS, MACRA, and the Quality Payment Program Explained",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/risk-adjustment-hcc/",
+      "title": "Risk Adjustment and HCC Coding: Getting Paid Accurately for Complexity",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912",
+        "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      ]
+    },
+    {
+      "path": "/blog/clinical-documentation-improvement/",
+      "title": "Clinical Documentation Improvement: Where Coding Accuracy Begins",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/eligibility-verification/",
+      "title": "Insurance Eligibility and Benefits Verification: The Front-End Fix",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/charge-capture/",
+      "title": "Charge Capture: Plugging the Leak Between Care and the Claim",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/payment-posting-era-eft/",
+      "title": "Payment Posting, ERA, and EFT: Why Accurate Reconciliation Protects Revenue",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/underpayment-recovery/",
+      "title": "Underpayment Recovery: Are Your Payers Honoring Your Contracts?",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/ai-in-rcm/",
+      "title": "AI and Automation in Revenue Cycle Management: Hype vs. High-Value",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/interoperability-fhir-tefca/",
+      "title": "Interoperability, FHIR, and TEFCA: What Data Exchange Means for Your Revenue",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/healthcare-cybersecurity/",
+      "title": "Healthcare Cybersecurity: Protecting Revenue When the Network Goes Down",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/medical-billing-kpis/",
+      "title": "The Medical Billing KPIs Every Practice Should Track",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/behavioral-health-billing/",
+      "title": "Behavioral Health Billing: Navigating Parity, Time-Based Codes, and Authorizations",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/workers-comp-billing/",
+      "title": "Workers’ Compensation Billing: Why It Behaves Like No Other Payer",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/dme-billing/",
+      "title": "DME and HME Billing: Documentation Rules That Make or Break Reimbursement",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/ambulatory-surgery-center-billing/",
+      "title": "Ambulatory Surgery Center Billing: Implants, Bundling, and Multiple-Procedure Rules",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/patient-financial-experience/",
+      "title": "The Patient Financial Experience: Healthcare’s New Front Door",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/medicaid-redeterminations/",
+      "title": "Medicaid Redeterminations: Protecting Revenue Through Coverage Churn",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/outsourcing-vs-inhouse/",
+      "title": "Outsourcing vs. In-House Billing: A Clear-Eyed Cost and Capability Comparison",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    },
+    {
+      "path": "/blog/fraud-waste-abuse/",
+      "title": "Compliance Beyond HIPAA: Navigating Stark, Anti-Kickback, and the False Claims Act",
+      "status": "needs-review",
+      "review": null,
+      "referenceUrls": [
+        "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+      ]
+    }
+  ]
+}

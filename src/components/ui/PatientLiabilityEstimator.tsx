@@ -427,7 +427,7 @@ export default function PatientLiabilityEstimator() {
             Eliminate Uncollected Patient Balances with Automated Front-End Verification
           </h4>
           <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
-            Collecting patient responsibility at time-of-service recovers <strong>85% more cash</strong> than post-visit billing statements. Aethera configures automated 270/271 clearinghouse sweeps 48 hours prior to every scheduled appointment.
+            Reviewing patient responsibility before service can help your team plan appropriate collection conversations. Aethera configures automated 270/271 clearinghouse sweeps 48 hours prior to every scheduled appointment.
           </p>
         </div>
         <Link

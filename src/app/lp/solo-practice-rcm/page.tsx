@@ -1,18 +1,10 @@
-import { canonicalUrl } from '@/lib/siteConfig';
+import { marketingMetadata } from '@/lib/marketing';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, Sparkles, ShieldCheck } from 'lucide-react';
 import SoloPracticeLandingClient from '@/components/ui/SoloPracticeLandingClient';
 
-export const metadata: Metadata = {
-  alternates: { canonical: canonicalUrl('/lp/solo-practice-rcm') },
-  robots: { index: false, follow: true },
-  title: {
-    absolute: 'Medical Billing for Solo & Small Practices (1–5 Providers) | Aethera Healthcare Solutions',
-  },
-  description:
-    'Tailored medical billing and RCM services built for independent solo doctors and 1–5 provider clinics. 4.5% all-inclusive rate, dedicated US pod, zero biller turnover.',
-};
+export const metadata: Metadata = { ...marketingMetadata('/lp/solo-practice-rcm', "Medical Billing for Solo & Small Practices", "Start with a focused review of your billing process, then agree the services, responsibilities and fee that suit your practice."), robots: { index: false, follow: true } };
 
 export default function SoloPracticeLandingPage() {
   const jsonLd = {
@@ -25,8 +17,7 @@ export default function SoloPracticeLandingPage() {
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
     },
-    description:
-      'Turnkey RCM and medical billing services designed for independent 1–5 provider clinics, eliminating biller turnover and reducing overhead to 4.5%.',
+    description: "Start with a focused review of your billing process, then agree the services, responsibilities and fee that suit your practice.",
   };
 
   return (
@@ -73,7 +64,7 @@ export default function SoloPracticeLandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-teal" />
-            <span>Aethera Healthcare Solutions · HIPAA Compliant · Month-to-Month Contracts</span>
+            <span>Aethera Healthcare Solutions · BAA before secure claim intake</span>
           </div>
           <div className="flex items-center gap-6">
             <Link prefetch={false} href="/compliance/privacy-policy/" className="hover:text-slate-200 transition">

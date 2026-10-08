@@ -1,18 +1,10 @@
-import { canonicalUrl } from '@/lib/siteConfig';
+import { marketingMetadata } from '@/lib/marketing';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, Sparkles, ShieldCheck } from 'lucide-react';
 import EnterpriseRcmLandingClient from '@/components/ui/EnterpriseRcmLandingClient';
 
-export const metadata: Metadata = {
-  alternates: { canonical: canonicalUrl('/lp/enterprise-rcm') },
-  robots: { index: false, follow: true },
-  title: {
-    absolute: 'Enterprise Revenue Cycle Management for Health Systems & MSOs | Aethera Healthcare',
-  },
-  description:
-    'Multi-site RCM consolidation, central business office (CBO) optimization, and sub-25 day AR performance for health systems, MSOs, and large physician groups.',
-};
+export const metadata: Metadata = { ...marketingMetadata('/lp/enterprise-rcm', "Revenue Cycle Review for Health Systems & MSOs", "Define a billing review across sites, payers and teams before committing to an implementation. The introductory pilot is limited to an agreed sample."), robots: { index: false, follow: true } };
 
 export default function EnterpriseRcmLandingPage() {
   const jsonLd = {
@@ -25,8 +17,7 @@ export default function EnterpriseRcmLandingPage() {
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
     },
-    description:
-      'Turnkey enterprise revenue cycle management for multi-site health systems, MSOs, and hospital networks, compressing days in AR to under 25 days across all facilities.',
+    description: "Define a billing review across sites, payers and teams before committing to an implementation. The introductory pilot is limited to an agreed sample.",
   };
 
   return (
@@ -73,7 +64,7 @@ export default function EnterpriseRcmLandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-teal" />
-            <span>Aethera Healthcare Solutions · Enterprise SOC 2 Aligned · Dedicated Health System Pods</span>
+            <span>Aethera Healthcare Solutions · BAA before secure claim intake</span>
           </div>
           <div className="flex items-center gap-6">
             <Link prefetch={false} href="/compliance/privacy-policy/" className="hover:text-slate-200 transition">

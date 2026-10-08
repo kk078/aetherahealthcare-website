@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Transplant Scrubber. Audit STEP enteroplasty (CPT 44130), isolated small bowel and composite liver-intestine transplants (44135/47135), bench vascular reconstructions (+44720), and organ acquisition cost carve-outs.',
+
+  ...marketingMetadata("/tools/pediatric-transplant-scrubber", 'Pediatric Intestinal Rehabilitation & Transplant Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Transplant Scrubber. Audit STEP enteroplasty (CPT 44130), isolated small bowel and composite liver-intestine transplants (44135/47135), bench vascular reconstructions (+44720), and organ acquisition cost carve-outs.'),
 };
 
 export default function PediatricTransplantScrubberPage() {

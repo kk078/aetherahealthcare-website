@@ -1,5 +1,8 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
-export const metadata = { alternates: { canonical: canonicalUrl('/') } };
+export const metadata = { alternates: { canonical: canonicalUrl('/') } ,
+  ...marketingMetadata("/", "Medical Billing & Denial Recovery", "Medical billing and denial recovery for U.S. practices. Human review, scoped service targets and a free 50-claim pilot."),
+};
 import Link from 'next/link';
 import TargetCard from '@/components/ui/TargetCard';
 import PilotTrigger from '@/components/ui/PilotTrigger';
@@ -108,20 +111,20 @@ const difference = [
   {
     icon: <FlaskConical className="h-7 w-7" />,
     title: 'Proof before commitment.',
-    desc: 'No long contract on faith. We take 50 of your real claims, agree success criteria in writing first, and deliver results in your numbers within two weeks — free. If we don’t beat your current process, you’ve lost nothing and learned where your leaks are.',
+    desc: 'No long contract on faith. We take 50 of your real claims, agree success criteria in writing first, and deliver results in your numbers within two weeks — free. We review findings against the success criteria agreed before intake.',
   },
 ];
 
 const pilotSteps = [
   { n: '1', title: 'Sign the BAA.', desc: 'Ours or yours — before any data moves.' },
   { n: '2', title: 'Send 50 claims (or 50 eligibility checks).', desc: 'We agree in writing what success means: accuracy vs. your manual process, turnaround time, issues caught.' },
-  { n: '3', title: 'Get the results in 14 days.', desc: 'A one-page scorecard in your numbers, a live walkthrough of every exception we found, zero obligation.' },
+  { n: '3', title: 'Get findings in 14 days.', desc: 'After the BAA and complete intake, receive a scorecard and a walkthrough of findings against the agreed criteria.' },
 ];
 
 const architecture = [
   { icon: <Activity className="h-6 w-6" />, title: 'Advanced Coding Analytics', desc: 'Clinical-grade logic reviews every ICD-10 and CPT code so claims are optimized for accurate reimbursement and compliance before they ever reach a payer.' },
   { icon: <ShieldCheck className="h-6 w-6" />, title: 'Institutional Compliance', desc: 'Rigorous HIPAA-compliant data handling and payer-contract management protect your practice’s legal and financial standing at every step.' },
-  { icon: <Network className="h-6 w-6" />, title: 'Unified Payer Visibility', desc: 'A single source of truth across 900+ payers gives you real-time visibility into claims, denials, and collections wherever your revenue lives.' },
+  { icon: <Network className="h-6 w-6" />, title: 'Unified Payer Visibility', desc: 'Review claims, denials and follow-up responsibilities by payer using the reporting scope agreed for your practice.' },
 ];
 
 const faqs = [
@@ -170,32 +173,31 @@ export default function Home() {
               <FadeIn>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/15 px-3.5 py-1.5 text-xs font-semibold tracking-[0.14em] text-cream uppercase">
                   <span className="pulse-beacon text-mint mr-0.5"><span className="h-2 w-2 rounded-full bg-mint" /></span>
-                  <ShieldCheck className="h-4 w-4 text-mint" /> AI-first revenue cycle
+                  <ShieldCheck className="h-4 w-4 text-mint" /> Medical billing · Human review
                 </span>
               </FadeIn>
               <FadeIn delay={0.1}>
                 <h1 className="font-jakarta font-extrabold text-white text-4xl md:text-6xl leading-[1.05] tracking-tight mt-6 mb-5">
-                  Billing run by AI. Signed off by humans. Proven on your claims.
+                  Medical billing and denial recovery for U.S. practices.
                 </h1>
               </FadeIn>
               <FadeIn delay={0.2}>
                 <p className="text-lg md:text-xl text-cream/90 max-w-xl leading-relaxed mb-6 font-normal">
-                  End-to-end medical billing with deterministic software and certified human coders.
-                  Built from years of payer adjudication experience: AI that never guesses codes,
-                  dollar figures, or dates — backed by a tamper-evident audit trail and contractual clean-claim guarantees.
+                  Get clear next steps for claims, denials and A/R. We review your documentation
+                  and payer requirements, agree the scope, and keep you informed through each handoff.
                 </p>
                 <div className="space-y-2.5 mb-8 text-cream/85 text-sm max-w-lg">
                   <div className="flex items-center gap-2.5">
                     <span className="h-2 w-2 rounded-full bg-mint shrink-0" />
-                    <span><strong className="text-white">Deterministic AI:</strong> Strict algorithmic rules; software never invents data.</span>
+                    <span><strong className="text-white">Human review:</strong> Coding and appeal decisions require approval.</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <span className="h-2 w-2 rounded-full bg-mint shrink-0" />
-                    <span><strong className="text-white">Tamper-evident audit trail:</strong> 1-click proof for every claim exception.</span>
+                    <span><strong className="text-white">Clear scope:</strong> Success criteria agreed before intake.</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <span className="h-2 w-2 rounded-full bg-mint shrink-0" />
-                    <span><strong className="text-white">Risk-free 50-claim pilot:</strong> Verified results in your numbers in 14 days.</span>
+                    <span><strong className="text-white">Free 50-claim pilot:</strong> Findings in 14 days after the BAA and complete intake.</span>
                   </div>
                 </div>
               </FadeIn>
@@ -208,16 +210,16 @@ export default function Home() {
                   >
                     Start the Free 50-Claim Pilot <ArrowRight className="h-4 w-4" />
                   </PilotTrigger>
-                  <Link prefetch={false} href="/human-autonomy"
+                  <Link prefetch={false} href="/for-billing-companies"
                     className="inline-flex items-center justify-center border border-white/35 text-white hover:bg-white/10 font-semibold py-3.5 px-7 rounded-xl transition-colors duration-200">
-                    Human Autonomy &amp; Codes
+                    For Billing Companies
                   </Link>
                 </div>
               </FadeIn>
               <FadeIn delay={0.4}>
                 <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-3 text-cream/70 text-sm">
-                  <span className="flex items-center gap-2"><Network className="h-4 w-4 text-mint" /> 900+ payers</span>
-                  <span className="flex items-center gap-2"><Zap className="h-4 w-4 text-mint" /> 50+ EHR integrations</span>
+                  <span className="flex items-center gap-2"><Network className="h-4 w-4 text-mint" /> Payer-specific review</span>
+                  <span className="flex items-center gap-2"><Zap className="h-4 w-4 text-mint" /> EHR workflow review</span>
                   <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-mint" /> HIPAA-compliant architecture</span>
                   <span className="flex items-center gap-2"><BarChart3 className="h-4 w-4 text-mint" /> 15 RCM services</span>
                 </div>
@@ -445,8 +447,8 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <span className="inline-block bg-mint/15 border border-mint/40 text-mint text-xs font-bold tracking-[0.14em] uppercase px-4 py-1.5 rounded-full mb-4">Revenue calculator</span>
-            <h2 className="font-jakarta font-bold text-white text-3xl md:text-4xl tracking-tight mb-3">Calculate your recovery potential</h2>
-            <p className="text-cream/80 max-w-2xl mx-auto">See how much additional revenue Aethera could recover for your practice. Adjust the inputs below to match your current situation.</p>
+            <h2 className="font-jakarta font-bold text-white text-3xl md:text-4xl tracking-tight mb-3">Model your billing costs and potential improvement</h2>
+            <p className="text-cream/80 max-w-2xl mx-auto">Explore the economics using your actual net collections and your own assumptions. Then request a practice-specific review.</p>
           </div>
           <ROICalculator />
         </div>
@@ -464,11 +466,11 @@ export default function Home() {
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { href: '/case-studies', label: 'Case Studies', title: 'Case Studies by Specialty', desc: 'Illustrative examples of how our process tackles common billing challenges — by specialty, challenge, and outcome.', cta: 'Read Case Studies', accent: 'text-teal', border: 'border-teal' },
-              { href: '/free-assessment', label: 'Free Assessment', title: 'See What Your Practice Is Missing', desc: 'A no-obligation revenue cycle audit identifying denial leakage, AR gaps, and undercoding. Delivered in 5 business days.', cta: 'Get Free Assessment', accent: 'text-emerald', border: 'border-emerald' },
+              { href: '/case-studies', label: 'Billing Workflows', title: 'Billing Workflows by Specialty', desc: 'Explore the billing challenges, documentation and review steps for your specialty. Verified client outcomes will be published only with permission.', cta: 'Read Billing Workflows', accent: 'text-teal', border: 'border-teal' },
+              { href: '/free-assessment', label: 'Free Assessment', title: 'See What Your Practice Is Missing', desc: 'An instant A/R planning report using your aging totals, with an optional request for specialist review.', cta: 'Get Free Assessment', accent: 'text-emerald', border: 'border-emerald' },
               { href: '/for-billing-companies', label: 'For Billing Companies', title: 'Your White-Label Back Office', desc: 'Own the client relationship and your brand. We run eligibility, claims, payment posting, AR follow-up, and denials behind it.', cta: 'See the Partnership', accent: 'text-teal', border: 'border-navy' },
-              { href: '/integrations', label: 'EHR Integrations', title: 'Works With Your Current System', desc: 'Epic, Cerner, athenahealth, eClinicalWorks, Kareo, and 45+ more. Setup in 1-4 weeks, zero workflow disruption.', cta: 'View Integrations', accent: 'text-teal', border: 'border-teal' },
-              { href: '/payers', label: 'Payer Network', title: '900+ Insurers We Work With', desc: 'From Medicare and Medicaid to regional Blues plans and workers comp carriers. We know your payers’ rules cold.', cta: 'See Payer Network', accent: 'text-teal', border: 'border-navy' },
+              { href: '/integrations', label: 'EHR Integrations', title: 'Works With Your Current System', desc: 'Epic, Cerner, athenahealth, eClinicalWorks, Kareo, and 45+ more. Setup in 1-4 weeks, planned parallel onboarding.', cta: 'View Integrations', accent: 'text-teal', border: 'border-teal' },
+              { href: '/payers', label: 'Payer Network', title: 'Payer Reference Directory', desc: 'From Medicare and Medicaid to regional Blues plans and workers comp carriers. Confirm current requirements against each payer’s primary guidance.', cta: 'See Payer Network', accent: 'text-teal', border: 'border-navy' },
               { href: '/tools', label: 'Free Tools', title: 'Denial Lookup & AR Calculators', desc: 'A searchable CARC/RARC denial-code library, clean-claim scorecard, and AR cost calculator — free for any billing team.', cta: 'Open Free Tools', accent: 'text-emerald', border: 'border-emerald' },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.08}>

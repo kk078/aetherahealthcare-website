@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Hepatobiliary Resection Scrubber. Audit extended hepatic trisegmentectomy (47125), lobectomy (47130), defend payer downcoding to partial wedge (47120), safeguard vascular reconstruction (+35221), and unbundle Roux-en-Y biliary reconstruction (47760).',
+
+  ...marketingMetadata("/tools/hepatobiliary-resection-scrubber", 'Hepatobiliary Resection & Biliary Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Hepatobiliary Resection Scrubber. Audit extended hepatic trisegmentectomy (47125), lobectomy (47130), defend payer downcoding to partial wedge (47120), safeguard vascular reconstruction (+35221), and unbundle Roux-en-Y biliary reconstruction (47760).'),
 };
 
 export default function HepatobiliaryResectionScrubberPage() {

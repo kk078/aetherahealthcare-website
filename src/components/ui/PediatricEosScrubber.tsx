@@ -554,7 +554,7 @@ export default function PediatricEosScrubber() {
           <div className="text-lg font-bold">
             {scrubberResult.penaltyAtRisk === 0 ? (
               <span className="text-emerald-600 flex items-center gap-1.5">
-                <CheckCircle2 className="h-5 w-5" /> 100% Clean Claim
+                <CheckCircle2 className="h-5 w-5" /> Checklist complete — review required
               </span>
             ) : (
               <span className="text-amber-600 flex items-center gap-1.5">

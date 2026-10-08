@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Generate a customized medical billing proposal, fee tier (3.5%–5.0%), and projected cash collections lift tailored to your medical specialty, volume, and EHR.',
+
+  ...marketingMetadata("/tools/practice-proposal-wizard", 'Interactive Practice Proposal & SLA Wizard | Aethera Healthcare Solutions', 'Generate a customized medical billing proposal, fee tier (3.5%–5.0%), and projected cash collections lift tailored to your medical specialty, volume, and EHR.'),
 };
 
 export default function PracticeProposalWizardPage() {

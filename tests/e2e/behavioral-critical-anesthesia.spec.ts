@@ -4,26 +4,12 @@ const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('Behavioral Health Funnel, Addiction & Gyn Onc Specialties, Critical Care Scrubber & Anesthesia Concurrency Auditor', () => {
 
-  test('Behavioral Health Landing Page (/lp/behavioral-health-billing) renders calculator and intake form', async ({ page }) => {
+  test('Campaign page explains scope and offers a short intake', async ({ page }) => {
     await page.goto('/lp/behavioral-health-billing/?utm_source=google&utm_medium=cpc&utm_campaign=behavioral-health-asam&gclid=test_bh_gclid');
-
-    // Verify title and hero elements
-    await expect(page.getByRole('heading', { level: 1, name: /Stop Losing Census Revenue to Concurrent Auth Denials/i })).toBeVisible();
-    await expect(page.getByText(/Behavioral Health & Substance Use Disorder \(SUD\) Revenue Cycle/i)).toBeVisible();
-
-    // Verify Calculator renders
-    await expect(page.getByRole('heading', { level: 2, name: /Behavioral Health Census & Authorization Loss Calculator/i })).toBeVisible();
-    await expect(page.getByText(/Annual Denied Bed Revenue/i)).toBeVisible();
-    await expect(page.getByText(/Aethera UR Peer Recovery/i)).toBeVisible();
-
-    // Verify Form Fields
-    await page.getByPlaceholder('e.g. Hope Horizon Recovery Center').fill('Highland Hope Recovery Center');
-    await page.getByPlaceholder('e.g. Michael Harris, LCSW').fill('Marcus Vance, LCSW');
-    await page.getByPlaceholder('michael@hopehorizon.org').fill('marcus@highlandhope.org');
-    await page.getByPlaceholder('(555) 789-0123').fill('(555) 887-1234');
-
-    // Screenshot artifact
-    await page.screenshot({ path: `${ARTIFACT_DIR}/behavioral_health_campaign_landing.png`, fullPage: false });
+    await expect(page.getByRole('heading', { name: 'Request a scoped review' })).toBeVisible();
+    await expect(page.getByText('What we review', { exact: true })).toBeVisible();
+    await expect(page.getByLabel('Your name *', { exact: true })).toHaveValue('');
+    await expect(page.getByRole('button', { name: 'Request Free 50-Claim Pilot' })).toBeVisible();
   });
 
   test('Addiction Medicine specialty page renders with CPT codes, SUD levels of care and FAQs', async ({ page }) => {

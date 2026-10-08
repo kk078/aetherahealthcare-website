@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
   title: { absolute: 'ANSI X12 270/271 Real-Time Eligibility & Benefit Validator | Aethera Healthcare' },
   description:
     'Free online ANSI X12 270/271 EDI eligibility parser. Decode raw 271 transactions into clear copays, deductibles, coinsurance, and active coverage verification.',
+
+  ...marketingMetadata("/tools/edi-270-271-validator", 'ANSI X12 270/271 Real-Time Eligibility & Benefit Validator | Aethera Healthcare', 'Free online ANSI X12 270/271 EDI eligibility parser. Decode raw 271 transactions into clear copays, deductibles, coinsurance, and active coverage verification.'),
 };
 
 export default function Edi270271Page() {
@@ -63,7 +66,7 @@ export default function Edi270271Page() {
                 Preventing Front-End Denials
               </h3>
               <p className="leading-relaxed text-slate-600">
-                Over 25% of all medical claim rejections stem from eligibility issues (CARC CO-26, CO-27, CO-31). Performing automated 270/271 checks pre-service guarantees patient identification numbers and active coverage.
+                Eligibility-related payer responses may require review of enrollment dates and member information. Use 270/271 responses as evidence, then confirm coverage and payer requirements; an eligibility response does not guarantee payment.
               </p>
             </div>
           </div>

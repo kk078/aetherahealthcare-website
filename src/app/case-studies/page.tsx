@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
@@ -7,9 +8,11 @@ import CaseStudiesDirectory from '@/components/ui/CaseStudiesDirectory';
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/case-studies') },
-  title: { absolute: 'Medical Billing Case Studies by Specialty | Aethera Healthcare' },
+  title: { absolute: 'Medical Billing Workflows by Specialty | Aethera Healthcare' },
   description:
-    'Illustrative billing scenarios across medical specialties, with clearly stated evidence requirements for verified customer outcomes.',
+    'Specialty billing workflows, documentation checkpoints and evidence requirements for verified customer outcomes.',
+
+  ...marketingMetadata("/case-studies", 'Medical Billing Workflows by Specialty | Aethera Healthcare', 'Specialty billing workflows, documentation checkpoints and evidence requirements for verified customer outcomes.'),
 };
 
 export default function CaseStudiesPage() {
@@ -18,9 +21,9 @@ export default function CaseStudiesPage() {
       <Navbar />
 
       <RcmHeroBand
-        eyebrow="Clinical & Financial Case Studies"
-        title="Billing challenges. Practical scenarios."
-        subtitle="Explore educational examples across specialties. Scenario figures are illustrative; request a documented practice review for your own results."
+        eyebrow="Specialty Billing Workflows"
+        title="Billing challenges. Clear review steps."
+        subtitle="Explore specialty billing workflows and documentation checkpoints, then request a review using your own practice data."
         primary={{ href: '/free-assessment', label: 'Get a Free Practice Audit' }}
         chips={['Specialty workflows', 'Clear assumptions', 'Practice-specific review']}
       />

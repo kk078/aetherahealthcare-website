@@ -13,7 +13,7 @@ const criticalPages = [
   { path: '/free-assessment',               title: /Assessment|Gap Analysis/i },
   { path: '/integrations',                  title: /Integration/i },
   { path: '/payers',                        title: /Payer/i },
-  { path: '/case-studies',                  title: /Case/i },
+  { path: '/case-studies',                  title: /Workflow/i },
   { path: '/blog',                          title: /Pulse|Blog/i },
   { path: '/specialties',                   title: /Specialt/i },
   { path: '/medical-billing/cardiology',    title: /Cardiology/i },

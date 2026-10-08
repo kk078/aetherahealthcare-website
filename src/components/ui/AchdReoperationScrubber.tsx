@@ -583,7 +583,7 @@ export default function AchdReoperationScrubber() {
           <div className="text-lg font-bold">
             {scrubberResult.penaltyAtRisk === 0 ? (
               <span className="text-emerald-600 flex items-center gap-1.5">
-                <CheckCircle2 className="h-5 w-5" /> 100% Clean Claim
+                <CheckCircle2 className="h-5 w-5" /> Checklist complete — review required
               </span>
             ) : (
               <span className="text-amber-600 flex items-center gap-1.5">
@@ -1089,7 +1089,7 @@ export default function AchdReoperationScrubber() {
               Request Full Practice ACHD Revenue Review
             </h3>
             <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-              Our board-certified congenital cardiac coding specialists will review your Fontan conversions, redo
+              Our billing specialists will review your Fontan conversions, redo
               sternotomies, and concomitant cryoablation Maze documentation to overturn historical clawbacks.
             </p>
 

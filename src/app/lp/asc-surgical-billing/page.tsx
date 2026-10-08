@@ -1,18 +1,10 @@
-import { canonicalUrl } from '@/lib/siteConfig';
+import { marketingMetadata } from '@/lib/marketing';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, ShieldCheck } from 'lucide-react';
 import AscSurgicalLandingClient from '@/components/ui/AscSurgicalLandingClient';
 
-export const metadata: Metadata = {
-  alternates: { canonical: canonicalUrl('/lp/asc-surgical-billing') },
-  robots: { index: false, follow: true },
-  title: {
-    absolute: 'Ambulatory Surgery Center (ASC) Revenue Cycle Management & Billing | Aethera Healthcare',
-  },
-  description:
-    'Specialized ASC billing service for surgery centers. Recapture 100% of high-cost implant carve-outs, master UB-04 & CMS-1500 dual billing, and compress surgical A/R to under 22 days.',
-};
+export const metadata: Metadata = { ...marketingMetadata('/lp/asc-surgical-billing', "ASC & Surgical Billing Review", "Review facility and surgical claim workflows against operative documentation, payer contracts and current applicable guidance."), robots: { index: false, follow: true } };
 
 export default function AscSurgicalBillingPage() {
   const jsonLd = {
@@ -25,8 +17,7 @@ export default function AscSurgicalBillingPage() {
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
     },
-    description:
-      'Turnkey revenue cycle management and billing services engineered specifically for Ambulatory Surgery Centers (ASCs) and Office-Based Surgical Suites, recovering implant carve-outs and eliminating MPPR underpayments.',
+    description: "Review facility and surgical claim workflows against operative documentation, payer contracts and current applicable guidance.",
   };
 
   return (

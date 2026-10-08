@@ -4,32 +4,12 @@ const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('PPC Landing Page, Attribution, Radiology & Pathology, and 25-Tool Suite', () => {
 
-  test('Dedicated PPC Landing Page (/lp/denial-recovery-pilot) renders calculator, comparison, and pilot form', async ({ page }) => {
-    // Visit with mock campaign UTM parameters to test attribution capture
+  test('Campaign page explains scope and offers a short intake', async ({ page }) => {
     await page.goto('/lp/denial-recovery-pilot/?utm_source=google&utm_medium=cpc&utm_campaign=denial-management-pilot&gclid=test_gclid_12345');
-
-    // Verify title and hero elements
-    await expect(page.getByRole('heading', { level: 1, name: /Stop Leaving 8%–15% of Practice Cash in Payer Accounts/i })).toBeVisible();
-    await expect(page.getByText(/Zero-Obligation 14-Day Pilot · 50 Free Claims/i)).toBeVisible();
-
-    // Verify Revenue Leakage Estimator renders and updates
-    await expect(page.getByRole('heading', { level: 2, name: /Instant Revenue Leakage Estimator/i })).toBeVisible();
-    await expect(page.getByText('Annual Recoverable Lift')).toBeVisible();
-
-    // Verify Three-Way Model Comparison renders
-    await expect(page.getByText(/Why Traditional Billing Models Fail Modern Practices/i)).toBeVisible();
-    await expect(page.getByRole('heading', { name: 'In-House Staff' })).toBeVisible();
-    await expect(page.getByRole('heading', { name: 'Generic Offshore BPOs' })).toBeVisible();
-    await expect(page.getByRole('heading', { name: 'Dedicated Specialty Pods' })).toBeVisible();
-
-    // Fill and verify Pilot Form
-    await page.getByPlaceholder('Dr. Jane Smith').fill('Dr. Robert Vance');
-    await page.getByPlaceholder('Metro Heart & Vascular').fill('Vance Radiology Group');
-    await page.getByPlaceholder('billing@practice.com').fill('rvance@vancerad.com');
-    await page.getByPlaceholder('(555) 000-0000').fill('(555) 000-9090');
-
-    // Take screenshot artifact
-    await page.screenshot({ path: `${ARTIFACT_DIR}/ppc_denial_pilot_landing.png`, fullPage: false });
+    await expect(page.getByRole('heading', { name: 'Request a scoped review' })).toBeVisible();
+    await expect(page.getByText('What we review', { exact: true })).toBeVisible();
+    await expect(page.getByLabel('Your name *', { exact: true })).toHaveValue('');
+    await expect(page.getByRole('button', { name: 'Request Free 50-Claim Pilot' })).toBeVisible();
   });
 
   test('Radiology & Diagnostic Imaging specialty page renders with CPT codes, split billing and FAQs', async ({ page }) => {

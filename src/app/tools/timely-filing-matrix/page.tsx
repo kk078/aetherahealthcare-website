@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Comprehensive multi-payer timely filing database. Compare initial claim filing limits, corrected claim deadlines, and appeal windows across 50 state Medicaid programs, Medicare MACs, and commercial PPOs.',
+
+  ...marketingMetadata("/tools/timely-filing-matrix", 'Multi-Payer Timely Filing & Appeal Deadline Matrix | Aethera Healthcare Solutions', 'Comprehensive multi-payer timely filing database. Compare initial claim filing limits, corrected claim deadlines, and appeal windows across 50 state Medicaid programs, Medicare MACs, and commercial PPOs.'),
 };
 
 export default function TimelyFilingMatrixPage() {
@@ -62,7 +65,7 @@ export default function TimelyFilingMatrixPage() {
 
           <ToolConversionBridge
             toolName="Timely Filing Matrix"
-            contextText="Worried about claims hitting timely filing limits during in-house staff absences? Aethera 24-hour daily submission SLA guarantees your claims never expire."
+            contextText="Worried about claims hitting timely filing limits during in-house staff absences? Agree submission responsibilities, deadlines and escalation rules with Aethera before onboarding."
           />
         </div>
       </section>

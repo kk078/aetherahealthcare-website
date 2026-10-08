@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Shield, CheckCircle, Zap, ArrowRight, Database, FileSearch, Users, ClipboardCheck, Scale, BarChart3 } from 'lucide-react';
@@ -11,6 +12,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/payer-services') },
   title: { absolute: 'Payer Services | Health Plan Operations & Payment Integrity | Aethera Healthcare' },
   description: 'Aethera Healthcare Solutions partners with health plans, TPAs, and risk-bearing entities to deliver claims operations, payment integrity, provider data management, credentialing (CVO), prior authorization administration, and appeals & grievances support.',
+
+  ...marketingMetadata("/payer-services", 'Payer Services | Health Plan Operations & Payment Integrity | Aethera Healthcare', 'Aethera Healthcare Solutions partners with health plans, TPAs, and risk-bearing entities to deliver claims operations, payment integrity, provider data management, credentialing (CVO), prior authorization administration, and appeals & grievances support.'),
 };
 
 const stats = [

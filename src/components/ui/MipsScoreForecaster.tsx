@@ -130,10 +130,10 @@ COMPLIANCE ACTION RECOMMENDATIONS:
     try {
       if (!(await sendLeadToKiran('mips_performance_audit_request', {
         source: 'MIPS Score Forecaster & Compliance Tool',
-        name: leadName || 'MIPS Quality Director',
+        name: leadName,
         email: leadEmail,
         phone: leadPhone || 'Not provided',
-        organization: leadOrg || 'Medical Group / ACO',
+        organization: leadOrg,
         message: `Requested Comprehensive MIPS Measure Selection & Audit.
 Medicare Part B Rev: $${medicareRevenue.toLocaleString()} (${clinicianCount} NPIs)
 MIPS Composite Score: ${results.compositeScore}/100 pts (Status: ${results.status.toUpperCase()})
@@ -142,7 +142,7 @@ Category Breakdown: Quality ${qualityScore}%, PI ${piScore}%, IA ${iaScore}%, Co
       }))) {  return; }
       setLeadSubmitted(true);
     } catch {
-      setLeadSubmitted(true);
+      setLeadSubmitted(false);
     } finally {
       setLeadLoading(false);
     }

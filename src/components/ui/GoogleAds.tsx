@@ -2,9 +2,8 @@ import { safeTrackingId } from '@/lib/trackingConfig';
 import Script from 'next/script';
 /**
  * Unified Google Tag (gtag.js) for Google Analytics 4 (GA4) and Google Ads.
- * Rendered once site-wide from the root layout, so it appears in the static HTML
- * of every page — Google's standard "paste on every page" tag, emitted as real
- * <Script id="aethera-googleads-1" strategy="afterInteractive"> tags in the page source so Google's tag detector and crawlers can see it.
+ * Loaded by AnalyticsGate only after optional analytics consent.
+ * Page views are emitted explicitly for client-side navigation.
  *
  * Supports:
  *   - Google Analytics 4: NEXT_PUBLIC_GA_MEASUREMENT_ID (e.g. "G-XXXXXXXXXX")
@@ -29,7 +28,7 @@ export default function GoogleAds() {
             `window.dataLayer=window.dataLayer||[];` +
             `function gtag(){dataLayer.push(arguments);}` +
             `gtag('js',new Date());` +
-            (gaId ? `gtag('config','${gaId}',{send_page_view:true});` : '') +
+            (gaId ? `gtag('config','${gaId}',{send_page_view:false});` : '') +
             (adsId && adsId !== gaId ? `gtag('config','${adsId}');` : ''),
         }}
       />

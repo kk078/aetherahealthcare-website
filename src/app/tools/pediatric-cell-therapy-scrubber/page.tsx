@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Cellular Therapy Scrubber. Audit autologous CAR-T cell infusions (0540T/Q2042), prior authorization dossiers, severe Cytokine Release Syndrome (CRS) critical care (99291), and restaging lumbar puncture unbundling (96450 vs 38222).',
+
+  ...marketingMetadata("/tools/pediatric-cell-therapy-scrubber", 'Pediatric Stem Cell & CAR-T Cellular Therapy Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Pediatric Cellular Therapy Scrubber. Audit autologous CAR-T cell infusions (0540T/Q2042), prior authorization dossiers, severe Cytokine Release Syndrome (CRS) critical care (99291), and restaging lumbar puncture unbundling (96450 vs 38222).'),
 };
 
 export default function PediatricCellTherapyScrubberPage() {

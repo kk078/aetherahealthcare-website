@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, TrendingUp, Shield, Clock, DollarSign, FileText, AlertCircle, ArrowRight } from 'lucide-react';
@@ -9,26 +10,16 @@ import SectionHeader from '@/components/ui/SectionHeader';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/dental-billing') },
   title: "Dental Billing & RCM Services | Medical-Dental Cross-Coding",
-  description: "Dental revenue cycle management for general, specialty, and DSO practices. We handle CDT coding, medical-dental cross-coding, predeterminations, PPO fee schedules, ortho and oral surgery billing, and aging A/R. 97.5% clean claim rate.",
+  description: "Dental revenue cycle management for general, specialty, and DSO practices. We handle CDT coding, medical-dental cross-coding, predeterminations, PPO fee schedules, ortho and oral surgery billing, and aging A/R.",
+
+  ...marketingMetadata("/services/dental-billing", "Dental Billing & RCM Services | Medical-Dental Cross-Coding", "Dental revenue cycle management for general, specialty, and DSO practices. We handle CDT coding, medical-dental cross-coding, predeterminations, PPO fee schedules, ortho and oral surgery billing, and aging A/R."),
 };
 
 const stats = [
-  {
-    "value": "97.5%",
-    "label": "Clean Claim Rate for Dental"
-  },
-  {
-    "value": "2.4%",
-    "label": "Write-off Rate"
-  },
-  {
-    "value": "+19%",
-    "label": "Avg Collections Lift"
-  },
-  {
-    "value": "<35 Days",
-    "label": "Average A/R Days"
-  }
+  { value: 'In writing', label: 'Agreed targets' },
+  { value: 'BAA first', label: 'Clinical intake' },
+  { value: 'Human review', label: 'Claim decisions' },
+  { value: 'Scoped', label: 'Onboarding and reporting' },
 ];
 
 const challenges = [
@@ -130,28 +121,6 @@ const faqs = [
   }
 ];
 
-const caseMetrics = [
-  {
-    "label": "Clean Claim Rate",
-    "before": "88%",
-    "after": "97.5%"
-  },
-  {
-    "label": "A/R > 90 Days",
-    "before": "$190K",
-    "after": "$41K"
-  },
-  {
-    "label": "Collections",
-    "before": "Baseline",
-    "after": "+19%"
-  },
-  {
-    "label": "Write-offs",
-    "before": "6.1%",
-    "after": "2.4%"
-  }
-];
 
 export default function DentalBilling() {
   return (
@@ -229,17 +198,7 @@ export default function DentalBilling() {
           </div>
         </div>
       </section>
-      <section className="py-16 md:py-24 bg-navy">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Group Dental Practice</h2>
-            <p className="text-cream/80 mb-8">This group was billing CDT only — never cross-coding oral surgery, implants, or sleep appliances to medical — and carried $190,000 in insurance A/R over 90 days from missing attachments and predeterminations.</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">{caseMetrics.map((m, i) => (<div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>))}</div>
-            <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
-          </FadeIn>
-        </div>
-      </section>
+      <section className="py-12 bg-navy text-white"><div className="max-w-4xl mx-auto px-5"><h2 className="text-2xl font-bold">Review your own practice data</h2><p className="mt-3 text-white/80">We agree the baseline, reporting period and success criteria before work begins. Verified client outcomes are published only with supporting records and permission.</p><Link href="/case-studies/" className="mt-5 inline-block text-mint underline">Explore specialty billing workflows</Link></div></section>
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader label="FAQ" title="Dental Billing Questions" description="Common questions from dentists and practice managers considering outsourcing their revenue cycle." />

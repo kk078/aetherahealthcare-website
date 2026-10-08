@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -10,6 +11,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/decks') },
   title: { absolute: 'Specialty Billing Guides | Aethera Healthcare Solutions' },
   description: 'Download Aethera\'s specialty-specific revenue cycle and billing overview guides — covering coding, denials, reimbursement, and compliance for 18 specialties.',
+
+  ...marketingMetadata("/decks", 'Specialty Billing Guides | Aethera Healthcare Solutions', 'Download Aethera\'s specialty-specific revenue cycle and billing overview guides — covering coding, denials, reimbursement, and compliance for 18 specialties.'),
 };
 
 // Specialty billing decks hosted at /decks/<slug>.pdf
@@ -54,7 +57,7 @@ export default function Decks() {
           <SectionHeader
             label="DOWNLOAD A GUIDE"
             title="Built for Your Specialty"
-            description="Each guide is a concise PDF covering the billing challenges and opportunities specific to that specialty. View instantly, or have your copy emailed to you."
+            description="Each guide is a concise PDF covering the billing challenges and opportunities specific to that specialty. View each PDF immediately and explore the matching specialty service."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">

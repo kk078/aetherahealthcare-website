@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free CMS skin substitute and Cellular & Tissue-Based Product (CTP) wastage calculator. Calculate administered vs discarded sq cm, determine mandatory Modifiers JW and JZ, and generate compliant dual-line ANSI X12 837P Loop 2400 snippets.',
+
+  ...marketingMetadata("/tools/ctp-skin-substitute-calculator", 'Skin Substitute & CTP Wastage Modifier JW / JZ Calculator | Free RCM Tool | Aethera Healthcare Solutions', 'Free CMS skin substitute and Cellular & Tissue-Based Product (CTP) wastage calculator. Calculate administered vs discarded sq cm, determine mandatory Modifiers JW and JZ, and generate compliant dual-line ANSI X12 837P Loop 2400 snippets.'),
 };
 
 export default function CtpSkinSubstituteCalculatorPage() {

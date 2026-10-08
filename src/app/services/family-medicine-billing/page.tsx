@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, AlertCircle, TrendingUp, Shield, DollarSign, FileText, ArrowRight } from 'lucide-react';
@@ -9,14 +10,16 @@ import SectionHeader from '@/components/ui/SectionHeader';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/family-medicine-billing') },
   title: { absolute: 'Family Medicine Billing | RCM for Family Physicians | Aethera Healthcare' },
-  description: 'Complete family medicine billing for preventive care, chronic disease management, annual wellness visits, E&M coding, and care management. 96.5% clean claim rate.',
+  description: 'Complete family medicine billing for preventive care, chronic disease management, annual wellness visits, E&M coding, and care management.',
+
+  ...marketingMetadata("/services/family-medicine-billing", 'Family Medicine Billing | RCM for Family Physicians | Aethera Healthcare', 'Complete family medicine billing for preventive care, chronic disease management, annual wellness visits, E&M coding, and care management.'),
 };
 
 const stats = [
-  { value: '96.5%', label: 'Clean Claim Rate' },
-  { value: '3.9%', label: 'Average Denial Rate' },
-  { value: '20 Days', label: 'Average AR Days' },
-  { value: '+18%', label: 'Average Revenue Increase' },
+  { value: 'In writing', label: 'Agreed targets' },
+  { value: 'BAA first', label: 'Clinical intake' },
+  { value: 'Human review', label: 'Claim decisions' },
+  { value: 'Scoped', label: 'Onboarding and reporting' },
 ];
 
 const challenges = [
@@ -120,21 +123,7 @@ export default function FamilyMedicineBilling() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-navy">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Family Medicine Practice</h2>
-            <p className="text-cream/80 mb-8">Front desk staff handling billing with a 78% clean claim rate, consistent E&M undercoding, and no denial follow-up. Collections were $200,000/year below potential.</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              {[{ label: 'Clean Claim Rate', before: '78%', after: '96.4%' }, { label: 'Denial Rate', before: '16%', after: '4.1%' }, { label: 'Monthly Collections', before: 'Baseline', after: '+$18,200' }, { label: 'Admin Burden', before: 'High', after: 'Minimal' }].map((m, i) => (
-                <div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>
-              ))}
-            </div>
-            <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
-          </FadeIn>
-        </div>
-      </section>
+      <section className="py-12 bg-navy text-white"><div className="max-w-4xl mx-auto px-5"><h2 className="text-2xl font-bold">Review your own practice data</h2><p className="mt-3 text-white/80">We agree the baseline, reporting period and success criteria before work begins. Verified client outcomes are published only with supporting records and permission.</p><Link href="/case-studies/" className="mt-5 inline-block text-mint underline">Explore specialty billing workflows</Link></div></section>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

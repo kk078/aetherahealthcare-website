@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, TrendingUp, Shield, Clock, DollarSign, FileText, AlertCircle, ArrowRight } from 'lucide-react';
@@ -10,25 +11,15 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/workers-compensation-billing') },
   title: "Workers' Compensation Billing & RCM | State Fee Schedules, Liens, eBill",
   description: "Workers' compensation revenue cycle management. We handle state fee schedules, jurisdiction rules, utilization review, narrative reports, IAIABC eBilling, lien filing, and bill-review appeals. Faster WC payment, fewer write-offs.",
+
+  ...marketingMetadata("/services/workers-compensation-billing", "Workers' Compensation Billing & RCM | State Fee Schedules, Liens, eBill", "Workers' compensation revenue cycle management. We handle state fee schedules, jurisdiction rules, utilization review, narrative reports, IAIABC eBilling, lien filing, and bill-review appeals. Faster WC payment, fewer write-offs."),
 };
 
 const stats = [
-  {
-    "value": "+27%",
-    "label": "Recovered WC Revenue"
-  },
-  {
-    "value": "11%",
-    "label": "Write-off Rate"
-  },
-  {
-    "value": "54 Days",
-    "label": "Average Days to Pay"
-  },
-  {
-    "value": "100%",
-    "label": "Reductions Appealed"
-  }
+  { value: 'In writing', label: 'Agreed targets' },
+  { value: 'BAA first', label: 'Clinical intake' },
+  { value: 'Human review', label: 'Claim decisions' },
+  { value: 'Scoped', label: 'Onboarding and reporting' },
 ];
 
 const challenges = [
@@ -130,28 +121,6 @@ const faqs = [
   }
 ];
 
-const caseMetrics = [
-  {
-    "label": "WC Write-offs",
-    "before": "38%",
-    "after": "11%"
-  },
-  {
-    "label": "Avg Days to Pay",
-    "before": "96",
-    "after": "54"
-  },
-  {
-    "label": "Reductions Appealed",
-    "before": "0%",
-    "after": "100%"
-  },
-  {
-    "label": "Recovered Revenue",
-    "before": "Baseline",
-    "after": "+27%"
-  }
-];
 
 export default function WorkersCompBilling() {
   return (
@@ -229,17 +198,7 @@ export default function WorkersCompBilling() {
           </div>
         </div>
       </section>
-      <section className="py-16 md:py-24 bg-navy">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Orthopedic & Occupational Medicine Clinic</h2>
-            <p className="text-cream/80 mb-8">This clinic billed workers&apos; comp like commercial insurance across three states. The result: 38% of WC charges written off, narratives missing on half of high-level visits, and bill-review reductions never appealed.</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">{caseMetrics.map((m, i) => (<div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>))}</div>
-            <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
-          </FadeIn>
-        </div>
-      </section>
+      <section className="py-12 bg-navy text-white"><div className="max-w-4xl mx-auto px-5"><h2 className="text-2xl font-bold">Review your own practice data</h2><p className="mt-3 text-white/80">We agree the baseline, reporting period and success criteria before work begins. Verified client outcomes are published only with supporting records and permission.</p><Link href="/case-studies/" className="mt-5 inline-block text-mint underline">Explore specialty billing workflows</Link></div></section>
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader label="FAQ" title="Workers' Comp Billing Questions" description="Common questions from clinics and providers handling workers' compensation claims." />

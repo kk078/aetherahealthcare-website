@@ -4,26 +4,12 @@ const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('Enterprise RCM Funnel, Rheumatology & Pulmonology Specialties, and 31-Tool Suite', () => {
 
-  test('Enterprise RCM Landing Page (/lp/enterprise-rcm) renders CBO consolidation calculator and RFP form', async ({ page }) => {
+  test('Campaign page explains scope and offers a short intake', async ({ page }) => {
     await page.goto('/lp/enterprise-rcm/?utm_source=linkedin&utm_medium=cpc&utm_campaign=health-system-cbo&gclid=test_enterprise_gclid');
-
-    // Verify title and hero elements
-    await expect(page.getByRole('heading', { level: 1, name: /Centralize Multi-Site RCM/i })).toBeVisible();
-    await expect(page.getByText(/Health Systems, MSOs & Multi-Site Physician Groups/i)).toBeVisible();
-
-    // Verify CBO Calculator renders
-    await expect(page.getByRole('heading', { level: 3, name: /Enterprise CBO Consolidation & Cash Acceleration Calculator/i })).toBeVisible();
-    await expect(page.getByText(/Accelerated Cash/i).first()).toBeVisible();
-    await expect(page.getByText(/Annual Denial Recovery/i).first()).toBeVisible();
-
-    // Fill RFP form fields
-    await page.getByPlaceholder('David Sterling').fill('Marcus Sterling');
-    await page.getByPlaceholder('dsterling@summithealth.org').fill('msterling@summithealthsystem.org');
-    await page.getByPlaceholder('Summit Regional Health Partners').fill('Summit Regional Health System');
-    await page.getByPlaceholder('(555) 000-0000').fill('(555) 000-8833');
-
-    // Screenshot artifact
-    await page.screenshot({ path: `${ARTIFACT_DIR}/enterprise_rcm_campaign_landing.png`, fullPage: false });
+    await expect(page.getByRole('heading', { name: 'Request a scoped review' })).toBeVisible();
+    await expect(page.getByText('What we review', { exact: true })).toBeVisible();
+    await expect(page.getByLabel('Your name *', { exact: true })).toHaveValue('');
+    await expect(page.getByRole('button', { name: 'Request Free 50-Claim Pilot' })).toBeVisible();
   });
 
   test('Rheumatology & Biologic Infusion specialty page renders with CPT codes, Buy & Bill and FAQs', async ({ page }) => {

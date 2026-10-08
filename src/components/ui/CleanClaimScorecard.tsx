@@ -80,7 +80,7 @@ export default function CleanClaimScorecard() {
         `Clean-claim scorecard lead — self-scored ${score}/100 (${band.label}). ` +
         `${gaps.length} gap(s): ${gaps.map(g => g.id).join(', ') || 'none'}. ` +
         'Requested a free clean-claim workflow review.',
-    }))) {  return; }
+    }))) { setLeadStatus('idle'); return; }
     setLeadStatus('sent');
   }
 

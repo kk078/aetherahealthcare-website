@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -31,7 +32,7 @@ const terms = [
   },
   {
     title: 'Service Level Agreement',
-    content: 'We guarantee a 95%+ clean claim rate, charge submission within 48 hours, payment posting within 24 hours, denial follow-up within 5 business days, and monthly reporting by the 10th of the following month.'
+    content: 'Applicable service targets, measurement methods, start conditions and exclusions are set out in your signed agreement. Published targets do not represent audited client outcomes or guarantee payer payment.'
   }
 ];
 
@@ -39,6 +40,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/compliance/terms-of-service') },
   title: "Terms of Service",
   description: "The terms governing your use of the Aethera Healthcare Solutions website and medical billing services.",
+
+  ...marketingMetadata("/compliance/terms-of-service", "Terms of Service", "The terms governing your use of the Aethera Healthcare Solutions website and medical billing services."),
 };
 
 export default function TermsOfService() {

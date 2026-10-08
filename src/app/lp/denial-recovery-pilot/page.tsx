@@ -1,4 +1,4 @@
-import { canonicalUrl } from '@/lib/siteConfig';
+import { marketingMetadata } from '@/lib/marketing';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
@@ -12,15 +12,7 @@ import {
 } from 'lucide-react';
 import DenialPilotLandingClient from '@/components/ui/DenialPilotLandingClient';
 
-export const metadata: Metadata = {
-  alternates: { canonical: canonicalUrl('/lp/denial-recovery-pilot') },
-  robots: { index: false, follow: true },
-  title: {
-    absolute: 'Free 50-Claim Denial Recovery Pilot | Aethera Healthcare Solutions',
-  },
-  description:
-    'Test Aethera AAPC-certified revenue cycle teams on 50 of your active denials or pending claims. 14-day zero-risk trial with guaranteed under-48-hour findings. No credit card required.',
-};
+export const metadata: Metadata = { ...marketingMetadata('/lp/denial-recovery-pilot', "Free 50 Claim Denial Review Pilot", "Start with a scoped review of denied claims and supporting records. Receive findings and draft next steps for your team to approve."), robots: { index: false, follow: true } };
 
 export default function DenialRecoveryLandingPage() {
   const jsonLd = {
@@ -136,11 +128,11 @@ export default function DenialRecoveryLandingPage() {
               <div className="text-teal text-xs font-bold uppercase tracking-wider">The Aethera Model</div>
               <h3 className="text-xl font-bold font-jakarta text-white">Dedicated Specialty Pods</h3>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Senior AAPC-certified coders specialized exclusively in your clinical field. Real-time direct clearinghouse scrubbing, 21-day average AR, and performance-aligned fees.
+                Senior AAPC-certified coders specialized exclusively in your clinical field. Real-time direct clearinghouse scrubbing, A/R targets agreed in writing, and performance-aligned fees.
               </p>
               <ul className="space-y-3 text-xs text-slate-200">
                 <li className="flex items-center gap-2 text-mint font-semibold">
-                  <CheckCircle2 className="w-4 h-4 shrink-0" /> 98.6% First-Pass Clean Claim Rate
+                  <CheckCircle2 className="w-4 h-4 shrink-0" /> Clean-claim targets agreed in writing
                 </li>
                 <li className="flex items-center gap-2 text-mint font-semibold">
                   <CheckCircle2 className="w-4 h-4 shrink-0" /> Sub-24 Hour Denial Turnaround

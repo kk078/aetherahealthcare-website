@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -12,6 +13,8 @@ export const metadata = {
   title: { absolute: 'A/R Days Cost Calculator — What Slow Accounts Receivable Costs You | Aethera Healthcare Solutions' },
   description:
     'Free A/R days cost calculator. See the cash tied up in slow accounts receivable and the annual carrying cost of staying above your target days-in-A/R.',
+
+  ...marketingMetadata("/tools/ar-cost-calculator", 'A/R Days Cost Calculator — What Slow Accounts Receivable Costs You | Aethera Healthcare Solutions', 'Free A/R days cost calculator. See the cash tied up in slow accounts receivable and the annual carrying cost of staying above your target days-in-A/R.'),
 };
 
 export default function ARCostCalculatorPage() {

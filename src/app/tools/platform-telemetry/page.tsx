@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -15,6 +16,8 @@ export const metadata = {
   },
   description:
     'Inspect measured browser navigation timings for your current page load.',
+
+  ...marketingMetadata("/tools/platform-telemetry", 'Browser Performance Measurements | Aethera Healthcare Solutions', 'Inspect measured browser navigation timings for your current page load.'),
 };
 
 export default function PlatformTelemetryPage() {

@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -20,9 +21,10 @@ export async function generateMetadata({ params }: { params: Params }) {
   const s = getSpecialty(specialty);
   if (!s) return {};
   return {
+    ...marketingMetadata(s.serviceHref || `/medical-billing/${s.slug}`, `${s.name} Medical Billing Services`, `Medical billing review for ${s.noun}. ${s.blurb}`),
     title: { absolute: `${s.name} Medical Billing Services | Aethera Healthcare Solutions` },
     description: `Nationwide ${s.name.toLowerCase()} medical billing and revenue cycle management for U.S. practices. ${s.blurb} Free assessment — no long-term contract.`,
-    alternates: { canonical: canonicalUrl(`/medical-billing/${s.slug}`) },
+    alternates: { canonical: canonicalUrl(s.serviceHref || `/medical-billing/${s.slug}`) },
   };
 }
 
@@ -68,7 +70,11 @@ export default async function SpecialtyPage({ params }: { params: Params }) {
   ];
 
   // sibling specialties for internal linking
-  const others = SEO_SPECIALTIES.filter((x) => x.slug !== s.slug).slice(0, 6);
+  const terms = new Set(`${s.name} ${s.painPoints.join(" ")}`.toLowerCase().match(/[a-z]{4,}/g) || []);
+  const others = SEO_SPECIALTIES.filter(x => x.slug !== s.slug).sort((a,b) => {
+    const relevance = (item: typeof s) => (`${item.name} ${item.painPoints.join(" ")}`.toLowerCase().match(/[a-z]{4,}/g) || []).filter(word => terms.has(word)).length;
+    return relevance(b)-relevance(a);
+  }).slice(0,6);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -85,8 +91,8 @@ export default async function SpecialtyPage({ params }: { params: Params }) {
           </FadeIn>
           <FadeIn delay={0.25}>
             <div className="flex flex-wrap gap-3 mt-7">
-              <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">
-                Get a Free Assessment
+              <Link prefetch={false} href={s.slug === 'pain-management' ? '/lp/denial-recovery-sprint/' : '/free-assessment'} className="bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">
+                {s.slug === 'pain-management' ? 'Explore the 48-Hour Denial Sprint' : 'Get an Instant A/R Analysis'}
               </Link>
               <Link prefetch={false} href="/schedule" className="border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-full transition-colors text-sm">
                 Schedule a Meeting
@@ -181,7 +187,7 @@ export default async function SpecialtyPage({ params }: { params: Params }) {
             <aside className="lg:sticky lg:top-28 self-start space-y-6">
               <div className="bg-navy rounded-2xl p-6 text-white">
                 <h2 className="text-lg font-bold mb-2">Serving practices nationwide</h2>
-                <p className="text-sm text-gray mb-4">Month-to-month. No setup fees. 30–45 day onboarding with parallel processing — zero disruption.</p>
+                <p className="text-sm text-gray mb-4">Month-to-month. No setup fees. 30–45 day onboarding with parallel processing — scope confirmed before onboarding.</p>
                 <Link prefetch={false} href="/free-assessment" className="block text-center bg-mint hover:bg-white text-navy font-bold py-2.5 px-5 rounded-full transition-colors text-sm">
                   Free Revenue Assessment
                 </Link>
@@ -192,7 +198,7 @@ export default async function SpecialtyPage({ params }: { params: Params }) {
                 <ul className="space-y-1.5">
                   {others.map((o) => (
                     <li key={o.slug}>
-                      <Link prefetch={false} href={`/medical-billing/${o.slug}`} className="text-sm text-teal hover:text-navy">
+                      <Link prefetch={false} href={o.serviceHref || `/medical-billing/${o.slug}`} className="text-sm text-teal hover:text-navy">
                         {o.name} billing
                       </Link>
                     </li>

@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Clock, CheckCircle, Shield, BarChart3 } from 'lucide-react';
@@ -33,10 +34,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Days in AR', value: '<30 days' },
-  { metric: 'Collection Rate', value: '>95%' },
-  { metric: 'Denial Resolution Time', value: '<5 days' },
-  { metric: 'Credit Balance Resolution', value: '<30 days' },
+  { metric: 'Days in AR', value: 'Agreed in writing' },
+  { metric: 'Collection Rate', value: 'Agreed in writing' },
+  { metric: 'Denial Resolution Time', value: 'Agreed in writing' },
+  { metric: 'Credit Balance Resolution', value: 'Agreed in writing' },
 ];
 
 const challenges = [
@@ -82,6 +83,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/ar-followup') },
   title: "A/R Follow-Up & Accounts Receivable Recovery",
   description: "Dedicated accounts receivable follow-up that works aging claims, cuts days in A/R, and recovers revenue other billers write off. Systematic payer follow-up from Aethera.",
+
+  ...marketingMetadata("/services/ar-followup", "A/R Follow-Up & Accounts Receivable Recovery", "Dedicated accounts receivable follow-up that works aging claims, cuts days in A/R, and recovers revenue other billers write off. Systematic payer follow-up from Aethera."),
 };
 
 export default function ARFollowUp() {

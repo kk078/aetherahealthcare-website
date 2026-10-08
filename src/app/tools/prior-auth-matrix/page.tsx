@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Inspect prior-authorization requirements, statutory review SLAs under CMS-0057-F, peer-to-peer deadlines, and state Gold Card exemption rules across 20+ outpatient and surgical procedures.',
+
+  ...marketingMetadata("/tools/prior-auth-matrix", 'Prior-Authorization Requirement & Payer SLA Matrix | Free RCM Tool | Aethera Healthcare Solutions', 'Inspect prior-authorization requirements, statutory review SLAs under CMS-0057-F, peer-to-peer deadlines, and state Gold Card exemption rules across 20+ outpatient and surgical procedures.'),
 };
 
 export default function PriorAuthMatrixPage() {
@@ -61,7 +64,7 @@ export default function PriorAuthMatrixPage() {
 
           <ToolConversionBridge
             toolName="Prior Authorization Matrix"
-            contextText="Prior authorization bottlenecks cause 34% of preventable procedure cancellations. Aethera’s pre-certification team handles 100% of authorizations with guaranteed sub-24 hour turnaround."
+            contextText="Need help with prior authorization? Agree the service scope and turnaround targets after reviewing your payer mix and documentation requirements."
           />
         </div>
       </section>

@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Generate customized, legal-grade healthcare appeal letters with statutory citations (ERISA, ACA, CMS NCCI) for CARC 50, 197, 16, 29, 97, and 22 denials.',
+
+  ...marketingMetadata("/tools/appeal-letter-generator", 'Medical Denial Appeal Letter Generator | Free RCM Tool | Aethera Healthcare Solutions', 'Generate customized, legal-grade healthcare appeal letters with statutory citations (ERISA, ACA, CMS NCCI) for CARC 50, 197, 16, 29, 97, and 22 denials.'),
 };
 
 export default function AppealLetterGeneratorPage() {
@@ -62,7 +65,7 @@ export default function AppealLetterGeneratorPage() {
 
           <ToolConversionBridge
             toolName="Appeal Letter Generator"
-            contextText="Writing appeal letters takes hours of clinical staff time. Aethera revenue cycle teams overturn 82%+ of denials within 48 hours with zero administrative burden on your staff."
+            contextText="Writing appeal letters takes hours of clinical staff time. Aethera reviews denial evidence and prepares draft appeals for human approval. Payer decisions and recovery timelines vary."
           />
         </div>
       </section>

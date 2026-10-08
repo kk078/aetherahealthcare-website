@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
@@ -14,6 +15,8 @@ export const metadata = {
   title: { absolute: 'Payer Provider Manual & Policy Finder | Aethera Healthcare Solutions' },
   description:
     'Find provider manuals, medical/reimbursement policies, credentialing, and eligibility pages for major U.S. payers — UnitedHealthcare, Aetna, Cigna, Humana, Florida Blue, Medicare MACs, and more.',
+
+  ...marketingMetadata("/tools/payer-provider-manuals", 'Payer Provider Manual & Policy Finder | Aethera Healthcare Solutions', 'Find provider manuals, medical/reimbursement policies, credentialing, and eligibility pages for major U.S. payers — UnitedHealthcare, Aetna, Cigna, Humana, Florida Blue, Medicare MACs, and more.'),
 };
 
 export default function PayerManualFinderPage() {
@@ -52,7 +55,7 @@ export default function PayerManualFinderPage() {
 
           <ToolConversionBridge
             toolName="Payer Manual"
-            contextText="Tired of navigating complicated payer portals and contradictory policies? Aethera manages credentialing and billing across 900+ payers."
+            contextText="Tired of navigating complicated payer portals and contradictory policies? Aethera manages credentialing and billing across Payer-specific review."
           />
         </div>
       </section>

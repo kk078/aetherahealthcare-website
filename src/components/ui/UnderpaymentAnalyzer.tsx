@@ -382,7 +382,7 @@ Please reprocess all underpaid claims at the contracted rate and remit outstandi
             {formStatus === 'success' ? (
               <div className="p-3.5 rounded-2xl bg-mint/15 border border-mint/30 text-teal dark:text-mint text-xs font-semibold flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" />
-                Audit request dispatched directly to Kiran. We will review your payer fee schedules within 2 business hours.
+                Audit request dispatched directly to Kiran. We will review your payer fee schedules within one business day.
               </div>
             ) : (
               <form onSubmit={handleSubmitAudit} className="space-y-2.5 text-xs">

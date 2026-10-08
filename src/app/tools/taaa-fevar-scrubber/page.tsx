@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Complex Fenestrated/Branched EVAR (FEVAR) & TAAA Scrubber. Audit multi-vessel visceral aortic endografts (CPT 34841-34848), defend open Crawford TAAA resections (33877), unbundle prophylactic spinal cord lumbar CSF drains (62272-59), and coordinate co-surgeon Modifier -62 matching.',
+
+  ...marketingMetadata("/tools/taaa-fevar-scrubber", 'Complex FEVAR & TAAA Aortic Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Complex Fenestrated/Branched EVAR (FEVAR) & TAAA Scrubber. Audit multi-vessel visceral aortic endografts (CPT 34841-34848), defend open Crawford TAAA resections (33877), unbundle prophylactic spinal cord lumbar CSF drains (62272-59), and coordinate co-surgeon Modifier -62 matching.'),
 };
 
 export default function TaaaFevarScrubberPage() {

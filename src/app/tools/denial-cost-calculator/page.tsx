@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
@@ -13,6 +14,8 @@ export const metadata = {
   title: { absolute: 'Denial Cost Calculator — Revenue Lost & Rework Cost | Aethera Healthcare Solutions' },
   description:
     'Free denial cost calculator: estimate the reimbursement you lose to denied claims plus the cost of reworking them, per week, month, and year.',
+
+  ...marketingMetadata("/tools/denial-cost-calculator", 'Denial Cost Calculator — Revenue Lost & Rework Cost | Aethera Healthcare Solutions', 'Free denial cost calculator: estimate the reimbursement you lose to denied claims plus the cost of reworking them, per week, month, and year.'),
 };
 
 export default function DenialCostPage() {
@@ -49,7 +52,7 @@ export default function DenialCostPage() {
 
           <ToolConversionBridge
             toolName="Denial Cost"
-            contextText="Shocked by your annual denial rework cost? Aethera reduces denial rates to under 5% and appeals every valid denial within 48 hours."
+            contextText="Shocked by your annual denial rework cost? Aethera reviews denial causes and agrees prevention and follow-up targets in writing."
           />
         </div>
       </section>

@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Separate Medicare routine care from sponsor-invoiced investigational items under CMS NCD 310.1. Verify 8-digit NCT numbers, Modifier Q1/Q0 rules, IDE Category A/B compliance, and secondary diagnosis ICD-10 Z00.6.',
+
+  ...marketingMetadata("/tools/clinical-trial-billing", 'Clinical Trial Billing & Coverage Analysis Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Separate Medicare routine care from sponsor-invoiced investigational items under CMS NCD 310.1. Verify 8-digit NCT numbers, Modifier Q1/Q0 rules, IDE Category A/B compliance, and secondary diagnosis ICD-10 Z00.6.'),
 };
 
 export default function ClinicalTrialBillingPage() {

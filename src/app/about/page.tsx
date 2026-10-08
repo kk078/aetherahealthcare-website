@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -8,6 +9,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/about') },
   title: { absolute: 'About Aethera Healthcare Solutions | Built by an Operator, Run in the Open' },
   description: 'Aethera Healthcare Solutions was founded in 2026 by Kiran Pedapudi, an 18-year US healthcare RCM operator. Automation with hard boundaries, humans where judgment matters, and an audit trail on everything — delivered from India at a cost structure that changes the economics for small and mid-size billing operations.',
+
+  ...marketingMetadata("/about", 'About Aethera Healthcare Solutions | Built by an Operator, Run in the Open', 'Aethera Healthcare Solutions was founded in 2026 by Kiran Pedapudi, an 18-year US healthcare RCM operator. Automation with hard boundaries, humans where judgment matters, and an audit trail on everything — delivered from India at a cost structure that changes the economics for small and mid-size billing operations.'),
 };
 
 const principles = [

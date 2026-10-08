@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric CDH & Neonatal ECMO Repair Scrubber. Audit neonatal congenital diaphragmatic hernia repair (CPT 39503), defend Gore-Tex prosthetic patch reconstruction (+49568-59), unbundle VA-ECMO cutdown cannulation (+33946-59), and safeguard staged silo closure (49605-58).',
+
+  ...marketingMetadata("/tools/pediatric-cdh-ecmo-scrubber", 'Pediatric CDH & Neonatal ECMO Repair Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric CDH & Neonatal ECMO Repair Scrubber. Audit neonatal congenital diaphragmatic hernia repair (CPT 39503), defend Gore-Tex prosthetic patch reconstruction (+49568-59), unbundle VA-ECMO cutdown cannulation (+33946-59), and safeguard staged silo closure (49605-58).'),
 };
 
 export default function PediatricCdhEcmoScrubberPage() {

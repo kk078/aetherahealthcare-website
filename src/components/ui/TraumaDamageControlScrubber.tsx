@@ -307,7 +307,7 @@ export default function TraumaDamageControlScrubber() {
       alerts.push({
         type: 'clean',
         title: 'Compliant Trauma & Damage Control Surgical Billing',
-        desc: `Staged laparotomy re-exploration is protected by Modifier 58 at 100% allowable. Bedside vascular procedures are carved out from critical care time (${netCriticalCareMinutes}m net), ensuring zero audit clawback risk.`,
+        desc: `Staged laparotomy re-exploration is protected by Modifier 58 at 100% allowable. Bedside vascular procedures are carved out from critical care time (${netCriticalCareMinutes}m net), ensuring items requiring payer and documentation review.`,
         statute: 'American Association for the Surgery of Trauma (AAST) & ACS Coding Protocols 2026',
       });
     }
@@ -394,8 +394,8 @@ IEA*1*000000103~`;
       trackConversion('trauma_rcm_audit_submit');
       setLeadSuccess(true);
     } catch {
-      // Fail-safe graceful UX
-      setLeadSuccess(true);
+      // Keep the form available for retry
+      setLeadSuccess(false);
     } finally {
       setIsSubmitting(false);
     }

@@ -4,26 +4,12 @@ const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('FQHC & RHC Funnel, Specialties 35-36, FQHC PPS Scrubber & Ambulance Fee Calculator', () => {
 
-  test('FQHC & RHC Landing Page (/lp/fqhc-rhc-billing) renders calculator and intake form', async ({ page }) => {
+  test('Campaign page explains scope and offers a short intake', async ({ page }) => {
     await page.goto('/lp/fqhc-rhc-billing/?utm_source=google&utm_medium=cpc&utm_campaign=fqhc-pps-rcm&gclid=test_fqhc_gclid');
-
-    // Verify title and hero elements
-    await expect(page.getByRole('heading', { level: 1, name: /Stop Losing Revenue to Unbilled Same-Day Encounters/i })).toBeVisible();
-    await expect(page.getByText(/Community Health & Rural Clinic Revenue Cycle Management/i)).toBeVisible();
-
-    // Verify Calculator renders
-    await expect(page.getByText(/FQHC \/ RHC PPS REVENUE LEAKAGE CALCULATOR/i)).toBeVisible();
-    await expect(page.getByText('Unbilled Same-Day Encounters', { exact: true })).toBeVisible();
-    await expect(page.getByText(/Estimated Recoverable Annual Cash Flow/i)).toBeVisible();
-
-    // Verify Form Fields
-    await page.getByPlaceholder('e.g. Valley Community Health Center').fill('Rio Grande Community Health');
-    await page.getByPlaceholder('e.g. Sarah Martinez, CFO').fill('Carlos Morales, Billing Director');
-    await page.getByPlaceholder('smartinez@valleyhealth.org').fill('cmorales@riograndehealth.org');
-    await page.getByPlaceholder('(555) 000-0000').fill('(555) 888-2345');
-
-    // Screenshot artifact
-    await page.screenshot({ path: `${ARTIFACT_DIR}/fqhc_rhc_campaign_landing.png`, fullPage: false });
+    await expect(page.getByRole('heading', { name: 'Request a scoped review' })).toBeVisible();
+    await expect(page.getByText('What we review', { exact: true })).toBeVisible();
+    await expect(page.getByLabel('Your name *', { exact: true })).toHaveValue('');
+    await expect(page.getByRole('button', { name: 'Request Free 50-Claim Pilot' })).toBeVisible();
   });
 
   test('FQHC & Community Health Clinics specialty page renders with CPT codes, PPS rules and FAQs', async ({ page }) => {

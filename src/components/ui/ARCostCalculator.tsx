@@ -55,7 +55,7 @@ export default function ARCostCalculator() {
         `A/R cost calculator lead — ${fmt(annualRevenue)} annual revenue, ${currentArDays} current A/R days → ` +
         `${targetArDays} target. Excess A/R tied up ${fmt(r.cashFreed)}; est. annual carrying cost ${fmt(r.annualCarryingCost)} ` +
         `at ${costOfCapital}% cost of capital. Requested a free A/R acceleration analysis.`,
-    }))) {  return; }
+    }))) { setLeadStatus('idle'); return; }
     setLeadStatus('sent');
   }
 

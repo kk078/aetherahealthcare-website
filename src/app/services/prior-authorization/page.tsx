@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Calendar, CheckCircle, Shield, BarChart3 } from 'lucide-react';
@@ -33,10 +34,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Approval Rate', value: '>90%' },
-  { metric: 'Average Turnaround Time', value: '<72 hours' },
-  { metric: 'Expedited Request Handling', value: '<24 hours' },
-  { metric: 'Renewal Compliance', value: '100%' },
+  { metric: 'Approval Rate', value: 'Agreed in writing' },
+  { metric: 'Average Turnaround Time', value: 'Agreed in writing' },
+  { metric: 'Expedited Request Handling', value: 'Agreed in writing' },
+  { metric: 'Renewal Compliance', value: 'Agreed in writing' },
 ];
 
 const challenges = [
@@ -82,6 +83,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/prior-authorization') },
   title: "Prior Authorization Services & Tracking",
   description: "Streamlined prior authorization submission, tracking, and follow-up that prevents auth-related denials and speeds care. Prior auth management from Aethera.",
+
+  ...marketingMetadata("/services/prior-authorization", "Prior Authorization Services & Tracking", "Streamlined prior authorization submission, tracking, and follow-up that prevents auth-related denials and speeds care. Prior auth management from Aethera."),
 };
 
 export default function PriorAuthorization() {

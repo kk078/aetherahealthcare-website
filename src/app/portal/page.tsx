@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { BarChart3, Shield, Smartphone, TrendingUp, Eye, Bell, Lock, Users, CheckCircle, ArrowRight } from 'lucide-react';
@@ -13,6 +14,8 @@ export const metadata = {
   robots: { index: false, follow: true },
   title: { absolute: 'Provider Portal | Real-Time Billing Dashboard | Aethera Healthcare' },
   description: 'The Aethera Provider Portal gives you 24/7 real-time visibility into every claim, payment, denial, and KPI — from any device. See a live demo.',
+
+  ...marketingMetadata("/portal", 'Provider Portal | Real-Time Billing Dashboard | Aethera Healthcare', 'The Aethera Provider Portal gives you 24/7 real-time visibility into every claim, payment, denial, and KPI — from any device. See a live demo.'),
 };
 
 const features = [

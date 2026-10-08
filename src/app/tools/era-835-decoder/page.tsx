@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free X12 835 ERA parser and claim remittance decoder. Understand CLP, CAS adjustment group codes (CO, PR, OA) and get immediate step-by-step overturn workflows.',
+
+  ...marketingMetadata("/tools/era-835-decoder", '835 Electronic Remittance Advice (ERA) Decoder | Aethera Healthcare Solutions', 'Free X12 835 ERA parser and claim remittance decoder. Understand CLP, CAS adjustment group codes (CO, PR, OA) and get immediate step-by-step overturn workflows.'),
 };
 
 export default function Era835DecoderPage() {

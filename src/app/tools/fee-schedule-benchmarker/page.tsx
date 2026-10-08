@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Calculate your practice’s annual underpayment gap by comparing commercial payer allowances against 2026 Medicare and top commercial PPO benchmarks.',
+
+  ...marketingMetadata("/tools/fee-schedule-benchmarker", 'CPT Fee Schedule & Reimbursement Gap Benchmarker | Aethera Healthcare Solutions', 'Calculate your practice’s annual underpayment gap by comparing commercial payer allowances against 2026 Medicare and top commercial PPO benchmarks.'),
 };
 
 export default function FeeScheduleBenchmarkerPage() {

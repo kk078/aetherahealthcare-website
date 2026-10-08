@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Dialysis Monthly Capitation Payment (MCP) Calculator. Compute physician allowable reimbursement under CPT 90951–90962 and 90966, calculate inpatient hospital stay pro-rations, and model downcoding revenue recovery.',
+
+  ...marketingMetadata("/tools/dialysis-mcp-calculator", 'Dialysis Monthly Capitation Payment (MCP) Calculator | Free RCM Tool | Aethera Healthcare Solutions', 'Free Dialysis Monthly Capitation Payment (MCP) Calculator. Compute physician allowable reimbursement under CPT 90951–90962 and 90966, calculate inpatient hospital stay pro-rations, and model downcoding revenue recovery.'),
 };
 
 export default function DialysisMcpCalculatorPage() {

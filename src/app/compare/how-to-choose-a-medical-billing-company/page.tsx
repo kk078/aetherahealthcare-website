@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -10,6 +11,8 @@ export const metadata = {
   description:
     'A practical guide to evaluating a medical billing company — the questions to ask, the red flags to avoid, and the metrics that predict whether a partner will actually raise your collections.',
   alternates: { canonical: 'https://aetherahealthcare.com/compare/how-to-choose-a-medical-billing-company/' },
+
+  ...marketingMetadata("/compare/how-to-choose-a-medical-billing-company", 'How to Choose a Medical Billing Company: Questions, Red Flags & Metrics | Aethera Healthcare Solutions', 'A practical guide to evaluating a medical billing company — the questions to ask, the red flags to avoid, and the metrics that predict whether a partner will actually raise your collections.'),
 };
 
 const questions = [

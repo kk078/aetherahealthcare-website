@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Shield, CheckCircle, BarChart3 } from 'lucide-react';
@@ -33,10 +34,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Audit Compliance Rate', value: '100%' },
-  { metric: 'Staff Training Completion', value: '100%' },
-  { metric: 'Incident Response Time', value: '<2 hours' },
-  { metric: 'Policy Update Frequency', value: 'Annual' },
+  { metric: 'Audit Compliance Rate', value: 'Agreed in writing' },
+  { metric: 'Staff Training Completion', value: 'Agreed in writing' },
+  { metric: 'Incident Response Time', value: 'Agreed in writing' },
+  { metric: 'Policy Update Frequency', value: 'Agreed in writing' },
 ];
 
 const challenges = [
@@ -82,6 +83,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/compliance-auditing') },
   title: "Compliance & Revenue Cycle Auditing",
   description: "HIPAA compliance reviews and revenue cycle audits that surface coding, documentation, and billing risk before payers or regulators do. Protect your practice with Aethera.",
+
+  ...marketingMetadata("/services/compliance-auditing", "Compliance & Revenue Cycle Auditing", "HIPAA compliance reviews and revenue cycle audits that surface coding, documentation, and billing risk before payers or regulators do. Protect your practice with Aethera."),
 };
 
 export default function ComplianceAuditing() {

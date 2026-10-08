@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Shield, CheckCircle, Globe, Zap, ArrowRight } from 'lucide-react';
@@ -11,6 +12,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/payers') },
   title: { absolute: 'Insurance Payer Network | 10,600+ Payers & Clearinghouse Routes | Aethera Healthcare Solutions' },
   description: 'Aethera Healthcare Solutions connects with 10,600+ insurance payers and clearinghouse EDI gateways including Medicare, Medicaid, commercial insurers, and workers comp. Real-time eligibility verification included.',
+
+  ...marketingMetadata("/payers", 'Insurance Payer Network | 10,600+ Payers & Clearinghouse Routes | Aethera Healthcare Solutions', 'Aethera Healthcare Solutions connects with 10,600+ insurance payers and clearinghouse EDI gateways including Medicare, Medicaid, commercial insurers, and workers comp. Real-time eligibility verification included.'),
 };
 
 const payerGroups = [
@@ -216,7 +219,7 @@ export default function Payers() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <h3 className="text-xl font-bold text-navy font-jakarta mb-3">Don&apos;t See Your Payer?</h3>
-            <p className="text-gray mb-6">We likely work with them. With 900+ payers in our network, if you don&apos;t see a specific plan listed, contact us for a payer-specific confirmation.</p>
+            <p className="text-gray mb-6">We likely work with them. With Payer-specific review in our network, if you don&apos;t see a specific plan listed, contact us for a payer-specific confirmation.</p>
             <Link prefetch={false} href="/contact" className="inline-flex items-center bg-teal hover:bg-navy text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
               Ask About Your Payer <ArrowRight className="h-4 w-4 ml-2" />
             </Link>

@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
@@ -84,6 +85,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/careers') },
   title: "Careers — Join Our Medical Billing Team",
   description: "Explore careers at Aethera Healthcare Solutions. Join a mission-driven revenue cycle management team helping healthcare providers get paid what they've earned.",
+
+  ...marketingMetadata("/careers", "Careers — Join Our Medical Billing Team", "Explore careers at Aethera Healthcare Solutions. Join a mission-driven revenue cycle management team helping healthcare providers get paid what they've earned."),
 };
 
 export default function Careers() {

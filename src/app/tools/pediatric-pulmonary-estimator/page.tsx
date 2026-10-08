@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Pulmonology & CFTR Estimator. Audit pediatric spirometry and plethysmography (94010/94060/94726), unbundling traps, quantitative sweat chloride testing (82435), and verify CFTR prior authorization likelihood.',
+
+  ...marketingMetadata("/tools/pediatric-pulmonary-estimator", 'Pediatric Pulmonology, Allergy & CFTR Estimator | Free RCM Tool | Aethera Healthcare Solutions', 'Free Pediatric Pulmonology & CFTR Estimator. Audit pediatric spirometry and plethysmography (94010/94060/94726), unbundling traps, quantitative sweat chloride testing (82435), and verify CFTR prior authorization likelihood.'),
 };
 
 export default function PediatricPulmonaryEstimatorPage() {

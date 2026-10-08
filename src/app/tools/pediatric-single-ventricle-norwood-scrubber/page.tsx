@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Single-Ventricle Congenital Heart Disease Palliation Scrubber. Audit Stage 1 Norwood (33619), Sano/BT shunts (33766/33750), Glenn (33767), Fontan (33737), and delayed sternal closure (+33530).',
+
+  ...marketingMetadata("/tools/pediatric-single-ventricle-norwood-scrubber", 'Pediatric Single-Ventricle Norwood & Glenn Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Single-Ventricle Congenital Heart Disease Palliation Scrubber. Audit Stage 1 Norwood (33619), Sano/BT shunts (33766/33750), Glenn (33767), Fontan (33737), and delayed sternal closure (+33530).'),
 };
 
 export default function PediatricSingleVentricleScrubberPage() {

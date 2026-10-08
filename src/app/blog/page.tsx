@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { POSTS } from '@/lib/blogPosts';
 import type { Metadata } from 'next';
 import BlogIndexClient from './BlogIndexClient';
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
   description:
     'Sharp, practical insights on U.S. healthcare revenue cycle management — denials, prior authorization, coding, compliance, telehealth billing, payer contracts and the data behind getting paid faster.',
   alternates: { canonical: '/blog/' },
+
+  ...marketingMetadata("/blog", 'The Aethera Pulse — Revenue Cycle Insights for U.S. Healthcare | Aethera Healthcare Solutions', 'Sharp, practical insights on U.S. healthcare revenue cycle management — denials, prior authorization, coding, compliance, telehealth billing, payer contracts and the data behind getting paid faster.'),
 };
 
 const jsonLd = {

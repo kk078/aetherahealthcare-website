@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -10,6 +11,8 @@ export const metadata = {
   description:
     'Outsourced vs. in-house medical billing compared on cost, collections, staffing risk, compliance, and control — with a clear framework for deciding which model fits your practice.',
   alternates: { canonical: 'https://aetherahealthcare.com/compare/outsourced-vs-in-house-medical-billing/' },
+
+  ...marketingMetadata("/compare/outsourced-vs-in-house-medical-billing", 'Outsourced vs. In-House Medical Billing: A Practical Comparison | Aethera Healthcare Solutions', 'Outsourced vs. in-house medical billing compared on cost, collections, staffing risk, compliance, and control — with a clear framework for deciding which model fits your practice.'),
 };
 
 const rows: { factor: string; inhouse: string; outsourced: string; edge: 'in' | 'out' | 'even' }[] = [

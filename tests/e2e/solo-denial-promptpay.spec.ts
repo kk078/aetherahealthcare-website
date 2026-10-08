@@ -4,27 +4,12 @@ const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('Solo Practice Funnel, Nephrology & ENT Specialties, and 29-Tool Suite', () => {
 
-  test('Solo Practice Campaign Landing Page (/lp/solo-practice-rcm) renders calculator, comparison, and pilot form', async ({ page }) => {
+  test('Campaign page explains scope and offers a short intake', async ({ page }) => {
     await page.goto('/lp/solo-practice-rcm/?utm_source=google&utm_medium=cpc&utm_campaign=solo-practice-billing&gclid=test_solo_gclid');
-
-    // Verify title and hero elements
-    await expect(page.getByRole('heading', { level: 1, name: /Enterprise Billing Power, Priced for Independent Clinics/i })).toBeVisible();
-    await expect(page.getByText(/Tailored for Independent 1–5 Provider Practices/i)).toBeVisible();
-
-    // Verify Overhead Calculator renders
-    await expect(page.getByRole('heading', { level: 3, name: /Independent Practice Overhead & Billing Savings Calculator/i })).toBeVisible();
-    await expect(page.getByText(/Current Billing Overhead/i)).toBeVisible();
-    await expect(page.getByText(/Aethera \(4.5% All-Inclusive\)/i)).toBeVisible();
-    await expect(page.getByText(/Net Practice Gain/i)).toBeVisible();
-
-    // Fill form fields
-    await page.getByPlaceholder('Dr. David Miller').fill('Dr. Laura Chen');
-    await page.getByPlaceholder('Miller Family Health').fill('Chen Internal Medicine & Nephrology');
-    await page.getByPlaceholder('drdavid@millerhealth.com').fill('lchen@cheninternalmed.com');
-    await page.getByPlaceholder('(555) 000-0000').fill('(555) 000-8833');
-
-    // Screenshot artifact
-    await page.screenshot({ path: `${ARTIFACT_DIR}/solo_practice_campaign_landing.png`, fullPage: false });
+    await expect(page.getByRole('heading', { name: 'Request a scoped review' })).toBeVisible();
+    await expect(page.getByText('What we review', { exact: true })).toBeVisible();
+    await expect(page.getByLabel('Your name *', { exact: true })).toHaveValue('');
+    await expect(page.getByRole('button', { name: 'Request Free 50-Claim Pilot' })).toBeVisible();
   });
 
   test('Nephrology & Dialysis specialty page renders with CPT codes, MCP rules and FAQs', async ({ page }) => {

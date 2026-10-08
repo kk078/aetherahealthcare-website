@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Multi-Level Minimally Invasive Adult Spinal Deformity & LLIF/XLIF Scrubber. Audit primary arthrodesis (22558), multi-level add-ons (+22552), ALLR release (+Mod 22), percutaneous instrumentation (+22842–+22843), and spinopelvic S2AI anchors (+22848).',
+
+  ...marketingMetadata("/tools/adult-spine-deformity-llif-scrubber", 'Adult Spine Deformity & Multi-Level LLIF Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Multi-Level Minimally Invasive Adult Spinal Deformity & LLIF/XLIF Scrubber. Audit primary arthrodesis (22558), multi-level add-ons (+22552), ALLR release (+Mod 22), percutaneous instrumentation (+22842–+22843), and spinopelvic S2AI anchors (+22848).'),
 };
 
 export default function AdultSpineDeformityLlifScrubberPage() {

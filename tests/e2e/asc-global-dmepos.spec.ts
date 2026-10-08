@@ -4,27 +4,12 @@ const ARTIFACT_DIR = process.env.PLAYWRIGHT_ARTIFACT_DIR || '/tmp/aethera-e2e';
 
 test.describe('ASC Surgical Funnel, IR & OMS Specialties, Global Scrubber & DMEPOS Validator', () => {
 
-  test('ASC Surgical Billing Landing Page (/lp/asc-surgical-billing) renders calculator and intake form', async ({ page }) => {
+  test('Campaign page explains scope and offers a short intake', async ({ page }) => {
     await page.goto('/lp/asc-surgical-billing/?utm_source=google&utm_medium=cpc&utm_campaign=asc-implant-carveouts&gclid=test_asc_gclid');
-
-    // Verify title and hero elements
-    await expect(page.getByRole('heading', { level: 1, name: /Stop Losing Surgical Margins to Implant Carve-Out Denials/i })).toBeVisible();
-    await expect(page.getByText(/Ambulatory Surgery Center \(ASC\) Revenue Cycle Management/i)).toBeVisible();
-
-    // Verify Calculator renders
-    await expect(page.getByRole('heading', { level: 2, name: /ASC Implant Carve-Out & Revenue Acceleration Calculator/i })).toBeVisible();
-    await expect(page.getByText(/Annual Carve-Out Revenue at Risk/i)).toBeVisible();
-    await expect(page.getByText(/MPPR Cascading Recapture/i)).toBeVisible();
-    await expect(page.getByText(/Total Aethera 12-Mo Net Recovery/i)).toBeVisible();
-
-    // Verify Form Fields
-    await page.getByPlaceholder('e.g. Apex Outpatient Surgical Center').fill('Lone Star Surgical Pavilion');
-    await page.getByPlaceholder('e.g. Jennifer Miller, RN').fill('Jennifer Miller, RN');
-    await page.getByPlaceholder('jennifer@apexorthosurg.com').fill('jennifer@lonestarsurg.com');
-    await page.getByPlaceholder('(555) 345-6789').fill('(555) 443-8899');
-
-    // Screenshot artifact
-    await page.screenshot({ path: `${ARTIFACT_DIR}/asc_surgical_billing_landing.png`, fullPage: false });
+    await expect(page.getByRole('heading', { name: 'Request a scoped review' })).toBeVisible();
+    await expect(page.getByText('What we review', { exact: true })).toBeVisible();
+    await expect(page.getByLabel('Your name *', { exact: true })).toHaveValue('');
+    await expect(page.getByRole('button', { name: 'Request Free 50-Claim Pilot' })).toBeVisible();
   });
 
   test('Interventional Radiology specialty page renders with CPT codes, catheter hierarchy and FAQs', async ({ page }) => {

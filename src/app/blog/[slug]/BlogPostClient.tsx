@@ -8,6 +8,7 @@ import ScrollProgress from '@/components/ui/ScrollProgress';
 
 interface Related { slug: string; title: string; image: string; }
 interface PostProp {
+  referenceUrls?: string[];
   review?: { reviewer: string; reviewedAt: string; sources: string[] };
   slug: string; title: string; date: string; author: string; readTime: string;
   category: string; image: string; excerpt: string; content: string; relatedPosts: Related[];
@@ -26,9 +27,9 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
   const blogPostSchema = {
     '@context': 'https://schema.org', '@type': 'BlogPosting',
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${base}/blog/${post.slug}` },
-    headline: post.title, description: post.excerpt, datePublished: post.date, dateModified: post.date,
+    headline: post.title, description: post.excerpt, ...(post.review ? { datePublished: post.date, dateModified: post.review.reviewedAt } : {}),
     author: { '@type': 'Organization', name: 'Aethera Editorial Team' },
-    publisher: { '@type': 'Organization', name: 'Aethera Healthcare Solutions', logo: { '@type': 'ImageObject', url: `${base}/logo.png` } },
+    publisher: { '@type': 'Organization', name: 'Aethera Healthcare Solutions', logo: { '@type': 'ImageObject', url: `${base}/brand/logo-800x240.png` } },
     image: post.image, keywords: post.category,
   };
 
@@ -70,6 +71,7 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
 
             <p className="text-sm text-gray mb-5">{post.review ? `Reviewed by ${post.review.reviewer} on ${post.review.reviewedAt}.` : 'Editorial reference. A current specialist review record is not available.'} Confirm current payer policies before acting. <Link href="/blog/editorial-policy/" className="underline">Our editorial policy</Link></p>
             <p className="text-lg text-navy font-medium leading-relaxed mb-6 border-l-4 border-teal pl-4">{post.excerpt}</p>
+            <aside className="mb-5 rounded-xl border border-slate-200 p-4 text-sm"><p className="mb-2 font-semibold">Primary reference collections</p>{post.referenceUrls?.map(url => <a key={url} href={url} target="_blank" rel="noopener noreferrer" className="mr-4 underline">{new URL(url).hostname} reference collection</a>)}<p className="mt-2 text-xs text-slate-600">Reference links do not imply a completed specialist review of this article.</p></aside>
             {post.review && <ul className="text-sm mb-5">{post.review.sources.map(url => <li key={url}><a className="underline" href={url} rel="noopener noreferrer" target="_blank">{new URL(url).hostname} — source reference</a></li>)}</ul>}
             <div className="max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
 

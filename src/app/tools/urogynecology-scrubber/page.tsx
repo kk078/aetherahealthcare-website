@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Urogynecology & Pelvic Floor Reconstruction Bundling Scrubber. Audit laparoscopic sacrocolpopexy (57425), mid-urethral sling (57288), and colporrhaphy (57240/57250/57260), test routine cystoscopy (52000) bundling clawbacks, validate POP-Q prolapse staging medical necessity, and configure multi-channel urodynamics (UDS) component stacking.',
+
+  ...marketingMetadata("/tools/urogynecology-scrubber", 'Urogynecology & Pelvic Floor Reconstruction Bundling Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Urogynecology & Pelvic Floor Reconstruction Bundling Scrubber. Audit laparoscopic sacrocolpopexy (57425), mid-urethral sling (57288), and colporrhaphy (57240/57250/57260), test routine cystoscopy (52000) bundling clawbacks, validate POP-Q prolapse staging medical necessity, and configure multi-channel urodynamics (UDS) component stacking.'),
 };
 
 export default function UrogynecologyScrubberPage() {

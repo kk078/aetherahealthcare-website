@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Scoliosis & Multi-Rod Deformity Scrubber. Audit posterior spinal deformity fusions (22800, 22802, 22804), prevent payer interspace downcoding, safeguard pelvic fixation (+22848), and validate multi-level Ponte osteotomy claims.',
+
+  ...marketingMetadata("/tools/scoliosis-deformity-scrubber", 'Pediatric Scoliosis & Multi-Rod Deformity Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Pediatric Scoliosis & Multi-Rod Deformity Scrubber. Audit posterior spinal deformity fusions (22800, 22802, 22804), prevent payer interspace downcoding, safeguard pelvic fixation (+22848), and validate multi-level Ponte osteotomy claims.'),
 };
 
 export default function ScoliosisDeformityScrubberPage() {

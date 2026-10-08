@@ -57,6 +57,7 @@ export function validateLead(value: unknown): LeadEnvelope {
   const phone = String(value.data.phone || value.data.contactPhone || value.data.schedulePhone || '').trim();
   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error('Invalid email');
   if (!email && phone.replace(/\D/g, '').length < 7) throw new Error('Provide an email address or phone number');
+  if (value.formType === 'newsletter_signup' && (value.data.marketingConsent !== true || value.data.consentVersion !== 'newsletter-v1')) throw new Error('Provide newsletter consent');
   if (value.attribution != null && !record(value.attribution)) throw new Error('Invalid attribution');
   return { submissionId: value.submissionId, formType: value.formType, data: value.data, attribution: value.attribution as LeadEnvelope['attribution'] };
 }

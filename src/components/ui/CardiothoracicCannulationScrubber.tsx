@@ -493,8 +493,8 @@ IEA*1*000000101~`;
       trackConversion('cardiothoracic_rcm_audit_submit');
       setLeadSuccess(true);
     } catch {
-      // Fail-safe graceful UX
-      setLeadSuccess(true);
+      // Keep the form available for retry
+      setLeadSuccess(false);
     } finally {
       setIsSubmitting(false);
     }

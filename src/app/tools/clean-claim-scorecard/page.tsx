@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -12,6 +13,8 @@ export const metadata = {
   title: { absolute: 'Clean-Claim Scorecard — Rate Your First-Pass Claim Readiness | Aethera Healthcare Solutions' },
   description:
     'Free clean-claim readiness scorecard. Check your front-end, coding, and submission workflow against 14 controls and see which CARC/RARC denials each gap invites.',
+
+  ...marketingMetadata("/tools/clean-claim-scorecard", 'Clean-Claim Scorecard — Rate Your First-Pass Claim Readiness | Aethera Healthcare Solutions', 'Free clean-claim readiness scorecard. Check your front-end, coding, and submission workflow against 14 controls and see which CARC/RARC denials each gap invites.'),
 };
 
 export default function CleanClaimScorecardPage() {
@@ -41,7 +44,7 @@ export default function CleanClaimScorecardPage() {
           <CleanClaimScorecard />
           <ToolConversionBridge
             toolName="Clean-Claim Scorecard"
-            contextText="Found gaps in your front-end intake or coding controls? Aethera guarantees 98%+ clean claims backed by written SLAs."
+            contextText="Found gaps in your front-end intake or coding controls? Aethera can review your claim controls and agree measurable service targets in writing."
           />
         </div>
       </section>

@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Airway Scrubber. Audit single-stage (CPT 31587) and double-stage (31590) LTR, cricotracheal resection (31584), defend autologous rib cartilage harvest (+20902-59), and safeguard staged surveillance bronchoscopy (Modifier -58).',
+
+  ...marketingMetadata("/tools/pediatric-airway-scrubber", 'Pediatric Laryngotracheal Reconstruction (LTR) Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Airway Scrubber. Audit single-stage (CPT 31587) and double-stage (31590) LTR, cricotracheal resection (31584), defend autologous rib cartilage harvest (+20902-59), and safeguard staged surveillance bronchoscopy (Modifier -58).'),
 };
 
 export default function PediatricAirwayScrubberPage() {

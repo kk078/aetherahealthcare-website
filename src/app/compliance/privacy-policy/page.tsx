@@ -1,8 +1,11 @@
+import { marketingMetadata } from '@/lib/marketing';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import CookiePreferencesButton from '@/components/ui/CookiePreferencesButton';
-export const metadata = { title: 'Website privacy policy', description: 'Website contact data, local report processing, optional analytics and privacy choices.', alternates: { canonical: '/compliance/privacy-policy/' } };
+export const metadata = { title: 'Website privacy policy', description: 'Website contact data, local report processing, optional analytics and privacy choices.', alternates: { canonical: '/compliance/privacy-policy/' } ,
+  ...marketingMetadata("/compliance/privacy-policy", 'Website privacy policy', 'Website contact data, local report processing, optional analytics and privacy choices.'),
+};
 export default function PrivacyPolicy() {
   return <><Navbar /><main className="max-w-3xl mx-auto px-4 py-16 space-y-6"><h1 className="text-4xl font-bold">Website privacy policy</h1><p className="text-muted">Updated September 7, 2026</p>
     <section className="space-y-3"><h2 className="text-2xl font-bold">Contact requests</h2><p>When you submit a form, we collect the contact and practice details you provide so our team can respond. Requests are sent to our website’s server endpoint, stored for delivery, and forwarded to our CRM. Please do not include patient identifiers or clinical records in public forms or chat.</p><p>The website does not save form contents to your browser’s localStorage. Opaque retry identifiers may be kept in sessionStorage for up to one hour to avoid duplicate submissions. Server delivery records are removed after 30 days following successful delivery by the maintenance job. CRM retention is managed separately by our team; pending requests remain available for follow-up.</p></section>

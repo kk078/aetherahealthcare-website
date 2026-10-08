@@ -40,7 +40,7 @@ export function captureAttribution(): CampaignAttribution | null {
   try {
     // If we already have stored attribution for this session, return it
     const existing = getAttribution();
-    if (existing && (existing.utmSource || existing.gclid)) {
+    if (existing) {
       return existing;
     }
 

@@ -265,10 +265,10 @@ AETHERA MSP DEFENSE:
     try {
       if (!(await sendLeadToKiran('msp_determination_audit_request', {
         source: 'MSP Determination Engine & Questionnaire Tool',
-        name: leadName || 'Billing Compliance Director',
+        name: leadName,
         email: leadEmail,
         phone: leadPhone || 'Not provided',
-        organization: leadOrg || 'Medical Group / Health Center',
+        organization: leadOrg,
         message: `Requested MSP Secondary Coordination & CO-22 Elimination Audit.
 Scenario: ${scenario}
 Determined Primary: ${determination.primaryPayer}
@@ -277,7 +277,7 @@ Statutory Citation: ${determination.statutoryCitation}`,
       }))) {  return; }
       setLeadSubmitted(true);
     } catch {
-      setLeadSubmitted(true);
+      setLeadSubmitted(false);
     } finally {
       setLeadLoading(false);
     }

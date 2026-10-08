@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Endoscopic Skull Base Pituitary & Odontoid Scrubber. Audit transnasal odontoidectomy (61575), transsphenoidal hypophysectomy (61548), vascularized Hadad nasoseptal flaps (+15730), and ENT/Neurosurgery co-surgeon Modifier -62.',
+
+  ...marketingMetadata("/tools/endoscopic-pituitary-odontoid-scrubber", 'Endoscopic Skull Base Pituitary & Odontoid Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Endoscopic Skull Base Pituitary & Odontoid Scrubber. Audit transnasal odontoidectomy (61575), transsphenoidal hypophysectomy (61548), vascularized Hadad nasoseptal flaps (+15730), and ENT/Neurosurgery co-surgeon Modifier -62.'),
 };
 
 export default function EndoscopicPituitaryOdontoidScrubberPage() {

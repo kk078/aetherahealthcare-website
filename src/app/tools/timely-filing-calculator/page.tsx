@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
@@ -13,6 +14,8 @@ export const metadata = {
   title: { absolute: 'Timely Filing Calculator — Claim Deadline & Days Remaining | Aethera Healthcare Solutions' },
   description:
     'Free timely-filing calculator: enter a date of service and the payer filing limit to get the exact submission deadline, days remaining, and a risk flag for CARC 29.',
+
+  ...marketingMetadata("/tools/timely-filing-calculator", 'Timely Filing Calculator — Claim Deadline & Days Remaining | Aethera Healthcare Solutions', 'Free timely-filing calculator: enter a date of service and the payer filing limit to get the exact submission deadline, days remaining, and a risk flag for CARC 29.'),
 };
 
 export default function TimelyFilingPage() {

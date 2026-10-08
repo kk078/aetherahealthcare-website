@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, TrendingUp, Shield, Clock, DollarSign, FileText, AlertCircle, ArrowRight } from 'lucide-react';
@@ -9,14 +10,16 @@ import SectionHeader from '@/components/ui/SectionHeader';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/cardiology-billing') },
   title: { absolute: 'Cardiology Billing Services | RCM for Cardiologists | Aethera Healthcare' },
-  description: 'Expert cardiology billing and revenue cycle management. We handle cardiac cath, stress testing, EP studies, remote monitoring, and all cardiology-specific coding complexities. 97.1% clean claim rate.',
+  description: 'Expert cardiology billing and revenue cycle management. We handle cardiac cath, stress testing, EP studies, remote monitoring, and all cardiology-specific coding complexities.',
+
+  ...marketingMetadata("/services/cardiology-billing", 'Cardiology Billing Services | RCM for Cardiologists | Aethera Healthcare', 'Expert cardiology billing and revenue cycle management. We handle cardiac cath, stress testing, EP studies, remote monitoring, and all cardiology-specific coding complexities.'),
 };
 
 const stats = [
-  { value: '97.1%', label: 'Clean Claim Rate for Cardiology' },
-  { value: '3.8%', label: 'Average Denial Rate' },
-  { value: '21 Days', label: 'Average AR Days' },
-  { value: '22%', label: 'Average Revenue Increase' },
+  { value: 'In writing', label: 'Agreed targets' },
+  { value: 'BAA first', label: 'Clinical intake' },
+  { value: 'Human review', label: 'Claim decisions' },
+  { value: 'Scoped', label: 'Onboarding and reporting' },
 ];
 
 const challenges = [
@@ -215,34 +218,7 @@ export default function CardiologyBilling() {
       </section>
 
       {/* Case Study Snapshot */}
-      <section className="py-16 md:py-24 bg-navy">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Cardiology Group</h2>
-            <p className="text-cream/80 mb-8">This group came to Aethera with a 14.2% denial rate — almost entirely from cardiac cath modifier errors and stress test bundling issues. AR had reached 47 days and $40,000/month was being written off without appeal.</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              {[
-                { label: 'Denial Rate', before: '14.2%', after: '3.8%' },
-                { label: 'AR Days', before: '47', after: '21' },
-                { label: 'Collections', before: 'Baseline', after: '+22%' },
-                { label: 'Hours Saved/Wk', before: '—', after: '31 hrs' },
-              ].map((m, i) => (
-                <div key={i} className="bg-white/10 rounded-xl p-4 text-center">
-                  <p className="text-xs text-gray/60 mb-1">{m.label}</p>
-                  <p className="text-xs text-gray/40 line-through">{m.before}</p>
-                  <p className="text-xl font-bold text-mint">{m.after}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6">
-              <Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">
-                Read all case studies <ArrowRight className="h-4 w-4 ml-1" />
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      <section className="py-12 bg-navy text-white"><div className="max-w-4xl mx-auto px-5"><h2 className="text-2xl font-bold">Review your own practice data</h2><p className="mt-3 text-white/80">We agree the baseline, reporting period and success criteria before work begins. Verified client outcomes are published only with supporting records and permission.</p><Link href="/case-studies/" className="mt-5 inline-block text-mint underline">Explore specialty billing workflows</Link></div></section>
 
       {/* FAQ */}
       <section className="py-16 md:py-24 bg-white">

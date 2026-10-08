@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -11,6 +12,8 @@ export const metadata = {
   title: { absolute: '10,600+ Payer Directory & Clearinghouse EDI Routing | Aethera Healthcare Solutions' },
   description:
     'Comprehensive U.S. insurance payer directory and clearinghouse EDI routing guide. Look up 10,600+ electronic payer IDs, par statuses, pre-enrollment rules, 835 ERA remittance support, and real-time 270/271 eligibility.',
+
+  ...marketingMetadata("/payers/directory", '10,600+ Payer Directory & Clearinghouse EDI Routing | Aethera Healthcare Solutions', 'Comprehensive U.S. insurance payer directory and clearinghouse EDI routing guide. Look up 10,600+ electronic payer IDs, par statuses, pre-enrollment rules, 835 ERA remittance support, and real-time 270/271 eligibility.'),
 };
 
 export default function PayerDirectoryIndex() {

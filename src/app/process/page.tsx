@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, FileText, Settings, Upload, Users, Zap } from 'lucide-react';
@@ -104,6 +105,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/process') },
   title: "Our Onboarding & Billing Process",
   description: "How Aethera onboards your practice — a structured, low-disruption process that gets your revenue cycle optimized and cash flowing from day one.",
+
+  ...marketingMetadata("/process", "Our Onboarding & Billing Process", "How Aethera onboards your practice — a structured, low-disruption process that gets your revenue cycle optimized and cash flowing from day one."),
 };
 
 export default function Process() {
@@ -284,7 +287,7 @@ export default function Process() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-teal flex-shrink-0 mt-1 mr-3" />
-                    <p className="text-gray">No disruption to patient care during migration</p>
+                    <p className="text-gray">Parallel onboarding to patient care during migration</p>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-teal flex-shrink-0 mt-1 mr-3" />

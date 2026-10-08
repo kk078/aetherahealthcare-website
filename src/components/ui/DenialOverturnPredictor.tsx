@@ -332,7 +332,7 @@ export default function DenialOverturnPredictor() {
                   Appeal Strategy Request Dispatched!
                 </div>
                 <p className="text-[11px] text-slate-600 dark:text-slate-300">
-                  Kiran and our Denial Management Team will contact you within 2 business hours with an appeal packet.
+                  Kiran and our Denial Management Team will contact you within one business day with an appeal packet.
                 </p>
               </div>
             ) : (

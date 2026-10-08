@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Predict medical claim denial overturn probability across CARC codes (CO-50, CO-197, CO-97, CO-16, CO-29, CO-22). Compute statutory appeal deadline countdowns, clinical evidence checklists, and legal citations.',
+
+  ...marketingMetadata("/tools/denial-overturn-predictor", 'Denial Appeal Readiness & Review Checklist | Free RCM Tool | Aethera Healthcare Solutions', 'Predict medical claim denial overturn probability across CARC codes (CO-50, CO-197, CO-97, CO-16, CO-29, CO-22). Compute statutory appeal deadline countdowns, clinical evidence checklists, and legal citations.'),
 };
 
 export default function DenialOverturnPredictorPage() {
@@ -61,7 +64,7 @@ export default function DenialOverturnPredictorPage() {
 
           <ToolConversionBridge
             toolName="Denial Overturn Predictor"
-            contextText="Tired of fighting payer denial sweeps one claim at a time? Aethera's specialized denial resolution team manages 100% of Level 1, 2, and external review appeals electronically with an 82%+ recovery rate."
+            contextText="Tired of fighting payer denial sweeps one claim at a time? Ask Aethera to review the evidence, applicable appeal path and next action. Payer decisions and recovery vary."
           />
         </div>
       </section>

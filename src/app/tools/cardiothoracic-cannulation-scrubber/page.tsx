@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Cardiothoracic Bypass & Cannulation Scrubber. Audit complex CABG arterial-venous graft combinations (33533–33536 + 33517–33523), endoscopic vein harvest (+33508), concomitant valve replacement sequencing (33405/33430), and ECMO/ECLS cannulation bundling rules.',
+
+  ...marketingMetadata("/tools/cardiothoracic-cannulation-scrubber", 'Cardiothoracic Bypass & Cannulation Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Cardiothoracic Bypass & Cannulation Scrubber. Audit complex CABG arterial-venous graft combinations (33533–33536 + 33517–33523), endoscopic vein harvest (+33508), concomitant valve replacement sequencing (33405/33430), and ECMO/ECLS cannulation bundling rules.'),
 };
 
 export default function CardiothoracicCannulationScrubberPage() {

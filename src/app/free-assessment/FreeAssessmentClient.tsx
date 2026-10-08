@@ -50,11 +50,11 @@ interface Profile {
 
 export default function FreeAssessmentClient() {
   const [p, setP] = useState<Profile>({
-    firstName: '', lastName: '', practiceName: '', specialty: 'general',
+    firstName: '', lastName: '', practiceName: '', specialty: '',
     providerCount: '', claimVolume: '', billingSituation: '', ehr: '',
     phone: '', email: '', challenge: '',
   });
-  const [b, setB] = useState<AgingBuckets>({ b30: 120000, b60: 80000, b90: 50000, b120: 35000, bOv: 45000 });
+  const [b, setB] = useState<AgingBuckets>({ b30: 0, b60: 0, b90: 0, b120: 0, bOv: 0 });
   const [agg, setAgg] = useState<ParsedAggregates | null>(null);
   const [fileName, setFileName] = useState('');
   const [uploadState, setUploadState] = useState<'idle' | 'parsing' | 'done' | 'error'>('idle');
@@ -71,14 +71,6 @@ export default function FreeAssessmentClient() {
   const onP = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setP((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   const setBucket = (k: keyof AgingBuckets, v: number) => setB((prev) => ({ ...prev, [k]: v }));
-  const loadSoloPreset = () => {
-    clearUpload();
-    setB({ b30: 160000, b60: 90000, b90: 45000, b120: 30000, bOv: 25000 });
-  };
-  const loadGroupPreset = () => {
-    clearUpload();
-    setB({ b30: 520000, b60: 290000, b90: 170000, b120: 110000, bOv: 110000 });
-  };
 
   const parserRef = useRef<Worker | null>(null);
   const cancelParseRef = useRef<(() => void) | null>(null);
@@ -169,9 +161,10 @@ export default function FreeAssessmentClient() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!p.firstName.trim() || !p.lastName.trim() || !p.practiceName.trim() || !p.email.trim() || !p.phone.trim()) {
-      setErrorMsg('Please complete the required fields (name, practice, email, phone).'); return;
+    if (!p.firstName.trim() || !p.practiceName.trim() || !p.email.trim()) {
+      setErrorMsg('Please complete the required fields (name, practice, email).'); return;
     }
+    if (!Number.isFinite(r.total) || r.total <= 0) { setErrorMsg('Enter your actual A/R totals or upload a de-identified aging report before generating an assessment.'); return; }
     // Honeypot: silently succeed if a bot filled the hidden field
     if (hpField) {
       setStatus('success');
@@ -180,7 +173,7 @@ export default function FreeAssessmentClient() {
     setStatus('submitting'); setErrorMsg('');
     const ok = await submitToWorker('gap', {
         firstName: p.firstName.trim(), lastName: p.lastName.trim(), email: p.email.trim(), phone: p.phone.trim(),
-        practiceName: p.practiceName.trim(), specialty: specLabel,
+        practiceName: p.practiceName.trim(), specialty: p.specialty ? specLabel : '',
         providerCount: p.providerCount, monthlyClaims: p.claimVolume, claimVolume: p.claimVolume,
         currentBilling: p.billingSituation, ehr: p.ehr, daysInAr: String(metrics.dar),
         denialRate: String(Math.round(metrics.denialRate)) + '%', challenge: p.challenge,
@@ -261,7 +254,7 @@ export default function FreeAssessmentClient() {
           <SectionHeader
             label="STEP 1 · YOUR PRACTICE"
             title="Tell us about your practice"
-            description="The more accurate your details, the sharper your report. We sign an NDA before accessing any live data."
+            description="The more accurate your details, the sharper your report. No patient identifiers are needed. Any clinical intake is arranged separately after the BAA."
           />
           <form onSubmit={handleSubmit} className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* left: profile */}
@@ -272,18 +265,20 @@ export default function FreeAssessmentClient() {
                   <input id="firstName" required aria-label="First Name" name="firstName" value={p.firstName} onChange={onP} className={inputCls} />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-semibold text-navy mb-1">Last Name *</label>
-                  <input id="lastName" required aria-label="Last Name" name="lastName" value={p.lastName} onChange={onP} className={inputCls} />
+                  <label htmlFor="lastName" className="block text-sm font-semibold text-navy mb-1">Last Name (optional)</label>
+                  <input id="lastName" aria-label="Last Name" name="lastName" value={p.lastName} onChange={onP} className={inputCls} />
                 </div>
               </div>
               <div>
                 <label htmlFor="practiceName" className="block text-sm font-semibold text-navy mb-1">Practice / Group Name *</label>
-                <input id="practiceName" required aria-label="Practice Name" name="practiceName" value={p.practiceName} onChange={onP} placeholder="Central Valley Medical Group" className={inputCls} />
+                <input id="practiceName" required aria-label="Practice Name" name="practiceName" value={p.practiceName} onChange={onP} placeholder="Your practice name" className={inputCls} />
               </div>
+              <details className="space-y-4"><summary className="cursor-pointer text-sm font-semibold text-teal">Add practice details (optional)</summary>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="specialty" className="block text-sm font-semibold text-navy mb-1">Primary Specialty *</label>
-                  <select id="specialty" required aria-label="Specialty" name="specialty" value={p.specialty} onChange={onP} className={inputCls}>
+                  <label htmlFor="specialty" className="block text-sm font-semibold text-navy mb-1">Primary Specialty (optional)</label>
+                  <select id="specialty" aria-label="Specialty" name="specialty" value={p.specialty} onChange={onP} className={inputCls}>
+                    <option value="">Select your specialty</option>
                     {Object.entries(SPECIALTIES).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
                   </select>
                 </div>
@@ -315,10 +310,11 @@ export default function FreeAssessmentClient() {
                 <label htmlFor="ehr" className="block text-sm font-semibold text-navy mb-1">Current EHR / PM System</label>
                 <input id="ehr" aria-label="EHR System" name="ehr" value={p.ehr} onChange={onP} placeholder="e.g. Epic, athenahealth, eClinicalWorks, Kareo…" className={inputCls} />
               </div>
+              </details>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-navy mb-1">Phone *</label>
-                  <input id="phone" required type="tel" aria-label="Phone Number" name="phone" value={p.phone} onChange={onP} className={inputCls} />
+                  <label htmlFor="phone" className="block text-sm font-semibold text-navy mb-1">Phone (optional)</label>
+                  <input id="phone" type="tel" aria-label="Phone Number" name="phone" value={p.phone} onChange={onP} className={inputCls} />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-semibold text-navy mb-1">Work Email *</label>
@@ -383,12 +379,8 @@ export default function FreeAssessmentClient() {
                     {!agg && (
                       <div className="flex items-center gap-1.5 flex-wrap">
                         <span className="text-xs text-gray">Sample data:</span>
-                        <button type="button" onClick={loadSoloPreset} className="text-xs font-semibold bg-teal/10 hover:bg-teal hover:text-white text-teal px-2.5 py-1 rounded transition-colors">
-                          Solo ($350k)
-                        </button>
-                        <button type="button" onClick={loadGroupPreset} className="text-xs font-semibold bg-teal/10 hover:bg-teal hover:text-white text-teal px-2.5 py-1 rounded transition-colors">
-                          Group ($1.2M)
-                        </button>
+
+
                       </div>
                     )}
                   </div>
@@ -545,7 +537,7 @@ export default function FreeAssessmentClient() {
                 </div>
 
                 <p className="text-[11px] text-gray/70 mt-6 leading-relaxed">
-                  Figures derived from {metrics.source === 'upload' ? 'your uploaded aging report' : 'the values you entered'}; items marked “est.” use {specLabel.toLowerCase()} benchmarks and are confirmed against your live data during intake.
+                  Figures derived from {metrics.source === 'upload' ? 'your uploaded aging report' : 'the values you entered'}; items marked “est.” use illustrative {specLabel.toLowerCase()} planning assumptions and are confirmed against your live data during intake.
                   © {new Date().getFullYear()} Aethera Healthcare Solutions · Confidential Practice Audit
                 </p>
               </div>

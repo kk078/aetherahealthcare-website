@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Spine Arthrodesis & Multi-Level Instrumentation Scrubber. Audit complex spinal fusions (TLIF/PLIF 22633, ACDF 22551, ALIF 22558), test NCCI decompression bundling (63047), audit Modifier -62 co-surgeon rules, and ensure compliance on instrumentation (+22842/+22845) and bone graft (+20930/+20936) add-on codes.',
+
+  ...marketingMetadata("/tools/spine-arthrodesis-scrubber", 'Spine Arthrodesis & Multi-Level Instrumentation Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Spine Arthrodesis & Multi-Level Instrumentation Scrubber. Audit complex spinal fusions (TLIF/PLIF 22633, ACDF 22551, ALIF 22558), test NCCI decompression bundling (63047), audit Modifier -62 co-surgeon rules, and ensure compliance on instrumentation (+22842/+22845) and bone graft (+20930/+20936) add-on codes.'),
 };
 
 export default function SpineArthrodesisScrubberPage() {

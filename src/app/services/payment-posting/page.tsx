@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CreditCard, CheckCircle, Shield, BarChart3 } from 'lucide-react';
@@ -10,6 +11,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/payment-posting') },
   title: "Payment Posting Services | ERA Processing",
   description: "Professional payment posting services including ERA processing, EOB posting, and patient payment application. Optimize your cash flow with accurate payment processing.",
+
+  ...marketingMetadata("/services/payment-posting", "Payment Posting Services | ERA Processing", "Professional payment posting services including ERA processing, EOB posting, and patient payment application. Optimize your cash flow with accurate payment processing."),
 };
 
 const includedItems = [
@@ -39,10 +42,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Payment Posting Accuracy', value: '>99%' },
-  { metric: 'Posting Timeliness', value: '<24 hours' },
-  { metric: 'Patient Statement Accuracy', value: '>98%' },
-  { metric: 'Refund Processing Time', value: '<5 days' },
+  { metric: 'Payment Posting Accuracy', value: 'Agreed in writing' },
+  { metric: 'Posting Timeliness', value: 'Agreed in writing' },
+  { metric: 'Patient Statement Accuracy', value: 'Agreed in writing' },
+  { metric: 'Refund Processing Time', value: 'Agreed in writing' },
 ];
 
 const challenges = [

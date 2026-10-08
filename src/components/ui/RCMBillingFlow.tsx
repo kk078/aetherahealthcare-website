@@ -89,7 +89,7 @@ interface StationDetail {
 }
 
 const STATIONS: StationDetail[] = [
-  { id: 'encounter', x: 120, label: 'Encounter', targetP: 0.05, badge: 'Intake', sla: 'Real-time', desc: 'Eligibility & benefits verified before the encounter across 900+ payers.' },
+  { id: 'encounter', x: 120, label: 'Encounter', targetP: 0.05, badge: 'Intake', sla: 'Real-time', desc: 'Eligibility & benefits verified before the encounter across Payer-specific review.' },
   { id: 'coding', x: 240, label: 'Coding', targetP: 0.22, badge: 'AAPC Certified', sla: '<24h Turnaround', desc: 'Dual AI-assisted & certified coder validation for 98%+ clean claim rate.' },
   { id: 'submit', x: 380, label: 'Submit', targetP: 0.46, badge: 'NCCI Scrubbed', sla: 'Same-day', desc: 'Clearinghouse transmission with automated rule scrubbing against LCD/NCD edits.' },
   { id: 'payer', x: 490, label: 'Payer', targetP: 0.58, badge: 'ERA / 835', sla: 'Live Track', desc: 'Automated 835 remittance matching and immediate denial detection.' },

@@ -328,7 +328,7 @@ IEA*1*000000001~`;
       setSubmitted(true);
     } catch (err) {
       console.error('Lead submission failed:', err);
-      setSubmitted(true); // Graceful UX
+      setSubmitted(false); // Delivery was not confirmed
     } finally {
       setSubmitting(false);
     }

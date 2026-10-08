@@ -690,7 +690,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
                   ${scrubberResult.penaltyAtRisk > 0 ? scrubberResult.penaltyAtRisk.toLocaleString() : '$0'}
                 </span>
                 <span className="text-[11px] block mt-0.5">
-                  {scrubberResult.penaltyAtRisk > 0 ? 'Denials / recoupment risk' : '100% clean scrub'}
+                  {scrubberResult.penaltyAtRisk > 0 ? 'Denials / recoupment risk' : 'Checklist complete — review required'}
                 </span>
               </div>
             </div>
@@ -827,7 +827,7 @@ ${scrubberResult.alerts.map((a) => `[${a.type.toUpperCase()}] ${a.title}: ${a.de
                 <CheckCircle2 className="w-8 h-8 text-emerald-600 mx-auto" />
                 <p className="font-bold text-sm">Audit Dispatched Successfully</p>
                 <p className="text-xs text-emerald-700">
-                  Our transplant surgical billing directors will review your clinical protocol within 2 business hours.
+                  Our transplant surgical billing directors will review your clinical protocol within one business day.
                 </p>
               </div>
             ) : (

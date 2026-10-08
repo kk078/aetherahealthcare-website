@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Whipple Procedure Scrubber. Audit classic vs pylorus-preserving pancreaticoduodenectomy (48150 vs 48153), defend mesenteric vein vascular reconstruction add-ons (+35221), feeding jejunostomies (44010), and Modifier -62 co-surgeons.',
+
+  ...marketingMetadata("/tools/whipple-resection-scrubber", 'Whipple Procedure & Pancreatic Resection Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Whipple Procedure Scrubber. Audit classic vs pylorus-preserving pancreaticoduodenectomy (48150 vs 48153), defend mesenteric vein vascular reconstruction add-ons (+35221), feeding jejunostomies (44010), and Modifier -62 co-surgeons.'),
 };
 
 export default function WhippleResectionScrubberPage() {

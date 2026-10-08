@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import Navbar from '@/components/layout/Navbar';
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
   title: { absolute: 'MGMA Practice Health Index & Specialty Scorecard | Aethera Healthcare' },
   description:
     'Benchmark your medical practice revenue cycle against national MGMA & HFMA standards. Calculate Days in AR performance, denial rates, and annual recoverable cash lift.',
+
+  ...marketingMetadata("/tools/practice-benchmark-scorecard", 'MGMA Practice Health Index & Specialty Scorecard | Aethera Healthcare', 'Benchmark your medical practice revenue cycle against national MGMA & HFMA standards. Calculate Days in AR performance, denial rates, and annual recoverable cash lift.'),
 };
 
 export default function PracticeBenchmarkPage() {

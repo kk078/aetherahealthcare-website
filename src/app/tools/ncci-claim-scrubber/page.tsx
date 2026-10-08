@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free CMS NCCI Procedure-to-Procedure (PTP) bundling edit checker. Validate modifier 25, 59, XS, and XE applicability to prevent CARC 97 bundling denials.',
+
+  ...marketingMetadata("/tools/ncci-claim-scrubber", 'CMS NCCI Claim Scrubber & Modifier Validator | Free RCM Tool | Aethera Healthcare Solutions', 'Free CMS NCCI Procedure-to-Procedure (PTP) bundling edit checker. Validate modifier 25, 59, XS, and XE applicability to prevent CARC 97 bundling denials.'),
 };
 
 export default function NcciClaimScrubberPage() {

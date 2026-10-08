@@ -19,6 +19,42 @@ export interface SeoSpecialty {
 }
 
 export const SEO_SPECIALTIES: SeoSpecialty[] = [
+{
+  "slug": "endocrinology",
+  "name": "Endocrinology",
+  "noun": "endocrinology practices",
+  "cpt": "Confirm current codes against the applicable payer policy",
+  "blurb": "Billing review for endocrine visits, ongoing care and diagnostic services, with documentation and payer requirements checked before submission.",
+  "painPoints": [
+    "Match the billed service to the encounter documentation",
+    "Confirm coverage and authorization requirements for diagnostic services",
+    "Review care-management documentation and payer-specific requirements"
+  ],
+  "faqs": [
+    {
+      "q": "What do you need for an endocrinology billing review?",
+      "a": "We agree scope, sign the BAA and arrange secure intake of the claim, payer response and relevant encounter documentation."
+    }
+  ]
+},
+{
+  "slug": "general-surgery",
+  "name": "General Surgery",
+  "noun": "general surgery practices",
+  "cpt": "Confirm current procedure codes and payer requirements",
+  "blurb": "Surgical billing review covering operative documentation, authorization, applicable edits and follow-up responsibilities.",
+  "painPoints": [
+    "Reconcile operative documentation with billed procedures",
+    "Confirm authorization and payer requirements before submission",
+    "Review applicable global-period and modifier requirements against current primary guidance"
+  ],
+  "faqs": [
+    {
+      "q": "How does surgical claim review begin?",
+      "a": "We agree the scope and success criteria, sign the BAA and review the claim with its operative documentation and payer response."
+    }
+  ]
+},
   {
     slug: 'family-medicine',
     name: 'Family Medicine',

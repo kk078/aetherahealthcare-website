@@ -117,6 +117,10 @@ export const ROUTES = [
     "indexable": false
   },
   {
+    "path": "/lp/denial-recovery-sprint",
+    "indexable": false
+  },
+  {
     "path": "/lp/enterprise-rcm",
     "indexable": false
   },

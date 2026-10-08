@@ -8,6 +8,6 @@ export default function ToolEvidence() {
   return <aside className="surface-card border-b px-4 py-3 text-sm" aria-label="Tool methodology and review status"><div className="max-w-7xl mx-auto">
     <strong>{tool.reviewStatus === 'reviewed' ? 'Reviewed reference tool' : 'Educational reference — review required'}</strong>
     <p className="text-muted mt-1">Use de-identified examples only. Outputs are draft estimates and checks; confirm codes, modifiers, coverage, contracts and deadlines before submitting a claim. {tool.reviewedAt ? `Reviewed ${tool.reviewedAt} by ${tool.reviewer}.` : 'A billing specialist has not yet verified this tool’s rules for a current effective date.'}</p>
-    {tool.sourceUrls.map(url => <a key={url} href={url} target="_blank" rel="noopener noreferrer" className="underline mr-3">Official reference collection</a>)}
+    {tool.sourceUrls.map(url => <a key={url} href={url} target="_blank" rel="noopener noreferrer" className="underline mr-3">{url.includes('x12.org') ? 'X12 reference' : url.includes('medicare-ncci') ? 'CMS NCCI reference' : url.includes('physician-fee') ? 'CMS fee schedules' : 'CMS primary guidance'}</a>)}
   </div></aside>;
 }

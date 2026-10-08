@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -12,7 +13,7 @@ const specialtyLinks: Record<string, string> = {
   'Pediatrics': '/medical-billing/pediatrics',
   'Cardiology': '/medical-billing/cardiology',
   'Dermatology': '/medical-billing/dermatology',
-  'Endocrinology': '/medical-billing/internal-medicine',
+  'Endocrinology': '/medical-billing/endocrinology',
   'Gastroenterology': '/medical-billing/gastroenterology',
   'Neurology': '/medical-billing/neurology',
   'Pulmonology': '/medical-billing/pulmonology',
@@ -21,7 +22,7 @@ const specialtyLinks: Record<string, string> = {
   'Obstetrics & Gynecology (OB/GYN)': '/medical-billing/obgyn',
   'Ophthalmology & Optometry': '/medical-billing/ophthalmology',
   'Medical Oncology & Hematology': '/medical-billing/oncology',
-  'General Surgery': '/medical-billing/orthopedics',
+  'General Surgery': '/medical-billing/general-surgery',
   'Orthopedic Surgery': '/medical-billing/orthopedics',
   'Plastic Surgery': '/medical-billing/plastic-reconstructive-surgery',
   'Plastic & Reconstructive Surgery': '/medical-billing/plastic-reconstructive-surgery',
@@ -106,19 +107,19 @@ const specialties = [
     items: [
       {
         name: 'Family Medicine',
-        description: 'Comprehensive care for patients of all ages with expertise in preventive medicine, chronic disease management, and acute care.',
+        description: 'Billing review for preventive, chronic-care and acute visits in family medicine.',
         cptCodes: '99201-99215, 99381-99397',
         challenges: 'High patient volume, complex comorbidities, coordination of care across multiple specialists.'
       },
       {
         name: 'Internal Medicine',
-        description: 'Specialized care for adult patients with complex medical conditions, focusing on prevention, diagnosis, and treatment.',
+        description: 'Billing review for complex adult encounters, documented services and payer requirements.',
         cptCodes: '99201-99215, 99385-99396',
         challenges: 'Complex chronic conditions, medication management, and coordination with multiple specialists.'
       },
       {
         name: 'Pediatrics',
-        description: 'Comprehensive healthcare for infants, children, and adolescents with focus on growth, development, and preventive care.',
+        description: 'Billing review for pediatric visits, preventive services and immunization documentation.',
         cptCodes: '99201-99215, 99381-99384, 99391-99394',
         challenges: 'Growth and development tracking, vaccine compliance, and family-centered care approaches.'
       },
@@ -662,6 +663,8 @@ export const metadata = {
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
   },
+
+  ...marketingMetadata("/specialties", "Medical Billing Specialties We Serve", "Expert billing and revenue cycle management across 86+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves."),
 };
 
 export default function SpecialtiesPage() {
@@ -693,7 +696,7 @@ export default function SpecialtiesPage() {
         subtitle="Expert billing and revenue cycle management across 86+ medical specialties — with coding depth and payer knowledge specific to your field."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/services', label: 'View Services' }}
-        chips={['86+ specialties', 'Specialty-specific coding', '900+ payers']}
+        chips={['86+ specialties', 'Specialty-specific coding', 'Payer-specific review']}
       />
 
       {/* Introduction */}

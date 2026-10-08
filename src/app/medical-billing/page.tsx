@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -11,6 +12,8 @@ export const metadata = {
   description:
     'Nationwide specialty medical billing and revenue cycle management for U.S. practices. Find billing built for your specialty — coding, claims, denials, and A/R handled end to end.',
   alternates: { canonical: 'https://aetherahealthcare.com/medical-billing/' },
+
+  ...marketingMetadata("/medical-billing", 'Medical Billing Services by Specialty | Aethera Healthcare Solutions', 'Nationwide specialty medical billing and revenue cycle management for U.S. practices. Find billing built for your specialty — coding, claims, denials, and A/R handled end to end.'),
 };
 
 export default function MedicalBillingHub() {

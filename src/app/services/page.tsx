@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import {
@@ -23,6 +24,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services') },
   title: "RCM Services | Medical Billing, Coding, Denial Management",
   description: "Discover Aethera Healthcare Solutions' comprehensive revenue cycle management services including medical coding, claims processing, payment posting, denial management, and more for healthcare providers.",
+
+  ...marketingMetadata("/services", "RCM Services | Medical Billing, Coding, Denial Management", "Discover Aethera Healthcare Solutions' comprehensive revenue cycle management services including medical coding, claims processing, payment posting, denial management, and more for healthcare providers."),
 };
 
 const services = [
@@ -149,7 +152,7 @@ export default function Services() {
         subtitle="Revenue cycle management tailored to your specialty and practice — coding, claims, denials, and collections, engineered for financial precision."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/contact', label: 'Talk to an Expert' }}
-        chips={['15 RCM services', '26+ specialties', '900+ payers']}
+        chips={['15 RCM services', '26+ specialties', 'Payer-specific review']}
       />
 
       {/* Services Overview */}

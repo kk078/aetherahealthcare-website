@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Validate Medicare DMEPOS claims across Oxygen, CPAP, Mobility Assistive Equipment, CGMs, and Orthotics. Verify Standard Written Orders (SWO), Face-to-Face timing, required Prior Authorizations, and KX/GA/CG modifiers mapped to DME MAC Jurisdictions A, B, C, and D.',
+
+  ...marketingMetadata("/tools/dmepos-validator", 'DMEPOS Medical Necessity & Prior Auth Validator | Free RCM Tool | Aethera Healthcare Solutions', 'Validate Medicare DMEPOS claims across Oxygen, CPAP, Mobility Assistive Equipment, CGMs, and Orthotics. Verify Standard Written Orders (SWO), Face-to-Face timing, required Prior Authorizations, and KX/GA/CG modifiers mapped to DME MAC Jurisdictions A, B, C, and D.'),
 };
 
 export default function DmeposValidatorPage() {
@@ -63,7 +66,7 @@ export default function DmeposValidatorPage() {
 
           <ToolConversionBridge
             toolName="DMEPOS Validator"
-            contextText="Tired of DME MAC pre-payment additional documentation requests (ADR) and complex prior authorization delays? Aethera manages end-to-end DMEPOS intake, clinical chart order audits, and electronic MAC billing with 98.6% first-pass adjudication."
+            contextText="Tired of DME MAC pre-payment additional documentation requests (ADR) and complex prior authorization delays? Aethera manages end-to-end DMEPOS intake, clinical chart order audits, and electronic MAC billing with Scoped target first-pass adjudication."
           />
         </div>
       </section>

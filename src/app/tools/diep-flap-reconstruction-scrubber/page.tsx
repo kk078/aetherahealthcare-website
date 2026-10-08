@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free DIEP Flap Breast Reconstruction Claim Scrubber. Audit autologous microvascular free flaps (CPT 19364), bilateral reconstruction (19364-50), operating microscope (+69990), ICG laser angiography (+15860), second venous coupling (35201-59), and WHCRA parity rules.',
+
+  ...marketingMetadata("/tools/diep-flap-reconstruction-scrubber", 'DIEP Flap Breast Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare', 'Free DIEP Flap Breast Reconstruction Claim Scrubber. Audit autologous microvascular free flaps (CPT 19364), bilateral reconstruction (19364-50), operating microscope (+69990), ICG laser angiography (+15860), second venous coupling (35201-59), and WHCRA parity rules.'),
 };
 
 export default function DiepFlapReconstructionScrubberPage() {

@@ -1,18 +1,10 @@
-import { canonicalUrl } from '@/lib/siteConfig';
+import { marketingMetadata } from '@/lib/marketing';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, ShieldCheck } from 'lucide-react';
 import HomeHealthLandingClient from '@/components/ui/HomeHealthLandingClient';
 
-export const metadata: Metadata = {
-  alternates: { canonical: canonicalUrl('/lp/home-health-hospice-billing') },
-  robots: { index: false, follow: true },
-  title: {
-    absolute: 'Home Health & Hospice RCM Services | PDGM & LUPA Defense | Aethera Healthcare',
-  },
-  description:
-    'Full-service revenue cycle management for home health agencies and hospice organizations. Prevent PDGM LUPA cuts, late NOA penalties, and aggregate cap recoupments.',
-};
+export const metadata: Metadata = { ...marketingMetadata('/lp/home-health-hospice-billing', "Home Health & Hospice Billing Review", "Review claim documentation, eligibility and payer follow-up workflows for home health and hospice organizations."), robots: { index: false, follow: true } };
 
 export default function HomeHealthHospiceBillingPage() {
   const jsonLd = {
@@ -25,8 +17,7 @@ export default function HomeHealthHospiceBillingPage() {
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
     },
-    description:
-      'Specialized RCM for Medicare-certified home health agencies and hospices. Eliminating PDGM LUPA payment adjustments, ensuring 5-day Notice of Admission compliance, and auditing statutory aggregate caps.',
+    description: "Review claim documentation, eligibility and payer follow-up workflows for home health and hospice organizations.",
   };
 
   return (
@@ -78,7 +69,7 @@ export default function HomeHealthHospiceBillingPage() {
           </div>
           <p className="max-w-xl mx-auto text-slate-400">
             Compliant with CMS Medicare Claims Processing Manual Chapter 10 (Home Health) and Chapter 11 (Hospice).
-            HIPAA HITECH SOC-2 certified systems.
+            BAA-first intake, documented access controls and security review. SOC 2 certification is not claimed.
           </p>
           <div className="pt-2 text-slate-400">
             © {new Date().getFullYear()} Aethera Healthcare Solutions. All rights reserved.

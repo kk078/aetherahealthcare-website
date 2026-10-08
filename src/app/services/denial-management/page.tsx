@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Shield, CheckCircle, BarChart3 } from 'lucide-react';
@@ -10,6 +11,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/denial-management') },
   title: "Denial Management & Appeals",
   description: "Expert denial management and appeal services for healthcare providers. Reduce denial rates, maximize recovery, and protect your revenue with our proactive approach.",
+
+  ...marketingMetadata("/services/denial-management", "Denial Management & Appeals", "Expert denial management and appeal services for healthcare providers. Reduce denial rates, maximize recovery, and protect your revenue with our proactive approach."),
 };
 
 const includedItems = [
@@ -39,10 +42,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Denial Rate', value: '<5%' },
-  { metric: 'Appeal Success Rate', value: '>65%' },
-  { metric: 'Recovery Rate', value: '>75%' },
-  { metric: 'Prevention Effectiveness', value: '>80%' },
+  { metric: 'Denial Rate', value: 'Agreed in writing' },
+  { metric: 'Appeal Success Rate', value: 'Agreed in writing' },
+  { metric: 'Recovery Rate', value: 'Agreed in writing' },
+  { metric: 'Prevention Effectiveness', value: 'Agreed in writing' },
 ];
 
 const challenges = [

@@ -1,3 +1,4 @@
+import { OFFERS } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, CheckCircle2, FileSpreadsheet, CalendarClock, Zap } from 'lucide-react';
 
@@ -23,11 +24,11 @@ export default function ToolConversionBridge({
           </div>
 
           <h3 className="text-2xl sm:text-3xl font-bold font-jakarta leading-tight mb-3">
-            {toolName ? `Turn these ${toolName} insights into recovered cash` : 'Stop revenue leaks before they hit your balance sheet'}
+            {toolName ? `Turn these ${toolName} insights into a practice-specific review` : 'Stop revenue leaks before they hit your balance sheet'}
           </h3>
 
           <p className="text-cream/80 text-sm sm:text-base leading-relaxed mb-6">
-            {contextText} Let our senior AAPC-certified billing team audit 50 of your active claims or past denials — completely free, with guaranteed under-48-hour findings.
+            {contextText} Let our senior AAPC-certified billing team audit 50 of your active claims or past denials — completely free. Results in {OFFERS.pilot.duration} {OFFERS.pilot.start}.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -47,7 +48,7 @@ export default function ToolConversionBridge({
                 Instant A/R Gap Analysis
               </div>
               <p className="text-cream/70 text-xs leading-relaxed">
-                Upload your aging report for instant benchmark comparisons against MGMA standards and recoverable cash projections.
+                Enter your aging totals for an instant planning report. Uploaded files are processed locally; clinical intake is arranged separately.
               </p>
             </div>
           </div>
@@ -74,10 +75,10 @@ export default function ToolConversionBridge({
 
           <div className="mt-6 pt-5 border-t border-white/10 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-cream/70">
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5 text-mint" /> 98%+ Clean Claim Rate
+              <CheckCircle2 className="h-3.5 w-3.5 text-mint" /> Scoped targets in writing
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5 text-mint" /> &lt;24h Submission SLA
+              <CheckCircle2 className="h-3.5 w-3.5 text-mint" /> Human review before submission
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5 text-mint" /> HIPAA BAA Provided

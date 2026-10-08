@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Biochemical Genetics & Metabolic Formula Scrubber. Audit tandem mass spectrometry amino acid panels (82139/82136), urine organic acid chromatography (83918), prolonged geneticist visits (+99417), and defend medical food prior-auth (HCPCS B4162/B4157).',
+
+  ...marketingMetadata("/tools/pediatric-biochemical-genetics-scrubber", 'Pediatric Biochemical Genetics & Metabolic Formula Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Biochemical Genetics & Metabolic Formula Scrubber. Audit tandem mass spectrometry amino acid panels (82139/82136), urine organic acid chromatography (83918), prolonged geneticist visits (+99417), and defend medical food prior-auth (HCPCS B4162/B4157).'),
 };
 
 export default function PediatricBiochemicalGeneticsScrubberPage() {

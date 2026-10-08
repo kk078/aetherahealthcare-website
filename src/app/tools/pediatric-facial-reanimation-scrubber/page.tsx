@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Facial Reanimation Scrubber. Audit dynamic smile reanimation, cross-face sural nerve grafting (CPT 64890/64891), Stage 2 free gracilis transfer (15756) with staged Modifier -58, and masseteric nerve transposition (64864-51).',
+
+  ...marketingMetadata("/tools/pediatric-facial-reanimation-scrubber", 'Pediatric Facial Reanimation & Free Gracilis Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Facial Reanimation Scrubber. Audit dynamic smile reanimation, cross-face sural nerve grafting (CPT 64890/64891), Stage 2 free gracilis transfer (15756) with staged Modifier -58, and masseteric nerve transposition (64864-51).'),
 };
 
 export default function PediatricFacialReanimationScrubberPage() {

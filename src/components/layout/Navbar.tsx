@@ -35,24 +35,25 @@ const specialtyServices = [
 ];
 
 const whyAethera = [
-  { name: '3D Anatomy Atlas', href: '/anatomy-atlas', desc: 'Interactive anatomy and source-linked billing education' },
-  { name: 'Human Autonomy Framework', href: '/human-autonomy', desc: 'Evidence, documentation and human review in healthcare billing' },
+    { name: 'How It Works', href: '/process', desc: 'Scope, secure intake, onboarding and reporting' },
   { name: 'About Us', href: '/about', desc: 'Our story, founder adjudication roots & team' },
-  { name: 'Case Studies', href: '/case-studies', desc: 'Results our process is built to deliver' },
+  { name: 'Billing Workflows', href: '/case-studies', desc: 'Specialty workflows and evidence requirements' },
   { name: 'Security & Compliance', href: '/compliance/security', desc: 'How we protect PHI, offshore and in the US' },
   { name: 'Compare Options', href: '/compare', desc: 'Outsourced vs. in-house, and how to choose' },
   { name: 'Blog & Articles', href: '/blog', desc: 'Healthcare RCM insights & payer guides' },
   { name: 'RCM & Billing Glossary', href: '/glossary', desc: 'Authoritative dictionary of EDI, NCCI, and denial terms' },
   { name: 'State of Denials Report', href: '/state-of-denials', desc: 'Free benchmark report by specialty' },
   { name: 'Guides & Playbooks', href: '/decks', desc: 'Specialty one-pagers & revenue playbooks' },
+  { name: '3D Anatomy Atlas', href: '/anatomy-atlas', desc: 'Interactive anatomy and source-linked billing education' },
+  { name: 'Human Review Framework', href: '/human-autonomy', desc: 'Documentation and evidence checkpoints' },
 ];
 
 const solutions = [
   { name: 'Human-in-the-Loop RCM', href: '/human-autonomy', desc: 'Sourced guidance and practical human review checkpoints' },
   { name: 'For Billing Companies', href: '/for-billing-companies', desc: 'White-label back-office billing partnership' },
   { name: 'Payer Services', href: '/payer-services', desc: 'Contracting, credentialing & fee schedules' },
-  { name: 'EHR Integrations', href: '/integrations', desc: '50+ certified EHR & PM platforms supported' },
-  { name: 'Payer Network', href: '/payers', desc: '900+ commercial, Medicare & Medicaid plans' },
+  { name: 'EHR Integrations', href: '/integrations', desc: 'EHR and PM workflows, with access confirmed at intake' },
+  { name: 'Payer Network', href: '/payers', desc: 'Commercial, Medicare and Medicaid payer references' },
   { name: 'Billing by Specialty', href: '/specialties', desc: 'Tailored workflows for 15+ medical fields' },
 ];
 
@@ -306,7 +307,7 @@ export default function Navbar() {
                 Pricing
               </Link>
 
-              {/* Why Aethera Dropdown */}
+              {/* Resources Dropdown */}
               <div
                 data-nav-dropdown="why"
                 className="relative py-2"
@@ -324,7 +325,7 @@ export default function Navbar() {
                       : 'text-[#334155] hover:text-[#003087]'
                   }`}
                 >
-                  Why Aethera
+                  Resources
                   <ChevronDown
                     className={`w-3.5 h-3.5 transition-transform duration-200 ${
                       activeDropdown === 'why' ? 'rotate-180 text-[#003087]' : 'text-slate-400'
@@ -514,7 +515,7 @@ export default function Navbar() {
 
             {/* Company & Knowledge */}
             <div className="border-t border-slate-100 pt-3">
-              <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest mb-2">Why Aethera &amp; About</p>
+              <p className="text-xs font-bold text-[#64748B] uppercase tracking-widest mb-2">Resources &amp; About</p>
               <div className="space-y-1">
                 {whyAethera.map((item) => (
                   <Link

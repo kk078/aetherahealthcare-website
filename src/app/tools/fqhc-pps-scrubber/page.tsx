@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free FQHC Prospective Payment System (PPS) rate scrubber. Calculate GAF geographic adjustments, validate same-day medical + behavioral health encounter exemptions, and model Medicaid wrap reconciliations.',
+
+  ...marketingMetadata("/tools/fqhc-pps-scrubber", 'FQHC PPS Rate & Same-Day Service Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free FQHC Prospective Payment System (PPS) rate scrubber. Calculate GAF geographic adjustments, validate same-day medical + behavioral health encounter exemptions, and model Medicaid wrap reconciliations.'),
 };
 
 export default function FqhcPpsScrubberPage() {

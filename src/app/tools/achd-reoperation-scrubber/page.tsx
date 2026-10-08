@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free ACHD Surgical Scrubber. Audit complex Fontan conversion (CPT 33737), defend redo sternotomy adhesiolysis add-ons (+33530), safeguard concomitant arrhythmia cryoablation Maze (+33257/+33258), and audit pulmonary valve replacements.',
+
+  ...marketingMetadata("/tools/achd-reoperation-scrubber", 'Adult Congenital Heart Disease (ACHD) & Fontan Conversion Scrubber | Free RCM Tool | Aethera Healthcare', 'Free ACHD Surgical Scrubber. Audit complex Fontan conversion (CPT 33737), defend redo sternotomy adhesiolysis add-ons (+33530), safeguard concomitant arrhythmia cryoablation Maze (+33257/+33258), and audit pulmonary valve replacements.'),
 };
 
 export default function AchdReoperationScrubberPage() {

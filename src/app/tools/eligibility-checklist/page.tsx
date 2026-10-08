@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
@@ -13,6 +14,8 @@ export const metadata = {
   title: { absolute: 'Eligibility & Prior-Auth Readiness Checklist | Aethera Healthcare Solutions' },
   description:
     'Free pre-visit eligibility and prior-authorization checklist. Score your front-desk verification against the checks that prevent CO-27, CO-197, and eligibility denials.',
+
+  ...marketingMetadata("/tools/eligibility-checklist", 'Eligibility & Prior-Auth Readiness Checklist | Aethera Healthcare Solutions', 'Free pre-visit eligibility and prior-authorization checklist. Score your front-desk verification against the checks that prevent CO-27, CO-197, and eligibility denials.'),
 };
 
 export default function EligibilityChecklistPage() {
@@ -49,7 +52,7 @@ export default function EligibilityChecklistPage() {
 
           <ToolConversionBridge
             toolName="Eligibility Checklist"
-            contextText="Tired of CO-27 and CO-197 auth denials? Aethera performs automated pre-visit eligibility verification across 900+ payers."
+            contextText="Tired of CO-27 and CO-197 auth denials? Aethera performs automated pre-visit eligibility verification across Payer-specific review."
           />
         </div>
       </section>

@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free CMS critical care time scrubber. Validate CPT 99291 and 99292 time thresholds, deduct separately billable bedside procedures (CVC, intubation, CPR), evaluate split/shared visit rules, and generate ANSI X12 837P Loop 2400 SV1 lines.',
+
+  ...marketingMetadata("/tools/critical-care-scrubber", 'Emergency & Critical Care Time Documentation Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free CMS critical care time scrubber. Validate CPT 99291 and 99292 time thresholds, deduct separately billable bedside procedures (CVC, intubation, CPR), evaluate split/shared visit rules, and generate ANSI X12 837P Loop 2400 SV1 lines.'),
 };
 
 export default function CriticalCareScrubberPage() {

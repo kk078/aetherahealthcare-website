@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import AnimatedCounter from './AnimatedCounter';
 interface TargetItem {
   targetNumber: number;
   prefix?: string;
@@ -52,12 +51,7 @@ export default function TargetCard({ t, index }: { t: TargetItem; index: number 
           {t.icon}
         </span>
         <div className="font-jakarta font-extrabold text-navy text-4xl tracking-tight mb-1">
-          <AnimatedCounter
-            to={t.targetNumber}
-            prefix={t.prefix}
-            suffix={t.suffix}
-            duration={1100 + index * 150}
-          />
+          {t.prefix}{t.targetNumber}{t.suffix}
         </div>
         <div className="text-xs font-bold tracking-[0.12em] text-gray uppercase mb-4">{t.label}</div>
         <div className="w-full bg-gray/10 h-1.5 rounded-full overflow-hidden">

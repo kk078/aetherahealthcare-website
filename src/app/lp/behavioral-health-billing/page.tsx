@@ -1,18 +1,10 @@
-import { canonicalUrl } from '@/lib/siteConfig';
+import { marketingMetadata } from '@/lib/marketing';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, ShieldCheck } from 'lucide-react';
 import BehavioralHealthLandingClient from '@/components/ui/BehavioralHealthLandingClient';
 
-export const metadata: Metadata = {
-  alternates: { canonical: canonicalUrl('/lp/behavioral-health-billing') },
-  robots: { index: false, follow: true },
-  title: {
-    absolute: 'Behavioral Health & Addiction Treatment RCM Services | Aethera Healthcare',
-  },
-  description:
-    'Dedicated behavioral health billing, UR peer reviews, and SUD revenue cycle management for residential detox, PHP, IOP, and outpatient mental health clinics.',
-};
+export const metadata: Metadata = { ...marketingMetadata('/lp/behavioral-health-billing', "Behavioral Health Billing Review", "Review billing workflows for mental health and substance use treatment programs, with scope matched to your services and payer mix."), robots: { index: false, follow: true } };
 
 export default function BehavioralHealthBillingPage() {
   const jsonLd = {
@@ -25,8 +17,7 @@ export default function BehavioralHealthBillingPage() {
       name: 'Aethera Healthcare Solutions',
       url: 'https://aetherahealthcare.com',
     },
-    description:
-      'Specialized revenue cycle management for residential addiction treatment, detox, partial hospitalization (PHP), and intensive outpatient (IOP) programs with ASAM criteria utilization review and MHPAEA parity enforcement.',
+    description: "Review billing workflows for mental health and substance use treatment programs, with scope matched to your services and payer mix.",
   };
 
   return (

@@ -9,6 +9,7 @@ import {
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
+import { trackConversion } from '@/lib/gtag';
 import { submitToWorker } from '@/lib/worker';
 import type { BlogPost } from '@/lib/blogPosts';
 
@@ -27,10 +28,10 @@ const catColor = (c: string) => CAT_COLOR[c] || '#0ea5a4';
 const fmtDate = (d: string) => new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
 const PULSE = [
-  { icon: <FileWarning className="h-5 w-5" />, stat: '~11%', label: 'of claims are denied on first submission' },
-  { icon: <RefreshCw className="h-5 w-5" />, stat: '~$25', label: 'average cost to rework a single denied claim' },
-  { icon: <Timer className="h-5 w-5" />, stat: '≤ 35 days', label: 'best-practice days in A/R benchmark' },
-  { icon: <TrendingDown className="h-5 w-5" />, stat: '60%+', label: 'of denials are never reworked or appealed' },
+  { icon: <FileWarning className="h-5 w-5" />, stat: 'Denials', label: 'Documentation and payer review steps' },
+  { icon: <RefreshCw className="h-5 w-5" />, stat: 'Appeals', label: 'Evidence before submission' },
+  { icon: <Timer className="h-5 w-5" />, stat: 'A/R', label: 'Aging and follow-up workflows' },
+  { icon: <TrendingDown className="h-5 w-5" />, stat: 'Coding', label: 'Human review and current references' },
 ];
 
 export default function BlogIndexClient({ blogPosts }: { blogPosts: PostSummary[] }) {
@@ -38,6 +39,7 @@ export default function BlogIndexClient({ blogPosts }: { blogPosts: PostSummary[
   const [active, setActive] = useState('All');
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [subscriptionStatus, setSubscriptionStatus] = useState<'idle' | 'sending' | 'error'>('idle');
 
   const categories = useMemo(() => ['All', ...Array.from(new Set(blogPosts.map((p) => p.category)))], [blogPosts]);
   const featured = blogPosts[0];
@@ -53,14 +55,16 @@ export default function BlogIndexClient({ blogPosts }: { blogPosts: PostSummary[
 
   const gridPosts = active === 'All' && !query.trim() ? filtered.filter((p) => p.slug !== featured.slug) : filtered;
 
-  const subscribe = (e: React.FormEvent) => {
+  const subscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim()) return;
-    void submitToWorker('contact_message', {
-      name: 'Newsletter Subscriber', email: email.trim(),
-      message: 'Subscribed to The Aethera Pulse newsletter from the blog page.',
+    if (!email.trim() || subscriptionStatus === 'sending') return;
+    setSubscriptionStatus('sending');
+    const ok = await submitToWorker('newsletter_signup', {
+      email: email.trim(), marketingConsent: true, consentVersion: 'newsletter-v1',
+      message: 'Requested The Aethera Pulse newsletter. Explicit opt-in recorded; subscription activation requires confirmation.',
     });
-    setSubscribed(true);
+    if (!ok) { setSubscriptionStatus('error'); return; }
+    trackConversion('newsletter'); setSubscribed(true); setSubscriptionStatus('idle');
   };
 
   return (
@@ -192,18 +196,20 @@ export default function BlogIndexClient({ blogPosts }: { blogPosts: PostSummary[
           {subscribed ? (
             <FadeIn>
               <CheckCircle className="h-12 w-12 text-mint mx-auto mb-4" />
-              <h2 className="text-2xl md:text-3xl font-bold text-white font-jakarta mb-2">You&apos;re on the list.</h2>
-              <p className="text-cream/80">Watch <strong className="text-white">{email}</strong> for The Aethera Pulse — practical RCM insights, no fluff.</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-white font-jakarta mb-2">Your newsletter request was received.</h2>
+              <p className="text-cream/80">We’ll use <strong className="text-white">{email}</strong> to confirm your subscription before sending updates.</p>
             </FadeIn>
           ) : (
             <FadeIn>
               <Mail className="h-10 w-10 text-mint mx-auto mb-4" />
               <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-3">Get The Aethera Pulse</h2>
-              <p className="text-cream/85 mb-8 max-w-xl mx-auto">Revenue cycle strategies, payer intel, policy updates and benchmarks for U.S. practices — to your inbox. No spam, unsubscribe anytime.</p>
+              <p className="text-cream/85 mb-8 max-w-xl mx-auto">Revenue cycle strategies, payer intel, policy updates and benchmarks for U.S. practices — to your inbox. Request updates and confirm your subscription before receiving them.</p>
+              <p className="mb-3 text-xs text-white/80">By requesting a subscription, you agree to receive Aethera RCM updates after confirmation. <Link href="/compliance/privacy-policy/" className="underline">Privacy policy</Link></p>
+              {subscriptionStatus === 'error' && <p role="alert" className="mb-3 text-sm text-red-200">Your request could not be saved. Please retry.</p>}
               <form onSubmit={subscribe} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
                 <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@yourpractice.com" aria-label="Email address"
                   className="flex-grow border border-white/30 bg-white/95 rounded-full px-5 py-3 text-navy focus:outline-none focus:ring-2 focus:ring-mint" />
-                <button type="submit" className="bg-mint hover:bg-white text-navy font-bold py-3 px-7 rounded-full transition-colors whitespace-nowrap">Subscribe</button>
+                <button type="submit" disabled={subscriptionStatus === 'sending'} className="bg-mint hover:bg-white text-navy font-bold py-3 px-7 rounded-full transition-colors whitespace-nowrap disabled:opacity-60">{subscriptionStatus === 'sending' ? 'Sending…' : 'Request subscription'}</button>
               </form>
               <p className="text-cream/50 text-xs mt-4">Or skip ahead — <Link prefetch={false} href="/free-assessment" className="underline hover:text-mint">run a free A/R gap analysis</Link>.</p>
             </FadeIn>

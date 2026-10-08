@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, TrendingUp, Shield, Clock, DollarSign, FileText, AlertCircle, ArrowRight } from 'lucide-react';
@@ -9,26 +10,16 @@ import SectionHeader from '@/components/ui/SectionHeader';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/pharmacy-billing') },
   title: "Pharmacy Billing & RCM Services | Retail, Specialty & LTC Pharmacy",
-  description: "Pharmacy revenue cycle management for retail, specialty, compounding, and long-term care pharmacies. We handle NCPDP claims, PBM adjudication, DIR fee reconciliation, 340B, prior authorizations, and copay assistance. 98.2% clean claim rate.",
+  description: "Pharmacy revenue cycle management for retail, specialty, compounding, and long-term care pharmacies. We handle NCPDP claims, PBM adjudication, DIR fee reconciliation, 340B, prior authorizations, and copay assistance.",
+
+  ...marketingMetadata("/services/pharmacy-billing", "Pharmacy Billing & RCM Services | Retail, Specialty & LTC Pharmacy", "Pharmacy revenue cycle management for retail, specialty, compounding, and long-term care pharmacies. We handle NCPDP claims, PBM adjudication, DIR fee reconciliation, 340B, prior authorizations, and copay assistance."),
 };
 
 const stats = [
-  {
-    "value": "98.2%",
-    "label": "Clean Claim Rate for Pharmacy"
-  },
-  {
-    "value": "<24 hrs",
-    "label": "Specialty PA Turnaround"
-  },
-  {
-    "value": "$19K/mo",
-    "label": "Avg DIR Recovered"
-  },
-  {
-    "value": "3%",
-    "label": "Script Abandonment"
-  }
+  { value: 'In writing', label: 'Agreed targets' },
+  { value: 'BAA first', label: 'Clinical intake' },
+  { value: 'Human review', label: 'Claim decisions' },
+  { value: 'Scoped', label: 'Onboarding and reporting' },
 ];
 
 const challenges = [
@@ -130,28 +121,6 @@ const faqs = [
   }
 ];
 
-const caseMetrics = [
-  {
-    "label": "Clean Claim Rate",
-    "before": "89%",
-    "after": "98.2%"
-  },
-  {
-    "label": "Abandoned Scripts",
-    "before": "11%",
-    "after": "3%"
-  },
-  {
-    "label": "DIR Recovered",
-    "before": "$0",
-    "after": "$19K/mo"
-  },
-  {
-    "label": "PA Turnaround",
-    "before": "4 days",
-    "after": "<24 hrs"
-  }
-];
 
 export default function PharmacyBilling() {
   return (
@@ -194,7 +163,7 @@ export default function PharmacyBilling() {
             <FadeIn>
               <h2 className="text-3xl font-bold text-navy font-jakarta mb-5">How Aethera Handles Pharmacy Billing</h2>
               <p className="text-gray mb-5">Pharmacy reimbursement is a real-time, high-volume, low-margin business — and a single mis-adjudicated claim or unreconciled DIR fee can erase the profit on dozens of scripts. Our pharmacy RCM specialists understand NCPDP claim formats, PBM contract logic, and the downstream fees that determine your true net.</p>
-              <p className="text-gray">When you partner with Aethera, you get a pharmacy-dedicated team that works your rejection queue, reconciles every remittance against expected reimbursement and DIR, manages specialty PAs end to end, and gives you script-level net-margin visibility — driving a 98.2% clean claim rate.</p>
+              <p className="text-gray">When you partner with Aethera, you get a pharmacy-dedicated team that works your rejection queue, reconciles every remittance against expected reimbursement and DIR, manages specialty PAs end to end, and gives you script-level net-margin visibility — driving a</p>
             </FadeIn>
             <FadeIn delay={0.2}>
               <div className="bg-cream rounded-2xl p-7 border border-gray/10 space-y-3">
@@ -229,17 +198,7 @@ export default function PharmacyBilling() {
           </div>
         </div>
       </section>
-      <section className="py-16 md:py-24 bg-navy">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Case Study</span>
-            <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Independent Specialty Pharmacy</h2>
-            <p className="text-cream/80 mb-8">This specialty pharmacy was losing roughly $28,000/month to abandoned scripts from unresolved PA rejects and had never reconciled DIR fees against expected reimbursement. Net margin was invisible.</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">{caseMetrics.map((m, i) => (<div key={i} className="bg-white/10 rounded-xl p-4 text-center"><p className="text-xs text-gray/60 mb-1">{m.label}</p><p className="text-xs text-gray/40 line-through">{m.before}</p><p className="text-xl font-bold text-mint">{m.after}</p></div>))}</div>
-            <div className="mt-6"><Link prefetch={false} href="/case-studies" className="text-mint font-semibold hover:text-white transition-colors inline-flex items-center">Read all case studies <ArrowRight className="h-4 w-4 ml-1" /></Link></div>
-          </FadeIn>
-        </div>
-      </section>
+      <section className="py-12 bg-navy text-white"><div className="max-w-4xl mx-auto px-5"><h2 className="text-2xl font-bold">Review your own practice data</h2><p className="mt-3 text-white/80">We agree the baseline, reporting period and success criteria before work begins. Verified client outcomes are published only with supporting records and permission.</p><Link href="/case-studies/" className="mt-5 inline-block text-mint underline">Explore specialty billing workflows</Link></div></section>
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader label="FAQ" title="Pharmacy Billing Questions" description="Common questions from pharmacy owners considering outsourcing their revenue cycle." />

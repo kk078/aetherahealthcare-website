@@ -320,7 +320,7 @@ export default function PediatricCellTherapyScrubber() {
       trackConversion('pediatric_cell_therapy_audit_submit');
       setLeadSuccess(true);
     } catch {
-      setLeadSuccess(true);
+      setLeadSuccess(false);
     } finally {
       setIsSubmitting(false);
     }

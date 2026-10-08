@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { Users, CheckCircle, Shield, BarChart3 } from 'lucide-react';
@@ -33,10 +34,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Credentialing Accuracy', value: '100%' },
-  { metric: 'Average Turnaround Time', value: '<60 days' },
-  { metric: 'Recredentialing Compliance', value: '100%' },
-  { metric: 'Payer Panel Activation', value: '>95%' },
+  { metric: 'Credentialing Accuracy', value: 'Agreed in writing' },
+  { metric: 'Average Turnaround Time', value: 'Agreed in writing' },
+  { metric: 'Recredentialing Compliance', value: 'Agreed in writing' },
+  { metric: 'Payer Panel Activation', value: 'Agreed in writing' },
 ];
 
 const challenges = [
@@ -82,6 +83,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/credentialing') },
   title: "Provider Credentialing & Payer Enrollment",
   description: "End-to-end provider credentialing and payer enrollment — CAQH, revalidations, and re-credentialing handled so your providers get in-network and stay paid. Aethera credentialing.",
+
+  ...marketingMetadata("/services/credentialing", "Provider Credentialing & Payer Enrollment", "End-to-end provider credentialing and payer enrollment — CAQH, revalidations, and re-credentialing handled so your providers get in-network and stay paid. Aethera credentialing."),
 };
 
 export default function Credentialing() {

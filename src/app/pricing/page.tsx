@@ -1,3 +1,5 @@
+import { marketingMetadata } from '@/lib/marketing';
+import { PRICING_RANGE, SITE } from '@/lib/siteConfig';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -12,13 +14,15 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/pricing') },
   title: "Pricing | Transparent Medical Billing Rates",
   description: "Transparent pricing for medical billing services. Choose from percentage-based or per-claim pricing models with no hidden fees. Get a free consultation today.",
+
+  ...marketingMetadata("/pricing", "Pricing | Transparent Medical Billing Rates", "Transparent pricing for medical billing services. Choose from percentage-based or per-claim pricing models with no hidden fees. Get a free consultation today."),
 };
 
 const pricingPlans = [
   {
     title: 'Percentage-Based',
-    price: '4-8%',
-    description: 'Zero upfront risk. Pay only on collected revenue.',
+    price: PRICING_RANGE,
+    description: 'Percentage of net collections. Scope and final rate confirmed in writing.',
     features: [
       'No setup fees or upfront implementation costs',
       '100% aligned incentives — we only earn when you get paid',
@@ -31,7 +35,7 @@ const pricingPlans = [
   },
   {
     title: 'Per-Claim',
-    price: '$3.50-$7.00',
+    price: `$${SITE.pricing.minimumPerClaim.toFixed(2)}–$${SITE.pricing.maximumPerClaim.toFixed(2)}`,
     description: 'Fixed fee per claim processed. Ideal for high encounter volumes.',
     features: [
       'Predictable unit economics regardless of claim size',
@@ -142,11 +146,11 @@ const faqs = [
   },
   {
     question: 'How do you handle performance guarantees?',
-    answer: 'We guarantee a 95%+ clean claim rate, <5% denial rate, and <30 days in AR. If we don\'t meet these benchmarks, we work with you to identify and resolve issues at no additional cost.'
+    answer: 'We agree measurable clean-claim, denial and A/R targets in your service agreement after reviewing your data. Definitions, exclusions, reporting periods and remedies are specified in writing; targets are not historical client results.'
   },
   {
     question: 'Can we customize the services included?',
-    answer: 'Yes, we can customize our service offerings based on your specific needs while maintaining our core performance guarantees.'
+    answer: 'Yes, we can customize our service offerings based on your specific needs with service targets, responsibilities and exclusions confirmed in writing.'
   }
 ];
 
@@ -210,7 +214,7 @@ export default function Pricing() {
 
           <div className="mt-8 text-center">
             <p className="text-gray">
-              All plans include comprehensive revenue cycle management services with no additional fees.
+              The percentage plan covers the agreed RCM scope. Per-claim, flat-fee and hybrid plans are quoted for the services you select; included work and exclusions are specified in writing.
             </p>
           </div>
         </div>
@@ -246,7 +250,7 @@ export default function Pricing() {
           <div className="text-center mb-10">
             <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Revenue Calculator</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white font-jakarta mb-4">See What Your Practice Could Earn</h2>
-            <p className="text-cream/80 max-w-2xl mx-auto">Before choosing a pricing model, calculate the potential revenue impact. Most practices see collections improve 15–25% in the first year.</p>
+            <p className="text-cream/80 max-w-2xl mx-auto">Before choosing a pricing model, calculate the potential revenue impact. Explore a scenario using your own collections and improvement assumptions. No revenue increase is promised.</p>
           </div>
           <ROICalculator />
         </div>

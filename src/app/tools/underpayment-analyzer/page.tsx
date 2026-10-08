@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Calculate silent PPO underpayment leakage, compare contracted allowable vs actual paid amounts, compute statutory prompt-pay interest penalties, and generate formal dispute letters.',
+
+  ...marketingMetadata("/tools/underpayment-analyzer", 'Payer Contract Underpayment & Variance Analyzer | Free RCM Tool | Aethera Healthcare Solutions', 'Calculate silent PPO underpayment leakage, compare contracted allowable vs actual paid amounts, compute statutory prompt-pay interest penalties, and generate formal dispute letters.'),
 };
 
 export default function UnderpaymentAnalyzerPage() {

@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -10,6 +11,8 @@ export const metadata = {
   description:
     'Book a time to talk with Aethera Healthcare Solutions about your medical billing and revenue cycle. Pick a slot that works for you — no obligation.',
   alternates: { canonical: 'https://aetherahealthcare.com/schedule/' },
+
+  ...marketingMetadata("/schedule", 'Schedule a Meeting', 'Book a time to talk with Aethera Healthcare Solutions about your medical billing and revenue cycle. Pick a slot that works for you — no obligation.'),
 };
 
 export default function SchedulePage() {

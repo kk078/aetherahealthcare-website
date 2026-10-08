@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Forecast your CMS Merit-based Incentive Payment System (MIPS) score out of 100 points. Calculate positive payment adjustments or negative Part B penalty exposure (up to -9.0%) across Quality, Promoting Interoperability, Improvement Activities, and Cost.',
+
+  ...marketingMetadata("/tools/mips-score-forecaster", 'CMS MIPS Performance Score & Penalty Forecaster | Free RCM Tool | Aethera Healthcare Solutions', 'Forecast your CMS Merit-based Incentive Payment System (MIPS) score out of 100 points. Calculate positive payment adjustments or negative Part B penalty exposure (up to -9.0%) across Quality, Promoting Interoperability, Improvement Activities, and Cost.'),
 };
 
 export default function MipsScoreForecasterPage() {
@@ -63,7 +66,7 @@ export default function MipsScoreForecasterPage() {
 
           <ToolConversionBridge
             toolName="MIPS Score Forecaster"
-            contextText="Worried about meeting the CMS 75-point MIPS threshold? Aethera's specialized quality reporting pod handles measure selection, EHR CEHRT data extraction, and annual QRDA-III submissions with zero penalty exposure guaranteed."
+            contextText="Worried about meeting the CMS 75-point MIPS threshold? Aethera's specialized quality reporting pod handles measure selection, EHR CEHRT data extraction, and annual QRDA-III submissions with scope and responsibilities agreed in writing. Scores and payment adjustments require confirmation."
           />
         </div>
       </section>

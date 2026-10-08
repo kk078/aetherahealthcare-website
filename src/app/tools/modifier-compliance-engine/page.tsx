@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Evaluate clinical documentation against CMS NCCI guidelines for Modifier 25 (Same-Day E/M) and Modifier 59 / XE / XP / XS / XU. Generate audit-defense attestations and prevent CARC 97 unbundling denials.',
+
+  ...marketingMetadata("/tools/modifier-compliance-engine", 'Modifier 25 & 59 / X{EPSU} Compliance Engine | Free RCM Tool | Aethera Healthcare Solutions', 'Evaluate clinical documentation against CMS NCCI guidelines for Modifier 25 (Same-Day E/M) and Modifier 59 / XE / XP / XS / XU. Generate audit-defense attestations and prevent CARC 97 unbundling denials.'),
 };
 
 export default function ModifierComplianceEnginePage() {

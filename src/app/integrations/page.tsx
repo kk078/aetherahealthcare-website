@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { CheckCircle, Shield, Settings, ArrowRight, Zap } from 'lucide-react';
@@ -11,22 +12,24 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/integrations') },
   title: { absolute: 'EHR & Practice Management Integrations | Aethera Healthcare Solutions' },
-  description: 'Aethera integrates with Epic, Cerner, athenahealth, Kareo, eClinicalWorks, and 50+ EHR systems. No workflow disruption — setup in 1–4 weeks.',
+  description: 'Discuss your EHR and practice management workflow. Access, interface availability, secure intake and implementation timing are confirmed during discovery.',
+
+  ...marketingMetadata("/integrations", 'EHR & Practice Management Integrations | Aethera Healthcare Solutions', 'Discuss your EHR and practice management workflow. Access, interface availability, secure intake and implementation timing are confirmed during discovery.'),
 };
 
 const featuredEHRs = [
-  { name: 'Epic', slug: 'epic', initials: 'EP', type: 'Hospital & Ambulatory', method: 'HL7 FHIR API', setup: '3–4 weeks', note: 'Full bidirectional integration: charge capture, eligibility, claim status, and ERA posting.' },
-  { name: 'Oracle Cerner', slug: 'oracle-cerner', initials: 'CR', type: 'Hospital', method: 'HL7 2.x / FHIR', setup: '3–4 weeks', note: 'Charge Router integration with real-time claim scrubbing and ERA reconciliation.' },
-  { name: 'athenahealth', slug: 'athenahealth', initials: 'AT', type: 'Ambulatory PM', method: 'Native API', setup: '1–2 weeks', note: 'One of our most seamless integrations — charges flow automatically, no manual export needed.' },
-  { name: 'eClinicalWorks', slug: 'eclinicalworks', initials: 'EC', type: 'Ambulatory PM', method: 'Direct Interface', setup: '2–3 weeks', note: 'Full charge import with provider, location, and fee schedule mapping.' },
-  { name: 'Kareo / Tebra', slug: 'tebra', initials: 'KA', type: 'Small Practice PM', method: 'CSV / API', setup: '1–2 weeks', note: 'Ideal for solo and small group practices. Simple setup, immediate charge flow.' },
-  { name: 'NextGen Healthcare', slug: 'nextgen', initials: 'NG', type: 'Ambulatory', method: 'HL7 Interface', setup: '2–3 weeks', note: 'Strong modifier and code set support. Denial data feeds back into NextGen automatically.' },
-  { name: 'DrChrono', slug: 'drchrono', initials: 'DC', type: 'Mobile-First PM', method: 'REST API', setup: '1–2 weeks', note: 'Built for mobile-heavy practices. Real-time charge submission from any device.' },
-  { name: 'Modernizing Medicine (EMA)', slug: 'modernizing-medicine', initials: 'MM', type: 'Specialty-Focused', method: 'Direct Export', setup: '2–3 weeks', note: 'Specialty-specific charge sheets supported. Particularly strong for dermatology and orthopedics.' },
-  { name: 'Practice Fusion', slug: 'practice-fusion', initials: 'PF', type: 'Cloud PM', method: 'CCD / API', setup: '1–2 weeks', note: 'Simple charge export integration. Eligibility verification feeds back into the scheduler.' },
-  { name: 'CharmHealth', slug: 'charmhealth', initials: 'CH', type: 'Cloud PM', method: 'REST API', setup: '1–2 weeks', note: 'Full eligibility, claims, and ERA integration. Works well for multi-specialty groups.' },
-  { name: 'Allscripts / Veradigm', slug: 'veradigm', initials: 'AL', type: 'Ambulatory', method: 'HL7 Interface', setup: '2–3 weeks', note: 'Legacy system expertise included. We handle the technical lift so your staff doesn\'t have to.' },
-  { name: 'Meditech', slug: 'meditech', initials: 'MT', type: 'Hospital', method: 'HL7 ADT / ORM', setup: '3–4 weeks', note: 'Full inpatient and outpatient support. Integrated with MEDITECH Expanse and legacy versions.' },
+  { name: 'Epic', slug: 'epic', initials: 'EP', type: 'Hospital & Ambulatory', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
+  { name: 'Oracle Cerner', slug: 'oracle-cerner', initials: 'CR', type: 'Hospital', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
+  { name: 'athenahealth', slug: 'athenahealth', initials: 'AT', type: 'Ambulatory PM', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
+  { name: 'eClinicalWorks', slug: 'eclinicalworks', initials: 'EC', type: 'Ambulatory PM', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
+  { name: 'Kareo / Tebra', slug: 'tebra', initials: 'KA', type: 'Small Practice PM', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
+  { name: 'NextGen Healthcare', slug: 'nextgen', initials: 'NG', type: 'Ambulatory', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
+  { name: 'DrChrono', slug: 'drchrono', initials: 'DC', type: 'Mobile-First PM', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
+  { name: 'Modernizing Medicine (EMA)', slug: 'modernizing-medicine', initials: 'MM', type: 'Specialty-Focused', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
+  { name: 'Practice Fusion', slug: 'practice-fusion', initials: 'PF', type: 'Cloud PM', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
+  { name: 'CharmHealth', slug: 'charmhealth', initials: 'CH', type: 'Cloud PM', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
+  { name: 'Allscripts / Veradigm', slug: 'veradigm', initials: 'AL', type: 'Ambulatory', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
+  { name: 'Meditech', slug: 'meditech', initials: 'MT', type: 'Hospital', method: 'Confirm during discovery', setup: 'Agreed after scope review', note: 'Workflow and interface availability depend on your product version, account permissions and vendor requirements. Confirm feasibility before committing.' },
 ];
 
 const otherSystems = [
@@ -39,9 +42,9 @@ const otherSystems = [
 
 const steps = [
   { icon: <Settings className="h-7 w-7" />, step: '01', title: 'Discovery', desc: 'We assess your current system, document your charge capture workflow, and identify integration requirements specific to your version and configuration.' },
-  { icon: <Zap className="h-7 w-7" />, step: '02', title: 'Configuration', desc: 'We configure the integration — mapping providers, locations, code sets, and fee schedules. No action required from your IT team in most cases.' },
+  { icon: <Zap className="h-7 w-7" />, step: '02', title: 'Configuration', desc: 'After scope approval, agree mapping for providers, locations and applicable billing data with your authorized team.' },
   { icon: <CheckCircle className="h-7 w-7" />, step: '03', title: 'Parallel Testing', desc: 'We run parallel processing with sample charges to validate accuracy, confirm ERA posting, and verify all data flows correctly before going live.' },
-  { icon: <ArrowRight className="h-7 w-7" />, step: '04', title: 'Go Live', desc: 'Full integration with real-time monitoring and a dedicated integration specialist on call for the first 30 days.' },
+  { icon: <ArrowRight className="h-7 w-7" />, step: '04', title: 'Go Live', desc: 'Go live only after validation and approval, with responsibilities and support arrangements confirmed in writing.' },
 ];
 
 const colorMap = ['bg-navy', 'bg-teal', 'bg-mint', 'bg-navy/70', 'bg-teal/70', 'bg-mint/70'];
@@ -58,20 +61,20 @@ export default function Integrations() {
 
       <RcmHeroBand
         eyebrow="EHR Integrations"
-        title="We work with your EHR"
-        subtitle="No rip-and-replace. No workflow disruption. Aethera integrates directly with your existing EHR and practice management system so your staff keeps working exactly as they do today."
+        title="Plan billing around your EHR"
+        subtitle="Tell us your system and workflow. We assess available interfaces, permissions and secure exchange options before agreeing implementation scope."
         primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
         secondary={{ href: '/contact', label: 'Talk to an Expert' }}
-        chips={['50+ EHR systems', 'Setup in 1–4 weeks', 'Zero disruption']}
+        chips={['Discovery before commitment', 'BAA before records', 'Scope agreed in writing']}
       />
 
       {/* Featured EHRs */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            label="SUPPORTED SYSTEMS"
-            title="Featured EHR Integrations"
-            description="Direct integrations with the most widely used electronic health records and practice management systems."
+            label="SYSTEMS TO DISCUSS"
+            title="EHR Workflow Assessment"
+            description="These product names identify systems you may use. Listing a system does not imply a vendor partnership, certification or a working API connection."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             {featuredEHRs.map((ehr, i) => (
@@ -101,9 +104,9 @@ export default function Integrations() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            label="ALSO SUPPORTED"
-            title="25+ Additional Systems"
-            description="We also integrate with these platforms and can accommodate custom integrations via HL7, FHIR, or CSV."
+            label="ADDITIONAL SYSTEMS"
+            title="Other Practice Systems"
+            description="If you use one of these systems, we can assess your available exports, permissions and vendor requirements."
           />
           <div className="flex flex-wrap gap-2 mt-12 justify-center">
             {otherSystems.map((s, i) => (
@@ -118,7 +121,7 @@ export default function Integrations() {
       {/* How It Works */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader label="THE PROCESS" title="How Integration Works" description="A structured 4-step process that takes 1–4 weeks from kickoff to go-live." />
+          <SectionHeader label="THE PROCESS" title="How Integration Works" description="Agree requirements, validate the available exchange method and confirm a timeline before going live." />
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
             {steps.map((s, i) => (
               <FadeIn key={i} delay={i * 0.15}>
@@ -141,17 +144,17 @@ export default function Integrations() {
             <FadeIn>
               <div className="flex items-center mb-4">
                 <Shield className="h-7 w-7 text-teal mr-3" />
-                <h2 className="text-3xl font-bold text-navy font-jakarta">Data Security Throughout</h2>
+                <h2 className="text-3xl font-bold text-navy font-jakarta">Confirm Security Before Access</h2>
               </div>
-              <p className="text-gray mb-6">Every data transfer between your EHR and Aethera&apos;s systems is fully HIPAA-compliant, encrypted end-to-end, and logged for audit purposes.</p>
+              <p className="text-gray mb-6">Before exchanging clinical records, review the agreed controls, access permissions, BAA and approved intake channel.</p>
               <div className="space-y-3">
                 {[
-                  'TLS 1.3 encryption on all data in transit',
-                  'AES-256 encryption for data at rest',
+                  'Confirm encryption for the approved transfer channel',
+                  'Confirm storage protection and retention requirements',
                   'Minimum necessary PHI principle — we only access what billing requires',
-                  'Full audit trail on every data access event',
+                  'Agree access logging and audit responsibilities',
                   'Business Associate Agreement (BAA) executed before any access',
-                  'Annual third-party security assessment',
+                  'Request applicable security documentation before access',
                 ].map((item, i) => (
                   <div key={i} className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-teal flex-shrink-0 mt-0.5 mr-3" />
@@ -164,7 +167,7 @@ export default function Integrations() {
               <div className="bg-cream rounded-2xl p-8 border border-gray/10">
                 <h3 className="text-xl font-bold text-navy font-jakarta mb-4">Don&apos;t See Your System?</h3>
                 <p className="text-gray mb-5 text-sm">
-                  We support custom integrations via HL7 2.x, HL7 FHIR, CCD, CSV upload, and secure file transfer. If you use it, we can almost certainly connect to it. Contact us for a custom integration assessment.
+                  Ask us to assess the exchange methods your vendor permits, including applicable interfaces or secure exports. Feasibility and delivery timing require discovery.
                 </p>
                 <Link prefetch={false} href="/contact" className="inline-flex items-center bg-teal hover:bg-navy text-white font-bold py-3 px-6 rounded-full transition-colors text-sm">
                   Ask About Your System <ArrowRight className="h-4 w-4 ml-2" />

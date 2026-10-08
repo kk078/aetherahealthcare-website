@@ -15,7 +15,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -30,7 +31,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -45,7 +47,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -60,7 +63,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -75,13 +79,14 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
     "href": "/tools/adult-retroperitoneal-sarcoma-scrubber",
     "name": "Adult Retroperitoneal Sarcoma & Multivisceral Scrubber",
-    "desc": "Audit radical retroperitoneal sarcoma excision (49203\u201349205), contiguous radical nephrectomy (50240-59), adrenalectomy (60540-59), and IVC replacement (35281-59).",
+    "desc": "Audit radical retroperitoneal sarcoma excision (49203–49205), contiguous radical nephrectomy (50240-59), adrenalectomy (60540-59), and IVC replacement (35281-59).",
     "category": "scrubbers",
     "tag": "Surgical Oncology & Multivisceral Resection",
     "badge": "New",
@@ -90,7 +95,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -105,13 +111,14 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
     "href": "/tools/adult-spine-deformity-llif-scrubber",
     "name": "Adult Spine Deformity & Multi-Level LLIF Scrubber",
-    "desc": "Audit multi-level lateral lumbar interbody fusion (22558, +22552), anterior longitudinal ligament release (ALLR +Mod 22), percutaneous instrumentation (+22842\u2013+22843), and S2AI screws (+22848).",
+    "desc": "Audit multi-level lateral lumbar interbody fusion (22558, +22552), anterior longitudinal ligament release (ALLR +Mod 22), percutaneous instrumentation (+22842–+22843), and S2AI screws (+22848).",
     "category": "scrubbers",
     "tag": "Minimally Invasive Spine Deformity",
     "badge": "New",
@@ -120,7 +127,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -135,7 +143,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -150,7 +159,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -165,13 +175,14 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
     "href": "/tools/complex-robotic-hernia-tar-scrubber",
     "name": "Complex Robotic Hernia & TAR Component Separation Scrubber",
-    "desc": "Audit modern CPT 2023+ anterior abdominal wall hernia repairs (49591\u201349618), transversus abdominis release (TAR add-on +49622), and retrorectus mesh placement (+49623).",
+    "desc": "Audit modern CPT 2023+ anterior abdominal wall hernia repairs (49591–49618), transversus abdominis release (TAR add-on +49622), and retrorectus mesh placement (+49623).",
     "category": "scrubbers",
     "tag": "Abdominal Wall Reconstruction & Robotic Surgery",
     "badge": "New",
@@ -180,7 +191,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -195,7 +207,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -210,7 +223,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -225,13 +239,14 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
     "href": "/tools/panfacial-trauma-reconstruction-scrubber",
     "name": "Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber",
-    "desc": "Audit complex midface Le Fort I/II/III repairs (21422\u201321435), ZMC fractures (21365), mandibular plating (21462), intermaxillary fixation bundling (21110-59), and orbital blowout reconstructive implants (21390).",
+    "desc": "Audit complex midface Le Fort I/II/III repairs (21422–21435), ZMC fractures (21365), mandibular plating (21462), intermaxillary fixation bundling (21110-59), and orbital blowout reconstructive implants (21390).",
     "category": "scrubbers",
     "tag": "Craniofacial Trauma & OMFS",
     "badge": "New",
@@ -240,7 +255,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -255,7 +271,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -270,7 +287,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -285,7 +303,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -300,7 +319,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -315,7 +335,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -330,7 +351,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -345,7 +367,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -360,7 +383,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -375,7 +399,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -390,7 +415,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -405,7 +431,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -420,7 +447,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -435,7 +463,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -450,7 +479,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -465,7 +495,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -480,7 +511,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -495,7 +527,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -510,7 +543,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -525,7 +559,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -540,7 +575,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -555,7 +591,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -570,7 +607,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -585,7 +623,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -600,7 +639,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -615,7 +655,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -630,7 +671,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -645,7 +687,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -660,7 +703,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -675,13 +719,14 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
     "href": "/tools/pad-revascularization-scrubber",
     "name": "Endovascular & PAD Revascularization Scrubber",
-    "desc": "Enforce CPT vascular territory hierarchy (iliac, fem/pop, tibial/peroneal), suppress bundled angioplasties and catheter placements (36245\u201336248), and audit diagnostic angiography exemptions.",
+    "desc": "Enforce CPT vascular territory hierarchy (iliac, fem/pop, tibial/peroneal), suppress bundled angioplasties and catheter placements (36245–36248), and audit diagnostic angiography exemptions.",
     "category": "scrubbers",
     "tag": "Vascular Surgery",
     "badge": "New",
@@ -690,7 +735,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -705,7 +751,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -720,13 +767,14 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
     "href": "/tools/nicu-critical-care-scrubber",
     "name": "NICU & Pediatric Critical Care Scrubber",
-    "desc": "Validate inpatient per-day neonatal critical care codes (CPT 99468\u201399476), weight-banded intensive step-down tiers (99477\u201399480), and scrub out CPT bundled catheterizations (36510/36660) and intubations.",
+    "desc": "Validate inpatient per-day neonatal critical care codes (CPT 99468–99476), weight-banded intensive step-down tiers (99477–99480), and scrub out CPT bundled catheterizations (36510/36660) and intubations.",
     "category": "scrubbers",
     "tag": "NICU / PICU",
     "badge": "New",
@@ -735,7 +783,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -750,13 +799,14 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
     "href": "/tools/dialysis-mcp-calculator",
     "name": "Dialysis Monthly Capitation Payment (MCP) Tier Calculator",
-    "desc": "Compute physician allowable reimbursement under CPT 90951\u201390962 and 90966, calculate inpatient hospital stay pro-rations, and model downcoding revenue recovery.",
+    "desc": "Compute physician allowable reimbursement under CPT 90951–90962 and 90966, calculate inpatient hospital stay pro-rations, and model downcoding revenue recovery.",
     "category": "calculators",
     "tag": "Nephrology",
     "badge": "New",
@@ -764,7 +814,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/fqhc-pps-scrubber",
@@ -778,7 +831,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -792,11 +846,14 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/moldx-zcode-scrubber",
-    "name": "Molecular Diagnostics MolDX\u00ae Z-Code & LCD Scrubber",
+    "name": "Molecular Diagnostics MolDX® Z-Code & LCD Scrubber",
     "desc": "Verify DEX Z-Codes and LCD coverage criteria for molecular pathology, next-generation sequencing panels, and PGx under CMS MolDX requirements.",
     "category": "scrubbers",
     "tag": "MolDX",
@@ -806,7 +863,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -820,7 +878,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/critical-care-scrubber",
@@ -834,13 +895,14 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
     "href": "/tools/anesthesia-concurrency-auditor",
     "name": "Anesthesia Concurrency & Medical Direction Auditor",
-    "desc": "Audit operating room concurrency logs under 42 CFR \u00a7 415.110. Model 1:4 TEFRA direction rules, verify Modifiers QK, QY, QX, QZ, and calculate Modifier AD penalties.",
+    "desc": "Audit operating room concurrency logs under 42 CFR § 415.110. Model 1:4 TEFRA direction rules, verify Modifiers QK, QY, QX, QZ, and calculate Modifier AD penalties.",
     "category": "calculators",
     "tag": "Concurrency",
     "badge": "New",
@@ -848,12 +910,15 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/global-period-scrubber",
     "name": "Surgical Global Period & Post-Op Modifier Scrubber",
-    "desc": "Scrub surgical follow-ups against 0-day, 10-day, and 90-day global fee packages under CMS Ch. 12 \u00a7 40.1. Validate Modifiers 24, 58, 78, 79, 54, and 55.",
+    "desc": "Scrub surgical follow-ups against 0-day, 10-day, and 90-day global fee packages under CMS Ch. 12 § 40.1. Validate Modifiers 24, 58, 78, 79, 54, and 55.",
     "category": "scrubbers",
     "tag": "Global Surgery",
     "badge": "New",
@@ -862,7 +927,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -877,7 +943,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -892,7 +959,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -907,7 +975,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -921,7 +990,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/mips-score-forecaster",
@@ -934,7 +1006,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/denial-overturn-predictor",
@@ -948,13 +1023,14 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
     "href": "/tools/prompt-pay-statutes",
     "name": "50-State Prompt-Payment Statute & Penalty Matrix",
-    "desc": "Look up electronic clean-claim deadlines (15\u201330 days), compute accrued annual interest penalties (12%\u201318%), and generate formal demand notices across 50 states.",
+    "desc": "Look up electronic clean-claim deadlines (15–30 days), compute accrued annual interest penalties (12%–18%), and generate formal demand notices across 50 states.",
     "category": "calculators",
     "tag": "Prompt Pay",
     "badge": "New",
@@ -962,7 +1038,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/underpayment-analyzer",
@@ -975,7 +1054,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/payer-dispute-directory",
@@ -989,7 +1071,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://x12.org/codes",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -1004,7 +1087,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -1019,7 +1103,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -1033,7 +1118,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/platform-telemetry",
@@ -1046,12 +1134,14 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/good-faith-estimate-generator",
     "name": "No Surprises Act GFE Generator",
-    "desc": "Generate CMS-compliant Good Faith Estimates (45 CFR \u00a7 149.610) for self-pay and uninsured patients with statutory dispute disclaimers and PDF export.",
+    "desc": "Generate CMS-compliant Good Faith Estimates (45 CFR § 149.610) for self-pay and uninsured patients with statutory dispute disclaimers and PDF export.",
     "category": "scrubbers",
     "tag": "Compliance",
     "badge": "New",
@@ -1060,7 +1150,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -1074,7 +1165,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/edi-270-271-validator",
@@ -1087,7 +1181,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://x12.org/codes",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/edi-837-scrubber",
@@ -1100,12 +1197,15 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://x12.org/codes",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/practice-benchmark-scorecard",
     "name": "MGMA Practice Health Index & Scorecard",
-    "desc": "Benchmark your practice against official MGMA / HFMA standards. Calculate overall Practice Health Score (0\u2013100) and quantify annual recoverable cash lift.",
+    "desc": "Benchmark your practice against official MGMA / HFMA standards. Calculate overall Practice Health Score (0–100) and quantify annual recoverable cash lift.",
     "category": "assessments",
     "tag": "Benchmark",
     "badge": "New",
@@ -1113,7 +1213,9 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/credentialing-timeline-estimator",
@@ -1126,7 +1228,9 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/ncci-claim-scrubber",
@@ -1139,13 +1243,14 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
     "href": "/tools/appeal-letter-generator",
     "name": "Appeal Letter Generator",
-    "desc": "Generate legal-grade, formal appeal letters with statutory citations (ERISA, ACA \u00a7 2719, CMS NCCI) for CARC 50, 197, 16, 29, 97, and 22.",
+    "desc": "Generate legal-grade, formal appeal letters with statutory citations (ERISA, ACA § 2719, CMS NCCI) for CARC 50, 197, 16, 29, 97, and 22.",
     "category": "scrubbers",
     "tag": "Playbook",
     "reviewStatus": "needs-review",
@@ -1153,7 +1258,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://x12.org/codes",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -1166,7 +1272,9 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/fee-schedule-benchmarker",
@@ -1178,7 +1286,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/era-835-decoder",
@@ -1190,7 +1301,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://x12.org/codes",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/timely-filing-matrix",
@@ -1203,7 +1317,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://x12.org/codes",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -1217,20 +1332,23 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://x12.org/codes",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
     "href": "/tools/clean-claim-scorecard",
     "name": "Clean-Claim Scorecard",
-    "desc": "Score your front-end, coding, and submission workflow against 14 controls \u2014 and see which denials each gap invites.",
+    "desc": "Score your front-end, coding, and submission workflow against 14 controls — and see which denials each gap invites.",
     "category": "assessments",
     "tag": "Self-assessment",
     "reviewStatus": "needs-review",
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/ar-cost-calculator",
@@ -1242,7 +1360,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/timely-filing-calculator",
@@ -1254,7 +1375,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/eligibility-checklist",
@@ -1266,19 +1390,24 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/denial-cost-calculator",
     "name": "Denial Cost Calculator",
-    "desc": "See what denials really cost \u2014 lost reimbursement plus rework \u2014 per week, month, and year, and the combined annual impact.",
+    "desc": "See what denials really cost — lost reimbursement plus rework — per week, month, and year, and the combined annual impact.",
     "category": "calculators",
     "tag": "Calculator",
     "reviewStatus": "needs-review",
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/rvu-calculator",
@@ -1290,7 +1419,10 @@ export const TOOLS: ToolDefinition[] = [
     "effectiveDate": null,
     "reviewedAt": null,
     "reviewer": null,
-    "sourceUrls": []
+    "sourceUrls": [
+      "https://www.cms.gov/medicare/payment/fee-schedules",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
+    ]
   },
   {
     "href": "/tools/payer-provider-manuals",
@@ -1303,7 +1435,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://x12.org/codes",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   },
   {
@@ -1317,7 +1450,8 @@ export const TOOLS: ToolDefinition[] = [
     "reviewedAt": null,
     "reviewer": null,
     "sourceUrls": [
-      "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits"
+      "https://x12.org/codes",
+      "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912"
     ]
   }
 ];

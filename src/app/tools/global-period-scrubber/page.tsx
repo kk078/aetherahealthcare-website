@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free CMS surgical global period scrubber. Verify 0-day, 10-day, and 90-day post-op windows, validate compliant usage of Modifiers 24, 58, 78, 79, 54, and 55, and generate ANSI X12 837P Loop 2400 SV1 segments.',
+
+  ...marketingMetadata("/tools/global-period-scrubber", 'Surgical Global Period & Post-Op Modifier Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free CMS surgical global period scrubber. Verify 0-day, 10-day, and 90-day post-op windows, validate compliant usage of Modifiers 24, 58, 78, 79, 54, and 55, and generate ANSI X12 837P Loop 2400 SV1 segments.'),
 };
 
 export default function GlobalPeriodScrubberPage() {

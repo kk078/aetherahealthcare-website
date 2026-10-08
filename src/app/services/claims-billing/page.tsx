@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { DollarSign, CheckCircle, Shield, BarChart3 } from 'lucide-react';
@@ -10,6 +11,8 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/services/claims-billing') },
   title: "Claims & Billing Services | Clean Claim Submission",
   description: "Professional claims and billing services for healthcare providers. Clean claim submission, denial management, and payment posting to accelerate your revenue cycle.",
+
+  ...marketingMetadata("/services/claims-billing", "Claims & Billing Services | Clean Claim Submission", "Professional claims and billing services for healthcare providers. Clean claim submission, denial management, and payment posting to accelerate your revenue cycle."),
 };
 
 const includedItems = [
@@ -39,10 +42,10 @@ const processSteps = [
 ];
 
 const kpis = [
-  { metric: 'Clean Claim Rate', value: '>95%' },
-  { metric: 'First Pass Resolution', value: '>85%' },
-  { metric: 'Submission Timeliness', value: '<48 hours' },
-  { metric: 'Payer Contract Compliance', value: '100%' },
+  { metric: 'Clean Claim Rate', value: 'Agreed in writing' },
+  { metric: 'First Pass Resolution', value: 'Agreed in writing' },
+  { metric: 'Submission Timeliness', value: 'Agreed in writing' },
+  { metric: 'Payer Contract Compliance', value: 'Agreed in writing' },
 ];
 
 const challenges = [

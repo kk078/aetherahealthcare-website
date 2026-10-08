@@ -1,3 +1,4 @@
+import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
@@ -14,6 +15,8 @@ export const metadata = {
   },
   description:
     'Free Pediatric Tracheoesophageal Fistula & Esophageal Atresia (TEF/EA) Scrubber. Audit neonatal thoracotomy/thoracoscopic repair (43305/43312), rigid bronchoscopy (+31622-59), enteral gastrostomy (+43653-59), and staged Foker elongation (Modifier -58).',
+
+  ...marketingMetadata("/tools/pediatric-tef-ea-scrubber", 'Pediatric TEF & Esophageal Atresia Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Tracheoesophageal Fistula & Esophageal Atresia (TEF/EA) Scrubber. Audit neonatal thoracotomy/thoracoscopic repair (43305/43312), rigid bronchoscopy (+31622-59), enteral gastrostomy (+43653-59), and staged Foker elongation (Modifier -58).'),
 };
 
 export default function PediatricTefEaScrubberPage() {
