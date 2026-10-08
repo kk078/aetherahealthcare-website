@@ -22,7 +22,7 @@ test.describe('Specialties 47-48 and Tools 52-53: Trauma Surgery & Pediatric Pul
     await expect(page.getByText('99291').first()).toBeVisible();
 
     // Verify CTA link
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Specialty 48: Pediatric Allergy, Pulmonology & Cystic Fibrosis page renders correctly', async ({ page }) => {
@@ -39,7 +39,7 @@ test.describe('Specialties 47-48 and Tools 52-53: Trauma Surgery & Pediatric Pul
     await expect(page.getByText('82435').first()).toBeVisible();
 
     // Verify CTA link
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Tool #52: Trauma & Open Abdomen Damage Control Scrubber audits staged laparotomy, bedside lines & time carve-outs', async ({ page }) => {

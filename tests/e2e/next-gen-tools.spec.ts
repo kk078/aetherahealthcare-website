@@ -107,27 +107,14 @@ test.describe('Next-Gen Compliance, EDI & Practice Intelligence Suite', () => {
     await page.screenshot({ path: `${ARTIFACT_DIR}/credentialing_timeline_estimator.png`, fullPage: false });
   });
 
-  test('Case Studies Hub: displays 10 specialty case studies with interactive filtering and search', async ({ page }) => {
+  test('Billing workflows explain specialty problems without fabricated customer outcomes', async ({ page }) => {
     await page.goto('/case-studies/');
-    const h1 = page.getByRole('heading', { level: 1, name: /Billing challenges\. Practical scenarios\./i });
-    await expect(h1).toBeVisible();
-    await expect(page.getByText(/All Specialties \(10\)/i)).toBeVisible();
-
-    // Check presence of initial case studies
-    await expect(page.getByText('Cardiology practice — illustrative scenario')).toBeVisible();
-
-    // Test search filter
-    const searchInput = page.getByPlaceholder('Filter by specialty or clinical code…');
-    await searchInput.fill('Neurology');
-    await expect(page.getByText('Neurology & Sleep Medicine practice — illustrative scenario')).toBeVisible();
-    await expect(page.getByText('Cardiology practice — illustrative scenario')).not.toBeVisible();
-
-    // Clear search and test category filter
-    await searchInput.clear();
-    await page.getByRole('button', { name: /Surgical & Procedural/i }).click();
-    await expect(page.getByText('Orthopedic Surgery practice — illustrative scenario')).toBeVisible();
-
-    await page.screenshot({ path: `${ARTIFACT_DIR}/case_studies_hub.png`, fullPage: false });
+    await expect(page.getByRole('heading', {level:1})).toContainText('Billing challenges. Clear review steps.');
+    await expect(page.getByRole('status')).toContainText('88 specialty workflows found');
+    await page.getByRole('searchbox', {name:'Find your specialty'}).fill('Neurology');
+    await expect(page.getByRole('heading', {name:'Neurology',exact:true})).toBeVisible();
+    await expect(page.getByRole('heading', {name:'Cardiology',exact:true})).toHaveCount(0);
+    await expect(page.getByRole('link', {name:'Explore Neurology billing',exact:true})).toBeVisible();
   });
 
   test('Tools Hub: showcases all 21 tools with Provider Portal Sandbox banner and category filtering', async ({ page }) => {
@@ -144,7 +131,7 @@ test.describe('Next-Gen Compliance, EDI & Practice Intelligence Suite', () => {
     await expect(page.getByText('No Surprises Act GFE Generator')).toBeVisible();
     await expect(page.getByText('Patient Out-of-Pocket Liability Estimator')).toBeVisible();
     await expect(page.getByText('ANSI X12 270/271 Eligibility Validator')).toBeVisible();
-    await expect(page.getByText('ANSI X12 837 Claim File Scrubber')).toBeVisible();
+    await expect(page.getByRole('heading', {name:'ANSI X12 837 Claim File Scrubber',exact:true})).toBeVisible();
     await expect(page.getByText('MGMA Practice Health Index & Scorecard')).toBeVisible();
     await expect(page.getByText('Provider Credentialing Timeline Estimator')).toBeVisible();
 

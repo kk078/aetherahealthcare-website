@@ -22,7 +22,7 @@ test.describe('Specialties 49-50 and Tools 54-55: Hepatobiliary Surgery & Pediat
     await expect(page.getByText('35221').first()).toBeVisible();
 
     // Verify CTA link
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Specialty 50: Pediatric Hematology-Oncology & Cellular Therapy page renders correctly', async ({ page }) => {
@@ -40,7 +40,7 @@ test.describe('Specialties 49-50 and Tools 54-55: Hepatobiliary Surgery & Pediat
     await expect(page.getByText('96450').first()).toBeVisible();
 
     // Verify CTA link
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Tool #54: Hepatobiliary Resection Scrubber audits trisegmentectomies, vascular add-ons & biliary conduits', async ({ page }) => {

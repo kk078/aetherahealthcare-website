@@ -21,7 +21,7 @@ test.describe('Specialties 41-42 and Tools 46-47: Retina & Vascular Endovascular
     await expect(page.getByText('J0178').first()).toBeVisible();
 
     // Verify CTA link
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Specialty 42: Vascular Surgery & Endovascular Interventions page renders correctly', async ({ page }) => {
@@ -38,7 +38,7 @@ test.describe('Specialties 41-42 and Tools 46-47: Retina & Vascular Endovascular
     await expect(page.getByText('34701–34716').first()).toBeVisible();
 
     // Verify CTA link
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Tool #46: Anti-VEGF Intravitreal Injection Scrubber models dosage, wastage, and intervals', async ({ page }) => {

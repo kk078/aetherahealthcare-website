@@ -18,7 +18,7 @@ test.describe('Specialties 37-38 and Tools 41-43: NICU, Rad-Onc, Dialysis Suites
     await expect(page.getByText('99468–99476').first()).toBeVisible();
 
     // Verify assessment link CTA
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Specialty 38: Radiation Oncology & Proton Therapy Billing page renders with IMRT and fraction management', async ({ page }) => {
@@ -33,7 +33,7 @@ test.describe('Specialties 37-38 and Tools 41-43: NICU, Rad-Onc, Dialysis Suites
     await expect(page.getByText('77427').first()).toBeVisible();
 
     // Verify assessment link CTA
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Tool #41: Radiation Oncology IMRT Bundling & Fraction Scrubber renders and evaluates edits', async ({ page }) => {

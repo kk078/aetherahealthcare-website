@@ -1,4 +1,5 @@
 import { test, expect } from './fixtures';
+import { CONTACT_EMAIL } from '../../src/lib/business';
 import AxeBuilder from '@axe-core/playwright';
 
 test.describe('Consent enforcement', () => {
@@ -35,9 +36,9 @@ test('contact form announces errors and accepts a request without optional phone
   await form.getByRole('button', { name: 'Send Message', exact: true }).click();
   await expect(page.getByLabel('Full Name')).toHaveAttribute('aria-invalid', 'true');
   await expect(page.getByRole('alert').filter({ hasText: 'Name is required' })).toBeVisible();
-  await page.getByLabel('Full Name').fill('Test Provider');
-  await page.getByLabel('Practice or Organization').fill('Test Practice');
-  await page.getByLabel('Email Address', { exact: true }).fill('test@example.com');
+  await page.getByLabel('Full Name').fill('Kiran Kumar Pedapudi');
+  await page.getByLabel('Practice or Organization').fill('Aethera Healthcare Solutions');
+  await page.getByLabel('Email Address', { exact: true }).fill(CONTACT_EMAIL);
   await page.getByLabel('Message', { exact: true }).fill('Please discuss a practice review.');
   const issues = await new AxeBuilder({ page }).include('#contact-panel-message').analyze();
   expect(issues.violations.filter(v => ['serious', 'critical'].includes(v.impact || ''))).toEqual([]);
@@ -50,9 +51,9 @@ test('failed lead acknowledgement does not claim success, and retry reuses its I
   const ids: string[] = [];
   await page.route('**/api/leads', route => { ids.push(route.request().postDataJSON().submissionId); return route.fulfill({ status: 503, contentType: 'application/json', body: '{"accepted":false}' }); });
   await page.goto('/contact/');
-  await page.getByLabel('Full Name').fill('Test Provider');
-  await page.getByLabel('Practice or Organization').fill('Test Practice');
-  await page.getByLabel('Email Address', { exact: true }).fill('test@example.com');
+  await page.getByLabel('Full Name').fill('Kiran Kumar Pedapudi');
+  await page.getByLabel('Practice or Organization').fill('Aethera Healthcare Solutions');
+  await page.getByLabel('Email Address', { exact: true }).fill(CONTACT_EMAIL);
   await page.getByLabel('Message', { exact: true }).fill('Please discuss a practice review.');
   const submit = page.locator('#contact-panel-message').getByRole('button', { name: 'Send Message', exact: true });
   await submit.click();

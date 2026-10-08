@@ -17,7 +17,7 @@ test.describe('Next-Gen Healthcare RCM Suite — Extended Enhancements', () => {
     for (const spec of specialties) {
       await page.goto(`/medical-billing/${spec.slug}/`, { waitUntil: 'networkidle' });
       await expect(page.getByRole('heading', { level: 1 })).toContainText(spec.title);
-      await expect(page.locator('text=Get a Free Assessment').first()).toBeVisible();
+      await expect(page.getByRole('link', {name:/Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/}).first()).toBeVisible();
       // Check that breadcrumbs and schema are in the document
       const scriptLd = page.locator('script[type="application/ld+json"]');
       await expect(scriptLd.first()).toBeAttached();

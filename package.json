@@ -22,7 +22,7 @@
     "@radix-ui/react-dialog": "^1.1.15",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.16.0",
-    "next": "^16.3.4",
+    "next": "16.3.8",
     "pdfjs-dist": "^4.8.69",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -47,11 +47,14 @@
     "draco3dgltf": "^1.5.7",
     "esbuild": "^0.28.2",
     "eslint": "^9",
-    "eslint-config-next": "^16.3.4",
+    "eslint-config-next": "16.3.8",
     "eslint-plugin-unused-imports": "^4.4.1",
     "tailwindcss": "^4",
     "tsx": "^4.23.13",
     "typescript": "^5",
-    "wrangler": "^4.129.1"
+    "wrangler": "4.148.0"
+  },
+  "overrides": {
+    "sharp": "0.35.5"
   }
 }

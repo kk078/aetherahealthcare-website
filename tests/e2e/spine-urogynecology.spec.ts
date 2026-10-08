@@ -21,7 +21,7 @@ test.describe('Specialties 43-44 and Tools 48-49: Spine Arthrodesis & Urogynecol
     await expect(page.getByText('22633').first()).toBeVisible();
 
     // Verify CTA link
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Specialty 44: Gynecologic Minimally Invasive Surgery & Urogynecology page renders correctly', async ({ page }) => {
@@ -38,7 +38,7 @@ test.describe('Specialties 43-44 and Tools 48-49: Spine Arthrodesis & Urogynecol
     await expect(page.getByText('57288').first()).toBeVisible();
 
     // Verify CTA link
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Tool #48: Spine Arthrodesis Scrubber audits NCCI bundling and co-surgery', async ({ page }) => {

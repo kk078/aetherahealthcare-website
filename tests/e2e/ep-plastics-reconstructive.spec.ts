@@ -21,7 +21,7 @@ test.describe('Specialties 39-40 and Tools 44-45: Cardiac EP & Plastic Reconstru
     await expect(page.getByText('93613').first()).toBeVisible();
 
     // Verify CTA link
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Specialty 40: Plastic & Reconstructive Surgery page renders correctly', async ({ page }) => {
@@ -38,7 +38,7 @@ test.describe('Specialties 39-40 and Tools 44-45: Cardiac EP & Plastic Reconstru
     await expect(page.getByText('15823').first()).toBeVisible();
 
     // Verify CTA link
-    await expect(page.getByRole('link', { name: /Get a Free Assessment/i }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: /Get an Instant A\/R Analysis|Explore the 48-Hour Denial Sprint/i }).first()).toBeVisible();
   });
 
   test('Tool #44: Cardiac Electrophysiology Scrubber evaluates ablation bundling and telemetry cadence', async ({ page }) => {
