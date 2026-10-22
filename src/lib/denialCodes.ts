@@ -297,6 +297,9 @@ const ref = referenceData as unknown as RefFile;
 
 export const referenceMeta = ref._meta;
 
+/** Reference rows rendered in the lookup page's HTML; the rest load from reference.json on demand. */
+export const REFERENCE_PREVIEW = 60;
+
 /** All CARC + RARC reference codes (excludes the curated guided codes above). */
 export function getReferenceCodes(): ReferenceCode[] {
   return ref.codes;

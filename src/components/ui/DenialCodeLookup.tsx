@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState, useEffect, type FormEvent } from 'react';
+import { useCallback, useMemo, useRef, useState, useEffect, type FormEvent } from 'react';
 import Link from 'next/link';
 import { Search, ChevronDown, Mail, CheckCircle2, ShieldAlert, Star, ArrowRight, FileText } from 'lucide-react';
 import { submitToWorker } from '@/lib/worker';
@@ -8,8 +8,12 @@ import {
   type DenialCode,
   type DenialDifficulty,
   type ReferenceCode,
+  type RefCodeType,
   DIFFICULTY_LABEL,
+  REFERENCE_PREVIEW,
 } from '@/lib/denialCodes';
+
+const REFERENCE_URL = '/tools/denial-code-lookup/reference.json';
 
 const DIFFICULTY_STYLE: Record<DenialDifficulty, string> = {
   correctable: 'bg-mint/20 text-teal border-mint/40',
@@ -32,15 +36,34 @@ function matchRef(r: ReferenceCode, terms: string[]): boolean {
 
 export default function DenialCodeLookup({
   codes,
-  reference,
+  referencePreview,
+  referenceCounts,
 }: {
   codes: DenialCode[];
   categories?: string[];
-  reference: ReferenceCode[];
+  /** First rows of the CARC/RARC reference, server-rendered; the full list is fetched on first search, tab change or "show all". */
+  referencePreview: ReferenceCode[];
+  referenceCounts: Record<RefCodeType, number>;
 }) {
   const [q, setQ] = useState('');
   const [mode, setMode] = useState<Mode>('all');
   const [openCode, setOpenCode] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  const [fullReference, setFullReference] = useState<ReferenceCode[] | null>(null);
+  const [referenceState, setReferenceState] = useState<'idle' | 'loading' | 'error'>('idle');
+  const reference = fullReference ?? referencePreview;
+
+  // Called from the handlers that need more than the preview: search, CARC/RARC tabs, "show all", deep links.
+  const referenceRequested = useRef(false);
+  const loadFullReference = useCallback(() => {
+    if (referenceRequested.current) return;
+    referenceRequested.current = true;
+    setReferenceState('loading');
+    fetch(REFERENCE_URL)
+      .then(res => { if (!res.ok) throw new Error(String(res.status)); return res.json() as Promise<ReferenceCode[]>; })
+      .then(list => { setFullReference(list); setReferenceState('idle'); })
+      .catch(() => setReferenceState('error'));
+  }, []);
 
   const [email, setEmail] = useState('');
   const [leadStatus, setLeadStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
@@ -52,15 +75,18 @@ export default function DenialCodeLookup({
     const codeParam = params.get('code') || params.get('q');
     if (codeParam) {
       requestAnimationFrame(() => {
+        loadFullReference();
         setQ(codeParam);
         const clean = codeParam.trim().replace(/^(CARC|RARC|CO|PR|OA|PI|CR)[-\s]?/i, '');
         const isGuided = codes.some(c => c.code.toLowerCase() === clean.toLowerCase());
-        setOpenCode(isGuided ? `g-${clean}` : `r-CARC-${clean}`);
+        // Reference deep links match either type: ?code=N290 is a RARC, ?code=45 a CARC.
+        setOpenCode(isGuided ? `g-${clean}` : `r-any-${clean.toUpperCase()}`);
       });
     }
-  }, [codes]);
+  }, [codes, loadFullReference]);
 
   const terms = useMemo(() => q.toLowerCase().split(/\s+/).filter(Boolean), [q]);
+
 
   // Curated top-denial codes are all CARCs, so they belong in the CARC tab too
   // (the CARC tab count already includes them).
@@ -73,9 +99,13 @@ export default function DenialCodeLookup({
     return reference.filter(r => (mode === 'all' || r.type === mode) && matchRef(r, terms));
   }, [reference, terms, mode]);
 
-  const total = guided.length + refs.length;
-  const carcCount = useMemo(() => reference.filter(r => r.type === 'CARC').length, [reference]);
-  const rarcCount = useMemo(() => reference.filter(r => r.type === 'RARC').length, [reference]);
+  // Until the full list arrives, an unfiltered view still reports the real totals.
+  const refTotal = fullReference || terms.length ? refs.length
+    : mode === 'all' ? referenceCounts.CARC + referenceCounts.RARC : mode === 'guided' ? 0 : referenceCounts[mode];
+  const total = guided.length + refTotal;
+  const visibleRefs = showAll ? refs : refs.slice(0, REFERENCE_PREVIEW);
+  const carcCount = referenceCounts.CARC;
+  const rarcCount = referenceCounts.RARC;
 
   async function handleLead(e: FormEvent) {
     e.preventDefault();
@@ -102,7 +132,7 @@ export default function DenialCodeLookup({
         <Search className="h-5 w-5 text-gray absolute left-3.5 top-1/2 -translate-y-1/2" />
         <input
           value={q}
-          onChange={e => setQ(e.target.value)}
+          onChange={e => { setQ(e.target.value); loadFullReference(); }}
           placeholder="Search a code or reason — e.g. 16, N290, timely filing, modifier, auth…"
           aria-label="Search denial codes"
           className="w-full border border-gray/30 rounded-xl pl-11 pr-4 py-3 text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
@@ -114,7 +144,7 @@ export default function DenialCodeLookup({
         {tabs.map(t => (
           <button
             key={t.key}
-            onClick={() => { setMode(t.key); setOpenCode(null); }}
+            onClick={() => { setMode(t.key); setOpenCode(null); if (t.key === 'CARC' || t.key === 'RARC') loadFullReference(); }}
             className={`text-sm rounded-full px-3.5 py-1.5 border transition-colors ${
               mode === t.key ? 'bg-navy text-white border-navy' : 'bg-white text-navy border-gray/30 hover:border-teal'
             }`}
@@ -127,6 +157,8 @@ export default function DenialCodeLookup({
       <p className="text-sm text-gray mb-4">
         Showing {total} {total === 1 ? 'code' : 'codes'}
         {q ? ` matching “${q}”` : ''}.
+        {referenceState === 'loading' && ' Loading the full CARC/RARC list…'}
+        {referenceState === 'error' && ' The full CARC/RARC list could not load; showing the first codes only.'}
       </p>
 
       {/* Guided (curated, rich) */}
@@ -217,9 +249,9 @@ export default function DenialCodeLookup({
       {/* Reference (full CARC/RARC list — same expandable card format) */}
       {refs.length > 0 && (
         <div className="space-y-3">
-          {refs.map(r => {
+          {visibleRefs.map(r => {
             const key = `r-${r.type}-${r.code}`;
-            const open = openCode === key;
+            const open = openCode === key || openCode === `r-any-${r.code.toUpperCase()}`;
             return (
               <div key={key} className="border border-gray/20 rounded-xl bg-white overflow-hidden">
                 <button
@@ -295,7 +327,17 @@ export default function DenialCodeLookup({
         </div>
       )}
 
-      {total === 0 && (
+      {!showAll && refTotal > visibleRefs.length && (
+        <button
+          type="button"
+          onClick={() => { setShowAll(true); loadFullReference(); }}
+          className="mt-4 w-full rounded-xl border border-gray/30 bg-white py-3 text-sm font-semibold text-navy hover:border-teal transition-colors"
+        >
+          Show all {refTotal.toLocaleString('en-US')} {mode === 'RARC' ? 'remark' : 'reference'} codes
+        </button>
+      )}
+
+      {total === 0 && referenceState !== 'loading' && (
         <div className="text-center py-12 text-gray">
           <ShieldAlert className="h-8 w-8 mx-auto mb-3 text-gray/50" />
           <p className="text-sm">No codes match &ldquo;{q}&rdquo;. Try a code number (e.g. 16 or N290) or a keyword like &ldquo;auth&rdquo; or &ldquo;modifier&rdquo;.</p>
