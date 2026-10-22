@@ -67,7 +67,7 @@ export default function DermatologyBilling() {
             <FadeIn>
               <span className="inline-block bg-mint/20 border border-mint/40 text-mint text-sm font-semibold px-4 py-1.5 rounded-full mb-5">Dermatology Billing Specialists</span>
               <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">Dermatology Billing That Gets Mohs Right</h1>
-              <p className="text-xl text-cream mb-10">Mohs staging codes, destruction specificity, biopsy bundling rules, cosmetic vs. reconstructive documentation — our dermatology billing team handles the nuance that drives a 31% average revenue increase on Mohs alone.</p>
+              <p className="text-xl text-cream mb-10">Mohs staging codes, destruction specificity, biopsy bundling rules, cosmetic vs. reconstructive documentation — our dermatology billing team handles the nuance that decides whether Mohs and procedure claims are paid in full.</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link prefetch={false} href="/free-assessment/" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Derm Assessment</Link>
                 <Link prefetch={false} href="/contact/" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
