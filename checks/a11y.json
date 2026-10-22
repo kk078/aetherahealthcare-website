@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-22T10:02:22.860Z",
+  "generatedAt": "2026-10-22T14:48:08.736Z",
   "base": "https://aetherahealthcare.com",
   "total": 10,
-  "errors": 1232,
+  "errors": 1230,
   "pages": [
     {
       "path": "/",
@@ -83,14 +83,14 @@
     },
     {
       "path": "/pricing/",
-      "issues": 157,
+      "issues": 156,
       "failedToLoad": false,
       "rules": [
         {
           "code": "color-contrast",
           "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
           "runner": "axe",
-          "count": 99,
+          "count": 98,
           "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
         },
         {
@@ -118,14 +118,14 @@
     },
     {
       "path": "/tools/",
-      "issues": 130,
+      "issues": 129,
       "failedToLoad": false,
       "rules": [
         {
           "code": "color-contrast",
           "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
           "runner": "axe",
-          "count": 72,
+          "count": 71,
           "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
         },
         {
