@@ -466,7 +466,7 @@ export default function FreeAssessmentClient() {
                 {errorMsg && <p className="text-center text-red-600 text-sm mt-3">{errorMsg}</p>}
                 <p className="text-xs text-gray text-center mt-3">
                   Your report appears on-screen instantly — download or print it below. By submitting you agree to our{' '}
-                  <Link prefetch={false} href="/compliance/privacy-policy/" className="text-teal hover:underline">Privacy Policy</Link>. Contact details and aggregate totals are sent to our team only when you submit. Do not include patient identifiers.
+                  <Link prefetch={false} href="/compliance/privacy-policy/" className="text-teal underline">Privacy Policy</Link>. Contact details and aggregate totals are sent to our team only when you submit. Do not include patient identifiers.
                 </p>
               </div>
             </div>

@@ -23,9 +23,9 @@ export default function ToolConversionBridge({
             Next Step For Your Practice
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-bold font-jakarta leading-tight mb-3">
+          <h2 className="text-2xl sm:text-3xl font-bold font-jakarta leading-tight mb-3">
             {toolName ? `Turn these ${toolName} insights into a practice-specific review` : 'Stop revenue leaks before they hit your balance sheet'}
-          </h3>
+          </h2>
 
           <p className="text-cream/80 text-sm sm:text-base leading-relaxed mb-6">
             {contextText} Let our senior AAPC-certified billing team audit 50 of your active claims or past denials — completely free. Results in {OFFERS.pilot.duration} {OFFERS.pilot.start}.

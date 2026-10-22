@@ -406,7 +406,7 @@ export default function GoodFaithEstimateGenerator() {
             <div className="inline-block px-3 py-1 bg-navy text-white text-[11px] font-bold uppercase tracking-wider rounded mb-2 print:border print:border-navy">
               CMS Statutory Form
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-navy tracking-tight">GOOD FAITH ESTIMATE</h1>
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy tracking-tight">GOOD FAITH ESTIMATE</h2>
             <p className="text-xs text-slate-500 mt-1">
               For Healthcare Items &amp; Services — Established under 45 CFR § 149.610
             </p>

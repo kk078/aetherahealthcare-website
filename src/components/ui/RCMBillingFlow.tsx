@@ -176,7 +176,7 @@ export default function RCMBillingFlow({ compact = false }: { compact?: boolean 
   const showChips = p > 0.10 && p < 0.35;
 
   return (
-    <div className="relative w-full h-full select-none" aria-label="Animated medical-billing revenue cycle: coding, scrubbing, claim submission, denial, appeal, and payment.">
+    <div className="relative w-full h-full select-none" role="img" aria-label="Animated medical-billing revenue cycle: coding, scrubbing, claim submission, denial, appeal, and payment.">
       <svg viewBox="0 0 680 600" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
         <defs>
           <filter id="cardShadow" x="-30%" y="-30%" width="160%" height="160%">
