@@ -15,7 +15,7 @@ if git -C "$root" fetch -q origin seo-data 2>/dev/null; then
 else
   git -C "$root" worktree add -q --detach "$tmp"
   git -C "$tmp" checkout -q --orphan seo-data-new
-  git -C "$tmp" rm -rq . >/dev/null
+  git -C "$tmp" rm -rfq . >/dev/null
   printf '# seo-data\nMachine-written SEO exports from the local monitoring stack (see seo/README.md on the default branch).\n' > "$tmp/README.md"
 fi
 mkdir -p "$tmp/seonaut"
