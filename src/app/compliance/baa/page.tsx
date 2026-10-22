@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 const baaElements = [
   {
@@ -54,6 +55,7 @@ export const metadata = {
 export default function BusinessAssociateAgreement() {
   return (
     <div className="min-h-screen flex flex-col">
+      <BreadcrumbJsonLd trail={[{ name: 'Compliance', path: '/compliance/' }, { name: 'Business Associate Agreement', path: '/compliance/baa/' }]} />
       <Navbar />
 
       {/* Hero Section */}

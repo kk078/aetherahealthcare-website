@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/compliance') },
@@ -99,6 +100,7 @@ export default function Compliance() {
           }}
         />
       </>
+      <BreadcrumbJsonLd trail={[{ name: 'Compliance', path: '/compliance/' }]} />
       <Navbar />
 
       {/* Hero Section */}

@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/compliance/security') },
@@ -51,6 +52,7 @@ const sections = [
 export default function SecurityCompliance() {
   return (
     <div className="min-h-screen flex flex-col">
+      <BreadcrumbJsonLd trail={[{ name: 'Compliance', path: '/compliance/' }, { name: 'Security', path: '/compliance/security/' }]} />
       <Navbar />
 
       <RcmHeroBand

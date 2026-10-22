@@ -8,6 +8,7 @@ import Footer from '@/components/layout/Footer';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import ToolsDirectory from '@/components/ui/ToolsDirectory';
 import { ArrowRight } from 'lucide-react';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools') },
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
 export default function ToolsHub() {
   return (
     <div className="min-h-screen flex flex-col bg-[#fcfbf9]">
+      <BreadcrumbJsonLd trail={[{ name: 'Free Tools', path: '/tools/' }]} />
       <Navbar />
 
       <RcmHeroBand

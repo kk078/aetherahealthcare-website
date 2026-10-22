@@ -7,6 +7,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import PayerDirectory from '@/components/ui/PayerDirectory';
 import { getAllPayers, payerTypes, payersMeta } from '@/lib/payers';
 import { AlertTriangle, ShieldCheck, Sparkles } from 'lucide-react';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/payers/directory') },
@@ -23,6 +24,7 @@ export default function PayerDirectoryIndex() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <BreadcrumbJsonLd trail={[{ name: 'Payers', path: '/payers/' }, { name: 'Payer Directory', path: '/payers/directory/' }]} />
       <Navbar />
 
       <section className="pt-8 pb-10 md:pt-12 md:pb-14 bg-gradient-to-br from-navy to-teal">

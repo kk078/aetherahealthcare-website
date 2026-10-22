@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/compliance/hipaa') },
@@ -157,6 +158,7 @@ export default function HipaaCompliance() {
           }}
         />
       </>
+      <BreadcrumbJsonLd trail={[{ name: 'Compliance', path: '/compliance/' }, { name: 'HIPAA Compliance Program', path: '/compliance/hipaa/' }]} />
       <Navbar />
 
       {/* Hero Section */}

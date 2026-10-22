@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/payers') },
@@ -75,6 +76,7 @@ const clearinghouses = [
 export default function Payers() {
   return (
     <div className="min-h-screen flex flex-col">
+      <BreadcrumbJsonLd trail={[{ name: 'Payers', path: '/payers/' }]} />
       <Navbar />
 
       <RcmHeroBand

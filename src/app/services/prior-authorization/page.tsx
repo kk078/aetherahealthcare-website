@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 const includedItems = [
   'Prior authorization identification',
@@ -119,6 +120,7 @@ export default function PriorAuthorization() {
           }}
         />
       </>
+      <BreadcrumbJsonLd trail={[{ name: 'Services', path: '/services/' }, { name: 'Prior Authorization Services', path: '/services/prior-authorization/' }]} />
       <Navbar />
 
       {/* Hero Section */}

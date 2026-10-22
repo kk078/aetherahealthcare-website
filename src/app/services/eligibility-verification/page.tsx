@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 const includedItems = [
   'Real-time insurance eligibility verification',
@@ -119,6 +120,7 @@ export default function EligibilityVerification() {
           }}
         />
       </>
+      <BreadcrumbJsonLd trail={[{ name: 'Services', path: '/services/' }, { name: 'Eligibility Verification Services', path: '/services/eligibility-verification/' }]} />
       <Navbar />
 
       {/* Hero Section */}
