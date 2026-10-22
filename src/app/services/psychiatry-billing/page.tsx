@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { CheckCircle, AlertCircle, TrendingUp, Shield, DollarSign, FileText, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import ServiceJsonLd from '@/components/layout/ServiceJsonLd';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
@@ -142,6 +143,7 @@ export default function PsychiatryBilling() {
         </div>
       </section>
 
+      <ServiceJsonLd name="Psychiatry & Behavioral Health Billing Services" path="/services/psychiatry-billing" description={metadata.description} />
       <Footer />
     </div>
   );

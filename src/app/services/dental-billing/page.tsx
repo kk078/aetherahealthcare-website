@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { CheckCircle, TrendingUp, Shield, Clock, DollarSign, FileText, AlertCircle, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import ServiceJsonLd from '@/components/layout/ServiceJsonLd';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 
@@ -216,6 +217,7 @@ export default function DentalBilling() {
           </div>
         </div>
       </section>
+      <ServiceJsonLd name="Dental Billing Services" path="/services/dental-billing" description={metadata.description} />
       <Footer />
     </div>
   );
