@@ -102,7 +102,7 @@ export default function ClaimsBilling() {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
                 "url": "https://aetherahealthcare.com",
-                "logo": "https://aetherahealthcare.com/logo.png"
+                "logo": "https://aetherahealthcare.com/brand/logo-800x240.png"
               },
               "description": "Professional claims and billing services for healthcare providers. Clean claim submission, denial management, and payment posting to accelerate your revenue cycle.",
               "areaServed": "United States",

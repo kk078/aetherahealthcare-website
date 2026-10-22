@@ -102,7 +102,7 @@ export default function ReportingAnalytics() {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
                 "url": "https://aetherahealthcare.com",
-                "logo": "https://aetherahealthcare.com/logo.png"
+                "logo": "https://aetherahealthcare.com/brand/logo-800x240.png"
               },
               "description": "Actionable insights and real-time analytics that drive practice performance. Comprehensive reporting, benchmarking, and custom analytics for informed decision-making.",
               "areaServed": "United States",

@@ -102,7 +102,7 @@ export default function PriorAuthorization() {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
                 "url": "https://aetherahealthcare.com",
-                "logo": "https://aetherahealthcare.com/logo.png"
+                "logo": "https://aetherahealthcare.com/brand/logo-800x240.png"
               },
               "description": "Streamlined prior authorization management that eliminates treatment delays. Expert handling of complex requests and appeals for healthcare providers.",
               "areaServed": "United States",

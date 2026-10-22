@@ -102,7 +102,7 @@ export default function PaymentPosting() {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
                 "url": "https://aetherahealthcare.com",
-                "logo": "https://aetherahealthcare.com/logo.png"
+                "logo": "https://aetherahealthcare.com/brand/logo-800x240.png"
               },
               "description": "Professional payment posting services including ERA processing, EOB posting, and patient payment application. Optimize your cash flow with accurate payment processing.",
               "areaServed": "United States",

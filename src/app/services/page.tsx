@@ -135,7 +135,7 @@ export default function Services() {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
                 "url": "https://aetherahealthcare.com",
-                "logo": "https://aetherahealthcare.com/logo.png"
+                "logo": "https://aetherahealthcare.com/brand/logo-800x240.png"
               },
               "description": "Comprehensive revenue cycle management services including medical coding, claims processing, payment posting, denial management, and more for healthcare providers.",
               "areaServed": "United States",

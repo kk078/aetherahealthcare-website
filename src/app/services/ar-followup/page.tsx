@@ -102,7 +102,7 @@ export default function ARFollowUp() {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
                 "url": "https://aetherahealthcare.com",
-                "logo": "https://aetherahealthcare.com/logo.png"
+                "logo": "https://aetherahealthcare.com/brand/logo-800x240.png"
               },
               "description": "Dedicated accounts receivable management that accelerates collections and reduces aging. Expert follow-up, denial management, and patient collections for optimized cash flow.",
               "areaServed": "United States",
