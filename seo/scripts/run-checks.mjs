@@ -13,7 +13,12 @@ for (const step of steps.filter(name => !only || only.includes(name))) {
   if (skip.has(step)) { console.log(`\n== ${step}: skipped (no snapshot)`); continue; }
   const started = Date.now();
   console.log(`\n== ${step}`);
-  const result = spawnSync(process.execPath, [join(seoRoot, 'scripts', `${step}.mjs`)], { stdio: 'inherit' });
+  let result = spawnSync(process.execPath, [join(seoRoot, 'scripts', `${step}.mjs`)], { stdio: 'inherit' });
+  // linkinator is occasionally flaky (see link-check.mjs); one retry before reporting failure.
+  if (result.status !== 0 && step === 'link-check') {
+    console.log('== link-check failed; retrying once');
+    result = spawnSync(process.execPath, [join(seoRoot, 'scripts', `${step}.mjs`)], { stdio: 'inherit' });
+  }
   console.log(`== ${step}: ${result.status === 0 ? 'ok' : 'FAILED'} in ${Math.round((Date.now() - started) / 1000)}s`);
   if (result.status !== 0) {
     failed += 1;

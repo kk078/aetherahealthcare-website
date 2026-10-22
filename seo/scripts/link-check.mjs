@@ -23,11 +23,15 @@ checker.on('link', result => {
   results.push(result);
   if (results.length % 250 === 0) console.log(`  internal: ${results.length} links checked`);
 });
+// linkinator occasionally drops its last pending request and its promise never settles; Node then exits
+// silently ("unsettled top-level await"). Keep the loop alive and fail loudly instead, so run-checks retries.
+const watchdog = setTimeout(() => { console.error('link-check: internal pass did not settle within 20 min'); process.exit(3); }, 20 * 60_000);
 await checker.check({
   path: pages, recurse: false, userAgent, retry: false, retryErrors: true, retryErrorsCount: 2, timeout: 20_000,
   concurrency: Number(process.env.LINKCHECK_CONCURRENCY ?? 3),
   linksToSkip: async link => isExcluded(link) || /^(mailto|tel|sms|javascript):/.test(link) || !isInternal(link),
 });
+clearTimeout(watchdog);
 console.log(`  internal: done, ${results.length} links`);
 
 // ---- External: outbound links recorded by the snapshot.
