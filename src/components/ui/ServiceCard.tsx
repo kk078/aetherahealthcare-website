@@ -30,7 +30,7 @@ export default function ServiceCard({
         href={href}
         className="text-teal font-semibold flex items-center group-hover:text-mint transition-colors duration-200 text-sm mt-2"
       >
-        Learn more{' '}
+        Learn more<span className="sr-only"> about {title}</span>{' '}
         <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1.5 transition-transform duration-200" />
       </Link>
     </div>

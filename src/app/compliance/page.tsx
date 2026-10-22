@@ -196,7 +196,7 @@ export default function Compliance() {
                     href={standard.href}
                     className="text-teal font-medium hover:text-mint transition-colors flex items-center"
                   >
-                    Learn more <span className="ml-1">→</span>
+                    Learn more<span className="sr-only"> about {standard.title}</span> <span className="ml-1">→</span>
                   </Link>
                 </div>
               </FadeIn>

@@ -355,7 +355,7 @@ export default function ComplianceAuditing() {
                     href={service.href}
                     className="text-teal font-medium hover:text-mint transition-colors"
                   >
-                    Learn more →
+                    Learn more<span className="sr-only"> about {service.name}</span> →
                   </Link>
                 </div>
               </FadeIn>
