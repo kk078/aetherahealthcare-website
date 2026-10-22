@@ -102,7 +102,7 @@ export default function DenialManagement() {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
                 "url": "https://aetherahealthcare.com",
-                "logo": "https://aetherahealthcare.com/logo.png"
+                "logo": "https://aetherahealthcare.com/brand/logo-800x240.png"
               },
               "description": "Expert denial management and appeal services for healthcare providers. Reduce denial rates, maximize recovery, and protect your revenue with our proactive approach.",
               "areaServed": "United States",

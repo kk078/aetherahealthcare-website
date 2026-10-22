@@ -99,7 +99,7 @@ export default function MedicalCoding() {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
                 "url": "https://aetherahealthcare.com",
-                "logo": "https://aetherahealthcare.com/logo.png"
+                "logo": "https://aetherahealthcare.com/brand/logo-800x240.png"
               },
               "description": "Expert medical coding services including ICD-10, CPT, and HCPCS coding for healthcare providers. Maximize reimbursement with accurate, compliant coding from certified professionals.",
               "areaServed": "United States",

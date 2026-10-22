@@ -102,7 +102,7 @@ export default function PatientCollections() {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
                 "url": "https://aetherahealthcare.com",
-                "logo": "https://aetherahealthcare.com/logo.png"
+                "logo": "https://aetherahealthcare.com/brand/logo-800x240.png"
               },
               "description": "Professional patient collections that maximize revenue while preserving relationships. Expert handling of statement generation, payment plans, and collection agency coordination.",
               "areaServed": "United States",

@@ -143,7 +143,7 @@ export default function Home() {
           "@context": "https://schema.org", "@type": "Organization",
           "name": "Aethera Healthcare Solutions",
           "url": "https://aetherahealthcare.com",
-          "logo": "https://aetherahealthcare.com/logo.png",
+          "logo": "https://aetherahealthcare.com/brand/logo-800x240.png",
           "description": "Aethera Healthcare Solutions is your full-service medical billing partner handling coding, claims, payments, denials, and collections so you can focus on patients.",
           "contactPoint": { "@type": "ContactPoint", "contactType": "customer service", "url": "https://aetherahealthcare.com/contact" },
           "sameAs": ["https://www.linkedin.com/company/aethera-healthcare-solutions"],

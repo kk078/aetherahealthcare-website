@@ -21,7 +21,7 @@ const jsonLd = {
   publisher: {
     '@type': 'Organization',
     name: 'Aethera Healthcare Solutions',
-    logo: { '@type': 'ImageObject', url: 'https://aetherahealthcare.com/logo.png' },
+    logo: { '@type': 'ImageObject', url: 'https://aetherahealthcare.com/brand/logo-800x240.png' },
   },
 };
 

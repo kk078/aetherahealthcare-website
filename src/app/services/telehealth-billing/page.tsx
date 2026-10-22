@@ -102,7 +102,7 @@ export default function TelehealthBilling() {
                 "@type": "Organization",
                 "name": "Aethera Healthcare Solutions",
                 "url": "https://aetherahealthcare.com",
-                "logo": "https://aetherahealthcare.com/logo.png"
+                "logo": "https://aetherahealthcare.com/brand/logo-800x240.png"
               },
               "description": "Specialized telehealth billing that maximizes reimbursement for virtual care. Expert coding and compliance for telehealth visits, virtual check-ins, and remote patient monitoring.",
               "areaServed": "United States",

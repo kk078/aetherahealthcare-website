@@ -678,7 +678,7 @@ export default function SpecialtiesPage() {
       "@type": "Organization",
       "name": "Aethera Healthcare Solutions",
       "url": "https://aetherahealthcare.com",
-      "logo": "https://aetherahealthcare.com/logo.png"
+      "logo": "https://aetherahealthcare.com/brand/logo-800x240.png"
     }
   };
 
