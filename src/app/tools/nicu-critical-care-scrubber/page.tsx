@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'NICU & Pediatric Critical Care Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free NICU & Pediatric Critical Care Scrubber. Validate inpatient per-day neonatal critical care codes (CPT 99468–99476), intensive step-down weight tiers (99477–99480), and scrub out CPT bundled catheterizations (36510/36660) and intubations (31500).',
+    'Free NICU critical care scrubber: validate neonatal per-day codes (99468–99476), weight-based step-down (99477–99480) and bundled line placements.',
 
-  ...marketingMetadata("/tools/nicu-critical-care-scrubber", 'NICU & Pediatric Critical Care Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free NICU & Pediatric Critical Care Scrubber. Validate inpatient per-day neonatal critical care codes (CPT 99468–99476), intensive step-down weight tiers (99477–99480), and scrub out CPT bundled catheterizations (36510/36660) and intubations (31500).'),
+  ...marketingMetadata("/tools/nicu-critical-care-scrubber", 'NICU & Pediatric Critical Care Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free NICU critical care scrubber: validate neonatal per-day codes (99468–99476), weight-based step-down (99477–99480) and bundled line placements.'),
 };
 
 export default function NicuCriticalCareScrubberPage() {

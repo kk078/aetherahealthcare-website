@@ -11,9 +11,9 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/compliance/hipaa') },
   title: "HIPAA Compliance Program",
-  description: "Comprehensive HIPAA compliance program for healthcare providers. Learn about our administrative, physical, and technical safeguards for protecting patient health information.",
+  description: "Aethera\'s HIPAA compliance program: the administrative, physical and technical safeguards we use to protect patient health information.",
 
-  ...marketingMetadata("/compliance/hipaa", "HIPAA Compliance Program", "Comprehensive HIPAA compliance program for healthcare providers. Learn about our administrative, physical, and technical safeguards for protecting patient health information."),
+  ...marketingMetadata("/compliance/hipaa", "HIPAA Compliance Program", "Aethera's HIPAA compliance program: the administrative, physical and technical safeguards we use to protect patient health information."),
 };
 
 const administrativeSafeguards = [

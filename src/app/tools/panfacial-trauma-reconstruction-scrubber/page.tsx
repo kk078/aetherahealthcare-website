@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber. Audit complex midface Le Fort I/II/III repairs (21422–21435), ZMC fractures (21365), mandibular plating (21462), intermaxillary fixation bundling (21110-59), and orbital blowout reconstructive implants (21390).',
+    'Free panfacial trauma scrubber: audit Le Fort I–III (21422–21435), ZMC (21365) and mandible (21462) repairs, IMF bundling and orbital implants.',
 
-  ...marketingMetadata("/tools/panfacial-trauma-reconstruction-scrubber", 'Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber. Audit complex midface Le Fort I/II/III repairs (21422–21435), ZMC fractures (21365), mandibular plating (21462), intermaxillary fixation bundling (21110-59), and orbital blowout reconstructive implants (21390).'),
+  ...marketingMetadata("/tools/panfacial-trauma-reconstruction-scrubber", 'Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare', 'Free panfacial trauma scrubber: audit Le Fort I–III (21422–21435), ZMC (21365) and mandible (21462) repairs, IMF bundling and orbital implants.'),
 };
 
 export default function PanfacialTraumaScrubberPage() {

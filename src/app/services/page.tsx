@@ -24,9 +24,9 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services') },
   title: "RCM Services | Medical Billing, Coding, Denial Management",
-  description: "Discover Aethera Healthcare Solutions' comprehensive revenue cycle management services including medical coding, claims processing, payment posting, denial management, and more for healthcare providers.",
+  description: "Revenue cycle management services for healthcare providers: medical coding, claims, payment posting, denial management, A/R follow-up and more.",
 
-  ...marketingMetadata("/services", "RCM Services | Medical Billing, Coding, Denial Management", "Discover Aethera Healthcare Solutions' comprehensive revenue cycle management services including medical coding, claims processing, payment posting, denial management, and more for healthcare providers."),
+  ...marketingMetadata("/services", "RCM Services | Medical Billing, Coding, Denial Management", "Revenue cycle management services for healthcare providers: medical coding, claims, payment posting, denial management, A/R follow-up and more."),
 };
 
 const services = [

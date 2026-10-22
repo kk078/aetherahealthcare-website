@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Medicare Secondary Payer (MSP) Determination Engine | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Evaluate Medicare Secondary Payer (MSP) rules under Section 1862(b) of the Social Security Act. Determine primary vs secondary liability across Working Aged, Disability, ESRD 30-month coordination, and No-Fault/WC. Generate ANSI X12 837P Loop 2320 mapping.',
+    'Determine Medicare Secondary Payer liability under Section 1862(b): working aged, disability, ESRD coordination and no-fault/WC, with 837P mapping.',
 
-  ...marketingMetadata("/tools/msp-determination-engine", 'Medicare Secondary Payer (MSP) Determination Engine | Free RCM Tool | Aethera Healthcare Solutions', 'Evaluate Medicare Secondary Payer (MSP) rules under Section 1862(b) of the Social Security Act. Determine primary vs secondary liability across Working Aged, Disability, ESRD 30-month coordination, and No-Fault/WC. Generate ANSI X12 837P Loop 2320 mapping.'),
+  ...marketingMetadata("/tools/msp-determination-engine", 'Medicare Secondary Payer (MSP) Determination Engine | Free RCM Tool | Aethera Healthcare Solutions', 'Determine Medicare Secondary Payer liability under Section 1862(b): working aged, disability, ESRD coordination and no-fault/WC, with 837P mapping.'),
 };
 
 export default function MspDeterminationEnginePage() {

@@ -11,9 +11,9 @@ import SectionHeader from '@/components/ui/SectionHeader';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/workers-compensation-billing') },
   title: "Workers' Compensation Billing & RCM | State Fee Schedules, Liens, eBill",
-  description: "Workers' compensation revenue cycle management. We handle state fee schedules, jurisdiction rules, utilization review, narrative reports, IAIABC eBilling, lien filing, and bill-review appeals. Faster WC payment, fewer write-offs.",
+  description: "Workers' comp RCM: state fee schedules, jurisdiction rules, utilization review, IAIABC eBilling, liens and bill-review appeals for faster payment.",
 
-  ...marketingMetadata("/services/workers-compensation-billing", "Workers' Compensation Billing & RCM | State Fee Schedules, Liens, eBill", "Workers' compensation revenue cycle management. We handle state fee schedules, jurisdiction rules, utilization review, narrative reports, IAIABC eBilling, lien filing, and bill-review appeals. Faster WC payment, fewer write-offs."),
+  ...marketingMetadata("/services/workers-compensation-billing", "Workers' Compensation Billing & RCM | State Fee Schedules, Liens, eBill", "Workers' comp RCM: state fee schedules, jurisdiction rules, utilization review, IAIABC eBilling, liens and bill-review appeals for faster payment."),
 };
 
 const stats = [

@@ -12,10 +12,10 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 export const metadata: Metadata = {
   title: { absolute: 'Healthcare RCM & Medical Billing Glossary | Aethera Healthcare Solutions' },
   description:
-    'Authoritative clinical and financial dictionary for U.S. healthcare revenue cycle management. Master EDI 837/835 standards, NCCI PTP edits, CARC/RARC denial codes, and RVU benchmarks.',
+    'A dictionary of U.S. revenue cycle terms: EDI 837/835, NCCI PTP edits, CARC/RARC denial codes, RVUs and more, with real-world examples.',
   alternates: { canonical: 'https://aetherahealthcare.com/glossary/' },
 
-  ...marketingMetadata("/glossary", 'Healthcare RCM & Medical Billing Glossary | Aethera Healthcare Solutions', 'Authoritative clinical and financial dictionary for U.S. healthcare revenue cycle management. Master EDI 837/835 standards, NCCI PTP edits, CARC/RARC denial codes, and RVU benchmarks.'),
+  ...marketingMetadata("/glossary", 'Healthcare RCM & Medical Billing Glossary | Aethera Healthcare Solutions', 'A dictionary of U.S. revenue cycle terms: EDI 837/835, NCCI PTP edits, CARC/RARC denial codes, RVUs and more, with real-world examples.'),
 };
 
 export default function GlossaryPage() {

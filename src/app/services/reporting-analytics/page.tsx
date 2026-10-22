@@ -83,9 +83,9 @@ const relatedServices = [
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/reporting-analytics') },
   title: "Revenue Cycle Reporting & Analytics",
-  description: "Clear, real-time revenue cycle reporting and analytics covering collections, denials, A/R days, and KPI benchmarks so you always know your practice's financial health. Aethera reporting.",
+  description: "Revenue cycle reporting and analytics covering collections, denials, A/R days and KPI benchmarks, so you always know your practice's financial health.",
 
-  ...marketingMetadata("/services/reporting-analytics", "Revenue Cycle Reporting & Analytics", "Clear, real-time revenue cycle reporting and analytics covering collections, denials, A/R days, and KPI benchmarks so you always know your practice's financial health. Aethera reporting."),
+  ...marketingMetadata("/services/reporting-analytics", "Revenue Cycle Reporting & Analytics", "Revenue cycle reporting and analytics covering collections, denials, A/R days and KPI benchmarks, so you always know your practice's financial health."),
 };
 
 export default function ReportingAnalytics() {

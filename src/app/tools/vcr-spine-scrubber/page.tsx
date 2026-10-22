@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Vertebral Column Resection & 3-Column Osteotomy Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free VCR Spine Scrubber. Audit 3-column osteotomies (CPT 22206/22207), additional segment add-ons (+22208), spinopelvic fixation (+22848), and dual-attending Modifier -62 co-surgery.',
+    'Free VCR spine scrubber: audit 3-column osteotomies (CPT 22206/22207), additional segments (+22208), spinopelvic fixation (+22848) and -62.',
 
-  ...marketingMetadata("/tools/vcr-spine-scrubber", 'Vertebral Column Resection & 3-Column Osteotomy Scrubber | Free RCM Tool | Aethera Healthcare', 'Free VCR Spine Scrubber. Audit 3-column osteotomies (CPT 22206/22207), additional segment add-ons (+22208), spinopelvic fixation (+22848), and dual-attending Modifier -62 co-surgery.'),
+  ...marketingMetadata("/tools/vcr-spine-scrubber", 'Vertebral Column Resection & 3-Column Osteotomy Scrubber | Free RCM Tool | Aethera Healthcare', 'Free VCR spine scrubber: audit 3-column osteotomies (CPT 22206/22207), additional segments (+22208), spinopelvic fixation (+22848) and -62.'),
 };
 
 export default function VcrSpineScrubberPage() {

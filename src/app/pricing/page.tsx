@@ -14,9 +14,9 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/pricing') },
   title: "Pricing | Transparent Medical Billing Rates",
-  description: "Transparent pricing for medical billing services. Choose from percentage-based or per-claim pricing models with no hidden fees. Get a free consultation today.",
+  description: "Transparent medical billing pricing: percentage-based or per-claim models with no hidden fees. Get a free consultation.",
 
-  ...marketingMetadata("/pricing", "Pricing | Transparent Medical Billing Rates", "Transparent pricing for medical billing services. Choose from percentage-based or per-claim pricing models with no hidden fees. Get a free consultation today."),
+  ...marketingMetadata("/pricing", "Pricing | Transparent Medical Billing Rates", "Transparent medical billing pricing: percentage-based or per-claim models with no hidden fees. Get a free consultation."),
 };
 
 const pricingPlans = [

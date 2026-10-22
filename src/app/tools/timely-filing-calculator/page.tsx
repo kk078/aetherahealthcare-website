@@ -13,9 +13,9 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/timely-filing-calculator') },
   title: { absolute: 'Timely Filing Calculator — Claim Deadline & Days Remaining | Aethera Healthcare Solutions' },
   description:
-    'Free timely-filing calculator: enter a date of service and the payer filing limit to get the exact submission deadline, days remaining, and a risk flag for CARC 29.',
+    'Free timely-filing calculator: enter a date of service and payer limit to get the exact deadline, days remaining and a CARC 29 risk flag.',
 
-  ...marketingMetadata("/tools/timely-filing-calculator", 'Timely Filing Calculator — Claim Deadline & Days Remaining | Aethera Healthcare Solutions', 'Free timely-filing calculator: enter a date of service and the payer filing limit to get the exact submission deadline, days remaining, and a risk flag for CARC 29.'),
+  ...marketingMetadata("/tools/timely-filing-calculator", 'Timely Filing Calculator — Claim Deadline & Days Remaining | Aethera Healthcare Solutions', 'Free timely-filing calculator: enter a date of service and payer limit to get the exact deadline, days remaining and a CARC 29 risk flag.'),
 };
 
 export default function TimelyFilingPage() {

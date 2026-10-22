@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Payer Dispute & Electronic Appeals Directory | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Directory of 16+ major commercial, Medicare Advantage, and Medicaid payers with Level 1/2 appeal deadlines, electronic dispute portal URLs, clearinghouse IDs, and escalation fax/phone protocols.',
+    'Appeal deadlines, dispute portals, clearinghouse IDs and escalation contacts for 16+ major commercial, Medicare Advantage and Medicaid payers.',
 
-  ...marketingMetadata("/tools/payer-dispute-directory", 'Payer Dispute & Electronic Appeals Directory | Free RCM Tool | Aethera Healthcare Solutions', 'Directory of 16+ major commercial, Medicare Advantage, and Medicaid payers with Level 1/2 appeal deadlines, electronic dispute portal URLs, clearinghouse IDs, and escalation fax/phone protocols.'),
+  ...marketingMetadata("/tools/payer-dispute-directory", 'Payer Dispute & Electronic Appeals Directory | Free RCM Tool | Aethera Healthcare Solutions', 'Appeal deadlines, dispute portals, clearinghouse IDs and escalation contacts for 16+ major commercial, Medicare Advantage and Medicaid payers.'),
 };
 
 export default function PayerDisputeDirectoryPage() {

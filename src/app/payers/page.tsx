@@ -12,9 +12,9 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/payers') },
   title: { absolute: 'Insurance Payer Network | 10,600+ Payers & Clearinghouse Routes | Aethera Healthcare Solutions' },
-  description: 'Aethera Healthcare Solutions connects with 10,600+ insurance payers and clearinghouse EDI gateways including Medicare, Medicaid, commercial insurers, and workers comp. Real-time eligibility verification included.',
+  description: 'Aethera works with 10,600+ insurance payers and clearinghouse EDI gateways, including Medicare, Medicaid, commercial plans and workers\' comp.',
 
-  ...marketingMetadata("/payers", 'Insurance Payer Network | 10,600+ Payers & Clearinghouse Routes | Aethera Healthcare Solutions', 'Aethera Healthcare Solutions connects with 10,600+ insurance payers and clearinghouse EDI gateways including Medicare, Medicaid, commercial insurers, and workers comp. Real-time eligibility verification included.'),
+  ...marketingMetadata("/payers", 'Insurance Payer Network | 10,600+ Payers & Clearinghouse Routes | Aethera Healthcare Solutions', 'Aethera works with 10,600+ insurance payers and clearinghouse EDI gateways, including Medicare, Medicaid, commercial plans and workers\' comp.'),
 };
 
 const payerGroups = [

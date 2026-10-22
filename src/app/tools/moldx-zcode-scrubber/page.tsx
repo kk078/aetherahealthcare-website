@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Molecular Diagnostics MolDX® Z-Code & LCD Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free MolDX molecular diagnostics scrubber. Validate DEX Z-Code registration, scrub genetic testing against Palmetto/Noridian/CGS/WPS LCD criteria, and generate ANSI X12 837P Loop 2400 REF*17 segments.',
+    'Free MolDX scrubber: validate DEX Z-Code registration, check genetic tests against MolDX LCD criteria and build 837P REF*17 segments.',
 
-  ...marketingMetadata("/tools/moldx-zcode-scrubber", 'Molecular Diagnostics MolDX® Z-Code & LCD Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free MolDX molecular diagnostics scrubber. Validate DEX Z-Code registration, scrub genetic testing against Palmetto/Noridian/CGS/WPS LCD criteria, and generate ANSI X12 837P Loop 2400 REF*17 segments.'),
+  ...marketingMetadata("/tools/moldx-zcode-scrubber", 'Molecular Diagnostics MolDX® Z-Code & LCD Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free MolDX scrubber: validate DEX Z-Code registration, check genetic tests against MolDX LCD criteria and build 837P REF*17 segments.'),
 };
 
 export default function MolDxZCodeScrubberPage() {

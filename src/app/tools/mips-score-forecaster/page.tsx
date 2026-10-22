@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'CMS MIPS Performance Score & Penalty Forecaster | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Forecast your CMS Merit-based Incentive Payment System (MIPS) score out of 100 points. Calculate positive payment adjustments or negative Part B penalty exposure (up to -9.0%) across Quality, Promoting Interoperability, Improvement Activities, and Cost.',
+    'Forecast your MIPS score out of 100 and the resulting Part B payment adjustment (up to -9%) across Quality, Interoperability, Improvement and Cost.',
 
-  ...marketingMetadata("/tools/mips-score-forecaster", 'CMS MIPS Performance Score & Penalty Forecaster | Free RCM Tool | Aethera Healthcare Solutions', 'Forecast your CMS Merit-based Incentive Payment System (MIPS) score out of 100 points. Calculate positive payment adjustments or negative Part B penalty exposure (up to -9.0%) across Quality, Promoting Interoperability, Improvement Activities, and Cost.'),
+  ...marketingMetadata("/tools/mips-score-forecaster", 'CMS MIPS Performance Score & Penalty Forecaster | Free RCM Tool | Aethera Healthcare Solutions', 'Forecast your MIPS score out of 100 and the resulting Part B payment adjustment (up to -9%) across Quality, Interoperability, Improvement and Cost.'),
 };
 
 export default function MipsScoreForecasterPage() {

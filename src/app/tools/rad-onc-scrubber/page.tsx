@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Radiation Oncology IMRT Bundling & Fraction Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free Radiation Oncology Scrubber. Validate IMRT treatment planning (CPT 77301) bundling edits against simulation and dosimetry, compute CPT 77427 weekly treatment management fraction math, and generate ANSI X12 837P claim lines.',
+    'Free radiation oncology scrubber: check IMRT planning (CPT 77301) edits against simulation and dosimetry, and weekly management (77427) fractions.',
 
-  ...marketingMetadata("/tools/rad-onc-scrubber", 'Radiation Oncology IMRT Bundling & Fraction Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Radiation Oncology Scrubber. Validate IMRT treatment planning (CPT 77301) bundling edits against simulation and dosimetry, compute CPT 77427 weekly treatment management fraction math, and generate ANSI X12 837P claim lines.'),
+  ...marketingMetadata("/tools/rad-onc-scrubber", 'Radiation Oncology IMRT Bundling & Fraction Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free radiation oncology scrubber: check IMRT planning (CPT 77301) edits against simulation and dosimetry, and weekly management (77427) fractions.'),
 };
 
 export default function RadOncScrubberPage() {

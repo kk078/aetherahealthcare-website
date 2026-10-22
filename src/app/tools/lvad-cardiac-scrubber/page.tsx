@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Durable LVAD Implantation & Cardiac Reoperation Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Cardiac LVAD Scrubber. Audit durable LVAD implantation (CPT 33979), redo sternotomy adhesiolysis add-on (+33530), concomitant tricuspid/aortic repairs, and post-op RV failure critical care.',
+    'Free LVAD scrubber: audit durable LVAD implants (CPT 33979), redo sternotomy (+33530), concomitant valve repairs and post-op critical care.',
 
-  ...marketingMetadata("/tools/lvad-cardiac-scrubber", 'Durable LVAD Implantation & Cardiac Reoperation Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Cardiac LVAD Scrubber. Audit durable LVAD implantation (CPT 33979), redo sternotomy adhesiolysis add-on (+33530), concomitant tricuspid/aortic repairs, and post-op RV failure critical care.'),
+  ...marketingMetadata("/tools/lvad-cardiac-scrubber", 'Durable LVAD Implantation & Cardiac Reoperation Scrubber | Free RCM Tool | Aethera Healthcare', 'Free LVAD scrubber: audit durable LVAD implants (CPT 33979), redo sternotomy (+33530), concomitant valve repairs and post-op critical care.'),
 };
 
 export default function LvadCardiacScrubberPage() {

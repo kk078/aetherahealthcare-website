@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Colorectal Surgery & Pelvic Exenteration Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free Colorectal Surgery & Pelvic Exenteration Scrubber. Audit total mesorectal excision (45119/45110), pelvic exenteration (45126), defend protective loop ileostomy unbundling (44320-XE), and validate Modifier -62 co-surgeon billing.',
+    'Free colorectal and pelvic exenteration scrubber: audit TME (45110/45119), exenteration (45126), diverting ileostomy (44320) and co-surgeon -62.',
 
-  ...marketingMetadata("/tools/colorectal-exenteration-scrubber", 'Colorectal Surgery & Pelvic Exenteration Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Colorectal Surgery & Pelvic Exenteration Scrubber. Audit total mesorectal excision (45119/45110), pelvic exenteration (45126), defend protective loop ileostomy unbundling (44320-XE), and validate Modifier -62 co-surgeon billing.'),
+  ...marketingMetadata("/tools/colorectal-exenteration-scrubber", 'Colorectal Surgery & Pelvic Exenteration Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free colorectal and pelvic exenteration scrubber: audit TME (45110/45119), exenteration (45126), diverting ileostomy (44320) and co-surgeon -62.'),
 };
 
 export default function ColorectalExenterationScrubberPage() {

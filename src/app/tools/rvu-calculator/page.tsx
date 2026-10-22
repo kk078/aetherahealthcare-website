@@ -13,9 +13,9 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/rvu-calculator') },
   title: { absolute: 'RVU Payment Calculator — Medicare Fee Schedule Estimate | Aethera Healthcare Solutions' },
   description:
-    'Free RVU calculator: enter work, practice-expense, and malpractice RVUs with GPCI and the Medicare conversion factor to estimate the allowed amount for a CPT/HCPCS code.',
+    'Free RVU calculator: combine work, practice-expense and malpractice RVUs with GPCIs and the Medicare conversion factor to get a CPT code\'s allowed amount.',
 
-  ...marketingMetadata("/tools/rvu-calculator", 'RVU Payment Calculator — Medicare Fee Schedule Estimate | Aethera Healthcare Solutions', 'Free RVU calculator: enter work, practice-expense, and malpractice RVUs with GPCI and the Medicare conversion factor to estimate the allowed amount for a CPT/HCPCS code.'),
+  ...marketingMetadata("/tools/rvu-calculator", 'RVU Payment Calculator — Medicare Fee Schedule Estimate | Aethera Healthcare Solutions', 'Free RVU calculator: combine work, practice-expense and malpractice RVUs with GPCIs and the Medicare conversion factor to get a CPT code\'s allowed amount.'),
 };
 
 export default function RvuCalculatorPage() {

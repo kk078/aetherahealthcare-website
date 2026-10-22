@@ -173,7 +173,7 @@ const ARTICLES: BlogPost[] = [
     "date": "2026-08-28",
     "readTime": "2 min read",
     "image": "/images/blog/patient-access-collections.svg",
-    "excerpt": "Learn practical ways to manage high‑deductible health plan patient balances, improve transparency, and keep collections strong without compromising the patient experience.",
+    "excerpt": "Practical ways to manage high-deductible plan balances, improve price transparency and keep collections strong without hurting the patient experience.",
     "sections": [
       {
         "p": [
@@ -251,7 +251,7 @@ const ARTICLES: BlogPost[] = [
     "date": "2026-08-25",
     "readTime": "2 min read",
     "image": "/images/blog/patient-access-collections.svg",
-    "excerpt": "Learn practical steps to reduce revenue loss from patient no‑shows and late cancellations, from scheduling policies to automated reminders and data‑driven monitoring.",
+    "excerpt": "Cut revenue lost to no-shows and late cancellations with clear scheduling policies, automated reminders and data-driven monitoring.",
     "sections": [
       {
         "p": [
@@ -396,7 +396,7 @@ const ARTICLES: BlogPost[] = [
     "date": "2026-08-11",
     "readTime": "2 min read",
     "image": "/images/blog/medical-coding.svg",
-    "excerpt": "Learn durable, step‑by‑step best practices for conducting medical coding audits that protect revenue, reduce compliance risk, and improve overall coding accuracy.",
+    "excerpt": "Step-by-step best practices for medical coding audits that protect revenue, reduce compliance risk and improve coding accuracy.",
     "sections": [
       {
         "p": [
@@ -467,7 +467,7 @@ const ARTICLES: BlogPost[] = [
     "date": "2026-08-07",
     "readTime": "2 min read",
     "image": "/images/blog/revenue-cycle.svg",
-    "excerpt": "Practical guidance for practice owners and billing teams to cut A/R days through data, workflow tweaks, and technology, without sacrificing patient satisfaction.",
+    "excerpt": "How practice owners and billing teams cut A/R days with data, workflow changes and technology, without sacrificing patient satisfaction.",
     "sections": [
       {
         "p": [
@@ -545,7 +545,7 @@ const ARTICLES: BlogPost[] = [
     "date": "2026-08-04",
     "readTime": "2 min read",
     "image": "/images/blog/regulatory-policy.svg",
-    "excerpt": "A step‑by‑step guide to help practice owners, administrators, and billers meet No Surprises Act requirements while protecting revenue and patient satisfaction.",
+    "excerpt": "A step-by-step checklist for practice owners and billers to meet No Surprises Act requirements while protecting revenue and patient satisfaction.",
     "sections": [
       {
         "p": [
@@ -1206,7 +1206,7 @@ const ARTICLES: BlogPost[] = [
     "slug": "pediatric-medical-billing-guide",
     "title": "Pediatric Billing: Vaccines, Well-Child Visits & Denials",
     "category": "Specialty Billing",
-    "excerpt": "Pediatric billing has its own rules — VFC vaccines, well-child schedules, and family coverage quirks. Here’s how to bill pediatrics cleanly and prevent denials.",
+    "excerpt": "Pediatric billing has its own rules: VFC vaccines, well-child schedules and family coverage quirks. How to bill pediatrics cleanly.",
     "sections": [
       {
         "p": [
@@ -1253,7 +1253,7 @@ const ARTICLES: BlogPost[] = [
     "slug": "internal-medicine-billing-guide",
     "title": "Internal Medicine Billing: Chronic Care, E/M & Denials",
     "category": "Specialty Billing",
-    "excerpt": "Internal medicine billing is E/M- and chronic-care-heavy, with revenue often left uncaptured. Here’s how to bill internal medicine cleanly and recover missed services.",
+    "excerpt": "Internal medicine billing is E/M- and chronic-care-heavy, and revenue often goes uncaptured. How to bill it cleanly and recover missed services.",
     "sections": [
       {
         "p": [
@@ -1300,7 +1300,7 @@ const ARTICLES: BlogPost[] = [
     "slug": "medical-billing-compliance-guide",
     "title": "Medical Billing Compliance in 2026: The Complete Guide",
     "category": "Compliance & Privacy",
-    "excerpt": "A practical guide to medical billing compliance — HIPAA, the No Surprises Act, price transparency, and coding integrity — and how to keep your practice audit-ready.",
+    "excerpt": "Medical billing compliance in practice: HIPAA, the No Surprises Act, price transparency and coding integrity, and how to stay audit-ready.",
     "sections": [
       {
         "p": [
@@ -1406,7 +1406,7 @@ const ARTICLES: BlogPost[] = [
     "slug": "dermatology-medical-billing-guide",
     "title": "Dermatology Billing: Procedures, Modifiers & Denials",
     "category": "Specialty Billing",
-    "excerpt": "Dermatology billing mixes high procedure volume with tricky modifier and medical-necessity rules. Here’s what drives dermatology denials and how to prevent them.",
+    "excerpt": "Dermatology billing mixes high procedure volume with tricky modifier and medical-necessity rules. What drives its denials and how to prevent them.",
     "sections": [
       {
         "p": [
@@ -1453,7 +1453,7 @@ const ARTICLES: BlogPost[] = [
     "slug": "behavioral-health-billing-guide",
     "title": "Behavioral Health Billing: The Rules That Trip Up Practices",
     "category": "Specialty Billing",
-    "excerpt": "Behavioral health billing has rules other specialties never see — time-based codes, telehealth nuances, and payer limits that quietly cause denials. Here’s how to bill it cleanly.",
+    "excerpt": "Behavioral health billing has rules other specialties never see: time-based codes, telehealth nuances and payer limits. How to bill it cleanly.",
     "sections": [
       {
         "p": [
@@ -1571,7 +1571,7 @@ const ARTICLES: BlogPost[] = [
     "slug": "gastroenterology-medical-billing-guide",
     "title": "Gastroenterology Billing: Screening vs Diagnostic Coding",
     "category": "Specialty Billing",
-    "excerpt": "The screening-vs-diagnostic distinction is the single biggest source of gastroenterology billing errors. Here’s how to code GI procedures cleanly and prevent denials.",
+    "excerpt": "Screening vs. diagnostic is the biggest source of GI billing errors. How to code gastroenterology procedures cleanly and prevent denials.",
     "sections": [
       {
         "p": [
@@ -1695,7 +1695,7 @@ const ARTICLES: BlogPost[] = [
     "slug": "questions-to-ask-medical-billing-company",
     "title": "Questions to Ask Before Hiring a Medical Billing Company",
     "category": "Practice Management",
-    "excerpt": "The questions that separate a great medical billing company from an expensive mistake — on transparency, performance, pricing, and what happens if you leave.",
+    "excerpt": "Questions that separate a great medical billing company from an expensive mistake: transparency, performance, pricing and exit terms.",
     "sections": [
       {
         "p": [
@@ -1819,7 +1819,7 @@ const ARTICLES: BlogPost[] = [
     "slug": "cardiology-medical-billing-guide",
     "title": "Cardiology Medical Billing: Codes, Denials & Best Practices",
     "category": "Specialty Billing",
-    "excerpt": "Cardiology billing is uniquely complex — from bundled diagnostic studies to device and procedure coding. Here’s what drives cardiology denials and how to prevent them.",
+    "excerpt": "Cardiology billing spans bundled diagnostic studies, device and procedure coding. What drives cardiology denials and how to prevent them.",
     "sections": [
       {
         "p": [
@@ -1878,7 +1878,7 @@ const ARTICLES: BlogPost[] = [
     "slug": "cost-to-outsource-medical-billing",
     "title": "How Much Does It Cost to Outsource Medical Billing?",
     "category": "Practice Management",
-    "excerpt": "A clear breakdown of medical billing outsourcing costs — pricing models, what’s included, and how to compare a billing partner against the true cost of billing in-house.",
+    "excerpt": "What outsourced medical billing costs: pricing models, what\'s included, and how to compare a partner against the true cost of billing in-house.",
     "sections": [
       {
         "p": [
@@ -1995,7 +1995,7 @@ const ARTICLES: BlogPost[] = [
     "slug": "medical-claim-denial-management-guide",
     "title": "Medical Claim Denial Management: The Complete Guide",
     "category": "Denials & Appeals",
-    "excerpt": "A complete guide to medical claim denial management — why claims get denied, how to prevent denials, and how to build an appeals process that recovers revenue you’ve already earned.",
+    "excerpt": "Why claims get denied, how to prevent denials, and how to build an appeals process that recovers revenue you\'ve already earned.",
     "sections": [
       {
         "p": [
@@ -2422,7 +2422,7 @@ const ARTICLES: BlogPost[] = [
     "date": "2026-06-12",
     "readTime": "2 min read",
     "image": "/images/blog/practice-management.svg",
-    "excerpt": "Learn how to build a sustainable training program that keeps your front‑office, billing, and clinical teams aligned with evolving revenue‑cycle best practices, reducing errors and boosting cash flow.",
+    "excerpt": "Build a training program that keeps front-office, billing and clinical teams current on revenue-cycle practice, cutting errors and speeding cash.",
     "sections": [
       {
         "p": [
@@ -2670,7 +2670,7 @@ const ARTICLES: BlogPost[] = [
     "date": "2026-05-12",
     "readTime": "2 min read",
     "image": "/images/blog/denials-appeals.svg",
-    "excerpt": "Roughly one in ten U.S. claims is denied on first submission — and a large share are never reworked. Most denials are preventable. Here are five front-loaded plays that protect revenue before a claim ever leaves your practice.",
+    "excerpt": "About one in ten U.S. claims is denied on first submission, and most denials are preventable. Five front-loaded plays that protect revenue.",
     "sections": [
       {
         "p": [
@@ -2734,7 +2734,7 @@ const ARTICLES: BlogPost[] = [
     "date": "2026-05-10",
     "readTime": "1 min read",
     "image": "/images/blog/revenue-cycle.svg",
-    "excerpt": "From scheduling to zero balance, the revenue cycle is the engine of practice finance. This guide breaks down every stage — and where U.S. practices quietly leak money.",
+    "excerpt": "From scheduling to zero balance: every stage of the revenue cycle, and where U.S. practices quietly leak money.",
     "sections": [
       {
         "p": [
@@ -3279,7 +3279,7 @@ const ARTICLES: BlogPost[] = [
     "date": "2026-03-19",
     "readTime": "1 min read",
     "image": "/images/blog/regulatory-policy.svg",
-    "excerpt": "Balance billing for many out-of-network situations is off the table. What the No Surprises Act requires — Good Faith Estimates, the IDR process, and notice-and-consent.",
+    "excerpt": "What the No Surprises Act requires of practices: Good Faith Estimates, the IDR process, notice-and-consent, and limits on balance billing.",
     "sections": [
       {
         "p": [
@@ -3322,7 +3322,7 @@ const ARTICLES: BlogPost[] = [
     "date": "2026-03-15",
     "readTime": "1 min read",
     "image": "/images/blog/regulatory-policy.svg",
-    "excerpt": "Transparency rules are now enforced with real penalties. What hospitals and practices must publish — and how to turn estimates into a patient-experience win.",
+    "excerpt": "Price transparency rules now carry real penalties. What hospitals and practices must publish, and how to turn estimates into a patient-experience win.",
     "sections": [
       {
         "p": [

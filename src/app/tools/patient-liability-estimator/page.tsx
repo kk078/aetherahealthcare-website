@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools/patient-liability-estimator') },
   title: { absolute: 'Patient Out-of-Pocket Liability & Deductible Estimator | Aethera Healthcare' },
   description:
-    'Free medical billing calculator to estimate patient out-of-pocket responsibility at point of service. Calculates deductible, coinsurance, copays, and out-of-pocket maximum caps.',
+    'Free patient cost estimator: calculate out-of-pocket responsibility at the point of service, including deductible, coinsurance, copay and OOP max.',
 
-  ...marketingMetadata("/tools/patient-liability-estimator", 'Patient Out-of-Pocket Liability & Deductible Estimator | Aethera Healthcare', 'Free medical billing calculator to estimate patient out-of-pocket responsibility at point of service. Calculates deductible, coinsurance, copays, and out-of-pocket maximum caps.'),
+  ...marketingMetadata("/tools/patient-liability-estimator", 'Patient Out-of-Pocket Liability & Deductible Estimator | Aethera Healthcare', 'Free patient cost estimator: calculate out-of-pocket responsibility at the point of service, including deductible, coinsurance, copay and OOP max.'),
 };
 
 export default function PatientLiabilityPage() {

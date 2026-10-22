@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Endoscopic Skull Base Pituitary & Odontoid Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Endoscopic Skull Base Pituitary & Odontoid Scrubber. Audit transnasal odontoidectomy (61575), transsphenoidal hypophysectomy (61548), vascularized Hadad nasoseptal flaps (+15730), and ENT/Neurosurgery co-surgeon Modifier -62.',
+    'Free endoscopic skull base scrubber: audit odontoidectomy (61575), transsphenoidal hypophysectomy (61548), nasoseptal flaps (+15730) and -62.',
 
-  ...marketingMetadata("/tools/endoscopic-pituitary-odontoid-scrubber", 'Endoscopic Skull Base Pituitary & Odontoid Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Endoscopic Skull Base Pituitary & Odontoid Scrubber. Audit transnasal odontoidectomy (61575), transsphenoidal hypophysectomy (61548), vascularized Hadad nasoseptal flaps (+15730), and ENT/Neurosurgery co-surgeon Modifier -62.'),
+  ...marketingMetadata("/tools/endoscopic-pituitary-odontoid-scrubber", 'Endoscopic Skull Base Pituitary & Odontoid Scrubber | Free RCM Tool | Aethera Healthcare', 'Free endoscopic skull base scrubber: audit odontoidectomy (61575), transsphenoidal hypophysectomy (61548), nasoseptal flaps (+15730) and -62.'),
 };
 
 export default function EndoscopicPituitaryOdontoidScrubberPage() {

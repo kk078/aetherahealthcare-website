@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber. Audit STA-MCA microvascular bypass (61711), unbundle orbitozygomatic approaches (61592), defend autologous graft harvest (+35500/35600), and capture operating microscope (+69990) and co-surgeon Modifier -62.',
+    'Free EC-IC bypass and aneurysm scrubber: audit STA-MCA bypass (61711), orbitozygomatic approaches (61592), graft harvest, microscope and -62.',
 
-  ...marketingMetadata("/tools/skull-base-bypass-aneurysm-scrubber", 'Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber. Audit STA-MCA microvascular bypass (61711), unbundle orbitozygomatic approaches (61592), defend autologous graft harvest (+35500/35600), and capture operating microscope (+69990) and co-surgeon Modifier -62.'),
+  ...marketingMetadata("/tools/skull-base-bypass-aneurysm-scrubber", 'Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber | Free RCM Tool | Aethera Healthcare', 'Free EC-IC bypass and aneurysm scrubber: audit STA-MCA bypass (61711), orbitozygomatic approaches (61592), graft harvest, microscope and -62.'),
 };
 
 export default function SkullBaseBypassAneurysmScrubberPage() {

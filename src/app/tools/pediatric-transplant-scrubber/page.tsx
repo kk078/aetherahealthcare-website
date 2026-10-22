@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Pediatric Intestinal Rehabilitation & Transplant Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Pediatric Transplant Scrubber. Audit STEP enteroplasty (CPT 44130), isolated small bowel and composite liver-intestine transplants (44135/47135), bench vascular reconstructions (+44720), and organ acquisition cost carve-outs.',
+    'Free pediatric transplant scrubber: audit STEP (44130), bowel and liver-intestine transplants (44135/47135), bench reconstruction and acquisition costs.',
 
-  ...marketingMetadata("/tools/pediatric-transplant-scrubber", 'Pediatric Intestinal Rehabilitation & Transplant Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Transplant Scrubber. Audit STEP enteroplasty (CPT 44130), isolated small bowel and composite liver-intestine transplants (44135/47135), bench vascular reconstructions (+44720), and organ acquisition cost carve-outs.'),
+  ...marketingMetadata("/tools/pediatric-transplant-scrubber", 'Pediatric Intestinal Rehabilitation & Transplant Scrubber | Free RCM Tool | Aethera Healthcare', 'Free pediatric transplant scrubber: audit STEP (44130), bowel and liver-intestine transplants (44135/47135), bench reconstruction and acquisition costs.'),
 };
 
 export default function PediatricTransplantScrubberPage() {

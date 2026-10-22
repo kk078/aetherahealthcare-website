@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Clinical Trial Billing & Coverage Analysis Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Separate Medicare routine care from sponsor-invoiced investigational items under CMS NCD 310.1. Verify 8-digit NCT numbers, Modifier Q1/Q0 rules, IDE Category A/B compliance, and secondary diagnosis ICD-10 Z00.6.',
+    'Separate routine care from sponsor-paid items under NCD 310.1: NCT numbers, Q0/Q1 modifiers, IDE Category A/B and the Z00.6 secondary diagnosis.',
 
-  ...marketingMetadata("/tools/clinical-trial-billing", 'Clinical Trial Billing & Coverage Analysis Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Separate Medicare routine care from sponsor-invoiced investigational items under CMS NCD 310.1. Verify 8-digit NCT numbers, Modifier Q1/Q0 rules, IDE Category A/B compliance, and secondary diagnosis ICD-10 Z00.6.'),
+  ...marketingMetadata("/tools/clinical-trial-billing", 'Clinical Trial Billing & Coverage Analysis Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Separate routine care from sponsor-paid items under NCD 310.1: NCT numbers, Q0/Q1 modifiers, IDE Category A/B and the Z00.6 secondary diagnosis.'),
 };
 
 export default function ClinicalTrialBillingPage() {

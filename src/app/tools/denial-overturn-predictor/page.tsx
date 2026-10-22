@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Denial Appeal Readiness & Review Checklist | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Predict medical claim denial overturn probability across CARC codes (CO-50, CO-197, CO-97, CO-16, CO-29, CO-22). Compute statutory appeal deadline countdowns, clinical evidence checklists, and legal citations.',
+    'Estimate appeal overturn odds for common CARC denials (CO-50, CO-197, CO-97, CO-16, CO-29, CO-22) with deadline countdowns and evidence checklists.',
 
-  ...marketingMetadata("/tools/denial-overturn-predictor", 'Denial Appeal Readiness & Review Checklist | Free RCM Tool | Aethera Healthcare Solutions', 'Predict medical claim denial overturn probability across CARC codes (CO-50, CO-197, CO-97, CO-16, CO-29, CO-22). Compute statutory appeal deadline countdowns, clinical evidence checklists, and legal citations.'),
+  ...marketingMetadata("/tools/denial-overturn-predictor", 'Denial Appeal Readiness & Review Checklist | Free RCM Tool | Aethera Healthcare Solutions', 'Estimate appeal overturn odds for common CARC denials (CO-50, CO-197, CO-97, CO-16, CO-29, CO-22) with deadline countdowns and evidence checklists.'),
 };
 
 export default function DenialOverturnPredictorPage() {

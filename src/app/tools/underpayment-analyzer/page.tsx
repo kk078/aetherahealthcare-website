@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Payer Contract Underpayment & Variance Analyzer | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Calculate silent PPO underpayment leakage, compare contracted allowable vs actual paid amounts, compute statutory prompt-pay interest penalties, and generate formal dispute letters.',
+    'Find PPO underpayments: compare contracted vs. paid amounts, calculate prompt-pay interest, and generate formal dispute letters.',
 
-  ...marketingMetadata("/tools/underpayment-analyzer", 'Payer Contract Underpayment & Variance Analyzer | Free RCM Tool | Aethera Healthcare Solutions', 'Calculate silent PPO underpayment leakage, compare contracted allowable vs actual paid amounts, compute statutory prompt-pay interest penalties, and generate formal dispute letters.'),
+  ...marketingMetadata("/tools/underpayment-analyzer", 'Payer Contract Underpayment & Variance Analyzer | Free RCM Tool | Aethera Healthcare Solutions', 'Find PPO underpayments: compare contracted vs. paid amounts, calculate prompt-pay interest, and generate formal dispute letters.'),
 };
 
 export default function UnderpaymentAnalyzerPage() {

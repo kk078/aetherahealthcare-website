@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Pediatric Craniofacial & Cleft Palate Staging Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free Pediatric Craniofacial Scrubber. Audit cleft palatoplasty (42200-42210), defend alveolar bone grafting against illegal unbundling, safeguard Modifier 58 staged sequencing, and overturn cosmetic exclusion denials.',
+    'Free pediatric craniofacial scrubber: audit cleft palatoplasty (42200–42210), alveolar bone grafts, staged modifier 58 and cosmetic exclusion denials.',
 
-  ...marketingMetadata("/tools/pediatric-craniofacial-scrubber", 'Pediatric Craniofacial & Cleft Palate Staging Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Pediatric Craniofacial Scrubber. Audit cleft palatoplasty (42200-42210), defend alveolar bone grafting against illegal unbundling, safeguard Modifier 58 staged sequencing, and overturn cosmetic exclusion denials.'),
+  ...marketingMetadata("/tools/pediatric-craniofacial-scrubber", 'Pediatric Craniofacial & Cleft Palate Staging Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free pediatric craniofacial scrubber: audit cleft palatoplasty (42200–42210), alveolar bone grafts, staged modifier 58 and cosmetic exclusion denials.'),
 };
 
 export default function PediatricCraniofacialScrubberPage() {

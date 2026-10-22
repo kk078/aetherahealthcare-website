@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Anti-VEGF Intravitreal Injection & Bilateral Eye Surgery Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free Anti-VEGF Intravitreal Injection Scrubber for retina practices. Audit drug dosage and wastage (Modifiers JW/JZ), calculate Medicare Part B bilateral modifier logic (-50 vs -RT/-LT), enforce 28-day LCD frequency limits, and generate ANSI X12 837P claim lines.',
+    'Free anti-VEGF injection scrubber: audit dose and wastage (JW/JZ), bilateral billing (-50 vs. RT/LT) and LCD frequency limits for retina practices.',
 
-  ...marketingMetadata("/tools/retina-injection-scrubber", 'Anti-VEGF Intravitreal Injection & Bilateral Eye Surgery Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Anti-VEGF Intravitreal Injection Scrubber for retina practices. Audit drug dosage and wastage (Modifiers JW/JZ), calculate Medicare Part B bilateral modifier logic (-50 vs -RT/-LT), enforce 28-day LCD frequency limits, and generate ANSI X12 837P claim lines.'),
+  ...marketingMetadata("/tools/retina-injection-scrubber", 'Anti-VEGF Intravitreal Injection & Bilateral Eye Surgery Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free anti-VEGF injection scrubber: audit dose and wastage (JW/JZ), bilateral billing (-50 vs. RT/LT) and LCD frequency limits for retina practices.'),
 };
 
 export default function RetinaInjectionScrubberPage() {

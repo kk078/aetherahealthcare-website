@@ -84,9 +84,9 @@ const positions = [
 export const metadata = {
   alternates: { canonical: canonicalUrl('/careers') },
   title: "Careers — Join Our Medical Billing Team",
-  description: "Explore careers at Aethera Healthcare Solutions. Join a mission-driven revenue cycle management team helping healthcare providers get paid what they've earned.",
+  description: "Careers at Aethera Healthcare Solutions: join a revenue cycle management team helping healthcare providers get paid what they've earned.",
 
-  ...marketingMetadata("/careers", "Careers — Join Our Medical Billing Team", "Explore careers at Aethera Healthcare Solutions. Join a mission-driven revenue cycle management team helping healthcare providers get paid what they've earned."),
+  ...marketingMetadata("/careers", "Careers — Join Our Medical Billing Team", "Careers at Aethera Healthcare Solutions: join a revenue cycle management team helping healthcare providers get paid what they've earned."),
 };
 
 export default function Careers() {

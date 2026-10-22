@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Lateral Skull Base & Acoustic Neuroma Co-Surgeon Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Lateral Skull Base Surgery Scrubber. Audit translabyrinthine and retrosigmoid acoustic neuroma approaches (CPT 61526, 61530), validate dual-attending Modifier 62 matching, operating microscope (+69990) microdissection defense, and continuous cranial nerve monitoring (95940).',
+    'Free lateral skull base scrubber: audit acoustic neuroma approaches (61526, 61530), co-surgeon -62, operating microscope (+69990) and nerve monitoring.',
 
-  ...marketingMetadata("/tools/skull-base-scrubber", 'Lateral Skull Base & Acoustic Neuroma Co-Surgeon Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Lateral Skull Base Surgery Scrubber. Audit translabyrinthine and retrosigmoid acoustic neuroma approaches (CPT 61526, 61530), validate dual-attending Modifier 62 matching, operating microscope (+69990) microdissection defense, and continuous cranial nerve monitoring (95940).'),
+  ...marketingMetadata("/tools/skull-base-scrubber", 'Lateral Skull Base & Acoustic Neuroma Co-Surgeon Scrubber | Free RCM Tool | Aethera Healthcare', 'Free lateral skull base scrubber: audit acoustic neuroma approaches (61526, 61530), co-surgeon -62, operating microscope (+69990) and nerve monitoring.'),
 };
 
 export default function SkullBaseScrubberPage() {

@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Hepatobiliary Resection & Biliary Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free Hepatobiliary Resection Scrubber. Audit extended hepatic trisegmentectomy (47125), lobectomy (47130), defend payer downcoding to partial wedge (47120), safeguard vascular reconstruction (+35221), and unbundle Roux-en-Y biliary reconstruction (47760).',
+    'Free hepatobiliary scrubber: audit trisegmentectomy (47125) and lobectomy (47130), defend against downcoding to 47120, and capture biliary repairs.',
 
-  ...marketingMetadata("/tools/hepatobiliary-resection-scrubber", 'Hepatobiliary Resection & Biliary Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Hepatobiliary Resection Scrubber. Audit extended hepatic trisegmentectomy (47125), lobectomy (47130), defend payer downcoding to partial wedge (47120), safeguard vascular reconstruction (+35221), and unbundle Roux-en-Y biliary reconstruction (47760).'),
+  ...marketingMetadata("/tools/hepatobiliary-resection-scrubber", 'Hepatobiliary Resection & Biliary Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free hepatobiliary scrubber: audit trisegmentectomy (47125) and lobectomy (47130), defend against downcoding to 47120, and capture biliary repairs.'),
 };
 
 export default function HepatobiliaryResectionScrubberPage() {

@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'DMEPOS Medical Necessity & Prior Auth Validator | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Validate Medicare DMEPOS claims across Oxygen, CPAP, Mobility Assistive Equipment, CGMs, and Orthotics. Verify Standard Written Orders (SWO), Face-to-Face timing, required Prior Authorizations, and KX/GA/CG modifiers mapped to DME MAC Jurisdictions A, B, C, and D.',
+    'Validate Medicare DMEPOS claims for oxygen, CPAP, mobility, CGMs and orthotics: written orders, face-to-face timing, prior auth and KX/GA/CG modifiers.',
 
-  ...marketingMetadata("/tools/dmepos-validator", 'DMEPOS Medical Necessity & Prior Auth Validator | Free RCM Tool | Aethera Healthcare Solutions', 'Validate Medicare DMEPOS claims across Oxygen, CPAP, Mobility Assistive Equipment, CGMs, and Orthotics. Verify Standard Written Orders (SWO), Face-to-Face timing, required Prior Authorizations, and KX/GA/CG modifiers mapped to DME MAC Jurisdictions A, B, C, and D.'),
+  ...marketingMetadata("/tools/dmepos-validator", 'DMEPOS Medical Necessity & Prior Auth Validator | Free RCM Tool | Aethera Healthcare Solutions', 'Validate Medicare DMEPOS claims for oxygen, CPAP, mobility, CGMs and orthotics: written orders, face-to-face timing, prior auth and KX/GA/CG modifiers.'),
 };
 
 export default function DmeposValidatorPage() {

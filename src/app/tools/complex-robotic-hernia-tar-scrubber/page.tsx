@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Complex Robotic Hernia & TAR Component Separation Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Complex Robotic & Laparoscopic Hernia Reconstruction Scrubber. Audit modern CPT 2023+ ventral hernia codes (49591–49618), unbundle posterior component separation with transversus abdominis release (TAR add-on +49622), and capture mesh placement (+49623).',
+    'Free robotic hernia scrubber: audit 2023+ ventral hernia codes (49591–49618), TAR component separation (+49622) and mesh placement (+49623).',
 
-  ...marketingMetadata("/tools/complex-robotic-hernia-tar-scrubber", 'Complex Robotic Hernia & TAR Component Separation Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Complex Robotic & Laparoscopic Hernia Reconstruction Scrubber. Audit modern CPT 2023+ ventral hernia codes (49591–49618), unbundle posterior component separation with transversus abdominis release (TAR add-on +49622), and capture mesh placement (+49623).'),
+  ...marketingMetadata("/tools/complex-robotic-hernia-tar-scrubber", 'Complex Robotic Hernia & TAR Component Separation Scrubber | Free RCM Tool | Aethera Healthcare', 'Free robotic hernia scrubber: audit 2023+ ventral hernia codes (49591–49618), TAR component separation (+49622) and mesh placement (+49623).'),
 };
 
 export default function ComplexRoboticHerniaTarScrubberPage() {

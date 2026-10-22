@@ -14,9 +14,9 @@ export const metadata = {
     absolute: '835 Electronic Remittance Advice (ERA) Decoder | Aethera Healthcare Solutions',
   },
   description:
-    'Free X12 835 ERA parser and claim remittance decoder. Understand CLP, CAS adjustment group codes (CO, PR, OA) and get immediate step-by-step overturn workflows.',
+    'Free X12 835 ERA decoder: read CLP and CAS adjustments (CO, PR, OA) in plain language and get step-by-step workflows to overturn denials.',
 
-  ...marketingMetadata("/tools/era-835-decoder", '835 Electronic Remittance Advice (ERA) Decoder | Aethera Healthcare Solutions', 'Free X12 835 ERA parser and claim remittance decoder. Understand CLP, CAS adjustment group codes (CO, PR, OA) and get immediate step-by-step overturn workflows.'),
+  ...marketingMetadata("/tools/era-835-decoder", '835 Electronic Remittance Advice (ERA) Decoder | Aethera Healthcare Solutions', 'Free X12 835 ERA decoder: read CLP and CAS adjustments (CO, PR, OA) in plain language and get step-by-step workflows to overturn denials.'),
 };
 
 export default function Era835DecoderPage() {

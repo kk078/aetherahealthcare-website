@@ -12,9 +12,9 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/clean-claim-scorecard') },
   title: { absolute: 'Clean-Claim Scorecard — Rate Your First-Pass Claim Readiness | Aethera Healthcare Solutions' },
   description:
-    'Free clean-claim readiness scorecard. Check your front-end, coding, and submission workflow against 14 controls and see which CARC/RARC denials each gap invites.',
+    'Free clean-claim scorecard: check your front-end, coding and submission workflow against 14 controls and see which denials each gap invites.',
 
-  ...marketingMetadata("/tools/clean-claim-scorecard", 'Clean-Claim Scorecard — Rate Your First-Pass Claim Readiness | Aethera Healthcare Solutions', 'Free clean-claim readiness scorecard. Check your front-end, coding, and submission workflow against 14 controls and see which CARC/RARC denials each gap invites.'),
+  ...marketingMetadata("/tools/clean-claim-scorecard", 'Clean-Claim Scorecard — Rate Your First-Pass Claim Readiness | Aethera Healthcare Solutions', 'Free clean-claim scorecard: check your front-end, coding and submission workflow against 14 controls and see which denials each gap invites.'),
 };
 
 export default function CleanClaimScorecardPage() {

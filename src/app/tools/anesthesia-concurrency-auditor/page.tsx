@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Anesthesia Concurrency & Medical Direction Auditor | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Audit anesthesia operating room concurrency ratios and TEFRA 7 medical direction conditions under 42 CFR § 415.110. Model Modifiers QK, QY, QX, QZ, and AD, simulate clawback recoupment risk, and generate ANSI X12 837P Loop 2400 lines.',
+    'Audit anesthesia concurrency ratios and TEFRA medical direction rules (42 CFR 415.110), model QK/QY/QX/QZ/AD modifiers and estimate recoupment risk.',
 
-  ...marketingMetadata("/tools/anesthesia-concurrency-auditor", 'Anesthesia Concurrency & Medical Direction Auditor | Free RCM Tool | Aethera Healthcare Solutions', 'Audit anesthesia operating room concurrency ratios and TEFRA 7 medical direction conditions under 42 CFR § 415.110. Model Modifiers QK, QY, QX, QZ, and AD, simulate clawback recoupment risk, and generate ANSI X12 837P Loop 2400 lines.'),
+  ...marketingMetadata("/tools/anesthesia-concurrency-auditor", 'Anesthesia Concurrency & Medical Direction Auditor | Free RCM Tool | Aethera Healthcare Solutions', 'Audit anesthesia concurrency ratios and TEFRA medical direction rules (42 CFR 415.110), model QK/QY/QX/QZ/AD modifiers and estimate recoupment risk.'),
 };
 
 export default function AnesthesiaConcurrencyAuditorPage() {

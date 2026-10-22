@@ -6,10 +6,10 @@ import BlogIndexClient from './BlogIndexClient';
 export const metadata: Metadata = {
   title: { absolute: 'The Aethera Pulse — Revenue Cycle Insights for U.S. Healthcare | Aethera Healthcare Solutions' },
   description:
-    'Sharp, practical insights on U.S. healthcare revenue cycle management — denials, prior authorization, coding, compliance, telehealth billing, payer contracts and the data behind getting paid faster.',
+    'Practical insights on U.S. revenue cycle management: denials, prior authorization, coding, compliance, payer contracts and getting paid faster.',
   alternates: { canonical: '/blog/' },
 
-  ...marketingMetadata("/blog", 'The Aethera Pulse — Revenue Cycle Insights for U.S. Healthcare | Aethera Healthcare Solutions', 'Sharp, practical insights on U.S. healthcare revenue cycle management — denials, prior authorization, coding, compliance, telehealth billing, payer contracts and the data behind getting paid faster.'),
+  ...marketingMetadata("/blog", 'The Aethera Pulse — Revenue Cycle Insights for U.S. Healthcare | Aethera Healthcare Solutions', 'Practical insights on U.S. revenue cycle management: denials, prior authorization, coding, compliance, payer contracts and getting paid faster.'),
 };
 
 const jsonLd = {

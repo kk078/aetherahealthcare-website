@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Multi-Payer Timely Filing & Appeal Deadline Matrix | Aethera Healthcare Solutions',
   },
   description:
-    'Comprehensive multi-payer timely filing database. Compare initial claim filing limits, corrected claim deadlines, and appeal windows across 50 state Medicaid programs, Medicare MACs, and commercial PPOs.',
+    'Timely filing limits compared: initial claim, corrected claim and appeal windows for state Medicaid programs, Medicare MACs and commercial payers.',
 
-  ...marketingMetadata("/tools/timely-filing-matrix", 'Multi-Payer Timely Filing & Appeal Deadline Matrix | Aethera Healthcare Solutions', 'Comprehensive multi-payer timely filing database. Compare initial claim filing limits, corrected claim deadlines, and appeal windows across 50 state Medicaid programs, Medicare MACs, and commercial PPOs.'),
+  ...marketingMetadata("/tools/timely-filing-matrix", 'Multi-Payer Timely Filing & Appeal Deadline Matrix | Aethera Healthcare Solutions', 'Timely filing limits compared: initial claim, corrected claim and appeal windows for state Medicaid programs, Medicare MACs and commercial payers.'),
 };
 
 export default function TimelyFilingMatrixPage() {

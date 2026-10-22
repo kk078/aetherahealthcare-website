@@ -83,9 +83,9 @@ const relatedServices = [
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/credentialing') },
   title: "Provider Credentialing & Payer Enrollment",
-  description: "End-to-end provider credentialing and payer enrollment — CAQH, revalidations, and re-credentialing handled so your providers get in-network and stay paid. Aethera credentialing.",
+  description: "End-to-end credentialing and payer enrollment: CAQH, revalidations and re-credentialing handled so your providers get in network and stay paid.",
 
-  ...marketingMetadata("/services/credentialing", "Provider Credentialing & Payer Enrollment", "End-to-end provider credentialing and payer enrollment — CAQH, revalidations, and re-credentialing handled so your providers get in-network and stay paid. Aethera credentialing."),
+  ...marketingMetadata("/services/credentialing", "Provider Credentialing & Payer Enrollment", "End-to-end credentialing and payer enrollment: CAQH, revalidations and re-credentialing handled so your providers get in network and stay paid."),
 };
 
 export default function Credentialing() {

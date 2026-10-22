@@ -12,9 +12,9 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/compliance') },
   title: "Compliance | HIPAA, Security & Privacy",
-  description: "Learn about Aethera Healthcare Solutions' comprehensive compliance program including HIPAA, security practices, and privacy protection for healthcare providers.",
+  description: "Aethera's compliance program: HIPAA, security practices and privacy protection for the healthcare providers we work with.",
 
-  ...marketingMetadata("/compliance", "Compliance | HIPAA, Security & Privacy", "Learn about Aethera Healthcare Solutions' comprehensive compliance program including HIPAA, security practices, and privacy protection for healthcare providers."),
+  ...marketingMetadata("/compliance", "Compliance | HIPAA, Security & Privacy", "Aethera's compliance program: HIPAA, security practices and privacy protection for the healthcare providers we work with."),
 };
 
 const standards = [

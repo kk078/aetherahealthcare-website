@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Robotic Urologic Oncology & Reconstructive Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Robotic Urologic Oncology Scrubber. Audit robot-assisted radical prostatectomy (CPT 55866), defend extended pelvic lymphadenectomy (+38572-59), robot-assisted partial nephrectomy (50543), intracorporeal urinary diversions (51595/51596), and Modifier -22 complexity justifications.',
+    'Free robotic urologic oncology scrubber: audit prostatectomy (55866), pelvic lymphadenectomy, partial nephrectomy (50543), diversions and modifier 22.',
 
-  ...marketingMetadata("/tools/robotic-urologic-oncology-scrubber", 'Robotic Urologic Oncology & Reconstructive Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Robotic Urologic Oncology Scrubber. Audit robot-assisted radical prostatectomy (CPT 55866), defend extended pelvic lymphadenectomy (+38572-59), robot-assisted partial nephrectomy (50543), intracorporeal urinary diversions (51595/51596), and Modifier -22 complexity justifications.'),
+  ...marketingMetadata("/tools/robotic-urologic-oncology-scrubber", 'Robotic Urologic Oncology & Reconstructive Scrubber | Free RCM Tool | Aethera Healthcare', 'Free robotic urologic oncology scrubber: audit prostatectomy (55866), pelvic lymphadenectomy, partial nephrectomy (50543), diversions and modifier 22.'),
 };
 
 export default function RoboticUrologicScrubberPage() {

@@ -11,9 +11,9 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/denial-management') },
   title: "Denial Management & Appeals",
-  description: "Expert denial management and appeal services for healthcare providers. Reduce denial rates, maximize recovery, and protect your revenue with our proactive approach.",
+  description: "Denial management and appeals for healthcare providers: lower denial rates, recover more, and fix the root causes before claims go out.",
 
-  ...marketingMetadata("/services/denial-management", "Denial Management & Appeals", "Expert denial management and appeal services for healthcare providers. Reduce denial rates, maximize recovery, and protect your revenue with our proactive approach."),
+  ...marketingMetadata("/services/denial-management", "Denial Management & Appeals", "Denial management and appeals for healthcare providers: lower denial rates, recover more, and fix the root causes before claims go out."),
 };
 
 const includedItems = [
