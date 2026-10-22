@@ -107,7 +107,8 @@ function validatePage(page) {
 }
 
 const snapshot = JSON.parse(readFileSync(join(seoRoot, 'data', 'snapshot.json'), 'utf8'));
-const htmlPages = snapshot.pages.filter(page => Array.isArray(page.jsonLd));
+// Error responses are reported by the sitemap audit; they must not count as "no structured data".
+const htmlPages = snapshot.pages.filter(page => page.status === 200 && Array.isArray(page.jsonLd));
 const templates = config.templates.map(({ template, path }) => {
   const page = htmlPages.find(entry => entry.path === path);
   if (!page) return { template, path, missingFromSnapshot: true };
