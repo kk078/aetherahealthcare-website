@@ -1,0 +1,461 @@
+{
+  "generatedAt": "2026-10-22T09:15:25.986Z",
+  "schemaOrgRelease": "30.1",
+  "base": "https://aetherahealthcare.com",
+  "templates": [
+    {
+      "template": "home",
+      "path": "/",
+      "blocks": 2,
+      "types": [
+        "ContactPoint",
+        "CreativeWork",
+        "Intangible",
+        "Organization",
+        "StructuredValue",
+        "WebSite"
+      ],
+      "missingRecommendedTypes": [],
+      "problems": []
+    },
+    {
+      "template": "service",
+      "path": "/services/denial-management/",
+      "blocks": 1,
+      "types": [
+        "Intangible",
+        "Offer",
+        "Organization",
+        "PriceSpecification",
+        "Service",
+        "StructuredValue"
+      ],
+      "missingRecommendedTypes": [
+        "BreadcrumbList"
+      ],
+      "problems": [
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Service",
+          "message": "Add recommended \"name\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"sameAs\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"contactPoint\""
+        }
+      ]
+    },
+    {
+      "template": "specialty",
+      "path": "/services/cardiology-billing/",
+      "blocks": 0,
+      "types": [],
+      "missingRecommendedTypes": [
+        "Service",
+        "BreadcrumbList"
+      ],
+      "problems": []
+    },
+    {
+      "template": "pricing",
+      "path": "/pricing/",
+      "blocks": 1,
+      "types": [
+        "Intangible",
+        "ItemList",
+        "OfferCatalog",
+        "Organization"
+      ],
+      "missingRecommendedTypes": [
+        "BreadcrumbList"
+      ],
+      "problems": [
+        {
+          "severity": "warning",
+          "block": 0,
+          "type": "OfferCatalog",
+          "message": "\"publisher\" is not expected on OfferCatalog"
+        },
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"sameAs\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"contactPoint\""
+        }
+      ]
+    },
+    {
+      "template": "tools-index",
+      "path": "/tools/",
+      "blocks": 0,
+      "types": [],
+      "missingRecommendedTypes": [
+        "BreadcrumbList"
+      ],
+      "problems": []
+    },
+    {
+      "template": "tool",
+      "path": "/tools/denial-code-lookup/",
+      "blocks": 2,
+      "types": [
+        "Answer",
+        "BreadcrumbList",
+        "Comment",
+        "CreativeWork",
+        "FAQPage",
+        "Intangible",
+        "ItemList",
+        "ListItem",
+        "Offer",
+        "Organization",
+        "Question",
+        "SoftwareApplication",
+        "WebApplication",
+        "WebPage"
+      ],
+      "missingRecommendedTypes": [],
+      "problems": [
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"logo\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"sameAs\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"contactPoint\""
+        }
+      ]
+    },
+    {
+      "template": "blog-post",
+      "path": "/blog/high-deductible-health-plan-patient-payment-strategies/",
+      "blocks": 2,
+      "types": [
+        "Article",
+        "BlogPosting",
+        "BreadcrumbList",
+        "CreativeWork",
+        "ImageObject",
+        "Intangible",
+        "ItemList",
+        "ListItem",
+        "MediaObject",
+        "Organization",
+        "SocialMediaPosting",
+        "WebPage"
+      ],
+      "missingRecommendedTypes": [],
+      "problems": [
+        {
+          "severity": "recommendation",
+          "block": 1,
+          "type": "BlogPosting",
+          "message": "Add recommended \"datePublished\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 1,
+          "type": "BlogPosting",
+          "message": "Add recommended \"dateModified\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 1,
+          "type": "Organization",
+          "message": "Add recommended \"url\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 1,
+          "type": "Organization",
+          "message": "Add recommended \"logo\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 1,
+          "type": "Organization",
+          "message": "Add recommended \"sameAs\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 1,
+          "type": "Organization",
+          "message": "Add recommended \"contactPoint\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 1,
+          "type": "Organization",
+          "message": "Add recommended \"url\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 1,
+          "type": "Organization",
+          "message": "Add recommended \"sameAs\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 1,
+          "type": "Organization",
+          "message": "Add recommended \"contactPoint\""
+        }
+      ]
+    },
+    {
+      "template": "glossary",
+      "path": "/glossary/",
+      "blocks": 1,
+      "types": [
+        "CreativeWork",
+        "DefinedTerm",
+        "DefinedTermSet",
+        "Intangible",
+        "Organization"
+      ],
+      "missingRecommendedTypes": [
+        "BreadcrumbList"
+      ],
+      "problems": [
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"logo\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"sameAs\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"contactPoint\""
+        }
+      ]
+    },
+    {
+      "template": "payer-directory",
+      "path": "/payers/directory/",
+      "blocks": 0,
+      "types": [],
+      "missingRecommendedTypes": [
+        "BreadcrumbList"
+      ],
+      "problems": []
+    },
+    {
+      "template": "free-assessment",
+      "path": "/free-assessment/",
+      "blocks": 0,
+      "types": [],
+      "missingRecommendedTypes": [
+        "BreadcrumbList"
+      ],
+      "problems": []
+    }
+  ],
+  "summary": {
+    "pagesChecked": 534,
+    "pagesWithoutStructuredData": 28,
+    "pagesWithErrors": 0,
+    "pagesWithOrganization": 502,
+    "pagesWithBreadcrumbs": 251
+  },
+  "bySection": {
+    "/": {
+      "pages": 1,
+      "withJsonLd": 1,
+      "withErrors": 0
+    },
+    "/about/": {
+      "pages": 1,
+      "withJsonLd": 1,
+      "withErrors": 0
+    },
+    "/anatomy-atlas/": {
+      "pages": 1,
+      "withJsonLd": 0,
+      "withErrors": 0
+    },
+    "/blog/": {
+      "pages": 78,
+      "withJsonLd": 77,
+      "withErrors": 0
+    },
+    "/careers/": {
+      "pages": 1,
+      "withJsonLd": 1,
+      "withErrors": 0
+    },
+    "/case-studies/": {
+      "pages": 1,
+      "withJsonLd": 0,
+      "withErrors": 0
+    },
+    "/cms-references/": {
+      "pages": 1,
+      "withJsonLd": 0,
+      "withErrors": 0
+    },
+    "/compare/": {
+      "pages": 3,
+      "withJsonLd": 2,
+      "withErrors": 0
+    },
+    "/compliance/": {
+      "pages": 6,
+      "withJsonLd": 2,
+      "withErrors": 0
+    },
+    "/contact/": {
+      "pages": 1,
+      "withJsonLd": 1,
+      "withErrors": 0
+    },
+    "/decks/": {
+      "pages": 1,
+      "withJsonLd": 0,
+      "withErrors": 0
+    },
+    "/faq/": {
+      "pages": 1,
+      "withJsonLd": 1,
+      "withErrors": 0
+    },
+    "/for-billing-companies/": {
+      "pages": 1,
+      "withJsonLd": 0,
+      "withErrors": 0
+    },
+    "/free-assessment/": {
+      "pages": 1,
+      "withJsonLd": 0,
+      "withErrors": 0
+    },
+    "/glossary/": {
+      "pages": 1,
+      "withJsonLd": 1,
+      "withErrors": 0
+    },
+    "/human-autonomy/": {
+      "pages": 1,
+      "withJsonLd": 1,
+      "withErrors": 0
+    },
+    "/integrations/": {
+      "pages": 1,
+      "withJsonLd": 0,
+      "withErrors": 0
+    },
+    "/medical-billing/": {
+      "pages": 84,
+      "withJsonLd": 83,
+      "withErrors": 0
+    },
+    "/payer-services/": {
+      "pages": 1,
+      "withJsonLd": 0,
+      "withErrors": 0
+    },
+    "/payers/": {
+      "pages": 231,
+      "withJsonLd": 229,
+      "withErrors": 0
+    },
+    "/pricing/": {
+      "pages": 1,
+      "withJsonLd": 1,
+      "withErrors": 0
+    },
+    "/process/": {
+      "pages": 1,
+      "withJsonLd": 1,
+      "withErrors": 0
+    },
+    "/schedule/": {
+      "pages": 1,
+      "withJsonLd": 0,
+      "withErrors": 0
+    },
+    "/services/": {
+      "pages": 21,
+      "withJsonLd": 13,
+      "withErrors": 0
+    },
+    "/specialties/": {
+      "pages": 1,
+      "withJsonLd": 1,
+      "withErrors": 0
+    },
+    "/state-of-denials/": {
+      "pages": 1,
+      "withJsonLd": 0,
+      "withErrors": 0
+    },
+    "/tools/": {
+      "pages": 91,
+      "withJsonLd": 90,
+      "withErrors": 0
+    }
+  },
+  "pagesWithoutStructuredData": [
+    "/anatomy-atlas/",
+    "/blog/editorial-policy/",
+    "/case-studies/",
+    "/cms-references/",
+    "/compare/",
+    "/compliance/baa/",
+    "/compliance/privacy-policy/",
+    "/compliance/security/",
+    "/compliance/terms-of-service/",
+    "/decks/",
+    "/for-billing-companies/",
+    "/free-assessment/",
+    "/integrations/",
+    "/medical-billing/",
+    "/payer-services/",
+    "/payers/",
+    "/payers/directory/",
+    "/schedule/",
+    "/services/cardiology-billing/",
+    "/services/dental-billing/",
+    "/services/dermatology-billing/",
+    "/services/family-medicine-billing/",
+    "/services/orthopedic-billing/",
+    "/services/pharmacy-billing/",
+    "/services/psychiatry-billing/",
+    "/services/workers-compensation-billing/",
+    "/state-of-denials/",
+    "/tools/"
+  ],
+  "pagesWithErrors": []
+}

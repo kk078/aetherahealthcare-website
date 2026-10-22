@@ -1,0 +1,2137 @@
+{
+  "generatedAt": "2026-10-22T09:03:58.400Z",
+  "base": "https://aetherahealthcare.com",
+  "pagesScanned": 534,
+  "linksChecked": 1986,
+  "summary": {
+    "brokenInternal": 1,
+    "brokenExternal": 47,
+    "unverifiable": 280
+  },
+  "broken": [
+    {
+      "url": "https://aetherahealthcare.com/cdn-cgi/l/email-protection",
+      "status": 404,
+      "internal": true,
+      "parents": [
+        "/compliance/",
+        "/careers/",
+        "/compliance/hipaa/",
+        "/payers/directory/bcbs-vermont/",
+        "/compliance/baa/",
+        "/payers/directory/taro-health/",
+        "/compliance/terms-of-service/"
+      ],
+      "parentCount": 7
+    },
+    {
+      "url": "https://www.absolutetotalcare.com/providers/provider-resources.html",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.alliedbenefit.com/Access/ProviderRequestWebAccount",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.arkansasbluecross.com/providers/medical-providers",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.arkansasbluecross.com/docs/librariesprovider9/providers/arkbluecross/abcbs-provider-manual.pdf?sfvrsn=e28670fd_24",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.aultcare.com/assets/Provider-Resources/AultCare-Prior-Authorization-Information.pdf",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.avmed.org/media/sqob2spb/physician-ref-guide.pdf",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.bcbsmt.com/provider/education-and-reference/education/provider-manuals",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.southcarolinablues.com/web/public/brands/sc/providers/tools-and-resources/manuals/",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.caresource.com/providers/",
+      "status": 406,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://medicareproviders.cigna.com/",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.caresource.com/providers/tools-resources/provider-manual/",
+      "status": 406,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://hfproviders.org/provider-resources",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.independenthealth.com/",
+      "status": 406,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/",
+        "/payers/directory/independent-health/"
+      ],
+      "parentCount": 2
+    },
+    {
+      "url": "https://metroplus.org/providers/provider-resources/provider-tools/",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.mutualofomaha.com/plan_members/utilization.html",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://medicaid.ohio.gov/resources-for-providers/nextgeneration-pnm",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://medicaid.ohio.gov/resources-for-providers/policies-guidelines",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://medicaid.ohio.gov/resources-for-providers/policies-guidelines/medicaid-advisory-letters/medicaid-advisory-letters",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://medicaid.ohio.gov/resources-for-providers/enrollment-and-support/provider-enrollment",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://medicaid.ohio.gov/resources-for-providers/managed-care/coverage-verification",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://secure.healthx.com/parkland.provider",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.partnershiphp.org/Providers/Medi-Cal/Pages/Updated-or-New-Benefit-Policies.aspx",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.pehp.org/",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/",
+        "/payers/directory/pehp-utah/"
+      ],
+      "parentCount": 2
+    },
+    {
+      "url": "https://www.pehp.org/MyPehpProviders/Account",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/",
+        "/payers/directory/pehp-utah/"
+      ],
+      "parentCount": 2
+    },
+    {
+      "url": "https://www.caresource.com/",
+      "status": 406,
+      "internal": false,
+      "parents": [
+        "/payers/directory/caresource/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.cigna.com/medicare/",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/payers/directory/cigna-medicare-advantage/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://providerportal.caresource.com/",
+      "status": 406,
+      "internal": false,
+      "parents": [
+        "/payers/directory/caresource/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.healthnet.com/providers",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/payers/directory/health-net/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.regence.com/provider",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/payers/directory/regence/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.arkansasbluecross.com/providers/medical-providers/coverage-policy",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.avmed.org/en/Documents/AvMed-General-Document/provider-orientation/provider-interest-form-pdf",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.bcbsnm.com/provider/standards-requirements/standards/medical-policies-precert-router",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.avmed.org/en/provider/provider-education/protocols",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.bcbsnm.com/provider/network-participation/network/how-to-join",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.bcbsil.com/provider/network/network/credentialing",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.caresource.com/providers/education/become-caresource-provider/",
+      "status": 406,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.caresource.com/providers/tools-resources/health-partner-policies/",
+      "status": 406,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.healthsmartnetworksolutions.com/provider/providers/join-our-network",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.mvphealthcare.com/providers/join/credentialing-registration",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.wpsgha.com/topics/medical-policy",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.wpsgha.com/topics/provider-enrollment",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.aetna.com/health-care-professionals/claims-payment-reimbursement/eligibility-benefits.html",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.aetna.com/health-care-professionals/login.html",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.arkansasbluecross.com/providers/resource-center/health-information-network/provider-portal",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/",
+        "/payers/directory/arkansas-bcbs/"
+      ],
+      "parentCount": 2
+    },
+    {
+      "url": "https://www.bcbsnm.com/provider/claims-and-eligibility/claims/eligibility-and-benefits",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.avmed.org/en/provider/provider-tools/eligibility-check",
+      "status": 404,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    },
+    {
+      "url": "https://www.caresource.com/providers/provider-portal/check-eligibility/",
+      "status": 406,
+      "internal": false,
+      "parents": [
+        "/tools/payer-provider-manuals/"
+      ],
+      "parentCount": 1
+    }
+  ],
+  "unverifiable": [
+    {
+      "url": "https://www.cms.gov/medicare-coverage-database/view/article.aspx?articleid=55818",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-policy-manual",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare/coding-billing/healthcare-common-procedure-system/quarterly-update",
+      "status": 403,
+      "internal": false,
+      "parent": "/anatomy-atlas/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare/coding-billing/icd-10-codes",
+      "status": 403,
+      "internal": false,
+      "parent": "/anatomy-atlas/"
+    },
+    {
+      "url": "https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/clm104c26.pdf",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://data.cms.gov/tools/medicare-physician-other-practitioner-look-up-tool/provider/1306865225",
+      "status": 403,
+      "internal": false,
+      "parent": "/anatomy-atlas/"
+    },
+    {
+      "url": "https://www.cms.gov/files/document/mm13946-rural-health-clinic-federally-qualified-health-center-medicare-benefit-policy-manual-update.pdf",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.linkedin.com/in/kiran-kumar-pedapudi/",
+      "status": 999,
+      "internal": false,
+      "parent": "/blog/fraud-waste-abuse/"
+    },
+    {
+      "url": "https://data.cms.gov/tools/medicare-physician-other-practitioner-look-up-tool/provider/1073752556",
+      "status": 403,
+      "internal": false,
+      "parent": "/anatomy-atlas/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare/payment/fee-schedules/clinical-laboratory-fee-schedule/clfs-pama-reporting-resources",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2026-medicare-physician-fee-schedule-final-rule-cms-1832-f",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare/appeals-grievances/managed-care/reconsideration-advantage-health-plan-part-c",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/initiatives/no-surprise-billing/overview/engaging-idr/about-independent-dispute-resolution",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare-coverage-database/view/ncd.aspx?ncdid=1&ncdver=3",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.hrsa.gov/opa/program-requirements/medicaid-exclusion",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare/payment/fee-schedules",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/underpayment-analyzer/"
+    },
+    {
+      "url": "https://www.cms.gov/regulations-and-guidance/guidance/manuals/internet-only-manuals-ioms-items/cms018912",
+      "status": 403,
+      "internal": false,
+      "parent": "/blog/fraud-waste-abuse/"
+    },
+    {
+      "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.azahcccs.gov/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/ahcccs-arizona-medicaid/"
+    },
+    {
+      "url": "https://www.amidacareonline.org/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/amida-care/"
+    },
+    {
+      "url": "https://www.waproviderone.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/apple-health-washington/"
+    },
+    {
+      "url": "https://medicalpolicy.nebraskablue.com/home",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://portal.alliednational.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/allied-national/"
+    },
+    {
+      "url": "https://www.bcbsms.com/im-a-provider",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/bcbs-mississippi/"
+    },
+    {
+      "url": "https://www.bcbsms.com/im-a-provider/provider-forms-and-policies",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://myblue.bcbsms.com/cas/login",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.bcbswy.com/providers",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/bcbs-wyoming/"
+    },
+    {
+      "url": "https://www.bcbswy.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/bcbs-wyoming/"
+    },
+    {
+      "url": "https://provider.bcbst.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/bcbs-tennessee/"
+    },
+    {
+      "url": "https://provider.bcbst.com/tools-resources/manuals-policies-guidelines",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://provider.bcbst.com/working-with-us/enroll-a-provider",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://provider.bcbst.com/tools-resources/coverage-claims",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.bcbst.com/mpmanual/!SSL!/WebHelp/mpmprov.htm",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.molinaclinicalpolicy.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.bndhmo.com/providers/provider-credentialing",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.bndhmo.com/providers",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/brand-new-day-medicare/"
+    },
+    {
+      "url": "https://www.dhcs.ca.gov/services/medi-cal-resources/rates",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.dhcs.ca.gov/formsandpubs/publications/Pages/Medi-CalProviderManuals.aspx",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.caloptima.org/en/for-providers",
+      "status": 429,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.caloptima.org/en/for-providers/provider-resources/manuals-policies-and-guides",
+      "status": 429,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://providers.bcidaho.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/blue-cross-idaho/"
+    },
+    {
+      "url": "https://providers.bcidaho.com/policies-and-procedures/policies-and-procedures-overview.page",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.provider.centivo.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/centivo/"
+    },
+    {
+      "url": "https://mycgsportal.com/mycgs/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare/regulations-guidance/manuals/internet-only-manuals-ioms",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare/enrollment-renewal/health-plans/hets",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare-coverage-database/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://mcweb.apps.prd.cammis.medi-cal.ca.gov/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/medi-cal/"
+    },
+    {
+      "url": "https://pecos.cms.hhs.gov/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.cchealth.org/health-insurance/information-for-providers/provider-portal",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/contra-costa-health-plan/"
+    },
+    {
+      "url": "https://www.cchealth.org/health-insurance",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/contra-costa-health-plan/"
+    },
+    {
+      "url": "https://fallonhealth.org/en/providers",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://fallonhealth.org/en/providers/provider-manual",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.fhcp.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/florida-health-care-plans/"
+    },
+    {
+      "url": "https://www.fhcp.com/provider-login",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/florida-health-care-plans/"
+    },
+    {
+      "url": "https://ahca.myflorida.com/provider/policy.html",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://ahca.myflorida.com/provider/index.html",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://ahca.myflorida.com/medicaid/rules.html",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://ahca.myflorida.com/medicaid/medicaid-finance-and-analytics/medicaid-fiscal-agent-operations/provider-enrollment.html",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.cofinity.net/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/cofinity/"
+    },
+    {
+      "url": "https://providerlocator.firsthealth.com/home/index",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/cofinity/"
+    },
+    {
+      "url": "https://www.globalhealth.com/oklahoma/providers",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://medicare.fcso.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/first-coast-medicare/"
+    },
+    {
+      "url": "https://www.globalhealth.com/media/hsspjc5a/2026_provider-manual-w-cover-final.pdf",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://medicare.fcso.com/topics",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.globalhealth.com/oklahoma/providers/how-to-become-a-globalhealth-provider/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.globalhealth.com/oklahoma/providers/medical-policies/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.aetna.com/health-care-professionals/forms/first-health-behavioral-health-application.html",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://providerlocator.firsthealth.com/LocateProvider/SelectNetworkType",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.gpatpa.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/group-pension-administrators/"
+    },
+    {
+      "url": "https://www.goldcoasthealthplan.org/for-providers/provider-resources/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.goldcoasthealthplan.org/for-providers/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://provider.healthalliance.org/provider-manuals/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://provider.healthalliance.org/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/health-alliance/"
+    },
+    {
+      "url": "https://healthalliance.org/um-providers",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://healthalliance.org/documents/19",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://portal.flmmis.com/flpublic/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.mmis.georgia.gov/portal/PubAccess.Provider%20Information/tabId/15/Default.aspx",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.mmis.georgia.gov/portal/PubAccess.Provider%20Information/Provider%20Manuals/tabId/17/Default.aspx",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.imagine360.com/provider-login",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/imagine360/"
+    },
+    {
+      "url": "https://ihprovider.healthtrioconnect.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/independent-health/"
+    },
+    {
+      "url": "https://www.navinet.net/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/keystone-first/"
+    },
+    {
+      "url": "https://secure.healthsmart.com/ocs/ocslogin.aspx",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.mercycareaz.org/providers",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/mercy-care-az/"
+    },
+    {
+      "url": "https://www.mercycareaz.org/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/mercy-care-az/"
+    },
+    {
+      "url": "https://www.michigan.gov/mdhhs/assistance-programs/medicaid/portalhome/medicaid-providers",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.michigan.gov/mdhhs/doing-business/providers/providers/medicaid/policyforms/medicaid-provider-manual",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.michigan.gov/mdhhs/assistance-programs/medicaid/portalhome/medicaid-providers/policyforms",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.michigan.gov/mdhhs/doing-business/providers/providers/medicaid/provider-enrollment",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.michigan.gov/mdhhs/assistance-programs/medicaid/portalhome/medicaid-providers/champs-a",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.providerservices.iehp.org/en/home",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.providerservices.iehp.org/en/resources/provider-manuals-and-training/manuals-trainings",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/members/os/health-care-professionals/home.aspx",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://mbaccess.medben.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/medben/"
+    },
+    {
+      "url": "https://www.medmutual.com/For-Providers.aspx",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/providers/ca/medicaid/manual/medical.aspx",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.medmutual.com/-/media/MedMutual/Files/Providers/providermanual.ashx",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://networkhealth.com/provider-resources/index",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://networkhealth.com/provider-resources/medicare-provider-manual",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.health.ny.gov/health_care/medicaid/program/update/main.htm",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.nipponlifebenefits.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/nippon-life-benefits/"
+    },
+    {
+      "url": "https://www.nipponlifebenefits.com/for-providers/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/nippon-life-benefits/"
+    },
+    {
+      "url": "https://www.nctracks.nc.gov/content/public/providers/provider-manuals.html",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.nctracks.nc.gov/content/public/providers.html",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www31.mutualofomaha.com/ProviderAccess/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.ngsmedicare.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/ngs-medicare-jk/"
+    },
+    {
+      "url": "https://www.ngsmedicare.com/education",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://med.noridianmedicare.com/web/jeb",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/noridian-medicare-je/"
+    },
+    {
+      "url": "https://med.noridianmedicare.com/web/jeb/topics",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.novitas-solutions.com/webcenter/portal/MedicareJH",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/novitas-medicare-jh/"
+    },
+    {
+      "url": "https://palmettogba.com/jjb",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://palmettogba.com/info/lobselect.html",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.palmettogba.com/palmetto/jjb.nsf/DID/AVGKPP2502",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.novitas-solutions.com/webcenter/portal/MedicareJH/pagebyid?contentId=00283983",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.youroptimumhealthcare.com/provider/tools_and_resources",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.youroptimumhealthcare.com/dlsecure?_id=5763214",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.oxhp.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/oxford-health/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/providers/ky/medicaid/manual/medical.aspx",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/providers/ky/medicaid/home.aspx",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.paramounthealthcare.com/providers/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://prominencehealthplan.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/prominence-health-plan/"
+    },
+    {
+      "url": "https://www.paramounthealthcare.com/services/providers/tools-and-resources/publications/provider-manual",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://paramounthealthcare.com/credentialingprocess",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://palmettogba.com/rr",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/railroad-medicare-palmetto/"
+    },
+    {
+      "url": "https://dominoapps.palmettogba.com/palmetto/providers.nsf/files/Quick_Reference_Guide_for_Railroad_Medicare.pdf/$File/Quick_Reference_Guide_for_Railroad_Medicare.pdf",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.palmettogba.com/palmetto/rr.nsf/DID/CP49SH51UB",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.palmettogba.com/palmetto/rr.nsf/DID/9XCQ2F28X9",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.ss-healthcare.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/ss-healthcare-strategies/"
+    },
+    {
+      "url": "https://selecthealth.org/providers",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/selecthealth/"
+    },
+    {
+      "url": "https://www.scfhp.com/for-providers/medi-caldualconnect-hmo-d-snp-provider-manual/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.scfhp.com/for-providers/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://selecthealth.org/providers/publication-resources/prm",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.sutterhealthplan.org/",
+      "status": 429,
+      "internal": false,
+      "parent": "/payers/directory/sutter-health-plan/"
+    },
+    {
+      "url": "https://www.vantagehealthplan.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/vantage-health-plan/"
+    },
+    {
+      "url": "https://providers.vantagehealthplan.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/vantage-health-plan/"
+    },
+    {
+      "url": "https://www.wellmark.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/wellmark-bcbs/"
+    },
+    {
+      "url": "https://www.wellmark.com/provider",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/wellmark-bcbs/"
+    },
+    {
+      "url": "https://www.forwardhealth.wi.gov/WIPortal/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.forwardhealth.wi.gov/WIPortal/Subsystem/kw/onlinehandbooks.aspx",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://tricare.triwest.com/en/provider/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://tricare.triwest.com/en/provider/tricare-provider-handbook/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.prestigehealthchoice.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/prestige-health-choice/"
+    },
+    {
+      "url": "https://vamedicaid.dmas.virginia.gov/provider",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://vamedicaid.dmas.virginia.gov/manuals/provider-manuals-library",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.bcbs.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/blue-cross-medicare-advantage/"
+    },
+    {
+      "url": "https://www.bcbst.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/bcbs-tennessee/"
+    },
+    {
+      "url": "https://www.caloptima.org/",
+      "status": 429,
+      "internal": false,
+      "parent": "/payers/directory/caloptima/"
+    },
+    {
+      "url": "https://chp.healthtrioconnect.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/capital-health-plan/"
+    },
+    {
+      "url": "https://www.bcidaho.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/blue-cross-idaho/"
+    },
+    {
+      "url": "https://provider.caloptima.org/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/caloptima/"
+    },
+    {
+      "url": "https://www.bndhmo.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/brand-new-day-medicare/"
+    },
+    {
+      "url": "https://provider.devoted.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/devoted-health-florida/"
+    },
+    {
+      "url": "https://www.bcbsms.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/bcbs-mississippi/"
+    },
+    {
+      "url": "https://ahca.myflorida.com/medicaid",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/florida-medicaid-ffs/"
+    },
+    {
+      "url": "https://www.goldcoasthealthplan.org/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/gold-coast-health-plan/"
+    },
+    {
+      "url": "https://www.goldcoasthealthplan.org/for-providers/provider-portal/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/gold-coast-health-plan/"
+    },
+    {
+      "url": "https://healthalliance.org/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/health-alliance/"
+    },
+    {
+      "url": "https://provider.healthfirst.org/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/healthfirst-ny/"
+    },
+    {
+      "url": "https://www.medi-cal.ca.gov/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/medi-cal/"
+    },
+    {
+      "url": "https://www.medicaid.gov/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/medicaid/"
+    },
+    {
+      "url": "https://www.mahealthplans.com/hp/for-businesses/providers/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/medical-associates-health-plans/"
+    },
+    {
+      "url": "https://www.mahealthplans.com/hp/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/medical-associates-health-plans/"
+    },
+    {
+      "url": "https://www.cms.gov/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/medicare/"
+    },
+    {
+      "url": "https://www.medicare.gov/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/medicare/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare/coverage/durable-medical-equipment-coverage",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/medicare-dme-mac/"
+    },
+    {
+      "url": "https://providerlocator.firsthealth.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/first-health-network/"
+    },
+    {
+      "url": "https://www.firsthealth.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/first-health-network/"
+    },
+    {
+      "url": "https://provider.molinahealthcare.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/molina-texas/"
+    },
+    {
+      "url": "https://www.flmmis.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/florida-medicaid-ffs/"
+    },
+    {
+      "url": "https://networkhealth.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/network-health-wisconsin/"
+    },
+    {
+      "url": "https://networkhealth.com/provider-resources/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/network-health-wisconsin/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/providers/ca/medicaid/home",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/molina-medi-cal/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/molina-healthcare/"
+    },
+    {
+      "url": "https://www.provider.multiplan.com/webcenter/portal/provider",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/multiplan-phcs/"
+    },
+    {
+      "url": "https://ewebapp.iehp.org/ProviderPortal/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/iehp/"
+    },
+    {
+      "url": "https://www.iehp.org/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/iehp/"
+    },
+    {
+      "url": "https://palmettogba.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/palmetto-gba-jm/"
+    },
+    {
+      "url": "https://palmettogba.com/jmb",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/palmetto-gba-jm/"
+    },
+    {
+      "url": "https://www.medmutual.com/For-Providers",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/medical-mutual-of-ohio/"
+    },
+    {
+      "url": "https://med.noridianmedicare.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/noridian-medicare-jf/"
+    },
+    {
+      "url": "https://med.noridianmedicare.com/web/jfb",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/noridian-medicare-jf/"
+    },
+    {
+      "url": "https://www.novitas-solutions.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/novitas-medicare-jl/"
+    },
+    {
+      "url": "https://www.novitas-solutions.com/webcenter/portal/MedicareJL",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/novitas-medicare-jl/"
+    },
+    {
+      "url": "https://www.scfhp.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/santa-clara-family-health-plan/"
+    },
+    {
+      "url": "https://www.tpadministrator.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/palmetto-gba-jj/"
+    },
+    {
+      "url": "https://selecthealth.org/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/selecthealth/"
+    },
+    {
+      "url": "https://www.uhc.com/",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/unitedhealthcare/"
+    },
+    {
+      "url": "https://www.uhc.com/communityplan",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/uhc-community-plan/"
+    },
+    {
+      "url": "https://www.uhc.com/communityplan/florida",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/uhc-community-plan-florida/"
+    },
+    {
+      "url": "https://www.uhc.com/communityplan/texas",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/uhc-community-plan-tx/"
+    },
+    {
+      "url": "https://www.uhc.com/medicare",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/unitedhealthcare-medicare-advantage/"
+    },
+    {
+      "url": "https://www.myparamount.org/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/paramount-health-care/"
+    },
+    {
+      "url": "https://www.paramounthealthcare.com/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/paramount-health-care/"
+    },
+    {
+      "url": "https://www.securityhealth.org/",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/security-health-plan/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare/medicare-fee-for-service-payment/hospitaloutpatientpps/downloads/jw-modifier-faqs.pdf",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/files/document/mln006764-evaluation-management-services.pdf",
+      "status": 403,
+      "internal": false,
+      "parent": "/cms-references/"
+    },
+    {
+      "url": "https://www.cms.gov/files/document/mln006397-federally-qualified-health-center.pdf",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits",
+      "status": 403,
+      "internal": false,
+      "parent": "/blog/risk-adjustment-hcc/"
+    },
+    {
+      "url": "https://www.westernhealth.com/",
+      "status": 429,
+      "internal": false,
+      "parent": "/payers/directory/western-health-advantage/"
+    },
+    {
+      "url": "https://www.westernhealth.com/provider/",
+      "status": 429,
+      "internal": false,
+      "parent": "/payers/directory/western-health-advantage/"
+    },
+    {
+      "url": "https://data.cms.gov/tools/medicare-physician-other-practitioner-look-up-tool/provider/1801038070",
+      "status": 403,
+      "internal": false,
+      "parent": "/anatomy-atlas/"
+    },
+    {
+      "url": "https://www.simplyhealthcareplans.com/florida-medicaid",
+      "status": 0,
+      "internal": false,
+      "parent": "/payers/directory/simply-healthcare-florida/"
+    },
+    {
+      "url": "https://www.caloptima.org/en/for-providers/contracting-and-credentialing",
+      "status": 429,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.dhcs.ca.gov/providers-partners/provider-application-and-validation-for-enrollment",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.caloptima.org/en/for-providers/claims-and-eligibility",
+      "status": 429,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.bcbsms.com/policy-search/medical",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.bcbsms.com/im-a-provider/provider-network-application",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://fallonhealth.org/en/providers/criteria-policies-guidelines",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://fallonhealth.org/-/media/Files/ProviderPDFs/PMcredentialing.ashx",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.globalhealth.com/oklahoma/providers/provider-portals/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.goldcoasthealthplan.org/for-providers/credentialing/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.goldcoasthealthplan.org/for-providers/claims/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://providers.bcidaho.com/medical-management/medical-policies/medical-policies.page",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://providers.bcidaho.com/forms-and-resources/resources/provider-packet.page",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://medicare.fcso.com/medical-affairs",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://medicare.fcso.com/enrollment",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.mmis.georgia.gov/portal/PubAccess.Provider%20Information/Fee%20Schedules/tabId/19/Default.aspx",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.mmis.georgia.gov/portal/PubAccess.Enrollment/tabId/26/Default.aspx",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/members/common/en-us/plm.aspx",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://networkhealth.com/provider-resources/policies-and-forms",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://networkhealth.com/provider-resources/credentialing-and-provider-informatics",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.providerservices.iehp.org/en/resources/resources-for-providers/utilization-management-clinical-criteria",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.providerservices.iehp.org/en/join-our-network",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.nctracks.nc.gov/content/public/providers/provider-enrollment.html",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.medmutual.com/For-Providers/ReimbursementPolicies",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.medmutual.com/For-Providers/Credentialing",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.nctracks.nc.gov/content/public/NCTracks-Provider-Portal?flow=PP",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.ngsmedicare.com/web/ngs/documentation",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.ngsmedicare.com/web/ngs/enrollment",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://palmettogba.com/eservices",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://med.noridianmedicare.com/web/jeb/policies",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://med.noridianmedicare.com/web/jeb/enrollment",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/providers/ky/medicaid/policies/payment.aspx",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/providers/ky/medicaid/ediera/ediera.aspx",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.novitas-solutions.com/webcenter/portal/MedicalPolicy_JL/Home",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.novitas-solutions.com/webcenter/portal/MedicareJH/pagebyid?contentId=00232305",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.youroptimumhealthcare.com/provider/clinical_health_resources",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.youroptimumhealthcare.com/provider/claims",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.scfhp.com/for-providers/provider-resources/policies-and-procedures/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.scfhp.com/for-providers/become-a-provider/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://selecthealth.org/providers/policies",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://selecthealth.org/providers/join-our-networks",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.paramounthealthcare.com/services/providers/medical-policies/medical-policies-library",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.paramounthealthcare.com/services/providers/myparamount",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.tn.gov/tenncare/providers/provider-registration.html",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.wellmark.com/provider/medical-policies-authorizations/medical-policies",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.wellmark.com/provider/resources/wellmark-provider-guide",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.wellmark.com/provider/resources",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.wellmark.com/provider/join-our-network/credentialing",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.securityhealth.org/providers/medical-policies",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.forwardhealth.wi.gov/WIPortal/Subsystem/Publications/ForwardHealthCommunications.aspx?panel=Updates",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.forwardhealth.wi.gov/WIPortal/Subsystem/Certification/EnrollmentCriteria.aspx",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.securityhealth.org/providers/credentialing-program-manual",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.cms.gov/files/document/fy-2026-addendum-ipf-pps-final-payment-updates.pdf",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/files/document/mm14190-hospice-payments-fy-2026-update.pdf",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/providers/fl/medicaid/home.aspx",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/molina-healthcare-florida/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/providers/fl/medicaid",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/molina-healthcare-florida/"
+    },
+    {
+      "url": "https://tricare.triwest.com/en/provider/tricare-provider-handbook/reimbursement-methodologies/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://tricare.triwest.com/en/provider/intro-to-tricare/certification-and-credentialing/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://vamedicaid.dmas.virginia.gov/provider/library",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://fallonhealth.org/en/providers/provider-tools",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://providers.bcidaho.com/claims-and-eligibility/member-eligibility.page",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://ccpcares.org/for-providers/provider-tools/check-eligibility/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://medicare.fcso.com/spot",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.mmis.georgia.gov/portal/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.scfhp.com/for-providers/provider-resources/prior-authorization/",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://selecthealth.org/providers/claims/eligibility",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.providerservices.iehp.org/en/resources/resources-for-providers",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.forwardhealth.wi.gov/WIPortal/Subsystem/Provider/ProviderLogin.aspx",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2026-end-stage-renal-disease-esrd-prospective-payment-system-final-rule",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/html/medicare-payment-systems.html",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.cms.gov/fqhc-rhc-news-announcements",
+      "status": 403,
+      "internal": false,
+      "parent": "/human-autonomy/"
+    },
+    {
+      "url": "https://www.medmutual.com/For-Providers/EFT-and-ERA",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.cms.gov/nosurprises",
+      "status": 403,
+      "internal": false,
+      "parent": "/tools/good-faith-estimate-generator/"
+    },
+    {
+      "url": "https://www.ngsmedicare.com/web/ngs/ngsconnex",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.molinahealthcare.com/providers/tx/medicaid",
+      "status": 403,
+      "internal": false,
+      "parent": "/payers/directory/molina-texas/"
+    },
+    {
+      "url": "https://med.noridianmedicare.com/web/jeb/topics/nmp",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://www.novitas-solutions.com/webcenter/portal/MedicareJH/pagebyid?contentId=00286381",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    },
+    {
+      "url": "https://tricare.triwest.com/en/provider/secure-portal/",
+      "status": 0,
+      "internal": false,
+      "parent": "/tools/payer-provider-manuals/"
+    }
+  ]
+}

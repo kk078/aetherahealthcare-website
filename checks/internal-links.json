@@ -1,0 +1,1998 @@
+{
+  "generatedAt": "2026-10-22T09:15:26.138Z",
+  "base": "https://aetherahealthcare.com",
+  "weakThreshold": 3,
+  "summary": {
+    "moneyPages": 104,
+    "orphan": 0,
+    "weak": 8,
+    "sitemapOrphans": 1
+  },
+  "moneyPages": [
+    {
+      "path": "/services/dermatology-billing/",
+      "kind": "specialty",
+      "contextualInbound": 1,
+      "navigationOnlyInbound": 532,
+      "totalInbound": 533,
+      "status": "weak",
+      "topAnchors": [
+        "Dermatology Billing (533)"
+      ],
+      "sampleContextualSources": [
+        "/blog/dermatology-medical-billing-guide/"
+      ]
+    },
+    {
+      "path": "/services/cardiology-billing/",
+      "kind": "specialty",
+      "contextualInbound": 2,
+      "navigationOnlyInbound": 531,
+      "totalInbound": 533,
+      "status": "weak",
+      "topAnchors": [
+        "Cardiology Billing (533)"
+      ],
+      "sampleContextualSources": [
+        "/medical-billing/general-surgery/",
+        "/blog/cardiology-medical-billing-guide/"
+      ]
+    },
+    {
+      "path": "/services/family-medicine-billing/",
+      "kind": "specialty",
+      "contextualInbound": 2,
+      "navigationOnlyInbound": 531,
+      "totalInbound": 533,
+      "status": "weak",
+      "topAnchors": [
+        "Family Medicine Billing (533)"
+      ],
+      "sampleContextualSources": [
+        "/medical-billing/internal-medicine/",
+        "/blog/family-medicine-billing-guide/"
+      ]
+    },
+    {
+      "path": "/services/orthopedic-billing/",
+      "kind": "specialty",
+      "contextualInbound": 2,
+      "navigationOnlyInbound": 531,
+      "totalInbound": 533,
+      "status": "weak",
+      "topAnchors": [
+        "Orthopedic Billing (533)"
+      ],
+      "sampleContextualSources": [
+        "/medical-billing/neurology/",
+        "/blog/orthopedic-medical-billing-guide/"
+      ]
+    },
+    {
+      "path": "/services/psychiatry-billing/",
+      "kind": "specialty",
+      "contextualInbound": 2,
+      "navigationOnlyInbound": 531,
+      "totalInbound": 533,
+      "status": "weak",
+      "topAnchors": [
+        "Psychiatry Billing (533)"
+      ],
+      "sampleContextualSources": [
+        "/medical-billing/pediatrics/",
+        "/blog/behavioral-health-billing-guide/"
+      ]
+    },
+    {
+      "path": "/services/telehealth-billing/",
+      "kind": "specialty",
+      "contextualInbound": 2,
+      "navigationOnlyInbound": 531,
+      "totalInbound": 533,
+      "status": "weak",
+      "topAnchors": [
+        "Telehealth Billing (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/services/"
+      ]
+    },
+    {
+      "path": "/services/workers-compensation-billing/",
+      "kind": "specialty",
+      "contextualInbound": 2,
+      "navigationOnlyInbound": 531,
+      "totalInbound": 533,
+      "status": "weak",
+      "topAnchors": [
+        "Workers' Comp Billing (533)"
+      ],
+      "sampleContextualSources": [
+        "/services/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/specialties/",
+      "kind": "specialty",
+      "contextualInbound": 2,
+      "navigationOnlyInbound": 531,
+      "totalInbound": 533,
+      "status": "weak",
+      "topAnchors": [
+        "Billing by SpecialtyTailored workflows for 15+ medical fields (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/medical-billing/"
+      ]
+    },
+    {
+      "path": "/medical-billing/anesthesia/",
+      "kind": "specialty",
+      "contextualInbound": 3,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 3,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Anesthesiology & Interventional Sedation billing (1)",
+        "Anesthesiology & Interventional Sedation00100–01999, 99100–99140, 01967–01968 (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/endoscopic-pituitary-odontoid-resection/",
+      "kind": "specialty",
+      "contextualInbound": 3,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 3,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Endoscopic Transnasal Odontoid & Pituitary Skull Base Resection billing (1)",
+        "Endoscopic Transnasal Odontoid & Pituitary Skull Base Resection61548, 61575, 621 (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/home-health-hospice/",
+      "kind": "specialty",
+      "contextualInbound": 3,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 3,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Home Health & Hospice Care billing (1)",
+        "Home Health & Hospice CareG0151–G0154, G0299–G0300, Q5001–Q5009, 0023 (HIPPS), G (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/minimally-invasive-adult-spine-deformity/",
+      "kind": "specialty",
+      "contextualInbound": 3,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 3,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Multi-Level Minimally Invasive Adult Spinal Deformity & Lateral Interbod (1)",
+        "Multi-Level Minimally Invasive Adult Spinal Deformity & Lateral Interbody Fusion (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/oral-surgery/",
+      "kind": "specialty",
+      "contextualInbound": 3,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 3,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Oral & Maxillofacial Surgery (CDT/CPT) billing (1)",
+        "Oral & Maxillofacial Surgery (CDT/CPT)21085, 21141–21155, 21193–21206, 21240–212 (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pain-management/",
+      "kind": "specialty",
+      "contextualInbound": 3,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 3,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Pain Management & Spine billing (1)",
+        "Pain Management & Spine62321–62323, 64483–64484, 64490–64495, 64635–64636 (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-mibg-radiopharmaceutical/",
+      "kind": "specialty",
+      "contextualInbound": 3,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 3,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Pediatric Targeted Radioiodine & MIBG Therapy for Neuroblastoma billing (1)",
+        "Pediatric Targeted Radioiodine & MIBG Therapy for Neuroblastoma79445, 79101, 788 (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-tpiat-islet-transplant/",
+      "kind": "specialty",
+      "contextualInbound": 3,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 3,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Pediatric Total Pancreatectomy with Islet Autotransplantation (TPIAT) bi (1)",
+        "Pediatric Total Pancreatectomy with Islet Autotransplantation (TPIAT)48155, 4880 (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/podiatry/",
+      "kind": "specialty",
+      "contextualInbound": 3,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 3,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Podiatry & Advanced Wound Care billing (1)",
+        "Podiatry & Advanced Wound Care11042–11047, 97597–97598, 11720–11721, Q4100–Q4280 (1)",
+        "Podiatry & Advanced Wound Care billing (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/medical-billing/wound-care/"
+      ]
+    },
+    {
+      "path": "/services/dental-billing/",
+      "kind": "specialty",
+      "contextualInbound": 3,
+      "navigationOnlyInbound": 530,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Dental Billing (533)"
+      ],
+      "sampleContextualSources": [
+        "/decks/",
+        "/services/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/addiction-medicine/",
+      "kind": "specialty",
+      "contextualInbound": 4,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 4,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Addiction Medicine & SUD billing (1)",
+        "Addiction Medicine & SUDG2086–G2088, G2074–G2080, H0001, H0004, H0015, H0020, H0 (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/sleep-medicine/"
+      ]
+    },
+    {
+      "path": "/medical-billing/general-surgery/",
+      "kind": "specialty",
+      "contextualInbound": 4,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 4,
+      "status": "ok",
+      "topAnchors": [
+        "Explore General Surgery billing (1)",
+        "General SurgeryConfirm current procedure codes and payer requirements (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/endocrinology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/interventional-radiology/",
+      "kind": "specialty",
+      "contextualInbound": 4,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 4,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Interventional Radiology & Endovascular billing (1)",
+        "Interventional Radiology & Endovascular36200–36248, 37241–37243, 37220–37235, 75 (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/cardiac-electrophysiology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/obgyn/",
+      "kind": "specialty",
+      "contextualInbound": 4,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 4,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Obstetrics & Gynecology (OB/GYN) billing (1)",
+        "Explore OB/GYN billing services (1)",
+        "Obstetrics & Gynecology (OB/GYN)59400, 59510, 57454, 58300, 76801–76817 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/decks/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/oncology/",
+      "kind": "specialty",
+      "contextualInbound": 4,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 4,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Medical Oncology & Hematology billing (1)",
+        "Explore Hematology & Oncology billing services (1)",
+        "Medical Oncology & Hematology96413, 96415, 96372, J9000–J9999 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/decks/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/orthopedic-oncology-limb-salvage/",
+      "kind": "specialty",
+      "contextualInbound": 4,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 4,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Complex Orthopedic Oncology & Limb Salvage Reconstruction billing (1)",
+        "Complex Orthopedic Oncology & Limb Salvage Reconstruction27075, 27076, 27645, 27 (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/diep-flap-breast-reconstruction/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-epilepsy-surgery/",
+      "kind": "specialty",
+      "contextualInbound": 4,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 4,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Pediatric Epilepsy Surgery & Hemispherotomy billing (1)",
+        "Pediatric Epilepsy Surgery & Hemispherotomy61760, 61781, 61533, 61534, 61536, 61 (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/pediatric-biochemical-genetics/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-hirschsprung-pull-through/",
+      "kind": "specialty",
+      "contextualInbound": 4,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 4,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Hirschsprung Disease & Transanal Endorectal Pull-Through (TERPT / Soav (2)",
+        "Explore Pediatric Hirschsprung Disease & Transanal Endorectal Pull-Through (TERP (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/pediatric-tef-esophageal-atresia/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-vascular-malformations/",
+      "kind": "specialty",
+      "contextualInbound": 4,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 4,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Pediatric Vascular Malformations, Hemangiomas & Sclerotherapy billing (1)",
+        "Pediatric Vascular Malformations, Hemangiomas & Sclerotherapy37241, 49185, 37242 (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/pain-management/"
+      ]
+    },
+    {
+      "path": "/services/pharmacy-billing/",
+      "kind": "specialty",
+      "contextualInbound": 4,
+      "navigationOnlyInbound": 529,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Pharmacy Billing (533)"
+      ],
+      "sampleContextualSources": [
+        "/decks/",
+        "/glossary/",
+        "/services/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/services/reporting-analytics/",
+      "kind": "service",
+      "contextualInbound": 4,
+      "navigationOnlyInbound": 529,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Reporting & Analytics (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/services/",
+        "/services/ar-followup/",
+        "/services/payment-posting/"
+      ]
+    },
+    {
+      "path": "/medical-billing/endocrinology/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Endocrinology billing (1)",
+        "Explore Endocrinology billing services (1)",
+        "EndocrinologyConfirm current codes against the applicable payer policy (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/decks/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/general-surgery/"
+      ]
+    },
+    {
+      "path": "/medical-billing/fqhc/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "FQHC & Community Health Clinics billing (2)",
+        "Explore FQHC & Community Health Clinics billing (1)",
+        "FQHC & Community Health ClinicsG0466–G0470, G0511, G0512, 0521 (UB-04), 0900 (Me (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/internal-medicine/",
+        "/medical-billing/home-health-hospice/"
+      ]
+    },
+    {
+      "path": "/medical-billing/gastroenterology/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Gastroenterology billing (1)",
+        "Explore Gastroenterology billing services (1)",
+        "Gastroenterology43180–43285, 45300–45398, 99202–99215 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/decks/",
+        "/medical-billing/",
+        "/specialties/",
+        "/blog/gastroenterology-medical-billing-guide/"
+      ]
+    },
+    {
+      "path": "/medical-billing/hipec-surgical-oncology/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "Cytoreductive Surgery & Hyperthermic Intraperitoneal Chemotherapy (HIPEC) billin (2)",
+        "Explore Cytoreductive Surgery & Hyperthermic Intraperitoneal Chemotherapy (HIPEC (1)",
+        "Cytoreductive Surgery & Hyperthermic Intraperitoneal Chemotherapy (HIPEC)49203,  (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/gynecologic-oncology/",
+        "/medical-billing/pediatric-neuro-oncology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/infectious-disease/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "Infectious Disease & OPAT billing (3)",
+        "Explore Infectious Disease & OPAT billing (1)",
+        "Infectious Disease & OPAT99205, 99215, 99223, 99233, 96365–96379, 99453–99458, G (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/medical-billing/addiction-medicine/",
+        "/medical-billing/home-health-hospice/",
+        "/medical-billing/pediatric-biochemical-genetics/"
+      ]
+    },
+    {
+      "path": "/medical-billing/nephrology/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Nephrology & Dialysis Centers billing (1)",
+        "Explore Nephrology billing services (1)",
+        "Nephrology & Dialysis Centers90951–90970, 90935–90945, 90989, 90999, 99202–99215 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/decks/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/pain-management/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pathology/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "Pathology & Clinical Laboratory billing (2)",
+        "Explore Pathology & Clinical Laboratory billing (1)",
+        "Pathology & Clinical Laboratory80047–89398, 88300–88309, 88312, 88342, MolDX Z-C (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/anesthesia/",
+        "/medical-billing/urgent-care/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-biochemical-genetics/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Inborn Errors of Metabolism & Biochemical Genetics billing (2)",
+        "Explore Pediatric Inborn Errors of Metabolism & Biochemical Genetics billing (1)",
+        "Pediatric Inborn Errors of Metabolism & Biochemical Genetics82009, 82136, 82139, (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/infectious-disease/",
+        "/medical-billing/pediatric-mibg-radiopharmaceutical/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-single-ventricle-palliation/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Single-Ventricle Congenital Heart Disease Palliation (Norwood / Glenn  (3)",
+        "Explore Pediatric Single-Ventricle Congenital Heart Disease Palliation (Norwood  (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/cardiac-lvad-reoperation/",
+        "/medical-billing/pediatric-dbs-neuromodulation/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-tef-esophageal-atresia/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Tracheoesophageal Fistula & Esophageal Atresia (TEF/EA) Repair billing (2)",
+        "Explore Pediatric Tracheoesophageal Fistula & Esophageal Atresia (TEF/EA) Repair (1)",
+        "Pediatric Tracheoesophageal Fistula & Esophageal Atresia (TEF/EA) Repair43305, 4 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/pediatric-cdh-ecmo/",
+        "/medical-billing/pediatric-hirschsprung-pull-through/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatrics/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Pediatrics billing (1)",
+        "Explore Pediatrics billing services (1)",
+        "Pediatrics99381–99394, 90460–90474, 99202–99215 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/decks/",
+        "/medical-billing/",
+        "/specialties/",
+        "/blog/pediatric-medical-billing-guide/"
+      ]
+    },
+    {
+      "path": "/medical-billing/urology/",
+      "kind": "specialty",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 5,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Urology billing (1)",
+        "Explore Urology billing services (1)",
+        "Urology52000, 52601, 55700, 51726–51729 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/decks/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/radiology/"
+      ]
+    },
+    {
+      "path": "/services/credentialing/",
+      "kind": "service",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 528,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Provider Credentialing (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/services/",
+        "/tools/clean-claim-scorecard/",
+        "/blog/optimizing-provider-credentialing-timeline-caqh/",
+        "/blog/medical-billing-for-small-practices/"
+      ]
+    },
+    {
+      "path": "/services/payment-posting/",
+      "kind": "service",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 528,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Payment Posting (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/glossary/",
+        "/services/",
+        "/services/claims-billing/",
+        "/services/patient-collections/"
+      ]
+    },
+    {
+      "path": "/services/prior-authorization/",
+      "kind": "service",
+      "contextualInbound": 5,
+      "navigationOnlyInbound": 528,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Prior Authorization (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/services/",
+        "/services/credentialing/",
+        "/services/eligibility-verification/",
+        "/blog/prior-authorization-process-guide-for-practices/"
+      ]
+    },
+    {
+      "path": "/medical-billing/adult-congenital-heart-disease/",
+      "kind": "specialty",
+      "contextualInbound": 6,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 6,
+      "status": "ok",
+      "topAnchors": [
+        "Adult Congenital Heart Disease (ACHD) & Fontan Conversion billing (3)",
+        "Explore Adult Congenital Heart Disease (ACHD) & Fontan Conversion billing (1)",
+        "Adult Congenital Heart Disease (ACHD) & Fontan Conversion33735, 33737, 33608, 33 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/cardiac-electrophysiology/",
+        "/medical-billing/cardiac-lvad-reoperation/"
+      ]
+    },
+    {
+      "path": "/medical-billing/asc/",
+      "kind": "specialty",
+      "contextualInbound": 6,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 6,
+      "status": "ok",
+      "topAnchors": [
+        "Ambulatory Surgery Centers (ASC) billing (4)",
+        "Explore Ambulatory Surgery Centers (ASC) billing (1)",
+        "Ambulatory Surgery Centers (ASC)UB-04 Rev Codes 0490, 0360, 0278; CPT 29881, 453 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/medical-billing/gastroenterology/",
+        "/medical-billing/pediatrics/",
+        "/medical-billing/ophthalmology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/diep-flap-breast-reconstruction/",
+      "kind": "specialty",
+      "contextualInbound": 6,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 6,
+      "status": "ok",
+      "topAnchors": [
+        "Complex Adult Reconstructive Microsurgery & Autologous DIEP Flap Breast Reconstr (4)",
+        "Explore Complex Adult Reconstructive Microsurgery & Autologous DIEP Flap Breast  (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/orthopedic-oncology-limb-salvage/",
+        "/medical-billing/pediatric-biochemical-genetics/"
+      ]
+    },
+    {
+      "path": "/medical-billing/gynecologic-oncology/",
+      "kind": "specialty",
+      "contextualInbound": 6,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 6,
+      "status": "ok",
+      "topAnchors": [
+        "Gynecologic Oncology & Pelvic Surgery billing (3)",
+        "Explore Gynecologic Oncology & Pelvic Surgery billing (1)",
+        "Gynecologic Oncology & Pelvic Surgery58210, 58548, 38571–38572, 49220, 58953–589 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/colorectal-surgery/",
+        "/medical-billing/hipec-surgical-oncology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/internal-medicine/",
+      "kind": "specialty",
+      "contextualInbound": 6,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 6,
+      "status": "ok",
+      "topAnchors": [
+        "Explore Internal Medicine billing (1)",
+        "Explore Internal Medicine billing services (1)",
+        "Hospital & E/M Billing Guide (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/decks/",
+        "/glossary/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-dbs-neuromodulation/",
+      "kind": "specialty",
+      "contextualInbound": 6,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 6,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Deep Brain Stimulation & Neuromodulation billing (3)",
+        "Explore Pediatric Deep Brain Stimulation & Neuromodulation billing (1)",
+        "Pediatric Deep Brain Stimulation & Neuromodulation61863, 61864, 61867, 61868, 61 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/pediatric-epilepsy-surgery/",
+        "/medical-billing/complex-robotic-hernia-reconstruction/"
+      ]
+    },
+    {
+      "path": "/medical-billing/plastic-reconstructive-surgery/",
+      "kind": "specialty",
+      "contextualInbound": 6,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 6,
+      "status": "ok",
+      "topAnchors": [
+        "Plastic & Reconstructive Surgery billing (3)",
+        "Explore Plastic & Reconstructive Surgery billing (1)",
+        "Plastic & Reconstructive Surgery19357–19364, 15823, 15830, 19318, 14000–14061, 1 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/oral-surgery/",
+        "/medical-billing/radiation-oncology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/radiology/",
+      "kind": "specialty",
+      "contextualInbound": 6,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 6,
+      "status": "ok",
+      "topAnchors": [
+        "Radiology & Diagnostic Imaging billing (3)",
+        "Explore Radiology & Diagnostic Imaging billing (1)",
+        "Radiology & Diagnostic Imaging71046, 74177, 70553, 77067 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/gastroenterology/",
+        "/medical-billing/pediatrics/"
+      ]
+    },
+    {
+      "path": "/medical-billing/wound-care/",
+      "kind": "specialty",
+      "contextualInbound": 6,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 6,
+      "status": "ok",
+      "topAnchors": [
+        "Wound Care & Hyperbaric Medicine billing (3)",
+        "Explore Wound Care & Hyperbaric Medicine billing (1)",
+        "Wound Care & Hyperbaric Medicine11042–11047, 97597–97598, Q4100–Q4280, 99183, G0 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/physical-therapy/",
+        "/medical-billing/podiatry/"
+      ]
+    },
+    {
+      "path": "/services/ar-followup/",
+      "kind": "service",
+      "contextualInbound": 6,
+      "navigationOnlyInbound": 527,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "AR Follow-Up (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/services/",
+        "/services/denial-management/",
+        "/services/patient-collections/",
+        "/services/reporting-analytics/"
+      ]
+    },
+    {
+      "path": "/medical-billing/complex-spine-deformity/",
+      "kind": "specialty",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 7,
+      "status": "ok",
+      "topAnchors": [
+        "Complex Spine Deformity & Vertebral Column Resection billing (4)",
+        "Explore Complex Spine Deformity & Vertebral Column Resection billing (1)",
+        "Complex Spine Deformity & Vertebral Column Resection22206, 22207, 22208, 22210,  (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/spine-surgery/",
+        "/medical-billing/pediatric-orthopedics/"
+      ]
+    },
+    {
+      "path": "/medical-billing/emergency-medicine/",
+      "kind": "specialty",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 7,
+      "status": "ok",
+      "topAnchors": [
+        "Emergency Medicine & Hospitalists billing (4)",
+        "Explore Emergency Medicine & Hospitalists billing (1)",
+        "Emergency Medicine & Hospitalists99281–99285, 99291–99292, 99221–99223, 99231–99 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/endocrinology/",
+        "/medical-billing/internal-medicine/"
+      ]
+    },
+    {
+      "path": "/medical-billing/head-and-neck-free-flap-reconstruction/",
+      "kind": "specialty",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 7,
+      "status": "ok",
+      "topAnchors": [
+        "Complex Adult Head & Neck Microvascular Free Flap Reconstruction (Fibula / ALT F (5)",
+        "Explore Complex Adult Head & Neck Microvascular Free Flap Reconstruction (Fibula (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/pediatric-facial-reanimation/",
+        "/medical-billing/orthopedic-oncology-limb-salvage/"
+      ]
+    },
+    {
+      "path": "/medical-billing/panfacial-trauma-reconstruction/",
+      "kind": "specialty",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 7,
+      "status": "ok",
+      "topAnchors": [
+        "Open Craniofacial Fracture & Panfacial Trauma Reconstruction billing (4)",
+        "Explore Open Craniofacial Fracture & Panfacial Trauma Reconstruction billing (1)",
+        "Open Craniofacial Fracture & Panfacial Trauma Reconstruction21422, 21423, 21435, (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/spine-surgery/",
+        "/medical-billing/urogynecology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-neuro-oncology/",
+      "kind": "specialty",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 7,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Neuro-Oncology & Posterior Fossa Surgery billing (4)",
+        "Explore Pediatric Neuro-Oncology & Posterior Fossa Surgery billing (1)",
+        "Pediatric Neuro-Oncology & Posterior Fossa Surgery61518, 61520, 61545, 62223, 62 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/colorectal-surgery/",
+        "/medical-billing/pancreatic-surgery/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-spine-eos/",
+      "kind": "specialty",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 7,
+      "status": "ok",
+      "topAnchors": [
+        "Complex Pediatric Spine Surgery & Early-Onset Scoliosis (EOS) billing (4)",
+        "Explore Complex Pediatric Spine Surgery & Early-Onset Scoliosis (EOS) billing (1)",
+        "Complex Pediatric Spine Surgery & Early-Onset Scoliosis (EOS)22842, 22843, 22848 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/spine-surgery/",
+        "/medical-billing/pediatric-orthopedics/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-transplant/",
+      "kind": "specialty",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 7,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Solid Organ Transplant & Intestinal Rehabilitation billing (4)",
+        "Explore Pediatric Solid Organ Transplant & Intestinal Rehabilitation billing (1)",
+        "Pediatric Solid Organ Transplant & Intestinal Rehabilitation44132, 44133, 44135, (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/nephrology/",
+        "/medical-billing/pediatric-biochemical-genetics/"
+      ]
+    },
+    {
+      "path": "/medical-billing/physical-therapy/",
+      "kind": "specialty",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 7,
+      "status": "ok",
+      "topAnchors": [
+        "Physical Therapy & Rehabilitation billing (3)",
+        "Explore Physical Therapy & Rehabilitation billing (1)",
+        "Physical Therapy Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/glossary/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/pediatrics/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pulmonology/",
+      "kind": "specialty",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 7,
+      "status": "ok",
+      "topAnchors": [
+        "Pulmonology & Sleep Medicine billing (3)",
+        "Explore Pulmonology & Sleep Medicine billing (1)",
+        "Explore Pulmonology billing services (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/decks/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/neurology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/retina-vitreous/",
+      "kind": "specialty",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 7,
+      "status": "ok",
+      "topAnchors": [
+        "Ophthalmology & Vitreoretinal Surgery billing (4)",
+        "Explore Ophthalmology & Vitreoretinal Surgery billing (1)",
+        "Ophthalmology & Vitreoretinal Surgery67028, 67108, 67113, 67210, 67228, 92134, 9 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/ophthalmology/",
+        "/medical-billing/oncology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/taaa-fenestrated-evar/",
+      "kind": "specialty",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 7,
+      "status": "ok",
+      "topAnchors": [
+        "Thoracoabdominal Aortic Aneurysm (TAAA) Repair & Branched/Fenestrated EVAR (FEVA (5)",
+        "Explore Thoracoabdominal Aortic Aneurysm (TAAA) Repair & Branched/Fenestrated EV (1)",
+        "Explore Playbook (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/gastroenterology/",
+        "/medical-billing/interventional-radiology/"
+      ]
+    },
+    {
+      "path": "/services/eligibility-verification/",
+      "kind": "service",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 526,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Eligibility Verification (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/services/",
+        "/services/credentialing/",
+        "/services/prior-authorization/",
+        "/tools/clean-claim-scorecard/"
+      ]
+    },
+    {
+      "path": "/services/medical-coding/",
+      "kind": "service",
+      "contextualInbound": 7,
+      "navigationOnlyInbound": 526,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Medical Coding (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/services/",
+        "/services/claims-billing/",
+        "/services/denial-management/",
+        "/services/telehealth-billing/"
+      ]
+    },
+    {
+      "path": "/medical-billing/adult-retroperitoneal-sarcoma/",
+      "kind": "specialty",
+      "contextualInbound": 8,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 8,
+      "status": "ok",
+      "topAnchors": [
+        "Complex Adult Retroperitoneal Sarcoma & Multivisceral Compartment Resection bill (5)",
+        "Explore Complex Adult Retroperitoneal Sarcoma & Multivisceral Compartment Resect (1)",
+        "Complex Adult Retroperitoneal Sarcoma & Multivisceral Compartment Resection49203 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/hepatobiliary-surgery/",
+        "/medical-billing/pediatric-neuro-oncology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/neurology/",
+      "kind": "specialty",
+      "contextualInbound": 8,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 8,
+      "status": "ok",
+      "topAnchors": [
+        "Neurology billing (3)",
+        "Explore Neurology billing (1)",
+        "Explore Neurology billing services (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/decks/",
+        "/glossary/",
+        "/medical-billing/",
+        "/specialties/"
+      ]
+    },
+    {
+      "path": "/medical-billing/ophthalmology/",
+      "kind": "specialty",
+      "contextualInbound": 8,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 8,
+      "status": "ok",
+      "topAnchors": [
+        "Ophthalmology & Optometry billing (5)",
+        "Explore Ophthalmology & Optometry billing (1)",
+        "Ophthalmology & Optometry66984, 66982, 67028, 92004–92014, 92134 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/general-surgery/",
+        "/medical-billing/internal-medicine/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-craniosynostosis/",
+      "kind": "specialty",
+      "contextualInbound": 8,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 8,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Craniosynostosis & Cranial Vault Remodeling billing (5)",
+        "Explore Pediatric Craniosynostosis & Cranial Vault Remodeling billing (1)",
+        "Pediatric Craniosynostosis & Cranial Vault Remodeling21175, 21179, 21180, 61550, (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/spine-surgery/",
+        "/medical-billing/pediatric-craniofacial/"
+      ]
+    },
+    {
+      "path": "/medical-billing/radiation-oncology/",
+      "kind": "specialty",
+      "contextualInbound": 8,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 8,
+      "status": "ok",
+      "topAnchors": [
+        "Radiation Oncology & Proton Therapy billing (5)",
+        "Explore Radiation Oncology & Proton Therapy billing (1)",
+        "Radiation Oncology & Proton Therapy77261–77263, 77300, 77301, 77334, 77338, 7738 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/physical-therapy/",
+        "/medical-billing/allergy-immunology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/complex-robotic-hernia-reconstruction/",
+      "kind": "specialty",
+      "contextualInbound": 9,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 9,
+      "status": "ok",
+      "topAnchors": [
+        "Multi-Compartment Complex Robotic & Laparoscopic Hernia Reconstruction billing (6)",
+        "Explore Multi-Compartment Complex Robotic & Laparoscopic Hernia Reconstruction b (1)",
+        "Multi-Compartment Complex Robotic & Laparoscopic Hernia Reconstruction49591, 495 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/infectious-disease/",
+        "/medical-billing/taaa-fenestrated-evar/"
+      ]
+    },
+    {
+      "path": "/medical-billing/vascular-surgery/",
+      "kind": "specialty",
+      "contextualInbound": 9,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 9,
+      "status": "ok",
+      "topAnchors": [
+        "Vascular Surgery & Endovascular Interventions billing (6)",
+        "Explore Vascular Surgery & Endovascular Interventions billing (1)",
+        "Vascular Surgery & Endovascular Interventions34701–34716, 37220–37235, 36475, 36 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/obgyn/",
+        "/medical-billing/nephrology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/rheumatology/",
+      "kind": "specialty",
+      "contextualInbound": 10,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 10,
+      "status": "ok",
+      "topAnchors": [
+        "Rheumatology & Biologic Infusion billing (6)",
+        "Explore Rheumatology & Biologic Infusion billing (1)",
+        "Explore Rheumatology billing services (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/decks/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/oncology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/skull-base-surgery/",
+      "kind": "specialty",
+      "contextualInbound": 10,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 10,
+      "status": "ok",
+      "topAnchors": [
+        "Complex Lateral Skull Base Surgery & Acoustic Neuroma Resection billing (7)",
+        "Explore Complex Lateral Skull Base Surgery & Acoustic Neuroma Resection billing (1)",
+        "Complex Lateral Skull Base Surgery & Acoustic Neuroma Resection61526, 61530, 615 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/hepatobiliary-surgery/",
+        "/medical-billing/pediatric-facial-reanimation/"
+      ]
+    },
+    {
+      "path": "/medical-billing/urgent-care/",
+      "kind": "specialty",
+      "contextualInbound": 10,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 10,
+      "status": "ok",
+      "topAnchors": [
+        "Urgent Care & Walk-In Clinics billing (7)",
+        "Explore Urgent Care & Walk-In Clinics billing (1)",
+        "Urgent Care & Walk-In Clinics99202–99214, S9088, S9083, 87880, 87804, 12001–1200 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/endocrinology/",
+        "/medical-billing/obgyn/"
+      ]
+    },
+    {
+      "path": "/medical-billing/sleep-medicine/",
+      "kind": "specialty",
+      "contextualInbound": 11,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 11,
+      "status": "ok",
+      "topAnchors": [
+        "Sleep Medicine & Polysomnography billing (8)",
+        "Explore Sleep Medicine & Polysomnography billing (1)",
+        "Sleep Medicine & Polysomnography95800, 95806, 95810, 95811, 95782, G0398–G0400,  (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/endocrinology/",
+        "/medical-billing/neurology/"
+      ]
+    },
+    {
+      "path": "/services/claims-billing/",
+      "kind": "specialty",
+      "contextualInbound": 11,
+      "navigationOnlyInbound": 522,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Claims & Billing (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/services/",
+        "/services/denial-management/",
+        "/services/eligibility-verification/",
+        "/services/medical-coding/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pancreatic-surgery/",
+      "kind": "specialty",
+      "contextualInbound": 12,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 12,
+      "status": "ok",
+      "topAnchors": [
+        "Complex Pancreatic Surgery & Whipple Resection billing (9)",
+        "Explore Complex Pancreatic Surgery & Whipple Resection billing (1)",
+        "Complex Pancreatic Surgery & Whipple Resection48150, 48153, 48154, 48155, 48140, (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/hepatobiliary-surgery/",
+        "/medical-billing/colorectal-surgery/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-facial-reanimation/",
+      "kind": "specialty",
+      "contextualInbound": 12,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 12,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Complex Facial Reanimation & Free Gracilis Transfer billing (9)",
+        "Explore Pediatric Complex Facial Reanimation & Free Gracilis Transfer billing (1)",
+        "Pediatric Complex Facial Reanimation & Free Gracilis Transfer15756, 64890, 64891 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/nicu-picu/",
+        "/medical-billing/pediatric-craniofacial/"
+      ]
+    },
+    {
+      "path": "/medical-billing/cardiac-lvad-reoperation/",
+      "kind": "specialty",
+      "contextualInbound": 13,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 13,
+      "status": "ok",
+      "topAnchors": [
+        "Complex Adult Cardiac Reoperation & Ventricular Assist Devices (LVAD) billing (10)",
+        "Explore Complex Adult Cardiac Reoperation & Ventricular Assist Devices (LVAD) bi (1)",
+        "Complex Adult Cardiac Reoperation & Ventricular Assist Devices (LVAD)33979, 3398 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/internal-medicine/",
+        "/medical-billing/home-health-hospice/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-airway/",
+      "kind": "specialty",
+      "contextualInbound": 13,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 13,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Airway Reconstruction & Complex Laryngotracheal Stenosis billing (10)",
+        "Explore Pediatric Airway Reconstruction & Complex Laryngotracheal Stenosis billi (1)",
+        "Pediatric Airway Reconstruction & Complex Laryngotracheal Stenosis31587, 31590,  (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/urgent-care/",
+        "/medical-billing/cardiothoracic-surgery/"
+      ]
+    },
+    {
+      "path": "/medical-billing/skull-base-cerebrovascular-bypass/",
+      "kind": "specialty",
+      "contextualInbound": 13,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 13,
+      "status": "ok",
+      "topAnchors": [
+        "Complex Skull Base Cerebrovascular Bypass & Microvascular EC-IC Anastomosis bill (10)",
+        "Explore Complex Skull Base Cerebrovascular Bypass & Microvascular EC-IC Anastomo (1)",
+        "Complex Skull Base Cerebrovascular Bypass & Microvascular EC-IC Anastomosis61711 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/gastroenterology/",
+        "/medical-billing/nephrology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/urogynecology/",
+      "kind": "specialty",
+      "contextualInbound": 13,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 13,
+      "status": "ok",
+      "topAnchors": [
+        "Gynecologic Minimally Invasive Surgery & Urogynecology billing (10)",
+        "Explore Gynecologic Minimally Invasive Surgery & Urogynecology billing (1)",
+        "Gynecologic Minimally Invasive Surgery & Urogynecology57425, 57288, 51726–51729, (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/neurology/",
+        "/medical-billing/urology/"
+      ]
+    },
+    {
+      "path": "/services/compliance-auditing/",
+      "kind": "service",
+      "contextualInbound": 13,
+      "navigationOnlyInbound": 520,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Compliance & Auditing (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/glossary/",
+        "/services/",
+        "/services/credentialing/",
+        "/services/medical-coding/"
+      ]
+    },
+    {
+      "path": "/medical-billing/cardiac-electrophysiology/",
+      "kind": "specialty",
+      "contextualInbound": 14,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 14,
+      "status": "ok",
+      "topAnchors": [
+        "Cardiac Electrophysiology & Catheter Ablation billing (11)",
+        "Explore Cardiac Electrophysiology & Catheter Ablation billing (1)",
+        "Cardiac Electrophysiology & Catheter Ablation93653, 93656, 93613, 93662, 93655,  (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/pain-management/",
+        "/medical-billing/pulmonology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-orthopedics/",
+      "kind": "specialty",
+      "contextualInbound": 14,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 14,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Orthopedics & Scoliosis Deformity Correction billing (11)",
+        "Explore Pediatric Orthopedics & Scoliosis Deformity Correction billing (1)",
+        "Pediatric Orthopedics & Scoliosis Deformity Correction22800, 22802, 22804, 22842 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/fqhc/",
+        "/medical-billing/nicu-picu/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-sacrococcygeal-teratoma/",
+      "kind": "specialty",
+      "contextualInbound": 14,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 14,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Sacrococcygeal Teratoma (SCT) & Congenital Presacral Tumor Resection b (11)",
+        "Explore Pediatric Sacrococcygeal Teratoma (SCT) & Congenital Presacral Tumor Res (1)",
+        "Pediatric Sacrococcygeal Teratoma (SCT) & Congenital Presacral Tumor Resection49 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/interventional-radiology/",
+        "/medical-billing/fqhc/"
+      ]
+    },
+    {
+      "path": "/services/patient-collections/",
+      "kind": "service",
+      "contextualInbound": 15,
+      "navigationOnlyInbound": 518,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Patient Collections (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/glossary/",
+        "/services/",
+        "/services/ar-followup/",
+        "/services/eligibility-verification/"
+      ]
+    },
+    {
+      "path": "/medical-billing/allergy-immunology/",
+      "kind": "specialty",
+      "contextualInbound": 16,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 16,
+      "status": "ok",
+      "topAnchors": [
+        "Allergy, Asthma & Clinical Immunology billing (14)",
+        "Explore Allergy, Asthma & Clinical Immunology billing (1)",
+        "Allergy, Asthma & Clinical Immunology95004, 95024, 95165, 95115, 95117, 94010, 9 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/medical-billing/pain-management/",
+        "/medical-billing/radiology/",
+        "/medical-billing/oncology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-craniofacial/",
+      "kind": "specialty",
+      "contextualInbound": 16,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 16,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Craniofacial & Cleft Palate Surgery billing (13)",
+        "Explore Pediatric Craniofacial & Cleft Palate Surgery billing (1)",
+        "Pediatric Craniofacial & Cleft Palate Surgery21141, 21142, 21145, 21155, 21175,  (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/oral-surgery/",
+        "/medical-billing/plastic-reconstructive-surgery/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-pulmonology/",
+      "kind": "specialty",
+      "contextualInbound": 16,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 16,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Allergy, Pulmonology & Cystic Fibrosis billing (13)",
+        "Explore Pediatric Allergy, Pulmonology & Cystic Fibrosis billing (1)",
+        "Pediatric Allergy, Pulmonology & Cystic Fibrosis94010, 94060, 94726, 82435, 9464 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/endocrinology/",
+        "/medical-billing/neurology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/robotic-urologic-oncology/",
+      "kind": "specialty",
+      "contextualInbound": 16,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 16,
+      "status": "ok",
+      "topAnchors": [
+        "Cytoreductive Prostatectomy & High-Risk Robotic Urologic Oncology billing (13)",
+        "Explore Cytoreductive Prostatectomy & High-Risk Robotic Urologic Oncology billin (1)",
+        "Cytoreductive Prostatectomy & High-Risk Robotic Urologic Oncology55866, 38571, 3 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/gynecologic-oncology/",
+        "/medical-billing/pediatric-orthopedics/"
+      ]
+    },
+    {
+      "path": "/medical-billing/cardiothoracic-surgery/",
+      "kind": "specialty",
+      "contextualInbound": 17,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 17,
+      "status": "ok",
+      "topAnchors": [
+        "Cardiothoracic Surgery & Extracorporeal Membrane Oxygenation (ECMO) billing (14)",
+        "Explore Cardiothoracic Surgery & Extracorporeal Membrane Oxygenation (ECMO) bill (1)",
+        "Cardiothoracic Surgery & Extracorporeal Membrane Oxygenation (ECMO)33533–33536,  (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/general-surgery/",
+        "/medical-billing/gastroenterology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/colorectal-surgery/",
+      "kind": "specialty",
+      "contextualInbound": 17,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 17,
+      "status": "ok",
+      "topAnchors": [
+        "Colorectal Surgery & Complex Pelvic Exenteration billing (14)",
+        "Explore Colorectal Surgery & Complex Pelvic Exenteration billing (1)",
+        "Colorectal Surgery & Complex Pelvic Exenteration45110, 45119, 45126, 45136, 4414 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/urology/",
+        "/medical-billing/gynecologic-oncology/"
+      ]
+    },
+    {
+      "path": "/services/denial-management/",
+      "kind": "service",
+      "contextualInbound": 17,
+      "navigationOnlyInbound": 516,
+      "totalInbound": 533,
+      "status": "ok",
+      "topAnchors": [
+        "Denial Management (533)"
+      ],
+      "sampleContextualSources": [
+        "/",
+        "/services/",
+        "/services/ar-followup/",
+        "/services/claims-billing/",
+        "/services/medical-coding/"
+      ]
+    },
+    {
+      "path": "/medical-billing/ent/",
+      "kind": "specialty",
+      "contextualInbound": 18,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 18,
+      "status": "ok",
+      "topAnchors": [
+        "Otolaryngology & ENT billing (15)",
+        "Explore Otolaryngology & ENT billing (1)",
+        "Otolaryngology & ENT31231–31298, 95165, 92557, 69210, 69436, 30520, 30140 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/endocrinology/",
+        "/medical-billing/general-surgery/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-heme-onc/",
+      "kind": "specialty",
+      "contextualInbound": 20,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 20,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Hematology-Oncology & Cellular Therapy billing (17)",
+        "Explore Pediatric Hematology-Oncology & Cellular Therapy billing (1)",
+        "Pediatric Hematology-Oncology & Cellular Therapy38205, 38206, 38240, 38241, 0537 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/physical-therapy/",
+        "/medical-billing/oncology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/hepatobiliary-surgery/",
+      "kind": "specialty",
+      "contextualInbound": 21,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 21,
+      "status": "ok",
+      "topAnchors": [
+        "Hepatobiliary Surgery & Complex Liver Resection billing (18)",
+        "Explore Hepatobiliary Surgery & Complex Liver Resection billing (1)",
+        "Hepatobiliary Surgery & Complex Liver Resection47120, 47122, 47125, 47130, 47760 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/ophthalmology/",
+        "/medical-billing/nephrology/"
+      ]
+    },
+    {
+      "path": "/medical-billing/pediatric-cdh-ecmo/",
+      "kind": "specialty",
+      "contextualInbound": 29,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 29,
+      "status": "ok",
+      "topAnchors": [
+        "Pediatric Congenital Diaphragmatic Hernia (CDH) & ECMO Surgical Repair billing (26)",
+        "Explore Pediatric Congenital Diaphragmatic Hernia (CDH) & ECMO Surgical Repair b (1)",
+        "Pediatric Congenital Diaphragmatic Hernia (CDH) & ECMO Surgical Repair39503, 395 (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/ophthalmology/",
+        "/medical-billing/asc/"
+      ]
+    },
+    {
+      "path": "/medical-billing/nicu-picu/",
+      "kind": "specialty",
+      "contextualInbound": 32,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 32,
+      "status": "ok",
+      "topAnchors": [
+        "Neonatal & Pediatric Intensive Care (NICU/PICU) billing (29)",
+        "Explore Neonatal & Pediatric Intensive Care (NICU/PICU) billing (1)",
+        "Neonatal & Pediatric Intensive Care (NICU/PICU)99468–99476, 99465, 36510, 36660, (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/internal-medicine/",
+        "/medical-billing/pediatrics/"
+      ]
+    },
+    {
+      "path": "/medical-billing/trauma-critical-care/",
+      "kind": "specialty",
+      "contextualInbound": 32,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 32,
+      "status": "ok",
+      "topAnchors": [
+        "Surgical Critical Care & Trauma Surgery billing (29)",
+        "Explore Surgical Critical Care & Trauma Surgery billing (1)",
+        "Surgical Critical Care & Trauma Surgery49000, 49002, 13160, 11044, 32100, 32110, (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/physical-therapy/",
+        "/medical-billing/asc/"
+      ]
+    },
+    {
+      "path": "/medical-billing/spine-surgery/",
+      "kind": "specialty",
+      "contextualInbound": 35,
+      "navigationOnlyInbound": 0,
+      "totalInbound": 35,
+      "status": "ok",
+      "topAnchors": [
+        "Orthopedic Spine Surgery & Complex Arthrodesis billing (32)",
+        "Explore Orthopedic Spine Surgery & Complex Arthrodesis billing (1)",
+        "Orthopedic Spine Surgery & Complex Arthrodesis22551, 22552, 22633, 22634, 22840– (1)"
+      ],
+      "sampleContextualSources": [
+        "/case-studies/",
+        "/medical-billing/",
+        "/specialties/",
+        "/medical-billing/general-surgery/",
+        "/medical-billing/pediatrics/"
+      ]
+    }
+  ],
+  "sitemapOrphans": [
+    "/compliance/"
+  ]
+}

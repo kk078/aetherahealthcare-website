@@ -1,0 +1,274 @@
+{
+  "generatedAt": "2026-10-22T09:04:53.846Z",
+  "base": "https://aetherahealthcare.com",
+  "total": 10,
+  "errors": 1232,
+  "pages": [
+    {
+      "path": "/",
+      "issues": 176,
+      "failedToLoad": false,
+      "rules": [
+        {
+          "code": "color-contrast",
+          "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
+          "runner": "axe",
+          "count": 110,
+          "sample": "html > body > div:nth-child(3) > section:nth-child(12) > div > div:nth-child(2) > div:nth-child(2) > a > span:nth-child(1)"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.23:1. Recommendation:  change text colour to #feffff.",
+          "runner": "htmlcs",
+          "count": 64,
+          "sample": "html > body > div:nth-child(3) > section:nth-child(4) > div:nth-child(5) > div > div:nth-child(2) > div > svg > g:nth-child(8) > text"
+        },
+        {
+          "code": "nested-interactive",
+          "message": "Interactive controls must not be nested (https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI)",
+          "runner": "axe",
+          "count": 1,
+          "sample": "html > body > div:nth-child(3) > section:nth-child(4) > div:nth-child(5) > div > div:nth-child(2) > div"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 1.04:1. Recommendation:  change text colour to #fdfeff.",
+          "runner": "htmlcs",
+          "count": 1,
+          "sample": "html > body > div:nth-child(3) > section:nth-child(4) > div:nth-child(5) > div > div:nth-child(2) > div > svg > g:nth-child(21) > text:nth-child(7)"
+        }
+      ]
+    },
+    {
+      "path": "/services/denial-management/",
+      "issues": 96,
+      "failedToLoad": false,
+      "rules": [
+        {
+          "code": "color-contrast",
+          "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
+          "runner": "axe",
+          "count": 54,
+          "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.23:1. Recommendation:  change text colour to #feffff.",
+          "runner": "htmlcs",
+          "count": 42,
+          "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        }
+      ]
+    },
+    {
+      "path": "/services/cardiology-billing/",
+      "issues": 97,
+      "failedToLoad": false,
+      "rules": [
+        {
+          "code": "color-contrast",
+          "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
+          "runner": "axe",
+          "count": 55,
+          "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.23:1. Recommendation:  change text colour to #feffff.",
+          "runner": "htmlcs",
+          "count": 42,
+          "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        }
+      ]
+    },
+    {
+      "path": "/pricing/",
+      "issues": 157,
+      "failedToLoad": false,
+      "rules": [
+        {
+          "code": "color-contrast",
+          "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
+          "runner": "axe",
+          "count": 99,
+          "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.23:1. Recommendation:  change text colour to #feffff.",
+          "runner": "htmlcs",
+          "count": 56,
+          "sample": "html > body > div:nth-child(3) > section:nth-child(3) > div:nth-child(4) > div > div:nth-child(2) > div > svg > g:nth-child(3) > text"
+        },
+        {
+          "code": "nested-interactive",
+          "message": "Interactive controls must not be nested (https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI)",
+          "runner": "axe",
+          "count": 1,
+          "sample": "html > body > div:nth-child(3) > section:nth-child(3) > div:nth-child(4) > div > div:nth-child(2) > div"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 1.04:1. Recommendation:  change text colour to #fdfeff.",
+          "runner": "htmlcs",
+          "count": 1,
+          "sample": "html > body > div:nth-child(3) > section:nth-child(3) > div:nth-child(4) > div > div:nth-child(2) > div > svg > g:nth-child(14) > text:nth-child(7)"
+        }
+      ]
+    },
+    {
+      "path": "/tools/",
+      "issues": 130,
+      "failedToLoad": false,
+      "rules": [
+        {
+          "code": "color-contrast",
+          "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
+          "runner": "axe",
+          "count": 72,
+          "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.23:1. Recommendation:  change text colour to #feffff.",
+          "runner": "htmlcs",
+          "count": 56,
+          "sample": "html > body > div:nth-child(3) > section:nth-child(2) > div:nth-child(4) > div > div:nth-child(2) > div > svg > g:nth-child(3) > text"
+        },
+        {
+          "code": "nested-interactive",
+          "message": "Interactive controls must not be nested (https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI)",
+          "runner": "axe",
+          "count": 1,
+          "sample": "html > body > div:nth-child(3) > section:nth-child(2) > div:nth-child(4) > div > div:nth-child(2) > div"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 1.04:1. Recommendation:  change text colour to #fdfeff.",
+          "runner": "htmlcs",
+          "count": 1,
+          "sample": "html > body > div:nth-child(3) > section:nth-child(2) > div:nth-child(4) > div > div:nth-child(2) > div > svg > g:nth-child(14) > text:nth-child(7)"
+        }
+      ]
+    },
+    {
+      "path": "/tools/denial-code-lookup/",
+      "issues": 150,
+      "failedToLoad": false,
+      "rules": [
+        {
+          "code": "color-contrast",
+          "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
+          "runner": "axe",
+          "count": 106,
+          "sample": "html > body > div:nth-child(5) > section:nth-child(3) > div > div:nth-child(2) > div:nth-child(4) > div:nth-child(2) > button > span:nth-child(3)"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.23:1. Recommendation:  change text colour to #feffff.",
+          "runner": "htmlcs",
+          "count": 44,
+          "sample": "html > body > div:nth-child(5) > section:nth-child(3) > div > div:nth-child(2) > div:nth-child(6) > form > div:nth-child(1) > p:nth-child(2)"
+        }
+      ]
+    },
+    {
+      "path": "/blog/high-deductible-health-plan-patient-payment-strategies/",
+      "issues": 94,
+      "failedToLoad": false,
+      "rules": [
+        {
+          "code": "color-contrast",
+          "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
+          "runner": "axe",
+          "count": 52,
+          "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.23:1. Recommendation:  change text colour to #feffff.",
+          "runner": "htmlcs",
+          "count": 42,
+          "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        }
+      ]
+    },
+    {
+      "path": "/glossary/",
+      "issues": 133,
+      "failedToLoad": false,
+      "rules": [
+        {
+          "code": "color-contrast",
+          "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
+          "runner": "axe",
+          "count": 75,
+          "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.23:1. Recommendation:  change text colour to #feffff.",
+          "runner": "htmlcs",
+          "count": 56,
+          "sample": "html > body > div:nth-child(3) > section > div:nth-child(4) > div > div:nth-child(2) > div > svg > g:nth-child(3) > text"
+        },
+        {
+          "code": "nested-interactive",
+          "message": "Interactive controls must not be nested (https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI)",
+          "runner": "axe",
+          "count": 1,
+          "sample": "html > body > div:nth-child(3) > section > div:nth-child(4) > div > div:nth-child(2) > div"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 1.04:1. Recommendation:  change text colour to #fdfeff.",
+          "runner": "htmlcs",
+          "count": 1,
+          "sample": "html > body > div:nth-child(3) > section > div:nth-child(4) > div > div:nth-child(2) > div > svg > g:nth-child(14) > text:nth-child(7)"
+        }
+      ]
+    },
+    {
+      "path": "/payers/directory/",
+      "issues": 98,
+      "failedToLoad": false,
+      "rules": [
+        {
+          "code": "color-contrast",
+          "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
+          "runner": "axe",
+          "count": 56,
+          "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.23:1. Recommendation:  change text colour to #feffff.",
+          "runner": "htmlcs",
+          "count": 42,
+          "sample": "html > body > div:nth-child(3) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        }
+      ]
+    },
+    {
+      "path": "/free-assessment/",
+      "issues": 101,
+      "failedToLoad": false,
+      "rules": [
+        {
+          "code": "color-contrast",
+          "message": "Elements must meet minimum color contrast ratio thresholds (https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI)",
+          "runner": "axe",
+          "count": 59,
+          "sample": "html > body > div:nth-child(3) > div:nth-child(7) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        },
+        {
+          "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+          "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.23:1. Recommendation:  change text colour to #feffff.",
+          "runner": "htmlcs",
+          "count": 42,
+          "sample": "html > body > div:nth-child(3) > div:nth-child(7) > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > p:nth-child(2)"
+        }
+      ]
+    }
+  ]
+}
