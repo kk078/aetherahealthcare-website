@@ -31,6 +31,20 @@ export default function MedicalBillingHub() {
 
       <section className="py-12 md:py-16 bg-cream flex-1">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="max-w-3xl space-y-3 text-slate-700">
+            <p>
+              Every specialty gets paid differently. A cardiology claim turns on bundling rules for diagnostic studies and
+              professional/technical components; an orthopedic claim on prior authorization and global surgical periods; a
+              behavioral health claim on time-based codes and payer visit limits. Generic billing workflows miss those rules,
+              and the misses show up later as denials, downcoding and aging A/R.
+            </p>
+            <p>
+              Each page below covers how billing works for that specialty: the codes it relies on, where its denials usually
+              start, and what we check before a claim goes out. Coding, charge entry, claim submission, payment posting,
+              denial follow-up and A/R work are handled for practices across the United States.
+            </p>
+          </div>
+
           {/* Specialties */}
           <div>
             <h2 className="text-2xl font-bold text-navy mb-5 flex items-center"><Stethoscope className="h-6 w-6 mr-2 text-teal" />Specialties we bill</h2>
