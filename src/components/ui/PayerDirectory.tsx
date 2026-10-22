@@ -359,9 +359,9 @@ export default function PayerDirectory({
               {/* Header: Name, Category, Badges */}
               <div className="flex items-start justify-between gap-2 mb-2">
                 <div className="min-w-0">
-                  <h3 className="font-bold text-navy text-base leading-snug truncate group-hover:text-teal transition-colors">
+                  <h2 className="font-bold text-navy text-base leading-snug truncate group-hover:text-teal transition-colors">
                     {p.name}
-                  </h3>
+                  </h2>
                   <div className="flex flex-wrap items-center gap-1.5 mt-1">
                     <span className="text-[11px] font-semibold uppercase tracking-wide text-teal bg-teal/10 rounded px-2 py-0.5">
                       {p.type}

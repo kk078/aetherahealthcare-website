@@ -49,7 +49,8 @@ export default function RcmGlossary() {
         <div className="relative">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray/50" />
           <input
-            type="text"
+            type="search"
+            aria-label="Search the RCM glossary"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search RCM acronyms, coding rules, EDI terms (e.g. 835, NCCI, Modifier 25, CARC, RVU)..."
@@ -95,9 +96,9 @@ export default function RcmGlossary() {
                   <span className="inline-block text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-teal/10 text-teal mb-1.5">
                     {item.categoryLabel}
                   </span>
-                  <h3 className="font-jakarta text-lg font-bold text-navy group-hover:text-teal transition-colors">
+                  <h2 className="font-jakarta text-lg font-bold text-navy group-hover:text-teal transition-colors">
                     {item.term}
-                  </h3>
+                  </h2>
                 </div>
                 <button
                   type="button"
