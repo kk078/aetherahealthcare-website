@@ -1,0 +1,109 @@
+name: Lighthouse CI
+# PRs: Lighthouse against the PR's static export (served locally on the runner), mobile + desktop,
+# SEO assertions enforced, scores posted as a PR comment. Weekly: the same against production.
+# Reports are workflow artifacts; optionally also pushed to the self-hosted LHCI server when the
+# SEO_LHCI_SERVER_URL / SEO_LHCI_TOKEN_* secrets exist (see seo/README.md). No third-party storage.
+on:
+  pull_request:
+  schedule:
+    - cron: '0 5 * * 1'   # Mondays 05:00 UTC
+  workflow_dispatch:
+    inputs:
+      target:
+        description: local (build this ref) or production
+        default: production
+        type: choice
+        options: [production, local]
+permissions:
+  contents: read
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+env:
+  # Same public build-time defaults as ci.yml so the audited build matches the release build.
+  NEXT_PUBLIC_GOOGLE_ADS_ID: ${{ vars.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-18295729018' }}
+  NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ vars.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-898JNZJ6LJ' }}
+  NEXT_PUBLIC_GADS_LABEL_ASSESSMENT: ${{ vars.NEXT_PUBLIC_GADS_LABEL_ASSESSMENT }}
+  NEXT_PUBLIC_GADS_LABEL_CONTACT: ${{ vars.NEXT_PUBLIC_GADS_LABEL_CONTACT }}
+  NEXT_PUBLIC_GADS_LABEL_MEETING: ${{ vars.NEXT_PUBLIC_GADS_LABEL_MEETING }}
+  NEXT_PUBLIC_GADS_LABEL_BOOKING: ${{ vars.NEXT_PUBLIC_GADS_LABEL_BOOKING }}
+  NEXT_PUBLIC_GADS_LABEL_PILOT: ${{ vars.NEXT_PUBLIC_GADS_LABEL_PILOT }}
+  NEXT_PUBLIC_GADS_LABEL_CALCULATOR: ${{ vars.NEXT_PUBLIC_GADS_LABEL_CALCULATOR }}
+  NEXT_PUBLIC_LINKEDIN_PARTNER_ID: ${{ vars.NEXT_PUBLIC_LINKEDIN_PARTNER_ID }}
+  NEXT_PUBLIC_META_PIXEL_ID: ${{ vars.NEXT_PUBLIC_META_PIXEL_ID }}
+  NEXT_PUBLIC_RB2B_KEY: ${{ vars.NEXT_PUBLIC_RB2B_KEY }}
+  NEXT_PUBLIC_APOLLO_ID: ${{ vars.NEXT_PUBLIC_APOLLO_ID }}
+  NEXT_PUBLIC_LEADFEEDER_ID: ${{ vars.NEXT_PUBLIC_LEADFEEDER_ID }}
+  NEXT_PUBLIC_SNITCHER_ID: ${{ vars.NEXT_PUBLIC_SNITCHER_ID }}
+  NEXT_PUBLIC_CF_BEACON_TOKEN: ${{ vars.NEXT_PUBLIC_CF_BEACON_TOKEN }}
+  SEO_LHCI_SERVER_URL: ${{ secrets.SEO_LHCI_SERVER_URL }}
+  SEO_LHCI_TOKEN_MOBILE: ${{ secrets.SEO_LHCI_TOKEN_MOBILE }}
+  SEO_LHCI_TOKEN_DESKTOP: ${{ secrets.SEO_LHCI_TOKEN_DESKTOP }}
+  SEO_LHCI_PASSWORD: ${{ secrets.SEO_LHCI_PASSWORD }}
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            seo/package-lock.json
+      - name: Pick target
+        id: target
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then t=local;
+          elif [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then t="${{ inputs.target }}";
+          else t=production; fi
+          echo "name=$t" >> "$GITHUB_OUTPUT"
+      - run: npm ci --prefix seo
+      - name: Build static export
+        if: steps.target.outputs.name == 'local'
+        run: npm ci && npm run build
+      - name: Lighthouse (mobile + desktop, 3 runs each, median)
+        id: lhci
+        run: |
+          set +e
+          seo/scripts/lhci.sh "${{ steps.target.outputs.name }}" both
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lighthouse-${{ steps.target.outputs.name }}-${{ github.run_id }}
+          path: seo/data/lhci/
+          retention-days: 30
+      - name: Comment scores on the PR
+        if: github.event_name == 'pull_request' && always()
+        continue-on-error: true   # fork PRs get a read-only token
+        uses: actions/github-script@v7
+        env:
+          LHCI_STATUS: ${{ steps.lhci.outputs.status }}
+        with:
+          script: |
+            const fs = require('fs');
+            const table = fs.existsSync('seo/data/lhci/summary-local.md') ? fs.readFileSync('seo/data/lhci/summary-local.md', 'utf8') : '_No Lighthouse summary produced._';
+            const failures = ['mobile', 'desktop'].map(p => `seo/data/lhci/local-${p}.assert.txt`).filter(f => fs.existsSync(f))
+              .map(f => fs.readFileSync(f, 'utf8').replace(/\x1b\[[0-9;]*m/g, '')).join('\n')
+              .split('\n').filter(l => /✘|failure for/.test(l)).map(l => l.trim()).slice(0, 30);
+            const ok = process.env.LHCI_STATUS === '0';
+            const marker = '<!-- aethera-lighthouse -->';
+            const body = `${marker}\n### Lighthouse CI ${ok ? '✅ assertions passed' : '❌ assertions failed'}\nMedian of 3 runs per URL against this PR's static export. Full HTML/JSON reports: workflow artifact \`lighthouse-local-${context.runId}\`.\n\n${table}\n${failures.length ? `<details><summary>Failed assertions (error level)</summary>\n\n\`\`\`\n${failures.join('\n')}\n\`\`\`\n</details>` : ''}`;
+            const { data: comments } = await github.rest.issues.listComments({ ...context.repo, issue_number: context.issue.number, per_page: 100 });
+            const mine = comments.find(c => c.body?.startsWith(marker));
+            if (mine) await github.rest.issues.updateComment({ ...context.repo, comment_id: mine.id, body });
+            else await github.rest.issues.createComment({ ...context.repo, issue_number: context.issue.number, body });
+      - name: Job summary
+        if: always()
+        run: cat seo/data/lhci/summary-*.md >> "$GITHUB_STEP_SUMMARY" || true
+      - name: Enforce assertions
+        if: steps.lhci.outputs.status != '0'
+        run: |
+          echo "::error::Lighthouse error-level assertions failed; see the job summary / artifact."
+          exit 1

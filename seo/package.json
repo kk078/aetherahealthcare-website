@@ -1,0 +1,21 @@
+{
+  "name": "aethera-seo-monitoring",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-hosted, open-source SEO monitoring for aetherahealthcare.com. Isolated from the site's dependency tree and release audit.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "cheerio": "^1.2.0",
+    "fast-xml-parser": "^5.11.2",
+    "linkinator": "^7.6.1",
+    "p-limit": "^7.3.3",
+    "pa11y-ci": "^5.0.0"
+  }
+}
