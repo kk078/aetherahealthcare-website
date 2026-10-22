@@ -1,9 +1,9 @@
 [Unit]
-Description=Aethera SEO: SEOnaut crawl + export + publish to seo-data
+Description=Aethera SEO: Phase 3 checks + SEOnaut crawl, published to seo-data
 After=network-online.target docker.service
 
 [Service]
 Type=oneshot
 WorkingDirectory=%h/aetherahealthcare-website
-ExecStart=/usr/bin/make seo-crawl seo-publish
+ExecStart=/usr/bin/make seo-checks seo-crawl seo-publish
 Nice=10

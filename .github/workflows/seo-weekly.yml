@@ -50,12 +50,16 @@ jobs:
           SEARCH_CONSOLE_PRIVATE_KEY: ${{ secrets.SEARCH_CONSOLE_PRIVATE_KEY }}
           GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
         run: node seo/scripts/gsc-export.mjs || echo "::warning::Search Console export failed"
-      - name: SEOnaut export published by the local stack (if any)
+      - name: SEOnaut export and fallback check results published by the local stack (if any)
         run: |
           # git archive extracts without staging anything (a path checkout would add the files to the index).
           if git fetch --depth=1 origin seo-data 2>/dev/null; then
             mkdir -p seo/data && rm -rf seo/data/seonaut
             git archive FETCH_HEAD seonaut | tar -x -C seo/data || echo "no SEOnaut export on seo-data"
+            # Checks the runner could not complete (e.g. Cloudflare 403 to datacenter IPs) fall back to the
+            # results the local stack published; checks that did run here are kept (--skip-old-files).
+            mkdir -p seo/data/checks
+            git archive FETCH_HEAD checks | tar -x -C seo/data --skip-old-files 2>/dev/null && ls seo/data/checks || echo "no local check results on seo-data"
           else echo "no seo-data branch yet"; fi
       - name: Build report
         run: node seo/scripts/weekly-report.mjs

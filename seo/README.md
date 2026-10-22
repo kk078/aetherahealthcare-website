@@ -204,12 +204,12 @@ the push, the workflow opens a PR instead.
 
 ## Scheduling the local half
 
-SEOnaut and SerpBear run on this machine, so the weekly GitHub report includes SEOnaut only after
-`make seo-crawl && make seo-publish`. To automate that, add a weekly systemd user timer (Sunday night,
-before the Monday 05:00 UTC workflow). The unit files are in `seo/systemd/`; installing them is a
-system change, so do it yourself:
+SEOnaut and SerpBear run on this machine. Cloudflare also returns 403 to scripted requests from GitHub's
+datacenter IPs (seen 2026-10-22 on `sitemap.xml`, before any WAF skip rule existed), while this machine is
+allowed. So the local stack publishes its results to the `seo-data` branch with
+`make seo-checks seo-crawl seo-publish`, and the Monday workflow uses them for any check it could not
+complete itself. Checks that do run on the runner take precedence.
 
-```sh
-cp seo/systemd/aethera-seo-crawl.* ~/.config/systemd/user/
-systemctl --user daemon-reload && systemctl --user enable --now aethera-seo-crawl.timer
-```
+A weekly systemd user timer (Sunday 22:00 UTC, before the Monday 05:00 UTC workflow) automates this. It
+is filed as aethera proposal #29 (`~/aethera/proposals/pending/0029-*`), because aethera's `systemd/` is a
+protected path. The same unit files are in `seo/systemd/`.
