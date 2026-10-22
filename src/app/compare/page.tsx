@@ -39,6 +39,19 @@ export default function CompareHub() {
         primary={{ href: '/free-assessment/', label: 'Get a Free Assessment' }}
       />
       <section className="py-14 md:py-20 bg-cream flex-1">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 space-y-3 text-slate-700">
+          <p>
+            Most practices end up weighing the same trade-offs: what billing really costs once staff time, software,
+            clearinghouse fees and turnover are counted; how quickly claims get paid and denials get worked; how much
+            control and visibility you keep over your own revenue; and what happens to collections when a key biller leaves.
+          </p>
+          <p>
+            The guides below lay those factors out side by side. One compares outsourcing with keeping billing in-house. The
+            other covers how to evaluate a billing company: the questions to ask before signing, the contract terms to check,
+            and the reporting you should expect every month. Use them with your own numbers, such as days in A/R, first-pass
+            claim acceptance and denial rate, so the comparison reflects your practice rather than an industry average.
+          </p>
+        </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 gap-6">
           {pages.map((p, i) => (
             <FadeIn key={p.href} delay={i * 0.1}>
