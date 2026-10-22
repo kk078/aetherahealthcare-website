@@ -10,9 +10,9 @@ import SectionHeader from '@/components/ui/SectionHeader';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/claims-billing') },
   title: "Claims & Billing Services | Clean Claim Submission",
-  description: "Professional claims and billing services for healthcare providers. Clean claim submission, denial management, and payment posting to accelerate your revenue cycle.",
+  description: "Claims and billing services for healthcare providers: clean claim submission, denial management and payment posting to speed your revenue cycle.",
 
-  ...marketingMetadata("/services/claims-billing", "Claims & Billing Services | Clean Claim Submission", "Professional claims and billing services for healthcare providers. Clean claim submission, denial management, and payment posting to accelerate your revenue cycle."),
+  ...marketingMetadata("/services/claims-billing", "Claims & Billing Services | Clean Claim Submission", "Claims and billing services for healthcare providers: clean claim submission, denial management and payment posting to speed your revenue cycle."),
 };
 
 const includedItems = [

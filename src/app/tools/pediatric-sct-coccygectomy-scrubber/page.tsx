@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Pediatric SCT & Coccygectomy Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Pediatric Sacrococcygeal Teratoma & Coccygectomy Scrubber. Audit presacral teratoma resection (49220/45120), en-bloc coccygectomy (27075-59), combined abdominoperineal approach (49000-59), and pelvic floor reconstruction.',
+    'Free sacrococcygeal teratoma scrubber: audit teratoma resection (49220/45120), en-bloc coccygectomy, combined approaches and pelvic floor repair.',
 
-  ...marketingMetadata("/tools/pediatric-sct-coccygectomy-scrubber", 'Pediatric SCT & Coccygectomy Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Sacrococcygeal Teratoma & Coccygectomy Scrubber. Audit presacral teratoma resection (49220/45120), en-bloc coccygectomy (27075-59), combined abdominoperineal approach (49000-59), and pelvic floor reconstruction.'),
+  ...marketingMetadata("/tools/pediatric-sct-coccygectomy-scrubber", 'Pediatric SCT & Coccygectomy Scrubber | Free RCM Tool | Aethera Healthcare', 'Free sacrococcygeal teratoma scrubber: audit teratoma resection (49220/45120), en-bloc coccygectomy, combined approaches and pelvic floor repair.'),
 };
 
 export default function PediatricSctCoccygectomyScrubberPage() {

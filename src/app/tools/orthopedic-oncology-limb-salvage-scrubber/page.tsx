@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Orthopedic Oncology & Limb Salvage Mega-Prosthesis Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Orthopedic Oncology Mega-Prosthesis & Limb Salvage Scrubber. Audit radical bone tumor resections (CPT 27075/27645), defend modular oncologic mega-prosthesis arthroplasty (27599/27299 + Mod 22), unbundle rotational gastrocnemius flaps (15734-59), and recover catastrophic custom implant pass-through invoices.',
+    'Free limb salvage scrubber: audit bone tumor resections (27075/27645), mega-prosthesis arthroplasty with -22, flaps (15734-59) and implant invoices.',
 
-  ...marketingMetadata("/tools/orthopedic-oncology-limb-salvage-scrubber", 'Orthopedic Oncology & Limb Salvage Mega-Prosthesis Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Orthopedic Oncology Mega-Prosthesis & Limb Salvage Scrubber. Audit radical bone tumor resections (CPT 27075/27645), defend modular oncologic mega-prosthesis arthroplasty (27599/27299 + Mod 22), unbundle rotational gastrocnemius flaps (15734-59), and recover catastrophic custom implant pass-through invoices.'),
+  ...marketingMetadata("/tools/orthopedic-oncology-limb-salvage-scrubber", 'Orthopedic Oncology & Limb Salvage Mega-Prosthesis Scrubber | Free RCM Tool | Aethera Healthcare', 'Free limb salvage scrubber: audit bone tumor resections (27075/27645), mega-prosthesis arthroplasty with -22, flaps (15734-59) and implant invoices.'),
 };
 
 export default function OrthopedicOncologyScrubberPage() {

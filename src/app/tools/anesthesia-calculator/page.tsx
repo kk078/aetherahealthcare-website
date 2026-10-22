@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Anesthesia ASA Unit & Reimbursement Calculator | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Calculate total ASA anesthesia billing units (Base + 15-Min Time + Physical Modifiers + Qualifying Circumstances) and reimbursement across Medicare, Commercial, and CMS Concurrency models.',
+    'Calculate ASA anesthesia units (base, time, physical status, qualifying circumstances) and payment under Medicare, commercial and concurrency rules.',
 
-  ...marketingMetadata("/tools/anesthesia-calculator", 'Anesthesia ASA Unit & Reimbursement Calculator | Free RCM Tool | Aethera Healthcare Solutions', 'Calculate total ASA anesthesia billing units (Base + 15-Min Time + Physical Modifiers + Qualifying Circumstances) and reimbursement across Medicare, Commercial, and CMS Concurrency models.'),
+  ...marketingMetadata("/tools/anesthesia-calculator", 'Anesthesia ASA Unit & Reimbursement Calculator | Free RCM Tool | Aethera Healthcare Solutions', 'Calculate ASA anesthesia units (base, time, physical status, qualifying circumstances) and payment under Medicare, commercial and concurrency rules.'),
 };
 
 export default function AnesthesiaCalculatorPage() {

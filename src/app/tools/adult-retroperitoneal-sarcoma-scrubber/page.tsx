@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Adult Retroperitoneal Sarcoma & Multivisceral Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Complex Adult Retroperitoneal Sarcoma & Multivisceral Scrubber. Audit radical retroperitoneal tumor excision (49203–49205), en-bloc nephrectomy (50240-59), contiguous adrenalectomy (60540-59), colectomy (44140-59), and IVC vascular reconstruction (35281-59).',
+    'Free retroperitoneal sarcoma scrubber: audit radical tumor excision (49203–49205) with en-bloc nephrectomy, adrenalectomy, colectomy and IVC repair.',
 
-  ...marketingMetadata("/tools/adult-retroperitoneal-sarcoma-scrubber", 'Adult Retroperitoneal Sarcoma & Multivisceral Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Complex Adult Retroperitoneal Sarcoma & Multivisceral Scrubber. Audit radical retroperitoneal tumor excision (49203–49205), en-bloc nephrectomy (50240-59), contiguous adrenalectomy (60540-59), colectomy (44140-59), and IVC vascular reconstruction (35281-59).'),
+  ...marketingMetadata("/tools/adult-retroperitoneal-sarcoma-scrubber", 'Adult Retroperitoneal Sarcoma & Multivisceral Scrubber | Free RCM Tool | Aethera Healthcare', 'Free retroperitoneal sarcoma scrubber: audit radical tumor excision (49203–49205) with en-bloc nephrectomy, adrenalectomy, colectomy and IVC repair.'),
 };
 
 export default function AdultRetroperitonealSarcomaScrubberPage() {

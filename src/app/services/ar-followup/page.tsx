@@ -83,9 +83,9 @@ const relatedServices = [
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/ar-followup') },
   title: "A/R Follow-Up & Accounts Receivable Recovery",
-  description: "Dedicated accounts receivable follow-up that works aging claims, cuts days in A/R, and recovers revenue other billers write off. Systematic payer follow-up from Aethera.",
+  description: "A/R follow-up that works aging claims, cuts days in A/R and recovers revenue other billers write off, with systematic payer follow-up.",
 
-  ...marketingMetadata("/services/ar-followup", "A/R Follow-Up & Accounts Receivable Recovery", "Dedicated accounts receivable follow-up that works aging claims, cuts days in A/R, and recovers revenue other billers write off. Systematic payer follow-up from Aethera."),
+  ...marketingMetadata("/services/ar-followup", "A/R Follow-Up & Accounts Receivable Recovery", "A/R follow-up that works aging claims, cuts days in A/R and recovers revenue other billers write off, with systematic payer follow-up."),
 };
 
 export default function ARFollowUp() {

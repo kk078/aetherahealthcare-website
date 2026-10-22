@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Pediatric Brain Tumor & Intraoperative Monitoring Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free Pediatric Brain Tumor & IONM Scrubber. Audit posterior fossa craniotomy (61518/61520), intraoperative neurophysiological monitoring (95940/95941), defend external ventricular drain unbundling (61107-59), and protect stereotactic neuronavigation add-ons (+61781).',
+    'Free pediatric brain tumor scrubber: audit posterior fossa craniotomy (61518/61520), IONM (95940/95941), EVD placement and navigation (+61781).',
 
-  ...marketingMetadata("/tools/pediatric-brain-tumor-scrubber", 'Pediatric Brain Tumor & Intraoperative Monitoring Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Pediatric Brain Tumor & IONM Scrubber. Audit posterior fossa craniotomy (61518/61520), intraoperative neurophysiological monitoring (95940/95941), defend external ventricular drain unbundling (61107-59), and protect stereotactic neuronavigation add-ons (+61781).'),
+  ...marketingMetadata("/tools/pediatric-brain-tumor-scrubber", 'Pediatric Brain Tumor & Intraoperative Monitoring Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free pediatric brain tumor scrubber: audit posterior fossa craniotomy (61518/61520), IONM (95940/95941), EVD placement and navigation (+61781).'),
 };
 
 export default function PediatricBrainTumorScrubberPage() {

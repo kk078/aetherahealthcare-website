@@ -1,4 +1,4 @@
-import { marketingMetadata } from '@/lib/marketing';
+import { fitDescription, marketingMetadata } from '@/lib/marketing';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -35,7 +35,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = getPayer(slug);
   if (!p) return { title: 'Payer Not Found' };
-  return marketingMetadata(`/payers/directory/${slug}`, `${p.name} — Payer ID & EDI Reference`, `${p.name}: payer IDs, timely-filing references and EDI routing. Confirm current requirements with the payer or clearinghouse before use.`);
+  return marketingMetadata(`/payers/directory/${slug}`, `${p.name} — Payer ID & EDI Reference`, fitDescription(
+    `${p.name}: payer IDs, timely-filing references and EDI routing. Confirm current requirements with the payer or clearinghouse before use.`,
+    `${p.name}: payer IDs, timely-filing references and EDI routing for claims submission.`,
+    `${p.name}: payer IDs, timely-filing references and EDI routing.`,
+  ));
 }
 
 function Field({

@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'FQHC PPS Rate & Same-Day Service Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free FQHC Prospective Payment System (PPS) rate scrubber. Calculate GAF geographic adjustments, validate same-day medical + behavioral health encounter exemptions, and model Medicaid wrap reconciliations.',
+    'Free FQHC PPS scrubber: GAF-adjusted rates, same-day medical plus behavioral health visit exceptions, and Medicaid wraparound reconciliation.',
 
-  ...marketingMetadata("/tools/fqhc-pps-scrubber", 'FQHC PPS Rate & Same-Day Service Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free FQHC Prospective Payment System (PPS) rate scrubber. Calculate GAF geographic adjustments, validate same-day medical + behavioral health encounter exemptions, and model Medicaid wrap reconciliations.'),
+  ...marketingMetadata("/tools/fqhc-pps-scrubber", 'FQHC PPS Rate & Same-Day Service Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free FQHC PPS scrubber: GAF-adjusted rates, same-day medical plus behavioral health visit exceptions, and Medicaid wraparound reconciliation.'),
 };
 
 export default function FqhcPpsScrubberPage() {

@@ -11,9 +11,9 @@ import SectionHeader from '@/components/ui/SectionHeader';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/psychiatry-billing') },
   title: { absolute: 'Psychiatry & Behavioral Health Billing | RCM for Psychiatrists | Aethera Healthcare' },
-  description: 'Specialized psychiatry and behavioral health billing: medication management, psychotherapy add-ons, collaborative care, telehealth, and mental health parity compliance.',
+  description: 'Psychiatry and behavioral health billing: medication management, psychotherapy add-ons, collaborative care, telehealth and parity compliance.',
 
-  ...marketingMetadata("/services/psychiatry-billing", 'Psychiatry & Behavioral Health Billing | RCM for Psychiatrists | Aethera Healthcare', 'Specialized psychiatry and behavioral health billing: medication management, psychotherapy add-ons, collaborative care, telehealth, and mental health parity compliance.'),
+  ...marketingMetadata("/services/psychiatry-billing", 'Psychiatry & Behavioral Health Billing | RCM for Psychiatrists | Aethera Healthcare', 'Psychiatry and behavioral health billing: medication management, psychotherapy add-ons, collaborative care, telehealth and parity compliance.'),
 };
 
 const stats = [

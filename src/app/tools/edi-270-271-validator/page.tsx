@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools/edi-270-271-validator') },
   title: { absolute: 'ANSI X12 270/271 Real-Time Eligibility & Benefit Validator | Aethera Healthcare' },
   description:
-    'Free online ANSI X12 270/271 EDI eligibility parser. Decode raw 271 transactions into clear copays, deductibles, coinsurance, and active coverage verification.',
+    'Free X12 270/271 eligibility parser: decode raw 271 responses into active coverage, copays, deductibles and coinsurance you can read.',
 
-  ...marketingMetadata("/tools/edi-270-271-validator", 'ANSI X12 270/271 Real-Time Eligibility & Benefit Validator | Aethera Healthcare', 'Free online ANSI X12 270/271 EDI eligibility parser. Decode raw 271 transactions into clear copays, deductibles, coinsurance, and active coverage verification.'),
+  ...marketingMetadata("/tools/edi-270-271-validator", 'ANSI X12 270/271 Real-Time Eligibility & Benefit Validator | Aethera Healthcare', 'Free X12 270/271 eligibility parser: decode raw 271 responses into active coverage, copays, deductibles and coinsurance you can read.'),
 };
 
 export default function Edi270271Page() {

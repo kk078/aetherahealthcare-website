@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Trauma & Open Abdomen Damage Control Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free Trauma & Open Abdomen Damage Control Scrubber. Audit staged damage control laparotomy (49000, 49002), secondary fascial closure (13160), bedside vascular line unbundling, and enforce Modifier 58 vs 78 compliance.',
+    'Free trauma damage-control scrubber: audit staged laparotomy (49000, 49002), delayed fascial closure (13160), line bundling and modifier 58 vs. 78.',
 
-  ...marketingMetadata("/tools/trauma-damage-control-scrubber", 'Trauma & Open Abdomen Damage Control Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Trauma & Open Abdomen Damage Control Scrubber. Audit staged damage control laparotomy (49000, 49002), secondary fascial closure (13160), bedside vascular line unbundling, and enforce Modifier 58 vs 78 compliance.'),
+  ...marketingMetadata("/tools/trauma-damage-control-scrubber", 'Trauma & Open Abdomen Damage Control Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free trauma damage-control scrubber: audit staged laparotomy (49000, 49002), delayed fascial closure (13160), line bundling and modifier 58 vs. 78.'),
 };
 
 export default function TraumaDamageControlScrubberPage() {

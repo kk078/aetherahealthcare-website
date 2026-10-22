@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Prior-Authorization Requirement & Payer SLA Matrix | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Inspect prior-authorization requirements, statutory review SLAs under CMS-0057-F, peer-to-peer deadlines, and state Gold Card exemption rules across 20+ outpatient and surgical procedures.',
+    'Prior authorization rules, CMS-0057-F review timelines, peer-to-peer deadlines and state gold-card exemptions for 20+ outpatient and surgical procedures.',
 
-  ...marketingMetadata("/tools/prior-auth-matrix", 'Prior-Authorization Requirement & Payer SLA Matrix | Free RCM Tool | Aethera Healthcare Solutions', 'Inspect prior-authorization requirements, statutory review SLAs under CMS-0057-F, peer-to-peer deadlines, and state Gold Card exemption rules across 20+ outpatient and surgical procedures.'),
+  ...marketingMetadata("/tools/prior-auth-matrix", 'Prior-Authorization Requirement & Payer SLA Matrix | Free RCM Tool | Aethera Healthcare Solutions', 'Prior authorization rules, CMS-0057-F review timelines, peer-to-peer deadlines and state gold-card exemptions for 20+ outpatient and surgical procedures.'),
 };
 
 export default function PriorAuthMatrixPage() {

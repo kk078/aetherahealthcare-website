@@ -83,9 +83,9 @@ const relatedServices = [
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/compliance-auditing') },
   title: "Compliance & Revenue Cycle Auditing",
-  description: "HIPAA compliance reviews and revenue cycle audits that surface coding, documentation, and billing risk before payers or regulators do. Protect your practice with Aethera.",
+  description: "HIPAA compliance reviews and revenue cycle audits that surface coding, documentation and billing risk before payers or regulators do.",
 
-  ...marketingMetadata("/services/compliance-auditing", "Compliance & Revenue Cycle Auditing", "HIPAA compliance reviews and revenue cycle audits that surface coding, documentation, and billing risk before payers or regulators do. Protect your practice with Aethera."),
+  ...marketingMetadata("/services/compliance-auditing", "Compliance & Revenue Cycle Auditing", "HIPAA compliance reviews and revenue cycle audits that surface coding, documentation and billing risk before payers or regulators do."),
 };
 
 export default function ComplianceAuditing() {

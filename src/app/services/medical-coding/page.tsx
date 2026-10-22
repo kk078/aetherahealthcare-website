@@ -11,9 +11,9 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/medical-coding') },
   title: "Medical Coding Services | ICD-10, CPT, HCPCS",
-  description: "Expert medical coding services including ICD-10, C, and HCPCS coding for healthcare providers. Maximize reimbursement with accurate, compliant coding from certified professionals.",
+  description: "Medical coding services for ICD-10-CM, CPT and HCPCS. Accurate, compliant coding from certified coders that supports full reimbursement.",
 
-  ...marketingMetadata("/services/medical-coding", "Medical Coding Services | ICD-10, CPT, HCPCS", "Expert medical coding services including ICD-10, C, and HCPCS coding for healthcare providers. Maximize reimbursement with accurate, compliant coding from certified professionals."),
+  ...marketingMetadata("/services/medical-coding", "Medical Coding Services | ICD-10, CPT, HCPCS", "Medical coding services for ICD-10-CM, CPT and HCPCS. Accurate, compliant coding from certified coders that supports full reimbursement."),
 };
 
 const includedItems = [

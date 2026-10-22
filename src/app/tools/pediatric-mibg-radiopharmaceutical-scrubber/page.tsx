@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Pediatric Targeted MIBG & Radiopharmaceutical Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Pediatric Targeted Radioiodine & MIBG Therapy Scrubber. Audit therapeutic I-131 MIBG administration (79445), HCPCS A9508 isotope invoice pass-through, medical physics consultation (+77336), SPECT/CT dosimetry (78830), and autologous stem cell rescue (+38240).',
+    'Free MIBG therapy scrubber: audit I-131 MIBG administration (79445), A9508 isotope pass-through, physics consults, SPECT/CT dosimetry and stem cells.',
 
-  ...marketingMetadata("/tools/pediatric-mibg-radiopharmaceutical-scrubber", 'Pediatric Targeted MIBG & Radiopharmaceutical Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Targeted Radioiodine & MIBG Therapy Scrubber. Audit therapeutic I-131 MIBG administration (79445), HCPCS A9508 isotope invoice pass-through, medical physics consultation (+77336), SPECT/CT dosimetry (78830), and autologous stem cell rescue (+38240).'),
+  ...marketingMetadata("/tools/pediatric-mibg-radiopharmaceutical-scrubber", 'Pediatric Targeted MIBG & Radiopharmaceutical Scrubber | Free RCM Tool | Aethera Healthcare', 'Free MIBG therapy scrubber: audit I-131 MIBG administration (79445), A9508 isotope pass-through, physics consults, SPECT/CT dosimetry and stem cells.'),
 };
 
 export default function PediatricMibgRadiopharmaceuticalScrubberPage() {

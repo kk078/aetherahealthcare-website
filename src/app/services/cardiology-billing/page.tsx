@@ -11,9 +11,9 @@ import SectionHeader from '@/components/ui/SectionHeader';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/cardiology-billing') },
   title: { absolute: 'Cardiology Billing Services | RCM for Cardiologists | Aethera Healthcare' },
-  description: 'Expert cardiology billing and revenue cycle management. We handle cardiac cath, stress testing, EP studies, remote monitoring, and all cardiology-specific coding complexities.',
+  description: 'Cardiology billing and RCM for cardiac cath, stress testing, EP studies, remote monitoring and the rest of cardiology\'s coding complexity.',
 
-  ...marketingMetadata("/services/cardiology-billing", 'Cardiology Billing Services | RCM for Cardiologists | Aethera Healthcare', 'Expert cardiology billing and revenue cycle management. We handle cardiac cath, stress testing, EP studies, remote monitoring, and all cardiology-specific coding complexities.'),
+  ...marketingMetadata("/services/cardiology-billing", 'Cardiology Billing Services | RCM for Cardiologists | Aethera Healthcare', 'Cardiology billing and RCM for cardiac cath, stress testing, EP studies, remote monitoring and the rest of cardiology\'s coding complexity.'),
 };
 
 const stats = [

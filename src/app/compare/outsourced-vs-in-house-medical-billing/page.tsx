@@ -9,10 +9,10 @@ import { Check, X, ArrowRight } from 'lucide-react';
 export const metadata = {
   title: { absolute: 'Outsourced vs. In-House Medical Billing: A Practical Comparison | Aethera Healthcare Solutions' },
   description:
-    'Outsourced vs. in-house medical billing compared on cost, collections, staffing risk, compliance, and control — with a clear framework for deciding which model fits your practice.',
+    'Outsourced vs. in-house medical billing compared on cost, collections, staffing risk, compliance and control, with a framework for deciding.',
   alternates: { canonical: 'https://aetherahealthcare.com/compare/outsourced-vs-in-house-medical-billing/' },
 
-  ...marketingMetadata("/compare/outsourced-vs-in-house-medical-billing", 'Outsourced vs. In-House Medical Billing: A Practical Comparison | Aethera Healthcare Solutions', 'Outsourced vs. in-house medical billing compared on cost, collections, staffing risk, compliance, and control — with a clear framework for deciding which model fits your practice.'),
+  ...marketingMetadata("/compare/outsourced-vs-in-house-medical-billing", 'Outsourced vs. In-House Medical Billing: A Practical Comparison | Aethera Healthcare Solutions', 'Outsourced vs. in-house medical billing compared on cost, collections, staffing risk, compliance and control, with a framework for deciding.'),
 };
 
 const rows: { factor: string; inhouse: string; outsourced: string; edge: 'in' | 'out' | 'even' }[] = [

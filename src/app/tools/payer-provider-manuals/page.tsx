@@ -14,9 +14,9 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/payer-provider-manuals') },
   title: { absolute: 'Payer Provider Manual & Policy Finder | Aethera Healthcare Solutions' },
   description:
-    'Find provider manuals, medical/reimbursement policies, credentialing, and eligibility pages for major U.S. payers — UnitedHealthcare, Aetna, Cigna, Humana, Florida Blue, Medicare MACs, and more.',
+    'Provider manuals, reimbursement policies, credentialing and eligibility pages for major U.S. payers, from UnitedHealthcare and Aetna to the MACs.',
 
-  ...marketingMetadata("/tools/payer-provider-manuals", 'Payer Provider Manual & Policy Finder | Aethera Healthcare Solutions', 'Find provider manuals, medical/reimbursement policies, credentialing, and eligibility pages for major U.S. payers — UnitedHealthcare, Aetna, Cigna, Humana, Florida Blue, Medicare MACs, and more.'),
+  ...marketingMetadata("/tools/payer-provider-manuals", 'Payer Provider Manual & Policy Finder | Aethera Healthcare Solutions', 'Provider manuals, reimbursement policies, credentialing and eligibility pages for major U.S. payers, from UnitedHealthcare and Aetna to the MACs.'),
 };
 
 export default function PayerManualFinderPage() {

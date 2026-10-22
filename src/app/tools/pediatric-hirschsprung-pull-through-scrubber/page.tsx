@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Pediatric Hirschsprung Pull-Through Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Pediatric Hirschsprung Pull-Through Scrubber. Audit congenital aganglionic megacolon pull-through procedures (45120/45112), intraoperative leveling seromuscular biopsies (+44150-59), laparoscopic mobilization (49320-59), and staged diversion reversal (Modifier -58).',
+    'Free Hirschsprung pull-through scrubber: audit pull-through procedures (45120/45112), leveling biopsies, laparoscopic mobilization and staged -58.',
 
-  ...marketingMetadata("/tools/pediatric-hirschsprung-pull-through-scrubber", 'Pediatric Hirschsprung Pull-Through Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric Hirschsprung Pull-Through Scrubber. Audit congenital aganglionic megacolon pull-through procedures (45120/45112), intraoperative leveling seromuscular biopsies (+44150-59), laparoscopic mobilization (49320-59), and staged diversion reversal (Modifier -58).'),
+  ...marketingMetadata("/tools/pediatric-hirschsprung-pull-through-scrubber", 'Pediatric Hirschsprung Pull-Through Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Hirschsprung pull-through scrubber: audit pull-through procedures (45120/45112), leveling biopsies, laparoscopic mobilization and staged -58.'),
 };
 
 export default function PediatricHirschsprungPullThroughScrubberPage() {

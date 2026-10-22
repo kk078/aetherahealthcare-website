@@ -11,9 +11,9 @@ import SectionHeader from '@/components/ui/SectionHeader';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/dermatology-billing') },
   title: { absolute: 'Dermatology Billing Services | RCM for Dermatologists | Aethera Healthcare' },
-  description: 'Expert dermatology billing for Mohs surgery, destruction codes, biopsies, and cosmetic vs. reconstructive procedures. 97.4% clean claim rate, 31% average Mohs revenue increase.',
+  description: 'Dermatology billing for Mohs surgery, destructions, biopsies, and cosmetic vs. reconstructive procedures, coded and documented to get paid.',
 
-  ...marketingMetadata("/services/dermatology-billing", 'Dermatology Billing Services | RCM for Dermatologists | Aethera Healthcare', 'Expert dermatology billing for Mohs surgery, destruction codes, biopsies, and cosmetic vs. reconstructive procedures. 97.4% clean claim rate, 31% average Mohs revenue increase.'),
+  ...marketingMetadata("/services/dermatology-billing", 'Dermatology Billing Services | RCM for Dermatologists | Aethera Healthcare', 'Dermatology billing for Mohs surgery, destructions, biopsies, and cosmetic vs. reconstructive procedures, coded and documented to get paid.'),
 };
 
 const stats = [

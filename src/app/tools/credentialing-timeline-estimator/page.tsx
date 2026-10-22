@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools/credentialing-timeline-estimator') },
   title: { absolute: 'Provider Credentialing & Payer Enrollment Timeline Estimator | Aethera Healthcare' },
   description:
-    'Free medical credentialing calculator. Calculate CAQH, Medicare PECOS, Medicaid, and commercial payer enrollment timelines to prevent billing freezes for new physicians.',
+    'Free credentialing timeline calculator: estimate CAQH, PECOS, Medicaid and commercial enrollment times to avoid billing freezes for new providers.',
 
-  ...marketingMetadata("/tools/credentialing-timeline-estimator", 'Provider Credentialing & Payer Enrollment Timeline Estimator | Aethera Healthcare', 'Free medical credentialing calculator. Calculate CAQH, Medicare PECOS, Medicaid, and commercial payer enrollment timelines to prevent billing freezes for new physicians.'),
+  ...marketingMetadata("/tools/credentialing-timeline-estimator", 'Provider Credentialing & Payer Enrollment Timeline Estimator | Aethera Healthcare', 'Free credentialing timeline calculator: estimate CAQH, PECOS, Medicaid and commercial enrollment times to avoid billing freezes for new providers.'),
 };
 
 export default function CredentialingTimelinePage() {

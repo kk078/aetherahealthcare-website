@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Head & Neck Free Flap Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Head & Neck Free Flap Reconstruction Claim Scrubber. Audit microvascular fibula (CPT 20955), anterolateral thigh ALT (15756), mandibular plating (+21247-59), operating microscope (+69990), neck dissection (+38724-59), and tracheostomy (+31600-59).',
+    'Free head and neck free flap scrubber: audit fibula (CPT 20955) and ALT (15756) flaps, plating, microscope (+69990), neck dissection and trach.',
 
-  ...marketingMetadata("/tools/head-and-neck-free-flap-scrubber", 'Head & Neck Free Flap Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Head & Neck Free Flap Reconstruction Claim Scrubber. Audit microvascular fibula (CPT 20955), anterolateral thigh ALT (15756), mandibular plating (+21247-59), operating microscope (+69990), neck dissection (+38724-59), and tracheostomy (+31600-59).'),
+  ...marketingMetadata("/tools/head-and-neck-free-flap-scrubber", 'Head & Neck Free Flap Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare', 'Free head and neck free flap scrubber: audit fibula (CPT 20955) and ALT (15756) flaps, plating, microscope (+69990), neck dissection and trach.'),
 };
 
 export default function HeadAndNeckFreeFlapScrubberPage() {

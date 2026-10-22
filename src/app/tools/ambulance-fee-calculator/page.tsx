@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Ambulance & EMS Fee Schedule Calculator | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free Medicare Ambulance Fee Schedule (AFS) calculator. Compute BLS, ALS1, ALS2, and SCT allowable rates, calculate CMS rural mileage bonuses, validate origin/destination modifier pairs, and generate 837P Loop 2400 CR1 segments.',
+    'Free Medicare ambulance fee calculator: BLS, ALS1, ALS2 and SCT rates, rural mileage bonuses, origin/destination modifiers and 837P CR1 segments.',
 
-  ...marketingMetadata("/tools/ambulance-fee-calculator", 'Ambulance & EMS Fee Schedule Calculator | Free RCM Tool | Aethera Healthcare Solutions', 'Free Medicare Ambulance Fee Schedule (AFS) calculator. Compute BLS, ALS1, ALS2, and SCT allowable rates, calculate CMS rural mileage bonuses, validate origin/destination modifier pairs, and generate 837P Loop 2400 CR1 segments.'),
+  ...marketingMetadata("/tools/ambulance-fee-calculator", 'Ambulance & EMS Fee Schedule Calculator | Free RCM Tool | Aethera Healthcare Solutions', 'Free Medicare ambulance fee calculator: BLS, ALS1, ALS2 and SCT rates, rural mileage bonuses, origin/destination modifiers and 837P CR1 segments.'),
 };
 
 export default function AmbulanceFeeCalculatorPage() {

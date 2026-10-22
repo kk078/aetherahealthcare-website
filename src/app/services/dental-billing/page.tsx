@@ -11,9 +11,9 @@ import SectionHeader from '@/components/ui/SectionHeader';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/dental-billing') },
   title: "Dental Billing & RCM Services | Medical-Dental Cross-Coding",
-  description: "Dental revenue cycle management for general, specialty, and DSO practices. We handle CDT coding, medical-dental cross-coding, predeterminations, PPO fee schedules, ortho and oral surgery billing, and aging A/R.",
+  description: "Dental RCM for general, specialty and DSO practices: CDT coding, medical-dental cross-coding, predeterminations, PPO fee schedules and aging A/R.",
 
-  ...marketingMetadata("/services/dental-billing", "Dental Billing & RCM Services | Medical-Dental Cross-Coding", "Dental revenue cycle management for general, specialty, and DSO practices. We handle CDT coding, medical-dental cross-coding, predeterminations, PPO fee schedules, ortho and oral surgery billing, and aging A/R."),
+  ...marketingMetadata("/services/dental-billing", "Dental Billing & RCM Services | Medical-Dental Cross-Coding", "Dental RCM for general, specialty and DSO practices: CDT coding, medical-dental cross-coding, predeterminations, PPO fee schedules and aging A/R."),
 };
 
 const stats = [

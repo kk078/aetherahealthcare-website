@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Pediatric DBS & Cranial Neuromodulation Scrubber | Free RCM Tool | Aethera Healthcare',
   },
   description:
-    'Free Pediatric DBS & Cranial Neuromodulation Scrubber. Audit stereotactic lead placement with microelectrode recording (CPT 61867/+61868), suppress headframe bundling rejections (20660), protect dual-channel IPGs (61886-59/58), and capture intraoperative neuroprogramming (95983).',
+    'Free pediatric DBS scrubber: audit lead placement with MER (61867/+61868), headframe bundling (20660), dual-channel IPGs and programming (95983).',
 
-  ...marketingMetadata("/tools/pediatric-dbs-neuromodulation-scrubber", 'Pediatric DBS & Cranial Neuromodulation Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Pediatric DBS & Cranial Neuromodulation Scrubber. Audit stereotactic lead placement with microelectrode recording (CPT 61867/+61868), suppress headframe bundling rejections (20660), protect dual-channel IPGs (61886-59/58), and capture intraoperative neuroprogramming (95983).'),
+  ...marketingMetadata("/tools/pediatric-dbs-neuromodulation-scrubber", 'Pediatric DBS & Cranial Neuromodulation Scrubber | Free RCM Tool | Aethera Healthcare', 'Free pediatric DBS scrubber: audit lead placement with MER (61867/+61868), headframe bundling (20660), dual-channel IPGs and programming (95983).'),
 };
 
 export default function PediatricDbsScrubberPage() {

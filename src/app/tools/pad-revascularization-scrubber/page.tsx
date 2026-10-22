@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Endovascular & PAD Revascularization Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free Endovascular & PAD Lower Extremity Revascularization Scrubber. Audit CPT 37220–37235 vascular territory hierarchies (iliac, fem/pop, tibial/peroneal), suppress unbundled angioplasties and catheter placements (36245–36248), and validate diagnostic angiography exemptions.',
+    'Free PAD revascularization scrubber: audit CPT 37220–37235 territory hierarchies, unbundled catheter placements and diagnostic angiography exceptions.',
 
-  ...marketingMetadata("/tools/pad-revascularization-scrubber", 'Endovascular & PAD Revascularization Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Endovascular & PAD Lower Extremity Revascularization Scrubber. Audit CPT 37220–37235 vascular territory hierarchies (iliac, fem/pop, tibial/peroneal), suppress unbundled angioplasties and catheter placements (36245–36248), and validate diagnostic angiography exemptions.'),
+  ...marketingMetadata("/tools/pad-revascularization-scrubber", 'Endovascular & PAD Revascularization Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free PAD revascularization scrubber: audit CPT 37220–37235 territory hierarchies, unbundled catheter placements and diagnostic angiography exceptions.'),
 };
 
 export default function PadRevascularizationScrubberPage() {

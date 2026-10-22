@@ -82,9 +82,9 @@ const relatedServices = [
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/telehealth-billing') },
   title: "Telehealth Billing & Virtual Care RCM",
-  description: "Specialized telehealth billing and coding — correct modifiers, POS codes, and payer rules for virtual care so every visit gets paid. Telehealth RCM from Aethera.",
+  description: "Telehealth billing and coding: the right modifiers, POS codes and payer rules for virtual care, so every visit gets paid.",
 
-  ...marketingMetadata("/services/telehealth-billing", "Telehealth Billing & Virtual Care RCM", "Specialized telehealth billing and coding — correct modifiers, POS codes, and payer rules for virtual care so every visit gets paid. Telehealth RCM from Aethera."),
+  ...marketingMetadata("/services/telehealth-billing", "Telehealth Billing & Virtual Care RCM", "Telehealth billing and coding: the right modifiers, POS codes and payer rules for virtual care, so every visit gets paid."),
 };
 
 export default function TelehealthBilling() {

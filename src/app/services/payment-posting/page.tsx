@@ -11,9 +11,9 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/payment-posting') },
   title: "Payment Posting Services | ERA Processing",
-  description: "Professional payment posting services including ERA processing, EOB posting, and patient payment application. Optimize your cash flow with accurate payment processing.",
+  description: "Payment posting services: ERA processing, EOB posting and patient payment application, accurate and on time to keep cash flowing.",
 
-  ...marketingMetadata("/services/payment-posting", "Payment Posting Services | ERA Processing", "Professional payment posting services including ERA processing, EOB posting, and patient payment application. Optimize your cash flow with accurate payment processing."),
+  ...marketingMetadata("/services/payment-posting", "Payment Posting Services | ERA Processing", "Payment posting services: ERA processing, EOB posting and patient payment application, accurate and on time to keep cash flowing."),
 };
 
 const includedItems = [

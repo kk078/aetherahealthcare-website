@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     default: "Aethera Healthcare Solutions | Medical Billing & Revenue Cycle Management",
     template: "%s | Aethera Healthcare Solutions",
   },
-  description: "Maximizing Revenue. Minimizing Burden. Aethera Healthcare Solutions is your full-service medical billing partner handling coding, claims, payments, denials, and collections so you can focus on patients.",
+  description: "Full-service medical billing for U.S. practices: coding, claims, payment posting, denials and collections handled so your team can focus on patients.",
   keywords: ["medical billing", "revenue cycle management", "healthcare billing", "medical coding", "claims processing"],
   authors: [{ name: "Aethera Healthcare Solutions" }],
   creator: "Aethera Healthcare Solutions",

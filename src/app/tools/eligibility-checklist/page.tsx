@@ -13,9 +13,9 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/eligibility-checklist') },
   title: { absolute: 'Eligibility & Prior-Auth Readiness Checklist | Aethera Healthcare Solutions' },
   description:
-    'Free pre-visit eligibility and prior-authorization checklist. Score your front-desk verification against the checks that prevent CO-27, CO-197, and eligibility denials.',
+    'Free pre-visit eligibility and prior-auth checklist: score your front desk against the checks that prevent CO-27, CO-197 and eligibility denials.',
 
-  ...marketingMetadata("/tools/eligibility-checklist", 'Eligibility & Prior-Auth Readiness Checklist | Aethera Healthcare Solutions', 'Free pre-visit eligibility and prior-authorization checklist. Score your front-desk verification against the checks that prevent CO-27, CO-197, and eligibility denials.'),
+  ...marketingMetadata("/tools/eligibility-checklist", 'Eligibility & Prior-Auth Readiness Checklist | Aethera Healthcare Solutions', 'Free pre-visit eligibility and prior-auth checklist: score your front desk against the checks that prevent CO-27, CO-197 and eligibility denials.'),
 };
 
 export default function EligibilityChecklistPage() {

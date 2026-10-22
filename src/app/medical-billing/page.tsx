@@ -10,10 +10,10 @@ import { Stethoscope } from 'lucide-react';
 export const metadata = {
   title: { absolute: 'Medical Billing Services by Specialty | Aethera Healthcare Solutions' },
   description:
-    'Nationwide specialty medical billing and revenue cycle management for U.S. practices. Find billing built for your specialty — coding, claims, denials, and A/R handled end to end.',
+    'Specialty medical billing and revenue cycle management for U.S. practices: coding, claims, denials and A/R handled end to end for your specialty.',
   alternates: { canonical: 'https://aetherahealthcare.com/medical-billing/' },
 
-  ...marketingMetadata("/medical-billing", 'Medical Billing Services by Specialty | Aethera Healthcare Solutions', 'Nationwide specialty medical billing and revenue cycle management for U.S. practices. Find billing built for your specialty — coding, claims, denials, and A/R handled end to end.'),
+  ...marketingMetadata("/medical-billing", 'Medical Billing Services by Specialty | Aethera Healthcare Solutions', 'Specialty medical billing and revenue cycle management for U.S. practices: coding, claims, denials and A/R handled end to end for your specialty.'),
 };
 
 export default function MedicalBillingHub() {

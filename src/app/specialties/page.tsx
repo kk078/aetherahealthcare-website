@@ -653,7 +653,7 @@ const specialties = [
 
 export const metadata = {
   title: "Medical Billing Specialties We Serve",
-  description: "Expert billing and revenue cycle management across 86+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves.",
+  description: "Billing and revenue cycle management across 86+ medical specialties, each with specialty-specific coding and payer knowledge.",
   alternates: {
     canonical: 'https://aetherahealthcare.com/specialties/',
   },
@@ -664,7 +664,7 @@ export const metadata = {
     type: 'website',
   },
 
-  ...marketingMetadata("/specialties", "Medical Billing Specialties We Serve", "Expert billing and revenue cycle management across 86+ medical specialties, each with specialty-specific coding and payer knowledge. See the specialties Aethera serves."),
+  ...marketingMetadata("/specialties", "Medical Billing Specialties We Serve", "Billing and revenue cycle management across 86+ medical specialties, each with specialty-specific coding and payer knowledge."),
 };
 
 export default function SpecialtiesPage() {

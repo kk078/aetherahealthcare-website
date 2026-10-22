@@ -83,9 +83,9 @@ const relatedServices = [
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/patient-collections') },
   title: "Patient Collections & Statement Management",
-  description: "Professional, compassionate patient collections and statement management that lifts patient payments without hurting satisfaction. Patient A/R handled by Aethera.",
+  description: "Compassionate patient collections and statement management that lifts patient payments without hurting satisfaction.",
 
-  ...marketingMetadata("/services/patient-collections", "Patient Collections & Statement Management", "Professional, compassionate patient collections and statement management that lifts patient payments without hurting satisfaction. Patient A/R handled by Aethera."),
+  ...marketingMetadata("/services/patient-collections", "Patient Collections & Statement Management", "Compassionate patient collections and statement management that lifts patient payments without hurting satisfaction."),
 };
 
 export default function PatientCollections() {

@@ -1,6 +1,14 @@
 import type { Metadata } from 'next';
 import { canonicalUrl, SITE } from './siteConfig';
 
+/** Longest description search engines show in full; Google truncates around 155-160 characters. */
+export const DESCRIPTION_MAX = 155;
+
+/** First candidate that fits in a search snippet, otherwise the shortest one. */
+export function fitDescription(...candidates: string[]): string {
+  return candidates.find(c => c.length <= DESCRIPTION_MAX) ?? candidates.reduce((a, b) => (b.length < a.length ? b : a));
+}
+
 export function marketingMetadata(path: string, title: string, description: string): Metadata {
   title = title.replace(/\s*[|–—-]\s*Aethera Healthcare(?: Solutions)?\s*$/i, '').trim();
   return {

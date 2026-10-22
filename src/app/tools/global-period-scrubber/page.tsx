@@ -14,9 +14,9 @@ export const metadata = {
     absolute: 'Surgical Global Period & Post-Op Modifier Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
   },
   description:
-    'Free CMS surgical global period scrubber. Verify 0-day, 10-day, and 90-day post-op windows, validate compliant usage of Modifiers 24, 58, 78, 79, 54, and 55, and generate ANSI X12 837P Loop 2400 SV1 segments.',
+    'Free surgical global period scrubber: check 0, 10 and 90-day post-op windows and the correct use of modifiers 24, 58, 78, 79, 54 and 55.',
 
-  ...marketingMetadata("/tools/global-period-scrubber", 'Surgical Global Period & Post-Op Modifier Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free CMS surgical global period scrubber. Verify 0-day, 10-day, and 90-day post-op windows, validate compliant usage of Modifiers 24, 58, 78, 79, 54, and 55, and generate ANSI X12 837P Loop 2400 SV1 segments.'),
+  ...marketingMetadata("/tools/global-period-scrubber", 'Surgical Global Period & Post-Op Modifier Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free surgical global period scrubber: check 0, 10 and 90-day post-op windows and the correct use of modifiers 24, 58, 78, 79, 54 and 55.'),
 };
 
 export default function GlobalPeriodScrubberPage() {

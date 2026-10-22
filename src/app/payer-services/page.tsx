@@ -11,9 +11,9 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/payer-services') },
   title: { absolute: 'Payer Services | Health Plan Operations & Payment Integrity | Aethera Healthcare' },
-  description: 'Aethera Healthcare Solutions partners with health plans, TPAs, and risk-bearing entities to deliver claims operations, payment integrity, provider data management, credentialing (CVO), prior authorization administration, and appeals & grievances support.',
+  description: 'For health plans, TPAs and risk-bearing entities: claims operations, payment integrity, provider data, credentialing (CVO), prior auth and appeals.',
 
-  ...marketingMetadata("/payer-services", 'Payer Services | Health Plan Operations & Payment Integrity | Aethera Healthcare', 'Aethera Healthcare Solutions partners with health plans, TPAs, and risk-bearing entities to deliver claims operations, payment integrity, provider data management, credentialing (CVO), prior authorization administration, and appeals & grievances support.'),
+  ...marketingMetadata("/payer-services", 'Payer Services | Health Plan Operations & Payment Integrity | Aethera Healthcare', 'For health plans, TPAs and risk-bearing entities: claims operations, payment integrity, provider data, credentialing (CVO), prior auth and appeals.'),
 };
 
 const stats = [
