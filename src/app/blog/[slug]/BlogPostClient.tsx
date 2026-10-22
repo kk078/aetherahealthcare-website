@@ -66,7 +66,7 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
 
             <div className="mb-10">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={post.image} alt={post.title} className="w-full h-80 object-cover rounded-2xl" />
+              <img src={post.image} alt="" width={1200} height={700} className="w-full h-80 object-cover rounded-2xl" />
             </div>
 
             <p className="text-sm text-gray mb-5">{post.review ? `Reviewed by ${post.review.reviewer} on ${post.review.reviewedAt}.` : 'Editorial reference. A current specialist review record is not available.'} Confirm current payer policies before acting. <Link href="/blog/editorial-policy/" className="underline">Our editorial policy</Link></p>
@@ -96,7 +96,7 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
                 <Link prefetch={false} key={rp.slug} href={`/blog/${rp.slug}`} className="group bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all overflow-hidden border border-gray/10">
                   <div className="h-44 overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={rp.image} alt={rp.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={rp.image} alt="" width={1200} height={700} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-navy mb-3 leading-snug group-hover:text-teal transition-colors">{rp.title}</h3>
