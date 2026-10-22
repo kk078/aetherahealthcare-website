@@ -551,13 +551,13 @@ export default function GoodFaithEstimateGenerator() {
         </div>
         <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
           <Link
-            href="/free-assessment"
+            href="/free-assessment/"
             className="px-5 py-2.5 rounded-xl bg-teal hover:bg-white hover:text-navy text-white font-bold text-xs transition-colors shadow-sm text-center"
           >
             Get Free Practice Audit
           </Link>
           <Link
-            href="/schedule"
+            href="/schedule/"
             className="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-colors text-center border border-white/20"
           >
             Schedule Consultation

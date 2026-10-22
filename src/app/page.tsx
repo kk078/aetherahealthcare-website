@@ -37,18 +37,18 @@ import ROICalculator from '@/components/ui/ROICalculator';
 
 
 const services = [
-  { icon: <FileText className="h-8 w-8" />, title: 'Medical Coding', description: 'Accurate ICD-10, CPT, and HCPCS coding for maximum reimbursement.', href: '/services/medical-coding' },
-  { icon: <DollarSign className="h-8 w-8" />, title: 'Claims & Billing', description: 'End-to-end claim submission and billing management.', href: '/services/claims-billing' },
-  { icon: <CreditCard className="h-8 w-8" />, title: 'Payment Posting', description: 'Efficient payment application and reconciliation.', href: '/services/payment-posting' },
-  { icon: <Shield className="h-8 w-8" />, title: 'Denial Management', description: 'Proactive denial prevention and appeal services.', href: '/services/denial-management' },
-  { icon: <Users className="h-8 w-8" />, title: 'Provider Credentialing', description: 'Complete credentialing and enrollment services.', href: '/services/credentialing' },
-  { icon: <CheckCircle className="h-8 w-8" />, title: 'Eligibility Verification', description: 'Real-time insurance verification and benefits.', href: '/services/eligibility-verification' },
-  { icon: <Calendar className="h-8 w-8" />, title: 'Prior Authorization', description: 'Streamlined prior auth submission and tracking.', href: '/services/prior-authorization' },
-  { icon: <CreditCard className="h-8 w-8" />, title: 'Patient Collections', description: 'Professional patient statement management.', href: '/services/patient-collections' },
-  { icon: <Shield className="h-8 w-8" />, title: 'Compliance & Auditing', description: 'HIPAA compliance and revenue cycle audits.', href: '/services/compliance-auditing' },
-  { icon: <Zap className="h-8 w-8" />, title: 'Telehealth Billing', description: 'Specialized billing for telehealth services.', href: '/services/telehealth-billing' },
-  { icon: <Clock className="h-8 w-8" />, title: 'AR Follow-Up', description: 'Dedicated accounts receivable management.', href: '/services/ar-followup' },
-  { icon: <BarChart3 className="h-8 w-8" />, title: 'Reporting & Analytics', description: 'Comprehensive financial and operational reporting.', href: '/services/reporting-analytics' },
+  { icon: <FileText className="h-8 w-8" />, title: 'Medical Coding', description: 'Accurate ICD-10, CPT, and HCPCS coding for maximum reimbursement.', href: '/services/medical-coding/' },
+  { icon: <DollarSign className="h-8 w-8" />, title: 'Claims & Billing', description: 'End-to-end claim submission and billing management.', href: '/services/claims-billing/' },
+  { icon: <CreditCard className="h-8 w-8" />, title: 'Payment Posting', description: 'Efficient payment application and reconciliation.', href: '/services/payment-posting/' },
+  { icon: <Shield className="h-8 w-8" />, title: 'Denial Management', description: 'Proactive denial prevention and appeal services.', href: '/services/denial-management/' },
+  { icon: <Users className="h-8 w-8" />, title: 'Provider Credentialing', description: 'Complete credentialing and enrollment services.', href: '/services/credentialing/' },
+  { icon: <CheckCircle className="h-8 w-8" />, title: 'Eligibility Verification', description: 'Real-time insurance verification and benefits.', href: '/services/eligibility-verification/' },
+  { icon: <Calendar className="h-8 w-8" />, title: 'Prior Authorization', description: 'Streamlined prior auth submission and tracking.', href: '/services/prior-authorization/' },
+  { icon: <CreditCard className="h-8 w-8" />, title: 'Patient Collections', description: 'Professional patient statement management.', href: '/services/patient-collections/' },
+  { icon: <Shield className="h-8 w-8" />, title: 'Compliance & Auditing', description: 'HIPAA compliance and revenue cycle audits.', href: '/services/compliance-auditing/' },
+  { icon: <Zap className="h-8 w-8" />, title: 'Telehealth Billing', description: 'Specialized billing for telehealth services.', href: '/services/telehealth-billing/' },
+  { icon: <Clock className="h-8 w-8" />, title: 'AR Follow-Up', description: 'Dedicated accounts receivable management.', href: '/services/ar-followup/' },
+  { icon: <BarChart3 className="h-8 w-8" />, title: 'Reporting & Analytics', description: 'Comprehensive financial and operational reporting.', href: '/services/reporting-analytics/' },
 ];
 
 const specialties = [
@@ -106,7 +106,7 @@ const difference = [
     icon: <Globe className="h-7 w-7" />,
     title: 'Offshore, done transparently.',
     desc: 'US-resident data. India-based experts working through locked-down virtual desktops — no downloads, no USB, no local copies, enforced by technology. BAA signed before anything moves. We screen your state and payer mix for offshore restrictions up front and tell you before you ask.',
-    link: { href: '/compliance/security', label: 'Read our Security One-Pager' },
+    link: { href: '/compliance/security/', label: 'Read our Security One-Pager' },
   },
   {
     icon: <FlaskConical className="h-7 w-7" />,
@@ -210,7 +210,7 @@ export default function Home() {
                   >
                     Start the Free 50-Claim Pilot <ArrowRight className="h-4 w-4" />
                   </PilotTrigger>
-                  <Link prefetch={false} href="/for-billing-companies"
+                  <Link prefetch={false} href="/for-billing-companies/"
                     className="inline-flex items-center justify-center border border-white/35 text-white hover:bg-white/10 font-semibold py-3.5 px-7 rounded-xl transition-colors duration-200">
                     For Billing Companies
                   </Link>
@@ -391,7 +391,7 @@ export default function Home() {
               </div>
               <FadeIn delay={0.3}>
                 <div className="mt-9 pt-7 border-t border-gray/15">
-                  <Link prefetch={false} href="/about" className="inline-flex items-center gap-2 text-teal font-semibold hover:text-navy transition-colors">
+                  <Link prefetch={false} href="/about/" className="inline-flex items-center gap-2 text-teal font-semibold hover:text-navy transition-colors">
                     How we work <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
@@ -435,7 +435,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link prefetch={false} href="/specialties" className="text-teal font-semibold hover:text-navy transition-colors">View all specialties we serve &rarr;</Link>
+            <Link prefetch={false} href="/specialties/" className="text-teal font-semibold hover:text-navy transition-colors">View all specialties we serve &rarr;</Link>
           </div>
         </div>
       </section>
@@ -466,12 +466,12 @@ export default function Home() {
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { href: '/case-studies', label: 'Billing Workflows', title: 'Billing Workflows by Specialty', desc: 'Explore the billing challenges, documentation and review steps for your specialty. Verified client outcomes will be published only with permission.', cta: 'Read Billing Workflows', accent: 'text-teal', border: 'border-teal' },
-              { href: '/free-assessment', label: 'Free Assessment', title: 'See What Your Practice Is Missing', desc: 'An instant A/R planning report using your aging totals, with an optional request for specialist review.', cta: 'Get Free Assessment', accent: 'text-emerald', border: 'border-emerald' },
-              { href: '/for-billing-companies', label: 'For Billing Companies', title: 'Your White-Label Back Office', desc: 'Own the client relationship and your brand. We run eligibility, claims, payment posting, AR follow-up, and denials behind it.', cta: 'See the Partnership', accent: 'text-teal', border: 'border-navy' },
-              { href: '/integrations', label: 'EHR Integrations', title: 'Works With Your Current System', desc: 'Epic, Cerner, athenahealth, eClinicalWorks, Kareo, and 45+ more. Setup in 1-4 weeks, planned parallel onboarding.', cta: 'View Integrations', accent: 'text-teal', border: 'border-teal' },
-              { href: '/payers', label: 'Payer Network', title: 'Payer Reference Directory', desc: 'From Medicare and Medicaid to regional Blues plans and workers comp carriers. Confirm current requirements against each payer’s primary guidance.', cta: 'See Payer Network', accent: 'text-teal', border: 'border-navy' },
-              { href: '/tools', label: 'Free Tools', title: 'Denial Lookup & AR Calculators', desc: 'A searchable CARC/RARC denial-code library, clean-claim scorecard, and AR cost calculator — free for any billing team.', cta: 'Open Free Tools', accent: 'text-emerald', border: 'border-emerald' },
+              { href: '/case-studies/', label: 'Billing Workflows', title: 'Billing Workflows by Specialty', desc: 'Explore the billing challenges, documentation and review steps for your specialty. Verified client outcomes will be published only with permission.', cta: 'Read Billing Workflows', accent: 'text-teal', border: 'border-teal' },
+              { href: '/free-assessment/', label: 'Free Assessment', title: 'See What Your Practice Is Missing', desc: 'An instant A/R planning report using your aging totals, with an optional request for specialist review.', cta: 'Get Free Assessment', accent: 'text-emerald', border: 'border-emerald' },
+              { href: '/for-billing-companies/', label: 'For Billing Companies', title: 'Your White-Label Back Office', desc: 'Own the client relationship and your brand. We run eligibility, claims, payment posting, AR follow-up, and denials behind it.', cta: 'See the Partnership', accent: 'text-teal', border: 'border-navy' },
+              { href: '/integrations/', label: 'EHR Integrations', title: 'Works With Your Current System', desc: 'Epic, Cerner, athenahealth, eClinicalWorks, Kareo, and 45+ more. Setup in 1-4 weeks, planned parallel onboarding.', cta: 'View Integrations', accent: 'text-teal', border: 'border-teal' },
+              { href: '/payers/', label: 'Payer Network', title: 'Payer Reference Directory', desc: 'From Medicare and Medicaid to regional Blues plans and workers comp carriers. Confirm current requirements against each payer’s primary guidance.', cta: 'See Payer Network', accent: 'text-teal', border: 'border-navy' },
+              { href: '/tools/', label: 'Free Tools', title: 'Denial Lookup & AR Calculators', desc: 'A searchable CARC/RARC denial-code library, clean-claim scorecard, and AR cost calculator — free for any billing team.', cta: 'Open Free Tools', accent: 'text-emerald', border: 'border-emerald' },
             ].map((card, i) => (
               <FadeIn key={i} delay={i * 0.08}>
                 <Link prefetch={false} href={card.href} className={`group block bg-white rounded-2xl p-6 border-2 ${card.border} hover:shadow-lg transition-all duration-200 h-full`}>
@@ -489,7 +489,7 @@ export default function Home() {
       {/* ===================== CTA ===================== */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <CTABanner title="Ready to Maximize Your Revenue?" buttonText="Schedule a Meeting" href="/schedule" />
+          <CTABanner title="Ready to Maximize Your Revenue?" buttonText="Schedule a Meeting" href="/schedule/" />
         </div>
       </section>
 
@@ -511,7 +511,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link prefetch={false} href="/faq" className="text-teal font-semibold hover:text-navy transition-colors">View all FAQs &rarr;</Link>
+            <Link prefetch={false} href="/faq/" className="text-teal font-semibold hover:text-navy transition-colors">View all FAQs &rarr;</Link>
           </div>
         </div>
       </section>

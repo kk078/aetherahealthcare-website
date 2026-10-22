@@ -50,9 +50,9 @@ export default function SchedulePage() {
           <BookingEmbed />
           <p className="text-center text-sm text-gray mt-6">
             Prefer an email request?{' '}
-            <Link prefetch={false} href="/contact" className="text-teal font-semibold hover:text-navy">Submit an inquiry via our contact form</Link>{' '}
+            <Link prefetch={false} href="/contact/" className="text-teal font-semibold hover:text-navy">Submit an inquiry via our contact form</Link>{' '}
             or start with a{' '}
-            <Link prefetch={false} href="/free-assessment" className="text-teal font-semibold hover:text-navy">free revenue assessment</Link>.
+            <Link prefetch={false} href="/free-assessment/" className="text-teal font-semibold hover:text-navy">free revenue assessment</Link>.
           </p>
         </div>
       </section>

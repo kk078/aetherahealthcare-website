@@ -72,8 +72,8 @@ export default function OrthopedicBilling() {
                 Global period tracking, implant invoice reconciliation, fracture care coding, workers&apos; comp — our orthopedic billing team handles the complexity that costs practices tens of thousands annually.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Orthopedic Assessment</Link>
-                <Link prefetch={false} href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
+                <Link prefetch={false} href="/free-assessment/" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Orthopedic Assessment</Link>
+                <Link prefetch={false} href="/contact/" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
               </div>
             </FadeIn>
           </div>
@@ -145,7 +145,7 @@ export default function OrthopedicBilling() {
       <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-navy to-teal rounded-2xl py-14 px-8 text-center">
-            <FadeIn><h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Capture Every Orthopedic Dollar?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free orthopedic billing assessment. We&apos;ll identify your implant gaps, global period risks, and denial patterns.</p><Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Orthopedic Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
+            <FadeIn><h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Capture Every Orthopedic Dollar?</h2><p className="text-cream max-w-xl mx-auto mb-8">Start with a free orthopedic billing assessment. We&apos;ll identify your implant gaps, global period risks, and denial patterns.</p><Link prefetch={false} href="/free-assessment/" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Orthopedic Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link></FadeIn>
           </div>
         </div>
       </section>

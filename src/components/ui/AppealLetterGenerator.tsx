@@ -375,7 +375,7 @@ Inquiries & Escalations: https://aetherahealthcare.com/contact`;
 
           <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
             <span>Statutory Legal Standard: {activeTemplate.legalCitation}</span>
-            <Link href="/free-assessment" className="text-teal font-bold hover:underline">
+            <Link href="/free-assessment/" className="text-teal font-bold hover:underline">
               Let Aethera Handle 100% of Appeals →
             </Link>
           </div>

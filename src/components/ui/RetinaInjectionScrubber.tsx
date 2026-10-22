@@ -251,7 +251,7 @@ IEA*1*000000001~`;
       administeredUnits: dosageCalculations.administeredUnits,
       discardedWastageUnits: dosageCalculations.discardedUnits,
       totalEstimatedAllowed: dosageCalculations.totalAllowed,
-      pageUrl: typeof window !== 'undefined' ? window.location.href : '/tools/retina-injection-scrubber',
+      pageUrl: typeof window !== 'undefined' ? window.location.href : '/tools/retina-injection-scrubber/',
       submittedAt: new Date().toISOString(),
     };
 

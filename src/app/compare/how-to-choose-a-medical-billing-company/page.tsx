@@ -112,8 +112,8 @@ export default function HowToChoose() {
             <h2 className="text-2xl font-bold mb-2">Put us to the test</h2>
             <p className="text-gray mb-6 max-w-xl mx-auto">Ask us every question on this page. Start with a free assessment of where your current billing is leaking.</p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">Get a Free Assessment</Link>
-              <Link prefetch={false} href="/compare/outsourced-vs-in-house-medical-billing" className="border border-white/30 hover:bg-white/10 text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm inline-flex items-center">
+              <Link prefetch={false} href="/free-assessment/" className="bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">Get a Free Assessment</Link>
+              <Link prefetch={false} href="/compare/outsourced-vs-in-house-medical-billing/" className="border border-white/30 hover:bg-white/10 text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm inline-flex items-center">
                 Outsourced vs. in-house <ArrowRight className="h-4 w-4 ml-1.5" />
               </Link>
             </div>

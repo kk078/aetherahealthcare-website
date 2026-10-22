@@ -84,7 +84,7 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
 
       <section className="pt-20 pb-10 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/payers/directory" className="inline-flex items-center text-cream/80 hover:text-white text-sm mb-4">
+          <Link href="/payers/directory/" className="inline-flex items-center text-cream/80 hover:text-white text-sm mb-4">
             <ArrowLeft className="h-4 w-4 mr-1" /> Back to Payer Directory
           </Link>
           <h1 className="text-3xl md:text-4xl font-bold text-white font-jakarta">{p.name}</h1>
@@ -271,7 +271,7 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
             <div className="grid sm:grid-cols-3 gap-3">
               <Link
                 prefetch={false}
-                href="/tools/appeal-letter-generator"
+                href="/tools/appeal-letter-generator/"
                 className="p-3 rounded-xl border border-gray/15 hover:border-teal hover:bg-cream/50 transition-all flex flex-col justify-between"
               >
                 <div>
@@ -284,7 +284,7 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
 
               <Link
                 prefetch={false}
-                href="/tools/timely-filing-matrix"
+                href="/tools/timely-filing-matrix/"
                 className="p-3 rounded-xl border border-gray/15 hover:border-teal hover:bg-cream/50 transition-all flex flex-col justify-between"
               >
                 <div>
@@ -297,7 +297,7 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
 
               <Link
                 prefetch={false}
-                href="/tools/ncci-claim-scrubber"
+                href="/tools/ncci-claim-scrubber/"
                 className="p-3 rounded-xl border border-gray/15 hover:border-teal hover:bg-cream/50 transition-all flex flex-col justify-between"
               >
                 <div>
@@ -332,14 +332,14 @@ export default async function PayerDetail({ params }: { params: Promise<{ slug: 
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 prefetch={false}
-                href="/free-assessment"
+                href="/free-assessment/"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full text-sm transition-colors shadow-xs"
               >
                 Get a Free Practice Assessment
               </Link>
               <Link
                 prefetch={false}
-                href="/tools/practice-proposal-wizard"
+                href="/tools/practice-proposal-wizard/"
                 className="border-2 border-white/40 hover:border-white text-white font-bold py-3 px-6 rounded-full text-sm transition-colors"
               >
                 Build Practice Proposal

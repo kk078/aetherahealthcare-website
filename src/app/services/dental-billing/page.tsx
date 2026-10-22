@@ -135,8 +135,8 @@ export default function DentalBilling() {
               <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">Dental Billing That Captures Every Dollar You Earn</h1>
               <p className="text-xl text-cream mb-10">From CDT coding and predeterminations to medical-dental cross-coding for oral surgery and sleep appliances — our dental RCM team turns clinical work into clean, fully-paid claims.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Dental Assessment</Link>
-                <Link prefetch={false} href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
+                <Link prefetch={false} href="/free-assessment/" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Dental Assessment</Link>
+                <Link prefetch={false} href="/contact/" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
               </div>
             </FadeIn>
           </div>
@@ -211,7 +211,7 @@ export default function DentalBilling() {
             <FadeIn>
               <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Collect Everything You Produce?</h2>
               <p className="text-cream max-w-xl mx-auto mb-8">Start with a free dental billing assessment. We&apos;ll audit your cross-coding opportunities and aging A/R and show you exactly where revenue is being left behind.</p>
-              <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Dental Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link>
+              <Link prefetch={false} href="/free-assessment/" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Dental Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link>
             </FadeIn>
           </div>
         </div>

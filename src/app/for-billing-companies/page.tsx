@@ -50,8 +50,8 @@ export default function ForBillingCompanies() {
         eyebrow="For Billing Companies"
         title="Your white-label back office"
         subtitle="You keep the client relationship and your brand. We run the work behind it — eligibility verification, claims, payment posting, AR follow-up, denial management — at India+AI economics, with your SLAs."
-        primary={{ href: '/free-assessment', label: 'Start the Free 50-Claim Pilot' }}
-        secondary={{ href: '/contact', label: 'Talk to Us' }}
+        primary={{ href: '/free-assessment/', label: 'Start the Free 50-Claim Pilot' }}
+        secondary={{ href: '/contact/', label: 'Talk to Us' }}
         chips={['Month-to-month', 'White-label or disclosed', 'No minimums for the pilot']}
       />
 
@@ -113,7 +113,7 @@ export default function ForBillingCompanies() {
               </FadeIn>
             ))}
           </div>
-          <Link prefetch={false} href="/free-assessment"
+          <Link prefetch={false} href="/free-assessment/"
             className="inline-flex items-center justify-center gap-2 bg-mint hover:bg-white text-navy font-bold py-3.5 px-8 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20">
             Claim your pilot slot <ArrowRight className="h-4 w-4" />
           </Link>

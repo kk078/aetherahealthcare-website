@@ -1155,7 +1155,7 @@ SE*10*9999~`,
           </button>
 
           <Link
-            href="/free-assessment"
+            href="/free-assessment/"
             className="bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold px-3.5 py-1.5 rounded-xl transition-all flex items-center gap-1.5 shadow-md text-xs active:scale-95"
           >
             <span>Activate for My Practice</span>
@@ -1955,13 +1955,13 @@ SE*10*9999~`,
           </div>
           <div className="flex items-center gap-2 shrink-0">
             <Link
-              href="/schedule"
+              href="/schedule/"
               className="border border-white/40 hover:bg-white/10 text-white font-semibold text-xs px-4 py-2 rounded-xl transition-colors whitespace-nowrap"
             >
               Book 15-Min Demo
             </Link>
             <Link
-              href="/free-assessment"
+              href="/free-assessment/"
               className="bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold text-xs px-4 py-2 rounded-xl transition-colors shadow-md whitespace-nowrap"
             >
               Start Free 50-Claim Pilot
@@ -2194,7 +2194,7 @@ SE*10*9999~`,
                 Close Inspector
               </button>
               <Link
-                href="/free-assessment"
+                href="/free-assessment/"
                 className="px-4 py-2 rounded-xl bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-bold text-xs transition-colors shadow-md flex items-center gap-1.5"
               >
                 <span>Audit My Practice&apos;s Claims</span>

@@ -147,8 +147,8 @@ export default function OutsourcedVsInHouse() {
             <h2 className="text-2xl font-bold mb-2">Not sure which way to go?</h2>
             <p className="text-gray mb-6 max-w-xl mx-auto">A free assessment shows exactly where your current billing is leaking — then you decide. No contract, no pressure.</p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">Get a Free Assessment</Link>
-              <Link prefetch={false} href="/tools/ar-cost-calculator" className="border border-white/30 hover:bg-white/10 text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm inline-flex items-center">
+              <Link prefetch={false} href="/free-assessment/" className="bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">Get a Free Assessment</Link>
+              <Link prefetch={false} href="/tools/ar-cost-calculator/" className="border border-white/30 hover:bg-white/10 text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm inline-flex items-center">
                 Try the A/R Cost Calculator <ArrowRight className="h-4 w-4 ml-1.5" />
               </Link>
             </div>

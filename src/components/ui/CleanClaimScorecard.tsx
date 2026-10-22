@@ -17,21 +17,21 @@ interface Item {
 }
 
 const ITEMS: Item[] = [
-  { id: 'elig', group: 'Front-end', weight: 3, text: 'Eligibility & benefits verified for the date of service', risk: 'CARC 27 (coverage terminated), 96 (non-covered)', toolHref: '/services/eligibility-verification', toolLabel: 'Eligibility Verification' },
-  { id: 'auth', group: 'Front-end', weight: 3, text: 'Prior authorization obtained and number on file when required', risk: 'CARC 197 (auth absent)', toolHref: '/tools/appeal-letter-generator', toolLabel: 'Auth Appeal Generator' },
-  { id: 'demo', group: 'Front-end', weight: 2, text: 'Patient demographics & subscriber/member ID confirmed', risk: 'CARC 16 (lacks information)', toolHref: '/tools/era-835-decoder', toolLabel: 'ERA 835 Decoder' },
-  { id: 'cob', group: 'Front-end', weight: 2, text: 'Primary vs secondary payer (COB) order confirmed', risk: 'CARC 109 / 23 (wrong payer, COB)', toolHref: '/tools/denial-code-lookup', toolLabel: 'Denial Lookup' },
-  { id: 'cred', group: 'Front-end', weight: 2, text: 'Rendering provider credentialed & effective with the payer', risk: 'CARC B7 (provider not eligible)', toolHref: '/services/credentialing', toolLabel: 'Provider Credentialing' },
+  { id: 'elig', group: 'Front-end', weight: 3, text: 'Eligibility & benefits verified for the date of service', risk: 'CARC 27 (coverage terminated), 96 (non-covered)', toolHref: '/services/eligibility-verification/', toolLabel: 'Eligibility Verification' },
+  { id: 'auth', group: 'Front-end', weight: 3, text: 'Prior authorization obtained and number on file when required', risk: 'CARC 197 (auth absent)', toolHref: '/tools/appeal-letter-generator/', toolLabel: 'Auth Appeal Generator' },
+  { id: 'demo', group: 'Front-end', weight: 2, text: 'Patient demographics & subscriber/member ID confirmed', risk: 'CARC 16 (lacks information)', toolHref: '/tools/era-835-decoder/', toolLabel: 'ERA 835 Decoder' },
+  { id: 'cob', group: 'Front-end', weight: 2, text: 'Primary vs secondary payer (COB) order confirmed', risk: 'CARC 109 / 23 (wrong payer, COB)', toolHref: '/tools/denial-code-lookup/', toolLabel: 'Denial Lookup' },
+  { id: 'cred', group: 'Front-end', weight: 2, text: 'Rendering provider credentialed & effective with the payer', risk: 'CARC B7 (provider not eligible)', toolHref: '/services/credentialing/', toolLabel: 'Provider Credentialing' },
 
-  { id: 'spec', group: 'Coding', weight: 3, text: 'Most-specific ICD-10 supported by the documentation', risk: 'CARC 50 / 11 (medical necessity, dx mismatch)', toolHref: '/tools/appeal-letter-generator', toolLabel: 'Appeal Generator' },
-  { id: 'link', group: 'Coding', weight: 2, text: 'Every CPT linked to a supporting diagnosis pointer', risk: 'CARC 11 / 16 (linkage, missing pointer)', toolHref: '/tools/ncci-claim-scrubber', toolLabel: 'NCCI Scrubber' },
-  { id: 'mod', group: 'Coding', weight: 2, text: 'Required modifiers applied; conflicting ones removed', risk: 'CARC 4 (modifier missing/inconsistent)', toolHref: '/tools/ncci-claim-scrubber', toolLabel: 'Modifier Validator' },
-  { id: 'ncci', group: 'Coding', weight: 2, text: 'NCCI PTP edits run; unbundling only with documentation', risk: 'CARC 97 (bundled)', toolHref: '/tools/ncci-claim-scrubber', toolLabel: 'PTP Scrubber' },
-  { id: 'mue', group: 'Coding', weight: 1, text: 'Units within MUE / frequency limits', risk: 'CARC 151 (too many services)', toolHref: '/tools/fee-schedule-benchmarker', toolLabel: 'Fee Benchmarker' },
+  { id: 'spec', group: 'Coding', weight: 3, text: 'Most-specific ICD-10 supported by the documentation', risk: 'CARC 50 / 11 (medical necessity, dx mismatch)', toolHref: '/tools/appeal-letter-generator/', toolLabel: 'Appeal Generator' },
+  { id: 'link', group: 'Coding', weight: 2, text: 'Every CPT linked to a supporting diagnosis pointer', risk: 'CARC 11 / 16 (linkage, missing pointer)', toolHref: '/tools/ncci-claim-scrubber/', toolLabel: 'NCCI Scrubber' },
+  { id: 'mod', group: 'Coding', weight: 2, text: 'Required modifiers applied; conflicting ones removed', risk: 'CARC 4 (modifier missing/inconsistent)', toolHref: '/tools/ncci-claim-scrubber/', toolLabel: 'Modifier Validator' },
+  { id: 'ncci', group: 'Coding', weight: 2, text: 'NCCI PTP edits run; unbundling only with documentation', risk: 'CARC 97 (bundled)', toolHref: '/tools/ncci-claim-scrubber/', toolLabel: 'PTP Scrubber' },
+  { id: 'mue', group: 'Coding', weight: 1, text: 'Units within MUE / frequency limits', risk: 'CARC 151 (too many services)', toolHref: '/tools/fee-schedule-benchmarker/', toolLabel: 'Fee Benchmarker' },
 
-  { id: 'scrub', group: 'Submission', weight: 3, text: 'Claim scrubbed — NPIs, units, all required loops/segments complete', risk: 'CARC 16 (lacks information)', toolHref: '/tools/era-835-decoder', toolLabel: '835 Decoder' },
+  { id: 'scrub', group: 'Submission', weight: 3, text: 'Claim scrubbed — NPIs, units, all required loops/segments complete', risk: 'CARC 16 (lacks information)', toolHref: '/tools/era-835-decoder/', toolLabel: '835 Decoder' },
   { id: 'dup', group: 'Submission', weight: 1, text: 'Claim history checked for duplicates before sending', risk: 'CARC 18 (duplicate)' },
-  { id: 'tfl', group: 'Submission', weight: 2, text: 'Submitted within the payer timely-filing window', risk: 'CARC 29 (timely filing)', toolHref: '/tools/timely-filing-matrix', toolLabel: 'Timely Filing Matrix' },
+  { id: 'tfl', group: 'Submission', weight: 2, text: 'Submitted within the payer timely-filing window', risk: 'CARC 29 (timely filing)', toolHref: '/tools/timely-filing-matrix/', toolLabel: 'Timely Filing Matrix' },
   { id: 'ack', group: 'Submission', weight: 1, text: 'Clearinghouse acceptance / 277CA acknowledgment reviewed', risk: 'Silent rejections never reach the payer' },
 ];
 
@@ -221,7 +221,7 @@ export default function CleanClaimScorecard() {
           )}
 
           <Link prefetch={false}
-            href="/free-assessment"
+            href="/free-assessment/"
             className="flex items-center justify-center w-full border border-white/20 hover:bg-white/10 text-white font-semibold py-2.5 px-5 rounded-full transition-colors mt-3 text-sm"
           >
             Get a Free Assessment <ArrowRight className="h-4 w-4 ml-2" />

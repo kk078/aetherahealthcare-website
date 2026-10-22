@@ -25,7 +25,7 @@ export default function MedicalBillingHub() {
         eyebrow="Billing by Specialty"
         title="Medical billing built for your specialty"
         subtitle="Revenue cycle management tailored to how your specialty actually gets paid — for practices nationwide."
-        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        primary={{ href: '/free-assessment/', label: 'Get a Free Assessment' }}
         chips={['Nationwide', '26+ specialties', 'No long-term contract']}
       />
 
@@ -44,11 +44,11 @@ export default function MedicalBillingHub() {
                 </FadeIn>
               ))}
             </div>
-            <p className="text-xs text-gray mt-3">Don&rsquo;t see your specialty? We bill for many more — <Link prefetch={false} href="/specialties" className="text-teal hover:text-navy font-semibold">see all specialties</Link> or get a free assessment.</p>
+            <p className="text-xs text-gray mt-3">Don&rsquo;t see your specialty? We bill for many more — <Link prefetch={false} href="/specialties/" className="text-teal hover:text-navy font-semibold">see all specialties</Link> or get a free assessment.</p>
           </div>
 
           <div className="text-center pt-2">
-            <Link prefetch={false} href="/free-assessment" className="inline-block bg-teal hover:bg-navy text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm">
+            <Link prefetch={false} href="/free-assessment/" className="inline-block bg-teal hover:bg-navy text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm">
               Get a Free Assessment
             </Link>
           </div>

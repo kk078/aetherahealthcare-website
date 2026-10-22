@@ -17,12 +17,12 @@ export const metadata = {
 
 const pages = [
   {
-    href: '/compare/outsourced-vs-in-house-medical-billing',
+    href: '/compare/outsourced-vs-in-house-medical-billing/',
     title: 'Outsourced vs. In-House Medical Billing',
     desc: 'A side-by-side look at cost, collections, control, and risk — and how to know which model fits your practice.',
   },
   {
-    href: '/compare/how-to-choose-a-medical-billing-company',
+    href: '/compare/how-to-choose-a-medical-billing-company/',
     title: 'How to Choose a Medical Billing Company',
     desc: 'The questions to ask, the red flags to avoid, and the metrics that actually predict whether a billing partner will lift your revenue.',
   },
@@ -36,7 +36,7 @@ export default function CompareHub() {
         eyebrow="Compare Options"
         title="Compare your billing options"
         subtitle="Straight comparisons — not a sales pitch — to help you decide how to run your revenue cycle."
-        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        primary={{ href: '/free-assessment/', label: 'Get a Free Assessment' }}
       />
       <section className="py-14 md:py-20 bg-cream flex-1">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 gap-6">

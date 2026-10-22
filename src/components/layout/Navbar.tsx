@@ -9,52 +9,52 @@ import { Menu, X, Search, ChevronDown } from 'lucide-react';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 
 const services = [
-  { name: 'Medical Coding', href: '/services/medical-coding' },
-  { name: 'Claims & Billing', href: '/services/claims-billing' },
-  { name: 'Payment Posting', href: '/services/payment-posting' },
-  { name: 'Denial Management', href: '/services/denial-management' },
-  { name: 'Provider Credentialing', href: '/services/credentialing' },
-  { name: 'Eligibility Verification', href: '/services/eligibility-verification' },
-  { name: 'Prior Authorization', href: '/services/prior-authorization' },
-  { name: 'Patient Collections', href: '/services/patient-collections' },
-  { name: 'Compliance & Auditing', href: '/services/compliance-auditing' },
-  { name: 'Telehealth Billing', href: '/services/telehealth-billing' },
-  { name: 'AR Follow-Up', href: '/services/ar-followup' },
-  { name: 'Reporting & Analytics', href: '/services/reporting-analytics' },
+  { name: 'Medical Coding', href: '/services/medical-coding/' },
+  { name: 'Claims & Billing', href: '/services/claims-billing/' },
+  { name: 'Payment Posting', href: '/services/payment-posting/' },
+  { name: 'Denial Management', href: '/services/denial-management/' },
+  { name: 'Provider Credentialing', href: '/services/credentialing/' },
+  { name: 'Eligibility Verification', href: '/services/eligibility-verification/' },
+  { name: 'Prior Authorization', href: '/services/prior-authorization/' },
+  { name: 'Patient Collections', href: '/services/patient-collections/' },
+  { name: 'Compliance & Auditing', href: '/services/compliance-auditing/' },
+  { name: 'Telehealth Billing', href: '/services/telehealth-billing/' },
+  { name: 'AR Follow-Up', href: '/services/ar-followup/' },
+  { name: 'Reporting & Analytics', href: '/services/reporting-analytics/' },
 ];
 
 const specialtyServices = [
-  { name: 'Cardiology Billing', href: '/services/cardiology-billing' },
-  { name: 'Orthopedic Billing', href: '/services/orthopedic-billing' },
-  { name: 'Dermatology Billing', href: '/services/dermatology-billing' },
-  { name: 'Psychiatry Billing', href: '/services/psychiatry-billing' },
-  { name: 'Family Medicine Billing', href: '/services/family-medicine-billing' },
-  { name: 'Pharmacy Billing', href: '/services/pharmacy-billing' },
-  { name: 'Dental Billing', href: '/services/dental-billing' },
-  { name: "Workers' Comp Billing", href: '/services/workers-compensation-billing' },
+  { name: 'Cardiology Billing', href: '/services/cardiology-billing/' },
+  { name: 'Orthopedic Billing', href: '/services/orthopedic-billing/' },
+  { name: 'Dermatology Billing', href: '/services/dermatology-billing/' },
+  { name: 'Psychiatry Billing', href: '/services/psychiatry-billing/' },
+  { name: 'Family Medicine Billing', href: '/services/family-medicine-billing/' },
+  { name: 'Pharmacy Billing', href: '/services/pharmacy-billing/' },
+  { name: 'Dental Billing', href: '/services/dental-billing/' },
+  { name: "Workers' Comp Billing", href: '/services/workers-compensation-billing/' },
 ];
 
 const whyAethera = [
-    { name: 'How It Works', href: '/process', desc: 'Scope, secure intake, onboarding and reporting' },
-  { name: 'About Us', href: '/about', desc: 'Our story, founder adjudication roots & team' },
-  { name: 'Billing Workflows', href: '/case-studies', desc: 'Specialty workflows and evidence requirements' },
-  { name: 'Security & Compliance', href: '/compliance/security', desc: 'How we protect PHI, offshore and in the US' },
-  { name: 'Compare Options', href: '/compare', desc: 'Outsourced vs. in-house, and how to choose' },
-  { name: 'Blog & Articles', href: '/blog', desc: 'Healthcare RCM insights & payer guides' },
-  { name: 'RCM & Billing Glossary', href: '/glossary', desc: 'Authoritative dictionary of EDI, NCCI, and denial terms' },
-  { name: 'State of Denials Report', href: '/state-of-denials', desc: 'Free benchmark report by specialty' },
-  { name: 'Guides & Playbooks', href: '/decks', desc: 'Specialty one-pagers & revenue playbooks' },
-  { name: '3D Anatomy Atlas', href: '/anatomy-atlas', desc: 'Interactive anatomy and source-linked billing education' },
-  { name: 'Human Review Framework', href: '/human-autonomy', desc: 'Documentation and evidence checkpoints' },
+    { name: 'How It Works', href: '/process/', desc: 'Scope, secure intake, onboarding and reporting' },
+  { name: 'About Us', href: '/about/', desc: 'Our story, founder adjudication roots & team' },
+  { name: 'Billing Workflows', href: '/case-studies/', desc: 'Specialty workflows and evidence requirements' },
+  { name: 'Security & Compliance', href: '/compliance/security/', desc: 'How we protect PHI, offshore and in the US' },
+  { name: 'Compare Options', href: '/compare/', desc: 'Outsourced vs. in-house, and how to choose' },
+  { name: 'Blog & Articles', href: '/blog/', desc: 'Healthcare RCM insights & payer guides' },
+  { name: 'RCM & Billing Glossary', href: '/glossary/', desc: 'Authoritative dictionary of EDI, NCCI, and denial terms' },
+  { name: 'State of Denials Report', href: '/state-of-denials/', desc: 'Free benchmark report by specialty' },
+  { name: 'Guides & Playbooks', href: '/decks/', desc: 'Specialty one-pagers & revenue playbooks' },
+  { name: '3D Anatomy Atlas', href: '/anatomy-atlas/', desc: 'Interactive anatomy and source-linked billing education' },
+  { name: 'Human Review Framework', href: '/human-autonomy/', desc: 'Documentation and evidence checkpoints' },
 ];
 
 const solutions = [
-  { name: 'Human-in-the-Loop RCM', href: '/human-autonomy', desc: 'Sourced guidance and practical human review checkpoints' },
-  { name: 'For Billing Companies', href: '/for-billing-companies', desc: 'White-label back-office billing partnership' },
-  { name: 'Payer Services', href: '/payer-services', desc: 'Contracting, credentialing & fee schedules' },
-  { name: 'EHR Integrations', href: '/integrations', desc: 'EHR and PM workflows, with access confirmed at intake' },
-  { name: 'Payer Network', href: '/payers', desc: 'Commercial, Medicare and Medicaid payer references' },
-  { name: 'Billing by Specialty', href: '/specialties', desc: 'Tailored workflows for 15+ medical fields' },
+  { name: 'Human-in-the-Loop RCM', href: '/human-autonomy/', desc: 'Sourced guidance and practical human review checkpoints' },
+  { name: 'For Billing Companies', href: '/for-billing-companies/', desc: 'White-label back-office billing partnership' },
+  { name: 'Payer Services', href: '/payer-services/', desc: 'Contracting, credentialing & fee schedules' },
+  { name: 'EHR Integrations', href: '/integrations/', desc: 'EHR and PM workflows, with access confirmed at intake' },
+  { name: 'Payer Network', href: '/payers/', desc: 'Commercial, Medicare and Medicaid payer references' },
+  { name: 'Billing by Specialty', href: '/specialties/', desc: 'Tailored workflows for 15+ medical fields' },
 ];
 
 export default function Navbar() {
@@ -300,10 +300,10 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link prefetch={false} href="/tools" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium whitespace-nowrap">
+              <Link prefetch={false} href="/tools/" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium whitespace-nowrap">
                 Free Tools
               </Link>
-              <Link prefetch={false} href="/pricing" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium whitespace-nowrap">
+              <Link prefetch={false} href="/pricing/" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium whitespace-nowrap">
                 Pricing
               </Link>
 
@@ -364,7 +364,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link prefetch={false} href="/contact" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium whitespace-nowrap">
+              <Link prefetch={false} href="/contact/" className="text-[#334155] hover:text-[#003087] transition-colors text-sm font-medium whitespace-nowrap">
                 Contact
               </Link>
             </div>
@@ -376,7 +376,7 @@ export default function Navbar() {
             <ThemeToggle variant="compact" />
 
             <Link prefetch={false}
-              href="/schedule"
+              href="/schedule/"
               className="text-[#1d1d1f] hover:text-[#003087] font-medium py-2 px-3 xl:px-4 rounded-full text-sm transition-colors duration-200 whitespace-nowrap"
             >
               Schedule Meeting
@@ -442,7 +442,7 @@ export default function Navbar() {
             {/* Quick Action CTAs */}
             <div className="grid grid-cols-2 gap-2 pt-1 pb-3 border-b border-slate-100">
               <Link prefetch={false}
-                href="/schedule"
+                href="/schedule/"
                 className="flex items-center justify-center border-2 border-[#003087] text-[#003087] font-semibold py-2.5 px-3 rounded-xl text-sm text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -496,7 +496,7 @@ export default function Navbar() {
                 ))}
                 <Link
                   prefetch={false}
-                  href="/tools"
+                  href="/tools/"
                   className="text-navy hover:text-[#003087] hover:bg-slate-50 transition-colors text-sm py-2 px-2.5 rounded-lg flex items-center font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -504,7 +504,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   prefetch={false}
-                  href="/pricing"
+                  href="/pricing/"
                   className="text-navy hover:text-[#003087] hover:bg-slate-50 transition-colors text-sm py-2 px-2.5 rounded-lg flex items-center font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -531,7 +531,7 @@ export default function Navbar() {
                 ))}
                 <Link
                   prefetch={false}
-                  href="/contact"
+                  href="/contact/"
                   className="text-[#003087] hover:bg-slate-50 transition-colors text-sm py-2.5 px-2.5 rounded-lg flex items-center font-bold"
                   onClick={() => setIsMenuOpen(false)}
                 >

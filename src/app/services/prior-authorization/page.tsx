@@ -74,9 +74,9 @@ const faqs = [
 ];
 
 const relatedServices = [
-  { name: 'Eligibility Verification', href: '/services/eligibility-verification' },
-  { name: 'Claims & Billing', href: '/services/claims-billing' },
-  { name: 'Denial Management', href: '/services/denial-management' },
+  { name: 'Eligibility Verification', href: '/services/eligibility-verification/' },
+  { name: 'Claims & Billing', href: '/services/claims-billing/' },
+  { name: 'Denial Management', href: '/services/denial-management/' },
 ];
 
 export const metadata = {
@@ -319,13 +319,13 @@ export default function PriorAuthorization() {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link prefetch={false}
-                  href="/contact"
+                  href="/contact/"
                   className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >
                   Schedule Free Consultation
                 </Link>
                 <Link prefetch={false}
-                  href="/pricing"
+                  href="/pricing/"
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >
                   View Pricing Options

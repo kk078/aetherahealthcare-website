@@ -355,7 +355,7 @@ export default function Edi270271Validator() {
                     Do not submit claims to this payer under the terminated policy. Request current primary insurance card or convert patient account to Self-Pay with a Good Faith Estimate under the No Surprises Act.
                   </p>
                   <Link
-                    href="/tools/good-faith-estimate-generator"
+                    href="/tools/good-faith-estimate-generator/"
                     className="inline-flex items-center gap-1 font-bold text-red-700 hover:text-red-900 underline mt-1.5"
                   >
                     Generate Self-Pay GFE Form <ArrowRight className="h-3 w-3" />
@@ -376,7 +376,7 @@ export default function Edi270271Validator() {
           </p>
         </div>
         <Link
-          href="/services/eligibility-verification"
+          href="/services/eligibility-verification/"
           className="px-5 py-2.5 rounded-xl bg-teal hover:bg-white hover:text-navy text-white font-bold text-xs transition-colors shrink-0 shadow-sm"
         >
           Explore Eligibility Services

@@ -174,7 +174,7 @@ export default function DenialCodeLookup({
                       <div className="flex flex-wrap gap-2">
                         <Link
                           prefetch={false}
-                          href="/tools/appeal-letter-generator"
+                          href="/tools/appeal-letter-generator/"
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-navy text-white hover:bg-teal rounded-lg text-xs font-bold transition-colors"
                         >
                           <FileText className="h-3.5 w-3.5" /> Draft Appeal Letter <ArrowRight className="h-3 w-3" />
@@ -182,7 +182,7 @@ export default function DenialCodeLookup({
                         {(d.code === '97' || d.code === '4') && (
                           <Link
                             prefetch={false}
-                            href="/tools/ncci-claim-scrubber"
+                            href="/tools/ncci-claim-scrubber/"
                             className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-teal/10 text-teal hover:bg-teal hover:text-white rounded-lg text-xs font-bold transition-colors"
                           >
                             Validate NCCI Edits &rarr;
@@ -191,7 +191,7 @@ export default function DenialCodeLookup({
                         {d.code === '29' && (
                           <Link
                             prefetch={false}
-                            href="/tools/timely-filing-matrix"
+                            href="/tools/timely-filing-matrix/"
                             className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-teal/10 text-teal hover:bg-teal hover:text-white rounded-lg text-xs font-bold transition-colors"
                           >
                             Check Payer Filing Limits &rarr;
@@ -199,7 +199,7 @@ export default function DenialCodeLookup({
                         )}
                         <Link
                           prefetch={false}
-                          href="/tools/era-835-decoder"
+                          href="/tools/era-835-decoder/"
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cream text-navy hover:bg-teal/10 border border-gray/10 rounded-lg text-xs font-bold transition-colors"
                         >
                           Decode 835 Remittance
@@ -273,14 +273,14 @@ export default function DenialCodeLookup({
                       <div className="flex flex-wrap gap-2">
                         <Link
                           prefetch={false}
-                          href="/tools/appeal-letter-generator"
+                          href="/tools/appeal-letter-generator/"
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-navy text-white hover:bg-teal rounded-lg text-xs font-bold transition-colors"
                         >
                           <FileText className="h-3.5 w-3.5" /> Appeal Generator <ArrowRight className="h-3 w-3" />
                         </Link>
                         <Link
                           prefetch={false}
-                          href="/tools/era-835-decoder"
+                          href="/tools/era-835-decoder/"
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cream text-navy hover:bg-teal/10 border border-gray/10 rounded-lg text-xs font-bold transition-colors"
                         >
                           Decode 835 Remittance

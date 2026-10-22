@@ -28,13 +28,13 @@ export default function TimelyFilingPage() {
         title="Timely filing calculator"
         subtitle="Enter a date of service and the payer’s filing limit to get the exact submission deadline, how many days are left, and whether the claim is at risk of a CARC 29 timely-filing denial."
         primary={{ href: '#tool', label: 'Use the Calculator' }}
-        secondary={{ href: '/tools', label: 'All Free Tools' }}
+        secondary={{ href: '/tools/', label: 'All Free Tools' }}
         chips={['Deadline in seconds', 'Payer presets', 'CARC 29 risk flag']}
       />
 
       <section id="tool" className="py-12 md:py-16 bg-cream flex-1 scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link prefetch={false} href="/tools" className="inline-flex items-center text-teal hover:text-navy text-sm mb-6 font-semibold">
+          <Link prefetch={false} href="/tools/" className="inline-flex items-center text-teal hover:text-navy text-sm mb-6 font-semibold">
             <ArrowLeft className="h-4 w-4 mr-1.5" /> All tools
           </Link>
 
@@ -46,7 +46,7 @@ export default function TimelyFilingPage() {
               <strong>Educational reference.</strong> Filing limits vary by payer, plan, and contract, and some payers
               count from date of service while others count from date of discharge or a prior payer’s remittance. Confirm
               the exact limit in your payer agreement or the{' '}
-              <Link prefetch={false} href="/payers/directory" className="underline font-semibold">payer directory</Link>.
+              <Link prefetch={false} href="/payers/directory/" className="underline font-semibold">payer directory</Link>.
             </p>
           </div>
 

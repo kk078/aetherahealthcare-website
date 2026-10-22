@@ -226,7 +226,7 @@ IEA*1*000000001~`;
       telemetryCadenceDays: daysSinceLastTransmission,
       isCadenceCompliant: cadenceAnalysis.isCompliant,
       estimatedAblationAllowed: totalAblationAllowed,
-      pageUrl: typeof window !== 'undefined' ? window.location.href : '/tools/cardiac-ep-scrubber',
+      pageUrl: typeof window !== 'undefined' ? window.location.href : '/tools/cardiac-ep-scrubber/',
       submittedAt: new Date().toISOString(),
     };
 

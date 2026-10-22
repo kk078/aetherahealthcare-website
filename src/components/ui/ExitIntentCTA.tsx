@@ -131,8 +131,8 @@ export default function ExitIntentCTA() {
               {status === 'error' && (
                 <p className="text-center text-xs text-red-500">
                   Something went wrong — please submit an inquiry at{' '}
-                  <Link prefetch={false} href="/contact" className="underline font-semibold">our contact page</Link> or{' '}
-                  <Link prefetch={false} href="/schedule" className="underline font-semibold">schedule a meeting</Link>.
+                  <Link prefetch={false} href="/contact/" className="underline font-semibold">our contact page</Link> or{' '}
+                  <Link prefetch={false} href="/schedule/" className="underline font-semibold">schedule a meeting</Link>.
                 </p>
               )}
               <p className="text-center text-xs text-slate-400">

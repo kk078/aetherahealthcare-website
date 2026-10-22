@@ -277,7 +277,7 @@ export default function CallbackButton({ initialMode = 'chat', initialQuery = ''
             {
               type: 'escalate_kiran',
               title: 'Schedule Consultation with Kiran',
-              data: { url: '/schedule' },
+              data: { url: '/schedule/' },
             },
           ]
         ),
@@ -452,7 +452,7 @@ export default function CallbackButton({ initialMode = 'chat', initialQuery = ''
           <p className="text-slate-600 mb-2 font-medium">{String(d.label)}</p>
           <div className="flex flex-wrap gap-1.5 pt-1">
             <a
-              href="/tools/denial-code-lookup"
+              href="/tools/denial-code-lookup/"
               className="inline-flex items-center gap-1 px-2.5 py-1 bg-white border border-teal/30 text-teal hover:bg-teal hover:text-white rounded-lg font-semibold transition-colors text-[11px]"
             >
               Lookup in Guide <ExternalLink className="h-3 w-3" />
@@ -480,7 +480,7 @@ export default function CallbackButton({ initialMode = 'chat', initialQuery = ''
           <p className="text-slate-600 text-[11px] mt-0.5"><strong>Appeals:</strong> {String(p.appeal)}</p>
           <div className="flex flex-wrap gap-1.5 mt-2">
             <Link
-              href="/payers/directory"
+              href="/payers/directory/"
               className="inline-flex items-center gap-1 px-2.5 py-1 bg-white border border-teal/30 text-teal hover:bg-teal hover:text-white rounded-lg font-semibold transition-colors text-[11px]"
             >
               View 10,600+ Payer Directory <ExternalLink className="h-3 w-3" />
@@ -528,13 +528,13 @@ export default function CallbackButton({ initialMode = 'chat', initialQuery = ''
           </p>
           <div className="grid grid-cols-2 gap-1.5">
             <a
-              href="/schedule"
+              href="/schedule/"
               className="inline-flex items-center justify-center gap-1 px-2.5 py-1.5 bg-navy hover:bg-teal text-white rounded-lg font-semibold transition-colors text-[11px]"
             >
               <Calendar className="h-3 w-3" /> Schedule Meeting
             </a>
             <a
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center justify-center gap-1 px-2.5 py-1.5 bg-white border border-slate-300 hover:border-teal text-slate-700 hover:text-teal rounded-lg font-semibold transition-colors text-[11px]"
             >
               <Mail className="h-3 w-3" /> Email Request
@@ -754,13 +754,13 @@ export default function CallbackButton({ initialMode = 'chat', initialQuery = ''
                   {/* Quick Connect Bar */}
                   <div className="grid grid-cols-2 gap-2">
                     <a
-                      href="/schedule"
+                      href="/schedule/"
                       className="flex items-center justify-center gap-1.5 bg-teal hover:bg-navy text-white font-semibold py-2 px-3 rounded-xl transition-colors text-xs text-center"
                     >
                       <Calendar className="h-3.5 w-3.5" /> Schedule Meeting
                     </a>
                     <a
-                      href="/contact"
+                      href="/contact/"
                       className="flex items-center justify-center gap-1.5 border border-teal text-teal hover:bg-teal hover:text-white font-semibold py-2 px-3 rounded-xl transition-colors text-xs text-center"
                     >
                       <Mail className="h-3.5 w-3.5" /> Send Email Request
@@ -860,7 +860,7 @@ export default function CallbackButton({ initialMode = 'chat', initialQuery = ''
 
                     {callbackStatus === 'error' && (
                       <p className="text-red-500 text-[11px]">
-                        Something went wrong. Please submit your request via our <a href="/contact" className="underline font-semibold">contact form</a> or <a href="/schedule" className="underline font-semibold">schedule a meeting</a>.
+                        Something went wrong. Please submit your request via our <a href="/contact/" className="underline font-semibold">contact form</a> or <a href="/schedule/" className="underline font-semibold">schedule a meeting</a>.
                       </p>
                     )}
 

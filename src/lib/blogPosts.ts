@@ -25,7 +25,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "In today’s data‑driven environment, practices can use predictive claim analytics to identify high‑risk submissions before they reach the payer, reducing costly denials and accelerating cash flow. By partnering with a seasoned <a href=\"/services\">medical billing & RCM services</a> team, you can tap into advanced analytics without building a data science department. Start with a complimentary <a href=\"/free-assessment\">free revenue assessment</a> to see where analytics can add value."
+          "In today’s data‑driven environment, practices can use predictive claim analytics to identify high‑risk submissions before they reach the payer, reducing costly denials and accelerating cash flow. By partnering with a seasoned <a href=\"/services/\">medical billing & RCM services</a> team, you can tap into advanced analytics without building a data science department. Start with a complimentary <a href=\"/free-assessment/\">free revenue assessment</a> to see where analytics can add value."
         ]
       },
       {
@@ -83,7 +83,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions combines deep RCM expertise with proven analytics tools to build a predictive claim engine tailored to your practice. Our team handles data extraction, model development, and workflow integration, so you can focus on patient care. Ready to reduce denials before they happen? Schedule your <a href=\"/free-assessment\">free revenue assessment</a> and discover how our <a href=\"/services\">medical billing & RCM services</a> can transform your revenue cycle."
+          "Aethera Healthcare Solutions combines deep RCM expertise with proven analytics tools to build a predictive claim engine tailored to your practice. Our team handles data extraction, model development, and workflow integration, so you can focus on patient care. Ready to reduce denials before they happen? Schedule your <a href=\"/free-assessment/\">free revenue assessment</a> and discover how our <a href=\"/services/\">medical billing & RCM services</a> can transform your revenue cycle."
         ]
       }
     ]
@@ -100,7 +100,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "In today’s fee‑for‑service environment, patients expect transparency before they walk out the door. Delivering a clear, personalized payment estimate at check‑in not only sets realistic expectations but also paves the way for smoother collections. Our <a href=\"/services\">medical billing & RCM services</a> are designed to embed this practice into your workflow, turning uncertainty into revenue."
+          "In today’s fee‑for‑service environment, patients expect transparency before they walk out the door. Delivering a clear, personalized payment estimate at check‑in not only sets realistic expectations but also paves the way for smoother collections. Our <a href=\"/services/\">medical billing & RCM services</a> are designed to embed this practice into your workflow, turning uncertainty into revenue."
         ]
       },
       {
@@ -160,7 +160,7 @@ const ARTICLES: BlogPost[] = [
           "- Monitor collection metrics and fine‑tune the workflow over time"
         ],
         "ul": [
-          "Ready to see the impact? Schedule a <a href=\"/free-assessment\">free revenue assessment</a> and let us show you how accurate estimates can transform your bottom line."
+          "Ready to see the impact? Schedule a <a href=\"/free-assessment/\">free revenue assessment</a> and let us show you how accurate estimates can transform your bottom line."
         ]
       }
     ]
@@ -177,7 +177,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "As high‑deductible health plans become a larger share of employer‑offered coverage, practices are seeing more patients responsible for sizable out‑of‑pocket amounts. Navigating these balances requires a clear strategy that blends financial transparency with compassionate communication, and partnering with experienced <a href=\"/services\">medical billing & RCM services</a> can lay the foundation for success."
+          "As high‑deductible health plans become a larger share of employer‑offered coverage, practices are seeing more patients responsible for sizable out‑of‑pocket amounts. Navigating these balances requires a clear strategy that blends financial transparency with compassionate communication, and partnering with experienced <a href=\"/services/\">medical billing & RCM services</a> can lay the foundation for success."
         ]
       },
       {
@@ -238,7 +238,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions combines expert revenue‑cycle guidance with technology that automates eligibility verification, cost estimation, and patient payment plans. Schedule a <a href=\"/free-assessment\">free revenue assessment</a> today to see how we can turn high‑deductible challenges into a steady revenue stream while keeping patients satisfied."
+          "Aethera Healthcare Solutions combines expert revenue‑cycle guidance with technology that automates eligibility verification, cost estimation, and patient payment plans. Schedule a <a href=\"/free-assessment/\">free revenue assessment</a> today to see how we can turn high‑deductible challenges into a steady revenue stream while keeping patients satisfied."
         ]
       }
     ]
@@ -255,7 +255,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "No‑show appointments and last‑minute cancellations can erode a practice's bottom line, especially when staff time and resources have already been allocated. By implementing a structured approach that blends clear policies, technology, and data analysis, you can protect revenue without compromising patient satisfaction. Learn more about how <a href=\"/services\">medical billing & RCM services</a> can integrate with these strategies."
+          "No‑show appointments and last‑minute cancellations can erode a practice's bottom line, especially when staff time and resources have already been allocated. By implementing a structured approach that blends clear policies, technology, and data analysis, you can protect revenue without compromising patient satisfaction. Learn more about how <a href=\"/services/\">medical billing & RCM services</a> can integrate with these strategies."
         ]
       },
       {
@@ -316,7 +316,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions can audit your current scheduling workflow, set up automated reminder systems, and design a compliant no‑show fee policy tailored to your practice. Ready to see the impact? Schedule a <a href=\"/free-assessment\">free revenue assessment</a> today and let our experts put these tactics to work for you."
+          "Aethera Healthcare Solutions can audit your current scheduling workflow, set up automated reminder systems, and design a compliant no‑show fee policy tailored to your practice. Ready to see the impact? Schedule a <a href=\"/free-assessment/\">free revenue assessment</a> today and let our experts put these tactics to work for you."
         ]
       }
     ]
@@ -333,7 +333,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Out-of-network referrals are a hidden revenue source for many U.S. practices, but they also pose compliance and collection challenges. By building a systematic workflow and leveraging <a href=\"/services\">medical billing &amp; RCM services</a>, you can turn these referrals into predictable cash flow while keeping patients satisfied."
+          "Out-of-network referrals are a hidden revenue source for many U.S. practices, but they also pose compliance and collection challenges. By building a systematic workflow and leveraging <a href=\"/services/\">medical billing &amp; RCM services</a>, you can turn these referrals into predictable cash flow while keeping patients satisfied."
         ]
       },
       {
@@ -372,7 +372,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Billing and Follow‑Up Strategies",
         "p": [
-          "Once the service is rendered, submit the claim with the appropriate out-of-network modifiers and payer‑specific billing rules. Follow up promptly on any denials or partial payments, and be ready to appeal using documented cost estimates and patient agreements. For practices that want an extra safety net, consider a <a href=\"/free-assessment\">free revenue assessment</a> to identify gaps in the out-of-network workflow."
+          "Once the service is rendered, submit the claim with the appropriate out-of-network modifiers and payer‑specific billing rules. Follow up promptly on any denials or partial payments, and be ready to appeal using documented cost estimates and patient agreements. For practices that want an extra safety net, consider a <a href=\"/free-assessment/\">free revenue assessment</a> to identify gaps in the out-of-network workflow."
         ],
         "ul": [
           "Use modifier -M1 or payer‑specific out‑of‑network indicators",
@@ -383,7 +383,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions combines expert claim submission, denial management, and patient financial counseling to streamline out-of-network referrals. Our team can design a custom front‑end workflow, run regular audits, and provide ongoing support so you capture every dollar owed. Ready to boost your out-of-network revenue? <a href=\"/free-assessment\">Schedule your free revenue assessment today</a>."
+          "Aethera Healthcare Solutions combines expert claim submission, denial management, and patient financial counseling to streamline out-of-network referrals. Our team can design a custom front‑end workflow, run regular audits, and provide ongoing support so you capture every dollar owed. Ready to boost your out-of-network revenue? <a href=\"/free-assessment/\">Schedule your free revenue assessment today</a>."
         ]
       }
     ]
@@ -400,7 +400,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Implementing medical coding audit best practices is essential for protecting revenue and staying compliant, and a well‑designed audit process can uncover hidden billing errors before they become costly. Our <a href=\"/services/compliance-auditing\">coding audit services</a> provide the framework you need to start strong."
+          "Implementing medical coding audit best practices is essential for protecting revenue and staying compliant, and a well‑designed audit process can uncover hidden billing errors before they become costly. Our <a href=\"/services/compliance-auditing/\">coding audit services</a> provide the framework you need to start strong."
         ]
       },
       {
@@ -454,7 +454,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions combines deep expertise in <a href=\"/services/medical-coding\">medical coding services</a> with proven <a href=\"/services/compliance-auditing\">coding audit services</a> to give your practice a turnkey solution. Our team conducts the audit, delivers a clear action plan, and provides ongoing education to keep your coding accurate year after year. Ready to see where your practice can improve? Request a <a href=\"/free-assessment\">free revenue assessment</a> and let us show you the ROI of a disciplined audit program."
+          "Aethera Healthcare Solutions combines deep expertise in <a href=\"/services/medical-coding/\">medical coding services</a> with proven <a href=\"/services/compliance-auditing/\">coding audit services</a> to give your practice a turnkey solution. Our team conducts the audit, delivers a clear action plan, and provides ongoing education to keep your coding accurate year after year. Ready to see where your practice can improve? Request a <a href=\"/free-assessment/\">free revenue assessment</a> and let us show you the ROI of a disciplined audit program."
         ]
       }
     ]
@@ -471,7 +471,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "How to reduce accounts receivable days in a medical practice starts with a clear view of where money is getting stuck, and the first step is to measure the cost of those delays. Using tools like the <a href=\"/tools/ar-cost-calculator\">A/R cost calculator</a> helps you translate aging reports into dollars, while our <a href=\"/services/ar-followup\">A/R follow-up services</a> demonstrate how timely outreach can move claims off the books faster."
+          "How to reduce accounts receivable days in a medical practice starts with a clear view of where money is getting stuck, and the first step is to measure the cost of those delays. Using tools like the <a href=\"/tools/ar-cost-calculator/\">A/R cost calculator</a> helps you translate aging reports into dollars, while our <a href=\"/services/ar-followup/\">A/R follow-up services</a> demonstrate how timely outreach can move claims off the books faster."
         ]
       },
       {
@@ -532,7 +532,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions combines expert A/R follow‑up, advanced analytics, and customized workflow consulting to shrink your days in accounts receivable. Ready to see measurable improvement? Request a <a href=\"/free-assessment\">free revenue assessment</a> and let our team design a roadmap tailored to your practice."
+          "Aethera Healthcare Solutions combines expert A/R follow‑up, advanced analytics, and customized workflow consulting to shrink your days in accounts receivable. Ready to see measurable improvement? Request a <a href=\"/free-assessment/\">free revenue assessment</a> and let our team design a roadmap tailored to your practice."
         ]
       }
     ]
@@ -549,7 +549,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "No surprises act compliance for practices is no longer optional; it’s a fundamental component of a sustainable revenue cycle. In this guide we outline practical steps U.S. practice owners, administrators, and billers can take to meet the law’s transparency and billing obligations while protecting revenue. Our approach aligns with the broader suite of <a href=\"/services/compliance-auditing\">compliance & auditing services</a> and integrates seamlessly with your existing <a href=\"/services\">revenue cycle management services</a>."
+          "No surprises act compliance for practices is no longer optional; it’s a fundamental component of a sustainable revenue cycle. In this guide we outline practical steps U.S. practice owners, administrators, and billers can take to meet the law’s transparency and billing obligations while protecting revenue. Our approach aligns with the broader suite of <a href=\"/services/compliance-auditing/\">compliance & auditing services</a> and integrates seamlessly with your existing <a href=\"/services/\">revenue cycle management services</a>."
         ]
       },
       {
@@ -593,14 +593,14 @@ const ARTICLES: BlogPost[] = [
         ],
         "ul": [
           "Conduct quarterly training sessions that cover estimate creation, documentation, and IDR filing,",
-          "Leverage your <a href=\"/services/compliance-auditing\">compliance & auditing services</a> to perform mock audits and identify gaps before regulators do,",
+          "Leverage your <a href=\"/services/compliance-auditing/\">compliance & auditing services</a> to perform mock audits and identify gaps before regulators do,",
           "Incorporate a KPI that measures the percentage of estimates delivered on time and the rate of surprise‑bill disputes resolved"
         ]
       },
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions partners with practices to embed No Surprises Act compliance into every stage of the revenue cycle. From building automated estimate templates to handling IDR submissions, our team ensures you stay audit‑ready while maximizing cash flow. Ready to assess your current compliance posture? Schedule a <a href=\"/free-assessment\">free revenue assessment</a> today."
+          "Aethera Healthcare Solutions partners with practices to embed No Surprises Act compliance into every stage of the revenue cycle. From building automated estimate templates to handling IDR submissions, our team ensures you stay audit‑ready while maximizing cash flow. Ready to assess your current compliance posture? Schedule a <a href=\"/free-assessment/\">free revenue assessment</a> today."
         ]
       }
     ]
@@ -623,7 +623,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Key Principles for Effective Payment Plans",
         "p": [
-          "Transparency, simplicity, and flexibility are the foundation of any plan that patients will actually follow, and leveraging your <a href=\"/services/patient-collections\">patient collections services</a> can help automate reminders and track compliance."
+          "Transparency, simplicity, and flexibility are the foundation of any plan that patients will actually follow, and leveraging your <a href=\"/services/patient-collections/\">patient collections services</a> can help automate reminders and track compliance."
         ],
         "ul": [
           "Be transparent about the total cost and any fees up front.",
@@ -671,7 +671,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions can design, implement, and monitor custom payment‑plan programs that fit your specialty and patient demographics. Schedule a <a href=\"/free-assessment\">free assessment</a> to see how our expertise and technology can boost collections while preserving patient satisfaction."
+          "Aethera Healthcare Solutions can design, implement, and monitor custom payment‑plan programs that fit your specialty and patient demographics. Schedule a <a href=\"/free-assessment/\">free assessment</a> to see how our expertise and technology can boost collections while preserving patient satisfaction."
         ]
       }
     ]
@@ -688,7 +688,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Navigating the prior authorization process guide for practices can feel daunting, but a well‑structured approach turns it into a predictable part of your revenue cycle. In this article, we break down each step, highlight tools that can speed approvals, and show how integrating <a href=\"/services/eligibility-verification\">eligibility verification services</a> early can prevent bottlenecks."
+          "Navigating the prior authorization process guide for practices can feel daunting, but a well‑structured approach turns it into a predictable part of your revenue cycle. In this article, we break down each step, highlight tools that can speed approvals, and show how integrating <a href=\"/services/eligibility-verification/\">eligibility verification services</a> early can prevent bottlenecks."
         ]
       },
       {
@@ -721,7 +721,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Leveraging Technology for a Faster Prior Authorization Process",
         "p": [
-          "Automation and integrated platforms can cut manual steps dramatically. Pairing your workflow with our <a href=\"/services/prior-authorization\">prior authorization services</a> adds real‑time visibility and reduces phone‑tag."
+          "Automation and integrated platforms can cut manual steps dramatically. Pairing your workflow with our <a href=\"/services/prior-authorization/\">prior authorization services</a> adds real‑time visibility and reduces phone‑tag."
         ],
         "ul": [
           "Electronic prior‑auth portals that feed directly into the EHR.",
@@ -734,13 +734,13 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Integrating Eligibility Verification into the Authorization Flow",
         "p": [
-          "Running eligibility verification as the first step ensures you only submit requests that the payer will consider. Our <a href=\"/services/eligibility-verification\">eligibility verification services</a> can be embedded in the intake workflow, flagging any coverage gaps before the clinical team builds the authorization packet."
+          "Running eligibility verification as the first step ensures you only submit requests that the payer will consider. Our <a href=\"/services/eligibility-verification/\">eligibility verification services</a> can be embedded in the intake workflow, flagging any coverage gaps before the clinical team builds the authorization packet."
         ]
       },
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions combines expertise, technology, and dedicated staff to turn the prior authorization process into a revenue‑positive activity. We handle end‑to‑end submissions, real‑time tracking, and rapid appeals when needed. Ready to see the impact on your practice? Schedule a <a href=\"/free-assessment\">free revenue assessment</a> and let us streamline your authorizations."
+          "Aethera Healthcare Solutions combines expertise, technology, and dedicated staff to turn the prior authorization process into a revenue‑positive activity. We handle end‑to‑end submissions, real‑time tracking, and rapid appeals when needed. Ready to see the impact on your practice? Schedule a <a href=\"/free-assessment/\">free revenue assessment</a> and let us streamline your authorizations."
         ],
         "ul": [
           "Dedicated prior‑auth specialists familiar with major commercial and government payers.",
@@ -763,7 +763,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Understanding the provider credentialing timeline and CAQH process is essential for keeping your practice’s revenue flow uninterrupted. By leveraging our <a href=\"/services/credentialing\">provider credentialing services</a> and taking advantage of a complimentary <a href=\"/free-assessment\">free assessment</a>, you can spot inefficiencies before they become costly delays."
+          "Understanding the provider credentialing timeline and CAQH process is essential for keeping your practice’s revenue flow uninterrupted. By leveraging our <a href=\"/services/credentialing/\">provider credentialing services</a> and taking advantage of a complimentary <a href=\"/free-assessment/\">free assessment</a>, you can spot inefficiencies before they become costly delays."
         ]
       },
       {
@@ -816,7 +816,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions offers end‑to‑end credentialing support that shortens your provider credentialing timeline and keeps your CAQH profile pristine. Our team handles document collection, payer follow‑up, and continuous monitoring so you can focus on patient care. Ready to see how fast you could be credentialed? Schedule your <a href=\"/free-assessment\">free assessment</a> today and let us map a faster path to full network participation."
+          "Aethera Healthcare Solutions offers end‑to‑end credentialing support that shortens your provider credentialing timeline and keeps your CAQH profile pristine. Our team handles document collection, payer follow‑up, and continuous monitoring so you can focus on patient care. Ready to see how fast you could be credentialed? Schedule your <a href=\"/free-assessment/\">free assessment</a> today and let us map a faster path to full network participation."
         ]
       }
     ]
@@ -833,7 +833,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "timely filing limits by payer 2026 are a critical deadline that can make or break your practice’s cash flow. Understanding each payer’s window and building a proactive process ensures claims are submitted on time and revenue is protected. For quick calculations, try our <a href=\"/tools/timely-filing-calculator\">timely filing calculator</a>."
+          "timely filing limits by payer 2026 are a critical deadline that can make or break your practice’s cash flow. Understanding each payer’s window and building a proactive process ensures claims are submitted on time and revenue is protected. For quick calculations, try our <a href=\"/tools/timely-filing-calculator/\">timely filing calculator</a>."
         ]
       },
       {
@@ -866,8 +866,8 @@ const ARTICLES: BlogPost[] = [
         "ul": [
           "Use claim‑submission software that timestamps each claim and flags approaching deadlines.",
           "Create internal “soft” deadlines (e.g., submit within 30 days for commercial payers) to build a safety buffer.",
-          "Assign a dedicated staff member to run weekly reports from the <a href=\"/services/claims-billing\">claims submission services</a> dashboard and chase overdue items.",
-          "Integrate the <a href=\"/tools/timely-filing-calculator\">timely filing calculator</a> into your daily workflow to instantly verify eligibility windows."
+          "Assign a dedicated staff member to run weekly reports from the <a href=\"/services/claims-billing/\">claims submission services</a> dashboard and chase overdue items.",
+          "Integrate the <a href=\"/tools/timely-filing-calculator/\">timely filing calculator</a> into your daily workflow to instantly verify eligibility windows."
         ]
       },
       {
@@ -884,7 +884,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions offers end‑to‑end revenue‑cycle support, from real‑time claim monitoring to expert appeal writing. Our team can configure custom alerts that keep you ahead of every payer’s filing window, and we handle exception requests on your behalf. Ready to eliminate missed filing deadlines? Schedule a <a href=\"/free-assessment\">free revenue assessment</a> today."
+          "Aethera Healthcare Solutions offers end‑to‑end revenue‑cycle support, from real‑time claim monitoring to expert appeal writing. Our team can configure custom alerts that keep you ahead of every payer’s filing window, and we handle exception requests on your behalf. Ready to eliminate missed filing deadlines? Schedule a <a href=\"/free-assessment/\">free revenue assessment</a> today."
         ]
       }
     ]
@@ -901,7 +901,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "CO-16 denial code meaning and how to fix it is a frequent pain point for practice owners, administrators, and billers who see claims bounce back for missing or mismatched patient information; use our <a href=\"/tools/denial-code-lookup\">denial code lookup tool</a> to confirm the exact definition before you begin remediation."
+          "CO-16 denial code meaning and how to fix it is a frequent pain point for practice owners, administrators, and billers who see claims bounce back for missing or mismatched patient information; use our <a href=\"/tools/denial-code-lookup/\">denial code lookup tool</a> to confirm the exact definition before you begin remediation."
         ]
       },
       {
@@ -936,7 +936,7 @@ const ARTICLES: BlogPost[] = [
           "Implement real‑time eligibility verification that pulls the latest patient data directly from the payer.",
           "Standardize data entry with dropdown menus and validation rules for DOB and gender fields.",
           "Schedule quarterly audits of patient demographics and reconcile any discrepancies with payer records.",
-          "Leverage our <a href=\"/services/denial-management\">denial management services</a> to monitor and correct patterns before they become costly."
+          "Leverage our <a href=\"/services/denial-management/\">denial management services</a> to monitor and correct patterns before they become costly."
         ]
       },
       {
@@ -948,7 +948,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions offers end‑to‑end support for CO-16 denials—from real‑time demographic validation to expert appeal drafting—so you can focus on patient care while we safeguard your revenue. Ready to eliminate CO-16 roadblocks? Request a <a href=\"/free-assessment\">free revenue assessment</a> today."
+          "Aethera Healthcare Solutions offers end‑to‑end support for CO-16 denials—from real‑time demographic validation to expert appeal drafting—so you can focus on patient care while we safeguard your revenue. Ready to eliminate CO-16 roadblocks? Request a <a href=\"/free-assessment/\">free revenue assessment</a> today."
         ]
       }
     ]
@@ -971,7 +971,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Understanding the CO-97 Denial Code",
         "p": [
-          "CO-97 is a Medicare Administrative Contractor (MAC) denial that signals the payer could not process the claim because required data elements were missing, incomplete, or did not match the payer’s rules. The quickest way to verify the exact reason is to consult the <a href=\"/tools/denial-code-lookup\">denial code lookup tool</a>, which provides payer‑specific guidance."
+          "CO-97 is a Medicare Administrative Contractor (MAC) denial that signals the payer could not process the claim because required data elements were missing, incomplete, or did not match the payer’s rules. The quickest way to verify the exact reason is to consult the <a href=\"/tools/denial-code-lookup/\">denial code lookup tool</a>, which provides payer‑specific guidance."
         ]
       },
       {
@@ -997,7 +997,7 @@ const ARTICLES: BlogPost[] = [
           "2. Correct the identified errors—update demographics, POS, NPI, dates, or modifiers as needed.",
           "3. Resubmit the claim with a clear “re‑submit” indicator and attach a brief note describing the correction.",
           "4. If the payer rejects again, file an appeal referencing the corrected fields and include supporting documentation.",
-          "5. Consider leveraging <a href=\"/services/denial-management\">denial management services</a> to automate tracking and ensure timely follow‑up."
+          "5. Consider leveraging <a href=\"/services/denial-management/\">denial management services</a> to automate tracking and ensure timely follow‑up."
         ]
       },
       {
@@ -1008,7 +1008,7 @@ const ARTICLES: BlogPost[] = [
         "ul": [
           "Implement real‑time eligibility and benefit verification that flags missing fields before claim generation.",
           "Standardize data entry with drop‑down lists for POS, modifiers, and relationship codes.",
-          "Run a nightly claim edit report that runs against the <a href=\"/tools/denial-code-lookup\">denial code lookup tool</a> to catch CO‑97 patterns early.",
+          "Run a nightly claim edit report that runs against the <a href=\"/tools/denial-code-lookup/\">denial code lookup tool</a> to catch CO‑97 patterns early.",
           "Provide regular training for front‑office staff on accurate demographic capture and NPI verification.",
           "Set up an automated alert in your practice management system when a CO‑97 denial is returned."
         ]
@@ -1016,7 +1016,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions offers a full suite of <a href=\"/services/denial-management\">denial management services</a> that include claim scrubbing, rapid CO‑97 correction, and appeal support, so your team can focus on patient care. Ready to eliminate CO‑97 roadblocks? Schedule a <a href=\"/free-assessment\">free revenue assessment</a> and see how we can boost your clean claim rate."
+          "Aethera Healthcare Solutions offers a full suite of <a href=\"/services/denial-management/\">denial management services</a> that include claim scrubbing, rapid CO‑97 correction, and appeal support, so your team can focus on patient care. Ready to eliminate CO‑97 roadblocks? Schedule a <a href=\"/free-assessment/\">free revenue assessment</a> and see how we can boost your clean claim rate."
         ]
       }
     ]
@@ -1033,7 +1033,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "When you search for top claim denial reasons by payer, the first thing you discover is that each insurer has its own quirks that can trip up even seasoned billers. Understanding those nuances is the foundation of an effective denial reduction strategy, and our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> walks you through the process step by step."
+          "When you search for top claim denial reasons by payer, the first thing you discover is that each insurer has its own quirks that can trip up even seasoned billers. Understanding those nuances is the foundation of an effective denial reduction strategy, and our <a href=\"/blog/medical-claim-denial-management-guide/\">complete denial management guide</a> walks you through the process step by step."
         ]
       },
       {
@@ -1075,13 +1075,13 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Leveraging Professional Denial Management Services",
         "p": [
-          "When internal resources are stretched, partnering with experts can accelerate denial recovery and free up staff for patient care. Our <a href=\"/services/denial-management\">denial management services</a> provide end‑to‑end support—from root‑cause analysis to appeal drafting—so you can focus on delivering care."
+          "When internal resources are stretched, partnering with experts can accelerate denial recovery and free up staff for patient care. Our <a href=\"/services/denial-management/\">denial management services</a> provide end‑to‑end support—from root‑cause analysis to appeal drafting—so you can focus on delivering care."
         ]
       },
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions combines payer‑specific intelligence with automated workflows to turn denial data into revenue. Schedule a <a href=\"/free-assessment\">free revenue assessment</a> to see how we can customize a denial reduction plan for your practice."
+          "Aethera Healthcare Solutions combines payer‑specific intelligence with automated workflows to turn denial data into revenue. Schedule a <a href=\"/free-assessment/\">free revenue assessment</a> to see how we can customize a denial reduction plan for your practice."
         ]
       }
     ]
@@ -1098,7 +1098,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "The true cost of a denied claim goes far beyond the reimbursement you lose, affecting staff time, cash flow, and patient satisfaction. Our <a href=\"/tools/denial-cost-calculator\">denial cost calculator</a> can help you quantify that impact, and a <a href=\"/free-assessment\">free revenue assessment</a> will reveal hidden inefficiencies in your practice."
+          "The true cost of a denied claim goes far beyond the reimbursement you lose, affecting staff time, cash flow, and patient satisfaction. Our <a href=\"/tools/denial-cost-calculator/\">denial cost calculator</a> can help you quantify that impact, and a <a href=\"/free-assessment/\">free revenue assessment</a> will reveal hidden inefficiencies in your practice."
         ]
       },
       {
@@ -1138,15 +1138,15 @@ const ARTICLES: BlogPost[] = [
         "ul": [
           "Implement real‑time eligibility verification to catch coverage issues before service",
           "Standardize denial workflows with clear ownership and timelines",
-          "Partner with experienced <a href=\"/services/denial-management\">denial management services</a> to accelerate appeals",
-          "Use the <a href=\"/tools/denial-cost-calculator\">denial cost calculator</a> regularly to track financial impact",
+          "Partner with experienced <a href=\"/services/denial-management/\">denial management services</a> to accelerate appeals",
+          "Use the <a href=\"/tools/denial-cost-calculator/\">denial cost calculator</a> regularly to track financial impact",
           "Provide ongoing coding education and audit feedback to staff"
         ]
       },
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions combines advanced analytics, dedicated denial specialists, and a proven workflow to turn denied claims into paid claims, reducing the true cost and improving your bottom line. Contact us today to schedule your <a href=\"/free-assessment\">free revenue assessment</a> and start reclaiming lost revenue."
+          "Aethera Healthcare Solutions combines advanced analytics, dedicated denial specialists, and a proven workflow to turn denied claims into paid claims, reducing the true cost and improving your bottom line. Contact us today to schedule your <a href=\"/free-assessment/\">free revenue assessment</a> and start reclaiming lost revenue."
         ]
       }
     ]
@@ -1163,7 +1163,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Family medicine billing rarely involves exotic procedures, but its sheer volume and reliance on evaluation-and-management (E/M) coding mean small habits compound into big revenue swings. Under-coding a level, missing a preventive-vs-problem distinction, or skipping eligibility checks costs primary-care practices more than they realize. This guide covers the essentials. For full-service help, see our <a href=\"/medical-billing/family-medicine\">family medicine medical billing</a> and <a href=\"/services/family-medicine-billing\">family medicine billing services</a>."
+          "Family medicine billing rarely involves exotic procedures, but its sheer volume and reliance on evaluation-and-management (E/M) coding mean small habits compound into big revenue swings. Under-coding a level, missing a preventive-vs-problem distinction, or skipping eligibility checks costs primary-care practices more than they realize. This guide covers the essentials. For full-service help, see our <a href=\"/medical-billing/family-medicine/\">family medicine medical billing</a> and <a href=\"/services/family-medicine-billing/\">family medicine billing services</a>."
         ]
       },
       {
@@ -1193,7 +1193,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps Family Medicine Practices",
         "p": [
-          "Aethera provides specialty-trained family medicine billing — accurate E/M coding, clean high-volume claim submission, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment\">free revenue assessment</a> will show you where primary-care revenue is being lost."
+          "Aethera provides specialty-trained family medicine billing — accurate E/M coding, clean high-volume claim submission, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide/\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment/\">free revenue assessment</a> will show you where primary-care revenue is being lost."
         ]
       }
     ]
@@ -1210,7 +1210,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Pediatric medical billing looks routine but carries specialty-specific traps: vaccine administration and VFC program rules, age-based well-child schedules, and coverage that shifts with family plans and Medicaid. Miss one and you get denials plus frustrated parents. This guide covers pediatric billing essentials and how to keep claims clean. For full-service help, see our <a href=\"/medical-billing/pediatrics\">pediatric medical billing</a>."
+          "Pediatric medical billing looks routine but carries specialty-specific traps: vaccine administration and VFC program rules, age-based well-child schedules, and coverage that shifts with family plans and Medicaid. Miss one and you get denials plus frustrated parents. This guide covers pediatric billing essentials and how to keep claims clean. For full-service help, see our <a href=\"/medical-billing/pediatrics/\">pediatric medical billing</a>."
         ]
       },
       {
@@ -1240,7 +1240,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps Pediatric Practices",
         "p": [
-          "Aethera provides specialty-trained pediatric billing — vaccine and well-child coding, coverage verification, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment\">free revenue assessment</a> will show you where pediatric revenue is slipping."
+          "Aethera provides specialty-trained pediatric billing — vaccine and well-child coding, coverage verification, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide/\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment/\">free revenue assessment</a> will show you where pediatric revenue is slipping."
         ]
       }
     ]
@@ -1257,7 +1257,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Internal medicine billing is dominated by evaluation-and-management coding and the management of complex, chronic patients — which means a lot of billable work goes uncaptured when documentation and coding aren’t tight. Chronic-care management, transitional care, and correct E/M leveling are where internal medicine practices most often leave money on the table. This guide covers the essentials. For full-service help, see our <a href=\"/medical-billing/internal-medicine\">internal medicine medical billing</a>."
+          "Internal medicine billing is dominated by evaluation-and-management coding and the management of complex, chronic patients — which means a lot of billable work goes uncaptured when documentation and coding aren’t tight. Chronic-care management, transitional care, and correct E/M leveling are where internal medicine practices most often leave money on the table. This guide covers the essentials. For full-service help, see our <a href=\"/medical-billing/internal-medicine/\">internal medicine medical billing</a>."
         ]
       },
       {
@@ -1287,7 +1287,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps Internal Medicine Practices",
         "p": [
-          "Aethera provides specialty-trained internal medicine billing — accurate E/M and chronic-care coding, clean claims, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment\">free revenue assessment</a> will show you where internal medicine revenue is being lost."
+          "Aethera provides specialty-trained internal medicine billing — accurate E/M and chronic-care coding, clean claims, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide/\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment/\">free revenue assessment</a> will show you where internal medicine revenue is being lost."
         ]
       }
     ]
@@ -1304,7 +1304,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Medical billing compliance is where revenue and risk meet: the same documentation and coding discipline that gets you paid also keeps you out of trouble with payers and regulators. This guide is the hub for our compliance content — it covers the areas that matter most to U.S. practices and links out to deeper playbooks. If you want a second set of eyes, our <a href=\"/services/compliance-auditing\">compliance & auditing services</a> keep your billing audit-ready."
+          "Medical billing compliance is where revenue and risk meet: the same documentation and coding discipline that gets you paid also keeps you out of trouble with payers and regulators. This guide is the hub for our compliance content — it covers the areas that matter most to U.S. practices and links out to deeper playbooks. If you want a second set of eyes, our <a href=\"/services/compliance-auditing/\">compliance & auditing services</a> keep your billing audit-ready."
         ]
       },
       {
@@ -1322,13 +1322,13 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "HIPAA and Data Protection",
         "p": [
-          "Every step of billing touches protected health information, so access controls, secure transmission, and vendor agreements matter. Our guide on <a href=\"/blog/hipaa-compliance\">HIPAA compliance</a> covers what practices most often miss."
+          "Every step of billing touches protected health information, so access controls, secure transmission, and vendor agreements matter. Our guide on <a href=\"/blog/hipaa-compliance/\">HIPAA compliance</a> covers what practices most often miss."
         ]
       },
       {
         "h": "Balance Billing and Transparency Rules",
         "p": [
-          "Regulations around surprise billing and price transparency have changed what practices must disclose and how they must bill. Start with our overview of the <a href=\"/blog/no-surprises-act\">No Surprises Act</a> to understand where compliance and billing intersect."
+          "Regulations around surprise billing and price transparency have changed what practices must disclose and how they must bill. Start with our overview of the <a href=\"/blog/no-surprises-act/\">No Surprises Act</a> to understand where compliance and billing intersect."
         ]
       },
       {
@@ -1340,7 +1340,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera builds compliance into the billing workflow — HIPAA-aware processes, correct coding, and regular audits — so you stay audit-ready without slowing down. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll flag compliance and coding risks alongside revenue opportunities."
+          "Aethera builds compliance into the billing workflow — HIPAA-aware processes, correct coding, and regular audits — so you stay audit-ready without slowing down. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll flag compliance and coding risks alongside revenue opportunities."
         ]
       }
     ]
@@ -1357,7 +1357,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Patient collections have become one of the largest and hardest parts of the revenue cycle, because patients now shoulder a growing share of the cost of care. Collect too passively and revenue leaks; collect too aggressively and you lose the patient. This guide is the hub for collecting more while protecting retention, and links out to the specific tactics. For full support, see our <a href=\"/services/patient-collections\">patient collections services</a>."
+          "Patient collections have become one of the largest and hardest parts of the revenue cycle, because patients now shoulder a growing share of the cost of care. Collect too passively and revenue leaks; collect too aggressively and you lose the patient. This guide is the hub for collecting more while protecting retention, and links out to the specific tactics. For full support, see our <a href=\"/services/patient-collections/\">patient collections services</a>."
         ]
       },
       {
@@ -1381,19 +1381,19 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Payment Plans and Financial Counseling",
         "p": [
-          "For larger balances, structured payment plans keep revenue flowing while respecting the patient’s situation. Our guide on <a href=\"/blog/design-patient-payment-plans\">designing patient payment plans</a> covers how to build plans that actually get paid without souring the relationship."
+          "For larger balances, structured payment plans keep revenue flowing while respecting the patient’s situation. Our guide on <a href=\"/blog/design-patient-payment-plans/\">designing patient payment plans</a> covers how to build plans that actually get paid without souring the relationship."
         ]
       },
       {
         "h": "Consistent, Respectful Follow-Up",
         "p": [
-          "Retention-safe collections come from consistency, not pressure — a predictable cadence of reminders, clear options, and a respectful tone. Our existing playbook on <a href=\"/blog/patient-collections\">patient collections strategies</a> goes deeper on the day-to-day workflow."
+          "Retention-safe collections come from consistency, not pressure — a predictable cadence of reminders, clear options, and a respectful tone. Our existing playbook on <a href=\"/blog/patient-collections/\">patient collections strategies</a> goes deeper on the day-to-day workflow."
         ]
       },
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera runs patient collections that protect your revenue and your reputation — clear statements, easy payment options, and respectful follow-up. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll show you how much patient balance is recoverable."
+          "Aethera runs patient collections that protect your revenue and your reputation — clear statements, easy payment options, and respectful follow-up. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll show you how much patient balance is recoverable."
         ]
       }
     ]
@@ -1410,7 +1410,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Dermatology medical billing combines high procedure volume with cosmetic-vs-medical distinctions, lesion coding, and modifier rules that make clean claims surprisingly hard. Small errors repeat across a busy schedule, so the revenue impact adds up fast. This guide covers what drives dermatology denials and how to prevent them. For full-service help, see our <a href=\"/medical-billing/dermatology\">dermatology medical billing</a> and <a href=\"/services/dermatology-billing\">dermatology billing services</a>."
+          "Dermatology medical billing combines high procedure volume with cosmetic-vs-medical distinctions, lesion coding, and modifier rules that make clean claims surprisingly hard. Small errors repeat across a busy schedule, so the revenue impact adds up fast. This guide covers what drives dermatology denials and how to prevent them. For full-service help, see our <a href=\"/medical-billing/dermatology/\">dermatology medical billing</a> and <a href=\"/services/dermatology-billing/\">dermatology billing services</a>."
         ]
       },
       {
@@ -1440,7 +1440,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps Dermatology Practices",
         "p": [
-          "Aethera provides specialty-trained dermatology billing — lesion and procedure coding, modifier accuracy, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment\">free revenue assessment</a> will show you where dermatology revenue is being lost."
+          "Aethera provides specialty-trained dermatology billing — lesion and procedure coding, modifier accuracy, and denial work, nationwide. Our <a href=\"/blog/medical-claim-denial-management-guide/\">complete denial management guide</a> shows the framework, and a <a href=\"/free-assessment/\">free revenue assessment</a> will show you where dermatology revenue is being lost."
         ]
       }
     ]
@@ -1457,7 +1457,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Behavioral health billing is deceptively hard: the visits look simple, but the coding, time thresholds, telehealth rules, and payer-specific limits create denials that primary care never encounters. For therapists, psychiatrists, and group practices, small documentation gaps turn into recurring lost revenue. This guide covers the rules that trip practices up and how to bill behavioral health cleanly. If you’d rather hand it off, see our <a href=\"/medical-billing/behavioral-health\">behavioral health medical billing</a> and <a href=\"/services/psychiatry-billing\">psychiatry billing services</a>."
+          "Behavioral health billing is deceptively hard: the visits look simple, but the coding, time thresholds, telehealth rules, and payer-specific limits create denials that primary care never encounters. For therapists, psychiatrists, and group practices, small documentation gaps turn into recurring lost revenue. This guide covers the rules that trip practices up and how to bill behavioral health cleanly. If you’d rather hand it off, see our <a href=\"/medical-billing/behavioral-health/\">behavioral health medical billing</a> and <a href=\"/services/psychiatry-billing/\">psychiatry billing services</a>."
         ]
       },
       {
@@ -1493,13 +1493,13 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Protecting Behavioral Health Revenue From Denials",
         "p": [
-          "Because sessions are recurring, a single systemic coding error repeats across dozens of claims before anyone notices. Track your denial mix by reason and payer, and work every denial promptly — our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> lays out the prevention-and-appeals framework that applies directly to behavioral health."
+          "Because sessions are recurring, a single systemic coding error repeats across dozens of claims before anyone notices. Track your denial mix by reason and payer, and work every denial promptly — our <a href=\"/blog/medical-claim-denial-management-guide/\">complete denial management guide</a> lays out the prevention-and-appeals framework that applies directly to behavioral health."
         ]
       },
       {
         "h": "How Aethera Helps Behavioral Health Practices",
         "p": [
-          "Aethera provides specialty-trained behavioral health billing — time-based coding, telehealth rules, authorization tracking, and denial work handled by people who know the nuances, nationwide. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll review a sample of your claims and show you where revenue is slipping."
+          "Aethera provides specialty-trained behavioral health billing — time-based coding, telehealth rules, authorization tracking, and denial work handled by people who know the nuances, nationwide. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll review a sample of your claims and show you where revenue is slipping."
         ]
       }
     ]
@@ -1516,7 +1516,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Orthopedic medical billing is one of the most modifier-dependent specialties there is. Global surgical periods, staged procedures, and the mix of office visits, injections, imaging, and surgery mean a single misapplied modifier can cost a practice a high-value claim. This guide covers what makes orthopedic billing hard, the denials that hurt most, and how to prevent them. For full-service help, see our <a href=\"/medical-billing/orthopedics\">orthopedic medical billing</a> and <a href=\"/services/orthopedic-billing\">orthopedic billing services</a>."
+          "Orthopedic medical billing is one of the most modifier-dependent specialties there is. Global surgical periods, staged procedures, and the mix of office visits, injections, imaging, and surgery mean a single misapplied modifier can cost a practice a high-value claim. This guide covers what makes orthopedic billing hard, the denials that hurt most, and how to prevent them. For full-service help, see our <a href=\"/medical-billing/orthopedics/\">orthopedic medical billing</a> and <a href=\"/services/orthopedic-billing/\">orthopedic billing services</a>."
         ]
       },
       {
@@ -1552,13 +1552,13 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Protecting High-Value Orthopedic Claims",
         "p": [
-          "Because orthopedic claims are high-dollar, a single unworked denial is significant revenue. Prioritize denials by value, appeal with procedure-specific documentation, and track each to resolution. Our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> details the framework, and the <a href=\"/services/denial-management\">denial management services</a> team can run it for you."
+          "Because orthopedic claims are high-dollar, a single unworked denial is significant revenue. Prioritize denials by value, appeal with procedure-specific documentation, and track each to resolution. Our <a href=\"/blog/medical-claim-denial-management-guide/\">complete denial management guide</a> details the framework, and the <a href=\"/services/denial-management/\">denial management services</a> team can run it for you."
         ]
       },
       {
         "h": "How Aethera Helps Orthopedic Practices",
         "p": [
-          "Aethera provides specialty-trained orthopedic billing — global-period tracking, modifier accuracy, surgical coding, and denial work, nationwide. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll review a sample of your orthopedic claims and show you where revenue is being lost."
+          "Aethera provides specialty-trained orthopedic billing — global-period tracking, modifier accuracy, surgical coding, and denial work, nationwide. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll review a sample of your orthopedic claims and show you where revenue is being lost."
         ]
       }
     ]
@@ -1575,7 +1575,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Gastroenterology medical billing hinges on a distinction that sounds simple but causes constant errors: whether a procedure is screening or diagnostic. A colonoscopy that begins as a screening but becomes diagnostic mid-procedure changes the coding, the modifiers, and the patient’s cost-share — and getting it wrong drives both denials and patient complaints. This guide covers the screening-vs-diagnostic rules and the other GI billing pitfalls. For full-service help, see our <a href=\"/medical-billing/gastroenterology\">gastroenterology medical billing</a>."
+          "Gastroenterology medical billing hinges on a distinction that sounds simple but causes constant errors: whether a procedure is screening or diagnostic. A colonoscopy that begins as a screening but becomes diagnostic mid-procedure changes the coding, the modifiers, and the patient’s cost-share — and getting it wrong drives both denials and patient complaints. This guide covers the screening-vs-diagnostic rules and the other GI billing pitfalls. For full-service help, see our <a href=\"/medical-billing/gastroenterology/\">gastroenterology medical billing</a>."
         ]
       },
       {
@@ -1611,13 +1611,13 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Protecting Gastroenterology Revenue",
         "p": [
-          "GI procedures are high-value, so coding errors and unworked denials add up quickly. Strong coding discipline plus a disciplined denial workflow protects the revenue — our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a> and our <a href=\"/services/medical-coding\">medical coding services</a> both address the root causes directly."
+          "GI procedures are high-value, so coding errors and unworked denials add up quickly. Strong coding discipline plus a disciplined denial workflow protects the revenue — our <a href=\"/blog/medical-claim-denial-management-guide/\">complete denial management guide</a> and our <a href=\"/services/medical-coding/\">medical coding services</a> both address the root causes directly."
         ]
       },
       {
         "h": "How Aethera Helps Gastroenterology Practices",
         "p": [
-          "Aethera provides specialty-trained GI billing — screening-vs-diagnostic coding, procedure accuracy, and denial work handled by people who know the rules, nationwide. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll review a sample of your GI claims and show you where revenue is slipping."
+          "Aethera provides specialty-trained GI billing — screening-vs-diagnostic coding, procedure accuracy, and denial work handled by people who know the rules, nationwide. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll review a sample of your GI claims and show you where revenue is slipping."
         ]
       }
     ]
@@ -1658,7 +1658,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Tools and Processes to Improve Your Clean Claim Rate",
         "p": [
-          "Investing in the right technology and workflow checks can lift your clean claim rate quickly. Our <a href=\"/tools/clean-claim-scorecard\">clean claim scorecard</a> provides a visual snapshot of where errors are occurring and helps prioritize remediation."
+          "Investing in the right technology and workflow checks can lift your clean claim rate quickly. Our <a href=\"/tools/clean-claim-scorecard/\">clean claim scorecard</a> provides a visual snapshot of where errors are occurring and helps prioritize remediation."
         ],
         "ul": [
           "Standardize charge capture at the point of care with dropdown menus and mandatory fields.",
@@ -1670,7 +1670,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Monitoring and Reporting: Turning Data Into Action",
         "p": [
-          "Consistent monitoring turns raw numbers into performance improvement. Partnering with experienced <a href=\"/services\">revenue cycle management services</a> can add expertise and analytics support."
+          "Consistent monitoring turns raw numbers into performance improvement. Partnering with experienced <a href=\"/services/\">revenue cycle management services</a> can add expertise and analytics support."
         ],
         "ul": [
           "Set a weekly clean claim KPI and compare it against your internal target and industry averages.",
@@ -1682,7 +1682,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera Healthcare Solutions combines advanced analytics with seasoned billing professionals to lift your clean claim rate. Request a <a href=\"/free-assessment\">free revenue assessment</a> and discover how our tailored solutions can help you reach and exceed a good clean claim rate benchmark."
+          "Aethera Healthcare Solutions combines advanced analytics with seasoned billing professionals to lift your clean claim rate. Request a <a href=\"/free-assessment/\">free revenue assessment</a> and discover how our tailored solutions can help you reach and exceed a good clean claim rate benchmark."
         ]
       }
     ]
@@ -1699,7 +1699,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Choosing a medical billing company is one of the highest-stakes vendor decisions a practice makes, because the wrong partner quietly costs you revenue for months before you notice. The right questions surface the difference before you sign. This is a practical checklist of what to ask — and what good answers sound like. For a broader framework, pair it with our guide on <a href=\"/compare/how-to-choose-a-medical-billing-company\">how to choose a medical billing company</a>."
+          "Choosing a medical billing company is one of the highest-stakes vendor decisions a practice makes, because the wrong partner quietly costs you revenue for months before you notice. The right questions surface the difference before you sign. This is a practical checklist of what to ask — and what good answers sound like. For a broader framework, pair it with our guide on <a href=\"/compare/how-to-choose-a-medical-billing-company/\">how to choose a medical billing company</a>."
         ]
       },
       {
@@ -1717,7 +1717,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Questions About Pricing & Contract",
         "p": [
-          "Rate alone is misleading; what matters is what’s included and whether you’re locked in. Understand the full cost before comparing — see our breakdown of <a href=\"/blog/cost-to-outsource-medical-billing\">what it costs to outsource medical billing</a>."
+          "Rate alone is misleading; what matters is what’s included and whether you’re locked in. Understand the full cost before comparing — see our breakdown of <a href=\"/blog/cost-to-outsource-medical-billing/\">what it costs to outsource medical billing</a>."
         ],
         "ul": [
           "Is this percentage-of-collections, per-claim, or hybrid?",
@@ -1747,7 +1747,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Answers These",
         "p": [
-          "Aethera commits to performance targets in writing, prices on a percentage of collections with no setup fees or long-term contract, and handles the full cycle — coding, claims, denials, collections, and credentialing. The simplest way to judge us is to test the math: a <a href=\"/free-assessment\">free revenue assessment</a> shows you what we’d recover before you commit to anything."
+          "Aethera commits to performance targets in writing, prices on a percentage of collections with no setup fees or long-term contract, and handles the full cycle — coding, claims, denials, collections, and credentialing. The simplest way to judge us is to test the math: a <a href=\"/free-assessment/\">free revenue assessment</a> shows you what we’d recover before you commit to anything."
         ]
       }
     ]
@@ -1764,7 +1764,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "The most dangerous revenue leaks are the quiet ones — the claims that age out, the denials no one reworks, the balances that never get followed up. Your practice can look busy and still be leaving significant money uncollected. These are the warning signs that your medical billing is quietly losing revenue, and the fastest ways to confirm it. If several of these sound familiar, our <a href=\"/services/denial-management\">denial management services</a> and a quick assessment can pinpoint the leak."
+          "The most dangerous revenue leaks are the quiet ones — the claims that age out, the denials no one reworks, the balances that never get followed up. Your practice can look busy and still be leaving significant money uncollected. These are the warning signs that your medical billing is quietly losing revenue, and the fastest ways to confirm it. If several of these sound familiar, our <a href=\"/services/denial-management/\">denial management services</a> and a quick assessment can pinpoint the leak."
         ]
       },
       {
@@ -1794,7 +1794,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How to Confirm the Leak",
         "p": [
-          "Suspicion isn’t proof — quantify it. Pull your last 60–90 days of denials and unworked claims and put a dollar figure on them; the number is usually larger than practices expect. Our <a href=\"/tools/denial-cost-calculator\">denial cost calculator</a> gives you a fast estimate of what denials alone are costing you each month, which is often the biggest single leak."
+          "Suspicion isn’t proof — quantify it. Pull your last 60–90 days of denials and unworked claims and put a dollar figure on them; the number is usually larger than practices expect. Our <a href=\"/tools/denial-cost-calculator/\">denial cost calculator</a> gives you a fast estimate of what denials alone are costing you each month, which is often the biggest single leak."
         ]
       },
       {
@@ -1806,7 +1806,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera finds and closes these leaks as a full-service partner — preventing avoidable denials, working the ones that happen, and following up on every balance. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll show you exactly where your revenue is going and what it’s worth to recover it."
+          "Aethera finds and closes these leaks as a full-service partner — preventing avoidable denials, working the ones that happen, and following up on every balance. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll show you exactly where your revenue is going and what it’s worth to recover it."
         ]
       }
     ]
@@ -1823,7 +1823,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Cardiology medical billing is among the most complex specialties to get right, because it combines high-value procedures, bundled diagnostic studies, device coding, and payer rules that change often. Small coding or documentation gaps translate into outsized revenue loss. This guide covers what makes cardiology billing hard, the denials that hit hardest, and how to prevent them. For a practice that wants it handled end to end, see our <a href=\"/medical-billing/cardiology\">cardiology medical billing</a> and <a href=\"/services/cardiology-billing\">cardiology billing services</a>."
+          "Cardiology medical billing is among the most complex specialties to get right, because it combines high-value procedures, bundled diagnostic studies, device coding, and payer rules that change often. Small coding or documentation gaps translate into outsized revenue loss. This guide covers what makes cardiology billing hard, the denials that hit hardest, and how to prevent them. For a practice that wants it handled end to end, see our <a href=\"/medical-billing/cardiology/\">cardiology medical billing</a> and <a href=\"/services/cardiology-billing/\">cardiology billing services</a>."
         ]
       },
       {
@@ -1859,13 +1859,13 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "The Denial Workflow That Protects Cardiology Revenue",
         "p": [
-          "Because cardiology claims are high-value, a single unworked denial can represent meaningful revenue. Triage denials by dollar value, appeal with payer-specific documentation, and track every one to resolution. Our broader <a href=\"/blog/medical-claim-denial-management-guide\">denial management guide</a> covers the prevention-and-appeals framework that applies here."
+          "Because cardiology claims are high-value, a single unworked denial can represent meaningful revenue. Triage denials by dollar value, appeal with payer-specific documentation, and track every one to resolution. Our broader <a href=\"/blog/medical-claim-denial-management-guide/\">denial management guide</a> covers the prevention-and-appeals framework that applies here."
         ]
       },
       {
         "h": "How Aethera Helps Cardiology Practices",
         "p": [
-          "Aethera provides specialty-trained cardiology billing — coding, claims, denials, and appeals handled by people who know the bundling and documentation rules, nationwide. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll review a sample of your cardiology claims and show you where revenue is being lost."
+          "Aethera provides specialty-trained cardiology billing — coding, claims, denials, and appeals handled by people who know the bundling and documentation rules, nationwide. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll review a sample of your cardiology claims and show you where revenue is being lost."
         ]
       }
     ]
@@ -1882,7 +1882,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "If you’re weighing whether to outsource medical billing, the first question is almost always about cost. The honest answer is that outsourced medical billing is usually priced as a percentage of what you actually collect — so the real question isn’t just “what’s the rate,” it’s “what does that rate include, and how does it compare to what in-house billing truly costs you.” This guide breaks down the pricing models, the hidden costs on both sides, and how to compare offers apples-to-apples. When you’re ready to see numbers for your own practice, our <a href=\"/pricing\">pricing page</a> and a <a href=\"/free-assessment\">free revenue assessment</a> will give you specifics."
+          "If you’re weighing whether to outsource medical billing, the first question is almost always about cost. The honest answer is that outsourced medical billing is usually priced as a percentage of what you actually collect — so the real question isn’t just “what’s the rate,” it’s “what does that rate include, and how does it compare to what in-house billing truly costs you.” This guide breaks down the pricing models, the hidden costs on both sides, and how to compare offers apples-to-apples. When you’re ready to see numbers for your own practice, our <a href=\"/pricing/\">pricing page</a> and a <a href=\"/free-assessment/\">free revenue assessment</a> will give you specifics."
         ]
       },
       {
@@ -1899,7 +1899,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "What a Percentage-of-Collections Rate Actually Buys",
         "p": [
-          "A percentage rate can look higher than a per-claim fee until you see what’s bundled in. A full-service arrangement typically covers charge entry, coding review, claim submission, payment posting, denial management, appeals, patient statements, and reporting — not just “sending claims.” Ask any prospective partner to list exactly which of these are included versus billed separately. Our <a href=\"/services\">medical billing & RCM services</a> page shows what full-service should mean end to end."
+          "A percentage rate can look higher than a per-claim fee until you see what’s bundled in. A full-service arrangement typically covers charge entry, coding review, claim submission, payment posting, denial management, appeals, patient statements, and reporting — not just “sending claims.” Ask any prospective partner to list exactly which of these are included versus billed separately. Our <a href=\"/services/\">medical billing & RCM services</a> page shows what full-service should mean end to end."
         ]
       },
       {
@@ -1929,7 +1929,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Prices It",
         "p": [
-          "Aethera is a full-service, percentage-of-collections partner with no setup fees and no long-term contract — so our incentive is simply to collect more of what you’ve already earned. The fastest way to see what it would cost, and what you’d likely recover, is a <a href=\"/free-assessment\">free revenue assessment</a>: we review a sample of your claims and denials and show you the math before you commit. You can also compare the two approaches side by side in our <a href=\"/compare/outsourced-vs-in-house-medical-billing\">outsourced vs in-house guide</a>."
+          "Aethera is a full-service, percentage-of-collections partner with no setup fees and no long-term contract — so our incentive is simply to collect more of what you’ve already earned. The fastest way to see what it would cost, and what you’d likely recover, is a <a href=\"/free-assessment/\">free revenue assessment</a>: we review a sample of your claims and denials and show you the math before you commit. You can also compare the two approaches side by side in our <a href=\"/compare/outsourced-vs-in-house-medical-billing/\">outsourced vs in-house guide</a>."
         ]
       }
     ]
@@ -1946,7 +1946,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Medical billing for small and independent practices is a different problem than billing for a large group. When one or two people handle the front desk, scheduling, and the revenue cycle, a single staff absence or a wave of denials can stall your cash flow for weeks. This guide covers the specific risks small practices face and the practical ways to protect revenue without hiring a full billing department. If you’d rather hand the whole cycle off, our <a href=\"/services\">medical billing & RCM services</a> are built for exactly this."
+          "Medical billing for small and independent practices is a different problem than billing for a large group. When one or two people handle the front desk, scheduling, and the revenue cycle, a single staff absence or a wave of denials can stall your cash flow for weeks. This guide covers the specific risks small practices face and the practical ways to protect revenue without hiring a full billing department. If you’d rather hand the whole cycle off, our <a href=\"/services/\">medical billing & RCM services</a> are built for exactly this."
         ]
       },
       {
@@ -1976,13 +1976,13 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "When Outsourcing Makes Sense",
         "p": [
-          "For many independent practices, outsourcing is cheaper than it looks once you account for the true cost of doing it in-house — see our breakdown of <a href=\"/blog/cost-to-outsource-medical-billing\">what it costs to outsource medical billing</a>. A percentage-of-collections partner gives you a full billing team, denial specialists, and credentialing support for a fraction of a single hire, and the cost scales with your revenue instead of being a fixed overhead. It also removes the single-point-of-failure risk of one biller."
+          "For many independent practices, outsourcing is cheaper than it looks once you account for the true cost of doing it in-house — see our breakdown of <a href=\"/blog/cost-to-outsource-medical-billing/\">what it costs to outsource medical billing</a>. A percentage-of-collections partner gives you a full billing team, denial specialists, and credentialing support for a fraction of a single hire, and the cost scales with your revenue instead of being a fixed overhead. It also removes the single-point-of-failure risk of one biller."
         ]
       },
       {
         "h": "How Aethera Helps Independent Practices",
         "p": [
-          "Aethera works nationwide with small and independent practices as a full-service billing partner — coding, claims, denials, patient collections, and <a href=\"/services/credentialing\">provider credentialing</a> under one roof, with no setup fees or long-term contract. Start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll show you exactly where your practice is leaking revenue and what it’s worth to fix it."
+          "Aethera works nationwide with small and independent practices as a full-service billing partner — coding, claims, denials, patient collections, and <a href=\"/services/credentialing/\">provider credentialing</a> under one roof, with no setup fees or long-term contract. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll show you exactly where your practice is leaking revenue and what it’s worth to fix it."
         ]
       }
     ]
@@ -1999,13 +1999,13 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Medical claim denial management is one of the highest-leverage things a practice can fix, because every denied claim is revenue you’ve already earned but haven’t been paid for. This complete guide covers why claims get denied, how to prevent the avoidable ones, and how to build an appeals process that actually recovers money. It’s the hub for our denial content — the sections below link out to deeper, practical playbooks and to the tools that help you quantify the problem. If you’d rather have it handled end to end, see our <a href=\"/services/denial-management\">denial management services</a>."
+          "Medical claim denial management is one of the highest-leverage things a practice can fix, because every denied claim is revenue you’ve already earned but haven’t been paid for. This complete guide covers why claims get denied, how to prevent the avoidable ones, and how to build an appeals process that actually recovers money. It’s the hub for our denial content — the sections below link out to deeper, practical playbooks and to the tools that help you quantify the problem. If you’d rather have it handled end to end, see our <a href=\"/services/denial-management/\">denial management services</a>."
         ]
       },
       {
         "h": "Why Claims Get Denied",
         "p": [
-          "Most denials fall into a handful of repeatable categories: eligibility and coverage issues, missing or invalid information, coding and modifier errors, prior-authorization failures, and timely-filing misses. The important insight is that the majority are preventable at the front end. Understanding your own denial mix — which codes, which payers — is the first step, and our <a href=\"/tools/denial-code-lookup\">denial code lookup tool</a> helps you decode what each denial actually means."
+          "Most denials fall into a handful of repeatable categories: eligibility and coverage issues, missing or invalid information, coding and modifier errors, prior-authorization failures, and timely-filing misses. The important insight is that the majority are preventable at the front end. Understanding your own denial mix — which codes, which payers — is the first step, and our <a href=\"/tools/denial-code-lookup/\">denial code lookup tool</a> helps you decode what each denial actually means."
         ]
       },
       {
@@ -2023,19 +2023,19 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "What Denials Are Costing You",
         "p": [
-          "You can’t prioritize what you don’t measure. Denials carry two costs: the revenue at risk on the claim itself, and the staff time to rework it. Quantifying this makes the business case for fixing it obvious — use our <a href=\"/tools/denial-cost-calculator\">denial cost calculator</a> to estimate what denials are costing your practice each month. For the tactics that reduce the denial rate itself, see our guide on <a href=\"/blog/reduce-claim-denials\">ways to reduce claim denials</a>."
+          "You can’t prioritize what you don’t measure. Denials carry two costs: the revenue at risk on the claim itself, and the staff time to rework it. Quantifying this makes the business case for fixing it obvious — use our <a href=\"/tools/denial-cost-calculator/\">denial cost calculator</a> to estimate what denials are costing your practice each month. For the tactics that reduce the denial rate itself, see our guide on <a href=\"/blog/reduce-claim-denials/\">ways to reduce claim denials</a>."
         ]
       },
       {
         "h": "Building an Appeals Process That Recovers Revenue",
         "p": [
-          "For the denials that do happen, a disciplined appeals workflow is what turns them back into cash. The essentials: triage denials by dollar value and root cause, work the highest-value ones first, use payer-specific appeal templates, and track every appeal to resolution so nothing ages out. For advanced tactics, our <a href=\"/blog/denial-management\">denial management strategies</a> article goes deeper on prioritization and payer-specific plays."
+          "For the denials that do happen, a disciplined appeals workflow is what turns them back into cash. The essentials: triage denials by dollar value and root cause, work the highest-value ones first, use payer-specific appeal templates, and track every appeal to resolution so nothing ages out. For advanced tactics, our <a href=\"/blog/denial-management/\">denial management strategies</a> article goes deeper on prioritization and payer-specific plays."
         ]
       },
       {
         "h": "How Aethera Helps",
         "p": [
-          "Aethera’s denial specialists prevent avoidable denials at the front end and aggressively work and appeal the ones that occur, so you recover revenue you’ve already earned. Explore our <a href=\"/services/denial-management\">denial management services</a>, or start with a <a href=\"/free-assessment\">free revenue assessment</a> and we’ll show you your denial mix and what it’s worth to fix."
+          "Aethera’s denial specialists prevent avoidable denials at the front end and aggressively work and appeal the ones that occur, so you recover revenue you’ve already earned. Explore our <a href=\"/services/denial-management/\">denial management services</a>, or start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll show you your denial mix and what it’s worth to fix."
         ]
       }
     ]
@@ -2409,7 +2409,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide/\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections/\">patient collections services</a>."
         ]
       }
     ]
@@ -2569,7 +2569,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide/\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections/\">patient collections services</a>."
         ]
       }
     ]
@@ -2657,7 +2657,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide/\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections/\">patient collections services</a>."
         ]
       }
     ]
@@ -2721,7 +2721,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a>, or explore Aethera’s <a href=\"/services/denial-management\">denial management services</a>."
+          "For the full picture, see our <a href=\"/blog/medical-claim-denial-management-guide/\">complete denial management guide</a>, or explore Aethera’s <a href=\"/services/denial-management/\">denial management services</a>."
         ]
       }
     ]
@@ -2918,7 +2918,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide/\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections/\">patient collections services</a>."
         ]
       }
     ]
@@ -3008,7 +3008,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing\">compliance & auditing services</a>."
+          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide/\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing/\">compliance & auditing services</a>."
         ]
       }
     ]
@@ -3142,7 +3142,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/medical-claim-denial-management-guide\">complete denial management guide</a>, or explore Aethera’s <a href=\"/services/denial-management\">denial management services</a>."
+          "For the full picture, see our <a href=\"/blog/medical-claim-denial-management-guide/\">complete denial management guide</a>, or explore Aethera’s <a href=\"/services/denial-management/\">denial management services</a>."
         ]
       }
     ]
@@ -3189,7 +3189,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide/\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections/\">patient collections services</a>."
         ]
       }
     ]
@@ -3309,7 +3309,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing\">compliance & auditing services</a>."
+          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide/\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing/\">compliance & auditing services</a>."
         ]
       }
     ]
@@ -3352,7 +3352,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing\">compliance & auditing services</a>."
+          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide/\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing/\">compliance & auditing services</a>."
         ]
       }
     ]
@@ -3585,7 +3585,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide/\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections/\">patient collections services</a>."
         ]
       }
     ]
@@ -3808,7 +3808,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing\">compliance & auditing services</a>."
+          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide/\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing/\">compliance & auditing services</a>."
         ]
       }
     ]
@@ -4016,7 +4016,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/patient-collections-guide\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections\">patient collections services</a>."
+          "For the full picture, see our <a href=\"/blog/patient-collections-guide/\">complete patient collections guide</a>, or explore Aethera’s <a href=\"/services/patient-collections/\">patient collections services</a>."
         ]
       }
     ]
@@ -4129,7 +4129,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "Related resources",
         "p": [
-          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing\">compliance & auditing services</a>."
+          "For the full picture, see our <a href=\"/blog/medical-billing-compliance-guide/\">complete medical billing compliance guide</a>, or explore Aethera’s <a href=\"/services/compliance-auditing/\">compliance & auditing services</a>."
         ]
       }
     ]

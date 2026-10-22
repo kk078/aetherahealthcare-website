@@ -135,8 +135,8 @@ export default function WorkersCompBilling() {
               <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">Workers&apos; Comp Billing Without the Write-Offs</h1>
               <p className="text-xl text-cream mb-10">State fee schedules, jurisdiction rules, utilization review, narrative requirements, and lien deadlines — our workers&apos; compensation RCM team navigates all of it so you actually get paid for the care you deliver.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Workers&apos; Comp Assessment</Link>
-                <Link prefetch={false} href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
+                <Link prefetch={false} href="/free-assessment/" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Workers&apos; Comp Assessment</Link>
+                <Link prefetch={false} href="/contact/" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
               </div>
             </FadeIn>
           </div>
@@ -211,7 +211,7 @@ export default function WorkersCompBilling() {
             <FadeIn>
               <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Stop Writing Off Workers&apos; Comp?</h2>
               <p className="text-cream max-w-xl mx-auto mb-8">Start with a free workers&apos; comp billing assessment. We&apos;ll audit your write-offs, reductions, and lien opportunities and show you exactly where recoverable revenue is being lost.</p>
-              <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Workers&apos; Comp Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link>
+              <Link prefetch={false} href="/free-assessment/" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Workers&apos; Comp Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link>
             </FadeIn>
           </div>
         </div>

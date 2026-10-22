@@ -128,13 +128,13 @@ export default function PayerDirectoryIndex() {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a
-              href="/free-assessment"
+              href="/free-assessment/"
               className="inline-block bg-teal hover:bg-navy text-white font-bold py-3 px-6 rounded-full transition-colors text-sm shadow-xs"
             >
               Get a Free Practice Assessment
             </a>
             <a
-              href="/tools/practice-proposal-wizard"
+              href="/tools/practice-proposal-wizard/"
               className="inline-block border-2 border-teal text-teal hover:bg-teal hover:text-white font-bold py-3 px-6 rounded-full transition-colors text-sm"
             >
               Calculate Practice SLA Proposal

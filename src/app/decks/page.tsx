@@ -47,7 +47,7 @@ export default function Decks() {
         eyebrow="Guides"
         title="Specialty billing guides"
         subtitle="Free, specialty-specific overviews of how we handle revenue cycle management — the codes, denials, payer rules, and compliance that matter most for your practice."
-        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        primary={{ href: '/free-assessment/', label: 'Get a Free Assessment' }}
         chips={['18 specialties', 'Free download', 'No login']}
       />
 
@@ -73,7 +73,7 @@ export default function Decks() {
                 We support 26+ specialties. Tell us about your practice and we&apos;ll put together the right overview for you.
               </p>
               <a
-                href="/contact"
+                href="/contact/"
                 className="inline-block bg-teal hover:bg-navy text-white font-semibold py-2.5 px-6 rounded-full transition-colors duration-200 text-sm"
               >
                 Talk to Us

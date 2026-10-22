@@ -38,7 +38,7 @@ export default function EnterpriseRcmLandingPage() {
 
           <div className="flex items-center gap-3 sm:gap-6">
             <Link prefetch={false}
-              href="/schedule"
+              href="/schedule/"
               className="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition"
             >
               <Calendar className="w-4 h-4 text-teal" />
@@ -73,7 +73,7 @@ export default function EnterpriseRcmLandingPage() {
             <Link prefetch={false} href="/compliance/terms-of-service/" className="hover:text-slate-200 transition">
               Terms of Service
             </Link>
-            <Link prefetch={false} href="/contact" className="hover:text-slate-200 transition">
+            <Link prefetch={false} href="/contact/" className="hover:text-slate-200 transition">
               Contact Us
             </Link>
           </div>

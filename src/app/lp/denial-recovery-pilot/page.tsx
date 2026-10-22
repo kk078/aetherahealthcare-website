@@ -46,7 +46,7 @@ export default function DenialRecoveryLandingPage() {
 
           <div className="flex items-center gap-3 sm:gap-6">
             <Link prefetch={false}
-              href="/schedule"
+              href="/schedule/"
               className="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition"
             >
               <Calendar className="w-4 h-4 text-teal" />
@@ -154,7 +154,7 @@ export default function DenialRecoveryLandingPage() {
             <span className="flex items-center gap-1.5"><Lock className="w-4 h-4 text-teal" /> 256-Bit TLS In-Memory Security</span>
             <span className="flex items-center gap-1.5"><FileCheck className="w-4 h-4 text-teal" /> AAPC-Certified Coders</span>
           </div>
-          <p>© {new Date().getFullYear()} Aethera Healthcare Solutions. All rights reserved. Direct inquiries: <Link prefetch={false} href="/contact" className="hover:text-white underline">Contact Kiran</Link> &middot; <Link prefetch={false} href="/schedule" className="hover:text-white underline">Schedule Meeting</Link></p>
+          <p>© {new Date().getFullYear()} Aethera Healthcare Solutions. All rights reserved. Direct inquiries: <Link prefetch={false} href="/contact/" className="hover:text-white underline">Contact Kiran</Link> &middot; <Link prefetch={false} href="/schedule/" className="hover:text-white underline">Schedule Meeting</Link></p>
         </div>
       </footer>
     </div>

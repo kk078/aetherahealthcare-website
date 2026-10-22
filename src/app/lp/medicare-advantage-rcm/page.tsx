@@ -38,7 +38,7 @@ export default function MedicareAdvantageLandingPage() {
 
           <div className="flex items-center gap-3 sm:gap-6">
             <Link prefetch={false}
-              href="/schedule"
+              href="/schedule/"
               className="hidden md:inline-flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition"
             >
               <Calendar className="w-4 h-4 text-teal" />

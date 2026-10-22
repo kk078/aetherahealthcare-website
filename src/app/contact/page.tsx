@@ -65,7 +65,7 @@ export default function Contact() {
         eyebrow="Contact"
         title="Let's maximize your revenue"
         subtitle="Ready to maximize your revenue and minimize your burden? Submit an email inquiry or schedule a direct consultation with our revenue cycle leadership."
-        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        primary={{ href: '/free-assessment/', label: 'Get a Free Assessment' }}
         chips={['Free consultation', '5-day turnaround', 'No obligation']}
       />
 
@@ -96,7 +96,7 @@ export default function Contact() {
                         </p>
                         <Link
                           prefetch={false}
-                          href="/schedule"
+                          href="/schedule/"
                           className="inline-flex items-center gap-1.5 mt-2.5 px-4 py-1.5 bg-navy dark:bg-mint hover:bg-teal dark:hover:bg-emerald-400 text-white dark:text-navy text-xs font-bold rounded-lg transition-colors shadow-xs"
                         >
                           Pick a Time on Calendar &rarr;

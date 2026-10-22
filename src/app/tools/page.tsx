@@ -28,7 +28,7 @@ export default function ToolsHub() {
         title={`${TOOLS.length} Free Medical Billing & RCM Tools`}
         subtitle="Explore billing checklists, illustrative financial calculators and EDI parsers. Each tool states its review status and requires confirmation against current payer policies."
         primary={{ href: '#tools', label: `Explore All ${TOOLS.length} Tools` }}
-        secondary={{ href: '/free-assessment', label: 'Get a Free Practice Audit' }}
+        secondary={{ href: '/free-assessment/', label: 'Get a Free Practice Audit' }}
         chips={[`${TOOLS.length} Free Tools`, 'No Login Required', 'Educational References', 'Review Before Use']}
       />
 
@@ -47,7 +47,7 @@ export default function ToolsHub() {
             </p>
             <Link
               prefetch={false}
-              href="/payers/directory"
+              href="/payers/directory/"
               className="inline-flex items-center text-teal hover:text-navy font-bold text-xs sm:text-sm"
             >
               Open 10,600+ Payer Directory <ArrowRight className="h-4 w-4 ml-1.5" />
@@ -64,7 +64,7 @@ export default function ToolsHub() {
           </p>
           <Link
             prefetch={false}
-            href="/free-assessment"
+            href="/free-assessment/"
             className="inline-block bg-teal hover:bg-navy text-white font-bold py-3 px-8 rounded-full transition-colors text-xs sm:text-sm shadow-sm"
           >
             Request Free Practice Assessment

@@ -318,7 +318,7 @@ IEA*1*000000001~`;
       hasPediatricSurgConsult,
       projectedReimbursement: totalProjectedAllowed,
       unbundlingRiskCount: unbundlingViolations.length,
-      pageUrl: typeof window !== 'undefined' ? window.location.href : '/tools/nicu-critical-care-scrubber',
+      pageUrl: typeof window !== 'undefined' ? window.location.href : '/tools/nicu-critical-care-scrubber/',
       submittedAt: new Date().toISOString(),
     };
 

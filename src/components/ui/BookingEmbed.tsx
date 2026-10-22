@@ -113,7 +113,7 @@ function MeetingRequestForm({ compact = false }: { compact?: boolean }) {
         <p className="font-bold text-navy">Your meeting request is in.</p>
         <p className="text-gray text-sm mt-1">
           We&rsquo;ll reach out within one business day to confirm a time. Prefer to share more practice details upfront?{' '}
-          <Link prefetch={false} href="/contact" className="text-teal font-semibold hover:text-navy">Submit an email request</Link>.
+          <Link prefetch={false} href="/contact/" className="text-teal font-semibold hover:text-navy">Submit an email request</Link>.
         </p>
       </div>
     );
@@ -174,7 +174,7 @@ function MeetingRequestForm({ compact = false }: { compact?: boolean }) {
       {status === 'error' && (
         <p className="text-center text-sm text-red-600 mt-3">
           Something went wrong. Please submit an inquiry through our{' '}
-          <Link prefetch={false} href="/contact" className="underline">contact form</Link> directly.
+          <Link prefetch={false} href="/contact/" className="underline">contact form</Link> directly.
         </p>
       )}
     </form>

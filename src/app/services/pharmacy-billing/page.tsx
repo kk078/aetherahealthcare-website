@@ -135,8 +135,8 @@ export default function PharmacyBilling() {
               <h1 className="text-4xl md:text-6xl font-bold text-white font-jakarta mb-6 leading-tight">Pharmacy Billing Built for Every Dispensing Model</h1>
               <p className="text-xl text-cream mb-10">From NCPDP claim adjudication and PBM rejects to DIR fee reconciliation, 340B, and specialty prior authorizations — our pharmacy RCM team protects margin on every script.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Pharmacy Assessment</Link>
-                <Link prefetch={false} href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
+                <Link prefetch={false} href="/free-assessment/" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">Get Free Pharmacy Assessment</Link>
+                <Link prefetch={false} href="/contact/" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">Talk to a Specialist</Link>
               </div>
             </FadeIn>
           </div>
@@ -211,7 +211,7 @@ export default function PharmacyBilling() {
             <FadeIn>
               <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Protect Your Pharmacy Margin?</h2>
               <p className="text-cream max-w-xl mx-auto mb-8">Start with a free pharmacy billing assessment. We&apos;ll audit your reject patterns and DIR exposure and show you exactly where margin is leaking.</p>
-              <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Pharmacy Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link>
+              <Link prefetch={false} href="/free-assessment/" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">Get Free Pharmacy Assessment <ArrowRight className="h-4 w-4 ml-2" /></Link>
             </FadeIn>
           </div>
         </div>

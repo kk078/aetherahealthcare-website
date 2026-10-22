@@ -343,7 +343,7 @@ export default function TimelyFilingMatrix() {
 
                   <td className="p-3.5 text-right">
                     <Link
-                      href={`/tools/timely-filing-calculator?days=${item.initialFilingDays}`}
+                      href={`/tools/timely-filing-calculator/?days=${item.initialFilingDays}`}
                       className="inline-flex items-center gap-1 text-teal font-bold hover:underline text-xs"
                     >
                       <span>Calculate →</span>
@@ -365,7 +365,7 @@ export default function TimelyFilingMatrix() {
           </div>
 
           <Link
-            href="/schedule"
+            href="/schedule/"
             className="text-[#003087] font-bold hover:underline flex items-center gap-1 shrink-0"
           >
             <span>Audit Practice Timely Filing Risks with Kiran</span>

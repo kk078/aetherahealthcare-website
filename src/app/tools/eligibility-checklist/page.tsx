@@ -28,13 +28,13 @@ export default function EligibilityChecklistPage() {
         title="Eligibility & prior-auth checklist"
         subtitle="Denials that start at the front desk are the cheapest to prevent. Score your pre-visit verification against the ten checks that stop eligibility, coverage, and authorization denials before the claim goes out."
         primary={{ href: '#tool', label: 'Start the Checklist' }}
-        secondary={{ href: '/tools', label: 'All Free Tools' }}
+        secondary={{ href: '/tools/', label: 'All Free Tools' }}
         chips={['10 front-end checks', 'Readiness score', 'Maps to CARC codes']}
       />
 
       <section id="tool" className="py-12 md:py-16 bg-cream flex-1 scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link prefetch={false} href="/tools" className="inline-flex items-center text-teal hover:text-navy text-sm mb-6 font-semibold">
+          <Link prefetch={false} href="/tools/" className="inline-flex items-center text-teal hover:text-navy text-sm mb-6 font-semibold">
             <ArrowLeft className="h-4 w-4 mr-1.5" /> All tools
           </Link>
 
@@ -45,7 +45,7 @@ export default function EligibilityChecklistPage() {
             <p className="text-sm text-amber-900">
               <strong>Educational reference.</strong> Requirements vary by payer and plan — some services need referral
               and authorization, others neither. Use the{' '}
-              <Link prefetch={false} href="/tools/denial-code-lookup" className="underline font-semibold">denial-code lookup</Link>{' '}
+              <Link prefetch={false} href="/tools/denial-code-lookup/" className="underline font-semibold">denial-code lookup</Link>{' '}
               to work any code these checks are meant to prevent.
             </p>
           </div>

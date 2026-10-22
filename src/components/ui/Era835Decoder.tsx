@@ -322,7 +322,7 @@ export default function Era835Decoder() {
           </div>
 
           <Link
-            href="/free-assessment"
+            href="/free-assessment/"
             className="bg-[#003087] hover:bg-[#001A52] text-white font-bold text-xs px-4 py-2 rounded-xl transition-colors whitespace-nowrap shadow-xs"
           >
             Have Aethera Audit Remittances

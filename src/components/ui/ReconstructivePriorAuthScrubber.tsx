@@ -315,7 +315,7 @@ Denial of this prior authorization request constitutes a direct violation of fed
       schnurMetrics: procedure === 'reduction_mammaplasty' ? schnurMetrics : null,
       deficienciesCount: complianceAssessment.deficiencies.length,
       deficiencies: complianceAssessment.deficiencies,
-      pageUrl: typeof window !== 'undefined' ? window.location.href : '/tools/reconstructive-prior-auth-scrubber',
+      pageUrl: typeof window !== 'undefined' ? window.location.href : '/tools/reconstructive-prior-auth-scrubber/',
       submittedAt: new Date().toISOString(),
     };
 

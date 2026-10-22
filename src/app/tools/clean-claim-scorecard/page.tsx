@@ -24,7 +24,7 @@ export default function CleanClaimScorecardPage() {
 
       <section className="pt-8 pb-10 md:pt-12 md:pb-12 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link prefetch={false} href="/tools" className="inline-flex items-center text-cream/80 hover:text-white text-sm mb-5">
+          <Link prefetch={false} href="/tools/" className="inline-flex items-center text-cream/80 hover:text-white text-sm mb-5">
             <ArrowLeft className="h-4 w-4 mr-1.5" /> All tools
           </Link>
           <FadeIn>

@@ -685,7 +685,7 @@ export default function PayerDirectory({
             {/* Bottom Actions */}
             <div className="mt-6 pt-6 border-t border-gray/15 flex flex-wrap items-center justify-between gap-3">
               <a
-                href="/free-assessment"
+                href="/free-assessment/"
                 className="inline-flex items-center gap-1.5 bg-navy hover:bg-teal text-white font-bold py-2.5 px-5 rounded-full text-xs transition-colors"
               >
                 Request Free Revenue Cycle Audit

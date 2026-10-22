@@ -50,7 +50,7 @@ export default function GlossaryPage() {
         title="Healthcare RCM & Medical Billing Glossary"
         subtitle="Demystifying complex reimbursement terminology, EDI transaction standards, CMS NCCI coding rules, and payer denial codes for practice administrators and clinicians."
         primary={{ href: '#glossary-terms', label: 'Explore All Terms' }}
-        secondary={{ href: '/tools', label: 'View 14 RCM Tools' }}
+        secondary={{ href: '/tools/', label: 'View 14 RCM Tools' }}
         chips={['30+ Core Terms', 'EDI 837 / 835', 'NCCI & MUE Edits', 'CARC / RARC Mappings']}
       />
 
@@ -72,21 +72,21 @@ export default function GlossaryPage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 prefetch={false}
-                href="/tools/ncci-claim-scrubber"
+                href="/tools/ncci-claim-scrubber/"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-mint text-navy font-bold text-sm hover:bg-white transition-colors"
               >
                 <ShieldCheck className="h-4 w-4 text-navy" /> NCCI Claim Scrubber <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 prefetch={false}
-                href="/tools/era-835-decoder"
+                href="/tools/era-835-decoder/"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 text-white font-bold text-sm hover:bg-white/20 border border-white/20 transition-colors"
               >
                 <FileSpreadsheet className="h-4 w-4 text-mint" /> 835 ERA Decoder
               </Link>
               <Link
                 prefetch={false}
-                href="/tools"
+                href="/tools/"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-transparent text-cream hover:text-white font-semibold text-sm transition-colors"
               >
                 <Wrench className="h-4 w-4 text-teal" /> View All 14 Interactive Tools

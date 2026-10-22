@@ -40,7 +40,7 @@ export default function DialysisMcpCalculatorPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             prefetch={false}
-            href="/tools"
+            href="/tools/"
             className="inline-flex items-center text-cream/80 hover:text-white text-sm mb-5 transition-colors"
           >
             <ArrowLeft className="h-4 w-4 mr-1.5" /> Back to All RCM Tools
