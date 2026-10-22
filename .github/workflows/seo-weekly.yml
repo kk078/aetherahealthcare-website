@@ -52,8 +52,10 @@ jobs:
         run: node seo/scripts/gsc-export.mjs || echo "::warning::Search Console export failed"
       - name: SEOnaut export published by the local stack (if any)
         run: |
+          # git archive extracts without staging anything (a path checkout would add the files to the index).
           if git fetch --depth=1 origin seo-data 2>/dev/null; then
-            git checkout FETCH_HEAD -- seonaut/ 2>/dev/null && mkdir -p seo/data && rm -rf seo/data/seonaut && mv seonaut seo/data/seonaut || echo "no SEOnaut export on seo-data"
+            mkdir -p seo/data && rm -rf seo/data/seonaut
+            git archive FETCH_HEAD seonaut | tar -x -C seo/data || echo "no SEOnaut export on seo-data"
           else echo "no seo-data branch yet"; fi
       - name: Build report
         run: node seo/scripts/weekly-report.mjs
@@ -70,8 +72,8 @@ jobs:
           git config user.name "aethera-seo-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "seo/reports/$date.md" "seo/reports/$date.json"
-          git diff --cached --quiet && { echo "no changes"; exit 0; }
-          git commit -m "SEO weekly report $date"
+          git diff --cached --quiet -- seo/reports && { echo "no changes"; exit 0; }
+          git commit -m "SEO weekly report $date" -- "seo/reports/$date.md" "seo/reports/$date.json"
           # Reports are not site code and a GITHUB_TOKEN push does not trigger the release workflow.
           # The run takes ~30 min, so rebase onto whatever landed meanwhile (reports never conflict).
           git pull --rebase --quiet origin ${{ github.event.repository.default_branch }} || git rebase --abort
