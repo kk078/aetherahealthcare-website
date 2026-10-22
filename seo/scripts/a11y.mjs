@@ -25,7 +25,10 @@ writeFileSync(join(raw, 'pa11yci.json'), JSON.stringify(pa11yConfig, null, 2));
 // so its JSON goes to a file descriptor rather than a pipe.
 const outPath = join(raw, 'pa11y-results.json');
 const outFd = openSync(outPath, 'w');
-const run = spawnSync(join(seoRoot, 'node_modules', '.bin', 'pa11y-ci'), ['--config', join(raw, 'pa11yci.json'), '--json'], { stdio: ['ignore', outFd, 'pipe'], encoding: 'utf8' });
+// Chrome dies at launch under an LD_PRELOADed allocator (aethera's systemd units preload mimalloc).
+const env = { ...process.env };
+delete env.LD_PRELOAD;
+const run = spawnSync(join(seoRoot, 'node_modules', '.bin', 'pa11y-ci'), ['--config', join(raw, 'pa11yci.json'), '--json'], { stdio: ['ignore', outFd, 'pipe'], encoding: 'utf8', env });
 closeSync(outFd);
 if (run.error) throw run.error;
 let report;
