@@ -1,7 +1,10 @@
-// Owner approved on 2026-10-08; one dev-only advisory, expires 2026-10-15.
+// Owner approved on 2026-10-08 (expired 2026-10-15); renewed by the owner on 2026-10-22 until 2026-11-22.
+// One dev-only advisory with no patched release: braces <=3.0.3 has no fix (GHSA-vfj7-8cjw-p6xm,
+// first_patched_version null) and @next/eslint-plugin-next 16.4.2 still pins fast-glob 3.3.1.
+// Re-check for an upstream fix before renewing again.
 import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
-const until = Date.parse('2026-10-15T00:00:00Z');
+const until = Date.parse('2026-11-22T00:00:00Z');
 const advisory = 'https://github.com/advisories/GHSA-vfj7-8cjw-p6xm';
 const chain = new Set(['braces', 'micromatch', 'fast-glob', '@next/eslint-plugin-next', 'eslint-config-next']);
 export function blockedFindings(audit, lock, now = Date.now()) {
@@ -25,7 +28,11 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1
 
   const severe = Object.entries(audit.vulnerabilities).filter(([, finding]) => ['high', 'critical'].includes(finding.severity));
   const blocked = blockedFindings(audit, lock);
-  if (blocked.length) { console.error('Blocking dependency findings:', blocked.map(([name]) => name).join(', ')); process.exitCode = 1; }
-  else if (severe.length) console.log(`Owner-approved temporary exception for ${advisory}; dev-only ESLint chain; expires 2026-10-15. No production finding exempted.`);
+  if (blocked.length) {
+    console.error('Blocking dependency findings:', blocked.map(([name]) => name).join(', '));
+    if (Date.now() >= until) console.error(`The owner-approved exception for ${advisory} expired ${new Date(until).toISOString().slice(0, 10)}; re-check for a fix or renew it.`);
+    process.exitCode = 1;
+  }
+  else if (severe.length) console.log(`Owner-approved temporary exception for ${advisory}; dev-only ESLint chain; expires 2026-11-22. No production finding exempted.`);
   else console.log('No high or critical dependency findings.');
 }

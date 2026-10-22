@@ -13,7 +13,7 @@ test('the same advisory in a production dependency remains blocking', () => {
   assert.ok(blockedFindings(changed.audit, changed.lock, approvedTime).some(([name]) => name === 'braces'));
 });
 test('the exception expires and cannot exempt a different advisory', () => {
-  assert.equal(blockedFindings(evidence.audit, evidence.lock, Date.parse('2026-10-15T00:00:00Z')).length, 5);
+  assert.equal(blockedFindings(evidence.audit, evidence.lock, Date.parse('2026-11-22T00:00:00Z')).length, 5);
   const changed = structuredClone(evidence);
   changed.audit.vulnerabilities.braces.via[0].url = 'https://github.com/advisories/GHSA-wq5f-xc86-pv6w';
   assert.ok(blockedFindings(changed.audit, changed.lock, approvedTime).length > 0);
