@@ -127,7 +127,7 @@ export default function BlogIndexClient({ blogPosts }: { blogPosts: PostSummary[
               <Link prefetch={false} href={`/blog/${featured.slug}`} className="group grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white rounded-3xl overflow-hidden border border-gray/10 shadow-sm hover:shadow-xl transition-shadow">
                 <div className="relative h-64 lg:h-auto overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={featured.image} alt={featured.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={featured.image} alt="" width={1200} height={700} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <span className="absolute top-4 left-4 inline-flex items-center text-white text-xs font-bold px-3 py-1 rounded-full" style={{ backgroundColor: catColor(featured.category) }}>FEATURED</span>
                 </div>
                 <div className="p-8 lg:p-10 flex flex-col justify-center">
@@ -168,7 +168,7 @@ export default function BlogIndexClient({ blogPosts }: { blogPosts: PostSummary[
                   <Link prefetch={false} href={`/blog/${post.slug}`} className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-gray/10 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
                     <div className="relative h-44 overflow-hidden">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={post.image} alt={post.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <img src={post.image} alt="" width={1200} height={700} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       <span className="absolute top-3 left-3 text-white text-[11px] font-bold px-2.5 py-1 rounded-full" style={{ backgroundColor: catColor(post.category) }}>{post.category}</span>
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
