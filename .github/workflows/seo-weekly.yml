@@ -73,6 +73,8 @@ jobs:
           git diff --cached --quiet && { echo "no changes"; exit 0; }
           git commit -m "SEO weekly report $date"
           # Reports are not site code and a GITHUB_TOKEN push does not trigger the release workflow.
+          # The run takes ~30 min, so rebase onto whatever landed meanwhile (reports never conflict).
+          git pull --rebase --quiet origin ${{ github.event.repository.default_branch }} || git rebase --abort
           if ! git push origin HEAD:${{ github.event.repository.default_branch }}; then
             branch="seo-report/$date"
             git push origin "HEAD:refs/heads/$branch" --force
