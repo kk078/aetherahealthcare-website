@@ -5,7 +5,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import DenialCodeLookup from '@/components/ui/DenialCodeLookup';
-import { getAllDenialCodes, getReferenceCodes } from '@/lib/denialCodes';
+import { REFERENCE_PREVIEW, getAllDenialCodes, getReferenceCodes } from '@/lib/denialCodes';
 import { AlertTriangle, ArrowLeft } from 'lucide-react';
 import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
@@ -21,6 +21,7 @@ export const metadata = {
 export default function DenialCodeLookupPage() {
   const codes = getAllDenialCodes();
   const reference = getReferenceCodes();
+  const referenceCounts = { CARC: reference.filter(r => r.type === 'CARC').length, RARC: reference.filter(r => r.type === 'RARC').length };
   const totalCodes = codes.length + reference.length;
 
   const faqLd = {
@@ -67,7 +68,7 @@ export default function DenialCodeLookupPage() {
             </p>
           </div>
 
-          <DenialCodeLookup codes={codes} reference={reference} />
+          <DenialCodeLookup codes={codes} referencePreview={reference.slice(0, REFERENCE_PREVIEW)} referenceCounts={referenceCounts} />
           
           <ToolConversionBridge
             toolName="Denial Code"
