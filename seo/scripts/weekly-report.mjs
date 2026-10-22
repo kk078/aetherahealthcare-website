@@ -20,7 +20,9 @@ const a11y = load('data/checks/a11y.json');
 const seonaut = load('data/seonaut/latest.json');
 const gsc = load('data/gsc/latest.json');
 
-const previousFile = readdirSync(reports).filter(name => /^\d{4}-\d{2}-\d{2}\.json$/.test(name) && name < `${date}.json`).sort().pop();
+// Earlier reports, including suffixed ones such as 2026-10-22-baseline.json ("-" sorts before ".", so a
+// same-day baseline counts as earlier than that day's regular report).
+const previousFile = readdirSync(reports).filter(name => /^\d{4}-\d{2}-\d{2}(-[a-z]+)?\.json$/.test(name) && name < `${date}.json`).sort().pop();
 const previous = previousFile ? JSON.parse(readFileSync(join(reports, previousFile), 'utf8')) : null;
 
 // ---- Normalised issue list: { key, source, type, path, impact (1-5), detail }
