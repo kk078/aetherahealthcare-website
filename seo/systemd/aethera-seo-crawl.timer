@@ -1,0 +1,10 @@
+[Unit]
+Description=Weekly SEOnaut crawl before the Monday GitHub SEO report
+
+[Timer]
+OnCalendar=Sun 22:00 UTC
+Persistent=true
+RandomizedDelaySec=15min
+
+[Install]
+WantedBy=timers.target

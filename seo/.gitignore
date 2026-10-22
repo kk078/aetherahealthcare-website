@@ -1,0 +1,6 @@
+node_modules/
+# Raw run data (Lighthouse reports, crawl exports, snapshots). Only seo/reports/ is committed.
+data/
+.lighthouseci/
+*.log
+.env

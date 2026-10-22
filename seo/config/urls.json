@@ -1,0 +1,19 @@
+{
+  "$comment": "Representative URL per page template. Lighthouse CI, pa11y-ci and the structured-data check all read this list. Paths only; the base URL comes from the run target.",
+  "productionBase": "https://aetherahealthcare.com",
+  "localBase": "http://localhost:3100",
+  "templates": [
+    { "template": "home", "path": "/" },
+    { "template": "service", "path": "/services/denial-management/" },
+    { "template": "specialty", "path": "/services/cardiology-billing/" },
+    { "template": "pricing", "path": "/pricing/" },
+    { "template": "tools-index", "path": "/tools/" },
+    { "template": "tool", "path": "/tools/denial-code-lookup/" },
+    { "template": "blog-post", "path": "/blog/high-deductible-health-plan-patient-payment-strategies/" },
+    { "template": "glossary", "path": "/glossary/" },
+    { "template": "payer-directory", "path": "/payers/directory/" },
+    { "template": "free-assessment", "path": "/free-assessment/" }
+  ],
+  "excludePatterns": ["^/portal(/|$)", "^/api(/|$)"],
+  "userAgent": "AetheraSEOBot/1.0 (+https://aetherahealthcare.com/; SEO monitoring)"
+}

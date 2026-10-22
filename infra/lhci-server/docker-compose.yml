@@ -1,0 +1,21 @@
+# Self-hosted Lighthouse CI server (report store + trend UI). SQLite on a named volume; localhost only.
+# UI: http://127.0.0.1:9001  — create projects with `seo/scripts/lhci-server-init.sh`.
+name: aethera-lhci
+services:
+  lhci-server:
+    image: patrickhulce/lhci-server:0.15.1
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${SEO_LHCI_PORT:-9001}:9001"
+    environment:
+      LHCI_NO_LIGHTHOUSERC: "1"
+      LHCI_STORAGE__STORAGE_METHOD: sql
+      LHCI_STORAGE__SQL_DIALECT: sqlite
+      LHCI_STORAGE__SQL_DATABASE_PATH: /data/lhci.db
+      # Protects project deletion / admin actions in the UI.
+      LHCI_BASIC_AUTH__USERNAME: ${SEO_LHCI_USER:-aethera}
+      LHCI_BASIC_AUTH__PASSWORD: ${SEO_LHCI_PASSWORD:?set SEO_LHCI_PASSWORD in seo/.env}
+    volumes:
+      - lhci-data:/data
+volumes:
+  lhci-data:

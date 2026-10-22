@@ -1,0 +1,81 @@
+name: SEO weekly report
+# Runs after the scheduled production Lighthouse run (or manually): Phase 3 checks against production,
+# free Search Console rank export (if configured), SEOnaut export from the `seo-data` branch (pushed by
+# the local stack, if available), then commits seo/reports/YYYY-MM-DD.{md,json}.
+on:
+  workflow_run:
+    workflows: [Lighthouse CI]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: seo-weekly
+  cancel-in-progress: false
+jobs:
+  report:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.event == 'schedule' && github.event.workflow_run.conclusion != 'cancelled')
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: seo/package-lock.json
+      - run: npm ci --prefix seo
+      - name: Lighthouse results from the scheduled run
+        if: github.event_name == 'workflow_run'
+        uses: actions/download-artifact@v4
+        with:
+          name: lighthouse-production-${{ github.event.workflow_run.id }}
+          path: seo/data/lhci
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - name: Lighthouse against production (manual runs)
+        if: github.event_name == 'workflow_dispatch'
+        run: seo/scripts/lhci.sh production both || true
+      - name: Phase 3 checks (snapshot, sitemap/robots, schema, internal links, linkinator, pa11y)
+        run: node seo/scripts/run-checks.mjs || echo "::warning::some checks failed; report notes missing sources"
+      - name: Search Console ranks (free API; skipped if not configured)
+        env:
+          SEARCH_CONSOLE_CLIENT_EMAIL: ${{ secrets.SEARCH_CONSOLE_CLIENT_EMAIL }}
+          SEARCH_CONSOLE_PRIVATE_KEY: ${{ secrets.SEARCH_CONSOLE_PRIVATE_KEY }}
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+        run: node seo/scripts/gsc-export.mjs || echo "::warning::Search Console export failed"
+      - name: SEOnaut export published by the local stack (if any)
+        run: |
+          if git fetch --depth=1 origin seo-data 2>/dev/null; then
+            git checkout FETCH_HEAD -- seonaut/ 2>/dev/null && mkdir -p seo/data && rm -rf seo/data/seonaut && mv seonaut seo/data/seonaut || echo "no SEOnaut export on seo-data"
+          else echo "no seo-data branch yet"; fi
+      - name: Build report
+        run: node seo/scripts/weekly-report.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: seo-weekly-data-${{ github.run_id }}
+          path: seo/data/
+          retention-days: 60
+      - name: Commit report
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          date="$(date -u +%F)"
+          git config user.name "aethera-seo-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "seo/reports/$date.md" "seo/reports/$date.json"
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -m "SEO weekly report $date"
+          # Reports are not site code and a GITHUB_TOKEN push does not trigger the release workflow.
+          if ! git push origin HEAD:${{ github.event.repository.default_branch }}; then
+            branch="seo-report/$date"
+            git push origin "HEAD:refs/heads/$branch" --force
+            gh pr create --head "$branch" --base "${{ github.event.repository.default_branch }}" --title "SEO weekly report $date" --body "Automated weekly SEO report (direct push to the default branch was rejected, e.g. by branch protection)."
+          fi
+          cat "seo/reports/$date.md" >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,65 @@
+# SEOnaut full-site crawler (MySQL), localhost only. UI: http://127.0.0.1:9002
+#
+# SEOnaut has no URL-exclusion option and /portal/ is linked site-wide, so it never talks to the
+# internet directly: the crawl target is the `seo-gateway` nginx container, which
+#   * returns 403 locally for /portal and /api (never forwarded upstream),
+#   * adds Disallow: /portal/ and /api/ to the proxied robots.txt (SEOnaut honours it),
+#   * forces the AetheraSEOBot User-Agent and rate-limits to 2 req/s,
+#   * rewrites https://aetherahealthcare.com <-> http://seo-gateway:8080 so links stay internal,
+#   * logs every request to seo/data/raw/gateway/ (audit trail for the exclusion guarantee).
+# The app container sits only on the internal network (no internet route); the gateway is the sole
+# egress path and also publishes the SEOnaut UI on 127.0.0.1.
+name: aethera-seonaut
+services:
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${SEONAUT_DB_ROOT_PASSWORD:?set SEONAUT_DB_ROOT_PASSWORD in seo/.env}
+      MYSQL_DATABASE: seonaut
+      MYSQL_USER: seonaut
+      MYSQL_PASSWORD: ${SEONAUT_DB_PASSWORD:?set SEONAUT_DB_PASSWORD in seo/.env}
+    command: ["--innodb-buffer-pool-size=256M", "--max-connections=50"]
+    volumes:
+      - seonaut-db:/var/lib/mysql
+    networks: [internal]
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -useonaut -p\"$$MYSQL_PASSWORD\" --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+
+  seo-gateway:
+    image: nginx:1.28-alpine
+    restart: unless-stopped
+    volumes:
+      - ./gateway/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./gateway/aethera_proxy.conf:/etc/nginx/aethera_proxy.conf:ro
+      - ../../seo/data/raw/gateway:/var/log/aethera
+    ports:
+      - "127.0.0.1:${SEONAUT_PORT:-9002}:9000"   # SEOnaut UI, proxied to app:9000
+    networks: [internal, egress]
+
+  app:
+    image: ghcr.io/stjudewashere/seonaut@sha256:d18721b6c07f333694ebe241d06442827ad56e343d34103051a3e5028f1697d9
+    restart: unless-stopped
+    depends_on:
+      db: { condition: service_healthy }
+      seo-gateway: { condition: service_started }
+    command: ["/app/seonaut"]   # image default is /bin/sh; upstream compose sets this too
+    environment:
+      SEONAUT_SERVER_URL: http://127.0.0.1:${SEONAUT_PORT:-9002}
+      SEONAUT_DATABASE_SERVER: db
+      SEONAUT_DATABASE_USER: seonaut
+      SEONAUT_DATABASE_PASSWORD: ${SEONAUT_DB_PASSWORD}
+      SEONAUT_DATABASE_DATABASE: seonaut
+      SEONAUT_CRAWLER_AGENT: "AetheraSEOBot/1.0 (+https://aetherahealthcare.com/; SEO monitoring; SEOnaut)"
+    networks: [internal]
+
+volumes:
+  seonaut-db:
+
+networks:
+  internal:
+    internal: true
+  egress: {}

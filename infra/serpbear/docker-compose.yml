@@ -1,0 +1,25 @@
+# SerpBear keyword rank tracker, localhost only, SQLite on a named volume. UI: http://127.0.0.1:9003
+# Rank checks need either Google Search Console (free) or a SERP scraping provider (mostly paid).
+# Only the free Search Console integration is intended here; see seo/README.md#serpbear before
+# configuring any scraper.
+name: aethera-serpbear
+services:
+  serpbear:
+    image: towfiqi/serpbear:3.1.0
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${SERPBEAR_PORT:-9003}:3000"
+    environment:
+      USER: ${SERPBEAR_USER:-aethera}
+      PASSWORD: ${SERPBEAR_PASSWORD:?set SERPBEAR_PASSWORD in seo/.env}
+      SECRET: ${SERPBEAR_SECRET:?set SERPBEAR_SECRET in seo/.env}
+      APIKEY: ${SERPBEAR_APIKEY:?set SERPBEAR_APIKEY in seo/.env}
+      SESSION_DURATION: "24"
+      NEXT_PUBLIC_APP_URL: http://127.0.0.1:${SERPBEAR_PORT:-9003}
+      # Free Search Console integration (service account with read access to the property):
+      SEARCH_CONSOLE_CLIENT_EMAIL: ${SEARCH_CONSOLE_CLIENT_EMAIL:-}
+      SEARCH_CONSOLE_PRIVATE_KEY: ${SEARCH_CONSOLE_PRIVATE_KEY:-}
+    volumes:
+      - serpbear-data:/app/data
+volumes:
+  serpbear-data:
