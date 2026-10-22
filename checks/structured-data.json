@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T09:15:25.986Z",
+  "generatedAt": "2026-10-22T10:01:17.989Z",
   "schemaOrgRelease": "30.1",
   "base": "https://aetherahealthcare.com",
   "templates": [
@@ -57,13 +57,30 @@
     {
       "template": "specialty",
       "path": "/services/cardiology-billing/",
-      "blocks": 0,
-      "types": [],
-      "missingRecommendedTypes": [
-        "Service",
-        "BreadcrumbList"
+      "blocks": 1,
+      "types": [
+        "BreadcrumbList",
+        "Intangible",
+        "ItemList",
+        "ListItem",
+        "Organization",
+        "Service"
       ],
-      "problems": []
+      "missingRecommendedTypes": [],
+      "problems": [
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"sameAs\""
+        },
+        {
+          "severity": "recommendation",
+          "block": 0,
+          "type": "Organization",
+          "message": "Add recommended \"contactPoint\""
+        }
+      ]
     },
     {
       "template": "pricing",
@@ -285,10 +302,10 @@
   ],
   "summary": {
     "pagesChecked": 534,
-    "pagesWithoutStructuredData": 28,
+    "pagesWithoutStructuredData": 20,
     "pagesWithErrors": 0,
-    "pagesWithOrganization": 502,
-    "pagesWithBreadcrumbs": 251
+    "pagesWithOrganization": 510,
+    "pagesWithBreadcrumbs": 259
   },
   "bySection": {
     "/": {
@@ -408,7 +425,7 @@
     },
     "/services/": {
       "pages": 21,
-      "withJsonLd": 13,
+      "withJsonLd": 21,
       "withErrors": 0
     },
     "/specialties/": {
@@ -446,14 +463,6 @@
     "/payers/",
     "/payers/directory/",
     "/schedule/",
-    "/services/cardiology-billing/",
-    "/services/dental-billing/",
-    "/services/dermatology-billing/",
-    "/services/family-medicine-billing/",
-    "/services/orthopedic-billing/",
-    "/services/pharmacy-billing/",
-    "/services/psychiatry-billing/",
-    "/services/workers-compensation-billing/",
     "/state-of-denials/",
     "/tools/"
   ],
