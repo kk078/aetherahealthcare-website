@@ -1,6 +1,7 @@
 import { marketingMetadata } from '@/lib/marketing';
 import type { Metadata } from 'next';
 import FreeAssessmentClient from './FreeAssessmentClient';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
   title: { absolute: 'Free A/R Gap Analysis & Revenue Assessment | Aethera Healthcare Solutions' },
@@ -12,5 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <FreeAssessmentClient />;
+  return <><BreadcrumbJsonLd trail={[{ name: 'Free Assessment', path: '/free-assessment/' }]} /><FreeAssessmentClient /></>;
 }

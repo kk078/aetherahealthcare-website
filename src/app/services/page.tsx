@@ -19,6 +19,7 @@ import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
 import ServiceCard from '@/components/ui/ServiceCard';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services') },
@@ -144,6 +145,7 @@ export default function Services() {
           }}
         />
       </>
+      <BreadcrumbJsonLd trail={[{ name: 'Services', path: '/services/' }]} />
       <Navbar />
 
       <RcmHeroBand

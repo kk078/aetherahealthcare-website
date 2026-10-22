@@ -9,6 +9,7 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import PricingCard from '@/components/ui/PricingCard';
 import ROICalculator from '@/components/ui/ROICalculator';
 import RcmHeroBand from '@/components/ui/RcmHeroBand';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/pricing') },
@@ -177,6 +178,7 @@ export default function Pricing() {
           }}
         />
       </>
+      <BreadcrumbJsonLd trail={[{ name: 'Pricing', path: '/pricing/' }]} />
       <Navbar />
 
       <RcmHeroBand

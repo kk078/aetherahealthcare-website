@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 const terms = [
   {
@@ -47,6 +48,7 @@ export const metadata = {
 export default function TermsOfService() {
   return (
     <div className="min-h-screen flex flex-col">
+      <BreadcrumbJsonLd trail={[{ name: 'Compliance', path: '/compliance/' }, { name: 'Terms of Service', path: '/compliance/terms-of-service/' }]} />
       <Navbar />
 
       {/* Hero Section */}

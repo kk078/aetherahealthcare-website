@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 const includedItems = [
   'Real-time provider portal access',
@@ -119,6 +120,7 @@ export default function ReportingAnalytics() {
           }}
         />
       </>
+      <BreadcrumbJsonLd trail={[{ name: 'Services', path: '/services/' }, { name: 'Reporting & Analytics Services', path: '/services/reporting-analytics/' }]} />
       <Navbar />
 
       {/* Hero Section */}

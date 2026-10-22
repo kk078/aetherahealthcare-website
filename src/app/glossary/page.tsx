@@ -7,6 +7,7 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 import RcmGlossary from '@/components/ui/RcmGlossary';
 import { GLOSSARY_TERMS } from '@/lib/glossaryData';
 import { ArrowRight, Wrench, ShieldCheck, FileSpreadsheet } from 'lucide-react';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
   title: { absolute: 'Healthcare RCM & Medical Billing Glossary | Aethera Healthcare Solutions' },
@@ -43,6 +44,7 @@ export default function GlossaryPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <BreadcrumbJsonLd trail={[{ name: 'RCM Glossary', path: '/glossary/' }]} />
       <Navbar />
 
       <RcmHeroBand

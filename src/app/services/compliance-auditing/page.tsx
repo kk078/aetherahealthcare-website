@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
 import SectionHeader from '@/components/ui/SectionHeader';
+import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 const includedItems = [
   'Annual HIPAA risk assessments',
@@ -119,6 +120,7 @@ export default function ComplianceAuditing() {
           }}
         />
       </>
+      <BreadcrumbJsonLd trail={[{ name: 'Services', path: '/services/' }, { name: 'Compliance & Auditing Services', path: '/services/compliance-auditing/' }]} />
       <Navbar />
 
       {/* Hero Section */}
