@@ -37,7 +37,7 @@ export default function MedicalBillingHub() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {SEO_SPECIALTIES.map((s, i) => (
                 <FadeIn key={s.slug} delay={i * 0.04}>
-                  <Link prefetch={false} href={`/medical-billing/${s.slug}`} className="group block bg-white rounded-xl border border-gray/15 p-4 hover:shadow-lg transition-all">
+                  <Link prefetch={false} href={s.serviceHref || `/medical-billing/${s.slug}/`} className="group block bg-white rounded-xl border border-gray/15 p-4 hover:shadow-lg transition-all">
                     <span className="block text-navy font-semibold text-sm">{s.name}</span>
                     <span className="block text-xs text-gray mt-1 leading-snug">{s.cpt}</span>
                   </Link>

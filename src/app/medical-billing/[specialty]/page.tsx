@@ -198,7 +198,7 @@ export default async function SpecialtyPage({ params }: { params: Params }) {
                 <ul className="space-y-1.5">
                   {others.map((o) => (
                     <li key={o.slug}>
-                      <Link prefetch={false} href={o.serviceHref || `/medical-billing/${o.slug}`} className="text-sm text-teal hover:text-navy">
+                      <Link prefetch={false} href={o.serviceHref || `/medical-billing/${o.slug}/`} className="text-sm text-teal hover:text-navy">
                         {o.name} billing
                       </Link>
                     </li>

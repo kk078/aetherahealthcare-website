@@ -1163,7 +1163,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Family medicine billing rarely involves exotic procedures, but its sheer volume and reliance on evaluation-and-management (E/M) coding mean small habits compound into big revenue swings. Under-coding a level, missing a preventive-vs-problem distinction, or skipping eligibility checks costs primary-care practices more than they realize. This guide covers the essentials. For full-service help, see our <a href=\"/medical-billing/family-medicine/\">family medicine medical billing</a> and <a href=\"/services/family-medicine-billing/\">family medicine billing services</a>."
+          "Family medicine billing rarely involves exotic procedures, but its sheer volume and reliance on evaluation-and-management (E/M) coding mean small habits compound into big revenue swings. Under-coding a level, missing a preventive-vs-problem distinction, or skipping eligibility checks costs primary-care practices more than they realize. This guide covers the essentials. For full-service help, see our <a href=\"/services/family-medicine-billing/\">family medicine billing services</a>."
         ]
       },
       {
@@ -1410,7 +1410,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Dermatology medical billing combines high procedure volume with cosmetic-vs-medical distinctions, lesion coding, and modifier rules that make clean claims surprisingly hard. Small errors repeat across a busy schedule, so the revenue impact adds up fast. This guide covers what drives dermatology denials and how to prevent them. For full-service help, see our <a href=\"/medical-billing/dermatology/\">dermatology medical billing</a> and <a href=\"/services/dermatology-billing/\">dermatology billing services</a>."
+          "Dermatology medical billing combines high procedure volume with cosmetic-vs-medical distinctions, lesion coding, and modifier rules that make clean claims surprisingly hard. Small errors repeat across a busy schedule, so the revenue impact adds up fast. This guide covers what drives dermatology denials and how to prevent them. For full-service help, see our <a href=\"/services/dermatology-billing/\">dermatology billing services</a>."
         ]
       },
       {
@@ -1457,7 +1457,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Behavioral health billing is deceptively hard: the visits look simple, but the coding, time thresholds, telehealth rules, and payer-specific limits create denials that primary care never encounters. For therapists, psychiatrists, and group practices, small documentation gaps turn into recurring lost revenue. This guide covers the rules that trip practices up and how to bill behavioral health cleanly. If you’d rather hand it off, see our <a href=\"/medical-billing/behavioral-health/\">behavioral health medical billing</a> and <a href=\"/services/psychiatry-billing/\">psychiatry billing services</a>."
+          "Behavioral health billing is deceptively hard: the visits look simple, but the coding, time thresholds, telehealth rules, and payer-specific limits create denials that primary care never encounters. For therapists, psychiatrists, and group practices, small documentation gaps turn into recurring lost revenue. This guide covers the rules that trip practices up and how to bill behavioral health cleanly. If you’d rather hand it off, see our <a href=\"/services/psychiatry-billing/\">psychiatry billing services</a>."
         ]
       },
       {
@@ -1516,7 +1516,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Orthopedic medical billing is one of the most modifier-dependent specialties there is. Global surgical periods, staged procedures, and the mix of office visits, injections, imaging, and surgery mean a single misapplied modifier can cost a practice a high-value claim. This guide covers what makes orthopedic billing hard, the denials that hurt most, and how to prevent them. For full-service help, see our <a href=\"/medical-billing/orthopedics/\">orthopedic medical billing</a> and <a href=\"/services/orthopedic-billing/\">orthopedic billing services</a>."
+          "Orthopedic medical billing is one of the most modifier-dependent specialties there is. Global surgical periods, staged procedures, and the mix of office visits, injections, imaging, and surgery mean a single misapplied modifier can cost a practice a high-value claim. This guide covers what makes orthopedic billing hard, the denials that hurt most, and how to prevent them. For full-service help, see our <a href=\"/services/orthopedic-billing/\">orthopedic billing services</a>."
         ]
       },
       {
@@ -1823,7 +1823,7 @@ const ARTICLES: BlogPost[] = [
     "sections": [
       {
         "p": [
-          "Cardiology medical billing is among the most complex specialties to get right, because it combines high-value procedures, bundled diagnostic studies, device coding, and payer rules that change often. Small coding or documentation gaps translate into outsized revenue loss. This guide covers what makes cardiology billing hard, the denials that hit hardest, and how to prevent them. For a practice that wants it handled end to end, see our <a href=\"/medical-billing/cardiology/\">cardiology medical billing</a> and <a href=\"/services/cardiology-billing/\">cardiology billing services</a>."
+          "Cardiology medical billing is among the most complex specialties to get right, because it combines high-value procedures, bundled diagnostic studies, device coding, and payer rules that change often. Small coding or documentation gaps translate into outsized revenue loss. This guide covers what makes cardiology billing hard, the denials that hit hardest, and how to prevent them. For a practice that wants it handled end to end, see our <a href=\"/services/cardiology-billing/\">cardiology billing services</a>."
         ]
       },
       {
