@@ -1,5 +1,6 @@
 import { marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
+import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import FadeIn from '@/components/ui/FadeIn';
@@ -78,6 +79,41 @@ export default function PayerDirectoryIndex() {
 
           <PayerDirectory payers={payers} types={types} />
         </div>
+      </section>
+
+      {/* Static A–Z index: the interactive directory paginates client-side, so without this list most
+          payer pages have no crawlable link pointing at them. */}
+      <section className="py-12 bg-cream/40 border-t border-gray/10">
+        <nav aria-labelledby="payer-index-heading" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="payer-index-heading" className="text-2xl font-bold text-navy mb-2 font-jakarta">
+            All payer pages, A–Z
+          </h2>
+          <p className="text-gray text-sm mb-6">
+            Every payer profile in the directory ({payers.length}), with payer IDs, timely filing and appeal details.
+          </p>
+          <div className="columns-2 sm:columns-3 lg:columns-4 gap-6 text-sm">
+            {Object.entries(
+              payers.reduce<Record<string, typeof payers>>((groups, payer) => {
+                const letter = /[a-z]/i.test(payer.name[0]) ? payer.name[0].toUpperCase() : '#';
+                (groups[letter] ??= []).push(payer);
+                return groups;
+              }, {}),
+            ).map(([letter, group]) => (
+              <div key={letter} className="break-inside-avoid mb-4">
+                <h3 className="font-bold text-teal mb-1">{letter}</h3>
+                <ul className="space-y-1">
+                  {group.map(payer => (
+                    <li key={payer.slug}>
+                      <Link prefetch={false} href={`/payers/directory/${payer.slug}/`} className="text-navy hover:text-teal hover:underline">
+                        {payer.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </nav>
       </section>
 
       <section className="py-14 bg-white border-t border-gray/10">
