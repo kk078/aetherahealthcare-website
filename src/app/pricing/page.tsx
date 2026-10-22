@@ -31,7 +31,7 @@ const pricingPlans = [
       'Aggressive denial appeals & timely AR follow-up',
       'Real-time portal analytics & monthly executive reporting',
     ],
-    href: '/contact'
+    href: '/contact/'
   },
   {
     title: 'Per-Claim',
@@ -45,7 +45,7 @@ const pricingPlans = [
       'Monthly volume reporting & payer exception logging',
       'Flexible volume scaling with no minimum penalty fees',
     ],
-    href: '/contact'
+    href: '/contact/'
   },
   {
     title: 'Flat Fee',
@@ -59,7 +59,7 @@ const pricingPlans = [
       'Priority 24/7 client support & dedicated account team',
       'SLA-backed turnaround times committed in writing',
     ],
-    href: '/contact'
+    href: '/contact/'
   },
   {
     title: 'Hybrid',
@@ -73,7 +73,7 @@ const pricingPlans = [
       'Bi-weekly denial root-cause reviews with clinical leadership',
       'Contractually committed clean-claim & AR targets in writing',
     ],
-    href: '/contact'
+    href: '/contact/'
   }
 ];
 
@@ -183,8 +183,8 @@ export default function Pricing() {
         eyebrow="Pricing"
         title="Simple, transparent pricing"
         subtitle="No hidden fees. No setup charges. No long-term contracts. Choose the pricing model that works best for your practice."
-        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
-        secondary={{ href: '/contact', label: 'Talk to an Expert' }}
+        primary={{ href: '/free-assessment/', label: 'Get a Free Assessment' }}
+        secondary={{ href: '/contact/', label: 'Talk to an Expert' }}
         chips={['No setup fees', 'No long-term contracts', 'Performance in writing']}
       />
 
@@ -324,7 +324,7 @@ export default function Pricing() {
                 Get a free, no-obligation revenue cycle assessment and a custom pricing quote for your practice — typically within one business day.
               </p>
               <Link prefetch={false}
-                href="/free-assessment"
+                href="/free-assessment/"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >
                 Get Your Free Assessment

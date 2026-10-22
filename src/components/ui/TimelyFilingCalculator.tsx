@@ -102,7 +102,7 @@ export default function TimelyFilingCalculator() {
             <div className="mt-5 pt-4 border-t border-gray/15 flex flex-col sm:flex-row gap-2">
               <Link
                 prefetch={false}
-                href="/tools/timely-filing-matrix"
+                href="/tools/timely-filing-matrix/"
                 className="inline-flex items-center justify-center text-xs font-bold text-teal hover:text-navy bg-white/80 hover:bg-white px-3 py-2 rounded-lg border border-gray/20 transition-colors text-center"
               >
                 Look up 50-State Payer Limits &rarr;
@@ -110,7 +110,7 @@ export default function TimelyFilingCalculator() {
               {result.status === 'past' && (
                 <Link
                   prefetch={false}
-                  href="/tools/appeal-letter-generator"
+                  href="/tools/appeal-letter-generator/"
                   className="inline-flex items-center justify-center text-xs font-bold text-white bg-red-600 hover:bg-red-700 px-3 py-2 rounded-lg transition-colors text-center"
                 >
                   Draft CARC 29 Timely Appeal &rarr;

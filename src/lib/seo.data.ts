@@ -59,7 +59,7 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
     slug: 'family-medicine',
     name: 'Family Medicine',
     noun: 'family medicine practices',
-    serviceHref: '/services/family-medicine-billing',
+    serviceHref: '/services/family-medicine-billing/',
     cpt: '99202–99215, 99381–99397, G0438–G0439',
     blurb:
       'High-volume primary care billing where small per-claim errors compound fast across thousands of visits a month.',
@@ -78,7 +78,7 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
     slug: 'cardiology',
     name: 'Cardiology',
     noun: 'cardiology practices',
-    serviceHref: '/services/cardiology-billing',
+    serviceHref: '/services/cardiology-billing/',
     cpt: '92920–92944, 93000–93010, 93224–93272',
     blurb:
       'Procedure-heavy billing with diagnostic testing, device monitoring, and global-period rules that invite bundling denials.',
@@ -97,7 +97,7 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
     slug: 'orthopedics',
     name: 'Orthopedics',
     noun: 'orthopedic practices',
-    serviceHref: '/services/orthopedic-billing',
+    serviceHref: '/services/orthopedic-billing/',
     cpt: '20000–29999, 99202–99215, 73000–73725',
     blurb:
       'Surgical billing dominated by global periods, prior authorization, and DME — where missed auths and modifiers cost the most.',
@@ -116,7 +116,7 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
     slug: 'dermatology',
     name: 'Dermatology',
     noun: 'dermatology practices',
-    serviceHref: '/services/dermatology-billing',
+    serviceHref: '/services/dermatology-billing/',
     cpt: '17000–17999, 11000–11646, 99202–99215',
     blurb:
       'A mix of medical and cosmetic work where lesion counts, destruction codes, and Mohs staging make accurate coding decisive.',
@@ -135,7 +135,7 @@ export const SEO_SPECIALTIES: SeoSpecialty[] = [
     slug: 'behavioral-health',
     name: 'Behavioral Health',
     noun: 'behavioral health and psychiatry practices',
-    serviceHref: '/services/psychiatry-billing',
+    serviceHref: '/services/psychiatry-billing/',
     cpt: '90791–90899, 99202–99215, 90832–90838',
     blurb:
       'Time-based therapy codes, add-on E/M, and tight authorization rules make behavioral health billing uniquely denial-sensitive.',

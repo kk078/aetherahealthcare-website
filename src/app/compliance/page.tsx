@@ -21,31 +21,31 @@ const standards = [
     icon: <Shield className="h-8 w-8" />,
     title: 'HIPAA Compliance',
     description: 'Comprehensive privacy and security safeguards for protected health information.',
-    href: '/compliance/hipaa'
+    href: '/compliance/hipaa/'
   },
   {
     icon: <FileText className="h-8 w-8" />,
     title: 'Privacy Policy',
     description: 'Our commitment to protecting your personal and health information.',
-    href: '/compliance/privacy-policy'
+    href: '/compliance/privacy-policy/'
   },
   {
     icon: <FileText className="h-8 w-8" />,
     title: 'Terms of Service',
     description: 'Agreement governing our services and your use of our platform.',
-    href: '/compliance/terms-of-service'
+    href: '/compliance/terms-of-service/'
   },
   {
     icon: <FileText className="h-8 w-8" />,
     title: 'Business Associate Agreement',
     description: 'Understanding our BAA and how we protect your data.',
-    href: '/compliance/baa'
+    href: '/compliance/baa/'
   },
   {
     icon: <Lock className="h-8 w-8" />,
     title: 'Security Practices',
     description: 'Our comprehensive approach to data security and protection.',
-    href: '/compliance/security'
+    href: '/compliance/security/'
   }
 ];
 
@@ -106,7 +106,7 @@ export default function Compliance() {
         eyebrow="Compliance & Security"
         title="Our commitment to compliance"
         subtitle="A comprehensive compliance program ensuring the highest standards of data protection and regulatory adherence."
-        primary={{ href: '/contact', label: 'Talk to Us' }}
+        primary={{ href: '/contact/', label: 'Talk to Us' }}
         chips={['HIPAA-compliant', 'BAAs available', 'Regular audits']}
       />
 
@@ -254,7 +254,7 @@ export default function Compliance() {
                   Email Compliance Officer
                 </Link>
                 <Link prefetch={false}
-                  href="/contact"
+                  href="/contact/"
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >
                   General Contact

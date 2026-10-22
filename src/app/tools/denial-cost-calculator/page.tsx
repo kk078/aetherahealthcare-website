@@ -28,13 +28,13 @@ export default function DenialCostPage() {
         title="Denial cost calculator"
         subtitle="Denied claims cost you twice — lost reimbursement and the staff time to rework them. Put real numbers to both, per week, month, and year, and see the combined annual impact on your practice."
         primary={{ href: '#tool', label: 'Run the Numbers' }}
-        secondary={{ href: '/tools', label: 'All Free Tools' }}
+        secondary={{ href: '/tools/', label: 'All Free Tools' }}
         chips={['Revenue loss + rework', 'Per week / month / year', 'MGMA rework benchmark']}
       />
 
       <section id="tool" className="py-12 md:py-16 bg-cream flex-1 scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link prefetch={false} href="/tools" className="inline-flex items-center text-teal hover:text-navy text-sm mb-6 font-semibold">
+          <Link prefetch={false} href="/tools/" className="inline-flex items-center text-teal hover:text-navy text-sm mb-6 font-semibold">
             <ArrowLeft className="h-4 w-4 mr-1.5" /> All tools
           </Link>
 
@@ -45,7 +45,7 @@ export default function DenialCostPage() {
             <p className="text-sm text-amber-900">
               <strong>Estimation only.</strong> Actual losses depend on your payer mix, appeal success, and how many
               denials are truly recoverable. Use the{' '}
-              <Link prefetch={false} href="/tools/denial-code-lookup" className="underline font-semibold">denial-code lookup</Link>{' '}
+              <Link prefetch={false} href="/tools/denial-code-lookup/" className="underline font-semibold">denial-code lookup</Link>{' '}
               to work the specific CARC/RARC codes driving yours.
             </p>
           </div>

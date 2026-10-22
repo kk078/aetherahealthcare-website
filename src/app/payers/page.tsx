@@ -81,8 +81,8 @@ export default function Payers() {
         eyebrow="Payer Network &amp; EDI Routing"
         title="We work with your payers"
         subtitle="Aethera connects with 10,600+ payers and clearinghouse EDI gateways nationwide — from Medicare and Medicaid to commercial insurers, dental, and workers' compensation."
-        primary={{ href: '/payers/directory', label: 'Browse 10,600+ Payer Directory' }}
-        secondary={{ href: '/tools/payer-provider-manuals', label: 'Payer Manual Finder' }}
+        primary={{ href: '/payers/directory/', label: 'Browse 10,600+ Payer Directory' }}
+        secondary={{ href: '/tools/payer-provider-manuals/', label: 'Payer Manual Finder' }}
         chips={['10,600+ clearinghouse routes', 'All 50 states', 'Real-time 270/271 eligibility', '835 ERA remittance']}
       />
 
@@ -220,7 +220,7 @@ export default function Payers() {
           <FadeIn>
             <h3 className="text-xl font-bold text-navy font-jakarta mb-3">Don&apos;t See Your Payer?</h3>
             <p className="text-gray mb-6">We likely work with them. With Payer-specific review in our network, if you don&apos;t see a specific plan listed, contact us for a payer-specific confirmation.</p>
-            <Link prefetch={false} href="/contact" className="inline-flex items-center bg-teal hover:bg-navy text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
+            <Link prefetch={false} href="/contact/" className="inline-flex items-center bg-teal hover:bg-navy text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
               Ask About Your Payer <ArrowRight className="h-4 w-4 ml-2" />
             </Link>
           </FadeIn>
@@ -238,7 +238,7 @@ export default function Payers() {
               <p className="text-cream text-lg max-w-xl mx-auto mb-8">
                 Our payer expertise means fewer denials, faster payments, and more money in your practice.
               </p>
-              <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
+              <Link prefetch={false} href="/free-assessment/" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
                 Get Your Free Assessment <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </FadeIn>

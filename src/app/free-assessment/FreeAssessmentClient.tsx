@@ -466,7 +466,7 @@ export default function FreeAssessmentClient() {
                 {errorMsg && <p className="text-center text-red-600 text-sm mt-3">{errorMsg}</p>}
                 <p className="text-xs text-gray text-center mt-3">
                   Your report appears on-screen instantly — download or print it below. By submitting you agree to our{' '}
-                  <Link prefetch={false} href="/compliance/privacy-policy" className="text-teal hover:underline">Privacy Policy</Link>. Contact details and aggregate totals are sent to our team only when you submit. Do not include patient identifiers.
+                  <Link prefetch={false} href="/compliance/privacy-policy/" className="text-teal hover:underline">Privacy Policy</Link>. Contact details and aggregate totals are sent to our team only when you submit. Do not include patient identifiers.
                 </p>
               </div>
             </div>
@@ -576,7 +576,7 @@ export default function FreeAssessmentClient() {
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-white rounded-2xl px-6 py-5 border border-gray/10 shadow-sm">
                 <div className="flex items-center text-navy"><Calendar className="h-5 w-5 text-teal mr-2" /><span className="font-bold">Prefer to talk it through?</span></div>
-                <Link href="/schedule" className="text-teal font-semibold hover:text-navy transition-colors">Schedule a Consultation</Link>
+                <Link href="/schedule/" className="text-teal font-semibold hover:text-navy transition-colors">Schedule a Consultation</Link>
                 <span className="text-gray text-sm">Review your live audit with Kiran</span>
               </div>
             </div>

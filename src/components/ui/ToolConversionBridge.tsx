@@ -56,7 +56,7 @@ export default function ToolConversionBridge({
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
             <Link
               prefetch={false}
-              href="/schedule"
+              href="/schedule/"
               className="btn-shimmer inline-flex items-center justify-center gap-2 bg-teal hover:bg-mint text-navy font-bold py-3.5 px-6 rounded-full transition-all duration-300 text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               <CalendarClock className="h-4 w-4" />
@@ -65,7 +65,7 @@ export default function ToolConversionBridge({
 
             <Link
               prefetch={false}
-              href="/free-assessment"
+              href="/free-assessment/"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40 font-semibold py-3.5 px-6 rounded-full transition-all duration-300 text-sm hover:-translate-y-0.5"
             >
               Run Free A/R Assessment

@@ -94,7 +94,7 @@ export default async function SpecialtyPage({ params }: { params: Params }) {
               <Link prefetch={false} href={s.slug === 'pain-management' ? '/lp/denial-recovery-sprint/' : '/free-assessment'} className="bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors text-sm">
                 {s.slug === 'pain-management' ? 'Explore the 48-Hour Denial Sprint' : 'Get an Instant A/R Analysis'}
               </Link>
-              <Link prefetch={false} href="/schedule" className="border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-full transition-colors text-sm">
+              <Link prefetch={false} href="/schedule/" className="border-2 border-white/40 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-full transition-colors text-sm">
                 Schedule a Meeting
               </Link>
             </div>
@@ -162,10 +162,10 @@ export default async function SpecialtyPage({ params }: { params: Params }) {
                 <h2 className="text-lg font-bold text-navy mb-2 flex items-center"><Wrench className="h-5 w-5 mr-2 text-teal" />Free tools for your billing team</h2>
                 <p className="text-sm text-gray mb-3">Use these any time — no login required.</p>
                 <div className="flex flex-wrap gap-2">
-                  <Link prefetch={false} href="/tools/denial-code-lookup" className="text-sm bg-cream border border-teal/30 text-teal rounded-full px-3 py-1.5 hover:bg-teal hover:text-white transition-colors">Denial Code Lookup</Link>
-                  <Link prefetch={false} href="/tools/clean-claim-scorecard" className="text-sm bg-cream border border-teal/30 text-teal rounded-full px-3 py-1.5 hover:bg-teal hover:text-white transition-colors">Clean-Claim Scorecard</Link>
-                  <Link prefetch={false} href="/tools/ar-cost-calculator" className="text-sm bg-cream border border-teal/30 text-teal rounded-full px-3 py-1.5 hover:bg-teal hover:text-white transition-colors">A/R Cost Calculator</Link>
-                  <Link prefetch={false} href="/payers/directory" className="text-sm bg-cream border border-teal/30 text-teal rounded-full px-3 py-1.5 hover:bg-teal hover:text-white transition-colors">Payer Directory</Link>
+                  <Link prefetch={false} href="/tools/denial-code-lookup/" className="text-sm bg-cream border border-teal/30 text-teal rounded-full px-3 py-1.5 hover:bg-teal hover:text-white transition-colors">Denial Code Lookup</Link>
+                  <Link prefetch={false} href="/tools/clean-claim-scorecard/" className="text-sm bg-cream border border-teal/30 text-teal rounded-full px-3 py-1.5 hover:bg-teal hover:text-white transition-colors">Clean-Claim Scorecard</Link>
+                  <Link prefetch={false} href="/tools/ar-cost-calculator/" className="text-sm bg-cream border border-teal/30 text-teal rounded-full px-3 py-1.5 hover:bg-teal hover:text-white transition-colors">A/R Cost Calculator</Link>
+                  <Link prefetch={false} href="/payers/directory/" className="text-sm bg-cream border border-teal/30 text-teal rounded-full px-3 py-1.5 hover:bg-teal hover:text-white transition-colors">Payer Directory</Link>
                 </div>
               </div>
 
@@ -188,7 +188,7 @@ export default async function SpecialtyPage({ params }: { params: Params }) {
               <div className="bg-navy rounded-2xl p-6 text-white">
                 <h2 className="text-lg font-bold mb-2">Serving practices nationwide</h2>
                 <p className="text-sm text-gray mb-4">Month-to-month. No setup fees. 30–45 day onboarding with parallel processing — scope confirmed before onboarding.</p>
-                <Link prefetch={false} href="/free-assessment" className="block text-center bg-mint hover:bg-white text-navy font-bold py-2.5 px-5 rounded-full transition-colors text-sm">
+                <Link prefetch={false} href="/free-assessment/" className="block text-center bg-mint hover:bg-white text-navy font-bold py-2.5 px-5 rounded-full transition-colors text-sm">
                   Free Revenue Assessment
                 </Link>
               </div>

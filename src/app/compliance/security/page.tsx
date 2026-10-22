@@ -57,8 +57,8 @@ export default function SecurityCompliance() {
         eyebrow="Security & Compliance"
         title="How we protect your data — offshore, transparently"
         subtitle="HIPAA-compliant architecture, US data residency, and a BAA before anything moves. Here's exactly how, with nothing rounded up."
-        primary={{ href: '/free-assessment', label: 'Start the Free 50-Claim Pilot' }}
-        secondary={{ href: '/contact', label: 'Contact Us' }}
+        primary={{ href: '/free-assessment/', label: 'Start the Free 50-Claim Pilot' }}
+        secondary={{ href: '/contact/', label: 'Contact Us' }}
         chips={['HIPAA-compliant architecture', 'BAA available', 'US data residency']}
       />
 
@@ -92,7 +92,7 @@ export default function SecurityCompliance() {
                 certification roadmap — for your compliance or legal review.
               </p>
               <Link prefetch={false}
-                href="/contact"
+                href="/contact/"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >
                 Request via Contact Form

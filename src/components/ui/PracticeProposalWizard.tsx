@@ -413,7 +413,7 @@ export default function PracticeProposalWizard() {
                     Kiran and our senior billing desk have received your practice specifications and will follow up with your formal proposal document.
                   </p>
                   <Link
-                    href="/schedule"
+                    href="/schedule/"
                     className="inline-block mt-2 bg-[#003087] text-white text-xs font-bold px-4 py-2 rounded-lg"
                   >
                     Schedule 15-Minute Strategy Walkthrough with Kiran

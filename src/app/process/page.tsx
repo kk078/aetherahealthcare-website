@@ -139,7 +139,7 @@ export default function Process() {
         eyebrow="Onboarding"
         title="Our onboarding process"
         subtitle="A seamless process designed to minimize disruption and maximize your revenue from day one — most practices are live in 30–45 days."
-        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
+        primary={{ href: '/free-assessment/', label: 'Get a Free Assessment' }}
         chips={['30–45 day go-live', 'Zero disruption', 'Dedicated team']}
       />
 
@@ -351,7 +351,7 @@ export default function Process() {
                 Begin your journey to optimized revenue cycle management today.
               </p>
               <Link prefetch={false}
-                href="/contact"
+                href="/contact/"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >
                 Schedule Free Consultation

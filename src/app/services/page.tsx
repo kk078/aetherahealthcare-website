@@ -33,91 +33,91 @@ const services = [
     icon: <FileText className="h-8 w-8" />,
     title: 'Medical Coding',
     description: 'Accurate ICD-10, CPT, and HCPCS coding for maximum reimbursement.',
-    href: '/services/medical-coding',
+    href: '/services/medical-coding/',
   },
   {
     icon: <DollarSign className="h-8 w-8" />,
     title: 'Claims & Billing',
     description: 'End-to-end claim submission and billing management.',
-    href: '/services/claims-billing',
+    href: '/services/claims-billing/',
   },
   {
     icon: <CreditCard className="h-8 w-8" />,
     title: 'Payment Posting',
     description: 'Efficient payment application and reconciliation.',
-    href: '/services/payment-posting',
+    href: '/services/payment-posting/',
   },
   {
     icon: <Shield className="h-8 w-8" />,
     title: 'Denial Management',
     description: 'Proactive denial prevention and appeal services.',
-    href: '/services/denial-management',
+    href: '/services/denial-management/',
   },
   {
     icon: <Users className="h-8 w-8" />,
     title: 'Provider Credentialing',
     description: 'Complete credentialing and enrollment services.',
-    href: '/services/credentialing',
+    href: '/services/credentialing/',
   },
   {
     icon: <CheckCircle className="h-8 w-8" />,
     title: 'Eligibility Verification',
     description: 'Real-time insurance verification and benefits.',
-    href: '/services/eligibility-verification',
+    href: '/services/eligibility-verification/',
   },
   {
     icon: <Calendar className="h-8 w-8" />,
     title: 'Prior Authorization',
     description: 'Streamlined prior auth submission and tracking.',
-    href: '/services/prior-authorization',
+    href: '/services/prior-authorization/',
   },
   {
     icon: <CreditCard className="h-8 w-8" />,
     title: 'Patient Collections',
     description: 'Professional patient statement management.',
-    href: '/services/patient-collections',
+    href: '/services/patient-collections/',
   },
   {
     icon: <Shield className="h-8 w-8" />,
     title: 'Compliance & Auditing',
     description: 'HIPAA compliance and revenue cycle audits.',
-    href: '/services/compliance-auditing',
+    href: '/services/compliance-auditing/',
   },
   {
     icon: <Zap className="h-8 w-8" />,
     title: 'Telehealth Billing',
     description: 'Specialized billing for telehealth services.',
-    href: '/services/telehealth-billing',
+    href: '/services/telehealth-billing/',
   },
   {
     icon: <Clock className="h-8 w-8" />,
     title: 'AR Follow-Up',
     description: 'Dedicated accounts receivable management.',
-    href: '/services/ar-followup',
+    href: '/services/ar-followup/',
   },
   {
     icon: <BarChart3 className="h-8 w-8" />,
     title: 'Reporting & Analytics',
     description: 'Comprehensive financial and operational reporting.',
-    href: '/services/reporting-analytics',
+    href: '/services/reporting-analytics/',
   },
   {
     icon: <FileText className="h-8 w-8" />,
     title: 'Pharmacy Billing',
     description: 'NCPDP claims, PBM rejects, DIR reconciliation, 340B, and specialty PAs.',
-    href: '/services/pharmacy-billing',
+    href: '/services/pharmacy-billing/',
   },
   {
     icon: <FileText className="h-8 w-8" />,
     title: 'Dental Billing',
     description: 'CDT coding, medical-dental cross-coding, predeterminations, and ortho.',
-    href: '/services/dental-billing',
+    href: '/services/dental-billing/',
   },
   {
     icon: <Shield className="h-8 w-8" />,
     title: "Workers' Comp Billing",
     description: 'State fee schedules, eBilling, narratives, liens, and bill-review appeals.',
-    href: '/services/workers-compensation-billing',
+    href: '/services/workers-compensation-billing/',
   },];
 
 export default function Services() {
@@ -150,8 +150,8 @@ export default function Services() {
         eyebrow="RCM Services"
         title="Comprehensive medical billing services"
         subtitle="Revenue cycle management tailored to your specialty and practice — coding, claims, denials, and collections, engineered for financial precision."
-        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
-        secondary={{ href: '/contact', label: 'Talk to an Expert' }}
+        primary={{ href: '/free-assessment/', label: 'Get a Free Assessment' }}
+        secondary={{ href: '/contact/', label: 'Talk to an Expert' }}
         chips={['15 RCM services', '26+ specialties', 'Payer-specific review']}
       />
 
@@ -191,7 +191,7 @@ export default function Services() {
                 Schedule a free consultation to see how Aethera can improve your collections and reduce administrative burden.
               </p>
               <Link prefetch={false}
-                href="/contact"
+                href="/contact/"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >
                 Schedule Free Consultation

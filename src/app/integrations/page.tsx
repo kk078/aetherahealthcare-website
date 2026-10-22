@@ -63,8 +63,8 @@ export default function Integrations() {
         eyebrow="EHR Integrations"
         title="Plan billing around your EHR"
         subtitle="Tell us your system and workflow. We assess available interfaces, permissions and secure exchange options before agreeing implementation scope."
-        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
-        secondary={{ href: '/contact', label: 'Talk to an Expert' }}
+        primary={{ href: '/free-assessment/', label: 'Get a Free Assessment' }}
+        secondary={{ href: '/contact/', label: 'Talk to an Expert' }}
         chips={['Discovery before commitment', 'BAA before records', 'Scope agreed in writing']}
       />
 
@@ -169,7 +169,7 @@ export default function Integrations() {
                 <p className="text-gray mb-5 text-sm">
                   Ask us to assess the exchange methods your vendor permits, including applicable interfaces or secure exports. Feasibility and delivery timing require discovery.
                 </p>
-                <Link prefetch={false} href="/contact" className="inline-flex items-center bg-teal hover:bg-navy text-white font-bold py-3 px-6 rounded-full transition-colors text-sm">
+                <Link prefetch={false} href="/contact/" className="inline-flex items-center bg-teal hover:bg-navy text-white font-bold py-3 px-6 rounded-full transition-colors text-sm">
                   Ask About Your System <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
               </div>
@@ -189,7 +189,7 @@ export default function Integrations() {
               <p className="text-cream text-lg max-w-xl mx-auto mb-8">
                 Tell us your EHR and we&apos;ll outline exactly how the integration works, what it requires, and how long it takes.
               </p>
-              <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
+              <Link prefetch={false} href="/free-assessment/" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
                 Get Started Free <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </FadeIn>

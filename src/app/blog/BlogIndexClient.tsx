@@ -97,7 +97,7 @@ export default function BlogIndexClient({ blogPosts }: { blogPosts: PostSummary[
                 </div>
               ))}
             </div>
-            <p className="text-cream/40 text-[11px] mt-2">Illustrative U.S. industry benchmarks — your numbers may vary. Run a <Link prefetch={false} href="/free-assessment" className="underline hover:text-mint">free A/R analysis</Link> to see yours.</p>
+            <p className="text-cream/40 text-[11px] mt-2">Illustrative U.S. industry benchmarks — your numbers may vary. Run a <Link prefetch={false} href="/free-assessment/" className="underline hover:text-mint">free A/R analysis</Link> to see yours.</p>
           </FadeIn>
         </div>
       </section>
@@ -211,7 +211,7 @@ export default function BlogIndexClient({ blogPosts }: { blogPosts: PostSummary[
                   className="flex-grow border border-white/30 bg-white/95 rounded-full px-5 py-3 text-navy focus:outline-none focus:ring-2 focus:ring-mint" />
                 <button type="submit" disabled={subscriptionStatus === 'sending'} className="bg-mint hover:bg-white text-navy font-bold py-3 px-7 rounded-full transition-colors whitespace-nowrap disabled:opacity-60">{subscriptionStatus === 'sending' ? 'Sending…' : 'Request subscription'}</button>
               </form>
-              <p className="text-cream/50 text-xs mt-4">Or skip ahead — <Link prefetch={false} href="/free-assessment" className="underline hover:text-mint">run a free A/R gap analysis</Link>.</p>
+              <p className="text-cream/50 text-xs mt-4">Or skip ahead — <Link prefetch={false} href="/free-assessment/" className="underline hover:text-mint">run a free A/R gap analysis</Link>.</p>
             </FadeIn>
           )}
         </div>

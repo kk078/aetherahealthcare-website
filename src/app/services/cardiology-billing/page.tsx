@@ -99,10 +99,10 @@ export default function CardiologyBilling() {
                 From cardiac cath modifiers to EP study add-ons to remote monitoring cycles — our cardiology billing team handles the complexity so you can focus on your patients&apos; hearts.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link prefetch={false} href="/free-assessment" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">
+                <Link prefetch={false} href="/free-assessment/" className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors text-center">
                   Get Free Cardiology Assessment
                 </Link>
-                <Link prefetch={false} href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">
+                <Link prefetch={false} href="/contact/" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition-colors text-center">
                   Talk to a Specialist
                 </Link>
               </div>
@@ -244,7 +244,7 @@ export default function CardiologyBilling() {
             <FadeIn>
               <h2 className="text-3xl font-bold text-white font-jakarta mb-4">Ready to Maximize Your Cardiology Revenue?</h2>
               <p className="text-cream max-w-xl mx-auto mb-8">Start with a free cardiology billing assessment. We&apos;ll audit your denial patterns and show you exactly where revenue is being lost.</p>
-              <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
+              <Link prefetch={false} href="/free-assessment/" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
                 Get Free Cardiology Assessment <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </FadeIn>

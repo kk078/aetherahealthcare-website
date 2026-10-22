@@ -42,7 +42,7 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
 
       <section className="pt-8 pb-8 md:pt-12 md:pb-12 bg-gradient-to-br from-navy to-teal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link prefetch={false} href="/blog" className="text-cream hover:text-white inline-flex items-center">
+          <Link prefetch={false} href="/blog/" className="text-cream hover:text-white inline-flex items-center">
             <ArrowLeft className="h-4 w-4 mr-2" /> Back to The Aethera Pulse
           </Link>
         </div>
@@ -79,7 +79,7 @@ export default function BlogPostClient({ post }: { post: PostProp }) {
             <div className="mt-12 bg-gradient-to-br from-navy to-teal rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white font-jakarta mb-2">See what your revenue cycle is leaking</h3>
               <p className="text-cream/85 mb-5 max-w-xl mx-auto">Upload your A/R aging report and get a free, instant analysis — KPIs, denials, payer bottlenecks and a recovery plan.</p>
-              <Link prefetch={false} href="/free-assessment" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-7 rounded-full transition-colors">
+              <Link prefetch={false} href="/free-assessment/" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-7 rounded-full transition-colors">
                 Run my free A/R analysis <ArrowRight className="h-5 w-5 ml-2" />
               </Link>
             </div>

@@ -112,7 +112,7 @@ export function extractAgentActions(userPrompt: string, assistantResponse: strin
       type: 'escalate_kiran',
       title: 'Connect with Kiran (Senior RCM Partner)',
       data: {
-        url: '/schedule',
+        url: '/schedule/',
         note: 'Direct review of your practice billing & free claim audit via meeting or email request.',
       },
     });

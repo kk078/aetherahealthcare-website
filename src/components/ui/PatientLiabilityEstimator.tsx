@@ -431,7 +431,7 @@ export default function PatientLiabilityEstimator() {
           </p>
         </div>
         <Link
-          href="/free-assessment"
+          href="/free-assessment/"
           className="px-5 py-2.5 rounded-xl bg-navy hover:bg-teal text-white font-bold text-xs transition-colors shrink-0 shadow-sm"
         >
           Book Practice Assessment

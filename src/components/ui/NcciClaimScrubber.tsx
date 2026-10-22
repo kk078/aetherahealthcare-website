@@ -214,7 +214,7 @@ export default function NcciClaimScrubber() {
           </div>
 
           <Link
-            href="/free-assessment"
+            href="/free-assessment/"
             className="hidden sm:inline-flex items-center gap-2 bg-mint hover:bg-white text-navy font-bold text-xs px-4 py-2.5 rounded-xl transition-colors shadow-md"
           >
             <span>Automate Scrubbing (Free Pilot)</span>

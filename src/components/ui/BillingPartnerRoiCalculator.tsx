@@ -210,7 +210,7 @@ export default function BillingPartnerRoiCalculator() {
             {/* CTA */}
             <div className="space-y-3">
               <Link
-                href="/free-assessment?intent=partner_pilot"
+                href="/free-assessment/?intent=partner_pilot"
                 onClick={() => trackConversion('start_partner_pilot_from_calculator')}
                 className="w-full inline-flex items-center justify-center gap-2 bg-mint hover:bg-emerald-400 text-navy font-bold py-3.5 px-6 rounded-xl transition-all duration-200 shadow-lg shadow-mint/20 text-center text-sm sm:text-base"
               >

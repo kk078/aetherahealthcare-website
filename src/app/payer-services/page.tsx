@@ -80,8 +80,8 @@ export default function PayerServices() {
         eyebrow="New Line of Business"
         title="Payer services for modern health plans"
         subtitle="Aethera serves the other side of the claim — helping health plans, TPAs, and risk-bearing entities run accurate, compliant operations across claims adjudication, payment integrity, credentialing, provider data, prior authorization, and appeals."
-        primary={{ href: '/contact', label: 'Talk to Our Payer Team' }}
-        secondary={{ href: '/free-assessment', label: 'Request a Briefing' }}
+        primary={{ href: '/contact/', label: 'Talk to Our Payer Team' }}
+        secondary={{ href: '/free-assessment/', label: 'Request a Briefing' }}
         chips={['Claims adjudication', 'Payment integrity', 'Credentialing / CVO']}
       />
 
@@ -186,7 +186,7 @@ export default function PayerServices() {
               <p className="text-cream max-w-xl mx-auto mb-8">
                 Whether you need one function or a full back-office partner, we&apos;ll scope a payer-services engagement around your accuracy, recovery, and compliance goals.
               </p>
-              <Link prefetch={false} href="/contact" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
+              <Link prefetch={false} href="/contact/" className="inline-flex items-center bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors">
                 Schedule a Capabilities Briefing <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </FadeIn>

@@ -24,7 +24,7 @@ export default function CaseStudiesPage() {
         eyebrow="Specialty Billing Workflows"
         title="Billing challenges. Clear review steps."
         subtitle="Explore specialty billing workflows and documentation checkpoints, then request a review using your own practice data."
-        primary={{ href: '/free-assessment', label: 'Get a Free Practice Audit' }}
+        primary={{ href: '/free-assessment/', label: 'Get a Free Practice Audit' }}
         chips={['Specialty workflows', 'Clear assumptions', 'Practice-specific review']}
       />
 

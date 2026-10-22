@@ -28,13 +28,13 @@ export default function RvuCalculatorPage() {
         title="RVU payment calculator"
         subtitle="Turn RVUs into dollars. Enter the work, practice-expense, and malpractice RVUs for a CPT/HCPCS code with your locality’s GPCI and the Medicare conversion factor to estimate the allowed amount."
         primary={{ href: '#tool', label: 'Calculate Payment' }}
-        secondary={{ href: '/tools', label: 'All Free Tools' }}
+        secondary={{ href: '/tools/', label: 'All Free Tools' }}
         chips={['Medicare PFS formula', 'GPCI locality', 'Facility & non-facility']}
       />
 
       <section id="tool" className="py-12 md:py-16 bg-cream flex-1 scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link prefetch={false} href="/tools" className="inline-flex items-center text-teal hover:text-navy text-sm mb-6 font-semibold">
+          <Link prefetch={false} href="/tools/" className="inline-flex items-center text-teal hover:text-navy text-sm mb-6 font-semibold">
             <ArrowLeft className="h-4 w-4 mr-1.5" /> All tools
           </Link>
 

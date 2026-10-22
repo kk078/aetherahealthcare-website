@@ -323,7 +323,7 @@ export default function Edi837Scrubber() {
           </p>
         </div>
         <Link
-          href="/services/claims-billing"
+          href="/services/claims-billing/"
           className="px-5 py-2.5 rounded-xl bg-teal hover:bg-white hover:text-navy text-white font-bold text-xs transition-colors shrink-0 shadow-sm"
         >
           Explore Claims Management

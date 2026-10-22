@@ -694,8 +694,8 @@ export default function SpecialtiesPage() {
         eyebrow="Specialties"
         title="Billing built for your specialty"
         subtitle="Expert billing and revenue cycle management across 86+ medical specialties — with coding depth and payer knowledge specific to your field."
-        primary={{ href: '/free-assessment', label: 'Get a Free Assessment' }}
-        secondary={{ href: '/services', label: 'View Services' }}
+        primary={{ href: '/free-assessment/', label: 'Get a Free Assessment' }}
+        secondary={{ href: '/services/', label: 'View Services' }}
         chips={['86+ specialties', 'Specialty-specific coding', 'Payer-specific review']}
       />
 
@@ -783,7 +783,7 @@ export default function SpecialtiesPage() {
                 Let our experts handle your specialty-specific billing and coding needs.
               </p>
               <Link prefetch={false}
-                href="/contact"
+                href="/contact/"
                 className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
               >
                 Schedule Free Consultation

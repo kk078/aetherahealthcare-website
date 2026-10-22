@@ -217,7 +217,7 @@ IEA*1*000000001~`;
       auditViolationsCount: auditWarnings.length,
       auditWarnings,
       totalEstimatedAllowed: calculations.totalAllowed,
-      pageUrl: typeof window !== 'undefined' ? window.location.href : '/tools/pad-revascularization-scrubber',
+      pageUrl: typeof window !== 'undefined' ? window.location.href : '/tools/pad-revascularization-scrubber/',
       submittedAt: new Date().toISOString(),
     };
 

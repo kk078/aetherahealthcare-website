@@ -3,53 +3,53 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const services = [
-  { name: 'Medical Coding', href: '/services/medical-coding' },
-  { name: 'Claims & Billing', href: '/services/claims-billing' },
-  { name: 'Payment Posting', href: '/services/payment-posting' },
-  { name: 'Denial Management', href: '/services/denial-management' },
-  { name: 'Provider Credentialing', href: '/services/credentialing' },
-  { name: 'Eligibility Verification', href: '/services/eligibility-verification' },
-  { name: 'Prior Authorization', href: '/services/prior-authorization' },
-  { name: 'Patient Collections', href: '/services/patient-collections' },
-  { name: 'Compliance & Auditing', href: '/services/compliance-auditing' },
-  { name: 'Telehealth Billing', href: '/services/telehealth-billing' },
-  { name: 'AR Follow-Up', href: '/services/ar-followup' },
-  { name: 'Reporting & Analytics', href: '/services/reporting-analytics' },
+  { name: 'Medical Coding', href: '/services/medical-coding/' },
+  { name: 'Claims & Billing', href: '/services/claims-billing/' },
+  { name: 'Payment Posting', href: '/services/payment-posting/' },
+  { name: 'Denial Management', href: '/services/denial-management/' },
+  { name: 'Provider Credentialing', href: '/services/credentialing/' },
+  { name: 'Eligibility Verification', href: '/services/eligibility-verification/' },
+  { name: 'Prior Authorization', href: '/services/prior-authorization/' },
+  { name: 'Patient Collections', href: '/services/patient-collections/' },
+  { name: 'Compliance & Auditing', href: '/services/compliance-auditing/' },
+  { name: 'Telehealth Billing', href: '/services/telehealth-billing/' },
+  { name: 'AR Follow-Up', href: '/services/ar-followup/' },
+  { name: 'Reporting & Analytics', href: '/services/reporting-analytics/' },
 ];
 
 const company = [
-  { name: '3D Anatomy Atlas', href: '/anatomy-atlas' },
-  { name: 'About', href: '/about' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Process', href: '/process' },
-  { name: 'Specialties', href: '/specialties' },
-  { name: 'Billing by Specialty', href: '/medical-billing' },
-  { name: 'Compare Options', href: '/compare' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'FAQ', href: '/faq' },
+  { name: '3D Anatomy Atlas', href: '/anatomy-atlas/' },
+  { name: 'About', href: '/about/' },
+  { name: 'Pricing', href: '/pricing/' },
+  { name: 'Process', href: '/process/' },
+  { name: 'Specialties', href: '/specialties/' },
+  { name: 'Billing by Specialty', href: '/medical-billing/' },
+  { name: 'Compare Options', href: '/compare/' },
+  { name: 'Careers', href: '/careers/' },
+  { name: 'Blog', href: '/blog/' },
+  { name: 'FAQ', href: '/faq/' },
 ];
 
 const resources = [
-  { name: 'Free RCM Tools', href: '/tools' },
-  { name: 'RCM & Billing Glossary', href: '/glossary' },
-  { name: 'Provider Portal Demo', href: '/portal#live-portal-sandbox' },
-  { name: 'Denial Code Lookup', href: '/tools/denial-code-lookup' },
-  { name: 'State of Denials Report', href: '/state-of-denials' },
-  { name: 'Payer Directory', href: '/payers/directory' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'For Billing Companies', href: '/for-billing-companies' },
-  { name: 'EHR Integrations', href: '/integrations' },
-  { name: 'Free Assessment', href: '/free-assessment' },
+  { name: 'Free RCM Tools', href: '/tools/' },
+  { name: 'RCM & Billing Glossary', href: '/glossary/' },
+  { name: 'Provider Portal Demo', href: '/portal/#live-portal-sandbox' },
+  { name: 'Denial Code Lookup', href: '/tools/denial-code-lookup/' },
+  { name: 'State of Denials Report', href: '/state-of-denials/' },
+  { name: 'Payer Directory', href: '/payers/directory/' },
+  { name: 'Case Studies', href: '/case-studies/' },
+  { name: 'For Billing Companies', href: '/for-billing-companies/' },
+  { name: 'EHR Integrations', href: '/integrations/' },
+  { name: 'Free Assessment', href: '/free-assessment/' },
 ];
 
 const compliance = [
-  { name: 'Human Autonomy Framework', href: '/human-autonomy' },
-  { name: 'HIPAA Compliance', href: '/compliance/hipaa' },
-  { name: 'Privacy Policy', href: '/compliance/privacy-policy' },
-  { name: 'Terms of Service', href: '/compliance/terms-of-service' },
-  { name: 'Business Associate Agreement', href: '/compliance/baa' },
-  { name: 'Security & Compliance', href: '/compliance/security' },
+  { name: 'Human Autonomy Framework', href: '/human-autonomy/' },
+  { name: 'HIPAA Compliance', href: '/compliance/hipaa/' },
+  { name: 'Privacy Policy', href: '/compliance/privacy-policy/' },
+  { name: 'Terms of Service', href: '/compliance/terms-of-service/' },
+  { name: 'Business Associate Agreement', href: '/compliance/baa/' },
+  { name: 'Security & Compliance', href: '/compliance/security/' },
 ];
 
 const trustBadges = [
@@ -83,7 +83,7 @@ export default function Footer() {
             </p>
             <div className="mt-5">
               <Link prefetch={false}
-                href="/free-assessment"
+                href="/free-assessment/"
                 className="inline-block bg-mint hover:bg-teal text-navy font-bold text-xs py-2 px-4 rounded-full transition-colors"
               >
                 Get Free Assessment →
@@ -184,7 +184,7 @@ export default function Footer() {
           <div className="mt-6 pt-6 border-t border-gray/20 text-gray/70 text-xs leading-relaxed text-center md:text-left">
             <p>Aethera Healthcare Solutions Private Limited &middot; CIN U82990TN2026PTC189331</p>
             <p>1373, Balasundram, I.A.S. Salai, Royappa Ngr, Chennai - 600048, Tamil Nadu, India</p>
-            <p>US Inquiries: <Link href="/contact" className="hover:text-white transition-colors underline underline-offset-2">Submit an Email Request</Link> &middot; <Link href="/schedule" className="hover:text-white transition-colors underline underline-offset-2">Schedule a Meeting</Link></p>
+            <p>US Inquiries: <Link href="/contact/" className="hover:text-white transition-colors underline underline-offset-2">Submit an Email Request</Link> &middot; <Link href="/schedule/" className="hover:text-white transition-colors underline underline-offset-2">Schedule a Meeting</Link></p>
           </div>
         </div>
       </div>

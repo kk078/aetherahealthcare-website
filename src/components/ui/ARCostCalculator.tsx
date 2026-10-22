@@ -221,7 +221,7 @@ export default function ARCostCalculator() {
           )}
 
           <Link prefetch={false}
-            href="/free-assessment"
+            href="/free-assessment/"
             className="flex items-center justify-center w-full bg-mint hover:bg-white text-navy font-bold py-3 px-6 rounded-full transition-colors duration-300 mt-2"
           >
             <DollarSign className="h-4 w-4 mr-2" />
@@ -230,7 +230,7 @@ export default function ARCostCalculator() {
           </Link>
 
           <Link prefetch={false}
-            href="/tools/practice-proposal-wizard"
+            href="/tools/practice-proposal-wizard/"
             className="flex items-center justify-center w-full border border-white/20 hover:bg-white/10 text-white font-semibold py-2.5 px-6 rounded-full transition-colors text-xs text-center"
           >
             Or Generate Custom Practice Proposal &amp; SLA &rarr;

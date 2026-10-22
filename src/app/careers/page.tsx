@@ -119,7 +119,7 @@ export default function Careers() {
         eyebrow="Careers"
         title="Join our team"
         subtitle="Help healthcare providers focus on patient care while we handle the complexities of medical billing."
-        primary={{ href: '/contact', label: 'Get in Touch' }}
+        primary={{ href: '/contact/', label: 'Get in Touch' }}
       />
 
       {/* Introduction */}

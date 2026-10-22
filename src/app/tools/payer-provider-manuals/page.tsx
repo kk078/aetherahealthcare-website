@@ -30,13 +30,13 @@ export default function PayerManualFinderPage() {
         title="Payer provider-manual & policy finder"
         subtitle={`Stop hunting through payer websites. Jump straight to the provider manual, medical and reimbursement policies, credentialing, and eligibility pages for ${count}+ major payers — including Medicare MACs and Florida plans.`}
         primary={{ href: '#tool', label: 'Find a Payer' }}
-        secondary={{ href: '/payers/directory', label: 'Payer Directory' }}
+        secondary={{ href: '/payers/directory/', label: 'Payer Directory' }}
         chips={[`${count} payers`, 'Direct official links', 'Medicare + commercial + Medicaid']}
       />
 
       <section id="tool" className="py-12 md:py-16 bg-cream flex-1 scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link prefetch={false} href="/tools" className="inline-flex items-center text-teal hover:text-navy text-sm mb-6 font-semibold">
+          <Link prefetch={false} href="/tools/" className="inline-flex items-center text-teal hover:text-navy text-sm mb-6 font-semibold">
             <ArrowLeft className="h-4 w-4 mr-1.5" /> All tools
           </Link>
 
@@ -49,7 +49,7 @@ export default function PayerManualFinderPage() {
               but payers restructure their sites frequently — confirm you’re on the current page. Many Blue Cross,
               Medicaid, and Medicare pages are jurisdiction- or state-specific. For payer IDs, timely-filing limits, and
               portals, see the{' '}
-              <Link prefetch={false} href="/payers/directory" className="underline font-semibold">payer directory</Link>.
+              <Link prefetch={false} href="/payers/directory/" className="underline font-semibold">payer directory</Link>.
             </p>
           </div>
 

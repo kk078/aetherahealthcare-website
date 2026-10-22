@@ -178,7 +178,7 @@ export default function FeeScheduleBenchmarker() {
           </div>
 
           <Link
-            href="/schedule"
+            href="/schedule/"
             className="bg-[#003087] hover:bg-[#001A52] text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-md flex items-center gap-2 whitespace-nowrap"
           >
             <span>Have Aethera Audit Fee Schedules</span>

@@ -325,7 +325,7 @@ export default function BusinessAssociateAgreement() {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link prefetch={false}
-                  href="/contact"
+                  href="/contact/"
                   className="bg-mint hover:bg-white text-navy font-bold py-3 px-8 rounded-full transition-colors duration-300 inline-block"
                 >
                   Request BAA

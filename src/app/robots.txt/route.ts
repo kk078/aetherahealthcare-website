@@ -4,6 +4,7 @@ export const dynamic = 'force-static';
 export function GET() {
   const robotsTxt = `User-agent: *
 Allow: /
+Disallow: /api/
 
 Sitemap: https://aetherahealthcare.com/sitemap.xml
 `;

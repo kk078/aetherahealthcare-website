@@ -81,8 +81,8 @@ export default function About() {
       <RcmHeroBand
         eyebrow="About Aethera"
         title="Built by an operator, run in the open"
-        primary={{ href: '/free-assessment', label: 'Start the Free 50-Claim Pilot' }}
-        secondary={{ href: '/contact', label: 'Contact Us' }}
+        primary={{ href: '/free-assessment/', label: 'Start the Free 50-Claim Pilot' }}
+        secondary={{ href: '/contact/', label: 'Contact Us' }}
         chips={['Founder-led', 'Deterministic first', 'Compliance as architecture']}
       />
 
