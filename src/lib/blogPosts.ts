@@ -1499,7 +1499,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps Behavioral Health Practices",
         "p": [
-          "Aethera provides specialty-trained behavioral health billing — time-based coding, telehealth rules, authorization tracking, and denial work handled by people who know the nuances, nationwide. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll review a sample of your claims and show you where revenue is slipping."
+          "Aethera provides specialty-trained behavioral health billing — time-based coding, <a href=\"/services/telehealth-billing/\">telehealth billing rules</a>, authorization tracking, and denial work handled by people who know the nuances, nationwide. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll review a sample of your claims and show you where revenue is slipping."
         ]
       }
     ]
@@ -1558,7 +1558,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera Helps Orthopedic Practices",
         "p": [
-          "Aethera provides specialty-trained orthopedic billing — global-period tracking, modifier accuracy, surgical coding, and denial work, nationwide. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll review a sample of your orthopedic claims and show you where revenue is being lost."
+          "Aethera provides specialty-trained orthopedic billing — global-period tracking, modifier accuracy, surgical coding, denial work and <a href=\"/services/workers-compensation-billing/\">workers’ comp billing for occupational injuries</a>, nationwide. Start with a <a href=\"/free-assessment/\">free revenue assessment</a> and we’ll review a sample of your orthopedic claims and show you where revenue is being lost."
         ]
       }
     ]
@@ -2865,7 +2865,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera helps",
         "p": [
-          "We keep a living payer telehealth matrix and scrub virtual-visit claims against it, so reimbursement keeps pace with the rules. Ask us for a telehealth denial review."
+          "We keep a living payer telehealth matrix and scrub every virtual-visit claim against it, so reimbursement keeps pace with the rules. See how our <a href=\"/services/telehealth-billing/\">telehealth billing service</a> handles place-of-service codes, modifiers and payer parity, or ask us for a telehealth denial review."
         ]
       }
     ]
@@ -3914,7 +3914,7 @@ const ARTICLES: BlogPost[] = [
       {
         "h": "How Aethera helps",
         "p": [
-          "Aethera runs workers’ comp as the specialty it is — state-aware coding, document-heavy follow-up, and persistent A/R work — so these slow dollars actually come in."
+          "Aethera runs workers’ comp as the specialty it is — state-aware coding, document-heavy follow-up, and persistent A/R work — so these slow dollars actually come in. Our <a href=\"/services/workers-compensation-billing/\">workers’ compensation billing service</a> covers state fee schedules, eBilling, liens and bill-review appeals."
         ]
       }
     ]

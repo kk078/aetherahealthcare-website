@@ -751,14 +751,13 @@ export default function SpecialtiesPage() {
                         <p className="text-sm text-gray">{specialty.challenges}</p>
                       </div>
                       {specialtyLinks[specialty.name] && (
-                        <div className="mt-5 pt-4 border-t border-gray/10 flex items-center justify-between">
-                          <span className="text-xs text-gray font-medium">Dedicated Specialty Playbook</span>
+                        <div className="mt-5 pt-4 border-t border-gray/10">
                           <Link
                             prefetch={false}
                             href={specialtyLinks[specialty.name]}
                             className="inline-flex items-center text-xs font-bold text-teal hover:text-navy group transition-colors"
                           >
-                            Explore Playbook <ArrowRight className="h-3.5 w-3.5 ml-1 transition-transform group-hover:translate-x-1" />
+                            {specialty.name} billing playbook <ArrowRight className="h-3.5 w-3.5 ml-1 transition-transform group-hover:translate-x-1" />
                           </Link>
                         </div>
                       )}
