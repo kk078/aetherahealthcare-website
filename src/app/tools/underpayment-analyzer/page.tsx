@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/underpayment-analyzer') },
   title: {
-    absolute: 'Payer Contract Underpayment & Variance Analyzer | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Payer Contract Underpayment & Variance Analyzer | Aethera',
   },
   description:
     'Find PPO underpayments: compare contracted vs. paid amounts, calculate prompt-pay interest, and generate formal dispute letters.',
 
-  ...marketingMetadata("/tools/underpayment-analyzer", 'Payer Contract Underpayment & Variance Analyzer | Free RCM Tool | Aethera Healthcare Solutions', 'Find PPO underpayments: compare contracted vs. paid amounts, calculate prompt-pay interest, and generate formal dispute letters.'),
+  ...marketingMetadata("/tools/underpayment-analyzer", 'Payer Contract Underpayment & Variance Analyzer | Aethera', 'Find PPO underpayments: compare contracted vs. paid amounts, calculate prompt-pay interest, and generate formal dispute letters.'),
 };
 
 export default function UnderpaymentAnalyzerPage() {

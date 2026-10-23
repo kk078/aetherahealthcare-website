@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pad-revascularization-scrubber') },
   title: {
-    absolute: 'Endovascular & PAD Revascularization Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Endovascular & PAD Revascularization Scrubber | Aethera',
   },
   description:
     'Free PAD revascularization scrubber: audit CPT 37220–37235 territory hierarchies, unbundled catheter placements and diagnostic angiography exceptions.',
 
-  ...marketingMetadata("/tools/pad-revascularization-scrubber", 'Endovascular & PAD Revascularization Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free PAD revascularization scrubber: audit CPT 37220–37235 territory hierarchies, unbundled catheter placements and diagnostic angiography exceptions.'),
+  ...marketingMetadata("/tools/pad-revascularization-scrubber", 'Endovascular & PAD Revascularization Scrubber | Aethera', 'Free PAD revascularization scrubber: audit CPT 37220–37235 territory hierarchies, unbundled catheter placements and diagnostic angiography exceptions.'),
 };
 
 export default function PadRevascularizationScrubberPage() {

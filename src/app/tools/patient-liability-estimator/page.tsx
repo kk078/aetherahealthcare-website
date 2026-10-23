@@ -8,11 +8,11 @@ import { Calculator, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools/patient-liability-estimator') },
-  title: { absolute: 'Patient Out-of-Pocket Liability & Deductible Estimator | Aethera Healthcare' },
+  title: { absolute: 'Patient Out-of-Pocket Liability & Deductible Estimator | Aethera' },
   description:
     'Free patient cost estimator: calculate out-of-pocket responsibility at the point of service, including deductible, coinsurance, copay and OOP max.',
 
-  ...marketingMetadata("/tools/patient-liability-estimator", 'Patient Out-of-Pocket Liability & Deductible Estimator | Aethera Healthcare', 'Free patient cost estimator: calculate out-of-pocket responsibility at the point of service, including deductible, coinsurance, copay and OOP max.'),
+  ...marketingMetadata("/tools/patient-liability-estimator", 'Patient Out-of-Pocket Liability & Deductible Estimator | Aethera', 'Free patient cost estimator: calculate out-of-pocket responsibility at the point of service, including deductible, coinsurance, copay and OOP max.'),
 };
 
 export default function PatientLiabilityPage() {

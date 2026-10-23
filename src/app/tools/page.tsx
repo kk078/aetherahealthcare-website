@@ -12,11 +12,11 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools') },
-  title: { absolute: `${TOOLS.length} Free Medical Billing, EDI & RCM Tools | Aethera Healthcare` },
+  title: { absolute: `${TOOLS.length} Free Medical Billing, EDI & RCM Tools | Aethera` },
   description:
     'Free educational tools for revenue cycle teams: denial and A/R checklists, scenario calculators, coding references and EDI parsers. No login required.',
 
-  ...marketingMetadata("/tools", `${TOOLS.length} Free Medical Billing, EDI & RCM Tools | Aethera Healthcare`, 'Free educational tools for revenue cycle teams: denial and A/R checklists, scenario calculators, coding references and EDI parsers. No login required.'),
+  ...marketingMetadata("/tools", `${TOOLS.length} Free Medical Billing, EDI & RCM Tools | Aethera`, 'Free educational tools for revenue cycle teams: denial and A/R checklists, scenario calculators, coding references and EDI parsers. No login required.'),
 };
 
 export default function ToolsHub() {

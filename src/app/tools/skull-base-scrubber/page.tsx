@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/skull-base-scrubber') },
   title: {
-    absolute: 'Lateral Skull Base & Acoustic Neuroma Co-Surgeon Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Lateral Skull Base & Acoustic Neuroma Co-Surgeon Scrubber | Aethera',
   },
   description:
     'Free lateral skull base scrubber: audit acoustic neuroma approaches (61526, 61530), co-surgeon -62, operating microscope (+69990) and nerve monitoring.',
 
-  ...marketingMetadata("/tools/skull-base-scrubber", 'Lateral Skull Base & Acoustic Neuroma Co-Surgeon Scrubber | Free RCM Tool | Aethera Healthcare', 'Free lateral skull base scrubber: audit acoustic neuroma approaches (61526, 61530), co-surgeon -62, operating microscope (+69990) and nerve monitoring.'),
+  ...marketingMetadata("/tools/skull-base-scrubber", 'Lateral Skull Base & Acoustic Neuroma Co-Surgeon Scrubber | Aethera', 'Free lateral skull base scrubber: audit acoustic neuroma approaches (61526, 61530), co-surgeon -62, operating microscope (+69990) and nerve monitoring.'),
 };
 
 export default function SkullBaseScrubberPage() {

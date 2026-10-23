@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/fee-schedule-benchmarker') },
   title: {
-    absolute: 'CPT Fee Schedule & Reimbursement Gap Benchmarker | Aethera Healthcare Solutions',
+    absolute: 'CPT Fee Schedule & Reimbursement Gap Benchmarker | Aethera',
   },
   description:
     'Calculate your practice’s annual underpayment gap by comparing commercial payer allowances against 2026 Medicare and top commercial PPO benchmarks.',
 
-  ...marketingMetadata("/tools/fee-schedule-benchmarker", 'CPT Fee Schedule & Reimbursement Gap Benchmarker | Aethera Healthcare Solutions', 'Calculate your practice’s annual underpayment gap by comparing commercial payer allowances against 2026 Medicare and top commercial PPO benchmarks.'),
+  ...marketingMetadata("/tools/fee-schedule-benchmarker", 'CPT Fee Schedule & Reimbursement Gap Benchmarker | Aethera', 'Calculate your practice’s annual underpayment gap by comparing commercial payer allowances against 2026 Medicare and top commercial PPO benchmarks.'),
 };
 
 export default function FeeScheduleBenchmarkerPage() {

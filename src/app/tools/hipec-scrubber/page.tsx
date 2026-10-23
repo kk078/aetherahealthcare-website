@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/hipec-scrubber') },
   title: {
-    absolute: 'Cytoreductive Surgery & HIPEC Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Cytoreductive Surgery & HIPEC Scrubber | Aethera',
   },
   description:
     'Free CRS and HIPEC scrubber: audit peritonectomy (CPT 49205), hyperthermic chemoperfusion (+96560), co-surgeon -62 and concomitant bowel resections.',
 
-  ...marketingMetadata("/tools/hipec-scrubber", 'Cytoreductive Surgery & HIPEC Scrubber | Free RCM Tool | Aethera Healthcare', 'Free CRS and HIPEC scrubber: audit peritonectomy (CPT 49205), hyperthermic chemoperfusion (+96560), co-surgeon -62 and concomitant bowel resections.'),
+  ...marketingMetadata("/tools/hipec-scrubber", 'Cytoreductive Surgery & HIPEC Scrubber | Aethera', 'Free CRS and HIPEC scrubber: audit peritonectomy (CPT 49205), hyperthermic chemoperfusion (+96560), co-surgeon -62 and concomitant bowel resections.'),
 };
 
 export default function HipecScrubberPage() {

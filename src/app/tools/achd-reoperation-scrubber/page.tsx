@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/achd-reoperation-scrubber') },
   title: {
-    absolute: 'Adult Congenital Heart Disease (ACHD) & Fontan Conversion Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Adult Congenital Heart Disease (ACHD) & Fontan Conversion Scrubber | Aethera',
   },
   description:
     'Free ACHD surgical scrubber: audit Fontan conversion (CPT 33737), redo sternotomy add-ons (+33530), concomitant Maze (+33257/+33258) and PVR claims.',
 
-  ...marketingMetadata("/tools/achd-reoperation-scrubber", 'Adult Congenital Heart Disease (ACHD) & Fontan Conversion Scrubber | Free RCM Tool | Aethera Healthcare', 'Free ACHD surgical scrubber: audit Fontan conversion (CPT 33737), redo sternotomy add-ons (+33530), concomitant Maze (+33257/+33258) and PVR claims.'),
+  ...marketingMetadata("/tools/achd-reoperation-scrubber", 'Adult Congenital Heart Disease (ACHD) & Fontan Conversion Scrubber | Aethera', 'Free ACHD surgical scrubber: audit Fontan conversion (CPT 33737), redo sternotomy add-ons (+33530), concomitant Maze (+33257/+33258) and PVR claims.'),
 };
 
 export default function AchdReoperationScrubberPage() {

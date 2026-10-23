@@ -11,11 +11,11 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/payers/directory') },
-  title: { absolute: '10,600+ Payer Directory & Clearinghouse EDI Routing | Aethera Healthcare Solutions' },
+  title: { absolute: '10,600+ Payer Directory & Clearinghouse EDI Routing | Aethera' },
   description:
     'U.S. insurance payer directory: 10,600+ electronic payer IDs with EDI routing, enrollment rules, 835 ERA support and 270/271 eligibility notes.',
 
-  ...marketingMetadata("/payers/directory", '10,600+ Payer Directory & Clearinghouse EDI Routing | Aethera Healthcare Solutions', 'U.S. insurance payer directory: 10,600+ electronic payer IDs with EDI routing, enrollment rules, 835 ERA support and 270/271 eligibility notes.'),
+  ...marketingMetadata("/payers/directory", '10,600+ Payer Directory & Clearinghouse EDI Routing | Aethera', 'U.S. insurance payer directory: 10,600+ electronic payer IDs with EDI routing, enrollment rules, 835 ERA support and 270/271 eligibility notes.'),
 };
 
 export default function PayerDirectoryIndex() {

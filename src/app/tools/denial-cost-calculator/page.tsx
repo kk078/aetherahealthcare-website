@@ -11,11 +11,11 @@ import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/denial-cost-calculator') },
-  title: { absolute: 'Denial Cost Calculator — Revenue Lost & Rework Cost | Aethera Healthcare Solutions' },
+  title: { absolute: 'Denial Cost Calculator — Revenue Lost & Rework Cost | Aethera' },
   description:
     'Free denial cost calculator: estimate the reimbursement you lose to denied claims plus the cost of reworking them, per week, month, and year.',
 
-  ...marketingMetadata("/tools/denial-cost-calculator", 'Denial Cost Calculator — Revenue Lost & Rework Cost | Aethera Healthcare Solutions', 'Free denial cost calculator: estimate the reimbursement you lose to denied claims plus the cost of reworking them, per week, month, and year.'),
+  ...marketingMetadata("/tools/denial-cost-calculator", 'Denial Cost Calculator — Revenue Lost & Rework Cost | Aethera', 'Free denial cost calculator: estimate the reimbursement you lose to denied claims plus the cost of reworking them, per week, month, and year.'),
 };
 
 export default function DenialCostPage() {

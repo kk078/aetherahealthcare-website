@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-tef-ea-scrubber') },
   title: {
-    absolute: 'Pediatric TEF & Esophageal Atresia Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric TEF & Esophageal Atresia Scrubber | Aethera',
   },
   description:
     'Free TEF/EA scrubber: audit neonatal fistula repair (43305/43312), bronchoscopy (+31622), gastrostomy (+43653) and staged Foker elongation (-58).',
 
-  ...marketingMetadata("/tools/pediatric-tef-ea-scrubber", 'Pediatric TEF & Esophageal Atresia Scrubber | Free RCM Tool | Aethera Healthcare', 'Free TEF/EA scrubber: audit neonatal fistula repair (43305/43312), bronchoscopy (+31622), gastrostomy (+43653) and staged Foker elongation (-58).'),
+  ...marketingMetadata("/tools/pediatric-tef-ea-scrubber", 'Pediatric TEF & Esophageal Atresia Scrubber | Aethera', 'Free TEF/EA scrubber: audit neonatal fistula repair (43305/43312), bronchoscopy (+31622), gastrostomy (+43653) and staged Foker elongation (-58).'),
 };
 
 export default function PediatricTefEaScrubberPage() {

@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/global-period-scrubber') },
   title: {
-    absolute: 'Surgical Global Period & Post-Op Modifier Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Surgical Global Period & Post-Op Modifier Scrubber | Aethera',
   },
   description:
     'Free surgical global period scrubber: check 0, 10 and 90-day post-op windows and the correct use of modifiers 24, 58, 78, 79, 54 and 55.',
 
-  ...marketingMetadata("/tools/global-period-scrubber", 'Surgical Global Period & Post-Op Modifier Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free surgical global period scrubber: check 0, 10 and 90-day post-op windows and the correct use of modifiers 24, 58, 78, 79, 54 and 55.'),
+  ...marketingMetadata("/tools/global-period-scrubber", 'Surgical Global Period & Post-Op Modifier Scrubber | Aethera', 'Free surgical global period scrubber: check 0, 10 and 90-day post-op windows and the correct use of modifiers 24, 58, 78, 79, 54 and 55.'),
 };
 
 export default function GlobalPeriodScrubberPage() {

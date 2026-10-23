@@ -10,10 +10,10 @@ import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/orthopedic-billing') },
-  title: { absolute: 'Orthopedic Surgery Billing | RCM for Orthopedists | Aethera Healthcare' },
+  title: { absolute: 'Orthopedic Surgery Billing | RCM for Orthopedists | Aethera' },
   description: 'Specialized orthopedic billing services covering joint replacement, fracture care, arthroscopy, implant capture, and global period management.',
 
-  ...marketingMetadata("/services/orthopedic-billing", 'Orthopedic Surgery Billing | RCM for Orthopedists | Aethera Healthcare', 'Specialized orthopedic billing services covering joint replacement, fracture care, arthroscopy, implant capture, and global period management.'),
+  ...marketingMetadata("/services/orthopedic-billing", 'Orthopedic Surgery Billing | RCM for Orthopedists | Aethera', 'Specialized orthopedic billing services covering joint replacement, fracture care, arthroscopy, implant capture, and global period management.'),
 };
 
 const stats = [

@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/robotic-urologic-oncology-scrubber') },
   title: {
-    absolute: 'Robotic Urologic Oncology & Reconstructive Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Robotic Urologic Oncology & Reconstructive Scrubber | Aethera',
   },
   description:
     'Free robotic urologic oncology scrubber: audit prostatectomy (55866), pelvic lymphadenectomy, partial nephrectomy (50543), diversions and modifier 22.',
 
-  ...marketingMetadata("/tools/robotic-urologic-oncology-scrubber", 'Robotic Urologic Oncology & Reconstructive Scrubber | Free RCM Tool | Aethera Healthcare', 'Free robotic urologic oncology scrubber: audit prostatectomy (55866), pelvic lymphadenectomy, partial nephrectomy (50543), diversions and modifier 22.'),
+  ...marketingMetadata("/tools/robotic-urologic-oncology-scrubber", 'Robotic Urologic Oncology & Reconstructive Scrubber | Aethera', 'Free robotic urologic oncology scrubber: audit prostatectomy (55866), pelvic lymphadenectomy, partial nephrectomy (50543), diversions and modifier 22.'),
 };
 
 export default function RoboticUrologicScrubberPage() {

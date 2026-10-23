@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/appeal-letter-generator') },
   title: {
-    absolute: 'Medical Denial Appeal Letter Generator | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Medical Denial Appeal Letter Generator | Aethera',
   },
   description:
     'Generate customized, legal-grade healthcare appeal letters with statutory citations (ERISA, ACA, CMS NCCI) for CARC 50, 197, 16, 29, 97, and 22 denials.',
 
-  ...marketingMetadata("/tools/appeal-letter-generator", 'Medical Denial Appeal Letter Generator | Free RCM Tool | Aethera Healthcare Solutions', 'Generate customized, legal-grade healthcare appeal letters with statutory citations (ERISA, ACA, CMS NCCI) for CARC 50, 197, 16, 29, 97, and 22 denials.'),
+  ...marketingMetadata("/tools/appeal-letter-generator", 'Medical Denial Appeal Letter Generator | Aethera', 'Generate customized, legal-grade healthcare appeal letters with statutory citations (ERISA, ACA, CMS NCCI) for CARC 50, 197, 16, 29, 97, and 22 denials.'),
 };
 
 export default function AppealLetterGeneratorPage() {

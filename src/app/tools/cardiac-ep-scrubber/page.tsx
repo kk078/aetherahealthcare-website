@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/cardiac-ep-scrubber') },
   title: {
-    absolute: 'Cardiac Electrophysiology & Catheter Ablation Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Cardiac Electrophysiology & Catheter Ablation Scrubber | Aethera',
   },
   description:
     'Free cardiac EP scrubber: audit PVI ablation (CPT 93656) and SVT ablation edits, 3D mapping and ICE add-ons, and remote monitoring intervals.',
 
-  ...marketingMetadata("/tools/cardiac-ep-scrubber", 'Cardiac Electrophysiology & Catheter Ablation Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free cardiac EP scrubber: audit PVI ablation (CPT 93656) and SVT ablation edits, 3D mapping and ICE add-ons, and remote monitoring intervals.'),
+  ...marketingMetadata("/tools/cardiac-ep-scrubber", 'Cardiac Electrophysiology & Catheter Ablation Scrubber | Aethera', 'Free cardiac EP scrubber: audit PVI ablation (CPT 93656) and SVT ablation edits, 3D mapping and ICE add-ons, and remote monitoring intervals.'),
 };
 
 export default function CardiacEpScrubberPage() {

@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-pulmonary-estimator') },
   title: {
-    absolute: 'Pediatric Pulmonology, Allergy & CFTR Estimator | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Pediatric Pulmonology, Allergy & CFTR Estimator | Aethera',
   },
   description:
     'Free pediatric pulmonology estimator: audit spirometry and plethysmography (94010/94060/94726), sweat chloride (82435) and CFTR prior auth odds.',
 
-  ...marketingMetadata("/tools/pediatric-pulmonary-estimator", 'Pediatric Pulmonology, Allergy & CFTR Estimator | Free RCM Tool | Aethera Healthcare Solutions', 'Free pediatric pulmonology estimator: audit spirometry and plethysmography (94010/94060/94726), sweat chloride (82435) and CFTR prior auth odds.'),
+  ...marketingMetadata("/tools/pediatric-pulmonary-estimator", 'Pediatric Pulmonology, Allergy & CFTR Estimator | Aethera', 'Free pediatric pulmonology estimator: audit spirometry and plethysmography (94010/94060/94726), sweat chloride (82435) and CFTR prior auth odds.'),
 };
 
 export default function PediatricPulmonaryEstimatorPage() {

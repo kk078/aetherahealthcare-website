@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/skull-base-bypass-aneurysm-scrubber') },
   title: {
-    absolute: 'Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber | Aethera',
   },
   description:
     'Free EC-IC bypass and aneurysm scrubber: audit STA-MCA bypass (61711), orbitozygomatic approaches (61592), graft harvest, microscope and -62.',
 
-  ...marketingMetadata("/tools/skull-base-bypass-aneurysm-scrubber", 'Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber | Free RCM Tool | Aethera Healthcare', 'Free EC-IC bypass and aneurysm scrubber: audit STA-MCA bypass (61711), orbitozygomatic approaches (61592), graft harvest, microscope and -62.'),
+  ...marketingMetadata("/tools/skull-base-bypass-aneurysm-scrubber", 'Complex EC-IC Cerebrovascular Bypass & Aneurysm Scrubber | Aethera', 'Free EC-IC bypass and aneurysm scrubber: audit STA-MCA bypass (61711), orbitozygomatic approaches (61592), graft harvest, microscope and -62.'),
 };
 
 export default function SkullBaseBypassAneurysmScrubberPage() {

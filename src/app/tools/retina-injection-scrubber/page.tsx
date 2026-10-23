@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/retina-injection-scrubber') },
   title: {
-    absolute: 'Anti-VEGF Intravitreal Injection & Bilateral Eye Surgery Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Anti-VEGF Intravitreal Injection & Bilateral Eye Surgery Scrubber | Aethera',
   },
   description:
     'Free anti-VEGF injection scrubber: audit dose and wastage (JW/JZ), bilateral billing (-50 vs. RT/LT) and LCD frequency limits for retina practices.',
 
-  ...marketingMetadata("/tools/retina-injection-scrubber", 'Anti-VEGF Intravitreal Injection & Bilateral Eye Surgery Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free anti-VEGF injection scrubber: audit dose and wastage (JW/JZ), bilateral billing (-50 vs. RT/LT) and LCD frequency limits for retina practices.'),
+  ...marketingMetadata("/tools/retina-injection-scrubber", 'Anti-VEGF Intravitreal Injection & Bilateral Eye Surgery Scrubber | Aethera', 'Free anti-VEGF injection scrubber: audit dose and wastage (JW/JZ), bilateral billing (-50 vs. RT/LT) and LCD frequency limits for retina practices.'),
 };
 
 export default function RetinaInjectionScrubberPage() {

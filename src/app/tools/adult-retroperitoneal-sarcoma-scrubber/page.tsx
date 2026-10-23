@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/adult-retroperitoneal-sarcoma-scrubber') },
   title: {
-    absolute: 'Adult Retroperitoneal Sarcoma & Multivisceral Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Adult Retroperitoneal Sarcoma & Multivisceral Scrubber | Aethera',
   },
   description:
     'Free retroperitoneal sarcoma scrubber: audit radical tumor excision (49203–49205) with en-bloc nephrectomy, adrenalectomy, colectomy and IVC repair.',
 
-  ...marketingMetadata("/tools/adult-retroperitoneal-sarcoma-scrubber", 'Adult Retroperitoneal Sarcoma & Multivisceral Scrubber | Free RCM Tool | Aethera Healthcare', 'Free retroperitoneal sarcoma scrubber: audit radical tumor excision (49203–49205) with en-bloc nephrectomy, adrenalectomy, colectomy and IVC repair.'),
+  ...marketingMetadata("/tools/adult-retroperitoneal-sarcoma-scrubber", 'Adult Retroperitoneal Sarcoma & Multivisceral Scrubber | Aethera', 'Free retroperitoneal sarcoma scrubber: audit radical tumor excision (49203–49205) with en-bloc nephrectomy, adrenalectomy, colectomy and IVC repair.'),
 };
 
 export default function AdultRetroperitonealSarcomaScrubberPage() {

@@ -8,11 +8,11 @@ import { Award, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools/practice-benchmark-scorecard') },
-  title: { absolute: 'MGMA Practice Health Index & Specialty Scorecard | Aethera Healthcare' },
+  title: { absolute: 'MGMA Practice Health Index & Specialty Scorecard | Aethera' },
   description:
     'Benchmark your revenue cycle against MGMA and HFMA standards: days in A/R, denial rate, and the cash you could recover each year.',
 
-  ...marketingMetadata("/tools/practice-benchmark-scorecard", 'MGMA Practice Health Index & Specialty Scorecard | Aethera Healthcare', 'Benchmark your revenue cycle against MGMA and HFMA standards: days in A/R, denial rate, and the cash you could recover each year.'),
+  ...marketingMetadata("/tools/practice-benchmark-scorecard", 'MGMA Practice Health Index & Specialty Scorecard | Aethera', 'Benchmark your revenue cycle against MGMA and HFMA standards: days in A/R, denial rate, and the cash you could recover each year.'),
 };
 
 export default function PracticeBenchmarkPage() {

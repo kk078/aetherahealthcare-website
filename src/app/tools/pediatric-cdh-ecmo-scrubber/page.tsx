@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-cdh-ecmo-scrubber') },
   title: {
-    absolute: 'Pediatric CDH & Neonatal ECMO Repair Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric CDH & Neonatal ECMO Repair Scrubber | Aethera',
   },
   description:
     'Free CDH and neonatal ECMO scrubber: audit diaphragmatic hernia repair (CPT 39503), patch reconstruction, ECMO cannulation (+33946) and silo closure.',
 
-  ...marketingMetadata("/tools/pediatric-cdh-ecmo-scrubber", 'Pediatric CDH & Neonatal ECMO Repair Scrubber | Free RCM Tool | Aethera Healthcare', 'Free CDH and neonatal ECMO scrubber: audit diaphragmatic hernia repair (CPT 39503), patch reconstruction, ECMO cannulation (+33946) and silo closure.'),
+  ...marketingMetadata("/tools/pediatric-cdh-ecmo-scrubber", 'Pediatric CDH & Neonatal ECMO Repair Scrubber | Aethera', 'Free CDH and neonatal ECMO scrubber: audit diaphragmatic hernia repair (CPT 39503), patch reconstruction, ECMO cannulation (+33946) and silo closure.'),
 };
 
 export default function PediatricCdhEcmoScrubberPage() {

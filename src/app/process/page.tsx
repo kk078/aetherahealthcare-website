@@ -119,7 +119,7 @@ export default function Process() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "name": "Our Onboarding Process | Aethera Healthcare Solutions",
+              "name": "Our Onboarding Process | Aethera",
               "description": "A seamless 6-week process designed to minimize disruption and maximize your revenue from day one.",
               "url": "https://aetherahealthcare.com/process",
               "publisher": {

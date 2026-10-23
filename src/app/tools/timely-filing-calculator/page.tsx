@@ -11,11 +11,11 @@ import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/timely-filing-calculator') },
-  title: { absolute: 'Timely Filing Calculator — Claim Deadline & Days Remaining | Aethera Healthcare Solutions' },
+  title: { absolute: 'Timely Filing Calculator — Claim Deadline & Days Remaining | Aethera' },
   description:
     'Free timely-filing calculator: enter a date of service and payer limit to get the exact deadline, days remaining and a CARC 29 risk flag.',
 
-  ...marketingMetadata("/tools/timely-filing-calculator", 'Timely Filing Calculator — Claim Deadline & Days Remaining | Aethera Healthcare Solutions', 'Free timely-filing calculator: enter a date of service and payer limit to get the exact deadline, days remaining and a CARC 29 risk flag.'),
+  ...marketingMetadata("/tools/timely-filing-calculator", 'Timely Filing Calculator — Claim Deadline & Days Remaining | Aethera', 'Free timely-filing calculator: enter a date of service and payer limit to get the exact deadline, days remaining and a CARC 29 risk flag.'),
 };
 
 export default function TimelyFilingPage() {

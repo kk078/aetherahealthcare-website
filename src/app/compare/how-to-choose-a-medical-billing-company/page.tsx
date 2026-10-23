@@ -7,12 +7,12 @@ import ScrollProgress from '@/components/ui/ScrollProgress';
 import { CheckCircle2, AlertTriangle, ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: { absolute: 'How to Choose a Medical Billing Company: Questions, Red Flags & Metrics | Aethera Healthcare Solutions' },
+  title: { absolute: 'How to Choose a Medical Billing Company: Questions, Red Flags & Metrics | Aethera' },
   description:
     'How to evaluate a medical billing company: questions to ask, red flags to avoid, and the metrics that predict whether a partner will raise collections.',
   alternates: { canonical: 'https://aetherahealthcare.com/compare/how-to-choose-a-medical-billing-company/' },
 
-  ...marketingMetadata("/compare/how-to-choose-a-medical-billing-company", 'How to Choose a Medical Billing Company: Questions, Red Flags & Metrics | Aethera Healthcare Solutions', 'How to evaluate a medical billing company: questions to ask, red flags to avoid, and the metrics that predict whether a partner will raise collections.'),
+  ...marketingMetadata("/compare/how-to-choose-a-medical-billing-company", 'How to Choose a Medical Billing Company: Questions, Red Flags & Metrics | Aethera', 'How to evaluate a medical billing company: questions to ask, red flags to avoid, and the metrics that predict whether a partner will raise collections.'),
 };
 
 const questions = [

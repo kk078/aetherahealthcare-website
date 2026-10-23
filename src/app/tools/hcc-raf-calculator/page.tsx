@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/hcc-raf-calculator') },
   title: {
-    absolute: 'CMS HCC Risk Adjustment & RAF Score Benchmarker | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'CMS HCC Risk Adjustment & RAF Score Benchmarker | Aethera',
   },
   description:
     'Model RAF scores under CMS-HCC V28 vs. V24, estimate Medicare Advantage revenue changes, find interaction bonuses and review MEAT documentation.',
 
-  ...marketingMetadata("/tools/hcc-raf-calculator", 'CMS HCC Risk Adjustment & RAF Score Benchmarker | Free RCM Tool | Aethera Healthcare Solutions', 'Model RAF scores under CMS-HCC V28 vs. V24, estimate Medicare Advantage revenue changes, find interaction bonuses and review MEAT documentation.'),
+  ...marketingMetadata("/tools/hcc-raf-calculator", 'CMS HCC Risk Adjustment & RAF Score Benchmarker | Aethera', 'Model RAF scores under CMS-HCC V28 vs. V24, estimate Medicare Advantage revenue changes, find interaction bonuses and review MEAT documentation.'),
 };
 
 export default function HccRafCalculatorPage() {

@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/adult-spine-deformity-llif-scrubber') },
   title: {
-    absolute: 'Adult Spine Deformity & Multi-Level LLIF Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Adult Spine Deformity & Multi-Level LLIF Scrubber | Aethera',
   },
   description:
     'Free adult spinal deformity LLIF/XLIF scrubber: audit arthrodesis (22558), level add-ons (+22552), instrumentation (+22842–22843) and S2AI (+22848).',
 
-  ...marketingMetadata("/tools/adult-spine-deformity-llif-scrubber", 'Adult Spine Deformity & Multi-Level LLIF Scrubber | Free RCM Tool | Aethera Healthcare', 'Free adult spinal deformity LLIF/XLIF scrubber: audit arthrodesis (22558), level add-ons (+22552), instrumentation (+22842–22843) and S2AI (+22848).'),
+  ...marketingMetadata("/tools/adult-spine-deformity-llif-scrubber", 'Adult Spine Deformity & Multi-Level LLIF Scrubber | Aethera', 'Free adult spinal deformity LLIF/XLIF scrubber: audit arthrodesis (22558), level add-ons (+22552), instrumentation (+22842–22843) and S2AI (+22848).'),
 };
 
 export default function AdultSpineDeformityLlifScrubberPage() {

@@ -9,10 +9,10 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/decks') },
-  title: { absolute: 'Specialty Billing Guides | Aethera Healthcare Solutions' },
+  title: { absolute: 'Specialty Billing Guides | Aethera' },
   description: 'Specialty revenue cycle and billing overview guides covering coding, denials, reimbursement and compliance for 18 specialties.',
 
-  ...marketingMetadata("/decks", 'Specialty Billing Guides | Aethera Healthcare Solutions', 'Specialty revenue cycle and billing overview guides covering coding, denials, reimbursement and compliance for 18 specialties.'),
+  ...marketingMetadata("/decks", 'Specialty Billing Guides | Aethera', 'Specialty revenue cycle and billing overview guides covering coding, denials, reimbursement and compliance for 18 specialties.'),
 };
 
 // Specialty billing decks hosted at /decks/<slug>.pdf

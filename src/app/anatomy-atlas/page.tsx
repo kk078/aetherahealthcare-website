@@ -8,11 +8,11 @@ import { ATLAS_REVIEWED, ATLAS_SOURCES } from '@/data/anatomyEducation';
 import { canonicalUrl } from '@/lib/siteConfig';
 
 export const metadata: Metadata = {
-  title: '3D Anatomy Atlas for Medical Billing Education | Aethera Healthcare',
+  title: '3D Anatomy Atlas for Medical Billing Education | Aethera',
   description: 'Explore an interactive 3D human anatomy model, 40 specialty learning paths and source-linked medical billing examples with documentation checkpoints.',
   alternates: { canonical: canonicalUrl('/anatomy-atlas') },
 
-  ...marketingMetadata("/anatomy-atlas", '3D Anatomy Atlas for Medical Billing Education | Aethera Healthcare', 'Explore an interactive 3D human anatomy model, 40 specialty learning paths and source-linked medical billing examples with documentation checkpoints.'),
+  ...marketingMetadata("/anatomy-atlas", '3D Anatomy Atlas for Medical Billing Education | Aethera', 'Explore an interactive 3D human anatomy model, 40 specialty learning paths and source-linked medical billing examples with documentation checkpoints.'),
 };
 export default function AnatomyAtlasPage() {
   return <div className="min-h-screen bg-[#FAFCFB] text-slate-800"><Navbar /><main id="main-content">

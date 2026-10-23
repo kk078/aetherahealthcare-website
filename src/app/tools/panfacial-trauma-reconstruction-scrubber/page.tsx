@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/panfacial-trauma-reconstruction-scrubber') },
   title: {
-    absolute: 'Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber | Aethera',
   },
   description:
     'Free panfacial trauma scrubber: audit Le Fort I–III (21422–21435), ZMC (21365) and mandible (21462) repairs, IMF bundling and orbital implants.',
 
-  ...marketingMetadata("/tools/panfacial-trauma-reconstruction-scrubber", 'Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare', 'Free panfacial trauma scrubber: audit Le Fort I–III (21422–21435), ZMC (21365) and mandible (21462) repairs, IMF bundling and orbital implants.'),
+  ...marketingMetadata("/tools/panfacial-trauma-reconstruction-scrubber", 'Panfacial Trauma & Multi-Level Fracture Reconstruction Scrubber | Aethera', 'Free panfacial trauma scrubber: audit Le Fort I–III (21422–21435), ZMC (21365) and mandible (21462) repairs, IMF bundling and orbital implants.'),
 };
 
 export default function PanfacialTraumaScrubberPage() {

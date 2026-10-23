@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-biochemical-genetics-scrubber') },
   title: {
-    absolute: 'Pediatric Biochemical Genetics & Metabolic Formula Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric Biochemical Genetics & Metabolic Formula Scrubber | Aethera',
   },
   description:
     'Free biochemical genetics scrubber: audit amino acid (82139/82136) and organic acid (83918) testing, prolonged visits and medical food prior auth.',
 
-  ...marketingMetadata("/tools/pediatric-biochemical-genetics-scrubber", 'Pediatric Biochemical Genetics & Metabolic Formula Scrubber | Free RCM Tool | Aethera Healthcare', 'Free biochemical genetics scrubber: audit amino acid (82139/82136) and organic acid (83918) testing, prolonged visits and medical food prior auth.'),
+  ...marketingMetadata("/tools/pediatric-biochemical-genetics-scrubber", 'Pediatric Biochemical Genetics & Metabolic Formula Scrubber | Aethera', 'Free biochemical genetics scrubber: audit amino acid (82139/82136) and organic acid (83918) testing, prolonged visits and medical food prior auth.'),
 };
 
 export default function PediatricBiochemicalGeneticsScrubberPage() {

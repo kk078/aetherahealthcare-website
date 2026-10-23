@@ -8,12 +8,12 @@ import { SEO_SPECIALTIES } from '@/lib/seo.data';
 import { Stethoscope } from 'lucide-react';
 
 export const metadata = {
-  title: { absolute: 'Medical Billing Services by Specialty | Aethera Healthcare Solutions' },
+  title: { absolute: 'Medical Billing Services by Specialty | Aethera' },
   description:
     'Specialty medical billing and revenue cycle management for U.S. practices: coding, claims, denials and A/R handled end to end for your specialty.',
   alternates: { canonical: 'https://aetherahealthcare.com/medical-billing/' },
 
-  ...marketingMetadata("/medical-billing", 'Medical Billing Services by Specialty | Aethera Healthcare Solutions', 'Specialty medical billing and revenue cycle management for U.S. practices: coding, claims, denials and A/R handled end to end for your specialty.'),
+  ...marketingMetadata("/medical-billing", 'Medical Billing Services by Specialty | Aethera', 'Specialty medical billing and revenue cycle management for U.S. practices: coding, claims, denials and A/R handled end to end for your specialty.'),
 };
 
 export default function MedicalBillingHub() {

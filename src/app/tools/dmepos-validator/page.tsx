@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/dmepos-validator') },
   title: {
-    absolute: 'DMEPOS Medical Necessity & Prior Auth Validator | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'DMEPOS Medical Necessity & Prior Auth Validator | Aethera',
   },
   description:
     'Validate Medicare DMEPOS claims for oxygen, CPAP, mobility, CGMs and orthotics: written orders, face-to-face timing, prior auth and KX/GA/CG modifiers.',
 
-  ...marketingMetadata("/tools/dmepos-validator", 'DMEPOS Medical Necessity & Prior Auth Validator | Free RCM Tool | Aethera Healthcare Solutions', 'Validate Medicare DMEPOS claims for oxygen, CPAP, mobility, CGMs and orthotics: written orders, face-to-face timing, prior auth and KX/GA/CG modifiers.'),
+  ...marketingMetadata("/tools/dmepos-validator", 'DMEPOS Medical Necessity & Prior Auth Validator | Aethera', 'Validate Medicare DMEPOS claims for oxygen, CPAP, mobility, CGMs and orthotics: written orders, face-to-face timing, prior auth and KX/GA/CG modifiers.'),
 };
 
 export default function DmeposValidatorPage() {

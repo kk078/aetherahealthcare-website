@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/prompt-pay-statutes') },
   title: {
-    absolute: '50-State Prompt-Pay Statute & Interest Penalty Matrix | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: '50-State Prompt-Pay Statute & Interest Penalty Matrix | Aethera',
   },
   description:
     'Prompt-pay laws for all 50 states: clean-claim payment deadlines (15–30 days), interest penalty rates (12%–18%) and demand letter templates.',
 
-  ...marketingMetadata("/tools/prompt-pay-statutes", '50-State Prompt-Pay Statute & Interest Penalty Matrix | Free RCM Tool | Aethera Healthcare Solutions', 'Prompt-pay laws for all 50 states: clean-claim payment deadlines (15–30 days), interest penalty rates (12%–18%) and demand letter templates.'),
+  ...marketingMetadata("/tools/prompt-pay-statutes", '50-State Prompt-Pay Statute & Interest Penalty Matrix | Aethera', 'Prompt-pay laws for all 50 states: clean-claim payment deadlines (15–30 days), interest penalty rates (12%–18%) and demand letter templates.'),
 };
 
 export default function PromptPayStatutesPage() {

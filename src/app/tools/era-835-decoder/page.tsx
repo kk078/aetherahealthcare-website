@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/era-835-decoder') },
   title: {
-    absolute: '835 Electronic Remittance Advice (ERA) Decoder | Aethera Healthcare Solutions',
+    absolute: '835 Electronic Remittance Advice (ERA) Decoder | Aethera',
   },
   description:
     'Free X12 835 ERA decoder: read CLP and CAS adjustments (CO, PR, OA) in plain language and get step-by-step workflows to overturn denials.',
 
-  ...marketingMetadata("/tools/era-835-decoder", '835 Electronic Remittance Advice (ERA) Decoder | Aethera Healthcare Solutions', 'Free X12 835 ERA decoder: read CLP and CAS adjustments (CO, PR, OA) in plain language and get step-by-step workflows to overturn denials.'),
+  ...marketingMetadata("/tools/era-835-decoder", '835 Electronic Remittance Advice (ERA) Decoder | Aethera', 'Free X12 835 ERA decoder: read CLP and CAS adjustments (CO, PR, OA) in plain language and get step-by-step workflows to overturn denials.'),
 };
 
 export default function Era835DecoderPage() {

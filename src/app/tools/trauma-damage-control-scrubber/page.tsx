@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/trauma-damage-control-scrubber') },
   title: {
-    absolute: 'Trauma & Open Abdomen Damage Control Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Trauma & Open Abdomen Damage Control Scrubber | Aethera',
   },
   description:
     'Free trauma damage-control scrubber: audit staged laparotomy (49000, 49002), delayed fascial closure (13160), line bundling and modifier 58 vs. 78.',
 
-  ...marketingMetadata("/tools/trauma-damage-control-scrubber", 'Trauma & Open Abdomen Damage Control Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free trauma damage-control scrubber: audit staged laparotomy (49000, 49002), delayed fascial closure (13160), line bundling and modifier 58 vs. 78.'),
+  ...marketingMetadata("/tools/trauma-damage-control-scrubber", 'Trauma & Open Abdomen Damage Control Scrubber | Aethera', 'Free trauma damage-control scrubber: audit staged laparotomy (49000, 49002), delayed fascial closure (13160), line bundling and modifier 58 vs. 78.'),
 };
 
 export default function TraumaDamageControlScrubberPage() {

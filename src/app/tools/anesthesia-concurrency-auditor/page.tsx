@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/anesthesia-concurrency-auditor') },
   title: {
-    absolute: 'Anesthesia Concurrency & Medical Direction Auditor | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Anesthesia Concurrency & Medical Direction Auditor | Aethera',
   },
   description:
     'Audit anesthesia concurrency ratios and TEFRA medical direction rules (42 CFR 415.110), model QK/QY/QX/QZ/AD modifiers and estimate recoupment risk.',
 
-  ...marketingMetadata("/tools/anesthesia-concurrency-auditor", 'Anesthesia Concurrency & Medical Direction Auditor | Free RCM Tool | Aethera Healthcare Solutions', 'Audit anesthesia concurrency ratios and TEFRA medical direction rules (42 CFR 415.110), model QK/QY/QX/QZ/AD modifiers and estimate recoupment risk.'),
+  ...marketingMetadata("/tools/anesthesia-concurrency-auditor", 'Anesthesia Concurrency & Medical Direction Auditor | Aethera', 'Audit anesthesia concurrency ratios and TEFRA medical direction rules (42 CFR 415.110), model QK/QY/QX/QZ/AD modifiers and estimate recoupment risk.'),
 };
 
 export default function AnesthesiaConcurrencyAuditorPage() {

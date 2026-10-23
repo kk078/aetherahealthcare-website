@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/taaa-fevar-scrubber') },
   title: {
-    absolute: 'Complex FEVAR & TAAA Aortic Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Complex FEVAR & TAAA Aortic Scrubber | Aethera',
   },
   description:
     'Free FEVAR and TAAA scrubber: audit fenestrated endografts (34841–34848), open TAAA repair (33877), spinal drains (62272) and co-surgeon -62.',
 
-  ...marketingMetadata("/tools/taaa-fevar-scrubber", 'Complex FEVAR & TAAA Aortic Scrubber | Free RCM Tool | Aethera Healthcare', 'Free FEVAR and TAAA scrubber: audit fenestrated endografts (34841–34848), open TAAA repair (33877), spinal drains (62272) and co-surgeon -62.'),
+  ...marketingMetadata("/tools/taaa-fevar-scrubber", 'Complex FEVAR & TAAA Aortic Scrubber | Aethera', 'Free FEVAR and TAAA scrubber: audit fenestrated endografts (34841–34848), open TAAA repair (33877), spinal drains (62272) and co-surgeon -62.'),
 };
 
 export default function TaaaFevarScrubberPage() {

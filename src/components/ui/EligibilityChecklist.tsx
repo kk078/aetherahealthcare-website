@@ -24,7 +24,7 @@ export default function EligibilityChecklist() {
   const score = Math.round((done / ITEMS.length) * 100);
   const openRisks = useMemo(() => ITEMS.filter((i) => !checked[i.id]), [checked]);
 
-  const band = score >= 90 ? { t: 'Denial-ready', c: 'text-emerald', bar: 'bg-emerald' }
+  const band = score >= 90 ? { t: 'Denial-ready', c: 'text-emerald-700', bar: 'bg-emerald' }
     : score >= 60 ? { t: 'Some exposure', c: 'text-amber-600', bar: 'bg-amber-500' }
     : { t: 'High denial risk', c: 'text-red-600', bar: 'bg-red-500' };
 

@@ -1,4 +1,4 @@
-import { fitDescription, marketingMetadata } from '@/lib/marketing';
+import { fitDescription, fitTitle, marketingMetadata } from '@/lib/marketing';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   if (!s) return {};
   return {
     ...marketingMetadata(s.serviceHref || `/medical-billing/${s.slug}`, `${s.name} Medical Billing Services`, `Medical billing review for ${s.noun}. ${s.blurb}`),
-    title: { absolute: `${s.name} Medical Billing Services | Aethera Healthcare Solutions` },
+    title: { absolute: fitTitle(`${s.name} Medical Billing Services`, `${s.name} Medical Billing`, `${s.name} Billing`) },
     description: fitDescription(
       `Nationwide ${s.name.toLowerCase()} medical billing and revenue cycle management for U.S. practices. ${s.blurb} Free assessment — no long-term contract.`,
       `${s.name} medical billing for U.S. practices. ${s.blurb}`,

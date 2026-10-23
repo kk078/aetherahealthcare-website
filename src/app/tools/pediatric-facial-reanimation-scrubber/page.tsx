@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-facial-reanimation-scrubber') },
   title: {
-    absolute: 'Pediatric Facial Reanimation & Free Gracilis Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric Facial Reanimation & Free Gracilis Scrubber | Aethera',
   },
   description:
     'Free facial reanimation scrubber: audit cross-face nerve grafts (64890/64891), staged gracilis transfer (15756-58) and masseteric transfer (64864).',
 
-  ...marketingMetadata("/tools/pediatric-facial-reanimation-scrubber", 'Pediatric Facial Reanimation & Free Gracilis Scrubber | Free RCM Tool | Aethera Healthcare', 'Free facial reanimation scrubber: audit cross-face nerve grafts (64890/64891), staged gracilis transfer (15756-58) and masseteric transfer (64864).'),
+  ...marketingMetadata("/tools/pediatric-facial-reanimation-scrubber", 'Pediatric Facial Reanimation & Free Gracilis Scrubber | Aethera', 'Free facial reanimation scrubber: audit cross-face nerve grafts (64890/64891), staged gracilis transfer (15756-58) and masseteric transfer (64864).'),
 };
 
 export default function PediatricFacialReanimationScrubberPage() {

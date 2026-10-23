@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/lvad-cardiac-scrubber') },
   title: {
-    absolute: 'Durable LVAD Implantation & Cardiac Reoperation Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Durable LVAD Implantation & Cardiac Reoperation Scrubber | Aethera',
   },
   description:
     'Free LVAD scrubber: audit durable LVAD implants (CPT 33979), redo sternotomy (+33530), concomitant valve repairs and post-op critical care.',
 
-  ...marketingMetadata("/tools/lvad-cardiac-scrubber", 'Durable LVAD Implantation & Cardiac Reoperation Scrubber | Free RCM Tool | Aethera Healthcare', 'Free LVAD scrubber: audit durable LVAD implants (CPT 33979), redo sternotomy (+33530), concomitant valve repairs and post-op critical care.'),
+  ...marketingMetadata("/tools/lvad-cardiac-scrubber", 'Durable LVAD Implantation & Cardiac Reoperation Scrubber | Aethera', 'Free LVAD scrubber: audit durable LVAD implants (CPT 33979), redo sternotomy (+33530), concomitant valve repairs and post-op critical care.'),
 };
 
 export default function LvadCardiacScrubberPage() {

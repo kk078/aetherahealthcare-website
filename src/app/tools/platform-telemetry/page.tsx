@@ -12,12 +12,12 @@ export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/platform-telemetry') },
   robots: { index: false, follow: true },
   title: {
-    absolute: 'Browser Performance Measurements | Aethera Healthcare Solutions',
+    absolute: 'Browser Performance Measurements | Aethera',
   },
   description:
     'Inspect measured browser navigation timings for your current page load.',
 
-  ...marketingMetadata("/tools/platform-telemetry", 'Browser Performance Measurements | Aethera Healthcare Solutions', 'Inspect measured browser navigation timings for your current page load.'),
+  ...marketingMetadata("/tools/platform-telemetry", 'Browser Performance Measurements | Aethera', 'Inspect measured browser navigation timings for your current page load.'),
 };
 
 export default function PlatformTelemetryPage() {

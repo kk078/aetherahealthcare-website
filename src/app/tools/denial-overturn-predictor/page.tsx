@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/denial-overturn-predictor') },
   title: {
-    absolute: 'Denial Appeal Readiness & Review Checklist | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Denial Appeal Readiness & Review Checklist | Aethera',
   },
   description:
     'Estimate appeal overturn odds for common CARC denials (CO-50, CO-197, CO-97, CO-16, CO-29, CO-22) with deadline countdowns and evidence checklists.',
 
-  ...marketingMetadata("/tools/denial-overturn-predictor", 'Denial Appeal Readiness & Review Checklist | Free RCM Tool | Aethera Healthcare Solutions', 'Estimate appeal overturn odds for common CARC denials (CO-50, CO-197, CO-97, CO-16, CO-29, CO-22) with deadline countdowns and evidence checklists.'),
+  ...marketingMetadata("/tools/denial-overturn-predictor", 'Denial Appeal Readiness & Review Checklist | Aethera', 'Estimate appeal overturn odds for common CARC denials (CO-50, CO-197, CO-97, CO-16, CO-29, CO-22) with deadline countdowns and evidence checklists.'),
 };
 
 export default function DenialOverturnPredictorPage() {

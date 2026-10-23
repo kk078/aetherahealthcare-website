@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/ncci-claim-scrubber') },
   title: {
-    absolute: 'CMS NCCI Claim Scrubber & Modifier Validator | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'CMS NCCI Claim Scrubber & Modifier Validator | Aethera',
   },
   description:
     'Free CMS NCCI Procedure-to-Procedure (PTP) bundling edit checker. Validate modifier 25, 59, XS, and XE applicability to prevent CARC 97 bundling denials.',
 
-  ...marketingMetadata("/tools/ncci-claim-scrubber", 'CMS NCCI Claim Scrubber & Modifier Validator | Free RCM Tool | Aethera Healthcare Solutions', 'Free CMS NCCI Procedure-to-Procedure (PTP) bundling edit checker. Validate modifier 25, 59, XS, and XE applicability to prevent CARC 97 bundling denials.'),
+  ...marketingMetadata("/tools/ncci-claim-scrubber", 'CMS NCCI Claim Scrubber & Modifier Validator | Aethera', 'Free CMS NCCI Procedure-to-Procedure (PTP) bundling edit checker. Validate modifier 25, 59, XS, and XE applicability to prevent CARC 97 bundling denials.'),
 };
 
 export default function NcciClaimScrubberPage() {

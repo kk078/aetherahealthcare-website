@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/fqhc-pps-scrubber') },
   title: {
-    absolute: 'FQHC PPS Rate & Same-Day Service Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'FQHC PPS Rate & Same-Day Service Scrubber | Aethera',
   },
   description:
     'Free FQHC PPS scrubber: GAF-adjusted rates, same-day medical plus behavioral health visit exceptions, and Medicaid wraparound reconciliation.',
 
-  ...marketingMetadata("/tools/fqhc-pps-scrubber", 'FQHC PPS Rate & Same-Day Service Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free FQHC PPS scrubber: GAF-adjusted rates, same-day medical plus behavioral health visit exceptions, and Medicaid wraparound reconciliation.'),
+  ...marketingMetadata("/tools/fqhc-pps-scrubber", 'FQHC PPS Rate & Same-Day Service Scrubber | Aethera', 'Free FQHC PPS scrubber: GAF-adjusted rates, same-day medical plus behavioral health visit exceptions, and Medicaid wraparound reconciliation.'),
 };
 
 export default function FqhcPpsScrubberPage() {

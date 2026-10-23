@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/timely-filing-matrix') },
   title: {
-    absolute: 'Multi-Payer Timely Filing & Appeal Deadline Matrix | Aethera Healthcare Solutions',
+    absolute: 'Multi-Payer Timely Filing & Appeal Deadline Matrix | Aethera',
   },
   description:
     'Timely filing limits compared: initial claim, corrected claim and appeal windows for state Medicaid programs, Medicare MACs and commercial payers.',
 
-  ...marketingMetadata("/tools/timely-filing-matrix", 'Multi-Payer Timely Filing & Appeal Deadline Matrix | Aethera Healthcare Solutions', 'Timely filing limits compared: initial claim, corrected claim and appeal windows for state Medicaid programs, Medicare MACs and commercial payers.'),
+  ...marketingMetadata("/tools/timely-filing-matrix", 'Multi-Payer Timely Filing & Appeal Deadline Matrix | Aethera', 'Timely filing limits compared: initial claim, corrected claim and appeal windows for state Medicaid programs, Medicare MACs and commercial payers.'),
 };
 
 export default function TimelyFilingMatrixPage() {

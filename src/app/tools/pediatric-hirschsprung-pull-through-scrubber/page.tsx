@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-hirschsprung-pull-through-scrubber') },
   title: {
-    absolute: 'Pediatric Hirschsprung Pull-Through Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric Hirschsprung Pull-Through Scrubber | Aethera',
   },
   description:
     'Free Hirschsprung pull-through scrubber: audit pull-through procedures (45120/45112), leveling biopsies, laparoscopic mobilization and staged -58.',
 
-  ...marketingMetadata("/tools/pediatric-hirschsprung-pull-through-scrubber", 'Pediatric Hirschsprung Pull-Through Scrubber | Free RCM Tool | Aethera Healthcare', 'Free Hirschsprung pull-through scrubber: audit pull-through procedures (45120/45112), leveling biopsies, laparoscopic mobilization and staged -58.'),
+  ...marketingMetadata("/tools/pediatric-hirschsprung-pull-through-scrubber", 'Pediatric Hirschsprung Pull-Through Scrubber | Aethera', 'Free Hirschsprung pull-through scrubber: audit pull-through procedures (45120/45112), leveling biopsies, laparoscopic mobilization and staged -58.'),
 };
 
 export default function PediatricHirschsprungPullThroughScrubberPage() {

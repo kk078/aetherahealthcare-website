@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/modifier-compliance-engine') },
   title: {
-    absolute: 'Modifier 25 & 59 / X{EPSU} Compliance Engine | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Modifier 25 & 59 / X{EPSU} Compliance Engine | Aethera',
   },
   description:
     'Check documentation against NCCI rules for modifier 25 and 59/XE/XP/XS/XU, generate audit-defense attestations and prevent CARC 97 denials.',
 
-  ...marketingMetadata("/tools/modifier-compliance-engine", 'Modifier 25 & 59 / X{EPSU} Compliance Engine | Free RCM Tool | Aethera Healthcare Solutions', 'Check documentation against NCCI rules for modifier 25 and 59/XE/XP/XS/XU, generate audit-defense attestations and prevent CARC 97 denials.'),
+  ...marketingMetadata("/tools/modifier-compliance-engine", 'Modifier 25 & 59 / X{EPSU} Compliance Engine | Aethera', 'Check documentation against NCCI rules for modifier 25 and 59/XE/XP/XS/XU, generate audit-defense attestations and prevent CARC 97 denials.'),
 };
 
 export default function ModifierComplianceEnginePage() {

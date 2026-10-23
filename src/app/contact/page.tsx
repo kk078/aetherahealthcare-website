@@ -11,10 +11,10 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/contact') },
-  title: { absolute: "Contact Us | Free Consultation | Aethera Healthcare Solutions" },
+  title: { absolute: "Contact Us | Free Consultation | Aethera" },
   description: "Get in touch with Aethera Healthcare Solutions for a free consultation. Submit an email inquiry or schedule a meeting directly with our team.",
 
-  ...marketingMetadata("/contact", "Contact Us | Free Consultation | Aethera Healthcare Solutions", "Get in touch with Aethera Healthcare Solutions for a free consultation. Submit an email inquiry or schedule a meeting directly with our team."),
+  ...marketingMetadata("/contact", "Contact Us | Free Consultation | Aethera", "Get in touch with Aethera Healthcare Solutions for a free consultation. Submit an email inquiry or schedule a meeting directly with our team."),
 };
 
 export default function Contact() {

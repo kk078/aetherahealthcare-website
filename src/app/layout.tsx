@@ -22,8 +22,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://aetherahealthcare.c
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Aethera Healthcare Solutions | Medical Billing & Revenue Cycle Management",
-    template: "%s | Aethera Healthcare Solutions",
+    default: "Aethera Healthcare Solutions | Medical Billing & RCM",
+    template: "%s | Aethera",
   },
   description: "Full-service medical billing for U.S. practices: coding, claims, payment posting, denials and collections handled so your team can focus on patients.",
   keywords: ["medical billing", "revenue cycle management", "healthcare billing", "medical coding", "claims processing"],

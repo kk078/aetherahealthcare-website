@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-airway-scrubber') },
   title: {
-    absolute: 'Pediatric Laryngotracheal Reconstruction (LTR) Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric Laryngotracheal Reconstruction (LTR) Scrubber | Aethera',
   },
   description:
     'Free pediatric airway scrubber: audit single and double-stage LTR (31587/31590), cricotracheal resection (31584), rib graft harvest and staged -58.',
 
-  ...marketingMetadata("/tools/pediatric-airway-scrubber", 'Pediatric Laryngotracheal Reconstruction (LTR) Scrubber | Free RCM Tool | Aethera Healthcare', 'Free pediatric airway scrubber: audit single and double-stage LTR (31587/31590), cricotracheal resection (31584), rib graft harvest and staged -58.'),
+  ...marketingMetadata("/tools/pediatric-airway-scrubber", 'Pediatric Laryngotracheal Reconstruction (LTR) Scrubber | Aethera', 'Free pediatric airway scrubber: audit single and double-stage LTR (31587/31590), cricotracheal resection (31584), rib graft harvest and staged -58.'),
 };
 
 export default function PediatricAirwayScrubberPage() {

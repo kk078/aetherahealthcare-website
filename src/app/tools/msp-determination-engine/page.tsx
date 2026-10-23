@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/msp-determination-engine') },
   title: {
-    absolute: 'Medicare Secondary Payer (MSP) Determination Engine | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Medicare Secondary Payer (MSP) Determination Engine | Aethera',
   },
   description:
     'Determine Medicare Secondary Payer liability under Section 1862(b): working aged, disability, ESRD coordination and no-fault/WC, with 837P mapping.',
 
-  ...marketingMetadata("/tools/msp-determination-engine", 'Medicare Secondary Payer (MSP) Determination Engine | Free RCM Tool | Aethera Healthcare Solutions', 'Determine Medicare Secondary Payer liability under Section 1862(b): working aged, disability, ESRD coordination and no-fault/WC, with 837P mapping.'),
+  ...marketingMetadata("/tools/msp-determination-engine", 'Medicare Secondary Payer (MSP) Determination Engine | Aethera', 'Determine Medicare Secondary Payer liability under Section 1862(b): working aged, disability, ESRD coordination and no-fault/WC, with 837P mapping.'),
 };
 
 export default function MspDeterminationEnginePage() {

@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/hepatobiliary-resection-scrubber') },
   title: {
-    absolute: 'Hepatobiliary Resection & Biliary Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Hepatobiliary Resection & Biliary Reconstruction Scrubber | Aethera',
   },
   description:
     'Free hepatobiliary scrubber: audit trisegmentectomy (47125) and lobectomy (47130), defend against downcoding to 47120, and capture biliary repairs.',
 
-  ...marketingMetadata("/tools/hepatobiliary-resection-scrubber", 'Hepatobiliary Resection & Biliary Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free hepatobiliary scrubber: audit trisegmentectomy (47125) and lobectomy (47130), defend against downcoding to 47120, and capture biliary repairs.'),
+  ...marketingMetadata("/tools/hepatobiliary-resection-scrubber", 'Hepatobiliary Resection & Biliary Reconstruction Scrubber | Aethera', 'Free hepatobiliary scrubber: audit trisegmentectomy (47125) and lobectomy (47130), defend against downcoding to 47120, and capture biliary repairs.'),
 };
 
 export default function HepatobiliaryResectionScrubberPage() {

@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/prior-auth-matrix') },
   title: {
-    absolute: 'Prior-Authorization Requirement & Payer SLA Matrix | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Prior-Authorization Requirement & Payer SLA Matrix | Aethera',
   },
   description:
     'Prior authorization rules, CMS-0057-F review timelines, peer-to-peer deadlines and state gold-card exemptions for 20+ outpatient and surgical procedures.',
 
-  ...marketingMetadata("/tools/prior-auth-matrix", 'Prior-Authorization Requirement & Payer SLA Matrix | Free RCM Tool | Aethera Healthcare Solutions', 'Prior authorization rules, CMS-0057-F review timelines, peer-to-peer deadlines and state gold-card exemptions for 20+ outpatient and surgical procedures.'),
+  ...marketingMetadata("/tools/prior-auth-matrix", 'Prior-Authorization Requirement & Payer SLA Matrix | Aethera', 'Prior authorization rules, CMS-0057-F review timelines, peer-to-peer deadlines and state gold-card exemptions for 20+ outpatient and surgical procedures.'),
 };
 
 export default function PriorAuthMatrixPage() {

@@ -4,12 +4,12 @@ import type { Metadata } from 'next';
 import BlogIndexClient from './BlogIndexClient';
 
 export const metadata: Metadata = {
-  title: { absolute: 'The Aethera Pulse — Revenue Cycle Insights for U.S. Healthcare | Aethera Healthcare Solutions' },
+  title: { absolute: 'The Aethera Pulse — Revenue Cycle Insights for U.S. Healthcare | Aethera' },
   description:
     'Practical insights on U.S. revenue cycle management: denials, prior authorization, coding, compliance, payer contracts and getting paid faster.',
   alternates: { canonical: '/blog/' },
 
-  ...marketingMetadata("/blog", 'The Aethera Pulse — Revenue Cycle Insights for U.S. Healthcare | Aethera Healthcare Solutions', 'Practical insights on U.S. revenue cycle management: denials, prior authorization, coding, compliance, payer contracts and getting paid faster.'),
+  ...marketingMetadata("/blog", 'The Aethera Pulse — Revenue Cycle Insights for U.S. Healthcare | Aethera', 'Practical insights on U.S. revenue cycle management: denials, prior authorization, coding, compliance, payer contracts and getting paid faster.'),
 };
 
 const jsonLd = {
