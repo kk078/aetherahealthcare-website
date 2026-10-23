@@ -9,6 +9,15 @@ import FadeIn from '@/components/ui/FadeIn';
 import { getSpecialty, SEO_SPECIALTIES } from '@/lib/seo.data';
 import { AlertTriangle, CheckCircle2, ArrowRight, Wrench } from 'lucide-react';
 
+/** Link text for the dedicated service page: names what the service handles rather than "see our service" (FINDINGS #5). */
+const SERVICE_LINK_TEXT: Record<string, string> = {
+  '/services/family-medicine-billing/': 'Family medicine billing for wellness visits, chronic care management and E/M',
+  '/services/cardiology-billing/': 'Cardiology billing for cath lab, stress testing, EP studies and remote monitoring',
+  '/services/orthopedic-billing/': 'Orthopedic billing for joint replacement, fracture care, implants and global periods',
+  '/services/dermatology-billing/': 'Dermatology billing for Mohs surgery, biopsies, destructions and modifier 25',
+  '/services/psychiatry-billing/': 'Psychiatry billing for medication management, psychotherapy add-ons and collaborative care',
+};
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -160,7 +169,7 @@ export default async function SpecialtyPage({ params }: { params: Params }) {
                 </div>
                 {s.serviceHref && (
                   <Link prefetch={false} href={s.serviceHref} className="inline-flex items-center text-teal hover:text-navy font-semibold text-sm mt-5">
-                    See our full {s.name} billing service <ArrowRight className="h-4 w-4 ml-1.5" />
+                    {SERVICE_LINK_TEXT[s.serviceHref] ?? `See our full ${s.name} billing service`} <ArrowRight className="h-4 w-4 ml-1.5" />
                   </Link>
                 )}
               </div>

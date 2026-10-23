@@ -28,7 +28,7 @@ const challenges = [
   { icon: <DollarSign className="h-6 w-6" />, title: 'Implant & Supply Billing', description: 'Invoice-based implant billing — joint replacements, plates, screws, and biologics — requires accurate C-code and L-code submission with supporting invoice documentation. Missed implant charges are permanent revenue loss.' },
   { icon: <FileText className="h-6 w-6" />, title: 'Fracture Care Bundling', description: 'What\'s included in fracture care vs. what can be billed separately differs by payer and code. Initial cast application, manipulation, and follow-up X-rays each have specific bundling rules our coders navigate daily.' },
   { icon: <Shield className="h-6 w-6" />, title: 'Multiple Procedure Reductions', description: 'Modifier 51 reductions on multiple procedures in the same session significantly impact reimbursement. Our billing team sequences procedures strategically to minimize reduction impact within payer rules.' },
-  { icon: <TrendingUp className="h-6 w-6" />, title: 'Workers\' Compensation Complexity', description: 'Workers\' comp billing requires state-specific fee schedules, lien management, and attorney coordination. Our WC specialists manage these cases separately from commercial billing.' },
+  { icon: <TrendingUp className="h-6 w-6" />, title: 'Workers\' Compensation Complexity', description: 'Workers\' comp billing requires state-specific fee schedules, lien management, and attorney coordination. Our WC specialists manage these cases separately from commercial billing.' , link: { href: '/services/workers-compensation-billing/', text: 'Our workers’ compensation billing service' } },
   { icon: <AlertCircle className="h-6 w-6" />, title: 'Arthroscopy Bundling Rules', description: 'Arthroscopic procedures have specific bundling edits — certain diagnostic arthroscopy codes bundle into surgical codes at the same joint. Our coders know exactly which combinations are billable and which trigger edits.' },
 ];
 
@@ -94,7 +94,7 @@ export default function OrthopedicBilling() {
           <SectionHeader label="BILLING CHALLENGES WE SOLVE" title="Why Orthopedic Billing Leaks Revenue" description="These are the six most common orthopedic billing problems — and what we do about each one." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {challenges.map((c, i) => (
-              <FadeIn key={i} delay={i * 0.1}><div className="bg-white rounded-xl p-6 border border-gray/10 shadow-sm h-full"><div className="text-teal mb-4">{c.icon}</div><h3 className="font-bold text-navy mb-2">{c.title}</h3><p className="text-gray text-sm">{c.description}</p></div></FadeIn>
+              <FadeIn key={i} delay={i * 0.1}><div className="bg-white rounded-xl p-6 border border-gray/10 shadow-sm h-full"><div className="text-teal mb-4">{c.icon}</div><h3 className="font-bold text-navy mb-2">{c.title}</h3><p className="text-gray text-sm">{c.description}</p>{c.link && <Link prefetch={false} href={c.link.href} className="inline-block mt-3 text-sm font-semibold text-teal hover:text-navy">{c.link.text} →</Link>}</div></FadeIn>
             ))}
           </div>
         </div>
