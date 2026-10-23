@@ -13,7 +13,7 @@ test.describe('Cycle 18: Cardiac LVAD Reoperation & Pediatric Epilepsy Suite', (
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Complex Adult Cardiac Reoperation & Ventricular Assist Devices/i);
+    await expect(page).toHaveTitle(/Cardiac Reoperation & LVAD/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Complex Adult Cardiac Reoperation & Ventricular Assist Devices/i);
 
     // CPT badges & key clinical concepts

@@ -32,7 +32,7 @@ test.describe('Cycle 26 Expansion: Pediatric Biochemical Genetics & Skull Base E
     await page.goto(`${BASE_URL}/medical-billing/skull-base-cerebrovascular-bypass`);
     await page.waitForLoadState('domcontentloaded');
 
-    await expect(page).toHaveTitle(/Skull Base Cerebrovascular Bypass|EC-IC Anastomosis/i);
+    await expect(page).toHaveTitle(/Cerebrovascular Bypass \(EC-IC\)/i);
 
     const heading = page.getByRole('heading', { level: 1 });
     await expect(heading).toContainText(/Skull Base Cerebrovascular Bypass/i);

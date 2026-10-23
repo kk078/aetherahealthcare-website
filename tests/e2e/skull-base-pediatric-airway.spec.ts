@@ -13,7 +13,7 @@ test.describe('Cycle 19: Lateral Skull Base & Pediatric Airway Suite', () => {
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Complex Lateral Skull Base Surgery & Acoustic Neuroma Resection/i);
+    await expect(page).toHaveTitle(/Lateral Skull Base & Acoustic Neuroma/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Complex Lateral Skull Base Surgery & Acoustic Neuroma Resection/i);
 
     // CPT badges & key clinical concepts
@@ -34,7 +34,7 @@ test.describe('Cycle 19: Lateral Skull Base & Pediatric Airway Suite', () => {
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Pediatric Airway Reconstruction & Complex Laryngotracheal Stenosis/i);
+    await expect(page).toHaveTitle(/Pediatric Airway Reconstruction/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Pediatric Airway Reconstruction & Complex Laryngotracheal Stenosis/i);
 
     // CPT badges & key clinical concepts

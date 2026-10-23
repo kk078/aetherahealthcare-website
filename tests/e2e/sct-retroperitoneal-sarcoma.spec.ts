@@ -31,7 +31,7 @@ test.describe('Cycle 30 Expansion: Pediatric SCT Coccygectomy & Retroperitoneal 
     await page.goto(`${BASE_URL}/medical-billing/adult-retroperitoneal-sarcoma`);
     await page.waitForLoadState('domcontentloaded');
 
-    await expect(page).toHaveTitle(/Complex Adult Retroperitoneal Sarcoma|Multivisceral/i);
+    await expect(page).toHaveTitle(/Retroperitoneal Sarcoma Resection/i);
 
     const heading = page.getByRole('heading', { level: 1 });
     await expect(heading).toContainText(/Complex Adult Retroperitoneal Sarcoma/i);

@@ -13,7 +13,7 @@ test.describe('Cycle 23: Pediatric CDH ECMO & TAAA FEVAR Suite', () => {
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Pediatric Congenital Diaphragmatic Hernia \(CDH\) & ECMO Surgical Repair/i);
+    await expect(page).toHaveTitle(/Pediatric CDH Repair & ECMO/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Pediatric Congenital Diaphragmatic Hernia \(CDH\) & ECMO Surgical Repair/i);
 
     // CPT badges & key clinical concepts
@@ -33,7 +33,7 @@ test.describe('Cycle 23: Pediatric CDH ECMO & TAAA FEVAR Suite', () => {
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Thoracoabdominal Aortic Aneurysm \(TAAA\) Repair & Branched\/Fenestrated EVAR/i);
+    await expect(page).toHaveTitle(/TAAA Repair & Fenestrated EVAR/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Thoracoabdominal Aortic Aneurysm \(TAAA\) Repair & Branched\/Fenestrated EVAR/i);
 
     // CPT badges & key clinical concepts

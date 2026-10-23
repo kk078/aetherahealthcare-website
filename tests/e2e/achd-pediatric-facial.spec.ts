@@ -13,7 +13,7 @@ test.describe('Cycle 20: ACHD & Pediatric Facial Reanimation Suite', () => {
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Adult Congenital Heart Disease/i);
+    await expect(page).toHaveTitle(/ACHD & Fontan Conversion/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Adult Congenital Heart Disease \(ACHD\) & Fontan Conversion/i);
 
     // CPT badges & key clinical concepts
@@ -33,7 +33,7 @@ test.describe('Cycle 20: ACHD & Pediatric Facial Reanimation Suite', () => {
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Pediatric Complex Facial Reanimation & Free Gracilis Transfer/i);
+    await expect(page).toHaveTitle(/Pediatric Facial Reanimation/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Pediatric Complex Facial Reanimation & Free Gracilis Transfer/i);
 
     // CPT badges & key clinical concepts
