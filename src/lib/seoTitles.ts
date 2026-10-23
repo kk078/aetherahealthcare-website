@@ -92,3 +92,15 @@ export const SPECIALTY_TITLE_NAMES: Record<string, string> = {
   'taaa-fenestrated-evar': 'TAAA Repair & Fenestrated EVAR',
   'urogynecology': 'Urogynecology & Gynecologic MIS',
 };
+
+/** Payer slug -> shorter name for "<name> — Payer ID & EDI Reference" titles; the page keeps the full legal name. */
+export const PAYER_TITLE_NAMES: Record<string, string> = {
+  'florida-blue': 'Florida Blue (BCBS of Florida)',
+  'ngs-medicare-j6': 'NGS Medicare Jurisdiction 6',
+  'ngs-medicare-jk': 'NGS Medicare Jurisdiction K',
+  'noridian-medicare-je': 'Noridian Medicare Jurisdiction E',
+  'noridian-medicare-jf': 'Noridian Medicare Jurisdiction F',
+  'prestige-health-choice': 'AmeriHealth Caritas Florida (Prestige)',
+  'wps-gha-j5': 'WPS Medicare Jurisdiction 5',
+  'wps-gha-j8': 'WPS Medicare Jurisdiction 8',
+};

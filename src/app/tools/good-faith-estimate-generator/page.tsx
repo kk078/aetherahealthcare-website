@@ -8,11 +8,11 @@ import { ShieldCheck, FileCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools/good-faith-estimate-generator') },
-  title: 'Good Faith Estimate (GFE) Generator | CMS No Surprises Act Compliance',
+  title: 'No Surprises Act Good Faith Estimate Generator',
   description:
     'Generate Good Faith Estimates for uninsured and self-pay patients under 45 CFR 149.610, with itemized services, co-provider fees and dispute notices.',
 
-  ...marketingMetadata("/tools/good-faith-estimate-generator", 'Good Faith Estimate (GFE) Generator | CMS No Surprises Act Compliance', 'Generate Good Faith Estimates for uninsured and self-pay patients under 45 CFR 149.610, with itemized services, co-provider fees and dispute notices.'),
+  ...marketingMetadata("/tools/good-faith-estimate-generator", 'No Surprises Act Good Faith Estimate Generator', 'Generate Good Faith Estimates for uninsured and self-pay patients under 45 CFR 149.610, with itemized services, co-provider fees and dispute notices.'),
 };
 
 export default function GoodFaithEstimatePage() {

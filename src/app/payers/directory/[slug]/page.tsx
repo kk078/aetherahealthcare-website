@@ -1,4 +1,5 @@
 import { fitDescription, fitTitle, marketingMetadata } from '@/lib/marketing';
+import { PAYER_TITLE_NAMES } from '@/lib/seoTitles';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -35,13 +36,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = getPayer(slug);
   if (!p) return { title: 'Payer Not Found' };
+  const titleName = PAYER_TITLE_NAMES[p.slug] ?? p.name;
   return {
     ...marketingMetadata(`/payers/directory/${slug}`, `${p.name} — Payer ID & EDI Reference`, fitDescription(
     `${p.name}: payer IDs, timely-filing references and EDI routing. Confirm current requirements with the payer or clearinghouse before use.`,
     `${p.name}: payer IDs, timely-filing references and EDI routing for claims submission.`,
     `${p.name}: payer IDs, timely-filing references and EDI routing.`,
     )),
-    title: { absolute: fitTitle(`${p.name} — Payer ID & EDI Reference`, `${p.name} Payer ID & EDI`, `${p.name} Payer ID`) },
+    title: { absolute: fitTitle(`${titleName} — Payer ID & EDI Reference`, `${titleName} Payer ID & EDI`, `${titleName} Payer ID`) },
   };
 }
 
