@@ -12,7 +12,7 @@ test.describe('Cycle 29 Expansion: Single-Ventricle Palliation & Adult Spine Def
     await page.goto(`${BASE_URL}/medical-billing/pediatric-single-ventricle-palliation`);
     await page.waitForLoadState('domcontentloaded');
 
-    await expect(page).toHaveTitle(/Pediatric Single-Ventricle Congenital Heart Disease Palliation|Norwood/i);
+    await expect(page).toHaveTitle(/Pediatric Single-Ventricle Palliation/i);
 
     const heading = page.getByRole('heading', { level: 1 });
     await expect(heading).toContainText(/Pediatric Single-Ventricle Congenital Heart Disease Palliation/i);

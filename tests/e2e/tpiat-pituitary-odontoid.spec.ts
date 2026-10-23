@@ -31,7 +31,7 @@ test.describe('Cycle 28 Expansion: Pediatric TPIAT Islet Transplant & Endoscopic
     await page.goto(`${BASE_URL}/medical-billing/endoscopic-pituitary-odontoid-resection`);
     await page.waitForLoadState('domcontentloaded');
 
-    await expect(page).toHaveTitle(/Endoscopic Transnasal Odontoid|Pituitary Skull Base/i);
+    await expect(page).toHaveTitle(/Endoscopic Skull Base & Pituitary/i);
 
     const heading = page.getByRole('heading', { level: 1 });
     await expect(heading).toContainText(/Endoscopic Transnasal Odontoid & Pituitary Skull Base Resection/i);

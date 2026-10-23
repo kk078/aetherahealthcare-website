@@ -13,7 +13,7 @@ test.describe('Cycle 22: Pediatric Craniosynostosis & Robotic Urologic Oncology 
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Pediatric Craniosynostosis & Cranial Vault Remodeling/i);
+    await expect(page).toHaveTitle(/Pediatric Craniosynostosis Surgery/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Pediatric Craniosynostosis & Cranial Vault Remodeling/i);
 
     // CPT badges & key clinical concepts
@@ -33,7 +33,7 @@ test.describe('Cycle 22: Pediatric Craniosynostosis & Robotic Urologic Oncology 
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Cytoreductive Prostatectomy & High-Risk Robotic Urologic Oncology/i);
+    await expect(page).toHaveTitle(/Robotic Urologic Oncology/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Cytoreductive Prostatectomy & High-Risk Robotic Urologic Oncology/i);
 
     // CPT badges & key clinical concepts

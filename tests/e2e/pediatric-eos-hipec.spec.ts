@@ -13,7 +13,7 @@ test.describe('Cycle 21: Pediatric EOS & HIPEC Surgical Oncology Suite', () => {
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Complex Pediatric Spine Surgery & Early-Onset Scoliosis/i);
+    await expect(page).toHaveTitle(/Pediatric Spine & Early-Onset Scoliosis/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Complex Pediatric Spine Surgery & Early-Onset Scoliosis/i);
 
     // CPT badges & key clinical concepts
@@ -33,7 +33,7 @@ test.describe('Cycle 21: Pediatric EOS & HIPEC Surgical Oncology Suite', () => {
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Cytoreductive Surgery & Hyperthermic Intraperitoneal Chemotherapy/i);
+    await expect(page).toHaveTitle(/HIPEC & Cytoreductive Surgery/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Cytoreductive Surgery & Hyperthermic Intraperitoneal Chemotherapy/i);
 
     // CPT badges & key clinical concepts

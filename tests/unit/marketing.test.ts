@@ -35,3 +35,14 @@ test('all educational tools and articles expose primary references without inven
   for (const post of POSTS) { assert.ok(post.referenceUrls?.length, post.slug); assert.equal(post.author, 'Aethera Editorial Team'); }
   for (const slug of ['endocrinology', 'general-surgery']) assert.ok(SEO_SPECIALTIES.find(s => s.slug === slug));
 });
+test('short search titles point at real pages and fit a search result', async () => {
+  const { BLOG_SEO_TITLES, SPECIALTY_TITLE_NAMES } = await import('../../src/lib/seoTitles');
+  for (const [slug, title] of Object.entries(BLOG_SEO_TITLES)) {
+    assert.ok(POSTS.find(p => p.slug === slug), slug);
+    assert.ok(fitTitle(title).length <= TITLE_MAX, slug);
+  }
+  for (const [slug, name] of Object.entries(SPECIALTY_TITLE_NAMES)) {
+    assert.ok(SEO_SPECIALTIES.find(s => s.slug === slug), slug);
+    assert.ok(fitTitle(`${name} Medical Billing Services`, `${name} Medical Billing`, `${name} Billing`).length <= TITLE_MAX, slug);
+  }
+});

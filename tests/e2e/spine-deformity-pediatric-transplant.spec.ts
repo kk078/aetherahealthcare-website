@@ -34,7 +34,7 @@ test.describe('Cycle 17: Complex Spine Deformity & Pediatric Transplant Suite', 
     await page.waitForLoadState('domcontentloaded');
 
     // Title and headings
-    await expect(page).toHaveTitle(/Pediatric Solid Organ Transplant & Intestinal Rehabilitation/i);
+    await expect(page).toHaveTitle(/Pediatric Solid Organ Transplant/i);
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/Pediatric Solid Organ Transplant & Intestinal Rehabilitation/i);
 
     // CPT badges & key clinical concepts

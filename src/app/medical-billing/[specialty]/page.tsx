@@ -1,4 +1,5 @@
 import { fitDescription, fitTitle, marketingMetadata } from '@/lib/marketing';
+import { SPECIALTY_TITLE_NAMES } from '@/lib/seoTitles';
 import { canonicalUrl } from '@/lib/siteConfig';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -20,9 +21,10 @@ export async function generateMetadata({ params }: { params: Params }) {
   const { specialty } = await params;
   const s = getSpecialty(specialty);
   if (!s) return {};
+  const titleName = SPECIALTY_TITLE_NAMES[s.slug] ?? s.name;
   return {
     ...marketingMetadata(s.serviceHref || `/medical-billing/${s.slug}`, `${s.name} Medical Billing Services`, `Medical billing review for ${s.noun}. ${s.blurb}`),
-    title: { absolute: fitTitle(`${s.name} Medical Billing Services`, `${s.name} Medical Billing`, `${s.name} Billing`) },
+    title: { absolute: fitTitle(`${titleName} Medical Billing Services`, `${titleName} Medical Billing`, `${titleName} Billing`) },
     description: fitDescription(
       `Nationwide ${s.name.toLowerCase()} medical billing and revenue cycle management for U.S. practices. ${s.blurb} Free assessment — no long-term contract.`,
       `${s.name} medical billing for U.S. practices. ${s.blurb}`,

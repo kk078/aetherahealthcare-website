@@ -32,7 +32,7 @@ test.describe('Cycle 27 Expansion: Pediatric MIBG Radiopharmaceutical & Complex 
     await page.goto(`${BASE_URL}/medical-billing/complex-robotic-hernia-reconstruction`);
     await page.waitForLoadState('domcontentloaded');
 
-    await expect(page).toHaveTitle(/Complex Robotic & Laparoscopic Hernia Reconstruction|Multi-Compartment/i);
+    await expect(page).toHaveTitle(/Robotic Hernia Reconstruction/i);
 
     const heading = page.getByRole('heading', { level: 1 });
     await expect(heading).toContainText(/Multi-Compartment Complex Robotic & Laparoscopic Hernia Reconstruction/i);
