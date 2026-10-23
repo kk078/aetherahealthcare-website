@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-single-ventricle-norwood-scrubber') },
   title: {
-    absolute: 'Pediatric Single-Ventricle Norwood & Glenn Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric Single-Ventricle Norwood & Glenn Scrubber | Aethera',
   },
   description:
     'Free single-ventricle palliation scrubber: audit Norwood (33619), Sano/BT shunts (33766/33750), Glenn (33767), Fontan and delayed sternal closure.',
 
-  ...marketingMetadata("/tools/pediatric-single-ventricle-norwood-scrubber", 'Pediatric Single-Ventricle Norwood & Glenn Scrubber | Free RCM Tool | Aethera Healthcare', 'Free single-ventricle palliation scrubber: audit Norwood (33619), Sano/BT shunts (33766/33750), Glenn (33767), Fontan and delayed sternal closure.'),
+  ...marketingMetadata("/tools/pediatric-single-ventricle-norwood-scrubber", 'Pediatric Single-Ventricle Norwood & Glenn Scrubber | Aethera', 'Free single-ventricle palliation scrubber: audit Norwood (33619), Sano/BT shunts (33766/33750), Glenn (33767), Fontan and delayed sternal closure.'),
 };
 
 export default function PediatricSingleVentricleScrubberPage() {

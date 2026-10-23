@@ -18,7 +18,7 @@ const REFERENCE_URL = '/tools/denial-code-lookup/reference.json';
 const DIFFICULTY_STYLE: Record<DenialDifficulty, string> = {
   correctable: 'bg-mint/20 text-teal border-mint/40',
   preventable: 'bg-amber-50 text-amber-700 border-amber-200',
-  hard: 'bg-red-50 text-red-600 border-red-200',
+  hard: 'bg-red-50 text-red-700 border-red-200',
 };
 
 type Mode = 'all' | 'guided' | 'CARC' | 'RARC';

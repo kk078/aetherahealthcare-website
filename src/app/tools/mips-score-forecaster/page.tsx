@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/mips-score-forecaster') },
   title: {
-    absolute: 'CMS MIPS Performance Score & Penalty Forecaster | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'CMS MIPS Performance Score & Penalty Forecaster | Aethera',
   },
   description:
     'Forecast your MIPS score out of 100 and the resulting Part B payment adjustment (up to -9%) across Quality, Interoperability, Improvement and Cost.',
 
-  ...marketingMetadata("/tools/mips-score-forecaster", 'CMS MIPS Performance Score & Penalty Forecaster | Free RCM Tool | Aethera Healthcare Solutions', 'Forecast your MIPS score out of 100 and the resulting Part B payment adjustment (up to -9%) across Quality, Interoperability, Improvement and Cost.'),
+  ...marketingMetadata("/tools/mips-score-forecaster", 'CMS MIPS Performance Score & Penalty Forecaster | Aethera', 'Forecast your MIPS score out of 100 and the resulting Part B payment adjustment (up to -9%) across Quality, Interoperability, Improvement and Cost.'),
 };
 
 export default function MipsScoreForecasterPage() {

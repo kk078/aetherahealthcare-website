@@ -145,7 +145,7 @@ export default function HipaaCompliance() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "name": "HIPAA Compliance Program | Aethera Healthcare Solutions",
+              "name": "HIPAA Compliance Program | Aethera",
               "description": "Comprehensive HIPAA compliance program for healthcare providers. Learn about our administrative, physical, and technical safeguards for protecting patient health information.",
               "url": "https://aetherahealthcare.com/compliance/hipaa",
               "publisher": {

@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-cell-therapy-scrubber') },
   title: {
-    absolute: 'Pediatric Stem Cell & CAR-T Cellular Therapy Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Pediatric Stem Cell & CAR-T Cellular Therapy Scrubber | Aethera',
   },
   description:
     'Free pediatric cell therapy scrubber: audit CAR-T infusions (0540T/Q2042), prior auth dossiers, CRS critical care (99291) and procedure bundling.',
 
-  ...marketingMetadata("/tools/pediatric-cell-therapy-scrubber", 'Pediatric Stem Cell & CAR-T Cellular Therapy Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free pediatric cell therapy scrubber: audit CAR-T infusions (0540T/Q2042), prior auth dossiers, CRS critical care (99291) and procedure bundling.'),
+  ...marketingMetadata("/tools/pediatric-cell-therapy-scrubber", 'Pediatric Stem Cell & CAR-T Cellular Therapy Scrubber | Aethera', 'Free pediatric cell therapy scrubber: audit CAR-T infusions (0540T/Q2042), prior auth dossiers, CRS critical care (99291) and procedure bundling.'),
 };
 
 export default function PediatricCellTherapyScrubberPage() {

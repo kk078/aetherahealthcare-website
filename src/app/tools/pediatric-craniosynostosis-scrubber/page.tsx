@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-craniosynostosis-scrubber') },
   title: {
-    absolute: 'Pediatric Cranial Vault Remodeling & Synostosis Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric Cranial Vault Remodeling & Synostosis Scrubber | Aethera',
   },
   description:
     'Free craniosynostosis scrubber: audit fronto-orbital advancement (21175), vault remodeling (21180), co-surgeon -62, bone grafts and helmet DME (L0112).',
 
-  ...marketingMetadata("/tools/pediatric-craniosynostosis-scrubber", 'Pediatric Cranial Vault Remodeling & Synostosis Scrubber | Free RCM Tool | Aethera Healthcare', 'Free craniosynostosis scrubber: audit fronto-orbital advancement (21175), vault remodeling (21180), co-surgeon -62, bone grafts and helmet DME (L0112).'),
+  ...marketingMetadata("/tools/pediatric-craniosynostosis-scrubber", 'Pediatric Cranial Vault Remodeling & Synostosis Scrubber | Aethera', 'Free craniosynostosis scrubber: audit fronto-orbital advancement (21175), vault remodeling (21180), co-surgeon -62, bone grafts and helmet DME (L0112).'),
 };
 
 export default function PediatricCraniosynostosisScrubberPage() {

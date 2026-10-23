@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/complex-robotic-hernia-tar-scrubber') },
   title: {
-    absolute: 'Complex Robotic Hernia & TAR Component Separation Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Complex Robotic Hernia & TAR Component Separation Scrubber | Aethera',
   },
   description:
     'Free robotic hernia scrubber: audit 2023+ ventral hernia codes (49591–49618), TAR component separation (+49622) and mesh placement (+49623).',
 
-  ...marketingMetadata("/tools/complex-robotic-hernia-tar-scrubber", 'Complex Robotic Hernia & TAR Component Separation Scrubber | Free RCM Tool | Aethera Healthcare', 'Free robotic hernia scrubber: audit 2023+ ventral hernia codes (49591–49618), TAR component separation (+49622) and mesh placement (+49623).'),
+  ...marketingMetadata("/tools/complex-robotic-hernia-tar-scrubber", 'Complex Robotic Hernia & TAR Component Separation Scrubber | Aethera', 'Free robotic hernia scrubber: audit 2023+ ventral hernia codes (49591–49618), TAR component separation (+49622) and mesh placement (+49623).'),
 };
 
 export default function ComplexRoboticHerniaTarScrubberPage() {

@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/nicu-critical-care-scrubber') },
   title: {
-    absolute: 'NICU & Pediatric Critical Care Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'NICU & Pediatric Critical Care Scrubber | Aethera',
   },
   description:
     'Free NICU critical care scrubber: validate neonatal per-day codes (99468–99476), weight-based step-down (99477–99480) and bundled line placements.',
 
-  ...marketingMetadata("/tools/nicu-critical-care-scrubber", 'NICU & Pediatric Critical Care Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free NICU critical care scrubber: validate neonatal per-day codes (99468–99476), weight-based step-down (99477–99480) and bundled line placements.'),
+  ...marketingMetadata("/tools/nicu-critical-care-scrubber", 'NICU & Pediatric Critical Care Scrubber | Aethera', 'Free NICU critical care scrubber: validate neonatal per-day codes (99468–99476), weight-based step-down (99477–99480) and bundled line placements.'),
 };
 
 export default function NicuCriticalCareScrubberPage() {

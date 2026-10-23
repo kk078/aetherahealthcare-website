@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/dialysis-mcp-calculator') },
   title: {
-    absolute: 'Dialysis Monthly Capitation Payment (MCP) Calculator | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Dialysis Monthly Capitation Payment (MCP) Calculator | Aethera',
   },
   description:
     'Free dialysis MCP calculator: physician payment under CPT 90951–90962 and 90966, inpatient-stay pro-rations, and downcoding recovery.',
 
-  ...marketingMetadata("/tools/dialysis-mcp-calculator", 'Dialysis Monthly Capitation Payment (MCP) Calculator | Free RCM Tool | Aethera Healthcare Solutions', 'Free dialysis MCP calculator: physician payment under CPT 90951–90962 and 90966, inpatient-stay pro-rations, and downcoding recovery.'),
+  ...marketingMetadata("/tools/dialysis-mcp-calculator", 'Dialysis Monthly Capitation Payment (MCP) Calculator | Aethera', 'Free dialysis MCP calculator: physician payment under CPT 90951–90962 and 90966, inpatient-stay pro-rations, and downcoding recovery.'),
 };
 
 export default function DialysisMcpCalculatorPage() {

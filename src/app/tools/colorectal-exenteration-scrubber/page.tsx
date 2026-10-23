@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/colorectal-exenteration-scrubber') },
   title: {
-    absolute: 'Colorectal Surgery & Pelvic Exenteration Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Colorectal Surgery & Pelvic Exenteration Scrubber | Aethera',
   },
   description:
     'Free colorectal and pelvic exenteration scrubber: audit TME (45110/45119), exenteration (45126), diverting ileostomy (44320) and co-surgeon -62.',
 
-  ...marketingMetadata("/tools/colorectal-exenteration-scrubber", 'Colorectal Surgery & Pelvic Exenteration Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free colorectal and pelvic exenteration scrubber: audit TME (45110/45119), exenteration (45126), diverting ileostomy (44320) and co-surgeon -62.'),
+  ...marketingMetadata("/tools/colorectal-exenteration-scrubber", 'Colorectal Surgery & Pelvic Exenteration Scrubber | Aethera', 'Free colorectal and pelvic exenteration scrubber: audit TME (45110/45119), exenteration (45126), diverting ileostomy (44320) and co-surgeon -62.'),
 };
 
 export default function ColorectalExenterationScrubberPage() {

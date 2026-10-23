@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-epilepsy-scrubber') },
   title: {
-    absolute: 'Pediatric Hemispherotomy & Stereo-EEG Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric Hemispherotomy & Stereo-EEG Scrubber | Aethera',
   },
   description:
     'Free pediatric epilepsy surgery scrubber: audit stereo-EEG (61760), robotic stereotaxy (+61781), staged hemispherotomy (61543-58) and video-EEG.',
 
-  ...marketingMetadata("/tools/pediatric-epilepsy-scrubber", 'Pediatric Hemispherotomy & Stereo-EEG Scrubber | Free RCM Tool | Aethera Healthcare', 'Free pediatric epilepsy surgery scrubber: audit stereo-EEG (61760), robotic stereotaxy (+61781), staged hemispherotomy (61543-58) and video-EEG.'),
+  ...marketingMetadata("/tools/pediatric-epilepsy-scrubber", 'Pediatric Hemispherotomy & Stereo-EEG Scrubber | Aethera', 'Free pediatric epilepsy surgery scrubber: audit stereo-EEG (61760), robotic stereotaxy (+61781), staged hemispherotomy (61543-58) and video-EEG.'),
 };
 
 export default function PediatricEpilepsyScrubberPage() {

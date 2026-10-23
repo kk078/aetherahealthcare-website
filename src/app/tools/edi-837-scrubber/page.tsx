@@ -8,11 +8,11 @@ import { Code2, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools/edi-837-scrubber') },
-  title: { absolute: 'ANSI X12 837 Claim File Syntax & Rejection Inspector | Aethera Healthcare' },
+  title: { absolute: 'ANSI X12 837 Claim File Syntax & Rejection Inspector | Aethera' },
   description:
     'Free online ANSI X12 837P and 837I electronic claim file scrubber. Inspect Loops 2010AA, 2010BA, 2300, and 2400 to prevent 277CA clearinghouse rejections.',
 
-  ...marketingMetadata("/tools/edi-837-scrubber", 'ANSI X12 837 Claim File Syntax & Rejection Inspector | Aethera Healthcare', 'Free online ANSI X12 837P and 837I electronic claim file scrubber. Inspect Loops 2010AA, 2010BA, 2300, and 2400 to prevent 277CA clearinghouse rejections.'),
+  ...marketingMetadata("/tools/edi-837-scrubber", 'ANSI X12 837 Claim File Syntax & Rejection Inspector | Aethera', 'Free online ANSI X12 837P and 837I electronic claim file scrubber. Inspect Loops 2010AA, 2010BA, 2300, and 2400 to prevent 277CA clearinghouse rejections.'),
 };
 
 export default function Edi837Page() {

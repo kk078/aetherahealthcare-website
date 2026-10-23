@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/ambulance-fee-calculator') },
   title: {
-    absolute: 'Ambulance & EMS Fee Schedule Calculator | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Ambulance & EMS Fee Schedule Calculator | Aethera',
   },
   description:
     'Free Medicare ambulance fee calculator: BLS, ALS1, ALS2 and SCT rates, rural mileage bonuses, origin/destination modifiers and 837P CR1 segments.',
 
-  ...marketingMetadata("/tools/ambulance-fee-calculator", 'Ambulance & EMS Fee Schedule Calculator | Free RCM Tool | Aethera Healthcare Solutions', 'Free Medicare ambulance fee calculator: BLS, ALS1, ALS2 and SCT rates, rural mileage bonuses, origin/destination modifiers and 837P CR1 segments.'),
+  ...marketingMetadata("/tools/ambulance-fee-calculator", 'Ambulance & EMS Fee Schedule Calculator | Aethera', 'Free Medicare ambulance fee calculator: BLS, ALS1, ALS2 and SCT rates, rural mileage bonuses, origin/destination modifiers and 837P CR1 segments.'),
 };
 
 export default function AmbulanceFeeCalculatorPage() {

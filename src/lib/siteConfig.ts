@@ -2,6 +2,8 @@ import { CONTACT_EMAIL } from './business';
 /** Public business settings. Outcomes require a scoped, signed service agreement. */
 export const SITE = {
   name: 'Aethera Healthcare Solutions',
+  /** Brand suffix for <title>; the full name made 524 of 534 titles too long (FINDINGS #12). */
+  titleSuffix: 'Aethera',
   url: 'https://aetherahealthcare.com',
   contactEmail: CONTACT_EMAIL,
   contactPath: '/contact/',

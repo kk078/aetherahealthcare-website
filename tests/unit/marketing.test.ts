@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { marketingMetadata, revenueScenario } from '../../src/lib/marketing';
+import { fitTitle, marketingMetadata, revenueScenario, TITLE_MAX } from '../../src/lib/marketing';
 import { OFFERS, SITE } from '../../src/lib/siteConfig';
 import { TOOLS } from '../../src/lib/toolRegistry';
 import { POSTS } from '../../src/lib/blogPosts';
@@ -13,9 +13,16 @@ test('scenario accounts for fees on projected net collections and allows negativ
 });
 test('page metadata uses its own URL and one brand suffix', () => {
   const metadata = marketingMetadata('/pricing', 'Pricing | Aethera Healthcare Solutions', 'Scope and pricing');
-  assert.deepEqual(metadata.title, { absolute: `Pricing | ${SITE.name}` });
+  assert.deepEqual(metadata.title, { absolute: `Pricing | ${SITE.titleSuffix}` });
   assert.equal(metadata.openGraph?.url, metadata.alternates?.canonical);
   assert.match(String(metadata.alternates?.canonical), /\/pricing\/$/);
+});
+test('titles keep the brand suffix only when it fits, and prefer a descriptive candidate over the brand', () => {
+  assert.equal(fitTitle('Pricing'), `Pricing | ${SITE.titleSuffix}`);
+  const long = 'A'.repeat(TITLE_MAX - 2);
+  assert.equal(fitTitle(long), long);
+  assert.equal(fitTitle(`${long} Services`, long, 'Short'), long);
+  assert.equal(fitTitle('B'.repeat(TITLE_MAX + 5), 'B'.repeat(TITLE_MAX + 1)), 'B'.repeat(TITLE_MAX + 1));
 });
 test('different offers have explicit scopes and start conditions', () => {
   assert.notEqual(OFFERS.sprint.id, OFFERS.pilot.id);

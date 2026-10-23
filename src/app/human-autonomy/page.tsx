@@ -10,10 +10,10 @@ import { jsonLd } from '@/lib/jsonLd';
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/human-autonomy') },
-  title: 'Human Autonomy in Healthcare RCM — Evidence & Review | Aethera Healthcare',
+  title: 'Human Autonomy in Healthcare RCM — Evidence & Review | Aethera',
   description: 'Explore human review in healthcare billing with sourced Medicare references, bounded educational calculators, and clear documentation checkpoints.',
 
-  ...marketingMetadata("/human-autonomy", 'Human Autonomy in Healthcare RCM — Evidence & Review | Aethera Healthcare', 'Explore human review in healthcare billing with sourced Medicare references, bounded educational calculators, and clear documentation checkpoints.'),
+  ...marketingMetadata("/human-autonomy", 'Human Autonomy in Healthcare RCM — Evidence & Review | Aethera', 'Explore human review in healthcare billing with sourced Medicare references, bounded educational calculators, and clear documentation checkpoints.'),
 };
 const FAQS = [
   { q: 'Does human sign-off guarantee compliance or payment?', a: 'No. Human review can identify errors and document decisions, but neither a credential nor a completed checklist guarantees coverage, payment or legal immunity. Review the actual record, applicable rules and payer requirements.' },

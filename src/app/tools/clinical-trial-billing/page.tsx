@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/clinical-trial-billing') },
   title: {
-    absolute: 'Clinical Trial Billing & Coverage Analysis Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Clinical Trial Billing & Coverage Analysis Scrubber | Aethera',
   },
   description:
     'Separate routine care from sponsor-paid items under NCD 310.1: NCT numbers, Q0/Q1 modifiers, IDE Category A/B and the Z00.6 secondary diagnosis.',
 
-  ...marketingMetadata("/tools/clinical-trial-billing", 'Clinical Trial Billing & Coverage Analysis Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Separate routine care from sponsor-paid items under NCD 310.1: NCT numbers, Q0/Q1 modifiers, IDE Category A/B and the Z00.6 secondary diagnosis.'),
+  ...marketingMetadata("/tools/clinical-trial-billing", 'Clinical Trial Billing & Coverage Analysis Scrubber | Aethera', 'Separate routine care from sponsor-paid items under NCD 310.1: NCT numbers, Q0/Q1 modifiers, IDE Category A/B and the Z00.6 secondary diagnosis.'),
 };
 
 export default function ClinicalTrialBillingPage() {

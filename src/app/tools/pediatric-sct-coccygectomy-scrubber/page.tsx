@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-sct-coccygectomy-scrubber') },
   title: {
-    absolute: 'Pediatric SCT & Coccygectomy Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric SCT & Coccygectomy Scrubber | Aethera',
   },
   description:
     'Free sacrococcygeal teratoma scrubber: audit teratoma resection (49220/45120), en-bloc coccygectomy, combined approaches and pelvic floor repair.',
 
-  ...marketingMetadata("/tools/pediatric-sct-coccygectomy-scrubber", 'Pediatric SCT & Coccygectomy Scrubber | Free RCM Tool | Aethera Healthcare', 'Free sacrococcygeal teratoma scrubber: audit teratoma resection (49220/45120), en-bloc coccygectomy, combined approaches and pelvic floor repair.'),
+  ...marketingMetadata("/tools/pediatric-sct-coccygectomy-scrubber", 'Pediatric SCT & Coccygectomy Scrubber | Aethera', 'Free sacrococcygeal teratoma scrubber: audit teratoma resection (49220/45120), en-bloc coccygectomy, combined approaches and pelvic floor repair.'),
 };
 
 export default function PediatricSctCoccygectomyScrubberPage() {

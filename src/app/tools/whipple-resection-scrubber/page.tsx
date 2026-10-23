@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/whipple-resection-scrubber') },
   title: {
-    absolute: 'Whipple Procedure & Pancreatic Resection Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Whipple Procedure & Pancreatic Resection Scrubber | Aethera',
   },
   description:
     'Free Whipple scrubber: audit classic vs. pylorus-preserving pancreaticoduodenectomy (48150 vs. 48153), vein reconstruction (+35221) and -62.',
 
-  ...marketingMetadata("/tools/whipple-resection-scrubber", 'Whipple Procedure & Pancreatic Resection Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free Whipple scrubber: audit classic vs. pylorus-preserving pancreaticoduodenectomy (48150 vs. 48153), vein reconstruction (+35221) and -62.'),
+  ...marketingMetadata("/tools/whipple-resection-scrubber", 'Whipple Procedure & Pancreatic Resection Scrubber | Aethera', 'Free Whipple scrubber: audit classic vs. pylorus-preserving pancreaticoduodenectomy (48150 vs. 48153), vein reconstruction (+35221) and -62.'),
 };
 
 export default function WhippleResectionScrubberPage() {

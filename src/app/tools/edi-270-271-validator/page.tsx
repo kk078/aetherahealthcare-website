@@ -8,11 +8,11 @@ import { FileCode2, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools/edi-270-271-validator') },
-  title: { absolute: 'ANSI X12 270/271 Real-Time Eligibility & Benefit Validator | Aethera Healthcare' },
+  title: { absolute: 'ANSI X12 270/271 Real-Time Eligibility & Benefit Validator | Aethera' },
   description:
     'Free X12 270/271 eligibility parser: decode raw 271 responses into active coverage, copays, deductibles and coinsurance you can read.',
 
-  ...marketingMetadata("/tools/edi-270-271-validator", 'ANSI X12 270/271 Real-Time Eligibility & Benefit Validator | Aethera Healthcare', 'Free X12 270/271 eligibility parser: decode raw 271 responses into active coverage, copays, deductibles and coinsurance you can read.'),
+  ...marketingMetadata("/tools/edi-270-271-validator", 'ANSI X12 270/271 Real-Time Eligibility & Benefit Validator | Aethera', 'Free X12 270/271 eligibility parser: decode raw 271 responses into active coverage, copays, deductibles and coinsurance you can read.'),
 };
 
 export default function Edi270271Page() {

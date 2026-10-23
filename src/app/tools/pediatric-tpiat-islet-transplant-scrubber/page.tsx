@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-tpiat-islet-transplant-scrubber') },
   title: {
-    absolute: 'Pediatric TPIAT & Islet Isolation Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric TPIAT & Islet Isolation Scrubber | Aethera',
   },
   description:
     'Free TPIAT scrubber: audit total pancreatectomy (48155), islet isolation (48805), islet autotransplantation (+48554) and portal vein catheterization.',
 
-  ...marketingMetadata("/tools/pediatric-tpiat-islet-transplant-scrubber", 'Pediatric TPIAT & Islet Isolation Scrubber | Free RCM Tool | Aethera Healthcare', 'Free TPIAT scrubber: audit total pancreatectomy (48155), islet isolation (48805), islet autotransplantation (+48554) and portal vein catheterization.'),
+  ...marketingMetadata("/tools/pediatric-tpiat-islet-transplant-scrubber", 'Pediatric TPIAT & Islet Isolation Scrubber | Aethera', 'Free TPIAT scrubber: audit total pancreatectomy (48155), islet isolation (48805), islet autotransplantation (+48554) and portal vein catheterization.'),
 };
 
 export default function PediatricTpiatScrubberPage() {

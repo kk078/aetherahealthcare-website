@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/cardiothoracic-cannulation-scrubber') },
   title: {
-    absolute: 'Cardiothoracic Bypass & Cannulation Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Cardiothoracic Bypass & Cannulation Scrubber | Aethera',
   },
   description:
     'Free cardiothoracic scrubber: audit CABG graft combinations (33533–33536, 33517–33523), vein harvest (+33508), valve sequencing and ECMO bundling.',
 
-  ...marketingMetadata("/tools/cardiothoracic-cannulation-scrubber", 'Cardiothoracic Bypass & Cannulation Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free cardiothoracic scrubber: audit CABG graft combinations (33533–33536, 33517–33523), vein harvest (+33508), valve sequencing and ECMO bundling.'),
+  ...marketingMetadata("/tools/cardiothoracic-cannulation-scrubber", 'Cardiothoracic Bypass & Cannulation Scrubber | Aethera', 'Free cardiothoracic scrubber: audit CABG graft combinations (33533–33536, 33517–33523), vein harvest (+33508), valve sequencing and ECMO bundling.'),
 };
 
 export default function CardiothoracicCannulationScrubberPage() {

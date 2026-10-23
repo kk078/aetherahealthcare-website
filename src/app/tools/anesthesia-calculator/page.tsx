@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/anesthesia-calculator') },
   title: {
-    absolute: 'Anesthesia ASA Unit & Reimbursement Calculator | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Anesthesia ASA Unit & Reimbursement Calculator | Aethera',
   },
   description:
     'Calculate ASA anesthesia units (base, time, physical status, qualifying circumstances) and payment under Medicare, commercial and concurrency rules.',
 
-  ...marketingMetadata("/tools/anesthesia-calculator", 'Anesthesia ASA Unit & Reimbursement Calculator | Free RCM Tool | Aethera Healthcare Solutions', 'Calculate ASA anesthesia units (base, time, physical status, qualifying circumstances) and payment under Medicare, commercial and concurrency rules.'),
+  ...marketingMetadata("/tools/anesthesia-calculator", 'Anesthesia ASA Unit & Reimbursement Calculator | Aethera', 'Calculate ASA anesthesia units (base, time, physical status, qualifying circumstances) and payment under Medicare, commercial and concurrency rules.'),
 };
 
 export default function AnesthesiaCalculatorPage() {

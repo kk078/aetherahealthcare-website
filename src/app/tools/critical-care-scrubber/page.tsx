@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/critical-care-scrubber') },
   title: {
-    absolute: 'Emergency & Critical Care Time Documentation Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Emergency & Critical Care Time Documentation Scrubber | Aethera',
   },
   description:
     'Free critical care scrubber: validate CPT 99291/99292 time thresholds, deduct separately billed procedures and apply split/shared visit rules.',
 
-  ...marketingMetadata("/tools/critical-care-scrubber", 'Emergency & Critical Care Time Documentation Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free critical care scrubber: validate CPT 99291/99292 time thresholds, deduct separately billed procedures and apply split/shared visit rules.'),
+  ...marketingMetadata("/tools/critical-care-scrubber", 'Emergency & Critical Care Time Documentation Scrubber | Aethera', 'Free critical care scrubber: validate CPT 99291/99292 time thresholds, deduct separately billed procedures and apply split/shared visit rules.'),
 };
 
 export default function CriticalCareScrubberPage() {

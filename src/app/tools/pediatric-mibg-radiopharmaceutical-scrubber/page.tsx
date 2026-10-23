@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-mibg-radiopharmaceutical-scrubber') },
   title: {
-    absolute: 'Pediatric Targeted MIBG & Radiopharmaceutical Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric Targeted MIBG & Radiopharmaceutical Scrubber | Aethera',
   },
   description:
     'Free MIBG therapy scrubber: audit I-131 MIBG administration (79445), A9508 isotope pass-through, physics consults, SPECT/CT dosimetry and stem cells.',
 
-  ...marketingMetadata("/tools/pediatric-mibg-radiopharmaceutical-scrubber", 'Pediatric Targeted MIBG & Radiopharmaceutical Scrubber | Free RCM Tool | Aethera Healthcare', 'Free MIBG therapy scrubber: audit I-131 MIBG administration (79445), A9508 isotope pass-through, physics consults, SPECT/CT dosimetry and stem cells.'),
+  ...marketingMetadata("/tools/pediatric-mibg-radiopharmaceutical-scrubber", 'Pediatric Targeted MIBG & Radiopharmaceutical Scrubber | Aethera', 'Free MIBG therapy scrubber: audit I-131 MIBG administration (79445), A9508 isotope pass-through, physics consults, SPECT/CT dosimetry and stem cells.'),
 };
 
 export default function PediatricMibgRadiopharmaceuticalScrubberPage() {

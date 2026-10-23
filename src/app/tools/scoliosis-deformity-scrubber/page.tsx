@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/scoliosis-deformity-scrubber') },
   title: {
-    absolute: 'Pediatric Scoliosis & Multi-Rod Deformity Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Pediatric Scoliosis & Multi-Rod Deformity Scrubber | Aethera',
   },
   description:
     'Free pediatric scoliosis scrubber: audit posterior fusions (22800–22804), interspace downcoding, pelvic fixation (+22848) and Ponte osteotomies.',
 
-  ...marketingMetadata("/tools/scoliosis-deformity-scrubber", 'Pediatric Scoliosis & Multi-Rod Deformity Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free pediatric scoliosis scrubber: audit posterior fusions (22800–22804), interspace downcoding, pelvic fixation (+22848) and Ponte osteotomies.'),
+  ...marketingMetadata("/tools/scoliosis-deformity-scrubber", 'Pediatric Scoliosis & Multi-Rod Deformity Scrubber | Aethera', 'Free pediatric scoliosis scrubber: audit posterior fusions (22800–22804), interspace downcoding, pelvic fixation (+22848) and Ponte osteotomies.'),
 };
 
 export default function ScoliosisDeformityScrubberPage() {

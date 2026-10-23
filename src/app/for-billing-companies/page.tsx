@@ -10,10 +10,10 @@ import BillingPartnerRoiCalculator from '@/components/ui/BillingPartnerRoiCalcul
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/for-billing-companies') },
-  title: { absolute: 'For Billing Companies | White-Label RCM Back Office | Aethera Healthcare' },
+  title: { absolute: 'For Billing Companies | White-Label RCM Back Office | Aethera' },
   description: 'Keep your clients and your brand. Aethera runs eligibility, claims, posting, A/R follow-up and denials behind you, to your SLAs. Free 50-claim pilot.',
 
-  ...marketingMetadata("/for-billing-companies", 'For Billing Companies | White-Label RCM Back Office | Aethera Healthcare', 'Keep your clients and your brand. Aethera runs eligibility, claims, posting, A/R follow-up and denials behind you, to your SLAs. Free 50-claim pilot.'),
+  ...marketingMetadata("/for-billing-companies", 'For Billing Companies | White-Label RCM Back Office | Aethera', 'Keep your clients and your brand. Aethera runs eligibility, claims, posting, A/R follow-up and denials behind you, to your SLAs. Free 50-claim pilot.'),
 };
 
 const pains = [

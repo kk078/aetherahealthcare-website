@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/spine-arthrodesis-scrubber') },
   title: {
-    absolute: 'Spine Arthrodesis & Multi-Level Instrumentation Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Spine Arthrodesis & Multi-Level Instrumentation Scrubber | Aethera',
   },
   description:
     'Free spinal fusion scrubber: audit TLIF/PLIF (22633), ACDF (22551) and ALIF (22558), decompression bundling (63047), -62, instrumentation and grafts.',
 
-  ...marketingMetadata("/tools/spine-arthrodesis-scrubber", 'Spine Arthrodesis & Multi-Level Instrumentation Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free spinal fusion scrubber: audit TLIF/PLIF (22633), ACDF (22551) and ALIF (22558), decompression bundling (63047), -62, instrumentation and grafts.'),
+  ...marketingMetadata("/tools/spine-arthrodesis-scrubber", 'Spine Arthrodesis & Multi-Level Instrumentation Scrubber | Aethera', 'Free spinal fusion scrubber: audit TLIF/PLIF (22633), ACDF (22551) and ALIF (22558), decompression bundling (63047), -62, instrumentation and grafts.'),
 };
 
 export default function SpineArthrodesisScrubberPage() {

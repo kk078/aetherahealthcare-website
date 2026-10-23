@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/rad-onc-scrubber') },
   title: {
-    absolute: 'Radiation Oncology IMRT Bundling & Fraction Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Radiation Oncology IMRT Bundling & Fraction Scrubber | Aethera',
   },
   description:
     'Free radiation oncology scrubber: check IMRT planning (CPT 77301) edits against simulation and dosimetry, and weekly management (77427) fractions.',
 
-  ...marketingMetadata("/tools/rad-onc-scrubber", 'Radiation Oncology IMRT Bundling & Fraction Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free radiation oncology scrubber: check IMRT planning (CPT 77301) edits against simulation and dosimetry, and weekly management (77427) fractions.'),
+  ...marketingMetadata("/tools/rad-onc-scrubber", 'Radiation Oncology IMRT Bundling & Fraction Scrubber | Aethera', 'Free radiation oncology scrubber: check IMRT planning (CPT 77301) edits against simulation and dosimetry, and weekly management (77427) fractions.'),
 };
 
 export default function RadOncScrubberPage() {

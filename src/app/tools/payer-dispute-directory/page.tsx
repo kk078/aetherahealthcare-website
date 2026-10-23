@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/payer-dispute-directory') },
   title: {
-    absolute: 'Payer Dispute & Electronic Appeals Directory | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Payer Dispute & Electronic Appeals Directory | Aethera',
   },
   description:
     'Appeal deadlines, dispute portals, clearinghouse IDs and escalation contacts for 16+ major commercial, Medicare Advantage and Medicaid payers.',
 
-  ...marketingMetadata("/tools/payer-dispute-directory", 'Payer Dispute & Electronic Appeals Directory | Free RCM Tool | Aethera Healthcare Solutions', 'Appeal deadlines, dispute portals, clearinghouse IDs and escalation contacts for 16+ major commercial, Medicare Advantage and Medicaid payers.'),
+  ...marketingMetadata("/tools/payer-dispute-directory", 'Payer Dispute & Electronic Appeals Directory | Aethera', 'Appeal deadlines, dispute portals, clearinghouse IDs and escalation contacts for 16+ major commercial, Medicare Advantage and Medicaid payers.'),
 };
 
 export default function PayerDisputeDirectoryPage() {

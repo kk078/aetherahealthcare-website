@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-transplant-scrubber') },
   title: {
-    absolute: 'Pediatric Intestinal Rehabilitation & Transplant Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric Intestinal Rehabilitation & Transplant Scrubber | Aethera',
   },
   description:
     'Free pediatric transplant scrubber: audit STEP (44130), bowel and liver-intestine transplants (44135/47135), bench reconstruction and acquisition costs.',
 
-  ...marketingMetadata("/tools/pediatric-transplant-scrubber", 'Pediatric Intestinal Rehabilitation & Transplant Scrubber | Free RCM Tool | Aethera Healthcare', 'Free pediatric transplant scrubber: audit STEP (44130), bowel and liver-intestine transplants (44135/47135), bench reconstruction and acquisition costs.'),
+  ...marketingMetadata("/tools/pediatric-transplant-scrubber", 'Pediatric Intestinal Rehabilitation & Transplant Scrubber | Aethera', 'Free pediatric transplant scrubber: audit STEP (44130), bowel and liver-intestine transplants (44135/47135), bench reconstruction and acquisition costs.'),
 };
 
 export default function PediatricTransplantScrubberPage() {

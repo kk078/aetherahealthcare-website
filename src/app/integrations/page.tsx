@@ -11,10 +11,10 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/integrations') },
-  title: { absolute: 'EHR & Practice Management Integrations | Aethera Healthcare Solutions' },
+  title: { absolute: 'EHR & Practice Management Integrations | Aethera' },
   description: 'Discuss your EHR and practice management workflow. Access, interface availability, secure intake and implementation timing are confirmed during discovery.',
 
-  ...marketingMetadata("/integrations", 'EHR & Practice Management Integrations | Aethera Healthcare Solutions', 'Discuss your EHR and practice management workflow. Access, interface availability, secure intake and implementation timing are confirmed during discovery.'),
+  ...marketingMetadata("/integrations", 'EHR & Practice Management Integrations | Aethera', 'Discuss your EHR and practice management workflow. Access, interface availability, secure intake and implementation timing are confirmed during discovery.'),
 };
 
 const featuredEHRs = [

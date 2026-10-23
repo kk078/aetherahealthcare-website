@@ -8,11 +8,11 @@ import { CalendarClock, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/tools/credentialing-timeline-estimator') },
-  title: { absolute: 'Provider Credentialing & Payer Enrollment Timeline Estimator | Aethera Healthcare' },
+  title: { absolute: 'Provider Credentialing & Payer Enrollment Timeline Estimator | Aethera' },
   description:
     'Free credentialing timeline calculator: estimate CAQH, PECOS, Medicaid and commercial enrollment times to avoid billing freezes for new providers.',
 
-  ...marketingMetadata("/tools/credentialing-timeline-estimator", 'Provider Credentialing & Payer Enrollment Timeline Estimator | Aethera Healthcare', 'Free credentialing timeline calculator: estimate CAQH, PECOS, Medicaid and commercial enrollment times to avoid billing freezes for new providers.'),
+  ...marketingMetadata("/tools/credentialing-timeline-estimator", 'Provider Credentialing & Payer Enrollment Timeline Estimator | Aethera', 'Free credentialing timeline calculator: estimate CAQH, PECOS, Medicaid and commercial enrollment times to avoid billing freezes for new providers.'),
 };
 
 export default function CredentialingTimelinePage() {

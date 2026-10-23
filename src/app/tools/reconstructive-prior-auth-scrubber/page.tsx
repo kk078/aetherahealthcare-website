@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/reconstructive-prior-auth-scrubber') },
   title: {
-    absolute: 'Reconstructive vs Cosmetic Prior-Authorization Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Reconstructive vs Cosmetic Prior-Authorization Scrubber | Aethera',
   },
   description:
     'Free reconstructive prior-auth scrubber: Schnur scale for breast reduction (19318), blepharoplasty field loss (15823), panniculectomy (15830) and WHCRA.',
 
-  ...marketingMetadata("/tools/reconstructive-prior-auth-scrubber", 'Reconstructive vs Cosmetic Prior-Authorization Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free reconstructive prior-auth scrubber: Schnur scale for breast reduction (19318), blepharoplasty field loss (15823), panniculectomy (15830) and WHCRA.'),
+  ...marketingMetadata("/tools/reconstructive-prior-auth-scrubber", 'Reconstructive vs Cosmetic Prior-Authorization Scrubber | Aethera', 'Free reconstructive prior-auth scrubber: Schnur scale for breast reduction (19318), blepharoplasty field loss (15823), panniculectomy (15830) and WHCRA.'),
 };
 
 export default function ReconstructivePriorAuthScrubberPage() {

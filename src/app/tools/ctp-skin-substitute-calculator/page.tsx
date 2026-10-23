@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/ctp-skin-substitute-calculator') },
   title: {
-    absolute: 'Skin Substitute & CTP Wastage Modifier JW / JZ Calculator | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Skin Substitute & CTP Wastage Modifier JW / JZ Calculator | Aethera',
   },
   description:
     'Free skin substitute (CTP) wastage calculator: administered vs. discarded sq cm, JW/JZ modifiers, and compliant two-line 837P claim snippets.',
 
-  ...marketingMetadata("/tools/ctp-skin-substitute-calculator", 'Skin Substitute & CTP Wastage Modifier JW / JZ Calculator | Free RCM Tool | Aethera Healthcare Solutions', 'Free skin substitute (CTP) wastage calculator: administered vs. discarded sq cm, JW/JZ modifiers, and compliant two-line 837P claim snippets.'),
+  ...marketingMetadata("/tools/ctp-skin-substitute-calculator", 'Skin Substitute & CTP Wastage Modifier JW / JZ Calculator | Aethera', 'Free skin substitute (CTP) wastage calculator: administered vs. discarded sq cm, JW/JZ modifiers, and compliant two-line 837P claim snippets.'),
 };
 
 export default function CtpSkinSubstituteCalculatorPage() {

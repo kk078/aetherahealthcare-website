@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/vcr-spine-scrubber') },
   title: {
-    absolute: 'Vertebral Column Resection & 3-Column Osteotomy Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Vertebral Column Resection & 3-Column Osteotomy Scrubber | Aethera',
   },
   description:
     'Free VCR spine scrubber: audit 3-column osteotomies (CPT 22206/22207), additional segments (+22208), spinopelvic fixation (+22848) and -62.',
 
-  ...marketingMetadata("/tools/vcr-spine-scrubber", 'Vertebral Column Resection & 3-Column Osteotomy Scrubber | Free RCM Tool | Aethera Healthcare', 'Free VCR spine scrubber: audit 3-column osteotomies (CPT 22206/22207), additional segments (+22208), spinopelvic fixation (+22848) and -62.'),
+  ...marketingMetadata("/tools/vcr-spine-scrubber", 'Vertebral Column Resection & 3-Column Osteotomy Scrubber | Aethera', 'Free VCR spine scrubber: audit 3-column osteotomies (CPT 22206/22207), additional segments (+22208), spinopelvic fixation (+22848) and -62.'),
 };
 
 export default function VcrSpineScrubberPage() {

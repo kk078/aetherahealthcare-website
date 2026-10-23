@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/practice-proposal-wizard') },
   title: {
-    absolute: 'Interactive Practice Proposal & SLA Wizard | Aethera Healthcare Solutions',
+    absolute: 'Interactive Practice Proposal & SLA Wizard | Aethera',
   },
   description:
     'Generate a medical billing proposal with a fee tier (3.5%–5.0%) and projected collections lift for your specialty, volume and EHR.',
 
-  ...marketingMetadata("/tools/practice-proposal-wizard", 'Interactive Practice Proposal & SLA Wizard | Aethera Healthcare Solutions', 'Generate a medical billing proposal with a fee tier (3.5%–5.0%) and projected collections lift for your specialty, volume and EHR.'),
+  ...marketingMetadata("/tools/practice-proposal-wizard", 'Interactive Practice Proposal & SLA Wizard | Aethera', 'Generate a medical billing proposal with a fee tier (3.5%–5.0%) and projected collections lift for your specialty, volume and EHR.'),
 };
 
 export default function PracticeProposalWizardPage() {

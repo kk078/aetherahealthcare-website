@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-eos-scrubber') },
   title: {
-    absolute: 'Pediatric Early-Onset Scoliosis (EOS) & Growing Rod Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric Early-Onset Scoliosis (EOS) & Growing Rod Scrubber | Aethera',
   },
   description:
     'Free early-onset scoliosis scrubber: audit magnetic growing rods, staged lengthenings (22849-58), VEPTR distraction and pelvic anchors (+22848).',
 
-  ...marketingMetadata("/tools/pediatric-eos-scrubber", 'Pediatric Early-Onset Scoliosis (EOS) & Growing Rod Scrubber | Free RCM Tool | Aethera Healthcare', 'Free early-onset scoliosis scrubber: audit magnetic growing rods, staged lengthenings (22849-58), VEPTR distraction and pelvic anchors (+22848).'),
+  ...marketingMetadata("/tools/pediatric-eos-scrubber", 'Pediatric Early-Onset Scoliosis (EOS) & Growing Rod Scrubber | Aethera', 'Free early-onset scoliosis scrubber: audit magnetic growing rods, staged lengthenings (22849-58), VEPTR distraction and pelvic anchors (+22848).'),
 };
 
 export default function PediatricEosScrubberPage() {

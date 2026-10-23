@@ -12,10 +12,10 @@ import InteractivePortalDemo from '@/components/ui/InteractivePortalDemo';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/portal') },
   robots: { index: false, follow: true },
-  title: { absolute: 'Provider Portal | Real-Time Billing Dashboard | Aethera Healthcare' },
+  title: { absolute: 'Provider Portal | Real-Time Billing Dashboard | Aethera' },
   description: 'The Aethera Provider Portal gives you 24/7 real-time visibility into every claim, payment, denial, and KPI — from any device. See a live demo.',
 
-  ...marketingMetadata("/portal", 'Provider Portal | Real-Time Billing Dashboard | Aethera Healthcare', 'The Aethera Provider Portal gives you 24/7 real-time visibility into every claim, payment, denial, and KPI — from any device. See a live demo.'),
+  ...marketingMetadata("/portal", 'Provider Portal | Real-Time Billing Dashboard | Aethera', 'The Aethera Provider Portal gives you 24/7 real-time visibility into every claim, payment, denial, and KPI — from any device. See a live demo.'),
 };
 
 const features = [

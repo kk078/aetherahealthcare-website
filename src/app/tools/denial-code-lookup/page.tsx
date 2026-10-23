@@ -11,11 +11,11 @@ import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/denial-code-lookup') },
-  title: { absolute: 'Denial Code Lookup — Full CARC & RARC Reason Code List | Aethera Healthcare Solutions' },
+  title: { absolute: 'Denial Code Lookup — Full CARC & RARC Reason Code List | Aethera' },
   description:
     'Free lookup of 1,200+ CARC and RARC denial codes: the official reason for any code, plus how to work and prevent the most common denials.',
 
-  ...marketingMetadata("/tools/denial-code-lookup", 'Denial Code Lookup — Full CARC & RARC Reason Code List | Aethera Healthcare Solutions', 'Free lookup of 1,200+ CARC and RARC denial codes: the official reason for any code, plus how to work and prevent the most common denials.'),
+  ...marketingMetadata("/tools/denial-code-lookup", 'Denial Code Lookup — Full CARC & RARC Reason Code List | Aethera', 'Free lookup of 1,200+ CARC and RARC denial codes: the official reason for any code, plus how to work and prevent the most common denials.'),
 };
 
 export default function DenialCodeLookupPage() {

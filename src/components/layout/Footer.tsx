@@ -75,10 +75,10 @@ export default function Footer() {
                 className="h-9 w-auto"
               />
             </div>
-            <p className="mt-4 text-gray text-sm">
+            <p className="mt-4 text-slate-300 text-sm">
               Maximizing Revenue. Minimizing Burden.
             </p>
-            <p className="mt-2 text-gray text-sm">
+            <p className="mt-2 text-slate-300 text-sm">
               Your full-service medical billing partner handling coding, claims, payments, denials, and collections.
             </p>
             <div className="mt-5">
@@ -107,7 +107,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link prefetch={false} href={service.href} className="text-gray hover:text-mint transition-colors text-sm">
+                  <Link prefetch={false} href={service.href} className="text-slate-300 hover:text-mint transition-colors text-sm">
                     {service.name}
                   </Link>
                 </li>
@@ -121,7 +121,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link prefetch={false} href={item.href} className="text-gray hover:text-mint transition-colors text-sm">
+                  <Link prefetch={false} href={item.href} className="text-slate-300 hover:text-mint transition-colors text-sm">
                     {item.name}
                   </Link>
                 </li>
@@ -135,7 +135,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {resources.map((item) => (
                 <li key={item.name}>
-                  <Link prefetch={false} href={item.href} className="text-gray hover:text-mint transition-colors text-sm">
+                  <Link prefetch={false} href={item.href} className="text-slate-300 hover:text-mint transition-colors text-sm">
                     {item.name}
                   </Link>
                 </li>
@@ -149,7 +149,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {compliance.map((item) => (
                 <li key={item.name}>
-                  <Link prefetch={false} href={item.href} className="text-gray hover:text-mint transition-colors text-sm">
+                  <Link prefetch={false} href={item.href} className="text-slate-300 hover:text-mint transition-colors text-sm">
                     {item.name}
                   </Link>
                 </li>
@@ -172,16 +172,16 @@ export default function Footer() {
             ))}
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray text-sm">
+            <p className="text-slate-300 text-sm">
               &copy; {new Date().getFullYear()} Aethera Healthcare Solutions Private Limited. All rights reserved.
             </p>
-            <p className="text-gray text-sm mt-3 md:mt-0">
+            <p className="text-slate-300 text-sm mt-3 md:mt-0">
               Serving practices nationwide &middot; aetherahealthcare.com
             </p>
           </div>
 
           {/* Legal / registered-entity block */}
-          <div className="mt-6 pt-6 border-t border-gray/20 text-gray/70 text-xs leading-relaxed text-center md:text-left">
+          <div className="mt-6 pt-6 border-t border-gray/20 text-slate-400 text-xs leading-relaxed text-center md:text-left">
             <p>Aethera Healthcare Solutions Private Limited &middot; CIN U82990TN2026PTC189331</p>
             <p>1373, Balasundram, I.A.S. Salai, Royappa Ngr, Chennai - 600048, Tamil Nadu, India</p>
             <p>US Inquiries: <Link href="/contact/" className="hover:text-white transition-colors underline underline-offset-2">Submit an Email Request</Link> &middot; <Link href="/schedule/" className="hover:text-white transition-colors underline underline-offset-2">Schedule a Meeting</Link></p>

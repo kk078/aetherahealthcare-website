@@ -11,11 +11,11 @@ import ToolConversionBridge from '@/components/ui/ToolConversionBridge';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/rvu-calculator') },
-  title: { absolute: 'RVU Payment Calculator — Medicare Fee Schedule Estimate | Aethera Healthcare Solutions' },
+  title: { absolute: 'RVU Payment Calculator — Medicare Fee Schedule Estimate | Aethera' },
   description:
     'Free RVU calculator: combine work, practice-expense and malpractice RVUs with GPCIs and the Medicare conversion factor to get a CPT code\'s allowed amount.',
 
-  ...marketingMetadata("/tools/rvu-calculator", 'RVU Payment Calculator — Medicare Fee Schedule Estimate | Aethera Healthcare Solutions', 'Free RVU calculator: combine work, practice-expense and malpractice RVUs with GPCIs and the Medicare conversion factor to get a CPT code\'s allowed amount.'),
+  ...marketingMetadata("/tools/rvu-calculator", 'RVU Payment Calculator — Medicare Fee Schedule Estimate | Aethera', 'Free RVU calculator: combine work, practice-expense and malpractice RVUs with GPCIs and the Medicare conversion factor to get a CPT code\'s allowed amount.'),
 };
 
 export default function RvuCalculatorPage() {

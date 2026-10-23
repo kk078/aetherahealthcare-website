@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/moldx-zcode-scrubber') },
   title: {
-    absolute: 'Molecular Diagnostics MolDX® Z-Code & LCD Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Molecular Diagnostics MolDX® Z-Code & LCD Scrubber | Aethera',
   },
   description:
     'Free MolDX scrubber: validate DEX Z-Code registration, check genetic tests against MolDX LCD criteria and build 837P REF*17 segments.',
 
-  ...marketingMetadata("/tools/moldx-zcode-scrubber", 'Molecular Diagnostics MolDX® Z-Code & LCD Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free MolDX scrubber: validate DEX Z-Code registration, check genetic tests against MolDX LCD criteria and build 837P REF*17 segments.'),
+  ...marketingMetadata("/tools/moldx-zcode-scrubber", 'Molecular Diagnostics MolDX® Z-Code & LCD Scrubber | Aethera', 'Free MolDX scrubber: validate DEX Z-Code registration, check genetic tests against MolDX LCD criteria and build 837P REF*17 segments.'),
 };
 
 export default function MolDxZCodeScrubberPage() {

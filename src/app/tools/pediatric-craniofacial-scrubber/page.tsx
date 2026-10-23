@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-craniofacial-scrubber') },
   title: {
-    absolute: 'Pediatric Craniofacial & Cleft Palate Staging Scrubber | Free RCM Tool | Aethera Healthcare Solutions',
+    absolute: 'Pediatric Craniofacial & Cleft Palate Staging Scrubber | Aethera',
   },
   description:
     'Free pediatric craniofacial scrubber: audit cleft palatoplasty (42200–42210), alveolar bone grafts, staged modifier 58 and cosmetic exclusion denials.',
 
-  ...marketingMetadata("/tools/pediatric-craniofacial-scrubber", 'Pediatric Craniofacial & Cleft Palate Staging Scrubber | Free RCM Tool | Aethera Healthcare Solutions', 'Free pediatric craniofacial scrubber: audit cleft palatoplasty (42200–42210), alveolar bone grafts, staged modifier 58 and cosmetic exclusion denials.'),
+  ...marketingMetadata("/tools/pediatric-craniofacial-scrubber", 'Pediatric Craniofacial & Cleft Palate Staging Scrubber | Aethera', 'Free pediatric craniofacial scrubber: audit cleft palatoplasty (42200–42210), alveolar bone grafts, staged modifier 58 and cosmetic exclusion denials.'),
 };
 
 export default function PediatricCraniofacialScrubberPage() {

@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-vascular-malformations-scrubber') },
   title: {
-    absolute: 'Pediatric Vascular Malformations & Sclerotherapy Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric Vascular Malformations & Sclerotherapy Scrubber | Aethera',
   },
   description:
     'Free vascular malformation scrubber: audit sclerotherapy (37241/49185), bleomycin (J9040) prior auth, imaging guidance and staged -58 sessions.',
 
-  ...marketingMetadata("/tools/pediatric-vascular-malformations-scrubber", 'Pediatric Vascular Malformations & Sclerotherapy Scrubber | Free RCM Tool | Aethera Healthcare', 'Free vascular malformation scrubber: audit sclerotherapy (37241/49185), bleomycin (J9040) prior auth, imaging guidance and staged -58 sessions.'),
+  ...marketingMetadata("/tools/pediatric-vascular-malformations-scrubber", 'Pediatric Vascular Malformations & Sclerotherapy Scrubber | Aethera', 'Free vascular malformation scrubber: audit sclerotherapy (37241/49185), bleomycin (J9040) prior auth, imaging guidance and staged -58 sessions.'),
 };
 
 export default function PediatricVascularScrubberPage() {

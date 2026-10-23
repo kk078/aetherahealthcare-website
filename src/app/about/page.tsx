@@ -7,10 +7,10 @@ import RcmHeroBand from '@/components/ui/RcmHeroBand';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/about') },
-  title: { absolute: 'About Aethera Healthcare Solutions | Built by an Operator, Run in the Open' },
+  title: { absolute: 'About Aethera | Built by an Operator, Run in the Open' },
   description: 'Founded in 2026 by an 18-year U.S. RCM operator: automation with hard boundaries, human judgment where it matters, and an audit trail on everything.',
 
-  ...marketingMetadata("/about", 'About Aethera Healthcare Solutions | Built by an Operator, Run in the Open', 'Founded in 2026 by an 18-year U.S. RCM operator: automation with hard boundaries, human judgment where it matters, and an audit trail on everything.'),
+  ...marketingMetadata("/about", 'About Aethera | Built by an Operator, Run in the Open', 'Founded in 2026 by an 18-year U.S. RCM operator: automation with hard boundaries, human judgment where it matters, and an audit trail on everything.'),
 };
 
 const principles = [

@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/diep-flap-reconstruction-scrubber') },
   title: {
-    absolute: 'DIEP Flap Breast Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'DIEP Flap Breast Reconstruction Scrubber | Aethera',
   },
   description:
     'Free DIEP flap claim scrubber: audit free flaps (CPT 19364, -50), operating microscope (+69990), ICG angiography (+15860) and WHCRA parity rules.',
 
-  ...marketingMetadata("/tools/diep-flap-reconstruction-scrubber", 'DIEP Flap Breast Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare', 'Free DIEP flap claim scrubber: audit free flaps (CPT 19364, -50), operating microscope (+69990), ICG angiography (+15860) and WHCRA parity rules.'),
+  ...marketingMetadata("/tools/diep-flap-reconstruction-scrubber", 'DIEP Flap Breast Reconstruction Scrubber | Aethera', 'Free DIEP flap claim scrubber: audit free flaps (CPT 19364, -50), operating microscope (+69990), ICG angiography (+15860) and WHCRA parity rules.'),
 };
 
 export default function DiepFlapReconstructionScrubberPage() {

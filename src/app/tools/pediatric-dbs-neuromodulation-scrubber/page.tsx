@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/pediatric-dbs-neuromodulation-scrubber') },
   title: {
-    absolute: 'Pediatric DBS & Cranial Neuromodulation Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Pediatric DBS & Cranial Neuromodulation Scrubber | Aethera',
   },
   description:
     'Free pediatric DBS scrubber: audit lead placement with MER (61867/+61868), headframe bundling (20660), dual-channel IPGs and programming (95983).',
 
-  ...marketingMetadata("/tools/pediatric-dbs-neuromodulation-scrubber", 'Pediatric DBS & Cranial Neuromodulation Scrubber | Free RCM Tool | Aethera Healthcare', 'Free pediatric DBS scrubber: audit lead placement with MER (61867/+61868), headframe bundling (20660), dual-channel IPGs and programming (95983).'),
+  ...marketingMetadata("/tools/pediatric-dbs-neuromodulation-scrubber", 'Pediatric DBS & Cranial Neuromodulation Scrubber | Aethera', 'Free pediatric DBS scrubber: audit lead placement with MER (61867/+61868), headframe bundling (20660), dual-channel IPGs and programming (95983).'),
 };
 
 export default function PediatricDbsScrubberPage() {

@@ -10,10 +10,10 @@ import BreadcrumbJsonLd from '@/components/layout/BreadcrumbJsonLd';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/compliance/security') },
-  title: { absolute: 'Security & Compliance | Aethera Healthcare Solutions' },
+  title: { absolute: 'Security & Compliance | Aethera' },
   description: "How Aethera protects PHI: U.S. data residency, virtual-desktop-only offshore access, BAAs before data moves, and hard limits on AI use.",
 
-  ...marketingMetadata("/compliance/security", 'Security & Compliance | Aethera Healthcare Solutions', "How Aethera protects PHI: U.S. data residency, virtual-desktop-only offshore access, BAAs before data moves, and hard limits on AI use."),
+  ...marketingMetadata("/compliance/security", 'Security & Compliance | Aethera', "How Aethera protects PHI: U.S. data residency, virtual-desktop-only offshore access, BAAs before data moves, and hard limits on AI use."),
 };
 
 const sections = [

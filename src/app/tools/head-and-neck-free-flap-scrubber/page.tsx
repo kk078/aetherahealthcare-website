@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/head-and-neck-free-flap-scrubber') },
   title: {
-    absolute: 'Head & Neck Free Flap Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare',
+    absolute: 'Head & Neck Free Flap Reconstruction Scrubber | Aethera',
   },
   description:
     'Free head and neck free flap scrubber: audit fibula (CPT 20955) and ALT (15756) flaps, plating, microscope (+69990), neck dissection and trach.',
 
-  ...marketingMetadata("/tools/head-and-neck-free-flap-scrubber", 'Head & Neck Free Flap Reconstruction Scrubber | Free RCM Tool | Aethera Healthcare', 'Free head and neck free flap scrubber: audit fibula (CPT 20955) and ALT (15756) flaps, plating, microscope (+69990), neck dissection and trach.'),
+  ...marketingMetadata("/tools/head-and-neck-free-flap-scrubber", 'Head & Neck Free Flap Reconstruction Scrubber | Aethera', 'Free head and neck free flap scrubber: audit fibula (CPT 20955) and ALT (15756) flaps, plating, microscope (+69990), neck dissection and trach.'),
 };
 
 export default function HeadAndNeckFreeFlapScrubberPage() {

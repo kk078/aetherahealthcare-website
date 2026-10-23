@@ -8,11 +8,11 @@ import CaseStudiesDirectory from '@/components/ui/CaseStudiesDirectory';
 
 export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl('/case-studies') },
-  title: { absolute: 'Medical Billing Workflows by Specialty | Aethera Healthcare' },
+  title: { absolute: 'Medical Billing Workflows by Specialty | Aethera' },
   description:
     'Specialty billing workflows, documentation checkpoints and evidence requirements for verified customer outcomes.',
 
-  ...marketingMetadata("/case-studies", 'Medical Billing Workflows by Specialty | Aethera Healthcare', 'Specialty billing workflows, documentation checkpoints and evidence requirements for verified customer outcomes.'),
+  ...marketingMetadata("/case-studies", 'Medical Billing Workflows by Specialty | Aethera', 'Specialty billing workflows, documentation checkpoints and evidence requirements for verified customer outcomes.'),
 };
 
 export default function CaseStudiesPage() {

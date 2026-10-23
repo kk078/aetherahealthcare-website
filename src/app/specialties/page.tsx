@@ -658,7 +658,7 @@ export const metadata = {
     canonical: 'https://aetherahealthcare.com/specialties/',
   },
   openGraph: {
-    title: 'Medical Billing Specialties | Aethera Healthcare Solutions',
+    title: 'Medical Billing Specialties | Aethera',
     description: 'Expert medical billing across 86+ specialties — Pediatric Hirschsprung Pull-Through, Head & Neck Microvascular Free Flap, Pediatric TEF/EA, and more.',
     url: 'https://aetherahealthcare.com/specialties',
     type: 'website',
@@ -671,7 +671,7 @@ export default function SpecialtiesPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
-    "name": "Medical Billing Specialties | Aethera Healthcare Solutions",
+    "name": "Medical Billing Specialties | Aethera",
     "description": "Expert billing and revenue cycle management for over 86 medical specialties with deep specialty-specific knowledge.",
     "url": "https://aetherahealthcare.com/specialties",
     "publisher": {

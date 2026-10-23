@@ -10,10 +10,10 @@ import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/family-medicine-billing') },
-  title: { absolute: 'Family Medicine Billing | RCM for Family Physicians | Aethera Healthcare' },
+  title: { absolute: 'Family Medicine Billing | RCM for Family Physicians | Aethera' },
   description: 'Complete family medicine billing for preventive care, chronic disease management, annual wellness visits, E&M coding, and care management.',
 
-  ...marketingMetadata("/services/family-medicine-billing", 'Family Medicine Billing | RCM for Family Physicians | Aethera Healthcare', 'Complete family medicine billing for preventive care, chronic disease management, annual wellness visits, E&M coding, and care management.'),
+  ...marketingMetadata("/services/family-medicine-billing", 'Family Medicine Billing | RCM for Family Physicians | Aethera', 'Complete family medicine billing for preventive care, chronic disease management, annual wellness visits, E&M coding, and care management.'),
 };
 
 const stats = [
