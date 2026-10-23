@@ -10,10 +10,10 @@ import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/workers-compensation-billing') },
-  title: "Workers' Compensation Billing & RCM | State Fee Schedules, Liens, eBill",
+  title: "Workers' Compensation Billing & RCM Services",
   description: "Workers' comp RCM: state fee schedules, jurisdiction rules, utilization review, IAIABC eBilling, liens and bill-review appeals for faster payment.",
 
-  ...marketingMetadata("/services/workers-compensation-billing", "Workers' Compensation Billing & RCM | State Fee Schedules, Liens, eBill", "Workers' comp RCM: state fee schedules, jurisdiction rules, utilization review, IAIABC eBilling, liens and bill-review appeals for faster payment."),
+  ...marketingMetadata("/services/workers-compensation-billing", "Workers' Compensation Billing & RCM Services", "Workers' comp RCM: state fee schedules, jurisdiction rules, utilization review, IAIABC eBilling, liens and bill-review appeals for faster payment."),
 };
 
 const stats = [

@@ -11,12 +11,12 @@ import { ArrowLeft } from 'lucide-react';
 export const metadata = {
   alternates: { canonical: canonicalUrl('/tools/urogynecology-scrubber') },
   title: {
-    absolute: 'Urogynecology & Pelvic Floor Reconstruction Bundling Scrubber | Aethera',
+    absolute: 'Urogynecology & Pelvic Floor Bundling Scrubber | Aethera',
   },
   description:
     'Free urogynecology scrubber: audit sacrocolpopexy (57425), slings (57288), colporrhaphy (57240–57260), cystoscopy bundling and POP-Q necessity.',
 
-  ...marketingMetadata("/tools/urogynecology-scrubber", 'Urogynecology & Pelvic Floor Reconstruction Bundling Scrubber | Aethera', 'Free urogynecology scrubber: audit sacrocolpopexy (57425), slings (57288), colporrhaphy (57240–57260), cystoscopy bundling and POP-Q necessity.'),
+  ...marketingMetadata("/tools/urogynecology-scrubber", 'Urogynecology & Pelvic Floor Bundling Scrubber | Aethera', 'Free urogynecology scrubber: audit sacrocolpopexy (57425), slings (57288), colporrhaphy (57240–57260), cystoscopy bundling and POP-Q necessity.'),
 };
 
 export default function UrogynecologyScrubberPage() {

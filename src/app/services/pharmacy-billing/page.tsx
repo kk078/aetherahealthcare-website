@@ -10,10 +10,10 @@ import SectionHeader from '@/components/ui/SectionHeader';
 
 export const metadata = {
   alternates: { canonical: canonicalUrl('/services/pharmacy-billing') },
-  title: "Pharmacy Billing & RCM Services | Retail, Specialty & LTC Pharmacy",
+  title: "Pharmacy Billing & RCM: Retail, Specialty & LTC",
   description: "Pharmacy RCM for retail, specialty, compounding and LTC pharmacies: NCPDP claims, PBM adjudication, DIR fees, 340B and prior authorizations.",
 
-  ...marketingMetadata("/services/pharmacy-billing", "Pharmacy Billing & RCM Services | Retail, Specialty & LTC Pharmacy", "Pharmacy RCM for retail, specialty, compounding and LTC pharmacies: NCPDP claims, PBM adjudication, DIR fees, 340B and prior authorizations."),
+  ...marketingMetadata("/services/pharmacy-billing", "Pharmacy Billing & RCM: Retail, Specialty & LTC", "Pharmacy RCM for retail, specialty, compounding and LTC pharmacies: NCPDP claims, PBM adjudication, DIR fees, 340B and prior authorizations."),
 };
 
 const stats = [

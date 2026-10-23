@@ -36,7 +36,8 @@ test('all educational tools and articles expose primary references without inven
   for (const slug of ['endocrinology', 'general-surgery']) assert.ok(SEO_SPECIALTIES.find(s => s.slug === slug));
 });
 test('short search titles point at real pages and fit a search result', async () => {
-  const { BLOG_SEO_TITLES, SPECIALTY_TITLE_NAMES } = await import('../../src/lib/seoTitles');
+  const { BLOG_SEO_TITLES, PAYER_TITLE_NAMES, SPECIALTY_TITLE_NAMES } = await import('../../src/lib/seoTitles');
+  const { getPayer } = await import('../../src/lib/payers');
   for (const [slug, title] of Object.entries(BLOG_SEO_TITLES)) {
     assert.ok(POSTS.find(p => p.slug === slug), slug);
     assert.ok(fitTitle(title).length <= TITLE_MAX, slug);
@@ -44,5 +45,9 @@ test('short search titles point at real pages and fit a search result', async ()
   for (const [slug, name] of Object.entries(SPECIALTY_TITLE_NAMES)) {
     assert.ok(SEO_SPECIALTIES.find(s => s.slug === slug), slug);
     assert.ok(fitTitle(`${name} Medical Billing Services`, `${name} Medical Billing`, `${name} Billing`).length <= TITLE_MAX, slug);
+  }
+  for (const [slug, name] of Object.entries(PAYER_TITLE_NAMES)) {
+    assert.ok(getPayer(slug), slug);
+    assert.ok(fitTitle(`${name} — Payer ID & EDI Reference`, `${name} Payer ID & EDI`, `${name} Payer ID`).length <= TITLE_MAX, slug);
   }
 });
