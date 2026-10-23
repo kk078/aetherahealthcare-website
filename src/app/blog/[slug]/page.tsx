@@ -1,4 +1,5 @@
 import { fitTitle, marketingMetadata } from '@/lib/marketing';
+import { BLOG_SEO_TITLES } from '@/lib/seoTitles';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { POSTS, getPost, getRelated, postHtml } from '@/lib/blogPosts';
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return { title: { absolute: 'Article | Aethera' } };
   return {
     ...marketingMetadata(`/blog/${post.slug}`, post.title, post.excerpt),
-    title: { absolute: fitTitle(post.title) },
+    title: { absolute: fitTitle(BLOG_SEO_TITLES[post.slug] ?? post.title) },
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}/` },
     openGraph: { title: post.title, description: post.excerpt, images: [`https://aetherahealthcare.com${post.image}`], type: 'article', url: `https://aetherahealthcare.com/blog/${post.slug}/` },
