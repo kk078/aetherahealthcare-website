@@ -2088,7 +2088,7 @@
       "providerManual": null,
       "policies": null,
       "credentialing": null,
-      "eligibility": "https://www.pehp.org/MyPehpProviders/Account",
+      "eligibility": "https://www.pehp.org/providers/online-services/pehp-for-providers",
       "confidence": "low",
       "notes": "Directory listing — provider home/portal only; manual & policies on the payer’s site."
     },

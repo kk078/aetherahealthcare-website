@@ -79,6 +79,14 @@ async function worker() {
 await Promise.all(Array.from({ length: Number(process.env.LINKCHECK_EXTERNAL_CONCURRENCY ?? 8) }, worker));
 console.log(`  external: done, ${external.size} unique links`);
 
+// A failing link whose host's home page also fails means the host rejects automated clients (or is down):
+// unverifiable, not broken. Payer and state Medicaid sites do this to curl-like fetches.
+const hostAnswers = new Map();
+for (const linkHost of new Set(results.filter(entry => entry.state === 'BROKEN' && !isInternal(entry.url)).map(entry => new URL(entry.url).host))) {
+  const status = await probe(`https://${linkHost}/`);
+  hostAnswers.set(linkHost, status >= 200 && status < 400);
+}
+
 const broken = [];
 const unverifiable = [];
 const seen = new Map();
@@ -86,7 +94,7 @@ for (const result of results.filter(entry => entry.state === 'BROKEN')) {
   let linkHost;
   try { linkHost = new URL(result.url).host; } catch { linkHost = ''; }
   const item = { url: result.url, status: result.status ?? 0, internal: linkHost === host, parent: result.parent ? new URL(result.parent).pathname : null };
-  if (!item.internal && (botHostile.test(linkHost) || [0, 403, 429, 999].includes(item.status))) unverifiable.push(item);
+  if (!item.internal && (botHostile.test(linkHost) || [0, 403, 406, 429, 999].includes(item.status) || item.status >= 500 || hostAnswers.get(linkHost) === false)) unverifiable.push(item);
   else {
     const key = item.url;
     if (!seen.has(key)) { seen.set(key, { ...item, parents: [] }); broken.push(seen.get(key)); }
@@ -96,7 +104,7 @@ for (const result of results.filter(entry => entry.state === 'BROKEN')) {
 for (const item of broken) { item.parents = [...new Set(item.parents)]; item.parentCount = item.parents.length; item.parents = item.parents.slice(0, 10); delete item.parent; }
 
 const checked = new Set(results.map(result => result.url)).size;
-// status 0 from an external host = timeout / connection refused: reported as unverifiable, not broken.
+// status 0 (timeout / refused), 406, 5xx, or a host whose home page also fails: unverifiable, not broken.
 await writeJson(join(seoRoot, 'data', 'checks', 'link-check.json'), {
   generatedAt: new Date().toISOString(), base: root, pagesScanned: pages.length, linksChecked: checked,
   summary: { brokenInternal: broken.filter(item => item.internal).length, brokenExternal: broken.filter(item => !item.internal).length, unverifiable: new Set(unverifiable.map(item => item.url)).size },
